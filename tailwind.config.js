@@ -20,9 +20,35 @@ module.exports = {
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],
             },
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        a: {
+                            color: theme('colors.primary.500'),
+                            '&:hover': {
+                                color: theme('colors.primary.600'),
+                            },
+                        },
+                        blockquote: {
+                            fontStyle: 'normal',
+                        },
+                        'blockquote p:first-of-type::before': {
+                            content: 'none',
+                        },
+                        'blockquote p:first-of-type::after': {
+                            content: 'none',
+                        },
+                        code: {
+                            backgroundColor: theme('colors.yellow.100'),
+                            borderRadius: theme('borderRadius.lg'),
+                            padding: `${theme('spacing[0.5]')} theme('spacing.1')`,
+                        },
+                    },
+                },
+            }),
             zIndex: {
                 '-1': '-1',
-            }
+            },
         },
     },
     plugins: [
