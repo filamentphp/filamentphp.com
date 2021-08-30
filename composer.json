@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "blade-ui-kit/blade-heroicons": "^1.2",
+        "calebporzio/sushi": "^2.3",
         "fruitcake/laravel-cors": "^2.0",
         "graham-campbell/markdown": "^13.1",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -14,8 +15,10 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "league/commonmark": "^1.5",
+        "lorisleiva/lody": "^0.1.0",
         "ryangjchandler/orbit": "^0.9.0",
         "spatie/laravel-google-fonts": "^1.0",
+        "spatie/yaml-front-matter": "^2.0",
         "torchlight/torchlight-commonmark": "^0.4.1"
     },
     "require-dev": {

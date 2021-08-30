@@ -4,6 +4,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
     mode: 'jit',
     purge: [
+        './config/markdown.php',
         './resources/**/*.blade.php',
     ],
     theme: {

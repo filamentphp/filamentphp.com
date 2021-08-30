@@ -11,6 +11,8 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
+use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
+use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
 use Torchlight\Commonmark\TorchlightExtension;
 
 return [
@@ -44,6 +46,8 @@ return [
     */
 
     'extensions' => [
+        HeadingPermalinkExtension::class,
+        TableOfContentsExtension::class,
         TorchlightExtension::class,
     ],
 
@@ -66,6 +70,15 @@ return [
         'block_separator' => "\n",
         'inner_separator' => "\n",
         'soft_break'      => "\n",
+    ],
+
+    'heading_permalink' => [
+        'html_class' => 'mr-2 !text-primary-500 !no-underline hover:!text-primary-600 focus:!text-primary-600 focus:outline-none',
+        'inner_contents' => '#',
+    ],
+
+    'table_of_contents' => [
+        'style' => 'bullet',
     ],
 
     /*
@@ -131,7 +144,7 @@ return [
     |
     */
 
-    'html_input' => 'strip',
+    'html_input' => null,
 
     /*
     |--------------------------------------------------------------------------

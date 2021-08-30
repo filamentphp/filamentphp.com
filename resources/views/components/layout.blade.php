@@ -22,7 +22,7 @@
     <body class="antialiased">
         {{ $slot }}
 
-        <footer class="relative">
+        <footer>
             <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
                 <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
                     <div class="px-5 py-2">
@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="px-5 py-2">
-                        <a href="{{ route('docs') }}" class="text-base text-gray-500 transition hover:text-primary-600">
+                        <a href="/docs/admin" class="text-base text-gray-500 transition hover:text-primary-600">
                             Documentation
                         </a>
                     </div>
@@ -49,6 +49,7 @@
                         </a>
                     </div>
                 </nav>
+
                 <div class="mt-8 flex justify-center space-x-6">
                     <a href="https://twitter.com/danjharrin" target="_blank" class="text-gray-400 transition hover:text-primary-500">
                         <span class="sr-only">Twitter</span>
@@ -70,14 +71,6 @@
                 <p class="mt-8 text-center text-base text-gray-400">
                     &copy; {{ date('Y') }} Filament. All rights reserved.
                 </p>
-            </div>
-
-            <div class="hidden absolute right-0 top-0 mt-12 mr-12 lg:block">
-                <img
-                    src="{{ asset('images/cat.svg') }}"
-                    alt="Cat"
-                    class="h-[8rem]"
-                />
             </div>
         </footer>
     </body>

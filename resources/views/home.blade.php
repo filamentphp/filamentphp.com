@@ -24,7 +24,7 @@
         </div>
 
         <div class="flex w-full items-center justify-end">
-            <a href="{{ route('docs') }}" class="font-medium text-gray-900 transition hover:text-primary-600">
+            <a href="/docs/admin" class="font-medium text-gray-900 transition hover:text-primary-600">
                 <span class="sm:hidden">
                     Docs
                 </span>
@@ -118,15 +118,11 @@
                                 </p>
 
                                 <p>
-                                    Build <a href="{{ route('docs', [
-                                        'package' => 'admin',
-                                    ]) }}" class="font-medium transition hover:text-yellow-100">complex and interactive tables</a>, complete with sort, search and filter functionalities, easily.
+                                    Build <a href="/docs/forms/tables" class="font-medium transition hover:text-yellow-100">complex and interactive tables</a>, complete with sort, search and filter functionalities, easily.
                                 </p>
 
                                 <p>
-                                    Craft <a href="{{ route('docs', [
-                                        'package' => 'forms',
-                                    ]) }}" class="font-medium transition hover:text-yellow-100">intuitive forms</a> using a wide range of field types, using our simple, class-based form builder.
+                                    Craft <a href="/docs/forms/forms" class="font-medium transition hover:text-yellow-100">intuitive forms</a> using a wide range of field types, using our simple, class-based form builder.
                                 </p>
                             </div>
                         </div>
@@ -158,9 +154,7 @@
                             </div>
 
                             <div class="text-right">
-                                <a {{ route('docs', [
-                                    'package' => 'admin',
-                                ]) }} class="text-white transition hover:text-yellow-100 font-medium text-lg">
+                                <a href="/docs/admin" class="text-white transition hover:text-yellow-100 font-medium text-lg">
                                     Documentation &rarr;
                                 </a>
                             </div>
@@ -239,9 +233,7 @@
                             </div>
 
                             <div class="text-right">
-                                <a href="{{ route('docs', [
-                                    'package' => 'admin',
-                                ]) }}" class="text-white transition hover:text-yellow-100 font-medium text-lg">
+                                <a href="/docs/forms" class="text-white transition hover:text-yellow-100 font-medium text-lg">
                                     Documentation &rarr;
                                 </a>
                             </div>
@@ -418,7 +410,7 @@
         </div>
     </section>
 
-    <section class="relative bg-pink-400">
+    <section class="relative bg-pink-500">
         <div class="lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
             <div class="grid grid-cols-6 gap-4 flex-shrink-0">
                 @foreach([
@@ -467,7 +459,7 @@
                 <a
                     href="https://github.com/sponsors/danharrin"
                     target="_blank"
-                    class="group inline-flex items-center justify-center px-6 text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-yellow-200 hover:text-pink-400 hover:ring-yellow-200 focus:ring-yellow-200 focus:text-pink-400 focus:bg-yellow-200 focus:outline-none"
+                    class="group inline-flex items-center justify-center px-6 text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-yellow-200 hover:text-pink-500 hover:ring-yellow-200 focus:ring-yellow-200 focus:text-pink-500 focus:bg-yellow-200 focus:outline-none"
                 >
                     Sponsor Filament on GitHub
 
