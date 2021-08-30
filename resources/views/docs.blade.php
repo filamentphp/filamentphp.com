@@ -18,7 +18,7 @@
         <div class="space-y-24 max-w-7xl mx-auto px-8 md:flex md:flex-row-reverse md:space-y-0">
             <main class="flex-1 overflow-x-auto">
                 <div class="prose">
-                    <h1>
+                    <h1 class="font-heading">
                         {{ $page->title }}
                     </h1>
 
