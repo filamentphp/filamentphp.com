@@ -6,7 +6,7 @@
     <div class="flex flex-col space-y-8 justify-between h-full">
         <div class="relative">
             <span class="absolute top-0 left-0 -mt-12 -ml-8">
-                <span class="transition font-heading text-gray-100 relative leading-none text-[10rem] -z-1 group-hover:text-primary-100">
+                <span class="transition font-heading font-bold text-gray-100 relative leading-none text-[10rem] -z-1 group-hover:text-primary-100">
                     “
                 </span>
             </span>

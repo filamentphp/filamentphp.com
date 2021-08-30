@@ -76,7 +76,7 @@
             <div class="max-w-7xl w-full flex justify-center text-center mx-auto px-8 py-16">
                 <div class="max-w-2xl space-y-8">
                     <div class="space-y-4">
-                        <h2 class="font-heading text-yellow-200 text-4xl">
+                        <h2 class="font-heading font-bold text-yellow-200 text-4xl">
                             Enjoying Filament?
                         </h2>
 

@@ -39,7 +39,7 @@
     <header class="relative max-w-7xl mx-auto py-20 md:pb-48 px-8">
         <div class="space-y-12 max-w-screen-sm">
             <div class="space-y-4">
-                <h1 class="font-heading text-gray-900 text-4xl leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
+                <h1 class="font-heading font-bold text-gray-900 text-4xl leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
                     The elegant <span class="text-primary-500">TALL</span>kit for Laravel artisans.
                 </h1>
 
@@ -102,7 +102,7 @@
                 <div class="xl:col-span-2 flex items-center">
                     <div class="space-y-8">
                         <div class="space-y-2">
-                            <h3 class="font-heading text-white text-4xl">
+                            <h3 class="font-heading font-bold text-white text-4xl">
                                 <span>
                                     Admin Panel
                                 </span>
@@ -172,7 +172,7 @@
                     <div class="space-y-8">
                         <div class="space-y-4">
                             <div class="space-y-2">
-                                <h3 class="font-heading text-white text-4xl">
+                                <h3 class="font-heading font-bold text-white text-4xl">
                                     <span>
                                         Form Builder
                                     </span>
@@ -250,7 +250,7 @@
                 <div class="xl:col-span-2 flex items-center">
                     <div class="space-y-4">
                         <div class="space-y-2">
-                            <h3 class="font-heading text-white text-4xl">
+                            <h3 class="font-heading font-bold text-white text-4xl">
                                 <span>
                                     Table Builder
                                 </span>
@@ -290,7 +290,7 @@
 
     <section class="relative max-w-7xl mx-auto px-8 py-32">
         <div class="space-y-16">
-            <h2 class="font-heading text-4xl text-center">
+            <h2 class="font-heading font-bold text-4xl text-center">
                 Here's what others say
             </h2>
 
@@ -447,7 +447,7 @@
 
             <div class="flex-grow space-y-8">
                 <div class="space-y-4">
-                    <h2 class="font-heading text-yellow-200 text-4xl">
+                    <h2 class="font-heading font-bold text-yellow-200 text-4xl">
                         Our sponsors
                     </h2>
 
@@ -479,7 +479,7 @@
 
     <section class="bg-gray-900">
         <div class="max-w-7xl mx-auto px-8 py-32 space-y-16">
-            <h2 class="font-heading text-white text-4xl text-center">
+            <h2 class="font-heading font-bold text-white text-4xl text-center">
                 Meet the team
             </h2>
 
