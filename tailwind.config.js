@@ -23,12 +23,6 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        a: {
-                            color: theme('colors.primary.500'),
-                            '&:hover': {
-                                color: theme('colors.primary.600'),
-                            },
-                        },
                         blockquote: {
                             fontStyle: 'normal',
                         },
