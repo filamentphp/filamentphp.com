@@ -43,6 +43,22 @@ class DocumentationPage extends Model
         return $pages;
     }
 
+    public function getSections(): array
+    {
+        $matches = [];
+
+        // Extract ## headings from page content
+        preg_match_all('/(?m)^## (.*)/', $this->content, $matches);
+
+        $sections = [];
+
+        foreach ($matches[1] as $heading) {
+            $sections[(string) Str::of($heading)->kebab()] = $heading;
+        }
+
+        return $sections;
+    }
+
     public function getUrl(): string
     {
         return route('docs', [

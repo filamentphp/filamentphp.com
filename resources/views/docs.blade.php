@@ -62,16 +62,33 @@
                     @foreach ($package->getPages() as $page)
                         @php
                             $isActive = request()->route()->parameter('pageSlug') === $page->slug;
+                            $url = $page->getUrl();
                         @endphp
 
-                        <li @class([
-                            'font-medium uppercase tracking-wider',
-                            'text-gray-900 hover:text-primary-600 focus:text-primary-600' => ! $isActive,
-                            'text-primary-500 hover:text-primary-600 focus:text-primary-600' => $isActive,
-                        ])>
-                            <a href="{{ $page->getUrl() }}">
+                        <li class="space-y-1">
+                            <a
+                                href="{{ $url }}"
+                                @class([
+                                    'font-medium uppercase tracking-wider',
+                                    'text-gray-900 hover:text-primary-600 focus:text-primary-600' => ! $isActive,
+                                    'text-primary-500 hover:text-primary-600 focus:text-primary-600' => $isActive,
+                                ])
+                            >
                                 {{ $page->title }}
                             </a>
+
+                            <ul class="pl-4 border-l-2">
+                                @foreach ($page->getSections() as $anchor => $heading)
+                                    <li>
+                                        <a
+                                            href="{{ $url }}#{{ $anchor }}"
+                                            class="text-sm text-gray-700 hover:text-primary-600 focus:text-primary-600"
+                                        >
+                                            {{ $heading }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
                         </li>
                     @endforeach
                 </ul>
