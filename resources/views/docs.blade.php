@@ -130,7 +130,7 @@
                     <a
                         href="https://github.com/sponsors/danharrin"
                         target="_blank"
-                        class="group inline-flex items-center justify-center px-6 text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-yellow-200 hover:text-pink-500 hover:ring-yellow-200 focus:ring-yellow-200 focus:text-pink-500 focus:bg-yellow-200 focus:outline-none"
+                        class="group inline-flex items-center justify-center px-6 text-lg sm:text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-yellow-200 hover:text-pink-500 hover:ring-yellow-200 focus:ring-yellow-200 focus:text-pink-500 focus:bg-yellow-200 focus:outline-none"
                     >
                         Sponsor Filament on GitHub
 
