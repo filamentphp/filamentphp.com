@@ -5,7 +5,8 @@ module.exports = {
     mode: 'jit',
     purge: [
         './config/markdown.php',
-        './resources/**/*.blade.php',
+        './resources/filament/**/*.md',
+        './resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
