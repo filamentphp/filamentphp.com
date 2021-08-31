@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
+use League\CommonMark\Normalizer\SlugNormalizer;
 use Lorisleiva\Lody\Lody;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Sushi\Sushi;
@@ -53,7 +54,9 @@ class DocumentationPage extends Model
         $sections = [];
 
         foreach ($matches[1] as $heading) {
-            $sections[(string) Str::of($heading)->kebab()] = $heading;
+            $slugNormalizer = new SlugNormalizer();
+
+            $sections[$slugNormalizer->normalize($heading)] = $heading;
         }
 
         return $sections;

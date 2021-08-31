@@ -78,10 +78,10 @@
                             </a>
 
                             <ul class="pl-4 border-l-2">
-                                @foreach ($page->getSections() as $anchor => $heading)
+                                @foreach ($page->getSections() as $slug => $heading)
                                     <li>
                                         <a
-                                            href="{{ $url }}#{{ $anchor }}"
+                                            href="{{ $url }}#{{ $slug }}"
                                             class="text-sm text-gray-700 hover:text-primary-600 focus:text-primary-600"
                                         >
                                             {{ $heading }}
