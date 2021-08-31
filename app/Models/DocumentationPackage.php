@@ -49,4 +49,11 @@ class DocumentationPackage extends Model
 
         return $packages;
     }
+
+    public function getVersions(): Collection
+    {
+        return DocumentationVersion::find(
+            DocumentationPackage::orderByDesc('version_id')->where('slug', $this->slug)->pluck('version_id'),
+        );
+    }
 }

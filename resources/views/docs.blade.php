@@ -50,9 +50,9 @@
                     </select>
 
                     <select x-model="version" class="block w-full h-10 border-gray-300 transition duration-75 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
-                        @foreach (\App\Models\DocumentationVersion::orderByDesc('id')->get() as $documentationVersion)
-                            <option value="{{ $documentationVersion->slug }}">
-                                {{ $documentationVersion->name }}
+                        @foreach ($package->getVersions() as $packageVersion)
+                            <option value="{{ $packageVersion->slug }}">
+                                {{ $packageVersion->name }}
                             </option>
                         @endforeach
                     </select>
