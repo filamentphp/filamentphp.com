@@ -68,10 +68,10 @@
                 </div>
 
                 <ul class="space-y-4">
-                    @foreach ($package->getPages() as $page)
+                    @foreach ($package->getPages() as $packagePage)
                         @php
-                            $isActive = request()->route()->parameter('pageSlug') === $page->slug;
-                            $url = $page->getUrl();
+                            $isActive = request()->route()->parameter('pageSlug') === $packagePage->slug;
+                            $url = $packagePage->getUrl();
                         @endphp
 
                         <li class="space-y-1">
@@ -83,11 +83,11 @@
                                     'text-primary-500 hover:text-primary-600 focus:text-primary-600' => $isActive,
                                 ])
                             >
-                            {{ $page->title }}
+                                {{ $packagePage->title }}
                             </a>
 
                             <ul class="pl-4 border-l-2 space-y-2">
-                                @foreach ($page->getSections() as $slug => $heading)
+                                @foreach ($packagePage->getSections() as $slug => $heading)
                                     <li class="leading-5">
                                         <a
                                             href="{{ $url }}#{{ $slug }}"
