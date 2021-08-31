@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none;
+}
+
 pre {
     @apply rounded overflow-x-auto;
     padding: 0 !important;

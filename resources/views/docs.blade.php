@@ -1,5 +1,18 @@
 <x-layout :title="$page->title . ' - ' . $package->name">
     <nav class="max-w-7xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20">
+        <button
+            x-data="{}"
+            aria-controls="main-menu"
+            aria-haspopup="true"
+            @click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"
+            @click.away="$store.sidebar.isOpen = false"
+            class="lg:hidden"
+        >
+            <x-heroicon-o-menu class="w-6 h-6" />
+
+            <span class="sr-only">Toggle Menu</span>
+        </button>
+
         <a href="/" class="text-gray-900 transition hover:text-primary-600">
             <svg fill="currentColor" viewBox="0 0 160 32" class="h-auto w-24 md:w-36">
                 <path d="M6.21933775,30.869404 C6.53615894,29.3954967 6.8392053,27.9698013 7.12847682,26.5923179 C7.36953642,25.444415 7.6392936,24.172156 7.93774834,22.7755408 L8.1202649,21.922649 L9.59610573,14.8974834 L15.2487417,14.8974834 L16.2405298,10.2484768 L10.3311258,10.2484768 C10.3724503,10.0418543 10.4344371,9.73536424 10.5170861,9.32900662 C10.5997351,8.92264901 10.6686093,8.58172185 10.7237086,8.30622517 C10.944106,7.24556291 11.3435762,6.45006623 11.9221192,5.9197351 C12.5006623,5.38940397 13.2996026,5.12423841 14.3189404,5.12423841 C14.8974834,5.12423841 15.4691391,5.19311258 16.0339073,5.33086093 C16.5986755,5.46860927 17.135894,5.66145695 17.6455629,5.90940397 L19.133245,0.950463576 C18.6924503,0.757615894 18.1793377,0.588874172 17.5939073,0.444238411 C17.0084768,0.299602649 16.392053,0.189403974 15.7446358,0.113642384 C15.0972185,0.0378807947 14.4498013,-7.52892965e-15 13.8023841,-7.52892965e-15 C12.7830464,-7.52892965e-15 11.8050331,0.120529801 10.8683444,0.361589404 C9.93165563,0.602649007 9.07761589,1.00900662 8.30622517,1.58066225 C7.53483444,2.15231788 6.86331126,2.92715232 6.29165563,3.90516556 C5.72,4.88317881 5.28264901,6.10225166 4.97960265,7.56238411 C4.78675497,8.48529801 4.57668874,9.48741722 4.34940397,10.5687417 L4.41676798,10.2484768 L0.991788079,10.2484768 L1.88223241e-15,14.8974834 L3.42974811,14.8974834 L3.37951788,15.1342728 C3.28805298,15.5634967 3.19769007,15.9883126 3.10842914,16.4087205 L2.97536424,17.0360265 C2.75496689,18.0760265 2.55523179,19.0230464 2.37615894,19.8770861 L1.94225166,21.9433113 C1.58410596,23.6513907 1.25695364,25.1976159 0.960794702,26.5819868 C0.664635762,27.9663576 0.365033113,29.3954967 0.061986755,30.869404 L6.21933775,30.869404 Z"></path>
@@ -21,18 +34,14 @@
     </nav>
 
     <div class="space-y-24">
-        <div class="space-y-24 max-w-7xl mx-auto px-8 md:flex md:flex-row-reverse md:space-y-0">
-            <main class="flex-1 overflow-x-auto">
-                <div class="prose">
-                    <h1 class="font-heading">
-                        {{ $page->title }}
-                    </h1>
-
-                    @markdown($page->content)
-                </div>
-            </main>
-
-            <aside class="flex-shrink-0 space-y-8 md:min-w-[16rem] md:mr-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-4">
+            <aside
+                x-data="{}"
+                x-cloak
+                :aria-hidden="$store.sidebar.isOpen.toString()"
+                :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
+                class="fixed p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-100 lg:ml-8 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
+            >
                 <div
                     x-data="{ package: '{{ $package->slug }}', version: '{{ $version->slug }}' }"
                     x-init="
@@ -74,12 +83,12 @@
                                     'text-primary-500 hover:text-primary-600 focus:text-primary-600' => $isActive,
                                 ])
                             >
-                                {{ $page->title }}
+                            {{ $page->title }}
                             </a>
 
-                            <ul class="pl-4 border-l-2">
+                            <ul class="pl-4 border-l-2 space-y-2">
                                 @foreach ($page->getSections() as $slug => $heading)
-                                    <li>
+                                    <li class="leading-5">
                                         <a
                                             href="{{ $url }}#{{ $slug }}"
                                             class="text-sm text-gray-700 hover:text-primary-600 focus:text-primary-600"
@@ -93,6 +102,16 @@
                     @endforeach
                 </ul>
             </aside>
+
+            <main class="px-8 overflow-x-auto lg:col-span-3">
+                <div class="prose">
+                    <h1 class="font-heading">
+                        {{ $page->title }}
+                    </h1>
+
+                    @markdown($page->content)
+                </div>
+            </main>
         </div>
 
         <section class="relative bg-pink-500 flex justify-center">
