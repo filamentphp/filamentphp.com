@@ -66,7 +66,6 @@ Route::get('/docs/{versionSlug?}/{packageSlug?}/{pageSlug?}', function ($version
         ]);
     }
 
-    // Set SEO data
     seo()
         ->title("{$page->title} - {$package->name}")
         ->description($package->description)
@@ -78,7 +77,6 @@ Route::get('/docs/{versionSlug?}/{packageSlug?}/{pageSlug?}', function ($version
             'packageVersionNumber' => $package->version_id,
         ]));
 
-    // Render page
     return view('docs', [
         'package' => $package,
         'page' => $page,
