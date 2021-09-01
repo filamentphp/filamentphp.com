@@ -24,6 +24,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        seo()
+            ->site(config('app.name'))
+            ->title(
+                modify: fn (string $title) => $title . ' - ' . config('app.name'),
+                default: 'Filament - The elegant TALLkit for Laravel artisans.',
+            )
+            ->description(default: 'Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.')
+            ->image(default: fn () => og()->generate([
+                'template' => '_og-image',
+                'title' => config('app.name'),
+                'description' => 'The elegant TALLkit for Laravel artisans.',
+            ]))
+            ->twitterSite('danjharrin');
+
         Model::preventLazyLoading();
     }
 }

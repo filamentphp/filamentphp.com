@@ -1,4 +1,4 @@
-<x-layout :title="$page->title . ' - ' . $package->name">
+<x-layout>
     <nav class="max-w-7xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20">
         <button
             x-data="{}"

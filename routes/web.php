@@ -66,6 +66,18 @@ Route::get('/docs/{versionSlug?}/{packageSlug?}/{pageSlug?}', function ($version
         ]);
     }
 
+    // Set SEO data
+    seo()
+        ->title("{$page->title} - {$package->name}")
+        ->description($package->description)
+        ->image(og()->generate([
+            'template' => '_og-image',
+            'title' => $page->title,
+            'description' => $package->description,
+            'package' => $package->name,
+            'packageVersionNumber' => $package->version_id,
+        ]));
+
     // Render page
     return view('docs', [
         'package' => $package,

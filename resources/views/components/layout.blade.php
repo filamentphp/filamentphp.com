@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ ($title ?? null ? "{$title} - " : '') . config('app.name') }}</title>
+        <x-seo::meta />
 
         <!-- Fonts -->
         @googlefonts
@@ -23,7 +23,7 @@
         {{ $slot }}
 
         <footer>
-            <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 space-y-8">
                 <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
                     <div class="px-5 py-2">
                         <a href="{{ route('home') }}" class="text-base text-gray-500 transition hover:text-primary-600">
@@ -50,7 +50,7 @@
                     </div>
                 </nav>
 
-                <div class="mt-8 flex justify-center space-x-6">
+                <div class="flex justify-center space-x-6">
                     <a href="https://twitter.com/danjharrin" target="_blank" class="text-gray-400 transition hover:text-primary-500">
                         <span class="sr-only">Twitter</span>
 
@@ -68,9 +68,19 @@
                     </a>
                 </div>
 
-                <p class="mt-8 text-center text-base text-gray-400">
-                    &copy; {{ date('Y') }} Filament. All rights reserved.
-                </p>
+                <div class="text-center text-base text-gray-400 space-y-2">
+                    <p>
+                        &copy; {{ date('Y') }} Filament. All rights reserved.
+                    </p>
+
+                    <p>
+                        Syntax highlighting by <a
+                            href="https://torchlight.dev"
+                            target="_blank"
+                            class="hover:text-primary-500"
+                        >Torchlight</a>.
+                    </p>
+                </div>
             </div>
         </footer>
     </body>

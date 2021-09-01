@@ -29,7 +29,7 @@ class DocumentationVersion extends Model
             ->map(function (array $version, int $versionNumber): array {
                 return [
                     'id' => $versionNumber,
-                    'name' => "{$versionNumber}.x",
+                    'name' => "v{$versionNumber}.x",
                     'slug' => "{$versionNumber}.x",
                 ];
             })

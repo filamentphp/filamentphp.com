@@ -40,6 +40,7 @@ class DocumentationPackage extends Model
         foreach (config('documentation') as $versionNumber => $version) {
             foreach ($version['packages'] as $packageSlug => $package) {
                 $packages[] = [
+                    'description' => $package['description'],
                     'name' => $package['name'],
                     'slug' => $packageSlug,
                     'version_id' => $versionNumber,
