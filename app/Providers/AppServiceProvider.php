@@ -33,8 +33,6 @@ class AppServiceProvider extends ServiceProvider
             ->description(default: 'Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.')
             ->image(default: fn () => og()->generate([
                 'template' => '_og-image',
-                'title' => config('app.name'),
-                'description' => 'The elegant TALLkit for Laravel artisans.',
             ]))
             ->twitterSite('danjharrin');
 
