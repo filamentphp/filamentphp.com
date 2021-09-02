@@ -22,11 +22,11 @@
                 @endif
             </div>
 
-            <h1 class="font-bold text-7xl text-gray-900 font-heading leading-tight">
+            <h1 class="font-bold text-7xl text-primary-500 font-heading leading-tight">
                 @if ($title = $payload['title'] ?? null)
                     {{ $title }}
                 @else
-                    The elegant <span class="text-primary-500">TALL</span>kit for Laravel artisans.
+                    <span class="text-gray-900">The elegant <span class="text-primary-500">TALL</span>kit for Laravel artisans.</span>
                 @endif
             </h1>
 
