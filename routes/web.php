@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
+Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja');
+
 Route::get('/docs/{versionSlug?}/{packageSlug?}/{pageSlug?}', function ($versionSlug = null, ?string $packageSlug = null, ?string $pageSlug = null) {
     // Get requested version
     $version = DocumentationVersion::where('slug', $versionSlug)->first();

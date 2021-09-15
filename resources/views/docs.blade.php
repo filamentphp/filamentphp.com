@@ -103,7 +103,7 @@
                 </ul>
             </aside>
 
-            <main class="px-8 overflow-x-auto lg:col-span-3">
+            <main class="px-8 space-y-16 overflow-x-auto lg:col-span-3">
                 <div class="prose">
                     <h1 class="font-heading">
                         {{ $page->title }}
@@ -111,6 +111,10 @@
 
                     @markdown($page->content)
                 </div>
+
+                <p class="text-lg">
+                    Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/laravel-filament/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+                </p>
             </main>
         </div>
 
@@ -118,7 +122,7 @@
             <div class="max-w-7xl w-full flex justify-center text-center mx-auto px-8 py-16">
                 <div class="max-w-2xl space-y-8">
                     <div class="space-y-4">
-                        <h2 class="font-heading font-bold text-yellow-200 text-4xl">
+                        <h2 class="font-heading font-bold text-primary-200 text-4xl">
                             Enjoying Filament?
                         </h2>
 
@@ -130,7 +134,7 @@
                     <a
                         href="https://github.com/sponsors/danharrin"
                         target="_blank"
-                        class="group inline-flex items-center justify-center px-6 text-lg sm:text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-yellow-200 hover:text-pink-500 hover:ring-yellow-200 focus:ring-yellow-200 focus:text-pink-500 focus:bg-yellow-200 focus:outline-none"
+                        class="group inline-flex items-center justify-center px-6 text-lg sm:text-xl font-semibold tracking-tight text-white transition rounded-lg h-11 ring-2 ring-inset ring-white hover:bg-primary-200 hover:text-pink-500 hover:ring-primary-200 focus:ring-primary-200 focus:text-pink-500 focus:bg-primary-200 focus:outline-none"
                     >
                         Sponsor Filament on GitHub
 

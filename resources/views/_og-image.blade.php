@@ -14,7 +14,7 @@
                         {{ $package }}
 
                         @if ($packageVersionNumber = $payload['packageVersionNumber'] ?? null)
-                            <span class="text-yellow-500">
+                            <span class="text-primary-500">
                                 {{ "v{$packageVersionNumber}" }}
                             </span>
                         @endif

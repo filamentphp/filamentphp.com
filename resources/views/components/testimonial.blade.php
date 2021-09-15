@@ -1,7 +1,7 @@
 <a
     href="{{ $url }}"
     target="_blank"
-    class="group transition rounded-lg shadow-sm border border-gray-300 p-8 hover:scale-105"
+    class="group transition rounded-lg shadow-sm border border-gray-300 p-8 hover:scale-105 hover:-rotate-1"
 >
     <div class="flex flex-col space-y-8 justify-between h-full">
         <div class="relative">
