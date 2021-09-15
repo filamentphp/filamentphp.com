@@ -52,7 +52,7 @@
                 <a
                     href="/discord"
                     target="_blank"
-                    class="inline-flex items-center space-x-4 text-lg px-4 py-2 rounded bg-gray-900 text-white transition hover:text-primary-100 hover:scale-105 hover:-rotate-1"
+                    class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded bg-gray-900 text-white transition hover:text-primary-100 hover:scale-105 hover:-rotate-1"
                 >
                     <svg class="w-5" fill="none" viewBox="0 0 71 55" aria-hidden="true">
                         <g clip-path="url(#clip0)">
