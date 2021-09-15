@@ -165,7 +165,7 @@
 
             <div class="grid lg:grid-flow-row-dense lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="lg:col-start-2 xl:col-start-3 xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/admin/ad-thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/forms/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="lg:col-start-1 xl:col-span-2 flex items-center">
@@ -244,7 +244,7 @@
 
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/admin/ad-thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/tables/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="xl:col-span-2 flex items-center">
