@@ -435,6 +435,7 @@
                     'https://github.com/pfrlv' => 'https://avatars.githubusercontent.com/u/10477149?s=96&v=4',
                     'https://github.com/umutphp' => 'https://avatars.githubusercontent.com/u/3245166?s=96&v=4',
                     'https://github.com/bernhardh' => 'https://avatars.githubusercontent.com/u/642292?s=96&v=4',
+                    'https://github.com/vextil' => 'https://avatars.githubusercontent.com/u/3134745?v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
