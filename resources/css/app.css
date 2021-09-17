@@ -6,6 +6,10 @@
     display: none;
 }
 
+.prose iframe {
+    @apply w-full;
+}
+
 pre {
     @apply rounded overflow-x-auto;
     padding: 0 !important;
