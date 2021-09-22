@@ -441,20 +441,18 @@
                     'https://github.com/intrepidws' => 'https://avatars.githubusercontent.com/u/125735?s=96&v=4',
                     'https://github.com/johncarter-' => 'https://avatars.githubusercontent.com/u/3776888?s=96&v=4',
                     'https://github.com/roni-estein' => 'https://avatars.githubusercontent.com/u/8517475?s=96&v=4',
-                    'https://github.com/railto' => 'https://avatars.githubusercontent.com/u/6123557?s=96&v=4',
                     'https://github.com/skoontastic' => 'https://avatars.githubusercontent.com/u/585102?s=96&v=4',
                     'https://github.com/adam-code-labx' => 'https://avatars.githubusercontent.com/u/53559175?s=96&v=4',
                     'https://github.com/joselara' => 'https://avatars.githubusercontent.com/u/1036420?s=96&v=4',
                     'https://github.com/stancl' => 'https://avatars.githubusercontent.com/u/33033094?s=96&v=4',
-                    'https://github.com/ryangjchandler' => 'https://avatars.githubusercontent.com/u/41837763?s=96&v=4',
                     'https://github.com/craftlogan' => 'https://avatars.githubusercontent.com/u/10950466?s=96&v=4',
                     'https://github.com/imliam' => 'https://avatars.githubusercontent.com/u/4326337?s=96&v=4',
-                    'https://github.com/gummibeer' => 'https://avatars.githubusercontent.com/u/6187884?s=96&v=4',
                     'https://github.com/lorenzosapora' => 'https://avatars.githubusercontent.com/u/25519274?s=96&v=4',
                     'https://github.com/pfrlv' => 'https://avatars.githubusercontent.com/u/10477149?s=96&v=4',
-                    'https://github.com/umutphp' => 'https://avatars.githubusercontent.com/u/3245166?s=96&v=4',
                     'https://github.com/bernhardh' => 'https://avatars.githubusercontent.com/u/642292?s=96&v=4',
                     'https://github.com/vextil' => 'https://avatars.githubusercontent.com/u/3134745?s=96&v=4',
+                    'https://github.com/sahilhuseynzade' => 'https://avatars.githubusercontent.com/u/61311887?s=96&v=4',
+
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
