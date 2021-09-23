@@ -59,7 +59,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://twitter.com/laravel-filament/filament" target="_blank" class="text-gray-400 transition hover:text-primary-500 flex items-center">
+                    <a href="https://github.com/laravel-filament/filament" target="_blank" class="text-gray-400 transition hover:text-primary-500 flex items-center">
                         <span class="sr-only">GitHub</span>
 
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
