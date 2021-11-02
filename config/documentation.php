@@ -34,6 +34,16 @@ return [
 
             ],
 
+            'tables' => [
+
+                'name' => 'Table Builder',
+
+                'description' => 'The elegant TALL stack table builder for Laravel artisans.',
+
+                'path' => resource_path('filament/2.x/packages/tables/docs'),
+
+            ],
+
             'spatie-laravel-media-library-plugin' => [
 
                 'name' => 'spatie/laravel-medialibrary Plugin',
