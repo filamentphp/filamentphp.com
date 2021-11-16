@@ -1,6 +1,6 @@
 <x-layout previewify="757" :previewify-data="[
     'title' => 'The elegant TALLkit for Laravel artisans.',
-    'subtitle' => 'Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.',
+    'subtitle' => 'Rapidly build TALL stack interfaces, designed for humans.',
     'code' => 'composer require filament/filament',
 ]">
     <nav class="max-w-7xl mx-auto grid grid-cols-3 py-8 px-8 xl:py-20">

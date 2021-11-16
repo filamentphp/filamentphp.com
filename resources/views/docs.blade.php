@@ -2,7 +2,7 @@
     'overline' => $package->name . ' v' . $package->version_id,
     'title' => $page->title,
     'subtitle' => $package->description,
-    'repository' => 'filament/' . $package->slug,
+    'repository' => 'laravel-filament/filament',
 ]">
     <nav class="max-w-7xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20">
         <button
