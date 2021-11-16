@@ -1,4 +1,4 @@
-<x-layout previewify="756" :previewify-data="[
+<x-layout previewify="757" :previewify-data="[
     'title' => 'The elegant TALLkit for Laravel artisans.',
     'subtitle' => 'Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.',
     'code' => 'composer require filament/filament',
