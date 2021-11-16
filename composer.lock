@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5b9896339a9cf60044f2842f0a6edd1",
+    "content-hash": "3be3f08eb3c722f17176c36a176d690d",
     "packages": [
         {
             "name": "archtechx/laravel-seo",
@@ -685,82 +685,6 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
-        },
-        {
-            "name": "flowframe/og-image-client",
-            "version": "v0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Flowframe/og-image-client.git",
-                "reference": "2ba4ace6f861357e866408276a1a319dccfa9a9f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Flowframe/og-image-client/zipball/2ba4ace6f861357e866408276a1a319dccfa9a9f",
-                "reference": "2ba4ace6f861357e866408276a1a319dccfa9a9f",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.37",
-                "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.4.3"
-            },
-            "require-dev": {
-                "brianium/paratest": "^6.2",
-                "nunomaduro/collision": "^5.3",
-                "orchestra/testbench": "^6.15",
-                "phpunit/phpunit": "^9.3",
-                "spatie/laravel-ray": "^1.9",
-                "vimeo/psalm": "^4.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Flowframe\\OgImageClient\\OgImageClientServiceProvider"
-                    ],
-                    "aliases": {
-                        "OgImageClient": "Flowframe\\OgImageClient\\Facades\\OgImageClient"
-                    }
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Flowframe\\OgImageClient\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lars Klopstra",
-                    "email": "lars@flowframe.nl",
-                    "role": "Developer"
-                }
-            ],
-            "description": "This Laravel package allows you to easily create Open Graph images for your application or website.",
-            "homepage": "https://github.com/flowframe/og-image-client",
-            "keywords": [
-                "Flowframe",
-                "laravel",
-                "og-image-client"
-            ],
-            "support": {
-                "issues": "https://github.com/Flowframe/og-image-client/issues",
-                "source": "https://github.com/Flowframe/og-image-client/tree/v0.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/larsklopstra",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-06-19T10:07:33+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",

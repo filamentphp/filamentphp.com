@@ -9,7 +9,6 @@
         "archtechx/laravel-seo": "^0.2.2",
         "blade-ui-kit/blade-heroicons": "^1.2",
         "calebporzio/sushi": "^2.3",
-        "flowframe/og-image-client": "^0.0.2",
         "fruitcake/laravel-cors": "^2.0",
         "graham-campbell/markdown": "^13.1",
         "guzzlehttp/guzzle": "^7.0.1",
