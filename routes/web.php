@@ -79,14 +79,7 @@ Route::prefix('/docs')->group(function () {
 
         seo()
             ->title("{$page->title} - {$package->name}")
-            ->description($package->description)
-            ->image(og()->generate([
-                'template' => '_og-image',
-                'title' => $page->title,
-                'description' => $package->description,
-                'package' => $package->name,
-                'packageVersionNumber' => $package->version_id,
-            ]));
+            ->description($package->description);
 
         return view('docs', [
             'package' => $package,

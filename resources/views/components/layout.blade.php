@@ -1,3 +1,8 @@
+@props([
+    'previewify' => null,
+    'previewifyData' => [],
+])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -8,6 +13,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <x-seo::meta />
+
+        @if ($previewify)
+            <meta property="og:image" content="https://previewify.app/i/{{ $previewify }}?url={{ url()->current() }}">
+            <meta name="twitter:image" content="https://previewify.app/i/{{ $previewify }}?url={{ url()->current() }}">
+            <meta name="previewify:image" content="{{ asset('/images/icon.png') }}">
+            @foreach ($previewifyData as $key => $value)
+                <meta name="previewify:{{ $key }}" content="{{ $value }}">
+            @endforeach
+        @endif
 
         <!-- Fonts -->
         @googlefonts

@@ -1,4 +1,9 @@
-<x-layout>
+<x-layout previewify="756" :previewify-data="[
+    'overline' => $package->name . ' v' . $package->version_id,
+    'title' => $page->title,
+    'subtitle' => $package->description,
+    'repository' => 'filament/' . $package->slug,
+]">
     <nav class="max-w-7xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20">
         <button
             x-data="{}"
