@@ -192,39 +192,25 @@
 
                 <div class="lg:col-start-1 xl:col-span-2 flex items-center">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <div class="space-y-2">
-                                <h3 class="font-heading font-bold text-white text-4xl">
-                                    <span>
-                                        Form Builder
-                                    </span>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-bold text-white text-4xl">
+                                <span>
+                                    Form Builder
+                                </span>
 
-                                    <span class="font-sans text-medium text-xl text-primary-500">
-                                        v2
-                                    </span>
-                                </h3>
+                                <span class="font-sans text-medium text-xl text-primary-500">
+                                    v2
+                                </span>
+                            </h3>
 
-                                <div class="text-lg text-gray-200 space-y-2">
-                                    <p>
-                                        An intuitive <span class="font-medium">TALL-stack form builder</span>.
-                                    </p>
+                            <div class="text-lg text-gray-200 space-y-2">
+                                <p>
+                                    An intuitive <span class="font-medium">TALL-stack form builder</span>.
+                                </p>
 
-                                    <p>
-                                        Generate <a href="/docs/forms/components#date-time-picker" class="font-medium transition hover:text-primary-100">date pickers</a>, searchable <a href="/docs/forms/components#select" class="font-medium transition hover:text-primary-100">select menus</a>, <a href="/docs/forms/components#rich-editor" class="font-medium transition hover:text-primary-100">rich text editors</a> and <a href="/docs/forms/components#file-upload" class="font-medium transition hover:text-primary-100">file upload</a> fields with just one line of PHP.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a href="https://github.com/laravel-filament/filament/discussions/495" class="bg-primary-100 space-x-1 rounded-full py-2 px-4 text-sm text-primary-800">
-                                    <span>
-                                        Coming soon to Admin Panel v2
-                                    </span>
-
-                                    <span>
-                                        😍
-                                    </span>
-                                </a>
+                                <p>
+                                    Generate <a href="/docs/forms/components#date-time-picker" class="font-medium transition hover:text-primary-100">date pickers</a>, searchable <a href="/docs/forms/components#select" class="font-medium transition hover:text-primary-100">select menus</a>, <a href="/docs/forms/components#rich-editor" class="font-medium transition hover:text-primary-100">rich text editors</a> and <a href="/docs/forms/components#file-upload" class="font-medium transition hover:text-primary-100">file upload</a> fields with just one line of PHP.
+                                </p>
                             </div>
                         </div>
 
@@ -271,39 +257,25 @@
 
                 <div class="xl:col-span-2 flex items-center">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <div class="space-y-2">
-                                <h3 class="font-heading font-bold text-white text-4xl">
-                                    <span>
-                                        Table Builder
-                                    </span>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-bold text-white text-4xl">
+                                <span>
+                                    Table Builder
+                                </span>
 
-                                    <span class="font-sans text-medium text-xl text-primary-500">
-                                        v2
-                                    </span>
-                                </h3>
+                                <span class="font-sans text-medium text-xl text-primary-500">
+                                    v2
+                                </span>
+                            </h3>
 
-                                <div class="text-lg text-gray-200 space-y-2">
-                                    <p>
-                                        An interactive <span class="font-medium">TALL-stack table builder</span>.
-                                    </p>
+                            <div class="text-lg text-gray-200 space-y-2">
+                                <p>
+                                    An interactive <span class="font-medium">TALL-stack table builder</span>.
+                                </p>
 
-                                    <p>
-                                        Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a href="https://github.com/laravel-filament/filament/discussions/495" class="bg-primary-100 space-x-1 rounded-full py-2 px-4 text-sm text-primary-800">
-                                    <span>
-                                        Coming soon to Admin Panel v2
-                                    </span>
-
-                                    <span>
-                                        😍
-                                    </span>
-                                </a>
+                                <p>
+                                    Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface.
+                                </p>
                             </div>
                         </div>
 
