@@ -130,7 +130,7 @@
                                 </span>
 
                                 <span class="font-sans text-medium text-xl text-primary-500">
-                                    v1
+                                    v2
                                 </span>
                             </h3>
 
