@@ -24,6 +24,16 @@ return [
 
         'packages' => [
 
+            'admin' => [
+
+                'name' => 'Admin Panel',
+
+                'description' => 'The elegant TALL stack admin panel for Laravel artisans.',
+
+                'path' => resource_path('filament/2.x/packages/admin/docs'),
+
+            ],
+
             'forms' => [
 
                 'name' => 'Form Builder',
@@ -54,11 +64,21 @@ return [
 
             ],
 
+            'spatie-laravel-settings-plugin' => [
+
+                'name' => 'spatie/laravel-settings Plugin',
+
+                'description' => 'A plugin to add support for spatie/laravel-settings to Filament.',
+
+                'path' => resource_path('filament/2.x/packages/spatie-laravel-settings-plugin/docs'),
+
+            ],
+
             'spatie-laravel-tags-plugin' => [
 
                 'name' => 'spatie/laravel-tags Plugin',
 
-                'description' => 'A plugin to add support for spatie/laravel-medialibrary to Filament.',
+                'description' => 'A plugin to add support for spatie/laravel-tags to Filament.',
 
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-tags-plugin/docs'),
 
