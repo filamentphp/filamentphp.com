@@ -83,6 +83,16 @@ return [
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-tags-plugin/docs'),
 
             ],
+
+            'spatie-laravel-translatable-plugin' => [
+
+                'name' => 'spatie/laravel-translatable Plugin',
+
+                'description' => 'A plugin to add support for spatie/laravel-translatable to Filament.',
+
+                'path' => resource_path('filament/2.x/packages/spatie-laravel-translatable-plugin/docs'),
+
+            ],
         ],
 
     ],
