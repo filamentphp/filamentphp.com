@@ -10,6 +10,14 @@
     @apply w-full;
 }
 
+.prose details > *:not(summary) {
+    margin-left: 2rem;
+}
+
+.prose details {
+    padding-bottom: 1rem;
+}
+
 pre {
     @apply rounded overflow-x-auto;
     padding: 0 !important;

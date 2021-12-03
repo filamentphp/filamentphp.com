@@ -460,9 +460,9 @@
                     'https://github.com/ssmusoke' => 'https://avatars.githubusercontent.com/u/689900?s=96&v=4',
                     'https://github.com/skoontastic' => 'https://avatars.githubusercontent.com/u/585102?s=96&v=4',
                     'https://github.com/adam-code-labx' => 'https://avatars.githubusercontent.com/u/53559175?s=96&v=4',
-                    'https://github.com/ominixamf' => 'https://avatars.githubusercontent.com/u/41333586?s=96&v=4',
                     'https://github.com/joselara' => 'https://avatars.githubusercontent.com/u/1036420?s=96&v=4',
                     'https://github.com/s-sadiq' => 'https://avatars.githubusercontent.com/u/3797475?s=96&v=4',
+                    'https://github.com/macscr' => 'https://avatars.githubusercontent.com/u/1404944?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
