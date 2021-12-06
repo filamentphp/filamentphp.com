@@ -84,41 +84,7 @@
         <div class="max-w-7xl mx-auto px-8 py-32 space-y-32">
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="xl:col-span-3 flex items-center">
-                    <div
-                        x-data="{ playing: false }"
-                        x-init="
-                            $watch('playing', (value) => {
-                                if (value === true) {
-                                    $refs.video.play()
-                                } else {
-                                    $refs.video.pause()
-                                }
-                            })
-                        "
-                        class="relative overflow-hidden rounded-lg"
-                    >
-                        <video
-                            poster="{{ asset('images/admin/ad-thumbnail.jpg') }}"
-                            x-ref="video"
-                            x-on:click="playing = false"
-                        >
-                            <source src="{{ asset('videos/admin/ad.mp4') }}" type="video/mp4">
-                        </video>
-
-                        <button
-                            class="absolute inset-0 flex items-center justify-center w-full h-full transition bg-black rounded-lg bg-opacity-20 text-primary-500 hover:text-primary-600"
-                            x-show="playing === false"
-                            x-on:click="playing = true"
-                        >
-                            <span class="sr-only">
-                                Play Video
-                            </span>
-
-                            <span class="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg">
-                                <x-heroicon-o-play class="w-16 h-16" />
-                            </span>
-                        </button>
-                    </div>
+                    <img src="{{ asset('images/admin.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="xl:col-span-2 flex items-center">
@@ -187,7 +153,7 @@
 
             <div class="grid lg:grid-flow-row-dense lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="lg:col-start-2 xl:col-start-3 xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/forms/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/forms.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="lg:col-start-1 xl:col-span-2 flex items-center">
@@ -252,7 +218,7 @@
 
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/tables/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/tables.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="xl:col-span-2 flex items-center">
