@@ -405,8 +405,8 @@
         </div>
     </section>
 
-    <section class="relative bg-pink-500">
-        <div class="lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
+    <section class="bg-pink-500">
+        <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
             <div class="grid grid-cols-6 gap-4 flex-shrink-0">
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
@@ -422,6 +422,7 @@
                     'https://github.com/intrepidws' => 'https://avatars.githubusercontent.com/u/125735?s=96&v=4',
                     'https://github.com/johncarter-' => 'https://avatars.githubusercontent.com/u/3776888?s=96&v=4',
                     'https://github.com/roni-estein' => 'https://avatars.githubusercontent.com/u/8517475?s=96&v=4',
+                    'https://github.com/looxisdev' => 'https://avatars.githubusercontent.com/u/25901673?s=96&v=4',
                     'https://github.com/sinabigy' => 'https://avatars.githubusercontent.com/u/54871527?s=96&v=4',
                     'https://github.com/ssmusoke' => 'https://avatars.githubusercontent.com/u/689900?s=96&v=4',
                     'https://github.com/skoontastic' => 'https://avatars.githubusercontent.com/u/585102?s=96&v=4',
@@ -460,14 +461,14 @@
                     <x-heroicon-o-heart class="ml-2 -mr-3 w-7 h-7 transition-all group-hover:scale-125" />
                 </a>
             </div>
-        </div>
 
-        <div class="hidden absolute right-0 top-0 mt-12 mr-12 xl:block">
-            <img
-                src="{{ asset('images/diamond.svg') }}"
-                alt="Diamond"
-                class="h-[8rem]"
-            />
+            <div class="hidden absolute right-0 top-12 mr-12 xl:block">
+                <img
+                    src="{{ asset('images/diamond.svg') }}"
+                    alt="Diamond"
+                    class="h-[8rem]"
+                />
+            </div>
         </div>
     </section>
 
