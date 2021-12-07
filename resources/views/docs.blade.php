@@ -123,8 +123,8 @@
             </main>
         </div>
 
-        <section class="relative bg-pink-500 flex justify-center">
-            <div class="max-w-7xl w-full flex justify-center text-center mx-auto px-8 py-16">
+        <section class="bg-pink-500 flex justify-center">
+            <div class="relative max-w-7xl w-full flex justify-center text-center mx-auto px-8 py-16">
                 <div class="max-w-2xl space-y-8">
                     <div class="space-y-4">
                         <h2 class="font-heading font-bold text-primary-200 text-4xl">
@@ -146,22 +146,22 @@
                         <x-heroicon-o-heart class="ml-2 -mr-3 w-7 h-7 transition-all group-hover:scale-125" />
                     </a>
                 </div>
-            </div>
 
-            <div class="hidden absolute left-0 bottom-0 ml-12 -mb-2 xl:block">
-                <img
-                    src="{{ asset('images/dragon.svg') }}"
-                    alt="Dragon"
-                    class="h-[16rem]"
-                />
-            </div>
+                <div class="hidden absolute left-0 bottom-0 ml-12 -mb-2 xl:block">
+                    <img
+                        src="{{ asset('images/dragon.svg') }}"
+                        alt="Dragon"
+                        class="h-[16rem]"
+                    />
+                </div>
 
-            <div class="hidden absolute right-0 top-0 mt-12 mr-12 xl:block">
-                <img
-                    src="{{ asset('images/diamond.svg') }}"
-                    alt="Diamond"
-                    class="h-[8rem]"
-                />
+                <div class="hidden absolute right-0 top-0 mt-12 mr-12 xl:block">
+                    <img
+                        src="{{ asset('images/diamond.svg') }}"
+                        alt="Diamond"
+                        class="h-[8rem]"
+                    />
+                </div>
             </div>
         </section>
     </div>

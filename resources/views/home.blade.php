@@ -84,41 +84,7 @@
         <div class="max-w-7xl mx-auto px-8 py-32 space-y-32">
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="xl:col-span-3 flex items-center">
-                    <div
-                        x-data="{ playing: false }"
-                        x-init="
-                            $watch('playing', (value) => {
-                                if (value === true) {
-                                    $refs.video.play()
-                                } else {
-                                    $refs.video.pause()
-                                }
-                            })
-                        "
-                        class="relative overflow-hidden rounded-lg"
-                    >
-                        <video
-                            poster="{{ asset('images/admin/ad-thumbnail.jpg') }}"
-                            x-ref="video"
-                            x-on:click="playing = false"
-                        >
-                            <source src="{{ asset('videos/admin/ad.mp4') }}" type="video/mp4">
-                        </video>
-
-                        <button
-                            class="absolute inset-0 flex items-center justify-center w-full h-full transition bg-black rounded-lg bg-opacity-20 text-primary-500 hover:text-primary-600"
-                            x-show="playing === false"
-                            x-on:click="playing = true"
-                        >
-                            <span class="sr-only">
-                                Play Video
-                            </span>
-
-                            <span class="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg">
-                                <x-heroicon-o-play class="w-16 h-16" />
-                            </span>
-                        </button>
-                    </div>
+                    <img src="{{ asset('images/admin.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="xl:col-span-2 flex items-center">
@@ -130,7 +96,7 @@
                                 </span>
 
                                 <span class="font-sans text-medium text-xl text-primary-500">
-                                    v1
+                                    v2
                                 </span>
                             </h3>
 
@@ -187,44 +153,30 @@
 
             <div class="grid lg:grid-flow-row-dense lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="lg:col-start-2 xl:col-start-3 xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/forms/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/forms.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="lg:col-start-1 xl:col-span-2 flex items-center">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <div class="space-y-2">
-                                <h3 class="font-heading font-bold text-white text-4xl">
-                                    <span>
-                                        Form Builder
-                                    </span>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-bold text-white text-4xl">
+                                <span>
+                                    Form Builder
+                                </span>
 
-                                    <span class="font-sans text-medium text-xl text-primary-500">
-                                        v2
-                                    </span>
-                                </h3>
+                                <span class="font-sans text-medium text-xl text-primary-500">
+                                    v2
+                                </span>
+                            </h3>
 
-                                <div class="text-lg text-gray-200 space-y-2">
-                                    <p>
-                                        An intuitive <span class="font-medium">TALL-stack form builder</span>.
-                                    </p>
+                            <div class="text-lg text-gray-200 space-y-2">
+                                <p>
+                                    An intuitive <span class="font-medium">TALL-stack form builder</span>.
+                                </p>
 
-                                    <p>
-                                        Generate <a href="/docs/forms/components#date-time-picker" class="font-medium transition hover:text-primary-100">date pickers</a>, searchable <a href="/docs/forms/components#select" class="font-medium transition hover:text-primary-100">select menus</a>, <a href="/docs/forms/components#rich-editor" class="font-medium transition hover:text-primary-100">rich text editors</a> and <a href="/docs/forms/components#file-upload" class="font-medium transition hover:text-primary-100">file upload</a> fields with just one line of PHP.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a href="https://github.com/laravel-filament/filament/discussions/495" class="bg-primary-100 space-x-1 rounded-full py-2 px-4 text-sm text-primary-800">
-                                    <span>
-                                        Coming soon to Admin Panel v2
-                                    </span>
-
-                                    <span>
-                                        😍
-                                    </span>
-                                </a>
+                                <p>
+                                    Generate <a href="/docs/forms/components#date-time-picker" class="font-medium transition hover:text-primary-100">date pickers</a>, searchable <a href="/docs/forms/components#select" class="font-medium transition hover:text-primary-100">select menus</a>, <a href="/docs/forms/components#rich-editor" class="font-medium transition hover:text-primary-100">rich text editors</a> and <a href="/docs/forms/components#file-upload" class="font-medium transition hover:text-primary-100">file upload</a> fields with just one line of PHP.
+                                </p>
                             </div>
                         </div>
 
@@ -266,44 +218,30 @@
 
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
                 <div class="xl:col-span-3 flex items-center">
-                    <img src="{{ asset('images/tables/thumbnail.jpg') }}" class="overflow-hidden rounded-lg" />
+                    <img src="{{ asset('images/tables.jpg') }}" class="overflow-hidden rounded-lg" />
                 </div>
 
                 <div class="xl:col-span-2 flex items-center">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <div class="space-y-2">
-                                <h3 class="font-heading font-bold text-white text-4xl">
-                                    <span>
-                                        Table Builder
-                                    </span>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-bold text-white text-4xl">
+                                <span>
+                                    Table Builder
+                                </span>
 
-                                    <span class="font-sans text-medium text-xl text-primary-500">
-                                        v2
-                                    </span>
-                                </h3>
+                                <span class="font-sans text-medium text-xl text-primary-500">
+                                    v2
+                                </span>
+                            </h3>
 
-                                <div class="text-lg text-gray-200 space-y-2">
-                                    <p>
-                                        An interactive <span class="font-medium">TALL-stack table builder</span>.
-                                    </p>
+                            <div class="text-lg text-gray-200 space-y-2">
+                                <p>
+                                    An interactive <span class="font-medium">TALL-stack table builder</span>.
+                                </p>
 
-                                    <p>
-                                        Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a href="https://github.com/laravel-filament/filament/discussions/495" class="bg-primary-100 space-x-1 rounded-full py-2 px-4 text-sm text-primary-800">
-                                    <span>
-                                        Coming soon to Admin Panel v2
-                                    </span>
-
-                                    <span>
-                                        😍
-                                    </span>
-                                </a>
+                                <p>
+                                    Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface.
+                                </p>
                             </div>
                         </div>
 
@@ -467,8 +405,8 @@
         </div>
     </section>
 
-    <section class="relative bg-pink-500">
-        <div class="lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
+    <section class="bg-pink-500">
+        <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
             <div class="grid grid-cols-6 gap-4 flex-shrink-0">
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
@@ -485,16 +423,17 @@
                     'https://github.com/intrepidws' => 'https://avatars.githubusercontent.com/u/125735?s=96&v=4',
                     'https://github.com/johncarter-' => 'https://avatars.githubusercontent.com/u/3776888?s=96&v=4',
                     'https://github.com/roni-estein' => 'https://avatars.githubusercontent.com/u/8517475?s=96&v=4',
+                    'https://github.com/looxisdev' => 'https://avatars.githubusercontent.com/u/25901673?s=96&v=4',
                     'https://github.com/sinabigy' => 'https://avatars.githubusercontent.com/u/54871527?s=96&v=4',
                     'https://github.com/ssmusoke' => 'https://avatars.githubusercontent.com/u/689900?s=96&v=4',
                     'https://github.com/skoontastic' => 'https://avatars.githubusercontent.com/u/585102?s=96&v=4',
                     'https://github.com/adam-code-labx' => 'https://avatars.githubusercontent.com/u/53559175?s=96&v=4',
-                    'https://github.com/ominixamf' => 'https://avatars.githubusercontent.com/u/41333586?s=96&v=4',
                     'https://github.com/joselara' => 'https://avatars.githubusercontent.com/u/1036420?s=96&v=4',
                     'https://github.com/s-sadiq' => 'https://avatars.githubusercontent.com/u/3797475?s=96&v=4',
                     'https://github.com/blackpig' => 'https://avatars.githubusercontent.com/u/1029317?s=96&v=4',
                     'https://github.com/murodov20' => 'https://avatars.githubusercontent.com/u/18461379?s=96&v=4',
                     'https://github.com/joshuablum' => 'https://avatars.githubusercontent.com/u/3824203?s=96&v=4',
+                    'https://github.com/macscr' => 'https://avatars.githubusercontent.com/u/1404944?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
@@ -526,14 +465,14 @@
                     <x-heroicon-o-heart class="ml-2 -mr-3 w-7 h-7 transition-all group-hover:scale-125" />
                 </a>
             </div>
-        </div>
 
-        <div class="hidden absolute right-0 top-0 mt-12 mr-12 xl:block">
-            <img
-                src="{{ asset('images/diamond.svg') }}"
-                alt="Diamond"
-                class="h-[8rem]"
-            />
+            <div class="hidden absolute right-0 top-12 mr-12 xl:block">
+                <img
+                    src="{{ asset('images/diamond.svg') }}"
+                    alt="Diamond"
+                    class="h-[8rem]"
+                />
+            </div>
         </div>
     </section>
 
