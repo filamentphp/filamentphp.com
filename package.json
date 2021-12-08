@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@docsearch/js": "^3.0.0-alpha.42",
         "@ryangjchandler/alpine-clipboard": "^2.0.0",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",

@@ -70,6 +70,8 @@
                             </option>
                         @endforeach
                     </select>
+
+                    <div id="docsearch" class="border rounded-lg border-gray-300 shadow-sm"></div>
                 </div>
 
                 <ul class="space-y-4">

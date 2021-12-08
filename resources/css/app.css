@@ -1,9 +1,18 @@
+@import '~@docsearch/css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 [x-cloak] {
     display: none;
+}
+
+.DocSearch-Button {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    border-radius: 0.5rem;
 }
 
 .prose iframe {
