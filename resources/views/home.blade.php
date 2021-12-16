@@ -52,7 +52,17 @@
                 </h3>
             </div>
 
-            <div>
+            <div class="flex flex-wrap gap-4">
+                <a
+                    href="https://demo.filamentadmin.com"
+                    target="_blank"
+                    class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded bg-primary-500 text-white transition hover:text-primary-50 hover:scale-105 hover:-rotate-1"
+                >
+                    <span>
+                        Admin panel demo
+                    </span>
+                </a>
+
                 <a
                     href="/discord"
                     target="_blank"
@@ -142,7 +152,11 @@
                             </div>
 
                             <div class="text-right">
-                                <a href="/docs/admin" class="text-white transition hover:text-primary-100 font-medium text-lg">
+                                <a href="https://demo.filamentadmin.com" target="_blank" class="block text-white transition hover:text-primary-100 font-medium text-lg">
+                                    Demo &rarr;
+                                </a>
+
+                                <a href="/docs/admin" class="block text-white transition hover:text-primary-100 font-medium text-lg">
                                     Documentation &rarr;
                                 </a>
                             </div>
@@ -424,7 +438,6 @@
                     'https://github.com/johncarter-' => 'https://avatars.githubusercontent.com/u/3776888?s=96&v=4',
                     'https://github.com/roni-estein' => 'https://avatars.githubusercontent.com/u/8517475?s=96&v=4',
                     'https://github.com/looxisdev' => 'https://avatars.githubusercontent.com/u/25901673?s=96&v=4',
-                    'https://github.com/sinabigy' => 'https://avatars.githubusercontent.com/u/54871527?s=96&v=4',
                     'https://github.com/ssmusoke' => 'https://avatars.githubusercontent.com/u/689900?s=96&v=4',
                     'https://github.com/skoontastic' => 'https://avatars.githubusercontent.com/u/585102?s=96&v=4',
                     'https://github.com/adam-code-labx' => 'https://avatars.githubusercontent.com/u/53559175?s=96&v=4',
@@ -434,6 +447,12 @@
                     'https://github.com/murodov20' => 'https://avatars.githubusercontent.com/u/18461379?s=96&v=4',
                     'https://github.com/joshuablum' => 'https://avatars.githubusercontent.com/u/3824203?s=96&v=4',
                     'https://github.com/macscr' => 'https://avatars.githubusercontent.com/u/1404944?s=96&v=4',
+                    'https://github.com/rabol' => 'https://avatars.githubusercontent.com/u/1177191?s=96&v=4',
+                    'https://github.com/rexlManu' => 'https://avatars.githubusercontent.com/u/32296940?s=96&v=4',
+                    'https://github.com/gavinhewitt' => 'https://avatars.githubusercontent.com/u/1969103?s=96&v=4',
+                    'https://github.com/sebastiaankloos' => 'https://avatars.githubusercontent.com/u/6506510?s=96&v=4',
+                    'https://github.com/pxlrbt' => 'https://avatars.githubusercontent.com/u/22632550?s=96&v=4',
+                    'https://github.com/lukasleitsch' => 'https://avatars.githubusercontent.com/u/3009245?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
