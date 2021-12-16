@@ -40,25 +40,25 @@
             <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 space-y-8">
                 <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
                     <div class="px-5 py-2">
-                        <a href="{{ route('home') }}" class="text-base text-gray-500 transition hover:text-primary-600">
+                        <a href="{{ route('home') }}" class="text-base text-gray-500 transition hover:text-primary-500">
                             Home
                         </a>
                     </div>
 
                     <div class="px-5 py-2">
-                        <a href="/docs/admin" class="text-base text-gray-500 transition hover:text-primary-600">
+                        <a href="/docs/admin" class="text-base text-gray-500 transition hover:text-primary-500">
                             Documentation
                         </a>
                     </div>
 
                     <div class="px-5 py-2">
-                        <a href="https://github.com/laravel-filament/filament/discussions/new" class="text-base text-gray-500 transition hover:text-primary-600">
+                        <a href="https://github.com/laravel-filament/filament/discussions/new" class="text-base text-gray-500 transition hover:text-primary-500">
                             Need help?
                         </a>
                     </div>
 
                     <div class="px-5 py-2">
-                        <a href="https://github.com/sponsors/danharrin" class="text-base text-gray-500 transition hover:text-primary-600">
+                        <a href="https://github.com/sponsors/danharrin" class="text-base text-gray-500 transition hover:text-primary-500">
                             Sponsor Filament
                         </a>
                     </div>
