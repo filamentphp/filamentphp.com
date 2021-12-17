@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
+require __DIR__.'/auth.php';
+
 Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja');
 
 Route::prefix('/docs')->group(function () {
@@ -88,3 +90,12 @@ Route::prefix('/docs')->group(function () {
         ]);
     })->name('docs');
 });
+
+Route::prefix('/store')->group(function () {
+    Route::get('/', function () {
+        return redirect(auth()->user()->getStripeConnectOnboardingLink(route('store'), route('store'))->url);
+        return view('store.index');
+    })->name('store');
+});
+
+Route::stripeWebhooks('stripe/webhook');

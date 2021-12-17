@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Stripe\Stripe;
+use Stripe\StripeClient;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(
+            'stripe',
+            fn () => new StripeClient(config('services.stripe.secret')),
+        );
     }
 
     /**
@@ -34,5 +39,7 @@ class AppServiceProvider extends ServiceProvider
             ->twitterSite('danjharrin');
 
         Model::preventLazyLoading();
+
+        Stripe::setApiKey(config('services.stripe.secret'));
     }
 }
