@@ -41,10 +41,7 @@ module.exports = {
                             content: 'none',
                         },
                         code: {
-                            backgroundColor: theme('colors.yellow.100'),
-                            borderRadius: theme('borderRadius.lg'),
                             fontWeight: theme('fontWeight.normal'),
-                            padding: `${theme('spacing[0.5]')} theme('spacing.1')`,
                         },
                     },
                 },
