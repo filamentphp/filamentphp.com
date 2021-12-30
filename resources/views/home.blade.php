@@ -427,6 +427,7 @@
                     'https://github.com/larrybarker' => 'https://avatars.githubusercontent.com/u/28734844?s=96&v=4',
                     'https://github.com/msnegurski' => 'https://avatars.githubusercontent.com/u/6137647?s=96&v=4',
                     'https://github.com/ryanscherler' => 'https://avatars.githubusercontent.com/u/881938?s=96&v=4',
+                    'https://github.com/kenjilabs' => 'https://avatars.githubusercontent.com/u/2118549?s=96&v=4',
                     'https://github.com/jouniikaheimo' => 'https://avatars.githubusercontent.com/u/32259223?s=96&v=4',
                     'https://github.com/jeffgreco13' => 'https://avatars.githubusercontent.com/u/12453974?s=96&v=4',
                     'https://github.com/blinkinglight' => 'https://avatars.githubusercontent.com/u/39296?s=96&v=4',
@@ -453,6 +454,7 @@
                     'https://github.com/sebastiaankloos' => 'https://avatars.githubusercontent.com/u/6506510?s=96&v=4',
                     'https://github.com/pxlrbt' => 'https://avatars.githubusercontent.com/u/22632550?s=96&v=4',
                     'https://github.com/lukasleitsch' => 'https://avatars.githubusercontent.com/u/3009245?s=96&v=4',
+                    'https://github.com/elelas' => 'https://avatars.githubusercontent.com/u/10687213?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
