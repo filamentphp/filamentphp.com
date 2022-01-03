@@ -1,36 +1,38 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+@props([
+    'heading' => null,
+    'previewify' => null,
+    'previewifyData' => [],
+])
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<x-layouts.base {{ $attributes }}>
+    <x-nav />
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <aside
+        x-data="{}"
+        x-cloak
+        :aria-hidden="$store.sidebar.isOpen.toString()"
+        :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
+        class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-100"
+    >
+        <ul class="space-y-2 -mx-3">
+            @foreach ([
+                route('docs') => 'Documentation',
+                route('store') => 'Plugins',
+                route('links') => 'Links',
+            ] as $url => $label)
+                <li>
+                    <a
+                        href="{{ $url }}"
+                        class="block px-4 py-2 w-full rounded-lg transition hover:bg-gray-500/10 focus:bg-gray-500/10"
+                    >
+                        {{ $label }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </aside>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{ $slot }}
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('components.layouts.navigation')
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
-</html>
+    <x-footer />
+</x-layouts.base>

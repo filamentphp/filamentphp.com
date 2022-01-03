@@ -50,7 +50,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
     {
         $stripe = StripeService::make();
 
-        if ($this->stripe_connect_id !== null) {
+        if (filled($this->stripe_connect_id)) {
             return $stripe->accounts->retrieve($this->stripe_connect_id, []);
         }
 
@@ -66,7 +66,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         return $account;
     }
 
-    public function getStripeConnectOnboardingLink(string $refreshUrl, string $returnUrl): AccountLink
+    public function getStripeConnectLink(string $refreshUrl, string $returnUrl): AccountLink
     {
         $this->getStripeConnectAccount();
 

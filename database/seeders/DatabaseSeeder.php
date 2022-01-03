@@ -2,17 +2,23 @@
 
 namespace Database\Seeders;
 
+use App\Models\StoreProduct;
+use App\Models\User;
+use Database\Factories\StoreProductFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+         $products = StoreProduct::factory()
+             ->count(100)
+             ->create();
+
+         foreach ($products as $product) {
+             foreach (range(0, random_int(0, 100)) as $i) {
+                 $product->purchasers()->attach(User::factory()->create());
+             }
+         }
     }
 }

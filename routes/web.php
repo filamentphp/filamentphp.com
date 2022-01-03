@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers;
 use App\Models\DocumentationPackage;
 use App\Models\DocumentationVersion;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ Route::view('/', 'home')->name('home');
 
 require __DIR__.'/auth.php';
 
-Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja');
+Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
 
 Route::prefix('/docs')->group(function () {
     Route::redirect('/getting-started', '/docs/admin/getting-started');
@@ -92,10 +93,18 @@ Route::prefix('/docs')->group(function () {
 });
 
 Route::prefix('/store')->group(function () {
-    Route::get('/', function () {
-        return redirect(auth()->user()->getStripeConnectOnboardingLink(route('store'), route('store'))->url);
-        return view('store.index');
-    })->name('store');
+    Route::get('/', Controllers\Store\HomepageController::class)->name('store');
+
+    Route::get('/connect', function () {
+        $redirect = route('store');
+        $connectUrl = auth()->user()->getStripeConnectLink($redirect, $redirect)->url;
+
+        return redirect($connectUrl);
+    })->name('store.connect');
 });
+
+Route::get('/links', function () {
+    return view('links.index');
+})->name('links');
 
 Route::stripeWebhooks('stripe/webhook');
