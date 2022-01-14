@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\StoreProductResource\Pages;
 use App\Filament\Resources\StoreProductResource\RelationManagers;
-use App\Models\StoreProduct;
+use App\Models\Plugin;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +13,7 @@ use Filament\Tables;
 
 class StoreProductResource extends Resource
 {
-    protected static ?string $model = StoreProduct::class;
+    protected static ?string $model = Plugin::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -21,7 +21,7 @@ class StoreProductResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('owner_id')
+                Forms\Components\TextInput::make('author_id')
                     ->required(),
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\Textarea::make('docs'),
@@ -43,7 +43,7 @@ class StoreProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('owner_id'),
+                Tables\Columns\TextColumn::make('author_id'),
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('docs'),
                 Tables\Columns\BooleanColumn::make('is_hosted'),

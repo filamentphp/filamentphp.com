@@ -18,19 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
-require __DIR__.'/auth.php';
-
 Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
 
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/admin/getting-started');
-    Route::redirect('/resources', '/docs/admin/resources');
-    Route::redirect('/pages', '/docs/admin/pages');
-    Route::redirect('/dashboard', '/docs/admin/dashboard');
-    Route::redirect('/navigation', '/docs/admin/navigation');
-    Route::redirect('/theming', '/docs/admin/theming');
-    Route::redirect('/plugin-development', '/docs/admin/plugin-development');
-
     Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', function ($versionSlug = null, ?string $packageSlug = null, ?string $pageSlug = null) {
         // Get requested version
         $version = DocumentationVersion::where('slug', $versionSlug)->first();
@@ -90,21 +80,38 @@ Route::prefix('/docs')->group(function () {
             'version' => $version,
         ]);
     })->name('docs');
-});
 
-Route::prefix('/store')->group(function () {
-    Route::get('/', Controllers\Store\HomepageController::class)->name('store');
-
-    Route::get('/connect', function () {
-        $redirect = route('store');
-        $connectUrl = auth()->user()->getStripeConnectLink($redirect, $redirect)->url;
-
-        return redirect($connectUrl);
-    })->name('store.connect');
+    Route::redirect('/getting-started', '/docs/admin/getting-started');
+    Route::redirect('/resources', '/docs/admin/resources');
+    Route::redirect('/pages', '/docs/admin/pages');
+    Route::redirect('/dashboard', '/docs/admin/dashboard');
+    Route::redirect('/navigation', '/docs/admin/navigation');
+    Route::redirect('/theming', '/docs/admin/theming');
+    Route::redirect('/plugin-development', '/docs/admin/plugin-development');
 });
 
 Route::get('/links', function () {
     return view('links.index');
 })->name('links');
+
+Route::prefix('/plugins')->group(function () {
+    Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
+
+    Route::name('plugins.')->group(function () {
+        Route::get('/submit', Controllers\Plugins\ListPluginsController::class)->name('create');
+
+        Route::prefix('/{plugin}')->group(function () {
+            Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
+            Route::get('/edit', Controllers\Plugins\ListPluginsController::class)->name('edit');
+        });
+
+        Route::get('/connect', function () {
+            $redirect = route('plugins');
+            $connectUrl = auth()->user()->getStripeConnectLink($redirect, $redirect)->url;
+
+            return redirect($connectUrl);
+        })->name('connect');
+    });
+});
 
 Route::stripeWebhooks('stripe/webhook');

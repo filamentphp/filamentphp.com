@@ -2,16 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Models\StoreProduct;
+use App\Models\Plugin;
 use App\Models\User;
-use Database\Factories\StoreProductFactory;
+use Database\Factories\PluginFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-         $products = StoreProduct::factory()
+         $products = Plugin::factory()
              ->count(100)
              ->create();
 

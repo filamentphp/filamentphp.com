@@ -17,7 +17,7 @@
         <ul class="space-y-2 -mx-3">
             @foreach ([
                 route('docs') => 'Documentation',
-                route('store') => 'Plugins',
+                route('plugins') => 'Plugins',
                 route('links') => 'Links',
             ] as $url => $label)
                 <li>

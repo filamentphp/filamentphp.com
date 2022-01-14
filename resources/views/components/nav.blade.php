@@ -29,9 +29,9 @@
             Documentation
         </a>
 
-        <a href="{{ route('store') }}" @class([
+        <a href="{{ route('plugins') }}" @class([
             'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',
-            'text-primary-600' => request()->routeIs('store*'),
+            'text-primary-600' => request()->routeIs('plugins*'),
         ])>
             Plugins
         </a>

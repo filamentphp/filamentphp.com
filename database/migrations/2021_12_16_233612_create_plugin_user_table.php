@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStoreProductUserTable extends Migration
+class CreatePluginUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateStoreProductUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('store_product_user', function (Blueprint $table) {
+        Schema::create('plugin_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('store_products')->cascadeOnDelete();
+            $table->foreignId('plugin_id')->constrained('plugins')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateStoreProductUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('store_product_user');
+        Schema::dropIfExists('plugin_user');
     }
 }

@@ -31,14 +31,14 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         'is_admin' => 'boolean',
     ];
 
-    public function storeProducts(): HasMany
+    public function plugins(): HasMany
     {
-        return $this->hasMany(StoreProduct::class, 'owner_id');
+        return $this->hasMany(Plugin::class, 'author_id');
     }
 
-    public function storePurchases(): BelongsToMany
+    public function purchasedPlugins(): BelongsToMany
     {
-        return $this->belongsToMany(StoreProduct::class, relatedPivotKey: 'product_id');
+        return $this->belongsToMany(Plugin::class, relatedPivotKey: 'plugin_id');
     }
 
     public function canAccessFilament(): bool

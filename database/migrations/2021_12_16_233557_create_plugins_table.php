@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStoreProductsTable extends Migration
+class CreatePluginsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateStoreProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('store_products', function (Blueprint $table) {
+        Schema::create('plugins', function (Blueprint $table) {
             $table->id();
             $table->longText('description')->nullable();
             $table->longText('docs')->nullable();
             $table->boolean('is_hosted')->default(false);
             $table->string('name');
-            $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('author_id')->constrained('users')->cascadeOnDelete();
             $table->string('package_name')->nullable();
             $table->unsignedBigInteger('price')->default(0);
             $table->string('slug')->nullable();
@@ -34,6 +34,6 @@ class CreateStoreProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('store_products');
+        Schema::dropIfExists('plugins');
     }
 }

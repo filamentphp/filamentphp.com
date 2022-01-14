@@ -6,6 +6,7 @@ module.exports = {
     purge: [
         './config/markdown.php',
         './resources/views/**/*.blade.php',
+        './vendor/filament/**/*.blade.php',
     ],
     theme: {
         extend: {
