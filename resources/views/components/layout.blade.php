@@ -65,7 +65,7 @@
                 </nav>
 
                 <div class="flex justify-center space-x-6">
-                    <a href="https://twitter.com/danjharrin" target="_blank" class="text-gray-400 transition hover:text-primary-500 flex items-center">
+                    <a href="https://twitter.com/filamentphp" target="_blank" class="text-gray-400 transition hover:text-primary-500 flex items-center">
                         <span class="sr-only">Twitter</span>
 
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

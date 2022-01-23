@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
                 default: 'Filament - The elegant TALLkit for Laravel artisans.',
             )
             ->description(default: 'Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.')
-            ->twitterSite('danjharrin');
+            ->twitterSite('filamentphp');
 
         Model::preventLazyLoading();
     }
