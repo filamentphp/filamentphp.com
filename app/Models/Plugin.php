@@ -15,9 +15,4 @@ class Plugin extends Model
     {
         return $this->belongsTo(User::class, 'author_id');
     }
-
-    public function purchasers(): BelongsToMany
-    {
-        return $this->belongsToMany(User::class, foreignPivotKey: 'plugin_id');
-    }
 }

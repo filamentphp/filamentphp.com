@@ -24,8 +24,8 @@ class Search extends Component
                 fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"),
             )
             ->with(['author'])
-            ->withCount(['purchasers'])
-            ->orderBy('purchasers_count', 'desc')
+//            ->withCount(['purchasers'])
+//            ->orderBy('purchasers_count', 'desc')
             ->paginate($this->tableRecordsPerPage);
     }
 

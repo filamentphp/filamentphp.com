@@ -11,14 +11,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-         $products = Plugin::factory()
+         Plugin::factory()
              ->count(100)
              ->create();
-
-         foreach ($products as $product) {
-             foreach (range(0, random_int(0, 100)) as $i) {
-                 $product->purchasers()->attach(User::factory()->create());
-             }
-         }
     }
 }

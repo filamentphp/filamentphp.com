@@ -13,8 +13,8 @@ class ListPluginsController extends Controller
         return view('plugins.list-plugins', [
             'popularPlugins' => Plugin::query()
                 ->with(['author'])
-                ->withCount(['purchasers'])
-                ->orderBy('purchasers_count', 'desc')
+//                ->withCount(['purchasers'])
+//                ->orderBy('purchasers_count', 'desc')
                 ->limit(4)
                 ->get(),
             'totalPlugins' => Plugin::query()->count(),

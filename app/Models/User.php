@@ -36,11 +36,6 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         return $this->hasMany(Plugin::class, 'author_id');
     }
 
-    public function purchasedPlugins(): BelongsToMany
-    {
-        return $this->belongsToMany(Plugin::class, relatedPivotKey: 'plugin_id');
-    }
-
     public function canAccessFilament(): bool
     {
         return $this->is_admin;
