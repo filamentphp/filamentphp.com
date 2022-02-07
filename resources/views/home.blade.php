@@ -54,7 +54,7 @@
 
             <div class="flex flex-wrap gap-4">
                 <a
-                    href="https://demo.filamentadmin.com"
+                    href="https://demo.filamentphp.com"
                     target="_blank"
                     class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded bg-primary-500 text-white transition hover:scale-105 hover:-rotate-1"
                 >
@@ -152,7 +152,7 @@
                             </div>
 
                             <div class="text-right">
-                                <a href="https://demo.filamentadmin.com" target="_blank" class="block text-white transition hover:text-primary-100 font-medium text-lg">
+                                <a href="https://demo.filamentphp.com" target="_blank" class="block text-white transition hover:text-primary-100 font-medium text-lg">
                                     Demo &rarr;
                                 </a>
 
