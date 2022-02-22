@@ -464,6 +464,11 @@
                     'https://github.com/cigoler' => 'https://avatars.githubusercontent.com/u/2905728?s=96&v=4',
                     'https://github.com/jwohlfert23' => 'https://avatars.githubusercontent.com/u/2797531?s=96&v=4',
                     'https://github.com/swara-mohammed' => 'https://avatars.githubusercontent.com/u/9349190?s=96&v=4',
+                    'https://github.com/ap1969' => 'https://avatars.githubusercontent.com/u/1629592?s=96&v=4',
+                    'https://github.com/martin-ro' => 'https://avatars.githubusercontent.com/u/10107779?s=96&v=4',
+                    'https://github.com/cheesegrits' => 'https://avatars.githubusercontent.com/u/934456?s=96&v=4',
+                    'https://github.com/dgironella' => 'https://avatars.githubusercontent.com/u/26429549?s=96&v=4',
+                    'https://github.com/jimmyaldape' => 'https://avatars.githubusercontent.com/u/59585840?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
