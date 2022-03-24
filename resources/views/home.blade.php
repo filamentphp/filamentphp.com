@@ -425,7 +425,6 @@
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
                     'https://github.com/larrybarker' => 'https://avatars.githubusercontent.com/u/28734844?s=96&v=4',
-                    'https://github.com/msnegurski' => 'https://avatars.githubusercontent.com/u/6137647?s=96&v=4',
                     'https://github.com/jouniikaheimo' => 'https://avatars.githubusercontent.com/u/32259223?s=96&v=4',
                     'https://github.com/jeffgreco13' => 'https://avatars.githubusercontent.com/u/12453974?s=96&v=4',
                     'https://github.com/blinkinglight' => 'https://avatars.githubusercontent.com/u/39296?s=96&v=4',
@@ -453,9 +452,7 @@
                     'https://github.com/elelas' => 'https://avatars.githubusercontent.com/u/10687213?s=96&v=4',
                     'https://github.com/basepack' => 'https://avatars.githubusercontent.com/u/939500?s=96&v=4',
                     'https://github.com/matthans0n' => 'https://avatars.githubusercontent.com/u/25103095?s=96&v=4',
-                    'https://github.com/mohamedsabil83' => 'https://avatars.githubusercontent.com/u/10126040?s=96&v=4',
                     'https://github.com/lara-zeus' => 'https://avatars.githubusercontent.com/u/85035829?s=96&v=4',
-                    'https://github.com/onexer' => 'https://avatars.githubusercontent.com/u/32367507?s=96&v=4',
                     'https://github.com/tanthammar' => 'https://avatars.githubusercontent.com/u/21239634?s=96&v=4',
                     'https://github.com/jszobody' => 'https://avatars.githubusercontent.com/u/203749?s=96&v=4',
                     'https://github.com/dubcanada' => 'https://avatars.githubusercontent.com/u/120325?s=96&v=4',
@@ -469,6 +466,9 @@
                     'https://github.com/cheesegrits' => 'https://avatars.githubusercontent.com/u/934456?s=96&v=4',
                     'https://github.com/dgironella' => 'https://avatars.githubusercontent.com/u/26429549?s=96&v=4',
                     'https://github.com/jimmyaldape' => 'https://avatars.githubusercontent.com/u/59585840?s=96&v=4',
+                    'https://github.com/clausmunch' => 'https://avatars.githubusercontent.com/u/701248?s=96&v=4',
+                    'https://github.com/hansenhalim' => 'https://avatars.githubusercontent.com/u/29351920?s=96&v=4',
+                    'https://github.com/invaders-xx' => 'https://avatars.githubusercontent.com/u/604907?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
