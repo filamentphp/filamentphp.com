@@ -1,5 +1,11 @@
 <x-layouts.app>
     <x-section>
+        <div class="text-sm text-gray-700">
+            <a href="{{ route('plugins') }}">
+                &larr; Back to Plugins
+            </a>
+        </div>
+
         <div class="lg:grid lg:grid-rows-1 lg:grid-cols-7 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
             <div class="lg:row-end-1 lg:col-span-4">
                 <div class="splide">
@@ -44,6 +50,24 @@
 
                         <p class="text-sm text-gray-500 mt-2">
                             by {{ $plugin->author->name }}
+
+                            @if ($plugin->hasGitHubStars())
+                                &bull;
+
+                                <a
+                                    href="{{ $plugin->getUrl() }}"
+                                    target="_blank"
+                                    class="inline-flex items-center gap-1"
+                                >
+                                    @php
+                                        $stars = $plugin->getGitHubStars();
+                                    @endphp
+
+                                    {{ $stars }} {{ str('star')->plural($stars) }}
+
+                                    <x-heroicon-s-star class="w-3 h-3 text-yellow-500" />
+                                </a>
+                            @endif
                         </p>
                     </div>
                 </div>
@@ -65,12 +89,29 @@
                 @endif
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-                    @if ($plugin->url || $plugin->github_repository)
+                    @php
+                        $url = $plugin->getUrl();
+                        $checkoutUrl = $plugin->getCheckoutUrl();
+                    @endphp
+
+                    @if ($checkoutUrl)
                         <x-button
                             tag="a"
-                            href="{{ $plugin->getUrl() }}"
+                            href="{{ $checkoutUrl }}"
                             target="_blank"
                             size="lg"
+                        >
+                            Purchase on Unlock.sh
+                        </x-button>
+                    @endif
+
+                    @if ($url)
+                        <x-button
+                            tag="a"
+                            href="{{ $url }}"
+                            target="_blank"
+                            size="lg"
+                            :color="$checkoutUrl ? 'secondary' : 'primary'"
                         >
                             {{ $plugin->url ? 'Visit website' : 'Visit GitHub' }}
                         </x-button>

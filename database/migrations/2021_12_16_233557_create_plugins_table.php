@@ -20,12 +20,14 @@ class CreatePluginsTable extends Migration
             $table->longText('description')->nullable();
             $table->longText('docs')->nullable();
             $table->boolean('is_featured')->default(0);
+            $table->boolean('is_paid')->default(0);
             $table->string('github_repository')->nullable();
             $table->string('license');
             $table->string('license_url');
             $table->string('name');
             $table->string('slug')->nullable();
             $table->string('status');
+            $table->string('unlock_id')->nullable();
             $table->string('url')->nullable();
             $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();

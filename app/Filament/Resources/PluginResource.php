@@ -19,6 +19,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\HtmlString;
 
 class PluginResource extends Resource
 {
@@ -47,10 +48,22 @@ class PluginResource extends Resource
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
                     ->disabled(fn (Plugin $record) => (! auth()->user()->is_admin) && $record->status === PluginStatus::PUBLISHED),
+                Forms\Components\Toggle::make('is_paid')
+                    ->label('Paid plugin')
+                    ->reactive()
+                    ->default(false)
+                    ->columnSpan('full'),
                 Forms\Components\TextInput::make('github_repository')
                     ->label('GitHub repository')
                     ->placeholder('vendor/filament-plugin')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->hidden(fn (Closure $get) => $get('is_paid')),
+                Forms\Components\TextInput::make('unlock_id')
+                    ->label('Unlock ID')
+                    ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
+                    ->maxLength(255)
+                    ->visible(fn (Closure $get) => $get('is_paid'))
+                    ->helperText('You can find this from your Unlock.sh product settings.'),
                 Forms\Components\TextInput::make('url')
                     ->label('URL')
                     ->placeholder('https://yourwebsite.com/filament-plugin')

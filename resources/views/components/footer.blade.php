@@ -4,8 +4,8 @@
             @foreach ([
                 route('home') => 'Home',
                 route('docs') => 'Docs',
-                route('plugins') => 'Plugins',
-                route('links') => 'Links',
+{{--                route('plugins') => 'Plugins',--}}
+{{--                route('links') => 'Links',--}}
                 'https://github.com/laravel-filament/filament/discussions/new' => 'Help',
                 'https://github.com/sponsors/danharrin' => 'Sponsor',
             ] as $url => $label)
@@ -51,11 +51,17 @@
             </p>
 
             <p>
-                Syntax highlighting by <a
+                <span>
+                    Syntax highlighting by
+                </span>
+
+                <a
                     href="https://torchlight.dev"
                     target="_blank"
                     class="hover:text-primary-500"
-                >Torchlight</a>.
+                >
+                    Torchlight
+                </a>.
             </p>
         </div>
     </div>

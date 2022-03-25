@@ -20,6 +20,7 @@ class Plugin extends Model implements HasMedia
     protected $casts = [
         'categories' => 'array',
         'is_featured' => 'boolean',
+        'is_paid' => 'boolean',
         'license' => PluginLicense::class,
         'status' => PluginStatus::class,
         'views' => 'integer',
@@ -66,9 +67,34 @@ class Plugin extends Model implements HasMedia
         );
     }
 
+    public function getCheckoutUrl(): ?string
+    {
+        return cache()->get($this->getCheckoutUrlCacheKey());
+    }
+
+    public function hasGitHubStars(): bool
+    {
+        return cache()->has($this->getGitHubStarsCacheKey());
+    }
+
+    public function getGitHubStars(): ?int
+    {
+        return cache()->get($this->getGitHubStarsCacheKey());
+    }
+
     public function getThumbnailUrlCacheKey(): string
     {
         return "plugins.{$this->getKey()}.thumbnail_url";
+    }
+
+    public function getGitHubStarsCacheKey(): string
+    {
+        return "plugins.{$this->getKey()}.github_stars";
+    }
+
+    public function getCheckoutUrlCacheKey(): string
+    {
+        return "plugins.{$this->getKey()}.checkout_url";
     }
 
     public function getUrl(): ?string
@@ -77,7 +103,7 @@ class Plugin extends Model implements HasMedia
             return $this->url;
         }
 
-        if (filled($this->github_repository)) {
+        if ((! $this->is_paid) && filled($this->github_repository)) {
             return "https://github.com/{$this->github_repository}";
         }
 

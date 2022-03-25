@@ -29,19 +29,19 @@
             Documentation
         </a>
 
-        <a href="{{ route('plugins') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',
-            'text-primary-600' => request()->routeIs('plugins*'),
-        ])>
-            Plugins
-        </a>
+{{--        <a href="{{ route('plugins') }}" @class([--}}
+{{--            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',--}}
+{{--            'text-primary-600' => request()->routeIs('plugins*'),--}}
+{{--        ])>--}}
+{{--            Plugins--}}
+{{--        </a>--}}
 
-        <a href="{{ route('links') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',
-            'text-primary-600' => request()->routeIs('links*'),
-        ])>
-            Links
-        </a>
+{{--        <a href="{{ route('links') }}" @class([--}}
+{{--            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',--}}
+{{--            'text-primary-600' => request()->routeIs('links*'),--}}
+{{--        ])>--}}
+{{--            Links--}}
+{{--        </a>--}}
 
         <a
             href="https://github.com/laravel-filament/filament"
