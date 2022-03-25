@@ -47,7 +47,7 @@ class PluginResource extends Resource
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
-                    ->disabled(fn (Plugin $record) => (! auth()->user()->is_admin) && $record->status === PluginStatus::PUBLISHED),
+                    ->disabled(fn (?Plugin $record) => (! auth()->user()->is_admin) && $record?->status === PluginStatus::PUBLISHED),
                 Forms\Components\Toggle::make('is_paid')
                     ->label('Paid plugin')
                     ->reactive()
