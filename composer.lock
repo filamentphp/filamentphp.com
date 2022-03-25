@@ -3027,16 +3027,16 @@
         },
         {
             "name": "jeffgreco13/filament-breezy",
-            "version": "v1.2.8",
+            "version": "v1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffgreco13/filament-breezy.git",
-                "reference": "6ffc6c392bd2076f784d9ddae47244e713153ed8"
+                "reference": "1241d191628a47d11aa97d2a8c4292196d9504a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffgreco13/filament-breezy/zipball/6ffc6c392bd2076f784d9ddae47244e713153ed8",
-                "reference": "6ffc6c392bd2076f784d9ddae47244e713153ed8",
+                "url": "https://api.github.com/repos/jeffgreco13/filament-breezy/zipball/1241d191628a47d11aa97d2a8c4292196d9504a0",
+                "reference": "1241d191628a47d11aa97d2a8c4292196d9504a0",
                 "shasum": ""
             },
             "require": {
@@ -3094,7 +3094,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffgreco13/filament-breezy/issues",
-                "source": "https://github.com/jeffgreco13/filament-breezy/tree/v1.2.8"
+                "source": "https://github.com/jeffgreco13/filament-breezy/tree/v1.2.9"
             },
             "funding": [
                 {
@@ -3102,7 +3102,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-24T23:07:38+00:00"
+            "time": "2022-03-25T21:23:03+00:00"
         },
         {
             "name": "knplabs/github-api",
