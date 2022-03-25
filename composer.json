@@ -10,7 +10,7 @@
         "barryvdh/laravel-debugbar": "^3.6",
         "blade-ui-kit/blade-heroicons": "^1.2",
         "calebporzio/sushi": "^2.3",
-        "doctrine/dbal": "^3.2",
+        "doctrine/dbal": "^3.3",
         "embed/embed": "^4.4",
         "filament/filament": "^2.0",
         "filament/forms": "^2.0",
