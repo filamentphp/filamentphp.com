@@ -4,7 +4,7 @@
             Grow our ecosystem with plugins
         </x-slot>
 
-        <div class="prose max-w-none">
+        <div class="prose max-w-none dark:prose-invert">
             <p>
                 Filament Plugins is a directory of packages that are available for developers to use in their Filament projects.
 

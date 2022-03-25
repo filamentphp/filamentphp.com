@@ -1,6 +1,6 @@
 <x-filament::widget>
     <x-filament::card>
-        <div class="prose max-w-none">
+        <div class="prose max-w-none dark:prose-invert">
             @if ($record->status === \App\Enums\PluginStatus::DRAFT)
                 <p>
                     <strong>

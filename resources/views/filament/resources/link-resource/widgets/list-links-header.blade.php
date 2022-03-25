@@ -4,7 +4,7 @@
             Educate our community with links
         </x-slot>
 
-        <div class="prose max-w-none">
+        <div class="prose max-w-none dark:prose-invert">
             <p>
                 Filament Links is a directory of useful resources, like articles and videos, that can educate developers about Filament.
 
