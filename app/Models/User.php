@@ -19,8 +19,6 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
     use HasFactory;
     use Notifiable;
 
-    protected $guarded = [];
-
     protected $hidden = [
         'password',
         'remember_token',
@@ -38,38 +36,6 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
 
     public function canAccessFilament(): bool
     {
-        return $this->is_admin;
-    }
-
-    public function getStripeConnectAccount(): Account
-    {
-        $stripe = StripeService::make();
-
-        if (filled($this->stripe_connect_id)) {
-            return $stripe->accounts->retrieve($this->stripe_connect_id, []);
-        }
-
-        $account = $stripe->accounts->create([
-            'type' => 'standard',
-            'email' => $this->email,
-            'country' => $this->country_id ?? 'us',
-        ]);
-
-        $this->stripe_connect_id = $account->id;
-        $this->save();
-
-        return $account;
-    }
-
-    public function getStripeConnectLink(string $refreshUrl, string $returnUrl): AccountLink
-    {
-        $this->getStripeConnectAccount();
-
-        return StripeService::make()->accountLinks->create([
-            'account' => $this->stripe_connect_id,
-            'refresh_url' => $refreshUrl,
-            'return_url' => $returnUrl,
-            'type' => 'account_onboarding',
-        ]);
+        return true;
     }
 }

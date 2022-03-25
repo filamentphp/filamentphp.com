@@ -16,13 +16,18 @@ class CreatePluginsTable extends Migration
         Schema::create('plugins', function (Blueprint $table) {
             $table->id();
             $table->foreignId('author_id')->nullable()->constrained('users')->nullOnDelete();
+            $table->json('categories')->nullable();
             $table->longText('description')->nullable();
             $table->longText('docs')->nullable();
-            $table->boolean('is_hosted')->default(false);
+            $table->boolean('is_featured')->default(0);
+            $table->string('github_repository')->nullable();
+            $table->string('license');
+            $table->string('license_url');
             $table->string('name');
-            $table->string('package_name')->nullable();
-            $table->unsignedBigInteger('price')->default(0);
             $table->string('slug')->nullable();
+            $table->string('status');
+            $table->string('url')->nullable();
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

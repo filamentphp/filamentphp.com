@@ -4,7 +4,7 @@
 ])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
 
@@ -23,19 +23,23 @@
             @endforeach
         @endif
 
+        <link rel="icon" type="image/png" href="{{ asset('/images/icon.png') }}" />
+
         <!-- Fonts -->
         @googlefonts
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <style>[x-cloak] { display: none !important; }</style>
         @livewireStyles
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
         @livewireScripts
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        @stack('scripts')
     </head>
 
-    <body class="antialiased">
+    <body class="antialiased font-sans text-gray-900">
         {{ $slot }}
     </body>
 </html>

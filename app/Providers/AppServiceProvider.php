@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use Stripe\Stripe;
@@ -16,10 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(
-            'stripe',
-            fn () => new StripeClient(config('services.stripe.secret')),
-        );
+        //
     }
 
     /**
@@ -39,7 +37,6 @@ class AppServiceProvider extends ServiceProvider
             ->twitterSite('filamentphp');
 
         Model::preventLazyLoading();
-
-        Stripe::setApiKey(config('services.stripe.secret'));
+        Model::unguard();
     }
 }

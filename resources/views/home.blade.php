@@ -16,20 +16,19 @@
             </div>
 
             <div class="flex flex-wrap gap-4">
-                <a
+                <x-button
+                    tag="a"
                     href="https://demo.filamentphp.com"
                     target="_blank"
-                    class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded bg-primary-500 text-white transition hover:scale-105 hover:-rotate-1"
+                    size="lg"
                 >
-                    <span>
-                        Admin panel demo
-                    </span>
-                </a>
+                    Admin panel demo
+                </x-button>
 
                 <a
                     href="{{ route('discord') }}"
                     target="_blank"
-                    class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded bg-gray-900 text-white transition hover:text-primary-100 hover:scale-105 hover:-rotate-1"
+                    class="inline-flex items-center font-medium space-x-4 text-lg px-4 py-2 rounded-lg bg-gray-900 text-white transition hover:text-primary-100 hover:scale-105 hover:-rotate-1"
                 >
                     <svg class="w-5" fill="none" viewBox="0 0 71 55" aria-hidden="true">
                         <g clip-path="url(#clip0)">
@@ -90,28 +89,7 @@
 
                         <div class="space-y-4">
                             <div>
-                                <button
-                                    x-data="{}"
-                                    x-on:click="$clipboard('composer require filament/filament')"
-                                    type="button"
-                                    class="group"
-                                >
-                                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
-                                        <span>
-                                            <span class="text-gray-500">
-                                                $
-                                            </span>
-
-                                            <span>composer require</span>
-
-                                            <span class="text-primary-500">
-                                                filament/filament
-                                            </span>
-                                        </span>
-
-                                        <x-heroicon-s-clipboard-copy class="flex-shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" />
-                                    </code>
-                                </button>
+                                <x-composer-command package="filament/filament" />
                             </div>
 
                             <div class="text-right">
@@ -159,28 +137,7 @@
 
                         <div class="space-y-4">
                             <div>
-                                <button
-                                    x-data="{}"
-                                    x-on:click="$clipboard('composer require filament/forms')"
-                                    type="button"
-                                    class="group"
-                                >
-                                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
-                                        <span>
-                                            <span class="text-gray-500">
-                                                $
-                                            </span>
-
-                                            <span>composer require</span>
-
-                                            <span class="text-primary-500">
-                                                filament/forms
-                                            </span>
-                                        </span>
-
-                                        <x-heroicon-s-clipboard-copy class="flex-shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" />
-                                    </code>
-                                </button>
+                                <x-composer-command package="filament/forms" />
                             </div>
 
                             <div class="text-right">
@@ -224,28 +181,7 @@
 
                         <div class="space-y-4">
                             <div>
-                                <button
-                                    x-data="{}"
-                                    x-on:click="$clipboard('composer require filament/tables')"
-                                    type="button"
-                                    class="group"
-                                >
-                                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
-                                        <span>
-                                            <span class="text-gray-500">
-                                                $
-                                            </span>
-
-                                            <span>composer require</span>
-
-                                            <span class="text-primary-500">
-                                                filament/tables
-                                            </span>
-                                        </span>
-
-                                        <x-heroicon-s-clipboard-copy class="flex-shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" />
-                                    </code>
-                                </button>
+                                <x-composer-command package="filament/tables" />
                             </div>
 
                             <div>

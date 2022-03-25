@@ -1,4 +1,6 @@
 @import '~@docsearch/css';
+@import '~@splidejs/splide/dist/css/splide.min.css';
+@import '../../vendor/filament/forms/dist/module.esm.css';
 
 @tailwind base;
 @tailwind components;

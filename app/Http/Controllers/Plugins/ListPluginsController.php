@@ -10,14 +10,16 @@ class ListPluginsController extends Controller
 {
     public function __invoke()
     {
+        seo()->title('Plugins');
+
         return view('plugins.list-plugins', [
-            'popularPlugins' => Plugin::query()
+            'featuredPlugins' => Plugin::query()
+                ->published()
                 ->with(['author'])
-//                ->withCount(['purchasers'])
-//                ->orderBy('purchasers_count', 'desc')
+                ->where('is_featured', true)
                 ->limit(4)
                 ->get(),
-            'totalPlugins' => Plugin::query()->count(),
+            'totalPlugins' => Plugin::query()->published()->count(),
             'totalPluginAuthors' => User::query()->whereHas('plugins')->count(),
         ]);
     }

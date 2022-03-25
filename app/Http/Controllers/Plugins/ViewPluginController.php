@@ -10,6 +10,14 @@ class ViewPluginController extends Controller
 {
     public function __invoke(Plugin $plugin)
     {
+        seo()
+            ->title("{$plugin->name} by {$plugin->author->name} - Plugins")
+            ->description($plugin->description)
+            ->image($plugin->getThumbnailUrl());
+
+        $plugin->views++;
+        $plugin->save();
+
         return view('plugins.view-plugin', [
             'plugin' => $plugin,
         ]);

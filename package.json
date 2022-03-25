@@ -10,16 +10,18 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@alpinejs/focus": "^3.9.2",
         "@docsearch/js": "^3.0.0-alpha.42",
         "@ryangjchandler/alpine-clipboard": "^2.0.0",
+        "@splidejs/splide": "^3.6.12",
         "@tailwindcss/aspect-ratio": "^0.4.0",
-        "@tailwindcss/forms": "^0.4.0",
-        "@tailwindcss/typography": "^0.5.0",
-        "alpinejs": "^3.7.0",
+        "@tailwindcss/forms": "^0.4.1",
+        "@tailwindcss/typography": "^0.5.2",
+        "alpinejs": "^3.9.2",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
-        "tailwindcss": "^3.0.6"
+        "tailwindcss": "^3.0.23"
     }
 }
