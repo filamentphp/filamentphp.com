@@ -57,16 +57,18 @@ class PluginResource extends Resource
                     ->label('GitHub repository')
                     ->placeholder('vendor/filament-plugin')
                     ->maxLength(255)
-                    ->hidden(fn (Closure $get) => $get('is_paid')),
+                    ->hidden(fn (Closure $get): bool => (bool) $get('is_paid')),
                 Forms\Components\TextInput::make('unlock_id')
                     ->label('Unlock ID')
                     ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
                     ->maxLength(255)
-                    ->visible(fn (Closure $get) => $get('is_paid'))
+                    ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
                     ->helperText('You can find this from your Unlock.sh product settings.'),
                 Forms\Components\TextInput::make('url')
                     ->label('URL')
                     ->placeholder('https://yourwebsite.com/filament-plugin')
+                    ->hint('External documentation or marketing website')
+                    ->helperText(fn (Closure $get): string => $get('is_paid') ? '' : 'We\'ll use your GitHub repository if you don\'t provide a custom URL here.')
                     ->maxLength(255),
                 Forms\Components\MultiSelect::make('categories')
                     ->options(collect(PluginCategory::cases())->mapWithKeys(fn (PluginCategory $category): array => [$category->value => $category->getLabel()]))
