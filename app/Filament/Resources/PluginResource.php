@@ -89,7 +89,10 @@ class PluginResource extends Resource
                     ->required(),
                 Forms\Components\Toggle::make('is_featured')
                     ->visible(auth()->user()->is_admin)
-                    ->columnSpan('full'),
+                    ->inline(false),
+                Forms\Components\TextInput::make('views')
+                    ->integer()
+                    ->visible(auth()->user()->is_admin),
                 Forms\Components\Tabs::make('Details')
                     ->tabs([
                         Forms\Components\Tabs\Tab::make('Description')

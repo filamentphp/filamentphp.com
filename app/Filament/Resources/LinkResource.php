@@ -54,6 +54,9 @@ class LinkResource extends Resource
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
                     ->required(),
+                Forms\Components\TextInput::make('views')
+                    ->integer()
+                    ->visible(auth()->user()->is_admin),
                 Forms\Components\Tabs::make('Details')
                     ->tabs([
                         Forms\Components\Tabs\Tab::make('Description')
