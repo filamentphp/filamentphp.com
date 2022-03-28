@@ -13,7 +13,7 @@ class ViewPluginController extends Controller
     {
         seo()
             ->title("{$plugin->name} by {$plugin->author->name} - Plugins")
-            ->description($plugin->description)
+            ->description($plugin->description ?? '')
             ->image($plugin->getThumbnailUrl());
 
         $viewingKey = "plugins.{$plugin->getKey()}.views." . request()->ip();
