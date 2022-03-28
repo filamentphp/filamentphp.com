@@ -29,6 +29,10 @@
     padding-bottom: 1rem;
 }
 
+.splide__arrow:disabled {
+    @apply opacity-0;
+}
+
 pre {
     @apply rounded overflow-x-auto;
     padding: 0 !important;
