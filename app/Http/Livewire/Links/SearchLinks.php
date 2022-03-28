@@ -17,7 +17,20 @@ class SearchLinks extends Component
 
     public $search = '';
 
-    public $tableRecordsPerPage = 12;
+    public $sort = 'popular';
+
+    public $tableRecordsPerPage = 32;
+
+    public function mount(): void
+    {
+        if (session()->has('livewire.search-links.sort')) {
+            $this->sort = session()->get('livewire.search-links.sort');
+        }
+
+        if (session()->has('livewire.search-links.table_records_per_page')) {
+            $this->tableRecordsPerPage = session()->get('livewire.search-links.table_records_per_page');
+        }
+    }
 
     protected function getLinks()
     {
@@ -45,13 +58,29 @@ class SearchLinks extends Component
                     });
                 },
             )
+            ->when($this->sort === 'popular', fn (Builder $query): Builder => $query->orderByDesc('views'))
+            ->when($this->sort === 'recent', fn (Builder $query): Builder => $query->latest())
+            ->when($this->sort === 'alphabetical', fn (Builder $query): Builder => $query->orderBy('name'))
             ->with(['author', 'media'])
-            ->latest()
             ->paginate($this->tableRecordsPerPage);
     }
 
     public function updatedSearch(): void
     {
+        $this->resetPage();
+    }
+
+    public function updatedSort(): void
+    {
+        session()->put('livewire.search-links.sort', $this->sort);
+
+        $this->resetPage();
+    }
+
+    public function updatedTableRecordsPerPage(): void
+    {
+        session()->put('livewire.search-links.table_records_per_page', $this->tableRecordsPerPage);
+
         $this->resetPage();
     }
 
@@ -68,10 +97,5 @@ class SearchLinks extends Component
         }
 
         $this->categoryFilter[] = $category;
-    }
-
-    public function updatedTableRecordsPerPage(): void
-    {
-        $this->resetPage();
     }
 }

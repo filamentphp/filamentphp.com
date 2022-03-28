@@ -25,6 +25,6 @@
             </span>
         </span>
 
-        <x-heroicon-s-clipboard-copy class="flex-shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" />
+        <x-heroicon-s-clipboard-copy class="shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" />
     </code>
 </button>

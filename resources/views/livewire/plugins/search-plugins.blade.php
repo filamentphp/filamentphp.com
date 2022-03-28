@@ -1,6 +1,6 @@
 <div class="space-y-8">
-    <div class="flex items-center justify-between space-x-8">
-        <h2 class="flex-shrink-0 text-lg font-heading text-gray-900">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <h2 class="shrink-0 text-lg font-heading text-gray-900">
             Plugins
         </h2>
 
@@ -23,6 +23,22 @@
                         class="block w-full h-10 pl-10 placeholder-gray-400 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
                     >
                 </div>
+            </div>
+
+            <div>
+                <label class="sr-only" for="sort">
+                    Sort
+                </label>
+
+                <select
+                    wire:model="sort"
+                    id="sort"
+                    class="text-gray-900 block w-full transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
+                >
+                    <option value="popular">Popular</option>
+                    <option value="recent">Recently added</option>
+                    <option value="alphabetical">Alphabetical</option>
+                </select>
             </div>
         </div>
     </div>
@@ -69,6 +85,6 @@
 
     <x-tables::pagination
         :paginator="$plugins"
-        :records-per-page-select-options="[8, 12, 20, 28]"
+        :records-per-page-select-options="[16, 32, 48, 64]"
     />
 </div>

@@ -320,7 +320,7 @@
 
     <section class="bg-pink-500">
         <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
-            <div class="grid grid-cols-8 gap-2 flex-shrink-0">
+            <div class="grid grid-cols-8 gap-2 shrink-0">
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
                     'https://github.com/larrybarker' => 'https://avatars.githubusercontent.com/u/28734844?s=96&v=4',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Plugins;
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
 use App\Models\User;
+use Illuminate\Support\Facades\RateLimiter;
 
 class ViewPluginController extends Controller
 {
@@ -15,8 +16,14 @@ class ViewPluginController extends Controller
             ->description($plugin->description)
             ->image($plugin->getThumbnailUrl());
 
-        $plugin->views++;
-        $plugin->save();
+        $viewingKey = "plugins.{$plugin->getKey()}.views." . request()->ip();
+
+        if (! cache()->has($viewingKey)) {
+            cache()->put($viewingKey, now());
+
+            $plugin->views++;
+            $plugin->save();
+        }
 
         return view('plugins.view-plugin', [
             'plugin' => $plugin,

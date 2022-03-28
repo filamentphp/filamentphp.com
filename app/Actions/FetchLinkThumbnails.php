@@ -16,7 +16,7 @@ class FetchLinkThumbnails
          * knowledge of rate limiting, or anything else. It's a non-critical
          * service to fetch optional data for website content. If something
          * bad happens, it *doesn't really matter*. This code gets run
-         * every five minutes, and we randomise the order of the query
+         * every 15 minutes, and we randomise the order of the query
          * results to ensure that all records get a fair chance at
          * getting successfully updated.
          *

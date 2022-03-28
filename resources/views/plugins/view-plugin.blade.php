@@ -13,7 +13,7 @@
                         <ul class="splide__list">
                             @forelse ($plugin->media as $media)
                                 <li class="splide__slide px-12 xl:px-16">
-                                    <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow bg-gray-100 overflow-hidden">
+                                    <div class="aspect-w-2 aspect-h-1 rounded-2xl shadow bg-gray-100 overflow-hidden">
                                         <img
                                             src="{{ $media->getUrl() }}"
                                             alt="{{ $plugin->name }}"
@@ -23,7 +23,7 @@
                                 </li>
                             @empty
                                 <li class="splide__slide px-12 xl:px-16">
-                                    <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow bg-gray-100 overflow-hidden">
+                                    <div class="aspect-w-2 aspect-h-1 rounded-2xl shadow bg-gray-100 overflow-hidden">
                                         <img
                                             src="{{ $plugin->getThumbnailUrl() }}"
                                             alt="{{ $plugin->name }}"
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="max-w-2xl mx-auto mt-14 sm:mt-16 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 lg:col-span-3">
+            <div class="max-w-2xl w-full mx-auto mt-14 sm:mt-16 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 lg:col-span-3">
                 <div class="flex flex-col-reverse">
                     <div class="mt-4">
                         <h1 class="text-2xl font-heading tracking-tight text-gray-900 sm:text-3xl">
@@ -164,6 +164,16 @@
                                 >
                                     Discord
                                 </a>
+                            </p>
+                        </div>
+
+                        <div class="shrink-0">
+                            <h3 class="text-sm font-medium text-gray-900">Views</h3>
+
+                            <p class="mt-4 text-sm text-gray-500">
+                                <span class="font-medium">
+                                    {{ $plugin->views }}
+                                </span>
                             </p>
                         </div>
 

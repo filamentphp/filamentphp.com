@@ -9,8 +9,14 @@ class ViewLinkController extends Controller
 {
     public function __invoke(Link $link)
     {
-        $link->views++;
-        $link->save();
+        $viewingKey = "links.{$link->getKey()}.views." . request()->ip();
+
+        if (! cache()->has($viewingKey)) {
+            cache()->put($viewingKey, now());
+
+            $link->views++;
+            $link->save();
+        }
 
         return redirect($link->url);
     }

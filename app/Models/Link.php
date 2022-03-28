@@ -45,7 +45,7 @@ class Link extends Model implements HasMedia
 
     public function getThumbnailUrl(): string
     {
-        if ($thumbnailUrl = $this->media()->first()?->getUrl()) {
+        if ($thumbnailUrl = $this->media->first()?->getUrl()) {
             return $thumbnailUrl;
         }
 
