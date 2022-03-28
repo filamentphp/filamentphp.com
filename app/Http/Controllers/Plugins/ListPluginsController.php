@@ -15,12 +15,10 @@ class ListPluginsController extends Controller
         return view('plugins.list-plugins', [
             'featuredPlugins' => Plugin::query()
                 ->published()
-                ->with(['author'])
+                ->with(['author', 'media'])
                 ->where('is_featured', true)
                 ->limit(4)
                 ->get(),
-            'totalPlugins' => Plugin::query()->published()->count(),
-            'totalPluginAuthors' => User::query()->whereHas('plugins')->count(),
         ]);
     }
 }

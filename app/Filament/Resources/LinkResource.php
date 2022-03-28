@@ -72,12 +72,12 @@ class LinkResource extends Resource
                                     ->columnSpan('full')
                                     ->disableLabel(),
                             ]),
-                        Forms\Components\Tabs\Tab::make('Media')
+                        Forms\Components\Tabs\Tab::make('Images')
                             ->schema([
-                                Forms\Components\SpatieMediaLibraryFileUpload::make('media')
+                                Forms\Components\SpatieMediaLibraryFileUpload::make('images')
                                     ->image()
                                     ->maxSize(10240)
-                                    ->helperText('Images are supported. Recommended dimensions 2560 x 1440 pixels. Max file size 10 MB.')
+                                    ->helperText('Images are supported. Recommended dimensions 2560 x 1440 pixels (16:9 aspect ratio). Max file size 10 MB.')
                                     ->columnSpan('full')
                                     ->disableLabel(),
                             ]),

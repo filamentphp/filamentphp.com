@@ -58,12 +58,17 @@ class PluginResource extends Resource
                     ->placeholder('vendor/filament-plugin')
                     ->maxLength(255)
                     ->hidden(fn (Closure $get): bool => (bool) $get('is_paid')),
+                Forms\Components\Placeholder::make('unlock_advertising_notice')
+                    ->content(new HtmlString('We\'ve partnered with <a href="https://unlock.sh" target="_blank"><strong>Unlock.sh</strong></a> to allow you to advertise your paid plugins on our website. To set this up, visit the <strong>Advertising</strong> section of your Unlock product page, and opt-in to advertising on the <strong>Filament Website</strong>. If you do not follow these instructions, visitors will not see a checkout link for your product.'))
+                    ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
+                    ->disableLabel()
+                    ->columnSpan('full'),
                 Forms\Components\TextInput::make('unlock_id')
                     ->label('Unlock ID')
                     ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
                     ->maxLength(255)
                     ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
-                    ->helperText('You can find this from your Unlock.sh product settings.'),
+                    ->helperText('You can find this from your <a href="https://unlock.sh" target="_blank">Unlock.sh</a> product settings.'),
                 Forms\Components\TextInput::make('url')
                     ->label('URL')
                     ->placeholder('https://yourwebsite.com/filament-plugin')
@@ -103,14 +108,14 @@ class PluginResource extends Resource
                                     ->columnSpan('full')
                                     ->disableLabel(),
                             ]),
-                        Forms\Components\Tabs\Tab::make('Media')
+                        Forms\Components\Tabs\Tab::make('Images')
                             ->schema([
-                                Forms\Components\SpatieMediaLibraryFileUpload::make('media')
+                                Forms\Components\SpatieMediaLibraryFileUpload::make('images')
                                     ->image()
                                     ->multiple()
                                     ->maxSize(10240)
                                     ->enableReordering()
-                                    ->helperText('Images are supported. Recommended dimensions 2560 x 1440 pixels. Max file size 10 MB.')
+                                    ->helperText('Images are supported. Recommended dimensions 2560 x 1440 pixels (16:9 aspect ratio). Max file size 10 MB. Please use light mode when taking screenshots where possible.')
                                     ->columnSpan('full')
                                     ->disableLabel(),
                             ]),

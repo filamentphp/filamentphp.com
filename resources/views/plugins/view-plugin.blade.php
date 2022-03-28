@@ -8,12 +8,12 @@
 
         <div class="lg:grid lg:grid-rows-1 lg:grid-cols-7 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
             <div class="lg:row-end-1 lg:col-span-4">
-                <div class="splide">
+                <div class="splide -mx-12 xl:-mx-16">
                     <div class="splide__track">
                         <ul class="splide__list">
                             @forelse ($plugin->media as $media)
-                                <li class="splide__slide">
-                                    <div class="aspect-video rounded-2xl bg-gray-100 overflow-hidden">
+                                <li class="splide__slide px-12 xl:px-16">
+                                    <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow bg-gray-100 overflow-hidden">
                                         <img
                                             src="{{ $media->getUrl() }}"
                                             alt="{{ $plugin->name }}"
@@ -22,8 +22,8 @@
                                     </div>
                                 </li>
                             @empty
-                                <li class="splide__slide">
-                                    <div class="aspect-video rounded-2xl bg-gray-100 overflow-hidden">
+                                <li>
+                                    <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow bg-gray-100 overflow-hidden">
                                         <img
                                             src="{{ $plugin->getThumbnailUrl() }}"
                                             alt="{{ $plugin->name }}"
@@ -92,6 +92,7 @@
                     @php
                         $url = $plugin->getUrl();
                         $checkoutUrl = $plugin->getCheckoutUrl();
+                        $price = $plugin->getPrice();
                     @endphp
 
                     @if ($checkoutUrl)
@@ -101,7 +102,11 @@
                             target="_blank"
                             size="lg"
                         >
-                            Purchase on Unlock.sh
+                            @if ($price)
+                                Purchase for {{ $price }}
+                            @else
+                                Purchase
+                            @endif
                         </x-button>
                     @endif
 
@@ -168,7 +173,7 @@
 
                                 <p class="mt-4 text-sm text-gray-500">
                                     <a
-                                        href="{{ $plugin->license_url }}"
+                                        {!! filled($plugin->license_url) ? "href=\"{$plugin->license_url}\"" : '' !!}
                                         target="__blank"
                                         @class([
                                             'font-medium',

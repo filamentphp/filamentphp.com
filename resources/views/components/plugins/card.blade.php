@@ -4,7 +4,7 @@
 
 <div class="block relative group transition hover:scale-105 hover:-rotate-1">
     <a href="{{ route('plugins.view', ['plugin' => $plugin]) }}" class="block">
-        <div class="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+        <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow overflow-hidden bg-gray-100">
             <img
                 src="{{ $plugin->getThumbnailUrl() }}"
                 alt="{{ $plugin->name }}"

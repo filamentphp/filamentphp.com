@@ -2,6 +2,8 @@
 
 namespace App\Actions;
 
+use Akaunting\Money\Currency;
+use Akaunting\Money\Money;
 use App\Models\Plugin;
 use Illuminate\Support\Facades\Http;
 use Throwable;
@@ -32,37 +34,61 @@ class FetchPluginDataFromUnlock
                 ->json()
                 ['data'];
 
-            collect($advertismentChannels)
-                ->filter(fn (array $advertismentChannel): bool => $advertismentChannel['name'] === 'Filament Marketplace')
-                ->each(function (array $advertismentChannel) use ($unlock): void {
-                    $advertisedProducts = collect($advertismentChannel['products'] ?? [])->keyBy('id');
+            $advertisementChannel = collect($advertismentChannels)->keyBy('id')['da7855a9-36a1-44a4-87b9-8e5852ae08d2'] ?? null;
 
-                    Plugin::query()
-                        ->inRandomOrder()
-                        ->where('is_paid', true)
-                        ->whereNotNull('unlock_id')
-                        ->get()
-                        ->each(function (Plugin $plugin) use ($advertisedProducts): void {
-                            if (blank($plugin->unlock_id)) {
-                                return;
-                            }
+            if (! $advertisementChannel) {
+                return;
+            }
 
-                            if (! $advertisedProducts->has($plugin->unlock_id)) {
-                                cache()->forget($plugin->getCheckoutUrlCacheKey());
+            $advertisedProducts = collect($advertisementChannel['products'] ?? [])->keyBy('id');
 
-                                return;
-                            }
+            Plugin::query()
+                ->inRandomOrder()
+                ->where('is_paid', true)
+                ->whereNotNull('unlock_id')
+                ->get()
+                ->each(function (Plugin $plugin) use ($advertisedProducts): void {
+                    if (blank($plugin->unlock_id)) {
+                        return;
+                    }
 
-                            $checkoutUrl = $advertisedProducts->get($plugin->unlock_id)['checkout_url'];
+                    if (! $advertisedProducts->has($plugin->unlock_id)) {
+                        cache()->forget($plugin->getCheckoutUrlCacheKey());
+                        cache()->forget($plugin->getPriceCacheKey());
 
-                            if (blank($checkoutUrl)) {
-                                return;
-                            }
+                        return;
+                    }
 
-                            cache()->put($plugin->getCheckoutUrlCacheKey(), $checkoutUrl);
+                    $advertisedProducts = $advertisedProducts->get($plugin->unlock_id);
 
-                            echo "Caching checkout URL for plugin {$plugin->getKey()} - {$checkoutUrl}. \n";
-                        });
+                    $checkoutUrl = $advertisedProducts['checkout_url'];
+
+                    if (blank($checkoutUrl)) {
+                        return;
+                    }
+
+                    cache()->put($plugin->getCheckoutUrlCacheKey(), $checkoutUrl);
+
+                    echo "Caching checkout URL for plugin {$plugin->getKey()} - {$checkoutUrl}. \n";
+
+                    $prices = collect($advertisedProducts['prices'] ?? []);
+
+                    $priceAmount = $prices->min('amount');
+                    $priceCurrency = $prices->keyBy('amount')[$priceAmount]['currency'];
+
+                    if (blank($priceAmount)) {
+                        return;
+                    }
+
+                    if (blank($priceCurrency)) {
+                        return;
+                    }
+
+                    $price = money($priceAmount, $priceCurrency);
+
+                    cache()->put($plugin->getPriceCacheKey(), $price);
+
+                    echo "Caching price for plugin {$plugin->getKey()} - {$price}. \n";
                 });
         } catch (Throwable $exception) {
             echo "Failed to fetch any data from Unlock. \n";

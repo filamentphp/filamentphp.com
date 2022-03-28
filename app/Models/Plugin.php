@@ -69,7 +69,16 @@ class Plugin extends Model implements HasMedia
 
     public function getCheckoutUrl(): ?string
     {
+        if (! $this->is_paid) {
+            return null;
+        }
+
         return cache()->get($this->getCheckoutUrlCacheKey());
+    }
+
+    public function getPrice(): ?string
+    {
+        return cache()->get($this->getPriceCacheKey());
     }
 
     public function hasGitHubStars(): bool
@@ -95,6 +104,11 @@ class Plugin extends Model implements HasMedia
     public function getCheckoutUrlCacheKey(): string
     {
         return "plugins.{$this->getKey()}.checkout_url";
+    }
+
+    public function getPriceCacheKey(): string
+    {
+        return "plugins.{$this->getKey()}.price";
     }
 
     public function getUrl(): ?string

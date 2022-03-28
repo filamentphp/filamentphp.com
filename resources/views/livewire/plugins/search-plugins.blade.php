@@ -1,7 +1,7 @@
 <div class="space-y-8">
     <div class="flex items-center justify-between space-x-8">
         <h2 class="flex-shrink-0 text-lg font-heading text-gray-900">
-            All plugins
+            Plugins
         </h2>
 
         <div class="flex items-center space-x-4">
@@ -49,7 +49,7 @@
     </div>
 
     @php
-        $plugins = $this->getPlugins()
+        $plugins = $this->getPlugins();
     @endphp
 
     @if (count($plugins))
