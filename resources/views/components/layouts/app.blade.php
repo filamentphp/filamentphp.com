@@ -1,7 +1,5 @@
 @props([
     'heading' => null,
-    'previewify' => null,
-    'previewifyData' => [],
 ])
 
 <x-layouts.base {{ $attributes }}>
