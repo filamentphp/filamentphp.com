@@ -51,3 +51,5 @@ Route::prefix('/plugins')->group(function () {
         });
     });
 });
+
+Route::redirect('/login', '/admin/login')->name('login');

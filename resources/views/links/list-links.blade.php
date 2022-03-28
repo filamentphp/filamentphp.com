@@ -1,4 +1,7 @@
-<x-layouts.app>
+<x-layouts.app previewify="858" :previewify-data="[
+    'title' => 'Filament Links',
+    'subtitle' => 'Videos, articles, news, tutorials and more.',
+]">
     <x-header>
         Community Links
     </x-header>

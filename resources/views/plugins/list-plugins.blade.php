@@ -1,4 +1,7 @@
-<x-layouts.app>
+<x-layouts.app previewify="858" :previewify-data="[
+    'title' => 'Filament Plugins',
+    'subtitle' => 'Composer packages made by our community, giving you access to awesome new features.',
+]">
     <div class="bg-primary-300">
         <div class="relative max-w-7xl px-8 py-24 mx-auto">
             <div class="space-y-4">
