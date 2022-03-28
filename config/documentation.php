@@ -56,7 +56,7 @@ return [
 
             'spatie-laravel-media-library-plugin' => [
 
-                'name' => 'spatie/laravel-medialibrary Plugin',
+                'name' => 'Spatie Media Library Plugin',
 
                 'description' => 'A plugin to add support for spatie/laravel-medialibrary to Filament.',
 
@@ -66,7 +66,7 @@ return [
 
             'spatie-laravel-settings-plugin' => [
 
-                'name' => 'spatie/laravel-settings Plugin',
+                'name' => 'Spatie Settings Plugin',
 
                 'description' => 'A plugin to add support for spatie/laravel-settings to Filament.',
 
@@ -76,7 +76,7 @@ return [
 
             'spatie-laravel-tags-plugin' => [
 
-                'name' => 'spatie/laravel-tags Plugin',
+                'name' => 'Spatie Tags Plugin',
 
                 'description' => 'A plugin to add support for spatie/laravel-tags to Filament.',
 
@@ -86,7 +86,7 @@ return [
 
             'spatie-laravel-translatable-plugin' => [
 
-                'name' => 'spatie/laravel-translatable Plugin',
+                'name' => 'Spatie Translatable Plugin',
 
                 'description' => 'A plugin to add support for spatie/laravel-translatable to Filament.',
 
