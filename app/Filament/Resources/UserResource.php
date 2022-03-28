@@ -30,6 +30,7 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->unique(ignoreRecord: true),
+                Forms\Components\Toggle::make('is_admin')->label('Admin'),
             ]);
     }
 

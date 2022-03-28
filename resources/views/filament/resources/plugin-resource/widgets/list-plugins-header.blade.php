@@ -29,7 +29,7 @@
                         Submit it for review. ⏳
                     </strong>
 
-                    One of the Filament team will review your submission and approve it for our marketplace.
+                    One of the Filament team will review your submission and approve it for our website.
                 </li>
 
                 <li>
