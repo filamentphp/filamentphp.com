@@ -22,7 +22,7 @@
                                     </div>
                                 </li>
                             @empty
-                                <li>
+                                <li class="splide__slide px-12 xl:px-16">
                                     <div class="aspect-w-16 aspect-h-9 rounded-2xl shadow bg-gray-100 overflow-hidden">
                                         <img
                                             src="{{ $plugin->getThumbnailUrl() }}"
