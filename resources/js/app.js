@@ -14,7 +14,9 @@ Alpine.plugin(FormsAlpinePlugin)
 window.Alpine = Alpine
 Alpine.start()
 
-new Splide('.splide').mount()
+if (document.querySelector('.splide')) {
+    new Splide('.splide').mount()
+}
 
 docsearch({
     appId: 'BH4D9OD16A',
