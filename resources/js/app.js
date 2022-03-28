@@ -14,7 +14,7 @@ Alpine.plugin(FormsAlpinePlugin)
 window.Alpine = Alpine
 Alpine.start()
 
-if (document.querySelector('.splide')){
+if (document.querySelector('.splide')) {
     new Splide('.splide').mount()
 }
 
