@@ -8,8 +8,8 @@
     </x-section>
 
     <section class="bg-gray-900">
-        <div class="lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
-            <div class="mx-auto max-w-2xl text-center space-y-8">
+        <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
+            <div class="flex-grow space-y-8">
                 <div class="space-y-4">
                     <h2 class="font-heading font-bold text-primary-200 text-4xl">
                         Submit your own links 🚀
@@ -27,6 +27,14 @@
                 >
                     Go to link dashboard
                 </a>
+            </div>
+
+            <div class="hidden absolute right-0 top-12 mr-12 xl:block">
+                <img
+                    src="{{ asset('images/hands.svg') }}"
+                    alt="Hands"
+                    class="h-[8rem]"
+                />
             </div>
         </div>
     </section>
