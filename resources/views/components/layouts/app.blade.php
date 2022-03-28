@@ -1,8 +1,10 @@
 @props([
     'heading' => null,
+    'previewify' => null,
+    'previewifyData' => [],
 ])
 
-<x-layouts.base {{ $attributes }}>
+<x-layouts.base {{ $attributes }} :previewify="$previewify" :previewify-data="$previewifyData">
     <x-nav />
 
     <aside
