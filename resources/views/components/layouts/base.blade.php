@@ -15,8 +15,8 @@
         <x-seo::meta />
 
         @if ($previewify)
-            <meta property="og:image" content="https://previewify.app/i/{{ $previewify }}?url={{ url()->current() }}">
-            <meta name="twitter:image" content="https://previewify.app/i/{{ $previewify }}?url={{ url()->current() }}">
+            <meta property="og:image" content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}">
+            <meta name="twitter:image" content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}">
             <meta name="previewify:image" content="{{ asset('/images/icon.png') }}">
             @foreach ($previewifyData as $key => $value)
                 <meta name="previewify:{{ $key }}" content="{{ $value }}">
