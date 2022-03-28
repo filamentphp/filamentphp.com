@@ -90,7 +90,6 @@ class PluginResource extends Resource
                         Forms\Components\Tabs\Tab::make('Description')
                             ->schema([
                                 Forms\Components\MarkdownEditor::make('description')
-                                    ->required()
                                     ->maxLength(150)
                                     ->helperText('A short description of your plugin. Maximum 150 characters.')
                                     ->toolbarButtons([

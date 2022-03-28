@@ -59,7 +59,6 @@ class LinkResource extends Resource
                         Forms\Components\Tabs\Tab::make('Description')
                             ->schema([
                                 Forms\Components\MarkdownEditor::make('description')
-                                    ->required()
                                     ->maxLength(150)
                                     ->helperText('A short description of your link. Maximum 150 characters.')
                                     ->toolbarButtons([
