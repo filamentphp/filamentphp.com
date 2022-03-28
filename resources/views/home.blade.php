@@ -193,6 +193,44 @@
                     </div>
                 </div>
             </div>
+
+            <div class="w-full flex justify-center">
+                <div class="bg-gray-800 relative rounded-2xl -mx-4 p-8 space-y-8 max-w-4xl text-center">
+                    <div class="space-y-4">
+                        <h2 class="text-white font-heading font-bold text-2xl">
+                            ...and these are just the beginning.
+                        </h2>
+
+                        <p class="text-xl text-white">
+                            The Filament community is <strong>exceptional</strong>. They've built a wide range of plugins, which give you easy access to new features that will make your productivity ✨ shine ✨.
+                        </p>
+                    </div>
+
+                    <x-button
+                        :href="route('plugins')"
+                        tag="a"
+                        size="lg"
+                    >
+                        Check out our plugins &rarr;
+                    </x-button>
+
+                    <div class="absolute -top-12 -right-4">
+                        <img
+                            src="{{ asset('images/bit3.svg') }}"
+                            alt="Bit"
+                            class="h-16"
+                        />
+                    </div>
+
+                    <div class="absolute -bottom-4 -left-8">
+                        <img
+                            src="{{ asset('images/bit6.svg') }}"
+                            alt="Bit"
+                            class="h-16"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -203,11 +241,67 @@
             </h2>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <x-testimonial url="https://twitter.com/shocm/status/1487841457088045059">
+                    Filament has become <strong>one of my required packages</strong> for all my new projects. I talk about it almost as much as I talk about Livewire and <strong>that is a lot</strong>. Thanks for the <strong>great work</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/89408?v=4">
+                        Eric Van Johnson
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/ChrisHardie/status/1507793007470428167">
+                    I’ve built a few Laravel admin tools/sites now with Filament and just have to remark on how <strong>well designed</strong> it is, and how quickly one can create <strong>powerful, friendly</strong> application interfaces with it. <strong>Impressive stuff.</strong>
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/311772?v=4">
+                        Chris Hardie
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/mrchrxs/status/1491159440250540033">
+                    6 months ago, @carre_sam recommended Filament. I was put off because I use Vue not Livewire. Just spent 30 minutes with it, and <strong>WOW</strong>. Definitely pitching this at work!
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/10789117?v=4">
+                        Chris
+                    </x-slot>
+                </x-testimonial>
+
                 <x-testimonial url="https://twitter.com/iksaku2">
                     Filament is the <strong>Swiss Army Knife dashboard for TALL stack apps</strong>. Just sit down, install and you'll have a full CMS in two shakes.
 
                     <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/4632429?v=4">
                         Jorge González
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/DaronSpence/status/1507602035641929729">
+                    Big shoutout to Filament for making a <strong>really slick</strong> admin panel kit. <strong>Loving the markdown editor</strong> w/ builtin file uploads!
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/4062087?v=4">
+                        Daron Spence
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/jacques_van_wyk/status/1507401233937711104">
+                    I must say this Filament is <strong>amazing</strong> and such <strong>a pleasure to work with</strong>. @danjharrin you and team have done great job.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/12008702?v=4">
+                        Jacques van Wyk
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/heyjordn/status/1494428799584329730">
+                    <strong>Loving the performance</strong> of Filament's datatable, our team at Orba added an Excel export, <strong>so smooth</strong> 🔥
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/4820517?v=4">
+                        Jordan Jones
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/ralphjsmit/status/1502305847749357572">
+                    Filament is a <strong>GREAT</strong> tool for building admin panels in Laravel. It has a great plugin support and an <strong>active community</strong>. 🚀
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/59207045?v=4">
+                        Ralph J. Smit
                     </x-slot>
                 </x-testimonial>
 
@@ -243,6 +337,70 @@
                     </x-slot>
                 </x-testimonial>
 
+                <x-testimonial url="https://twitter.com/jimmyaldape/status/1504641233871728640">
+                    Filament is a <strong>joy to work with</strong>. Just about covers most use cases for an admin panel in Laravel. <strong>Great job.</strong>
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/59585840?v=4">
+                        Jimmy Aldape
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/mattmngdev/status/1495358748445057025">
+                    The <strong>highlight of the weekend</strong>: managed to start a new project using Filament and <strong>I love it</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/373999?v=4">
+                        Matteo Mangoni
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/romaldyminaya/status/1492553584587776004">
+                    Filament is a <strong>very fun framework</strong> to play with so far. The support is <strong>very accurate and fast</strong>. 😍
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/2809147?v=4">
+                        Romaldy Minaya
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/BotezatuDima/status/1491026512111226881">
+                    Today I installed and played with Filament. Seems to be an <strong>amazing tool for productivity</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/3392129?v=4">
+                        Dumitru Botezatu
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/zepfietje/status/1486763133591072768">
+                    Need an admin panel for your Laravel project? It's <strong>powerful</strong>. It's <strong>fast</strong>. It's <strong>beautiful</strong>. It's <strong>easy</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/44533235?v=4">
+                        Zep Fietje
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/luilliarcec/status/1485764353802608643">
+                    Today I tried Filament, and <strong>oh my God, that's fantastic! Amazing! Great job.</strong>
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/27895611?v=4">
+                        Luis Andrés Arce C.
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/nickciolpan/status/1483564450208747520">
+                    Filament's admin is, by far, <strong>my favorite Laravel tool</strong> at the moment. Found my gateway drug into Livewire
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/8835763?v=4">
+                        Nick Ciolpan
+                    </x-slot>
+                </x-testimonial>
+
+                <x-testimonial url="https://twitter.com/snellingio/status/1491103335793164290">
+                    The more I look at it, the closer it is to being able to build a <strong>full SaaS with Filament alone</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/9887585?v=4">
+                        Sam Snelling
+                    </x-slot>
+                </x-testimonial>
+
                 <x-testimonial url="https://twitter.com/roniestein/status/1366526433737068546">
                     Release the hounds!!! This project is going to be <strong>my new go-to</strong> for all back-end work!!! So Excited!
 
@@ -259,19 +417,19 @@
                     </x-slot>
                 </x-testimonial>
 
+                <x-testimonial url="https://twitter.com/alexjustesen/status/1496554096777695233">
+                    Hot damn Filament <strong>saves sooooo much time</strong>.
+
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/1144087?v=4">
+                        Alex Justesen
+                    </x-slot>
+                </x-testimonial>
+
                 <x-testimonial url="https://twitter.com/Tiago_Ferat/status/1367996436567179264">
                     An <strong>awesome</strong> Open-Source Admin panel with TALL stack. 👏👏
 
                     <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/11933789?v=4">
                         Tiago Rodrigues
-                    </x-slot>
-                </x-testimonial>
-
-                <x-testimonial url="https://twitter.com/AmaurisCid/status/1366803626287579142">
-                    Awesome job! It is <strong>sooo cool</strong> to test run it and the <strong>ease of use</strong>. Thank you guys.
-
-                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/6839739?v=4">
-                        Amaury Cid
                     </x-slot>
                 </x-testimonial>
 

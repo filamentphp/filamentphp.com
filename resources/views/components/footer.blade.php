@@ -4,8 +4,8 @@
             @foreach ([
                 route('home') => 'Home',
                 route('docs') => 'Docs',
-{{--                route('plugins') => 'Plugins',--}}
-{{--                route('links') => 'Links',--}}
+                route('plugins') => 'Plugins',
+                route('links') => 'Links',
                 'https://github.com/laravel-filament/filament/discussions/new' => 'Help',
                 'https://github.com/sponsors/danharrin' => 'Sponsor',
             ] as $url => $label)
