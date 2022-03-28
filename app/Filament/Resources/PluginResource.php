@@ -130,7 +130,8 @@ class PluginResource extends Resource
                             ->schema([
                                 Forms\Components\Select::make('license')
                                     ->options(collect(PluginLicense::cases())->mapWithKeys(fn (PluginLicense $license): array => [$license->value => $license->getLabel()]))
-                                    ->reactive(),
+                                    ->reactive()
+                                    ->default(PluginLicense::MIT->value),
                                 Forms\Components\TextInput::make('license_url')->label('URL'),
                             ])
                             ->columns(2),
