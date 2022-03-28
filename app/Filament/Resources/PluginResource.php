@@ -115,7 +115,7 @@ class PluginResource extends Resource
                                     ->multiple()
                                     ->maxSize(10240)
                                     ->enableReordering()
-                                    ->helperText('Images are supported. Recommended dimensions 1200 x 600 pixels. Max file size 10 MB. Please use light mode when taking screenshots where possible.')
+                                    ->helperText('Recommended dimensions 1200 x 600 pixels. Max file size 10 MB. Please use light mode when taking screenshots where possible.')
                                     ->columnSpan('full')
                                     ->disableLabel(),
                             ]),
