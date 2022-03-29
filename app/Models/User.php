@@ -42,7 +42,7 @@ class User extends Authenticatable implements FilamentUser
     protected static function booted(): void
     {
         static::creating(function (User $user): void {
-            $user->markEmailAsVerified();
+            $user->email_verified_at = now();
         });
     }
 }
