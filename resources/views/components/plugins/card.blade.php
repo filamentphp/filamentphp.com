@@ -8,6 +8,7 @@
             <img
                 src="{{ $plugin->getThumbnailUrl() }}"
                 alt="{{ $plugin->name }}"
+                loading="lazy"
                 class="object-center object-cover"
             >
         </div>

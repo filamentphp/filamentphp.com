@@ -8,6 +8,7 @@
             <img
                 src="{{ $link->getThumbnailUrl() }}"
                 alt="{{ $link->name }}"
+                loading="lazy"
                 class="object-center object-cover"
             >
         </div>
