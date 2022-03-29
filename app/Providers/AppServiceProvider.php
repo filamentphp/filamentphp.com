@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Stripe\Stripe;
 use Stripe\StripeClient;
@@ -38,5 +39,7 @@ class AppServiceProvider extends ServiceProvider
 
         Model::preventLazyLoading();
         Model::unguard();
+
+        URL::forceScheme('https');
     }
 }
