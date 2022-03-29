@@ -31,6 +31,7 @@ class UserResource extends Resource
                     ->maxLength(255)
                     ->unique(ignoreRecord: true),
                 Forms\Components\Toggle::make('is_admin')->label('Admin'),
+                Forms\Components\DateTimePicker::make('email_verified_at'),
             ]);
     }
 
