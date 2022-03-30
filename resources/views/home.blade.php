@@ -7,11 +7,11 @@
         <div class="space-y-12 max-w-screen-sm">
             <div class="space-y-4">
                 <h1 class="font-heading font-bold text-gray-900 text-4xl leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
-                    The elegant <span class="text-primary-500">TALL</span>kit for Laravel artisans.
+                    The elegant Laravel <strong class="font-bold text-primary-500">Livewire</strong> admin panel.
                 </h1>
 
                 <h3 class="text-gray-700 text-2xl">
-                    Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.
+                    Filament is an admin panel for creating beautiful, customizable interfaces using the TALL stack &mdash; Tailwind, Alpine, Livewire and Laravel.
                 </h3>
             </div>
 
