@@ -195,6 +195,10 @@ class PluginResource extends Resource
         $query = parent::getEloquentQuery();
         $user = auth()->user();
 
+        if (! $user) {
+            return $query;
+        }
+
         if ($user->is_admin) {
             return $query;
         }
