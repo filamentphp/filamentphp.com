@@ -79,6 +79,8 @@ return [
 
     'heading_permalink' => [
         'html_class' => 'mr-2 !text-primary-500 !no-underline hover:!text-primary-600 focus:!text-primary-600 focus:outline-none',
+        'fragment_prefix' => '',
+        'id_prefix' => '',
         'symbol' => '#',
     ],
 
