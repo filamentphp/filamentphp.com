@@ -49,7 +49,7 @@
                         </h2>
 
                         <p class="text-sm text-gray-500 mt-2">
-                            by {{ $plugin->author->name }}
+                            by {{ $plugin->getAuthorName() }}
 
                             @if ($plugin->hasGitHubStars())
                                 &bull;
@@ -131,7 +131,7 @@
                             <ul role="list" class="flex items-center space-x-6 mt-4">
                                 <li>
                                     <a
-                                        href="https://twitter.com/share?url={{ route('plugins.view', ['plugin' => $plugin]) }}&text={{ urlencode("💖 {$plugin->name} by {$plugin->author->name}") }}"
+                                        href="https://twitter.com/share?url={{ route('plugins.view', ['plugin' => $plugin]) }}&text={{ urlencode("💖 {$plugin->name} by {$plugin->getAuthorName()}") }}"
                                         target="__blank"
                                         class="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500"
                                     >

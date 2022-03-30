@@ -41,7 +41,7 @@
             </div>
 
             <p class="text-sm text-gray-500">
-                by {{ $plugin->author->name }}
+                by {{ $plugin->getAuthorName() }}
             </p>
         </div>
     </a>

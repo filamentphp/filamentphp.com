@@ -67,4 +67,13 @@ class Link extends Model implements HasMedia
     {
         return "links.{$this->getKey()}.thumbnail_url";
     }
+
+    public function getAuthorName(): string
+    {
+        if (filled($this->author_name)) {
+            return $this->author_name;
+        }
+
+        return $this->author->name;
+    }
 }

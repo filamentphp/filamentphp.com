@@ -82,16 +82,15 @@ class PluginResource extends Resource
                     ->options(collect(PluginStatus::cases())->mapWithKeys(fn (PluginStatus $status): array => [$status->value => $status->getLabel()]))
                     ->visible(auth()->user()->is_admin)
                     ->required(),
+                Forms\Components\TextInput::make('views')
+                    ->integer()
+                    ->visible(auth()->user()->is_admin),
                 Forms\Components\BelongsToSelect::make('author_id')
                     ->relationship('author', 'name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
                     ->required(),
-                Forms\Components\Toggle::make('is_featured')
-                    ->visible(auth()->user()->is_admin)
-                    ->inline(false),
-                Forms\Components\TextInput::make('views')
-                    ->integer()
+                Forms\Components\TextInput::make('author_name')
                     ->visible(auth()->user()->is_admin),
                 Forms\Components\Tabs::make('Details')
                     ->tabs([

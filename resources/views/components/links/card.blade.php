@@ -27,7 +27,7 @@
             </div>
 
             <p class="text-sm text-gray-500">
-                by {{ $link->author->name }}
+                by {{ $link->getAuthorName() }}
             </p>
         </div>
     </a>
