@@ -92,11 +92,15 @@ class SearchPlugins extends Component
 
             if (false !== $key) {
                 unset($this->categoryFilter[$key]);
+                
+                $this->resetPage();
             }
 
             return;
         }
 
         $this->categoryFilter[] = $category;
+        
+        $this->resetPage();
     }
 }
