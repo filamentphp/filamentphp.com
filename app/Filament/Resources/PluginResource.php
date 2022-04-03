@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Actions\PublishPlugin;
 use App\Enums\PluginCategory;
 use App\Enums\PluginLicense;
 use App\Enums\PluginStatus;
@@ -12,6 +13,7 @@ use App\Filament\Resources\PluginResource\Widgets\PluginStatusSwitcher;
 use App\Models\Plugin;
 use Closure;
 use Filament\Forms;
+use Filament\Tables\Actions\ButtonAction;
 use Filament\Pages\Page;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -160,6 +162,12 @@ class PluginResource extends Resource
                 Tables\Columns\TextColumn::make('author.name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin),
+            ])
+            ->prependActions([
+                ButtonAction::make('publish')
+                    ->requiresConfirmation()
+                    ->visible(fn (Plugin $record) => $record->status === PluginStatus::PENDING)
+                    ->action(fn (Plugin $record, PublishPlugin $publishPluginAction) => $publishPluginAction($record))
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(PluginStatus::cases())->mapWithKeys(fn (PluginStatus $status): array => [$status->value => $status->getLabel()])),
