@@ -84,6 +84,8 @@ class PluginResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('views')
                     ->integer()
+                    ->default(0)
+                    ->required()
                     ->visible(auth()->user()->is_admin),
                 Forms\Components\BelongsToSelect::make('author_id')
                     ->relationship('author', 'name')
