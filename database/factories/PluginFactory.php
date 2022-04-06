@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\PluginStatus;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -14,9 +15,9 @@ class PluginFactory extends Factory
             'docs' => $this->faker->text(),
             'name' => $this->faker->sentence(),
             'author_id' => User::factory(),
-            'package_name' => $this->faker->word(),
-            'price' => $this->faker->numberBetween(0, 50),
+            'name' => $this->faker->word(),
             'slug' => implode('-', $this->faker->words()),
+            'status' => $this->faker->randomElement([PluginStatus::DRAFT, PluginStatus::PENDING, PluginStatus::PUBLISHED]),
         ];
     }
 }

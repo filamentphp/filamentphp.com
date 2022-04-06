@@ -6,6 +6,7 @@ use App\Models\Plugin;
 use App\Models\User;
 use Database\Factories\PluginFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,12 @@ class DatabaseSeeder extends Seeder
          Plugin::factory()
              ->count(100)
              ->create();
+
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@filamentphp.com',
+            'password' => Hash::make('password'),
+            'is_admin' => true,
+        ]);
     }
 }
