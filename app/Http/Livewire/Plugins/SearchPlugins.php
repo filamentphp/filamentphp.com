@@ -17,7 +17,7 @@ class SearchPlugins extends Component
 
     public $search = '';
 
-    public $sort = 'popular';
+    public $sort = 'recent';
 
     public $tableRecordsPerPage = 32;
 
