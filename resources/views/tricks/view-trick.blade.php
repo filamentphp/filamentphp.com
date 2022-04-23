@@ -1,33 +1,17 @@
 <x-layouts.app>
+    <x-header :subheading="'by' . $trick->getAuthorName() . ', last modified on' . $trick->updated_at->format('F NS, Y')">
+        {{ $trick->name }}
+    </x-header>
+
     <x-section>
-        <div class="grid grid-cols-6">
-            <div class="col-span-2 flex flex-col">
-                <span class="font-medium uppercase tracking-wider focus:text-primary-500 text-gray-900">Recent tricks</span>
-
-                <ul class="mb-10">
-                    @foreach(\App\Models\Trick::published()->recent()->limit(5)->get() as $recent)
-                        <li>
-                            <a href="{{ route('tricks.view', $recent) }}">{{ $recent->name }}</a>
-                        </li>
-                    @endforeach
-                </ul>
-
-                <span class="font-medium uppercase tracking-wider focus:text-primary-500 text-gray-900">Other tricks by {{ $trick->getAuthorName() }}</span>
-
-                <ul>
-                    @foreach(\App\Models\Trick::whereBelongsTo($trick->author, 'author')->recent()->limit(5)->get() as $authorTrick)
-                        <li>{{ $authorTrick->name }}</li>
-                    @endforeach
-                </ul>
+        <div class="max-w-4xl mx-auto px-8">
+            <div class="text-sm text-gray-700 mb-5">
+                <a href="{{ route('tricks') }}">
+                    &larr; Back to Tricks
+                </a>
             </div>
 
-            <div class="col-span-4">
-                <h1 class="text-2xl font-heading tracking-tight text-gray-900 sm:text-3xl mb-2">
-                    {{ $trick->name }}
-                </h1>
-
-                <p class="text-gray-500 mb-2">by {{ $trick->getAuthorName() }}, last modified on {{ $trick->updated_at->format('F NS, Y') }}</p>
-
+            <div>
                 <ul class="mb-10">
                     @foreach($trick->getCategoryLabels() as $category)
                         <li class="inline-flex items-center justify-center space-x-1 text-primary-700 bg-primary-500/10 min-h-6 px-2 py-0.5 text-sm font-medium tracking-tight rounded-xl whitespace-normal">{{ $category }}</li>
