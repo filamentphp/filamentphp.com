@@ -16,6 +16,7 @@ class CreatePluginsTable extends Migration
         Schema::create('plugins', function (Blueprint $table) {
             $table->id();
             $table->foreignId('author_id')->nullable()->constrained('users')->nullOnDelete();
+            $table->string('author_name')->nullable();
             $table->json('categories')->nullable();
             $table->longText('description')->nullable();
             $table->longText('docs')->nullable();

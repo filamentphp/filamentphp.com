@@ -52,4 +52,14 @@ Route::prefix('/plugins')->group(function () {
     });
 });
 
+Route::prefix('/tricks')->group(function () {
+    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
+
+    Route::name('tricks.')->group(function () {
+        Route::prefix('/{trick:slug}')->group(function () {
+            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
+        });
+    });
+});
+
 Route::redirect('/login', '/admin/login')->name('login');

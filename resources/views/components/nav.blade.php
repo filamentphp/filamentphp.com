@@ -43,6 +43,13 @@
             Links
         </a>
 
+        <a href="{{ route('tricks') }}" @class([
+            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',
+            'text-primary-600' => request()->routeIs('tricks*'),
+        ])>
+            Tricks
+        </a>
+
         <a
             href="https://github.com/laravel-filament/filament"
             target="_blank"

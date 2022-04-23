@@ -34,6 +34,11 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(Plugin::class, 'author_id');
     }
 
+    public function tricks(): HasMany
+    {
+        return $this->hasMany(Trick::class, 'author_id');
+    }
+
     public function canAccessFilament(): bool
     {
         return true;
