@@ -19,6 +19,7 @@
                 route('docs') => 'Documentation',
                 route('plugins') => 'Plugins',
                 route('links') => 'Links',
+                route('tricks') => 'Tricks',
             ] as $url => $label)
                 <li>
                     <a
