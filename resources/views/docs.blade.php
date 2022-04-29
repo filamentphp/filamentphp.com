@@ -7,13 +7,13 @@
     <x-nav />
 
     <div class="space-y-24">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-5 lg:divide-x">
             <aside
                 x-data="{}"
                 x-cloak
                 :aria-hidden="$store.sidebar.isOpen.toString()"
                 :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-100 lg:w-auto lg:max-w-full lg:ml-8 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
+                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-100 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
             >
                 <div
                     x-data="{ package: '{{ $package->slug }}', version: '{{ $version->slug }}' }"
@@ -91,6 +91,32 @@
                     Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-500">Discord community</a> or open a <a href="https://github.com/laravel-filament/filament/discussions/new" target="_blank" class="transition hover:text-primary-500">GitHub discussion</a>
                 </p>
             </main>
+
+            <aside class="space-y-8 pr-2 lg:pl-8">
+                <h4 class="font-heading text-center text-3xl">
+                    Sponsors
+                </h4>
+
+                <a
+                    href="https://ploi.io"
+                    target="__blank"
+                    class="block mx-auto max-w-xs"
+                >
+                    <img
+                        src="https://user-images.githubusercontent.com/41773797/166021812-dd38e727-9946-4720-8651-8f407b3f12d9.png"
+                        alt="Ploi.io"
+                        class="block"
+                    />
+                </a>
+
+                <a
+                    href="https://github.com/sponsors/danharrin"
+                    target="__blank"
+                    class="block mx-auto max-w-xs font-medium text-sm text-center rounded-xl bg-gray-50 p-4 transition hover:bg-pink-100 hover:scale-105"
+                >
+                    Your logo here? <span class="hover:scale-105">💖</span>
+                </a>
+            </aside>
         </div>
 
         <section class="bg-pink-500 flex justify-center">
