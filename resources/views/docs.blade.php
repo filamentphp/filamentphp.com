@@ -92,30 +92,56 @@
                 </p>
             </main>
 
-            <aside class="space-y-8 pr-2 lg:pl-8">
+            <aside class="space-y-8 pr-2 lg:pl-8 lg:sticky lg:top-8 lg:self-start lg:h-screen">
                 <h4 class="font-heading text-center text-3xl">
                     Sponsors
                 </h4>
 
-                <a
-                    href="https://ploi.io"
-                    target="__blank"
-                    class="block mx-auto max-w-xs"
-                >
-                    <img
-                        src="https://user-images.githubusercontent.com/41773797/166021812-dd38e727-9946-4720-8651-8f407b3f12d9.png"
-                        alt="Ploi.io"
-                        class="block"
-                    />
-                </a>
+                <div class="space-y-4">
+                    <a
+                        href="https://ploi.io"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png"
+                            alt="Ploi"
+                            class="block rounded-xl"
+                        />
+                    </a>
 
-                <a
-                    href="https://github.com/sponsors/danharrin"
-                    target="__blank"
-                    class="block mx-auto max-w-xs font-medium text-sm text-center rounded-xl bg-gray-50 p-4 transition hover:bg-pink-100 hover:scale-105"
-                >
-                    Your logo here? <span class="hover:scale-105">💖</span>
-                </a>
+                    <a
+                        href="https://flareapp.io"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/166236825-250ad64d-92b1-4291-bd97-306d51bb0ce7.png"
+                            alt="Flare"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
+                        href="https://ohdear.app"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/166300676-b0601ab2-6881-4d52-becc-9c48df4b1cf6.png"
+                            alt="Oh Dear"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
+                        href="https://github.com/sponsors/danharrin"
+                        target="__blank"
+                        class="block mx-auto max-w-xs font-medium text-sm text-center rounded-xl bg-gray-50 p-4 transition hover:bg-pink-100 hover:scale-105"
+                    >
+                        Your logo here? <span class="hover:scale-105">💖</span>
+                    </a>
+                </div>
             </aside>
         </div>
 

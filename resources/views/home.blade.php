@@ -478,10 +478,12 @@
 
     <section class="bg-pink-500">
         <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
-            <div class="grid grid-cols-8 gap-2 shrink-0">
+            <div class="grid grid-cols-10 gap-2 shrink-0">
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
+                    'https://github.com/spatie' => 'https://avatars.githubusercontent.com/u/7535935?s=96&v=4',
                     'https://github.com/Cannonb4ll' => 'https://avatars.githubusercontent.com/u/3110750?s=96&v=4',
+                    'https://github.com/ohdearapp' => 'https://avatars.githubusercontent.com/u/32144649?s=96&v=4',
                     'https://github.com/larrybarker' => 'https://avatars.githubusercontent.com/u/28734844?s=96&v=4',
                     'https://github.com/jouniikaheimo' => 'https://avatars.githubusercontent.com/u/32259223?s=96&v=4',
                     'https://github.com/jeffgreco13' => 'https://avatars.githubusercontent.com/u/12453974?s=96&v=4',
@@ -527,6 +529,7 @@
                     'https://github.com/ajnsn' => 'https://avatars.githubusercontent.com/u/13928621?s=96&v=4',
                     'https://github.com/ChrisHardie' => 'https://avatars.githubusercontent.com/u/311772?s=96&v=4',
                     'https://github.com/gbrust' => 'https://avatars.githubusercontent.com/u/16957069?s=96&v=4',
+                    'https://github.com/awcodes' => 'https://avatars.githubusercontent.com/u/3596800?s=96&v=4',
                 ] as $url => $avatar)
                     <a
                         href="{{ $url }}"
