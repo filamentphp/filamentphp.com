@@ -53,7 +53,7 @@
     </header>
 
     <div class="bg-gray-900">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 gap-8 py-12 px-4 sm:px-6 lg:px-8 lg:grid-cols-5">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 gap-8 py-12 px-4 sm:px-6 lg:px-8 lg:grid-cols-5">
             <p class="col-span-2 text-center text-base font-semibold uppercase text-gray-400 tracking-wider lg:col-span-1">
                 Premium Sponsors
             </p>
