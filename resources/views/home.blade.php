@@ -1,6 +1,6 @@
 <x-layouts.app previewify="757" :previewify-data="[
     'title' => 'The elegant TALLkit for Laravel artisans.',
-    'subtitle' => 'Rapidly build TALL stack interfaces, designed for humans.',
+    'subtitle' => 'Rapidly build TALL stack apps, designed for humans.',
     'code' => 'composer require filament/filament',
 ]">
     <header class="relative overflow-hidden max-w-7xl mx-auto py-20 md:pb-48 px-8">
@@ -11,7 +11,7 @@
                 </h1>
 
                 <h3 class="text-gray-700 text-2xl">
-                    Filament is a collection of tools for rapidly building beautiful TALL stack interfaces, designed for humans.
+                    Filament is a collection of tools for rapidly building beautiful TALL stack apps, designed for humans.
                 </h3>
             </div>
 
