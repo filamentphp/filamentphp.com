@@ -201,7 +201,7 @@
     <section class="bg-gray-900">
         <div class="max-w-7xl mx-auto px-8 py-16 space-y-16 lg:space-y-32 lg:py-32">
             <h3 class="font-heading text-center font-bold text-white text-5xl">
-                Filament products
+                Our Packages
             </h3>
 
             <div class="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
