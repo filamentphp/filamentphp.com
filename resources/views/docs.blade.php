@@ -128,7 +128,7 @@
                         class="block mx-auto max-w-xs"
                     >
                         <img
-                            src="https://user-images.githubusercontent.com/41773797/166300676-b0601ab2-6881-4d52-becc-9c48df4b1cf6.png"
+                            src="https://user-images.githubusercontent.com/41773797/166422472-e722264e-3e77-480a-91af-e3fde597063c.png"
                             alt="Oh Dear"
                             class="block rounded-xl"
                         />

@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@alpinejs/collapse": "^3.9.2",
         "@alpinejs/focus": "^3.9.2",
         "@docsearch/js": "^3.0.0-alpha.42",
         "@ryangjchandler/alpine-clipboard": "^2.0.0",

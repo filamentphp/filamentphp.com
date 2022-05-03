@@ -1,5 +1,6 @@
 import Alpine from 'alpinejs'
 import Clipboard from '@ryangjchandler/alpine-clipboard'
+import Collapse from '@alpinejs/collapse'
 import Focus from '@alpinejs/focus'
 import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 import docsearch from '@docsearch/js'
@@ -8,6 +9,7 @@ import Splide from '@splidejs/splide'
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Clipboard)
+Alpine.plugin(Collapse)
 Alpine.plugin(Focus)
 Alpine.plugin(FormsAlpinePlugin)
 
