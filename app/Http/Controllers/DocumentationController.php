@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DocumentationPackage;
 use App\Models\DocumentationVersion;
+use Illuminate\Database\Eloquent\Builder;
 
 class DocumentationController extends Controller
 {
@@ -52,13 +53,25 @@ class DocumentationController extends Controller
         if (! $page) {
             return redirect()->route('docs', [
                 'packageSlug' => $package->slug,
-                'pageSlug' => $package->getPages()->first()->slug,
+                'pageSlug' => $package->getPagesQuery()
+                    ->when($pageSlug, function (Builder $query) use ($pageSlug): Builder {
+                        return $query->where(function (Builder $query) use ($pageSlug): Builder {
+                            return $query->where('section_slug', $pageSlug)
+                                ->orWhereNull('section_slug');
+                        });
+                    })
+                    ->first()
+                    ->slug,
                 'versionSlug' => $version,
             ]);
         }
 
+        $seoTitle = $page->title;
+        $seoTitle = filled($page->section) ? "{$seoTitle} - {$page->section}" : $seoTitle;
+        $seoTitle .= " - {$package->name}";
+
         seo()
-            ->title("{$page->title} - {$package->name}")
+            ->title($seoTitle)
             ->description($package->description);
 
         return view('docs', [

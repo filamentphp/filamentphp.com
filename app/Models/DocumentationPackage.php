@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -25,12 +26,17 @@ class DocumentationPackage extends Model
         ])->first();
     }
 
-    public function getPages(): Collection
+    public function getPagesQuery(): Builder
     {
         return DocumentationPage::where([
             ['package_slug', $this->slug],
             ['version_id', $this->version->getKey()],
-        ])->with(['version'])->orderBy('order')->get();
+        ])->with(['version'])->orderBy('order');
+    }
+
+    public function getPages(): Collection
+    {
+        return $this->getPagesQuery()->get();
     }
 
     public function getRows(): array

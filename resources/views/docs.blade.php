@@ -43,35 +43,63 @@
                 </div>
 
                 <ul class="space-y-4">
+                    @php
+                        $requestedSlug = request()->route()->parameter('pageSlug');
+                        $predefinedSections = [];
+                    @endphp
+
                     @foreach ($package->getPages() as $packagePage)
                         @php
-                            $isActive = request()->route()->parameter('pageSlug') === $packagePage->slug;
-                            $url = $packagePage->getUrl();
+                            $isSection = filled($packagePage->section);
+
+                            if ($isSection) {
+                                if (in_array($packagePage->section, $predefinedSections)) {
+                                    continue;
+                                }
+
+                                $predefinedSections[] = $packagePage->section;
+                            }
+
+                            $isActive = $isSection ? str($requestedSlug)->startsWith("{$packagePage->section_slug}/") : $requestedSlug === $packagePage->slug;
                         @endphp
 
                         <li class="space-y-1">
                             <a
-                                href="{{ $url }}"
+                                href="{{ $isSection ? $packagePage->getSectionUrl() : $packagePage->getUrl() }}"
                                 @class([
-                                    'font-medium uppercase tracking-wider hover:text-primary-500 focus:text-primary-500',
+                                    'font-medium uppercase tracking-wider transition hover:text-primary-500 focus:text-primary-500',
                                     'text-gray-900' => ! $isActive,
-                                    'text-primary-500' => $isActive,
+                                    'text-primary-600' => $isActive,
                                 ])
                             >
-                                {{ $packagePage->title }}
+                                {{ $isSection ? $packagePage->section : $packagePage->title }}
                             </a>
 
                             <ul class="pl-4 border-l-2 space-y-2">
-                                @foreach ($packagePage->getSections() as $slug => $heading)
+                                @capture($renderListItem, $url, $label, $isActive)
                                     <li class="leading-5">
                                         <a
-                                            href="{{ $url }}#{{ $slug }}"
-                                            class="text-sm text-gray-700 hover:text-primary-500 focus:text-primary-500"
+                                            href="{{ $url }}"
+                                            @class([
+                                                'text-sm transition hover:text-primary-500 focus:text-primary-500',
+                                                'text-gray-700' => ! $isActive,
+                                                'text-primary-600 font-medium' => $isActive,
+                                            ])
                                         >
-                                            {{ $heading }}
+                                            {{ $label }}
                                         </a>
                                     </li>
-                                @endforeach
+                                @endcapture
+
+                                @if (filled($packagePage->section))
+                                    @foreach ($package->getPagesQuery()->where('section', $packagePage->section)->get() as $subpage)
+                                        {{ $renderListItem($subpage->getUrl(), $subpage->title, $requestedSlug === $subpage->slug) }}
+                                    @endforeach
+                                @else
+                                    @foreach ($packagePage->getContentSections() as $slug => $heading)
+                                        {{ $renderListItem("{$packagePage->getUrl()}#{$slug}", $heading, false) }}
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
                     @endforeach
@@ -82,6 +110,10 @@
                 <div class="prose">
                     <h1 class="font-heading">
                         {{ $page->title }}
+
+                        @if (filled($page->section))
+                            - {{ $page->section }}
+                        @endif
                     </h1>
 
                     @markdown($page->content)
