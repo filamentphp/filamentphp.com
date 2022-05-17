@@ -21,6 +21,9 @@ module.exports = {
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],
             },
+            maxWidth: {
+                '8xl': '88rem',
+            },
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
