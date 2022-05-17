@@ -7,7 +7,7 @@
     <x-nav />
 
     <div class="space-y-24">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-5 lg:divide-x">
+        <div class="max-w-8xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-5 lg:divide-x">
             <aside
                 x-data="{}"
                 x-cloak
@@ -106,8 +106,8 @@
                 </ul>
             </aside>
 
-            <main class="p-8 space-y-16 overflow-x-auto lg:py-0 lg:col-span-3">
-                <div class="prose">
+            <main class="p-8 space-y-16 overflow-x-auto lg:pr-0 lg:py-0 lg:col-span-3">
+                <div class="mx-auto prose max-w-none">
                     <h1 class="font-heading">
                         {{ $page->title }}
 
@@ -178,7 +178,7 @@
         </div>
 
         <section class="bg-pink-500 flex justify-center">
-            <div class="relative max-w-7xl w-full flex justify-center text-center mx-auto px-8 py-16">
+            <div class="relative max-w-8xl w-full flex justify-center text-center mx-auto px-8 py-16">
                 <div class="max-w-2xl space-y-8">
                     <div class="space-y-4">
                         <h2 class="font-heading font-bold text-primary-200 text-4xl">

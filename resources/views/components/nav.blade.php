@@ -1,4 +1,4 @@
-<nav {{ $attributes->class(['max-w-7xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20']) }}>
+<nav {{ $attributes->class(['max-w-8xl mx-auto flex items-center justify-between py-8 px-8 xl:py-20']) }}>
     <button
         x-data="{}"
         aria-controls="main-menu"

@@ -3,7 +3,7 @@
     'subtitle' => 'Composer packages made by our community, giving you access to awesome new features.',
 ]">
     <div class="bg-primary-300">
-        <div class="relative max-w-7xl px-8 py-24 mx-auto">
+        <div class="relative max-w-8xl px-8 py-24 mx-auto">
             <div class="space-y-4">
                 <h1 class="text-4xl text-center font-heading">
                     Plugins
@@ -37,7 +37,7 @@
     </x-section>
 
     <section class="bg-gray-900">
-        <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
+        <div class="relative lg:flex items-center space-y-16 max-w-8xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
             <div class="flex-grow space-y-8">
                 <div class="space-y-4">
                     <h2 class="font-heading font-bold text-primary-200 text-4xl">
