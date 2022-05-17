@@ -51,9 +51,20 @@ class DocumentationController extends Controller
 
         // If page doesn't exist in this package, use first page
         if (! $page) {
+            $page = $package->getPagesQuery()
+                ->when($pageSlug, function (Builder $query) use ($pageSlug): Builder {
+                    return $query->where(function (Builder $query) use ($pageSlug): Builder {
+                        return $query->where('section_slug', $pageSlug)
+                            ->orWhereNull('section_slug');
+                    });
+                })
+                ->first();
+
+            $page ??= $package->getPagesQuery()->first();
+
             return redirect()->route('docs', [
                 'packageSlug' => $package->slug,
-                'pageSlug' => $package->getPagesQuery()->first()->slug,
+                'pageSlug' => $page->slug,
                 'versionSlug' => $version,
             ]);
         }
