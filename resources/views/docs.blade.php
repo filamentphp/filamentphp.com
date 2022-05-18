@@ -110,11 +110,13 @@
                 <div class="mx-auto prose max-w-none">
                     <h1 class="font-heading">
                         {{ $page->title }}
-
-                        @if (filled($page->section))
-                            - {{ $page->section }}
-                        @endif
                     </h1>
+
+                    @if (filled($page->section))
+                        <div class="-mt-6 mb-8 text-xl font-medium">
+                            {{ $page->section }}
+                        </div>
+                    @endif
 
                     @markdown($page->content)
                 </div>
