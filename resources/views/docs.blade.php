@@ -6,7 +6,7 @@
 ]">
     <x-nav />
 
-    <div x-data="{}" class="-mt-24 space-y-24">
+    <div x-data="{}" class="space-y-12">
         <button
             x-show="$store.sidebar.isOpen"
             x-transition.opacity
