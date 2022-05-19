@@ -53,7 +53,7 @@
     </header>
 
     <div class="bg-gray-900">
-        <div class="max-w-8xl mx-auto grid grid-cols-2 gap-8 py-12 px-4 sm:px-6 lg:px-8 lg:grid-cols-5">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 gap-8 py-12 px-4 sm:px-6 lg:px-8 lg:grid-cols-5">
             <p class="col-span-2 text-center text-base font-semibold uppercase text-gray-400 tracking-wider lg:col-span-1">
                 Premium Sponsors
             </p>
@@ -121,7 +121,7 @@
     </div>
 
     <section class="bg-white">
-        <div class="max-w-8xl text-center mx-auto px-8 py-16 space-y-16 lg:py-32">
+        <div class="max-w-7xl text-center mx-auto px-8 py-16 space-y-16 lg:py-32">
             <div class="space-y-4">
                 <h3 class="leading-tight font-heading font-bold text-gray-900 text-5xl">
                     <span>
@@ -199,7 +199,7 @@
     </section>
 
     <section class="bg-gray-900">
-        <div class="max-w-8xl mx-auto px-8 py-16 space-y-16 lg:space-y-32 lg:py-32">
+        <div class="max-w-7xl mx-auto px-8 py-16 space-y-16 lg:space-y-32 lg:py-32">
             <h3 class="font-heading text-center font-bold text-white text-5xl">
                 Our Packages
             </h3>
@@ -385,7 +385,7 @@
     </section>
 
     <section class="bg-pink-500">
-        <div class="relative lg:flex items-center space-y-16 max-w-8xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
+        <div class="relative lg:flex items-center space-y-16 max-w-7xl mx-auto px-8 py-32 lg:space-y-0 lg:space-x-16">
             <div class="grid grid-cols-10 gap-2 shrink-0">
                 @foreach([
                     'https://github.com/calebporzio' => 'https://avatars.githubusercontent.com/u/3670578?s=96&v=4',
@@ -480,7 +480,7 @@
         </div>
     </section>
 
-    <section class="relative max-w-8xl mx-auto px-8 py-32">
+    <section class="relative max-w-7xl mx-auto px-8 py-32">
         <div class="space-y-16">
             <h2 class="font-heading font-bold text-4xl text-center">
                 Here's what others say
@@ -723,7 +723,7 @@
     </section>
 
     <section class="bg-gray-900">
-        <div class="max-w-8xl mx-auto px-8 py-32 space-y-16">
+        <div class="max-w-7xl mx-auto px-8 py-32 space-y-16">
             <h2 class="font-heading font-bold text-white text-4xl text-center">
                 Meet the team
             </h2>
