@@ -108,7 +108,7 @@
                                         <a
                                             href="{{ $url }}"
                                             @class([
-                                                'text-sm transition hover:text-primary-500 focus:text-primary-500',
+                                                'text-sm transition hover:text-primary-600 focus:text-primary-600',
                                                 'text-gray-700' => ! $isActive,
                                                 'text-primary-600 font-medium' => $isActive,
                                             ])
@@ -149,7 +149,7 @@
                 </div>
 
                 <p class="text-lg">
-                    Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-500">Discord community</a> or open a <a href="https://github.com/laravel-filament/filament/discussions/new" target="_blank" class="transition hover:text-primary-500">GitHub discussion</a>
+                    Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/laravel-filament/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
                 </p>
             </main>
 

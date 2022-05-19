@@ -187,7 +187,7 @@
                                         target="__blank"
                                         @class([
                                             'font-medium',
-                                            'text-primary-600 hover:text-primary-500' => $plugin->license_url,
+                                            'text-primary-600 hover:text-primary-600' => $plugin->license_url,
                                         ])
                                     >
                                         {{ $plugin->license->getLabel() }}

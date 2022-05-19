@@ -10,7 +10,7 @@
                 'https://github.com/sponsors/danharrin' => 'Sponsor',
             ] as $url => $label)
                 <div class="px-2">
-                    <a href="{{ $url }}" class="text-base text-gray-600 transition hover:text-primary-500">
+                    <a href="{{ $url }}" class="text-base text-gray-600 transition hover:text-primary-600">
                         {{ $label }}
                     </a>
                 </div>
@@ -18,7 +18,7 @@
         </nav>
 
         <div class="flex justify-center space-x-6">
-            <a href="https://twitter.com/filamentphp" target="_blank" class="text-gray-500 transition hover:text-primary-500 flex items-center">
+            <a href="https://twitter.com/filamentphp" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
                 <span class="sr-only">Twitter</span>
 
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -26,7 +26,7 @@
                 </svg>
             </a>
 
-            <a href="https://github.com/laravel-filament/filament" target="_blank" class="text-gray-500 transition hover:text-primary-500 flex items-center">
+            <a href="https://github.com/laravel-filament/filament" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
                 <span class="sr-only">GitHub</span>
 
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,7 +34,7 @@
                 </svg>
             </a>
 
-            <a href="{{ route('discord') }}" target="_blank" class="text-gray-500 transition hover:text-primary-500 flex items-center">
+            <a href="{{ route('discord') }}" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
                 <span class="sr-only">Discord</span>
 
                 <svg class="w-6" fill="none" viewBox="0 0 71 55" aria-hidden="true">
@@ -58,7 +58,7 @@
                 <a
                     href="https://torchlight.dev"
                     target="_blank"
-                    class="hover:text-primary-500"
+                    class="hover:text-primary-600"
                 >
                     Torchlight
                 </a>.

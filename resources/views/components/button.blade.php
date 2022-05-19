@@ -25,7 +25,7 @@
         'text-danger-500 border-danger-500 hover:bg-danger-500/20 focus:bg-danger-600/20 focus:ring-offset-danger-600' => $color === 'danger',
         'text-warning-500 border-warning-500 hover:bg-warning-500/20 focus:bg-warning-600/20 focus:ring-offset-warning-600' => $color === 'warning',
         'text-gray-500 border-gray-500 hover:bg-gray-500/20 focus:bg-gray-600/20 focus:ring-offset-gray-600' => $color === 'gray',
-        'text-gray-700 border-gray-300 hover:bg-gray-50 focus:ring-primary-500 focus:text-primary-500 focus:bg-primary-50 focus:border-primary-500' => $color === 'secondary',
+        'text-gray-700 border-gray-300 hover:bg-gray-50 focus:ring-primary-500 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-500' => $color === 'secondary',
     ] : [
         'text-white shadow focus:ring-white border-transparent' => $color !== 'secondary',
         'bg-primary-500 hover:bg-primary-400 focus:bg-primary-600 focus:ring-offset-primary-600' => $color === 'primary',
@@ -33,7 +33,7 @@
         'bg-danger-500 hover:bg-danger-400 focus:bg-danger-600 focus:ring-offset-danger-600' => $color === 'danger',
         'bg-warning-500 hover:bg-warning-400 focus:bg-warning-600 focus:ring-offset-warning-600' => $color === 'warning',
         'bg-gray-500 hover:bg-gray-400 focus:bg-gray-600 focus:ring-offset-gray-600' => $color === 'gray',
-        'text-gray-700 bg-white border-gray-300 hover:bg-gray-50 focus:ring-primary-500 focus:text-primary-500 focus:bg-primary-50 focus:border-primary-500' => $color === 'secondary',
+        'text-gray-700 bg-white border-gray-300 hover:bg-gray-50 focus:ring-primary-500 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-500' => $color === 'secondary',
     ]);
 
     $iconClasses = \Illuminate\Support\Arr::toCssClasses([
