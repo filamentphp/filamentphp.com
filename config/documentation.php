@@ -14,6 +14,8 @@ return [
 
                 'path' => resource_path('filament/1.x/docs'),
 
+                'icon' => 'heroicon-o-chart-bar',
+
             ],
 
         ],
@@ -32,6 +34,8 @@ return [
 
                 'path' => resource_path('filament/2.x/packages/admin/docs'),
 
+                'icon' => 'heroicon-o-chart-bar',
+
             ],
 
             'forms' => [
@@ -42,6 +46,8 @@ return [
 
                 'path' => resource_path('filament/2.x/packages/forms/docs'),
 
+                'icon' => 'heroicon-o-document-text',
+
             ],
 
             'tables' => [
@@ -51,6 +57,8 @@ return [
                 'description' => 'The elegant TALL stack table builder for Laravel artisans.',
 
                 'path' => resource_path('filament/2.x/packages/tables/docs'),
+
+                'icon' => 'heroicon-o-table',
 
             ],
 

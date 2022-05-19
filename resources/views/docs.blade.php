@@ -25,20 +25,34 @@
                 class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-50 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
             >
                 <div
-                    x-data="{ package: '{{ $package->slug }}', version: '{{ $version->slug }}' }"
+                    x-data="{ version: '{{ $version->slug }}' }"
                     x-init="
-                        $watch('package', () => window.location = `/docs/{{ $version->slug }}/${package}`)
                         $watch('version', () => window.location = `/docs/${version}/{{ $package->slug }}`)
                     "
                     class="space-y-2 -mx-3"
                 >
-                    <select x-model="package" class="block w-full h-10 border-gray-300 transition duration-75 rounded-lg shadow-sm focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500">
-                        @foreach (\App\Models\DocumentationPackage::orderBy('name')->get()->unique('slug') as $documentationPackage)
-                            <option value="{{ $documentationPackage->slug }}">
-                                {{ $documentationPackage->name }}
-                            </option>
+                    <div class="mb-8 bg-gray-50 -mx-2 px-1 rounded-lg text-sm flex flex-col">
+                        @foreach (\App\Models\DocumentationPackage::orderBy('name')->product()->get()->unique('slug') as $product)
+                            <div class="py-1">
+                                <a
+                                    href="{{ route('docs', ['versionSlug' => $version->slug, 'packageSlug' => $product->slug]) }}"
+                                    @class([
+                                        'group p-1 rounded-md flex gap-4 items-center font-medium lg:text-sm lg:leading-6',
+                                        'text-gray-500' => $package->slug !== $product->slug,
+                                        'bg-gray-100 text-primary-600' => $package->slug === $product->slug,
+                                    ])
+                                >
+                                    <div class="flex items-center justify-center bg-white text-primary-600 rounded h-6 w-6 ring-1 ring-gray-900/5 shadow-sm group-hover:shadow group-hover:ring-gray-900/10 group-hover:shadow-primary-200">
+                                        <x-dynamic-component :component="$product->icon" class="h-4 w-4" />
+                                    </div>
+
+                                    <span>
+                                        {{ $product->name }}
+                                    </span>
+                                </a>
+                            </div>
                         @endforeach
-                    </select>
+                    </div>
 
                     <select x-model="version" class="block w-full h-10 border-gray-300 transition duration-75 rounded-lg shadow-sm focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500">
                         @foreach ($package->getVersions() as $packageVersion)

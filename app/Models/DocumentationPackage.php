@@ -47,6 +47,7 @@ class DocumentationPackage extends Model
             foreach ($version['packages'] as $packageSlug => $package) {
                 $packages[] = [
                     'description' => $package['description'],
+                    'icon' => $package['icon'] ?? null,
                     'name' => $package['name'],
                     'slug' => $packageSlug,
                     'version_id' => $versionNumber,
@@ -62,5 +63,15 @@ class DocumentationPackage extends Model
         return DocumentationVersion::find(
             DocumentationPackage::orderByDesc('version_id')->where('slug', $this->slug)->pluck('version_id'),
         );
+    }
+
+    public function scopeProduct(Builder $query): Builder
+    {
+        return $query->whereNot('slug', 'like', '%-plugin');
+    }
+
+    public function scopePlugin(Builder $query): Builder
+    {
+        return $query->where('slug', 'like', '%-plugin');
     }
 }
