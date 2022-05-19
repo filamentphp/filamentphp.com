@@ -38,7 +38,7 @@
                                     href="{{ route('docs', ['versionSlug' => $version->slug, 'packageSlug' => $product->slug]) }}"
                                     @class([
                                         'group p-1 rounded-md flex gap-4 items-center font-medium lg:text-sm lg:leading-6',
-                                        'text-gray-500' => $package->slug !== $product->slug,
+                                        'text-gray-500 hover:text-primary-600' => $package->slug !== $product->slug,
                                         'bg-gray-100 text-primary-600' => $package->slug === $product->slug,
                                     ])
                                 >
@@ -90,7 +90,7 @@
                             <a
                                 href="{{ $isSection ? $packagePage->getSectionUrl() : $packagePage->getUrl() }}"
                                 @class([
-                                    'font-medium transition hover:text-primary-500 focus:text-primary-500',
+                                    'font-medium transition hover:text-primary-600 focus:text-primary-600',
                                     'text-gray-900' => ! $isActive,
                                     'text-primary-600' => $isActive,
                                 ])
