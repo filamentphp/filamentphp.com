@@ -6,14 +6,23 @@
 ]">
     <x-nav />
 
-    <div class="space-y-24">
+    <div x-data="{}" class="-mt-24 space-y-24">
+        <button
+            x-show="$store.sidebar.isOpen"
+            x-transition.opacity
+            x-on:click="$store.sidebar.isOpen = false"
+            x-cloak
+            type="button"
+            aria-hidden="true"
+            class="fixed inset-0 w-full h-full bg-black/50 focus:outline-none lg:hidden"
+        ></button>
+
         <div class="max-w-8xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-5 lg:divide-x">
             <aside
-                x-data="{}"
                 x-cloak
                 :aria-hidden="$store.sidebar.isOpen.toString()"
                 :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-100 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
+                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-50 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
             >
                 <div
                     x-data="{ package: '{{ $package->slug }}', version: '{{ $version->slug }}' }"
@@ -67,7 +76,7 @@
                             <a
                                 href="{{ $isSection ? $packagePage->getSectionUrl() : $packagePage->getUrl() }}"
                                 @class([
-                                    'font-medium uppercase tracking-wider transition hover:text-primary-500 focus:text-primary-500',
+                                    'font-medium transition hover:text-primary-500 focus:text-primary-500',
                                     'text-gray-900' => ! $isActive,
                                     'text-primary-600' => $isActive,
                                 ])
@@ -77,7 +86,11 @@
 
                             <ul class="pl-4 border-l-2 space-y-2">
                                 @capture($renderListItem, $url, $label, $isActive)
-                                    <li class="leading-5">
+                                    <li class="relative leading-5">
+                                        @if ($isActive)
+                                            <div class="absolute left-0 top-2 -ml-[1.2rem] h-1 w-1 bg-primary-600 rounded-full"></div>
+                                        @endif
+
                                         <a
                                             href="{{ $url }}"
                                             @class([
