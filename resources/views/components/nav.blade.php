@@ -23,21 +23,24 @@
 
     <div class="flex items-center justify-end gap-8 sm:gap-16">
         <a href="{{ route('docs') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'text-gray-900' => ! request()->routeIs('docs*'),
             'text-primary-600' => request()->routeIs('docs*'),
         ])>
             Documentation
         </a>
 
         <a href="{{ route('plugins') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'text-gray-900' => ! request()->routeIs('plugins*'),
             'text-primary-600' => request()->routeIs('plugins*'),
         ])>
             Plugins
         </a>
 
         <a href="{{ route('links') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'text-gray-900' => ! request()->routeIs('links*'),
             'text-primary-600' => request()->routeIs('links*'),
         ])>
             Links
