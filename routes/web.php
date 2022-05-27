@@ -21,7 +21,7 @@ Route::view('/', 'home')->name('home');
 Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
 
 Route::prefix('/docs')->group(function () {
-    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->name('docs');
+    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
 
     Route::redirect('/getting-started', '/docs/admin/getting-started');
     Route::redirect('/resources', '/docs/admin/resources');

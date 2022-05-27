@@ -10,6 +10,7 @@ use League\CommonMark\Normalizer\SlugNormalizer;
 use Lorisleiva\Lody\Lody;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Sushi\Sushi;
+use Symfony\Component\Finder\SplFileInfo;
 
 class DocumentationPage extends Model
 {
@@ -27,13 +28,23 @@ class DocumentationPage extends Model
         foreach (config('documentation') as $versionNumber => $version) {
             foreach ($version['packages'] as $packageSlug => $package) {
                 foreach (Lody::files($package['path']) as $file) {
+                    /** @var SplFileInfo $file */
+
                     $page = YamlFrontMatter::parseFile($file->getRealPath());
+
+                    $sectionSlug = (string) Str::of($file->getRelativePath())->after('-')->beforeLast('.')->replace('-', ' ');
+                    $section = Str::title($sectionSlug);
+
+                    $slug = Str::of($file->getFilename())->after('-')->beforeLast('.');
+                    $slug = filled($sectionSlug) ? ("{$sectionSlug}/{$slug}") : $slug;
 
                     $pages[] = [
                         'content' => $page->body(),
                         'order' => (string) Str::of($file->getFilename())->before('-'),
                         'package_slug' => $packageSlug,
-                        'slug' => (string) Str::of($file->getFilename())->after('-')->beforeLast('.'),
+                        'section' => filled($section) ? $section : null,
+                        'section_slug' => $sectionSlug,
+                        'slug' => $slug,
                         'title' => $page->matter('title'),
                         'version_id' => $versionNumber,
                     ];
@@ -44,7 +55,7 @@ class DocumentationPage extends Model
         return $pages;
     }
 
-    public function getSections(): array
+    public function getContentSections(): array
     {
         $matches = [];
 
@@ -60,6 +71,19 @@ class DocumentationPage extends Model
         }
 
         return $sections;
+    }
+
+    public function getSectionUrl(): ?string
+    {
+        if (blank($this->section_slug)) {
+            return null;
+        }
+
+        return route('docs', [
+            'versionSlug' => $this->version,
+            'packageSlug' => $this->package_slug,
+            'pageSlug' => $this->section_slug,
+        ]);
     }
 
     public function getUrl(): string

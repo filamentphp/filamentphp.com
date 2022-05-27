@@ -23,7 +23,7 @@
                 class="rounded-full w-12 h-12"
             />
 
-            <span class="font-medium transition group-hover:text-primary-500">
+            <span class="font-medium transition group-hover:text-primary-600">
                 {{ $author }}
             </span>
         </div>
