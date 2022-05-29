@@ -14,14 +14,17 @@ class ListArticlesController extends Controller
         return view('blog.list-articles', [
             'famousArticle' => Article::query()
                 ->published()
+                ->with(['author'])
                 ->orderByDesc('views')
                 ->first(),
             'latestArticle' => Article::query()
                 ->published()
+                ->with(['author'])
                 ->latest()
                 ->first(),
             'randomArticle' => Article::query()
                 ->published()
+                ->with(['author'])
                 ->inRandomOrder()
                 ->first(),
         ]);

@@ -1,6 +1,6 @@
 <x-layouts.app previewify="858" :previewify-data="[
     'title' => 'Filament Tricks',
-    'subtitle' => 'Tricks for Filament created by Filament users',
+    'subtitle' => 'Tricks discovered by Filament users',
 ]">
     <x-header>
         Tricks
@@ -48,7 +48,7 @@
 
             <div class="space-y-2">
                 <h2 class="text-lg font-heading text-gray-900">
-                    👹 Random trick
+                    🎲 Random trick
                 </h2>
 
                 <x-tricks.card :trick="$randomTrick" />

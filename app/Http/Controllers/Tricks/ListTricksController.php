@@ -14,14 +14,17 @@ class ListTricksController extends Controller
         return view('tricks.list-tricks', [
             'famousTrick' => Trick::query()
                 ->published()
+                ->with(['author'])
                 ->orderByDesc('favorites')
                 ->first(),
             'latestTrick' => Trick::query()
                 ->published()
+                ->with(['author'])
                 ->latest()
                 ->first(),
             'randomTrick' => Trick::query()
                 ->published()
+                ->with(['author'])
                 ->inRandomOrder()
                 ->first(),
         ]);

@@ -1,6 +1,6 @@
 <x-layouts.app previewify="858" :previewify-data="[
-    'title' => 'Filament Articles',
-    'subtitle' => 'Articles for Filament created by Filament users',
+    'title' => 'Filament Blog',
+    'subtitle' => 'Articles written by Filament users',
 ]">
     <x-header>
         Blog
@@ -29,33 +29,33 @@
     </x-header>
 
     <x-section>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div class="space-y-2">
-                <h2 class="text-lg font-heading text-gray-900">
-                    ⭐️ Famous article
-                </h2>
+{{--        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">--}}
+{{--            <div class="space-y-2">--}}
+{{--                <h2 class="text-lg font-heading text-gray-900">--}}
+{{--                    ⭐️ Famous article--}}
+{{--                </h2>--}}
 
-                <x-articles.card :article="$famousArticle" />
-            </div>
+{{--                <x-articles.card :article="$famousArticle" />--}}
+{{--            </div>--}}
 
-            <div class="space-y-2">
-                <h2 class="text-lg font-heading text-gray-900">
-                    🆕 Latest article
-                </h2>
+{{--            <div class="space-y-2">--}}
+{{--                <h2 class="text-lg font-heading text-gray-900">--}}
+{{--                    🆕 Latest article--}}
+{{--                </h2>--}}
 
-                <x-articles.card :article="$latestArticle" />
-            </div>
+{{--                <x-articles.card :article="$latestArticle" />--}}
+{{--            </div>--}}
 
-            <div class="space-y-2">
-                <h2 class="text-lg font-heading text-gray-900">
-                    👹 Random article
-                </h2>
+{{--            <div class="space-y-2">--}}
+{{--                <h2 class="text-lg font-heading text-gray-900">--}}
+{{--                    🎲 Random article--}}
+{{--                </h2>--}}
 
-                <x-articles.card :article="$randomArticle" />
-            </div>
-        </div>
+{{--                <x-articles.card :article="$randomArticle" />--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-        <div aria-hidden="true" class="border-t"></div>
+{{--        <div aria-hidden="true" class="border-t"></div>--}}
 
         @livewire(\App\Http\Livewire\Blog\SearchArticles::class)
     </x-section>

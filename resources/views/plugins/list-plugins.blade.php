@@ -29,6 +29,34 @@
     </x-header>
 
     <x-section>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div class="space-y-2">
+                <h2 class="text-lg font-heading text-gray-900">
+                    ⭐️ Famous plugin
+                </h2>
+
+                <x-plugins.card :plugin="$famousPlugin" />
+            </div>
+
+            <div class="space-y-2">
+                <h2 class="text-lg font-heading text-gray-900">
+                    🆕 Latest plugin
+                </h2>
+
+                <x-plugins.card :plugin="$latestPlugin" />
+            </div>
+
+            <div class="space-y-2">
+                <h2 class="text-lg font-heading text-gray-900">
+                    🎲 Random plugin
+                </h2>
+
+                <x-plugins.card :plugin="$randomPlugin" />
+            </div>
+        </div>
+
+        <div aria-hidden="true" class="border-t"></div>
+
         @livewire(\App\Http\Livewire\Plugins\SearchPlugins::class)
     </x-section>
 
