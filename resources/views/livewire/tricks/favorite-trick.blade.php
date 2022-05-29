@@ -8,7 +8,7 @@
     </span>
 
     <span class="hidden transition group-hover:inline">
-        {{ $trick->isFavorite() ? '😴 Unfavorite this trick' : '🎉 Favorite this trick' }}
+        {{ $trick->isFavorite() ? '😴 Remove from favorites' : '🎉 Favorite this trick' }}
     </span>
 
     <x-heroicon-s-star class="w-3 h-3 text-yellow-500 transition group-hover:hidden" />
