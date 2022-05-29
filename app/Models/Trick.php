@@ -16,6 +16,7 @@ class Trick extends Model
 
     protected $casts = [
         'categories' => 'array',
+        'favorites' => 'integer',
         'status' => TrickStatus::class,
         'views' => 'integer',
     ];
@@ -27,17 +28,17 @@ class Trick extends Model
 
     public function scopeDraft(Builder $query): Builder
     {
-        return $query->where('status', TrickStatus::DRAFT);
+        return $query->where('status', TrickStatus::Draft);
     }
 
     public function scopePending(Builder $query): Builder
     {
-        return $query->where('status', TrickStatus::PENDING);
+        return $query->where('status', TrickStatus::Pending);
     }
 
     public function scopePublished(Builder $query): Builder
     {
-        return $query->where('status', TrickStatus::PUBLISHED);
+        return $query->where('status', TrickStatus::Published);
     }
 
     public function scopeRecent(Builder $query): Builder
@@ -45,19 +46,42 @@ class Trick extends Model
         return $query->orderBy('created_at', 'desc');
     }
 
-    public function getAuthorName(): String
-    {
-        if (filled($this->author_name)) {
-            return $this->author_name;
-        }
-
-        return $this->author->name;
-    }
-
     public function getCategoryLabels(): Collection
     {
         $options = collect(TrickCategory::cases())->mapWithKeys(fn (TrickCategory $category): array => [$category->value => $category->getLabel()]);
 
         return collect($this->categories)->map(fn ($item) => $options[$item]);
+    }
+
+    public function getFavoriteKey(): string
+    {
+        return "tricks.{$this->getKey()}.favorites." . request()->ip();
+    }
+
+    public function isFavorite(): bool
+    {
+        return cache()->has($this->getFavoriteKey());
+    }
+
+    public function toggleFavorite(): void
+    {
+        if (! $this->isFavorite()) {
+            cache()->put($this->getFavoriteKey(), now());
+
+            $this->favorites++;
+            $this->save();
+
+            return;
+        }
+
+        cache()->forget($this->getFavoriteKey());
+
+        $this->favorites--;
+
+        if ($this->favorites < 0) {
+            $this->favorites = 0;
+        }
+
+        $this->save();
     }
 }

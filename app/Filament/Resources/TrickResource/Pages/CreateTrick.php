@@ -25,8 +25,8 @@ class CreateTrick extends CreateRecord
         }
 
         $data['status'] = $this->shouldCreateAsDraft ?
-            TrickStatus::DRAFT :
-            TrickStatus::PENDING;
+            TrickStatus::Draft :
+            TrickStatus::Pending;
 
         $data['author_id'] = auth()->user()->getKey();
 

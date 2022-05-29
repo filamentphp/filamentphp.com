@@ -10,7 +10,7 @@ class ViewTrickController extends Controller
     public function __invoke(Trick $trick)
     {
         seo()
-            ->title("{$trick->name} by {$trick->author->name} - Tricks");
+            ->title("{$trick->title} by {$trick->author->name} - Tricks");
 
         $viewingKey = "tricks.{$trick->getKey()}.views." . request()->ip();
 
@@ -22,6 +22,12 @@ class ViewTrickController extends Controller
         }
 
         return view('tricks.view-trick', [
+            'otherTricks' => Trick::query()
+                ->published()
+                ->inRandomOrder()
+                ->whereNot('id', $trick->id)
+                ->limit(3)
+                ->get(),
             'trick' => $trick,
         ]);
     }

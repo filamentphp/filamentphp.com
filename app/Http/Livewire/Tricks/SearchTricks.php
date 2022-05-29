@@ -15,7 +15,7 @@ class SearchTricks extends Component
 
     public $search = '';
 
-    public $sort = 'recent';
+    public $sort = 'popular';
 
     public $tableRecordsPerPage = 32;
 
@@ -38,8 +38,8 @@ class SearchTricks extends Component
                 filled($this->search),
                 function (Builder $query): Builder {
                     return $query->where(function (Builder $query): Builder {
-                        return $query->where('name', 'like', "%{$this->search}%")
-                            ->orWhere('description', 'like', "%{$this->search}%")
+                        return $query->where('title', 'like', "%{$this->search}%")
+                            ->orWhere('content', 'like', "%{$this->search}%")
                             ->orWhereRelation('author', 'name', 'like', "%{$this->search}%");
                     });
                 },
@@ -56,9 +56,9 @@ class SearchTricks extends Component
                     });
                 }
             )
-            ->when($this->sort === 'popular', fn (Builder $query): Builder => $query->orderByDesc('views'))
+            ->when($this->sort === 'popular', fn (Builder $query): Builder => $query->orderByDesc('favorites'))
             ->when($this->sort === 'recent', fn (Builder $query): Builder => $query->latest())
-            ->when($this->sort === 'alphabetical', fn (Builder $query): Builder => $query->orderBy('name'))
+            ->when($this->sort === 'alphabetical', fn (Builder $query): Builder => $query->orderBy('title'))
             ->with('author')
             ->paginate($this->tableRecordsPerPage);
     }

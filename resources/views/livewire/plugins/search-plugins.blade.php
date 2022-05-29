@@ -69,7 +69,7 @@
     @endphp
 
     @if (count($plugins))
-        <div class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
             @foreach ($plugins as $plugin)
                 <x-plugins.card :plugin="$plugin" />
             @endforeach

@@ -11,11 +11,11 @@ class TrickFactory extends Factory
     public function definition(): array
     {
         return [
-            'description' => $this->faker->text(),
             'author_id' => User::factory(),
-            'name' => $this->faker->word(),
+            'content' => $this->faker->text(),
             'slug' => implode('-', $this->faker->words()),
-            'status' => $this->faker->randomElement([TrickStatus::DRAFT, TrickStatus::PENDING, TrickStatus::PUBLISHED]),
+            'status' => $this->faker->randomElement([TrickStatus::Draft, TrickStatus::Pending, TrickStatus::Published]),
+            'title' => $this->faker->word(),
         ];
     }
 }

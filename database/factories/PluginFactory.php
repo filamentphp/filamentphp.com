@@ -13,11 +13,10 @@ class PluginFactory extends Factory
         return [
             'description' => $this->faker->text(),
             'docs' => $this->faker->text(),
-            'name' => $this->faker->sentence(),
             'author_id' => User::factory(),
             'name' => $this->faker->word(),
             'slug' => implode('-', $this->faker->words()),
-            'status' => $this->faker->randomElement([PluginStatus::DRAFT, PluginStatus::PENDING, PluginStatus::PUBLISHED]),
+            'status' => $this->faker->randomElement([PluginStatus::Draft, PluginStatus::Pending, PluginStatus::Published]),
         ];
     }
 }

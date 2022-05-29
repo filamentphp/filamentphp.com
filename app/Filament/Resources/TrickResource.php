@@ -21,13 +21,13 @@ class TrickResource extends Resource
     protected static ?string $model = Trick::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-lightning-bolt';
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('title')
                     ->reactive()
                     ->afterStateUpdated(function (Page $livewire, Closure $set, ?string $state): void {
                         if ($livewire instanceof Pages\EditTrick) {
@@ -42,7 +42,9 @@ class TrickResource extends Resource
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
-                    ->disabled(fn (?Trick $record) => (! auth()->user()->is_admin) && $record?->status === TrickStatus::PUBLISHED),
+                    ->disabled(fn (?Trick $record) => (! auth()->user()->is_admin) && $record?->status === TrickStatus::Published),
+                Forms\Components\MarkdownEditor::make('content')
+                    ->columnSpan('full'),
                 Forms\Components\MultiSelect::make('categories')
                     ->options(collect(TrickCategory::cases())->mapWithKeys(fn (TrickCategory $category): array => [$category->value => $category->getLabel()]))
                     ->columnSpan('full'),
@@ -50,6 +52,11 @@ class TrickResource extends Resource
                     ->options(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $category): array => [$category->value => $category->getLabel()]))
                     ->visible(auth()->user()->is_admin)
                     ->required(),
+                Forms\Components\TextInput::make('favorites')
+                    ->integer()
+                    ->default(0)
+                    ->required()
+                    ->visible(auth()->user()->is_admin),
                 Forms\Components\TextInput::make('views')
                     ->integer()
                     ->default(0)
@@ -60,8 +67,6 @@ class TrickResource extends Resource
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
                     ->required(),
-                Forms\Components\MarkdownEditor::make('description')
-                    ->columnSpan('full'),
             ]);
     }
 
@@ -69,17 +74,19 @@ class TrickResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->searchable(),
+                Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\BadgeColumn::make('status')
                     ->colors([
-                        'warning' => TrickStatus::PENDING->value,
-                        'success' => TrickStatus::PUBLISHED->value,
+                        'warning' => TrickStatus::Pending->value,
+                        'success' => TrickStatus::Published->value,
                     ])
                     ->enum(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $status): array => [$status->value => $status->getLabel()]))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('author.name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin),
+                Tables\Columns\TextColumn::make('favorites')
+                    ->sortable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $status): array => [$status->value => $status->getLabel()])),

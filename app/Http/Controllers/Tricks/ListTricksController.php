@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Tricks;
 
 use App\Http\Controllers\Controller;
+use App\Models\Trick;
 
 class ListTricksController extends Controller
 {
@@ -10,6 +11,19 @@ class ListTricksController extends Controller
     {
         seo()->title('Tricks');
 
-        return view('tricks.list-tricks');
+        return view('tricks.list-tricks', [
+            'famousTrick' => Trick::query()
+                ->published()
+                ->orderByDesc('favorites')
+                ->first(),
+            'latestTrick' => Trick::query()
+                ->published()
+                ->latest()
+                ->first(),
+            'randomTrick' => Trick::query()
+                ->published()
+                ->inRandomOrder()
+                ->first(),
+        ]);
     }
 }

@@ -31,9 +31,9 @@
                 </label>
 
                 <select
-                        wire:model="sort"
-                        id="sort"
-                        class="text-gray-900 block w-full transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
+                    wire:model="sort"
+                    id="sort"
+                    class="text-gray-900 block w-full transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
                 >
                     <option value="popular">Popular</option>
                     <option value="recent">Recently added</option>
@@ -50,14 +50,14 @@
 
         @foreach (\App\Enums\TrickCategory::cases() as $category)
             <button
-                    type="button"
-                    wire:click="toggleCategoryFilter('{{ $category->value }}')"
-                    wire:loading.class="cursor-wait"
-                    wire:target="toggleCategoryFilter"
-                    @class([
-                        'inline-flex items-center justify-center space-x-1 text-primary-700 bg-primary-500/10 min-h-6 px-2 py-0.5 text-sm font-medium tracking-tight rounded-xl whitespace-normal',
-                        'opacity-50' => count($categoryFilter) && (! in_array($category->value, $categoryFilter)),
-                    ])
+                type="button"
+                wire:click="toggleCategoryFilter('{{ $category->value }}')"
+                wire:loading.class="cursor-wait"
+                wire:target="toggleCategoryFilter"
+                @class([
+                    'inline-flex items-center justify-center space-x-1 text-primary-700 bg-primary-500/10 min-h-6 px-2 py-0.5 text-sm font-medium tracking-tight rounded-xl whitespace-normal',
+                    'opacity-50' => count($categoryFilter) && (! in_array($category->value, $categoryFilter)),
+                ])
             >
                 {{ $category->getLabel() }}
             </button>
@@ -69,22 +69,22 @@
     @endphp
 
     @if (count($tricks))
-        <div class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             @foreach ($tricks as $trick)
                 <x-tricks.card :trick="$trick" />
             @endforeach
         </div>
     @else
         <x-tables::empty-state
-                icon="heroicon-o-x"
-                heading="No tricks found"
-                description="No tricks match your search criteria."
-                class="border rounded-2xl"
+            icon="heroicon-o-x"
+            heading="No tricks found"
+            description="No tricks match your search criteria."
+            class="border rounded-2xl"
         />
     @endif
 
     <x-tables::pagination
-            :paginator="$tricks"
-            :records-per-page-select-options="[16, 32, 48, 64]"
+        :paginator="$tricks"
+        :records-per-page-select-options="[16, 32, 48, 64]"
     />
 </div>

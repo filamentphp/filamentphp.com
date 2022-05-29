@@ -29,6 +29,16 @@ class User extends Authenticatable implements FilamentUser
         'is_admin' => 'boolean',
     ];
 
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class, 'author_id');
+    }
+
+    public function links(): HasMany
+    {
+        return $this->hasMany(Link::class, 'author_id');
+    }
+
     public function plugins(): HasMany
     {
         return $this->hasMany(Plugin::class, 'author_id');

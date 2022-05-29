@@ -62,4 +62,14 @@ Route::prefix('/tricks')->group(function () {
     });
 });
 
+Route::prefix('/blog')->group(function () {
+    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
+
+    Route::name('blog.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', Controllers\Blog\ViewArticleController::class)->name('article');
+        });
+    });
+});
+
 Route::redirect('/login', '/admin/login')->name('login');

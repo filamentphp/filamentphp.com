@@ -6,9 +6,7 @@
 
         <div class="prose max-w-none dark:prose-invert">
             <p>
-                Share helpfull tricks with the community.
-
-                We currently have {{ \App\Models\Trick::query()->published()->count() }} tricks listed on our website, and we'd love to see yours. 🤩
+                Share helpful tricks with the community. We currently have {{ \App\Models\Trick::query()->published()->count() }} tricks listed on our website, and we'd love to see yours. 🤩
             </p>
 
             <p>

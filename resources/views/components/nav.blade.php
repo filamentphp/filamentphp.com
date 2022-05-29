@@ -38,19 +38,28 @@
             Plugins
         </a>
 
+{{--        <a href="{{ route('tricks') }}" @class([--}}
+{{--            'hidden font-medium transition hover:text-primary-500 focus:text-primary-500 lg:block',--}}
+{{--            'text-gray-900' => ! request()->routeIs('tricks*'),--}}
+{{--            'text-primary-600' => request()->routeIs('tricks*'),--}}
+{{--        ])>--}}
+{{--            Tricks--}}
+{{--        </a>--}}
+
+{{--        <a href="{{ route('blog') }}" @class([--}}
+{{--            'hidden font-medium transition hover:text-primary-500 focus:text-primary-500 lg:block',--}}
+{{--            'text-gray-900' => ! request()->routeIs('blog*'),--}}
+{{--            'text-primary-600' => request()->routeIs('blog*'),--}}
+{{--        ])>--}}
+{{--            Blog--}}
+{{--        </a>--}}
+
         <a href="{{ route('links') }}" @class([
             'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
             'text-gray-900' => ! request()->routeIs('links*'),
             'text-primary-600' => request()->routeIs('links*'),
         ])>
             Links
-        </a>
-
-        <a href="{{ route('tricks') }}" @class([
-            'hidden font-medium text-gray-900 transition hover:text-primary-500 focus:text-primary-500 lg:block',
-            'text-primary-600' => request()->routeIs('tricks*'),
-        ])>
-            Tricks
         </a>
 
         <a

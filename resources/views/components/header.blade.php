@@ -11,7 +11,7 @@
             </h1>
 
             @if ($subheading)
-                <h2 class="text-2xl text-center text-primary-600">
+                <h2 class="max-w-lg leading-7 text-primary-700 mx-auto text-center">
                     {{ $subheading }}
                 </h2>
             @endif

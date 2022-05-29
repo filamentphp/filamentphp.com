@@ -27,7 +27,7 @@ class LinkResource extends Resource
     protected static ?string $model = Link::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-link';
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {
@@ -103,8 +103,8 @@ class LinkResource extends Resource
                     ->searchable(),
                 Tables\Columns\BadgeColumn::make('status')
                     ->colors([
-                        'warning' => LinkStatus::PENDING->value,
-                        'success' => LinkStatus::PUBLISHED->value,
+                        'warning' => LinkStatus::Pending->value,
+                        'success' => LinkStatus::Published->value,
                     ])
                     ->enum(collect(LinkStatus::cases())->mapWithKeys(fn (LinkStatus $status): array => [$status->value => $status->getLabel()]))
                     ->sortable(),

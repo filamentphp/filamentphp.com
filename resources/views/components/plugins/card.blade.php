@@ -26,14 +26,14 @@
                                 $stars = $plugin->getGitHubStars();
                             @endphp
 
-                                {{ $stars }}
+                            {{ $stars ?: 0 }}
 
                             <x-heroicon-s-star class="w-3 h-3 text-yellow-500" />
                         </span>
                     @endif
 
                     <span class="text-xs inline-flex items-center gap-1">
-                        {{ $plugin->views }}
+                        {{ $plugin->views ?: 0 }}
 
                         <x-heroicon-s-eye class="w-3 h-3 text-gray-500" />
                     </span>

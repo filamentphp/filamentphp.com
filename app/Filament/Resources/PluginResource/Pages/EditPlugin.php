@@ -28,11 +28,11 @@ class EditPlugin extends EditRecord
         }
 
         if ($this->shouldSaveAsDraft) {
-            $data['status'] = PluginStatus::DRAFT;
+            $data['status'] = PluginStatus::Draft;
         }
 
         if ($this->shouldSaveAsPending) {
-            $data['status'] = PluginStatus::PENDING;
+            $data['status'] = PluginStatus::Pending;
         }
 
         return $data;
@@ -61,7 +61,7 @@ class EditPlugin extends EditRecord
                 $this->save();
             })
             ->color('secondary')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === PluginStatus::PENDING);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === PluginStatus::Pending);
     }
 
     protected function getSaveAsPendingFormAction(): Action
@@ -74,7 +74,7 @@ class EditPlugin extends EditRecord
                 $this->save();
             })
             ->color('success')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === PluginStatus::DRAFT);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === PluginStatus::Draft);
     }
 
     protected function getFormActions(): array

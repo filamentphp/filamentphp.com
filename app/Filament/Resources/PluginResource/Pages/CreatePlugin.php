@@ -26,8 +26,8 @@ class CreatePlugin extends CreateRecord
         }
 
         $data['status'] = $this->shouldCreateAsDraft ?
-            PluginStatus::DRAFT :
-            PluginStatus::PENDING;
+            PluginStatus::Draft :
+            PluginStatus::Pending;
 
         $data['author_id'] = auth()->user()->getKey();
 

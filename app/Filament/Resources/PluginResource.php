@@ -47,7 +47,7 @@ class PluginResource extends Resource
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
-                    ->disabled(fn (?Plugin $record) => (! auth()->user()->is_admin) && $record?->status === PluginStatus::PUBLISHED),
+                    ->disabled(fn (?Plugin $record) => (! auth()->user()->is_admin) && $record?->status === PluginStatus::Published),
                 Forms\Components\Toggle::make('is_paid')
                     ->label('Paid plugin')
                     ->reactive()
@@ -135,7 +135,7 @@ class PluginResource extends Resource
                                 Forms\Components\Select::make('license')
                                     ->options(collect(PluginLicense::cases())->mapWithKeys(fn (PluginLicense $license): array => [$license->value => $license->getLabel()]))
                                     ->reactive()
-                                    ->default(PluginLicense::MIT->value),
+                                    ->default(PluginLicense::Mit->value),
                                 Forms\Components\TextInput::make('license_url')->label('URL'),
                             ])
                             ->columns(2),
@@ -151,8 +151,8 @@ class PluginResource extends Resource
                 Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\BadgeColumn::make('status')
                     ->colors([
-                        'warning' => PluginStatus::PENDING->value,
-                        'success' => PluginStatus::PUBLISHED->value,
+                        'warning' => PluginStatus::Pending->value,
+                        'success' => PluginStatus::Published->value,
                     ])
                     ->enum(collect(PluginStatus::cases())->mapWithKeys(fn (PluginStatus $status): array => [$status->value => $status->getLabel()]))
                     ->sortable(),

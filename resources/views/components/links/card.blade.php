@@ -20,7 +20,7 @@
                 </h3>
 
                 <span class="mt-1 shrink-0 text-xs inline-flex items-center gap-1">
-                    {{ $link->views }}
+                    {{ $link->views ?: 0 }}
 
                     <x-heroicon-s-eye class="w-3 h-3 text-gray-500" />
                 </span>

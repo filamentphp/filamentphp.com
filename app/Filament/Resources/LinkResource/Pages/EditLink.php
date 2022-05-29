@@ -29,11 +29,11 @@ class EditLink extends EditRecord
         }
 
         if ($this->shouldSaveAsDraft) {
-            $data['status'] = LinkStatus::DRAFT;
+            $data['status'] = LinkStatus::Draft;
         }
 
         if ($this->shouldSaveAsPending) {
-            $data['status'] = LinkStatus::PENDING;
+            $data['status'] = LinkStatus::Pending;
         }
 
         return $data;
@@ -62,7 +62,7 @@ class EditLink extends EditRecord
                 $this->save();
             })
             ->color('secondary')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === LinkStatus::PENDING);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === LinkStatus::Pending);
     }
 
     protected function getSaveAsPendingFormAction(): Action
@@ -75,7 +75,7 @@ class EditLink extends EditRecord
                 $this->save();
             })
             ->color('success')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === LinkStatus::DRAFT);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === LinkStatus::Draft);
     }
 
     protected function getFormActions(): array

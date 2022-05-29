@@ -12,10 +12,11 @@ class CreateTricksTable extends Migration
             $table->id();
             $table->foreignId('author_id')->nullable()->constrained('users')->nullOnDelete();
             $table->json('categories')->nullable();
-            $table->longText('description')->nullable();
-            $table->string('name');
+            $table->longText('content')->nullable();
+            $table->unsignedBigInteger('favorites')->default(0);
             $table->string('slug')->nullable();
             $table->string('status');
+            $table->string('title');
             $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });

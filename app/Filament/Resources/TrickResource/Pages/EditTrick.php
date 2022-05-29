@@ -28,11 +28,11 @@ class EditTrick extends EditRecord
         }
 
         if ($this->shouldSaveAsDraft) {
-            $data['status'] = TrickStatus::DRAFT;
+            $data['status'] = TrickStatus::Draft;
         }
 
         if ($this->shouldSaveAsPending) {
-            $data['status'] = TrickStatus::PENDING;
+            $data['status'] = TrickStatus::Pending;
         }
 
         return $data;
@@ -61,7 +61,7 @@ class EditTrick extends EditRecord
                 $this->save();
             })
             ->color('secondary')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === TrickStatus::PENDING);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === TrickStatus::Pending);
     }
 
     protected function getSaveAsPendingFormAction(): Action
@@ -74,7 +74,7 @@ class EditTrick extends EditRecord
                 $this->save();
             })
             ->color('success')
-            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === TrickStatus::DRAFT);
+            ->visible(fn (): bool => (! auth()->user()->is_admin) && $this->record->status === TrickStatus::Draft);
     }
 
     protected function getFormActions(): array

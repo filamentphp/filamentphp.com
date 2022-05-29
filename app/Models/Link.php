@@ -30,17 +30,17 @@ class Link extends Model implements HasMedia
 
     public function scopeDraft(Builder $query): Builder
     {
-        return $query->where('status', LinkStatus::DRAFT);
+        return $query->where('status', LinkStatus::Draft);
     }
 
     public function scopePending(Builder $query): Builder
     {
-        return $query->where('status', LinkStatus::PENDING);
+        return $query->where('status', LinkStatus::Pending);
     }
 
     public function scopePublished(Builder $query): Builder
     {
-        return $query->where('status', LinkStatus::PUBLISHED);
+        return $query->where('status', LinkStatus::Published);
     }
 
     public function getThumbnailUrl(): string

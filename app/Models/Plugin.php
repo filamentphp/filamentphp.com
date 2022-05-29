@@ -33,17 +33,17 @@ class Plugin extends Model implements HasMedia
 
     public function scopeDraft(Builder $query): Builder
     {
-        return $query->where('status', PluginStatus::DRAFT);
+        return $query->where('status', PluginStatus::Draft);
     }
 
     public function scopePending(Builder $query): Builder
     {
-        return $query->where('status', PluginStatus::PENDING);
+        return $query->where('status', PluginStatus::Pending);
     }
 
     public function scopePublished(Builder $query): Builder
     {
-        return $query->where('status', PluginStatus::PUBLISHED);
+        return $query->where('status', PluginStatus::Published);
     }
 
     public function getThumbnailUrl(): string

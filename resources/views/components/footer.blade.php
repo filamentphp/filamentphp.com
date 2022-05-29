@@ -5,6 +5,8 @@
                 route('home') => 'Home',
                 route('docs') => 'Docs',
                 route('plugins') => 'Plugins',
+{{--                route('tricks') => 'Tricks',--}}
+{{--                route('blog') => 'Blog',--}}
                 route('links') => 'Links',
                 'https://github.com/laravel-filament/filament/discussions/new' => 'Help',
                 'https://github.com/sponsors/danharrin' => 'Sponsor',

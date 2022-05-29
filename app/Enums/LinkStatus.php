@@ -4,9 +4,9 @@ namespace App\Enums;
 
 enum LinkStatus: string
 {
-    case DRAFT = 'draft';
-    case PENDING = 'pending';
-    case PUBLISHED = 'published';
+    case Draft = 'draft';
+    case Pending = 'pending';
+    case Published = 'published';
 
     public function getLabel(): string
     {

@@ -26,8 +26,8 @@ class CreateLink extends CreateRecord
         }
 
         $data['status'] = $this->shouldCreateAsDraft ?
-            LinkStatus::DRAFT :
-            LinkStatus::PENDING;
+            LinkStatus::Draft :
+            LinkStatus::Pending;
 
         $data['author_id'] = auth()->user()->getKey();
 

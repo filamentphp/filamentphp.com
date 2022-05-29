@@ -2,19 +2,15 @@
     'title' => 'Filament Plugins',
     'subtitle' => 'Composer packages made by our community, giving you access to awesome new features.',
 ]">
-    <div class="bg-primary-300">
-        <div class="relative max-w-8xl px-8 py-24 mx-auto">
-            <div class="space-y-4">
-                <h1 class="text-4xl text-center font-heading">
-                    Plugins
-                </h1>
+    <x-header>
+        Plugins
 
-                <p class="max-w-lg leading-7 text-primary-700 mx-auto text-center">
-                    Composer packages made by our community for Filament projects, giving you access to awesome new features.
-                </p>
-            </div>
+        <x-slot name="subheading">
+            Composer packages made by our community for Filament projects, giving you access to awesome new features.
+        </x-slot>
 
-            <div class="hidden absolute inset-y-0 items-center left-32 md:flex">
+        <x-slot name="doodles">
+            <div class="hidden absolute inset-y-0 items-center left-32 lg:flex">
                 <img
                     src="{{ asset('images/bolt.svg') }}"
                     alt="Lightning bolt"
@@ -22,15 +18,15 @@
                 />
             </div>
 
-            <div class="hidden absolute inset-y-0 items-center right-24 md:flex">
+            <div class="hidden absolute inset-y-0 items-center right-24 lg:flex">
                 <img
                     src="{{ asset('images/unicorn.svg') }}"
                     alt="Unicorn"
                     class="h-[10rem]"
                 />
             </div>
-        </div>
-    </div>
+        </x-slot>
+    </x-header>
 
     <x-section>
         @livewire(\App\Http\Livewire\Plugins\SearchPlugins::class)

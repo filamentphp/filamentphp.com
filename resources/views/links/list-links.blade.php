@@ -4,9 +4,31 @@
 ]">
     <x-header>
         Community Links
+
+        <x-slot name="subheading">
+            Blog posts, videos, projects, and other resources from the community.
+        </x-slot>
+
+        <x-slot name="doodles">
+            <div class="hidden absolute inset-y-0 items-center left-6 bottom-8 lg:flex">
+                <img
+                    src="{{ asset('images/cat.svg') }}"
+                    alt="Cat"
+                    class="h-[10rem] rotate-12"
+                />
+            </div>
+
+            <div class="hidden absolute inset-y-0 items-center right-24 lg:flex">
+                <img
+                    src="{{ asset('images/hashtag.svg') }}"
+                    alt="Hashtag"
+                    class="h-[7rem]"
+                />
+            </div>
+        </x-slot>
     </x-header>
 
-    <x-section id="all-links">
+    <x-section>
         @livewire(\App\Http\Livewire\Links\SearchLinks::class)
     </x-section>
 
