@@ -12,6 +12,22 @@ class ListLinksController extends Controller
     {
         seo()->title('Links');
 
-        return view('links.list-links');
+        return view('links.list-links', [
+            'famousLink' => Link::query()
+                ->published()
+                ->with(['author', 'media'])
+                ->orderByDesc('views')
+                ->first(),
+            'latestLink' => Link::query()
+                ->published()
+                ->with(['author', 'media'])
+                ->latest()
+                ->first(),
+            'randomLink' => Link::query()
+                ->published()
+                ->with(['author', 'media'])
+                ->inRandomOrder()
+                ->first(),
+        ]);
     }
 }

@@ -9,6 +9,8 @@ class ViewArticleController extends Controller
 {
     public function __invoke(Article $article)
     {
+        $article->load(['author']);
+
         seo()
             ->title("{$article->title} by {$article->author->name} - Articles");
 

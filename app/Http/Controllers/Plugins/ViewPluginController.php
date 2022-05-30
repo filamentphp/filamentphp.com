@@ -11,6 +11,8 @@ class ViewPluginController extends Controller
 {
     public function __invoke(Plugin $plugin)
     {
+        $plugin->load(['author']);
+
         seo()
             ->title("{$plugin->name} by {$plugin->author->name} - Plugins")
             ->description($plugin->description ?? '')

@@ -9,6 +9,8 @@ class ViewTrickController extends Controller
 {
     public function __invoke(Trick $trick)
     {
+        $trick->load(['author']);
+
         seo()
             ->title("{$trick->title} by {$trick->author->name} - Tricks");
 
