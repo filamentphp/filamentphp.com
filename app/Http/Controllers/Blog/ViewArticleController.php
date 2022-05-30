@@ -12,7 +12,7 @@ class ViewArticleController extends Controller
         $article->load(['author']);
 
         seo()
-            ->title("{$article->title} by {$article->author->name} - Articles");
+            ->title("{$article->title} by {$article->author->name} - Blog");
 
         $viewingKey = "articles.{$article->getKey()}.views." . request()->ip();
 
