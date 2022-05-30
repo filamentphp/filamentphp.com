@@ -4,7 +4,7 @@
     class="group inline-flex items-center gap-1 transition hover:font-medium hover:scale-105"
 >
     <span class="transition group-hover:hidden">
-        {{ $trick->favorites ?: 0 }} {{ str('favorites')->plural($trick->favorites) }}
+        {{ $trick->favorites ?: 0 }} {{ str('favorite')->plural($trick->favorites) }}
     </span>
 
     <span class="hidden transition group-hover:inline">
