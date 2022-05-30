@@ -27,6 +27,7 @@ class ViewArticleController extends Controller
             'article' => $article,
             'otherArticles' => Article::query()
                 ->published()
+                ->with(['author'])
                 ->inRandomOrder()
                 ->whereNot('id', $article->id)
                 ->limit(3)

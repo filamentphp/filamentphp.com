@@ -26,6 +26,7 @@ class ViewTrickController extends Controller
         return view('tricks.view-trick', [
             'otherTricks' => Trick::query()
                 ->published()
+                ->with(['author'])
                 ->inRandomOrder()
                 ->whereNot('id', $trick->id)
                 ->limit(3)
