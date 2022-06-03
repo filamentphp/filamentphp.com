@@ -29,8 +29,8 @@
             @foreach ([
                 route('docs') => 'Documentation',
                 route('plugins') => 'Plugins',
-{{--                route('tricks') => 'Tricks',--}}
-{{--                route('blog') => 'Blog',--}}
+                route('tricks') => 'Tricks',
+                route('blog') => 'Blog',
                 route('links') => 'Links',
             ] as $url => $label)
                 <li>

@@ -33,6 +33,8 @@
         "lorisleiva/lody": "^0.3.0",
         "pxlrbt/filament-spotlight": "^0.2.0",
         "ryangjchandler/blade-capture-directive": "^0.2.0",
+        "spatie/laravel-comments": "^1.0",
+        "spatie/laravel-comments-livewire": "^1.0",
         "spatie/laravel-google-fonts": "^1.0",
         "spatie/laravel-ignition": "^1.0",
         "spatie/laravel-medialibrary": "^10.3",
@@ -90,5 +92,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.spatie.be"
+        }
+    ]
 }

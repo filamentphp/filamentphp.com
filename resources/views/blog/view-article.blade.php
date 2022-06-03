@@ -1,22 +1,55 @@
 <x-layouts.app previewify="900" :previewify-data="[
     'title' => $article->title,
     'author' => $article->author->name,
-    'categories' => collect($article->categories)->map(fn (string $category): string => \App\Enums\ArticleCategory::tryFrom($category)?->getLabel())->implode(', '),
-    'date' => $article->created_at->toFormattedDateString(),
+    'categories' => $articleCategories = collect($article->categories)->map(fn (string $category): string => \App\Enums\ArticleCategory::tryFrom($category)?->getLabel())->implode(', '),
+    'date' => $articleDate = $article->created_at->toFormattedDateString(),
 ]">
     <x-section>
         <div class="max-w-4xl mx-auto">
-{{--            <div class="text-sm text-gray-700">--}}
-{{--                <a href="{{ route('blog') }}">--}}
-{{--                    &larr; Back to Blog--}}
-{{--                </a>--}}
-{{--            </div>--}}
-
             <div class="mt-6">
+                <div class="space-y-4">
+                    <a href="{{ route('blog') }}" class="block text-xs font-heading font-bold tracking-wider uppercase text-primary-600">
+                        Blog
+                    </a>
 
-                <img src="https://previewify.app/generate/templates/900/meta?url={{ url()->current() }}" class="w-full" />
+                    <p class="text-3xl font-heading font-bold tracking-tight text-gray-900">
+                        {{ $article->title }}
+                    </p>
 
-                <div class="mt-8 prose max-w-none">
+                    <dl class="flex flex-wrap font-medium gap-x-6 gap-y-2 items-start text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </dt>
+
+                            <dd>{{ $articleDate }}</dd>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </dt>
+
+                            <dd>{{ $article->author->name }}</dd>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                </svg>
+                            </dt>
+
+                            <dd>{{ $articleCategories }}</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="mt-16 prose max-w-none">
                     @php
                         config()->set('markdown', \Illuminate\Support\Arr::except(config('markdown'), [
                             'heading_permalink',
@@ -61,6 +94,12 @@
 {{--                        @endforeach--}}
 {{--                    </div>--}}
 {{--                </div>--}}
+
+                <div aria-hidden="true" class="mt-8 border-t"></div>
+
+                <div class="mt-8">
+                    @livewire('comments', ['model' => $article])
+                </div>
             </div>
         </div>
     </x-section>

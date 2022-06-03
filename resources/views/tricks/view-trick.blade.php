@@ -1,38 +1,48 @@
 <x-layouts.app>
     <x-section>
         <div class="max-w-4xl mx-auto">
-            <div class="text-sm text-gray-700">
-                <a href="{{ route('tricks') }}">
-                    &larr; Back to Tricks
-                </a>
-            </div>
-
             <div class="mt-6">
-                <div class="flex justify-between gap-4">
-                    <h1 class="text-2xl font-heading tracking-tight text-gray-900 sm:text-3xl">
+                <div class="space-y-4">
+                    <a href="{{ route('tricks') }}" class="block text-xs font-heading font-bold tracking-wider uppercase text-primary-600">
+                        Tricks
+                    </a>
+
+                    <p class="text-3xl font-heading font-bold tracking-tight text-gray-900">
                         {{ $trick->title }}
-                    </h1>
+                    </p>
 
-                    @livewire(\App\Http\Livewire\Tricks\FavoriteTrick::class, ['trick' => $trick])
+                    <dl class="flex flex-wrap font-medium gap-x-6 gap-y-2 items-start text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </dt>
+
+                            <dd>{{ $trick->created_at->toFormattedDateString() }}</dd>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </dt>
+
+                            <dd>{{ $trick->author->name }}</dd>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <dt>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                </svg>
+                            </dt>
+
+                            <dd>{{ collect($trick->categories)->map(fn (string $category): string => \App\Enums\TrickCategory::tryFrom($category)?->getLabel())->implode(', ') }}</dd>
+                        </div>
+                    </dl>
                 </div>
-
-                <h2 id="information-heading" class="sr-only">
-                    Trick information
-                </h2>
-
-                <p class="text-sm text-gray-500 mt-2">
-                    by {{ $trick->author->name }}, {{ $trick->created_at->diffForHumans() }}
-                </p>
-
-                @if (count($trick->categories ?? []))
-                    <div class="flex flex-wrap gap-2 mt-4 -mx-2">
-                        @foreach ($trick->categories as $category)
-                            <span class="inline-flex items-center justify-center space-x-1 text-primary-700 bg-primary-500/10 min-h-6 px-2 py-0.5 text-sm font-medium tracking-tight rounded-xl whitespace-normal">
-                            {{ \App\Enums\TrickCategory::tryFrom($category)?->getLabel() }}
-                        </span>
-                        @endforeach
-                    </div>
-                @endif
 
                 <div class="mt-8 prose max-w-none">
                     @php
@@ -78,6 +88,12 @@
                             <x-tricks.card :trick="$otherTrick" />
                         @endforeach
                     </div>
+                </div>
+
+                <div aria-hidden="true" class="mt-8 border-t"></div>
+
+                <div class="mt-8">
+                    @livewire('comments', ['model' => $trick])
                 </div>
             </div>
         </div>

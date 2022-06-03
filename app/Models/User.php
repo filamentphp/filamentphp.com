@@ -11,12 +11,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Comments\Models\Concerns\InteractsWithComments;
+use Spatie\Comments\Models\Concerns\Interfaces\CanComment;
 use Stripe\Account;
 use Stripe\AccountLink;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable implements CanComment, FilamentUser
 {
     use HasFactory;
+    use InteractsWithComments;
     use Notifiable;
 
     protected $hidden = [

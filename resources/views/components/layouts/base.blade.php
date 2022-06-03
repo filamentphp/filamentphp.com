@@ -31,10 +31,12 @@
         <!-- Styles -->
         <style>[x-cloak] { display: none !important; }</style>
         @livewireStyles
+        <x-comments::styles />
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- Scripts -->
         @livewireScripts
+        <x-comments::scripts />
         <script src="{{ mix('js/app.js') }}" defer></script>
         @stack('scripts')
     </head>

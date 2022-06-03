@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a4dd8ce01af3fd8b4228f4742ceb2f4",
+    "content-hash": "10489039c583709644de1ed3000b7e78",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -7155,6 +7155,200 @@
             "time": "2022-02-21T10:39:13+00:00"
         },
         {
+            "name": "spatie/laravel-comments",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:spatie/laravel-comments.git",
+                "reference": "ddb79d4f47920fe551fe65d865249e4fc4a1cc7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://satis.spatie.be/dist/spatie/laravel-comments/spatie-laravel-comments-ddb79d4f47920fe551fe65d865249e4fc4a1cc7c-zip-85c08a.zip",
+                "reference": "ddb79d4f47920fe551fe65d865249e4fc4a1cc7c",
+                "shasum": "080ab6893b477ab6ab9c4ced6ab5d37b2de6a9b4"
+            },
+            "require": {
+                "illuminate/contracts": "^9.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.9.2",
+                "spatie/once": "^3.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.0",
+                "nunomaduro/larastan": "^2.0",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "spatie/laravel-markdown": "^2.1",
+                "spatie/laravel-ray": "^1.26",
+                "spatie/pest-plugin-snapshots": "^1.1"
+            },
+            "suggest": {
+                "spatie/laravel-markdown": "Required to convert markdown to HTML"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Comments\\CommentsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Comments": "Spatie\\Comments\\Facades\\Comments"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Comments\\": "src",
+                    "Spatie\\Comments\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\Comments\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "baseline": [
+                    "vendor/bin/phpstan --generate-baseline"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest coverage"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Associate comments and reactions with Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-comments",
+            "keywords": [
+                "laravel",
+                "laravel-comments",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-comments/tree/1.0.3",
+                "issues": "https://github.com/spatie/laravel-comments/issues"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/spatie"
+                }
+            ],
+            "time": "2022-05-31T06:57:21+00:00"
+        },
+        {
+            "name": "spatie/laravel-comments-livewire",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:spatie/laravel-comments-livewire.git",
+                "reference": "9eb7c6ae0e8490de1ac322d224453eefced0c344"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://satis.spatie.be/dist/spatie/laravel-comments-livewire/spatie-laravel-comments-livewire-9eb7c6ae0e8490de1ac322d224453eefced0c344-zip-fcf4b7.zip",
+                "reference": "9eb7c6ae0e8490de1ac322d224453eefced0c344",
+                "shasum": "15c2e10d2e9763aad95ac9647ec128120a385fff"
+            },
+            "require": {
+                "illuminate/contracts": "^9.0",
+                "livewire/livewire": "^2.8",
+                "php": "^8.1",
+                "spatie/laravel-comments": "^1.0",
+                "spatie/laravel-package-tools": "^1.10.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.0",
+                "nunomaduro/larastan": "^2.0",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "spatie/laravel-markdown": "^2.1",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "suggest": {
+                "spatie/laravel-markdown": "Required to convert markdown to HTML"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\LivewireComments\\LivewireCommentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LivewireComments\\": "src",
+                    "Spatie\\LivewireComments\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\LivewireComments\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Livewire components for laravel-comments",
+            "homepage": "https://github.com/spatie/laravel-comments",
+            "keywords": [
+                "laravel",
+                "laravel-comments",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-comments-livewire/tree/1.0.2"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/spatie"
+                }
+            ],
+            "time": "2022-05-31T06:56:12+00:00"
+        },
+        {
             "name": "spatie/laravel-google-fonts",
             "version": "1.2.0",
             "source": {
@@ -7639,6 +7833,68 @@
                 }
             ],
             "time": "2022-03-07T13:50:51+00:00"
+        },
+        {
+            "name": "spatie/once",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/once.git",
+                "reference": "aab3fc8694e7caec98b2d330c4a8420391c7559d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/once/zipball/aab3fc8694e7caec98b2d330c4a8420391c7559d",
+                "reference": "aab3fc8694e7caec98b2d330c4a8420391c7559d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^1.21",
+                "symfony/var-dumper": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Once\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A magic memoization function",
+            "homepage": "https://github.com/spatie/once",
+            "keywords": [
+                "cache",
+                "callable",
+                "memoization",
+                "once",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/once/tree/3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-04-21T12:23:20+00:00"
         },
         {
             "name": "spatie/temporary-directory",

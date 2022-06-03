@@ -9,9 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
+use Spatie\Comments\Models\Concerns\HasComments;
 
 class Trick extends Model
 {
+    use HasComments;
     use HasFactory;
 
     protected $casts = [
@@ -83,5 +85,15 @@ class Trick extends Model
         }
 
         $this->save();
+    }
+
+    public function commentableName(): string
+    {
+        return "{$this->title} by {$this->author->name}";
+    }
+
+    public function commentUrl(): string
+    {
+        return route('tricks', ['trick' => $this]);
     }
 }

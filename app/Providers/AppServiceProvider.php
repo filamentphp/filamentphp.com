@@ -2,10 +2,16 @@
 
 namespace App\Providers;
 
+use App\Models\Article;
+use App\Models\Plugin;
+use App\Models\Trick;
+use App\Models\User;
 use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+use phpDocumentor\Reflection\DocBlock\Tags\Link;
 use Stripe\Stripe;
 use Stripe\StripeClient;
 
