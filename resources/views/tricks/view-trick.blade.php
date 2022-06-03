@@ -35,6 +35,34 @@
                 @endif
 
                 <div class="mt-8 prose max-w-none">
+                    @php
+                        config()->set('markdown', \Illuminate\Support\Arr::except(config('markdown'), [
+                            'heading_permalink',
+                            'table_of_contents',
+                        ]));
+
+                        app()->singleton('markdown.environment', function (\Illuminate\Contracts\Container\Container $app): \League\CommonMark\Environment\Environment {
+                            $config = config()->get('markdown');
+
+                            $environment = new \League\CommonMark\Environment\Environment(\Illuminate\Support\Arr::except($config, ['extensions', 'views']));
+
+                            collect($config['extensions'])
+                                ->reject(fn (string $extension): bool => in_array($extension, [
+                                    \League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
+                                    \League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class
+                                ]))
+                                ->each(fn (string $extension) => $environment->addExtension(app($extension)));
+
+                            return $environment;
+                        });
+
+                        app()->singleton('markdown.converter', function (\Illuminate\Contracts\Container\Container $app): \League\CommonMark\MarkdownConverter {
+                            $environment = app('markdown.environment');
+
+                            return new \League\CommonMark\MarkdownConverter($environment);
+                        });
+                    @endphp
+
                     @markdown($trick->content)
                 </div>
 
