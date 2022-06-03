@@ -35,15 +35,7 @@
 {{--                    </div>--}}
 {{--                @endif--}}
 
-                <img src="{{ app(\Flowframe\Previewify\Previewify::class)->signedImageUrl(
-                    templateId: 900,
-                    fields: [
-                        'title' => $article->title,
-                        'author' => $article->author->name,
-                        'categories' => collect($article->categories)->map(fn (string $category): string => \App\Enums\ArticleCategory::tryFrom($category)?->getLabel())->implode(', '),
-                        'date' => $article->created_at->toFormattedDateString(),
-                    ],
-                ) }}" class="w-full" />
+                <img src="https://previewify.app/generate/templates/900/meta?url={{ url()->current() }}" class="w-full" />
 
                 <div class="mt-8 prose max-w-none">
                     @php
