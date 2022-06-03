@@ -9,9 +9,7 @@ class ListArticlesController extends Controller
 {
     public function __invoke()
     {
-        return redirect()->route('blog.article', [
-            'article' => Article::query()->first(),
-        ]);
+        return redirect()->route(Article::query()->first()->getUrl());
 
         seo()->title('Blog');
 

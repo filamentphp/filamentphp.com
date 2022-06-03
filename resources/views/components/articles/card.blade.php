@@ -3,7 +3,7 @@
 ])
 
 <div class="block relative group transition hover:scale-105 hover:-rotate-1">
-    <a href="{{ route('blog.article', ['article' => $article]) }}" class="block">
+    <a href="{{ $article->getUrl() }}" class="block">
         <div class="border shadow rounded-2xl p-5 space-y-2">
             <div class="space-y-1">
                 <h3 class="text-base font-medium text-gray-900">

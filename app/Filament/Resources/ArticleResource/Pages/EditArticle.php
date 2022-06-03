@@ -106,6 +106,6 @@ class EditArticle extends EditRecord
         return parent::getViewAction()
             ->label('Preview on our website')
             ->openUrlInNewTab()
-            ->url(route('blog.article', ['article' => $this->record]));
+            ->url($this->record->getUrl());
     }
 }

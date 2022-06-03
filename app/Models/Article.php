@@ -11,9 +11,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Spatie\Comments\Models\Concerns\HasComments;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class Article extends Model
+class Article extends Model implements Feedable
 {
     use HasComments;
     use HasFactory;
@@ -64,6 +67,29 @@ class Article extends Model
 
     public function commentUrl(): string
     {
+        return $this->getUrl();
+    }
+
+    public function getUrl(): string
+    {
         return route('blog.article', ['article' => $this]);
+    }
+
+    public static function getFeedItems()
+    {
+        return Article::all();
+    }
+
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->authorEmail($this->author->email)
+            ->authorName($this->author->name)
+            ->category(...collect($this->categories)->map(fn (string $category): string => ArticleCategory::tryFrom($category)?->getLabel())->toArray())
+            ->link($this->getUrl())
+            ->summary(str($this->content)->limit())
+            ->title($this->title)
+            ->updated($this->updated_at);
     }
 }

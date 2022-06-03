@@ -62,6 +62,8 @@ Route::prefix('/tricks')->group(function () {
     });
 });
 
+Route::feeds();
+
 Route::prefix('/blog')->group(function () {
     Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
 
