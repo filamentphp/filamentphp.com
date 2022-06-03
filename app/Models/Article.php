@@ -64,6 +64,6 @@ class Article extends Model
 
     public function commentUrl(): string
     {
-        return route('tricks', ['trick' => $this]);
+        return route('blog.article', ['article' => $this]);
     }
 }
