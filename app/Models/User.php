@@ -16,7 +16,7 @@ use Spatie\Comments\Models\Concerns\Interfaces\CanComment;
 use Stripe\Account;
 use Stripe\AccountLink;
 
-class User extends Authenticatable implements CanComment, FilamentUser
+class User extends Authenticatable implements CanComment, FilamentUser, MustVerifyEmail
 {
     use HasFactory;
     use InteractsWithComments;
@@ -55,12 +55,5 @@ class User extends Authenticatable implements CanComment, FilamentUser
     public function canAccessFilament(): bool
     {
         return true;
-    }
-
-    protected static function booted(): void
-    {
-        static::creating(function (User $user): void {
-            $user->email_verified_at = now();
-        });
     }
 }

@@ -260,7 +260,7 @@ return [
     'middleware' => [
         'auth' => [
             Authenticate::class,
-//            EnsureEmailIsVerified::class,
+            EnsureEmailIsVerified::class,
         ],
         'base' => [
             EncryptCookies::class,
