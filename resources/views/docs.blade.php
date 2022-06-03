@@ -179,7 +179,7 @@
                         <img
                             src="https://user-images.githubusercontent.com/41773797/171833049-69fa5cbb-988e-4472-bcaf-4754dbade77d.png"
                             alt="EgoTrace"
-                            class="block rounded-xl"
+                            class="block"
                         />
                     </a>
 
