@@ -41,6 +41,8 @@
 
                             <dd>{{ collect($trick->categories)->map(fn (string $category): string => \App\Enums\TrickCategory::tryFrom($category)?->getLabel())->implode(', ') }}</dd>
                         </div>
+
+                        @livewire(\App\Http\Livewire\Tricks\FavoriteTrick::class, ['trick' => $trick])
                     </dl>
                 </div>
 

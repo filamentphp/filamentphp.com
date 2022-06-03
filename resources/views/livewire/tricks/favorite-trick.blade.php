@@ -1,15 +1,24 @@
 <button
     wire:click="toggleFavorite"
     type="button"
-    class="group inline-flex items-center gap-1 transition hover:font-medium hover:scale-105"
+    class="group flex items-center gap-2"
 >
-    <span class="transition group-hover:hidden">
-        {{ $trick->favorites ?: 0 }} {{ str('favorite')->plural($trick->favorites) }}
-    </span>
+    <dt>
+        <x-heroicon-o-star class="w-5 h-5 text-yellow-500" />
+    </dt>
 
-    <span class="hidden transition group-hover:inline">
-        {{ $trick->isFavorite() ? '😴 Remove from favorites' : '🎉 Favorite this trick' }}
-    </span>
+    <dd class="font-medium">
+        <span class="group-hover:hidden">
+            {{ $trick->favorites ?: 0 }} {{ str('favorite')->plural($trick->favorites) }}
+        </span>
 
-    <x-heroicon-s-star class="w-3 h-3 text-yellow-500 transition group-hover:hidden" />
+        <span
+            @class([
+                'hidden group-hover:inline group-hover:underline',
+                'text-danger-600' => $trick->isFavorite(),
+            ])
+        >
+            {{ $trick->isFavorite() ? 'Remove from favorites' : 'Favorite this trick' }}
+        </span>
+    </dd>
 </button>
