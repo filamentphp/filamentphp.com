@@ -1,4 +1,11 @@
-<footer {{ $attributes->class(['bg-gray-50']) }}>
+@props([
+    'darkMode' => false,
+])
+
+<footer {{ $attributes->class([
+    'bg-gray-50',
+    'dark:bg-gray-900' => $darkMode,
+]) }}>
     <div class="max-w-8xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 space-y-8">
         <nav class="-mx-5 -my-2 flex flex-wrap gap-x-16 gap-y-2 justify-center">
             @foreach ([
@@ -12,7 +19,10 @@
                 'https://github.com/sponsors/danharrin' => 'Sponsor',
             ] as $url => $label)
                 <div class="px-2">
-                    <a href="{{ $url }}" class="text-base text-gray-600 transition hover:text-primary-600">
+                    <a href="{{ $url }}" @class([
+                        'text-base text-gray-600 transition hover:text-primary-600',
+                        'dark:text-gray-400 dark:hover:text-primary-400' => $darkMode,
+                    ])>
                         {{ $label }}
                     </a>
                 </div>
@@ -20,7 +30,10 @@
         </nav>
 
         <div class="flex justify-center space-x-6">
-            <a href="https://twitter.com/filamentphp" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
+            <a href="https://twitter.com/filamentphp" target="_blank" @class([
+                'text-gray-600 transition hover:text-primary-600 flex items-center',
+                'dark:text-gray-400 dark:hover:text-primary-400' => $darkMode,
+            ])>
                 <span class="sr-only">Twitter</span>
 
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -28,7 +41,10 @@
                 </svg>
             </a>
 
-            <a href="https://github.com/laravel-filament/filament" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
+            <a href="https://github.com/laravel-filament/filament" target="_blank" @class([
+                'text-gray-600 transition hover:text-primary-600 flex items-center',
+                'dark:text-gray-400 dark:hover:text-primary-400' => $darkMode,
+            ])>
                 <span class="sr-only">GitHub</span>
 
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -36,7 +52,10 @@
                 </svg>
             </a>
 
-            <a href="{{ route('discord') }}" target="_blank" class="text-gray-500 transition hover:text-primary-600 flex items-center">
+            <a href="{{ route('discord') }}" target="_blank" @class([
+                'text-gray-600 transition hover:text-primary-600 flex items-center',
+                'dark:text-gray-400 dark:hover:text-primary-400' => $darkMode,
+            ])>
                 <span class="sr-only">Discord</span>
 
                 <svg class="w-6" fill="none" viewBox="0 0 71 55" aria-hidden="true">
@@ -47,7 +66,10 @@
             </a>
         </div>
 
-        <div class="text-center text-base text-gray-500 space-y-2">
+        <div @class([
+            'text-center text-base text-gray-600 space-y-2',
+            'dark:text-gray-400' => $darkMode,
+        ])>
             <p>
                 &copy; {{ date('Y') }} Filament. All rights reserved.
             </p>
@@ -60,7 +82,10 @@
                 <a
                     href="https://torchlight.dev"
                     target="_blank"
-                    class="hover:text-primary-600"
+                    @class([
+                        'hover:text-primary-600',
+                        'dark:hover:text-primary-400' => $darkMode,
+                    ])
                 >
                     Torchlight
                 </a>.

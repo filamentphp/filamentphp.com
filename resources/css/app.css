@@ -11,10 +11,11 @@
 }
 
 .DocSearch-Button {
-    width: 100%;
-    margin: 0;
-    background-color: white;
-    border-radius: 0.5rem;
+    @apply w-full m-0 bg-white dark:text-gray-300 dark:bg-gray-800 dark:hover:text-gray-300 dark:hover:bg-gray-800 rounded-lg;
+}
+
+.DocSearch-Search-Icon {
+    @apply dark:text-gray-500 !important;
 }
 
 .prose iframe {

@@ -1,4 +1,5 @@
 @props([
+    'darkMode' => false,
     'previewify' => null,
     'previewifyData' => [],
 ])
@@ -41,7 +42,10 @@
         @stack('scripts')
     </head>
 
-    <body class="antialiased font-sans text-gray-900">
+    <body @class([
+        'antialiased font-sans text-gray-900',
+        'dark:text-white dark:bg-gray-900' => $darkMode,
+    ])>
         {{ $slot }}
     </body>
 </html>

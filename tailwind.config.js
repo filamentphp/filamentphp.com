@@ -49,6 +49,18 @@ module.exports = {
                         },
                     },
                 },
+                invert: {
+                    css: {
+                        a: {
+                            '&:hover': {
+                                color: theme('colors.primary.500'),
+                            },
+                            '&:focus': {
+                                color: theme('colors.primary.500'),
+                            },
+                        },
+                    },
+                },
             }),
             zIndex: {
                 '-1': '-1',
