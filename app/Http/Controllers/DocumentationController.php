@@ -17,9 +17,15 @@ class DocumentationController extends Controller
         if (! $version) {
             // Check if docs have been requested without a version number
             if ($package = DocumentationPackage::orderByDesc('version_id')->where('slug', $versionSlug)->first()) {
+                $newPageSlug = $packageSlug;
+
+                if (filled($pageSlug)) {
+                    $newPageSlug .= "/{$pageSlug}";
+                }
+
                 return redirect()->route('docs', [
                     'packageSlug' => $package->slug,
-                    'pageSlug' => $packageSlug,
+                    'pageSlug' => $newPageSlug,
                     'versionSlug' => $package->version,
                 ]);
             }
