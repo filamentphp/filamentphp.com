@@ -52,7 +52,6 @@
                 <div class="mt-16 prose max-w-none">
                     @php
                         config()->set('markdown', \Illuminate\Support\Arr::except(config('markdown'), [
-                            'heading_permalink',
                             'table_of_contents',
                         ]));
 
@@ -63,7 +62,6 @@
 
                             collect($config['extensions'])
                                 ->reject(fn (string $extension): bool => in_array($extension, [
-                                    \League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
                                     \League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class
                                 ]))
                                 ->each(fn (string $extension) => $environment->addExtension(app($extension)));
