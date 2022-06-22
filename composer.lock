@@ -1775,12 +1775,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/admin.git",
+                "url": "https://github.com/filamentphp/admin.git",
                 "reference": "a4f924c8501af66b7344ae51c693cda0c1056c9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/admin/zipball/a4f924c8501af66b7344ae51c693cda0c1056c9b",
+                "url": "https://api.github.com/repos/filamentphp/admin/zipball/a4f924c8501af66b7344ae51c693cda0c1056c9b",
                 "reference": "a4f924c8501af66b7344ae51c693cda0c1056c9b",
                 "shasum": ""
             },
@@ -1824,10 +1824,10 @@
                 "MIT"
             ],
             "description": "Effortlessly build TALL-powered admin panels.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-06-01T21:06:07+00:00"
         },
@@ -1836,12 +1836,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/forms.git",
+                "url": "https://github.com/filamentphp/forms.git",
                 "reference": "14d3465ebcd636157b9f72ea98846c3bb40d9e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/forms/zipball/14d3465ebcd636157b9f72ea98846c3bb40d9e8b",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/14d3465ebcd636157b9f72ea98846c3bb40d9e8b",
                 "reference": "14d3465ebcd636157b9f72ea98846c3bb40d9e8b",
                 "shasum": ""
             },
@@ -1881,10 +1881,10 @@
                 "MIT"
             ],
             "description": "Effortlessly build TALL-powered forms.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-06-01T21:06:01+00:00"
         },
@@ -1893,12 +1893,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/spatie-laravel-media-library-plugin.git",
+                "url": "https://github.com/filamentphp/spatie-laravel-media-library-plugin.git",
                 "reference": "27e9248758419878ce8b8570723277777701b987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/spatie-laravel-media-library-plugin/zipball/27e9248758419878ce8b8570723277777701b987",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-media-library-plugin/zipball/27e9248758419878ce8b8570723277777701b987",
                 "reference": "27e9248758419878ce8b8570723277777701b987",
                 "shasum": ""
             },
@@ -1918,10 +1918,10 @@
                 "MIT"
             ],
             "description": "Filament support for `spatie/laravel-medialibrary`.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-05-30T06:55:23+00:00"
         },
@@ -1930,12 +1930,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/spatie-laravel-tags-plugin.git",
+                "url": "https://github.com/filamentphp/spatie-laravel-tags-plugin.git",
                 "reference": "e812e76ec298682d1f3166dbeefd02afe8759f0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/spatie-laravel-tags-plugin/zipball/e812e76ec298682d1f3166dbeefd02afe8759f0d",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-tags-plugin/zipball/e812e76ec298682d1f3166dbeefd02afe8759f0d",
                 "reference": "e812e76ec298682d1f3166dbeefd02afe8759f0d",
                 "shasum": ""
             },
@@ -1955,10 +1955,10 @@
                 "MIT"
             ],
             "description": "Filament support for `spatie/laravel-tags`.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-05-30T06:55:28+00:00"
         },
@@ -1967,12 +1967,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/support.git",
+                "url": "https://github.com/filamentphp/support.git",
                 "reference": "2fe64a437a51aeb58f85a3133eb5350e83c29a40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/support/zipball/2fe64a437a51aeb58f85a3133eb5350e83c29a40",
+                "url": "https://api.github.com/repos/filamentphp/support/zipball/2fe64a437a51aeb58f85a3133eb5350e83c29a40",
                 "reference": "2fe64a437a51aeb58f85a3133eb5350e83c29a40",
                 "shasum": ""
             },
@@ -2004,10 +2004,10 @@
                 "MIT"
             ],
             "description": "Associated helper methods and foundation code for Filament packages.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-05-31T22:27:09+00:00"
         },
@@ -2016,12 +2016,12 @@
             "version": "v2.12.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-filament/tables.git",
+                "url": "https://github.com/filamentphp/tables.git",
                 "reference": "ccb8a1bb6be49ba8dd0c2e64c0c3037eb97af259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/tables/zipball/ccb8a1bb6be49ba8dd0c2e64c0c3037eb97af259",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/ccb8a1bb6be49ba8dd0c2e64c0c3037eb97af259",
                 "reference": "ccb8a1bb6be49ba8dd0c2e64c0c3037eb97af259",
                 "shasum": ""
             },
@@ -2058,10 +2058,10 @@
                 "MIT"
             ],
             "description": "Effortlessly build TALL-powered tables.",
-            "homepage": "https://github.com/laravel-filament/filament",
+            "homepage": "https://github.com/filamentphp/filament",
             "support": {
-                "issues": "https://github.com/laravel-filament/filament/issues",
-                "source": "https://github.com/laravel-filament/filament"
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-05-31T22:27:10+00:00"
         },
@@ -6390,7 +6390,7 @@
                 "alfred",
                 "filament",
                 "laravel",
-                "laravel-filament",
+                "filamentphp",
                 "spotlight",
                 "wire-elements"
             ],

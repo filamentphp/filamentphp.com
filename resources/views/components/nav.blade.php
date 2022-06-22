@@ -85,7 +85,7 @@
         </a>
 
         <a
-            href="https://github.com/laravel-filament/filament"
+            href="https://github.com/filamentphp/filament"
             target="_blank"
             @class([
                 'text-gray-900 transition hover:text-primary-600',

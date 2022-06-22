@@ -11,6 +11,6 @@ for v in "${DOCS_VERSIONS[@]}"; do
         (cd resources/filament/$v && git pull)
     else
         echo "Cloning $v..."
-        git clone --single-branch --branch "$v" git@github.com:laravel-filament/filament.git "resources/filament/$v"
+        git clone --single-branch --branch "$v" git@github.com:filamentphp/filament.git "resources/filament/$v"
     fi;
 done

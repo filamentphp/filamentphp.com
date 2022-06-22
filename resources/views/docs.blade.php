@@ -2,7 +2,7 @@
     'overline' => $package->name . ' v' . $package->version_id,
     'title' => $page->title,
     'subtitle' => $package->description,
-    'repository' => 'laravel-filament/filament',
+    'repository' => 'filamentphp/filament',
 ]" dark-mode>
     <x-nav dark-mode />
 
@@ -149,7 +149,7 @@
                 </div>
 
                 <p class="text-lg">
-                    Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/laravel-filament/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+                    Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
                 </p>
             </main>
 

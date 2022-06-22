@@ -15,7 +15,7 @@
                 route('tricks') => 'Tricks',
                 route('blog') => 'Blog',
                 route('links') => 'Links',
-                'https://github.com/laravel-filament/filament/discussions/new' => 'Help',
+                'https://github.com/filamentphp/filament/discussions/new' => 'Help',
                 'https://github.com/sponsors/danharrin' => 'Sponsor',
             ] as $url => $label)
                 <div class="px-2">
@@ -41,7 +41,7 @@
                 </svg>
             </a>
 
-            <a href="https://github.com/laravel-filament/filament" target="_blank" @class([
+            <a href="https://github.com/filamentphp/filament" target="_blank" @class([
                 'text-gray-600 transition hover:text-primary-600 flex items-center',
                 'dark:text-gray-400 dark:hover:text-primary-400' => $darkMode,
             ])>
