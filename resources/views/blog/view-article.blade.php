@@ -105,19 +105,19 @@
                     </a>
                 </div>
 
-{{--                <div aria-hidden="true" class="mt-8 border-t"></div>--}}
+                <div aria-hidden="true" class="mt-8 border-t"></div>
 
-{{--                <div class="mt-8 space-y-2">--}}
-{{--                    <h2 class="text-lg font-heading text-gray-900">--}}
-{{--                        Other articles--}}
-{{--                    </h2>--}}
+                <div class="mt-8 space-y-2">
+                    <h2 class="text-lg font-heading text-gray-900">
+                        Other articles
+                    </h2>
 
-{{--                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">--}}
-{{--                        @foreach ($otherArticles as $otherArticle)--}}
-{{--                            <x-articles.card :article="$otherArticle" />--}}
-{{--                        @endforeach--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
+                        @foreach ($otherArticles as $otherArticle)
+                            <x-articles.card :article="$otherArticle" />
+                        @endforeach
+                    </div>
+                </div>
 
                 <div aria-hidden="true" class="mt-8 border-t"></div>
 
