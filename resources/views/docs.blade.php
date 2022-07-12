@@ -160,6 +160,18 @@
 
                 <div class="space-y-4">
                     <a
+                        href="https://codecourse.com"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/178451980-762bc3f0-3dc5-4fcb-ba1d-00f264a8936c.png"
+                            alt="Codecourse"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://ploi.io"
                         target="__blank"
                         class="block mx-auto max-w-xs"
