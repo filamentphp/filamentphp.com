@@ -31,6 +31,7 @@
         "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^2.8",
         "lorisleiva/lody": "^0.3.0",
+        "pirsch-analytics/laravel-pirsch": "^0.4.0",
         "pxlrbt/filament-spotlight": "^0.2.0",
         "ryangjchandler/blade-capture-directive": "^0.2.0",
         "spatie/laravel-comments": "^1.0",
