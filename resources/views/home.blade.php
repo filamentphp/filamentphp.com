@@ -742,10 +742,24 @@
                 />
 
                 <x-team-member
+                    name="Zep Fietje"
+                    avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
+                    github="https://github.com/zepfietje"
+                    twitter="https://twitter.com/zepfietje"
+                />
+
+                <x-team-member
                     name="Dan Harrin"
                     avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
                     github="https://github.com/danharrin"
                     twitter="https://twitter.com/danjharrin"
+                />
+
+                <x-team-member
+                    name="Dennis Koch"
+                    avatar="https://avatars.githubusercontent.com/u/22632550?v=4"
+                    github="https://github.com/pxlrbt"
+                    twitter="https://twitter.com/pixelarbeit"
                 />
 
                 <x-team-member
