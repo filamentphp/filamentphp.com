@@ -620,11 +620,11 @@
                     </x-slot>
                 </x-testimonial>
 
-                <x-testimonial url="https://twitter.com/zepfietje/status/1486763133591072768">
-                    Need an admin panel for your Laravel project? It's <strong>powerful</strong>. It's <strong>fast</strong>. It's <strong>beautiful</strong>. It's <strong>easy</strong>.
+                <x-testimonial url="https://twitter.com/nkornel/status/1547530825117360129">
+                    We chose Filament and <strong>clients love it</strong>. It is <strong>consistent</strong> and <strong>clean</strong> so the <strong>learning curve is better</strong>.
 
-                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/44533235?v=4">
-                        Zep Fietje
+                    <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/1298094?v=4">
+                        nKornel
                     </x-slot>
                 </x-testimonial>
 
@@ -733,7 +733,7 @@
                 Meet the team
             </h2>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-16">
                 <x-team-member
                     name="Ryan Chandler"
                     avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
@@ -753,6 +753,20 @@
                     avatar="https://avatars.githubusercontent.com/u/881938?v=4"
                     github="https://github.com/ryanscherler"
                     twitter="https://twitter.com/ryanscherler"
+                />
+
+                <x-team-member
+                    name="Zep Fietje"
+                    avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
+                    github="https://github.com/zepfietje"
+                    twitter="https://twitter.com/zepfietje"
+                />
+
+                <x-team-member
+                    name="Dennis Koch"
+                    avatar="https://avatars.githubusercontent.com/u/22632550?v=4"
+                    github="https://github.com/pxlrbt"
+                    twitter="https://twitter.com/pixelarbeit"
                 />
             </div>
         </div>
