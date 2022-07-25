@@ -145,6 +145,27 @@
                         </div>
                     @endif
 
+                    @php
+                        config()->set('markdown', include config_path('markdown.php'));
+
+                        app()->singleton('markdown.environment', function (\Illuminate\Contracts\Container\Container $app): \League\CommonMark\Environment\Environment {
+                            $config = config()->get('markdown');
+
+                            $environment = new \League\CommonMark\Environment\Environment(\Illuminate\Support\Arr::except($config, ['extensions', 'views']));
+
+                            collect($config['extensions'])
+                                ->each(fn (string $extension) => $environment->addExtension(app($extension)));
+
+                            return $environment;
+                        });
+
+                        app()->singleton('markdown.converter', function (\Illuminate\Contracts\Container\Container $app): \League\CommonMark\MarkdownConverter {
+                            $environment = app('markdown.environment');
+
+                            return new \League\CommonMark\MarkdownConverter($environment);
+                        });
+                    @endphp
+
                     @markdown($page->content)
                 </div>
 

@@ -48,7 +48,7 @@
 
                 <div class="mt-8 prose max-w-none">
                     @php
-                        config()->set('markdown', \Illuminate\Support\Arr::except(config('markdown'), [
+                        config()->set('markdown', \Illuminate\Support\Arr::except(include config_path('markdown.php'), [
                             'table_of_contents',
                         ]));
 
