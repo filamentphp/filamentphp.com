@@ -62,6 +62,18 @@ return [
 
             ],
 
+            'notifications' => [
+
+                'name' => 'Notifications',
+
+                'description' => 'Elegant TALL stack notifications for Laravel artisans.',
+
+                'path' => resource_path('filament/2.x/packages/notifications/docs'),
+
+                'icon' => 'heroicon-o-bell',
+
+            ],
+
             'spatie-laravel-media-library-plugin' => [
 
                 'name' => 'Spatie Media Library Plugin',

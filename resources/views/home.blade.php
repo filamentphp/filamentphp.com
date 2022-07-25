@@ -349,6 +349,50 @@
                 </div>
             </div>
 
+            <div class="grid lg:grid-flow-row-dense lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-16">
+                <div class="lg:col-start-2 xl:col-start-3 xl:col-span-3 flex items-center">
+                    <img src="{{ asset('images/notifications.jpg') }}" class="overflow-hidden rounded-lg" />
+                </div>
+
+                <div class="lg:col-start-1 xl:col-span-2 flex items-center">
+                    <div class="space-y-8">
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-bold text-white text-4xl">
+                                <span>
+                                    Notifications
+                                </span>
+
+                                <span class="font-sans text-medium text-xl text-primary-500">
+                                    v2
+                                </span>
+                            </h3>
+
+                            <div class="text-lg text-gray-200 space-y-2">
+                                <p>
+                                    Powerful <span class="font-medium">Laravel notifications</span>.
+                                </p>
+
+                                <p>
+                                    Send beautiful notifications, with animations and the full power of Livewire, using a fluent PHP interface.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <x-composer-command package="filament/notifications" />
+                            </div>
+
+                            <div>
+                                <a href="/docs/notifications" class="text-white transition hover:text-primary-100 font-medium text-lg">
+                                    Documentation &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="w-full flex justify-center">
                 <div class="bg-gray-800 relative rounded-2xl -mx-4 p-8 space-y-8 max-w-4xl text-center">
                     <div class="space-y-4">
