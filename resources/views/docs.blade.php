@@ -229,6 +229,18 @@
                     </a>
 
                     <a
+                        href="https://larasapien.com/?utm_source=filamentphp.com"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/181019787-8cdb8813-5973-4a63-ae59-d85ff91dedd0.png"
+                            alt="Larasapien"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://ohdear.app"
                         target="__blank"
                         class="block mx-auto max-w-xs"
