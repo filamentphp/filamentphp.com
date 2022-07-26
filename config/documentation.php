@@ -16,6 +16,8 @@ return [
 
                 'icon' => 'heroicon-o-chart-bar',
 
+                'package' => 'filament/filament',
+
             ],
 
         ],
@@ -36,6 +38,8 @@ return [
 
                 'icon' => 'heroicon-o-chart-bar',
 
+                'package' => 'filament/filament',
+
             ],
 
             'forms' => [
@@ -47,6 +51,8 @@ return [
                 'path' => resource_path('filament/2.x/packages/forms/docs'),
 
                 'icon' => 'heroicon-o-document-text',
+
+                'package' => 'filament/forms',
 
             ],
 
@@ -60,6 +66,8 @@ return [
 
                 'icon' => 'heroicon-o-table',
 
+                'package' => 'filament/tables',
+
             ],
 
             'notifications' => [
@@ -72,6 +80,8 @@ return [
 
                 'icon' => 'heroicon-o-bell',
 
+                'package' => 'filament/notifications',
+
             ],
 
             'spatie-laravel-media-library-plugin' => [
@@ -81,6 +91,8 @@ return [
                 'description' => 'A plugin to add support for spatie/laravel-medialibrary to Filament.',
 
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-media-library-plugin/docs'),
+
+                'package' => 'filament/spatie-laravel-media-library-plugin',
 
             ],
 
@@ -92,6 +104,8 @@ return [
 
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-settings-plugin/docs'),
 
+                'package' => 'filament/spatie-laravel-settings-plugin',
+
             ],
 
             'spatie-laravel-tags-plugin' => [
@@ -102,6 +116,8 @@ return [
 
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-tags-plugin/docs'),
 
+                'package' => 'filament/spatie-laravel-tags-plugin',
+
             ],
 
             'spatie-laravel-translatable-plugin' => [
@@ -111,6 +127,8 @@ return [
                 'description' => 'A plugin to add support for spatie/laravel-translatable to Filament.',
 
                 'path' => resource_path('filament/2.x/packages/spatie-laravel-translatable-plugin/docs'),
+
+                'package' => 'filament/spatie-laravel-translatable-plugin',
 
             ],
         ],

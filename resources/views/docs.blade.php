@@ -2,7 +2,7 @@
     'overline' => $package->name . ' v' . $package->version_id,
     'title' => $page->title,
     'subtitle' => $package->description,
-    'repository' => 'filamentphp/filament',
+    'repository' => $package->package,
 ]" dark-mode>
     <x-nav dark-mode />
 

@@ -49,6 +49,7 @@ class DocumentationPackage extends Model
                     'description' => $package['description'],
                     'icon' => $package['icon'] ?? null,
                     'name' => $package['name'],
+                    'package' => $package['package'],
                     'slug' => $packageSlug,
                     'version_id' => $versionNumber,
                 ];
