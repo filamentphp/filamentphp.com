@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\PluginResource\Pages;
 
+use App\Models\Plugin;
 use App\Enums\PluginStatus;
-use App\Filament\Resources\PluginResource;
+use App\Actions\PublishPlugin;
 use Filament\Pages\Actions\Action;
 use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\EditRecord;
+use App\Filament\Resources\PluginResource;
 
 class EditPlugin extends EditRecord
 {
@@ -91,6 +93,10 @@ class EditPlugin extends EditRecord
     {
         return array_merge([
             $this->getViewAction(),
+            ButtonAction::make('publish')
+                ->requiresConfirmation()
+                ->visible(fn () => $this->record->status === PluginStatus::PENDING && auth()->user()->is_admin)
+                ->action(fn (PublishPlugin $publishPluginAction) => $publishPluginAction($this->record))
         ], parent::getActions());
     }
 

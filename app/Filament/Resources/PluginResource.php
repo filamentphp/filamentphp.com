@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Actions\PublishPlugin;
 use App\Enums\PluginCategory;
 use App\Enums\PluginLicense;
 use App\Enums\PluginStatus;
