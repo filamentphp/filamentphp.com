@@ -16,7 +16,7 @@ class CommentTransformer implements Contract
 {
     public function handle(Comment $comment): void
     {
-        config()->set('markdown', Arr::except(config('markdown'), [
+        config()->set('markdown', Arr::except(include config_path('markdown.php'), [
             'heading_permalink',
             'table_of_contents',
         ]));
