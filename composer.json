@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -24,7 +27,7 @@
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.0",
         "jeffgreco13/filament-breezy": "^1.2.8",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^9.19",
         "laravel/horizon": "^5.9",
         "laravel/tinker": "^2.5",
         "league/commonmark": "^2.2",

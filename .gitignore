@@ -1,6 +1,7 @@
 /node_modules
 /public/css
 /public/hot
+/public/build
 /public/js
 /public/mix-manifest.json
 /resources/filament
