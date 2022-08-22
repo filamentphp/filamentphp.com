@@ -37,6 +37,17 @@
             'text-primary-600' => request()->routeIs('docs*'),
             'dark:text-primary-500' => $darkMode && request()->routeIs('docs*'),
         ])>
+            Packages
+        </a>
+
+        <a href="{{ route('docs') }}" @class([
+            'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'dark:hover:text-primary-500 dark:focus:text-primary-500' => $darkMode,
+            'text-gray-900' => ! request()->routeIs('docs*'),
+            'dark:text-gray-200' => $darkMode && (! request()->routeIs('docs*')),
+            'text-primary-600' => request()->routeIs('docs*'),
+            'dark:text-primary-500' => $darkMode && request()->routeIs('docs*'),
+        ])>
             Documentation
         </a>
 
