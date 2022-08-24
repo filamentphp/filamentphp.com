@@ -3,6 +3,7 @@ import Clipboard from '@ryangjchandler/alpine-clipboard'
 import Collapse from '@alpinejs/collapse'
 import Focus from '@alpinejs/focus'
 import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
+import Persist from '@alpinejs/persist'
 import docsearch from '@docsearch/js'
 import Splide from '@splidejs/splide'
 
@@ -12,6 +13,7 @@ Alpine.plugin(Clipboard)
 Alpine.plugin(Collapse)
 Alpine.plugin(Focus)
 Alpine.plugin(FormsAlpinePlugin)
+Alpine.plugin(Persist)
 
 window.Alpine = Alpine
 Alpine.start()

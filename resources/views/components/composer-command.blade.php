@@ -8,7 +8,7 @@
     type="button"
     {{ $attributes->class(['group']) }}
 >
-    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+    <code class="inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
         <span class="flex gap-4">
             <span class="shrink-0 text-gray-500">
                 $

@@ -43,7 +43,7 @@
     </head>
 
     <body @class([
-        'antialiased font-sans text-gray-900',
+        'antialiased font-sans bg-gray-50 text-gray-900',
         'dark:text-white dark:bg-gray-900' => $darkMode,
     ])>
         {{ $slot }}
