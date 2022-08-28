@@ -1,7 +1,7 @@
 <a
     href="{{ $url }}"
     target="_blank"
-    class="group transition rounded-lg shadow border border-gray-300 p-8 hover:scale-105"
+    class="group transition rounded-2xl shadow border border-gray-300 p-8 hover:scale-105"
 >
     <div class="flex flex-col space-y-8 justify-between h-full">
         <div class="relative">
@@ -23,7 +23,7 @@
                 class="rounded-full w-12 h-12"
             />
 
-            <span class="font-medium transition group-hover:text-primary-600">
+            <span class="text-xl font-cursive transition group-hover:text-primary-600">
                 {{ $author }}
             </span>
         </div>

@@ -23,7 +23,7 @@
         </a>
 
         @if ($logos)
-            <div class="mt-16 mb-8 flex flex-wrap justify-around gap-8">
+            <div class="mt-16 mb-4 flex flex-wrap justify-around gap-8">
                 {{ $logos }}
             </div>
         @endif

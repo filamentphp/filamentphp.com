@@ -1,6 +1,6 @@
 <x-layouts.app previewify="757" :previewify-data="[
-    'title' => 'The elegant TALLkit for Laravel artisans.',
-    'subtitle' => 'Rapidly build TALL stack apps, designed for humans.',
+    'title' => 'Filament',
+    'subtitle' => 'Rapidly build Laravel UIs using the TALL stack.',
     'code' => 'composer require filament/filament',
 ]">
     <header class="max-w-7xl text-center mx-auto py-12 px-8 md:py-24">
@@ -51,375 +51,154 @@
             </a>
         </div>
 
-        <div x-data="{ theme: $persist('dark') }" class="relative -mx-4 sm:mx-auto mt-12 max-w-6xl mx-auto transition hover:scale-[1.02] md:mt-28">
-            <div
-                class="relative group cursor-pointer shadow-2xl ring-1 ring-white/10 shadow-primary-500/30 transition rounded-2xl overflow-hidden"
-                x-bind:class="theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'"
-            >
-                <div
-                    class="rounded-t-2xl flex justify-between items-center space-x-4 py-1 px-5 transition"
-                    x-bind:class="theme === 'dark' ? 'bg-gray-900 border-b border-gray-700' : 'bg-white  border-b border-gray-200'"
-                >
-                    <div class="py-4 space-x-2 flex">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-primary-300"></div>
-                        <div class="w-3 h-3 rounded-full bg-success-400"></div>
-                    </div>
-
-                    <button
-                        role="switch"
-                        aria-checked="false"
-                        x-on:click="theme = theme === 'light' ? 'dark' : 'light'"
-                        x-bind:class="{
-                            'bg-primary-600': theme === 'light',
-                            'dark:bg-white/10': theme === 'dark',
-                        }"
-                        type="button"
-                        class="relative inline-flex shrink-0 p-0.5 w-14 rounded-xl border-2 border-transparent cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500 border-gray-300"
-                    >
-                        <span
-                            x-bind:class="{
-                                'translate-x-6 rtl:-translate-x-6': theme === 'light',
-                                'translate-x-0': theme === 'dark',
-                            }"
-                            class="pointer-events-none relative inline-block h-6 w-6 px-2 rounded-lg bg-white shadow transform ring-0 ease-in-out transition duration-200"
-                        >
-                            <span
-                                class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
-                                aria-hidden="true"
-                                :class="{
-                                    'opacity-0 ease-out duration-100': theme === 'light',
-                                    'opacity-100 ease-in duration-200': theme === 'dark',
-                                }"
-                            >
-                                <x-heroicon-s-moon class="h-4 w-4 text-gray-400" />
-                            </span>
-
-                            <span
-                                class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
-                                aria-hidden="true"
-                                :class="{
-                                    'opacity-100 ease-in duration-200': theme === 'light',
-                                    'opacity-0 ease-out duration-100': theme === 'dark',
-                                }"
-                            >
-                                <x-heroicon-s-sun class="h-4 w-4 text-primary-600" />
-                            </span>
-                        </span>
-                    </button>
-                </div>
-
-                <a href="https://demo.filamentphp.com" target="_blank" class="flex w-full rounded-b-2xl overflow-hidden max-h-[150px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[500px]">
-                    <div class="relative overflow-hidden max-h-full">
-                        <img
-                            src="/images/home/demo-light-sidebar.jpg"
-                            aria-hidden="true"
-                        />
-
-                        <img
-                            src="/images/home/demo-dark-sidebar.jpg"
-                            aria-hidden="true"
-                            x-bind:class="{
-                                'opacity-0': theme === 'light',
-                            }"
-                            class="absolute top-0 transition"
-                        />
-                    </div>
-
-                    <div class="relative overflow-y-auto max-h-full">
-                        <img
-                            src="/images/home/demo-light-content.jpg"
-                            alt="Screenshot of the admin panel demo"
-                        />
-
-                        <img
-                            src="/images/home/demo-dark-content.jpg"
-                            aria-hidden="true"
-                            alt="Screenshot of the admin panel demo"
-                            x-bind:class="{
-                                'opacity-0': theme === 'light',
-                            }"
-                            class="absolute top-0 transition"
-                        />
-                    </div>
-                </a>
-
-                <div class="absolute inset-0 flex items-center justify-center transition backdrop-blur-sm bg-white/20 group-hover:opacity-0 group-hover:hidden rounded-2xl">
-                    <div class="flex items-center bg-gray-900 py-2 px-4 rounded-lg font-medium sm:text-xl text-white">
-                        <x-heroicon-o-play class="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
-
-                        Try our admin panel
-                    </div>
-                </div>
-            </div>
-
-            <div class="hidden absolute -top-[4.5rem] right-16 md:flex">
-                <div class="relative">
-                    <span class="absolute font-medium top-1.5 text-lg right-[4.5rem] whitespace-nowrap">
-                        it's open source
-                    </span>
-
-                    <img src="/images/arrow-turn.svg" class="h-20 -scale-x-100 -rotate-90" />
-                </div>
-            </div>
-        </div>
+        <x-admin-demo class="mt-12 md:mt-28" />
     </header>
 
-    <section class="bg-gray-900 bg-cover bg-center -mt-[8rem] md:-mt-[20rem] pt-[8rem] md:pt-[16rem] lg:-mt-[24rem]" style="background-image: url(/images/backgrounds/meteor.svg)">
-        <div class="max-w-7xl text-center mx-auto px-8">
-            <div class="max-w-6xl mx-auto py-16 space-y-16 lg:py-32">
-                <div class="space-y-4">
-                    <h3 class="font-heading text-gray-200 text-4xl">
-                        <span class="block sm:inline">
-                            Built with the
+    <x-tall-stack class="-mt-[8rem] md:-mt-[20rem] pt-[8rem] md:pt-[16rem] lg:-mt-[24rem]" />
+
+    <section class="max-w-8xl relative mx-auto px-8 py-16">
+        <div class="text-center">
+            <h2 class="font-heading text-gray-black/80 text-4xl">
+                What is Filament?
+            </h2>
+
+            <div class="mt-8 mx-auto max-w-5xl">
+                <p class="text-gray-600 font-medium text-xl">
+                    Filament is a collection of packages: <mark class="highlight">UI components</mark> that you can install into your Laravel app.
+                </p>
+
+                <p class="mt-4 text-gray-600 font-medium text-xl">
+                    The <mark class="highlight">admin panel</mark> combines those components into one intuitive interface to <mark class="highlight">manage your app's data</mark>, but each package can be used individually in your own <mark class="highlight">TALL stack</mark> app if you wish.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-16 space-y-8">
+            <a
+                href="{{ route('packages.admin') }}"
+                class="block gap-8 items-center justify-between group p-6 lg:flex lg:p-12 border-4 border-transparent bg-gradient-to-b rounded-2xl"
+                style="background: linear-gradient(to bottom, rgb(248, 194, 204), rgba(250, 238, 199)) padding-box, linear-gradient(to bottom, rgb(244, 63, 94), rgb(252, 211, 77)) border-box"
+            >
+                <div class="flex-shrink-0">
+                    <h3 class="font-heading text-gray-black/80 text-4xl">
+                        <span>
+                            Admin Panel
                         </span>
 
-                        <span class="block text-primary-400 sm:inline">
-                            TALL stack
+                        <span class="font-sans text-medium text-xl text-rose-600">
+                            v2
                         </span>
                     </h3>
 
-                    <p class="text-gray-400">
-                        /tɔːl stæk/
-                    </p>
+                    <div class="mt-4 text-lg max-w-lg text-gray-700">
+                        <p>
+                            A fully-featured Laravel admin panel.
+                        </p>
 
-                    <h4 class="text-gray-200 text-xl max-w-2xl mx-auto">
-                        A set of frameworks that combine to form dynamic, maintainable, full-stack applications with little effort.
-                    </h4>
-                </div>
+                        <p class="mt-3">
+                            Build complex and interactive tables, complete with sort, search and filter functionalities, powered by Livewire.
+                        </p>
 
-                <div class="grid rounded-xl overflow-hidden -mx-4 sm:mx-auto sm:grid-cols-2 lg:grid-cols-4">
-                    <a
-                        href="https://tailwindcss.com"
-                        target="_blank"
-                        class="relative flex items-center justify-center bg-white p-8 border-b-4 lg:border-b-0 lg:border-r-4"
-                    >
-                        <img
-                            src="/images/tailwind.svg"
-                            alt="Tailwind CSS"
-                            class="w-full max-h-12 transition hover:scale-105"
-                        />
+                        <p class="mt-3">
+                            Craft intuitive forms using a wide range of fields, and completely customizable layout components.
+                        </p>
 
-                        <div class="absolute z-10 rotate-90 -bottom-6 lg:bottom-auto lg:-right-6 lg:rotate-0">
-                            <img src="/images/puzzle-join.svg" class="w-6 h-6" />
-                        </div>
-                    </a>
+                        <p class="mt-3">
+                            Assemble beautiful dashboards using our selection of pre-built widgets, including eye-catching charts.
+                        </p>
+                    </div>
 
-                    <a
-                        href="https://alpinejs.dev"
-                        target="_blank"
-                        class="relative flex items-center justify-center bg-white p-8 border-b-4 sm:border-l-4 lg:border-b-0 lg:border-l-0 lg:border-r-4"
-                    >
-                        <img
-                            src="/images/alpine.svg"
-                            alt="Alpine.js"
-                            class="w-full max-h-12 transition hover:scale-105"
-                        />
-
-                        <div class="absolute z-10 rotate-90 -bottom-6 sm:bottom-auto sm:-left-6 sm:-rotate-180 lg:left-auto lg:-right-6 lg:rotate-0">
-                            <img src="/images/puzzle-join.svg" class="w-6 h-6" />
-                        </div>
-                    </a>
-
-                    <a
-                        href="https://laravel.com"
-                        target="_blank"
-                        class="relative flex items-center justify-center bg-white p-8 border-b-4 sm:border-b-0 lg:border-r-4"
-                    >
-                        <img
-                            src="/images/laravel.svg"
-                            alt="Laravel"
-                            class="w-full max-h-12 transition hover:scale-105"
-                        />
-
-                        <div class="absolute z-10 rotate-90 -bottom-6 sm:bottom-auto sm:-right-6 sm:rotate-0">
-                            <img src="/images/puzzle-join.svg" class="w-6 h-6" />
-                        </div>
-                    </a>
-
-                    <a
-                        href="https://laravel-livewire.com"
-                        target="_blank"
-                        class="relative flex items-center justify-center bg-white p-8 sm:border-l-4 lg:border-l-0"
-                    >
-                        <img
-                            src="/images/livewire.svg"
-                            alt="Livewire"
-                            class="w-full max-h-12 transition hover:scale-105"
-                        />
-
-                        <div class="hidden absolute z-10 -rotate-90 -top-6 sm:block lg:hidden">
-                            <img src="/images/puzzle-join.svg" class="w-6 h-6" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="max-w-8xl relative mx-auto px-8 py-16">
-            <div class="text-center">
-                <h2 class="font-heading text-gray-800 text-4xl">
-                    What is Filament?
-                </h2>
-
-                <div class="mx-auto max-w-5xl">
-                    <p class="mt-8 text-gray-600 font-medium text-xl">
-                        Filament is a collection of packages: <mark class="highlight">UI components</mark> that you can install into your Laravel app.
-                    </p>
-
-                    <p class="mt-4 text-gray-600 font-medium text-xl">
-                        The <mark class="highlight">admin panel</mark> combines those components into one intuitive interface to <mark class="highlight">manage your app's data</mark>, but each package can be used individually in your own <mark class="highlight">TALL stack</mark> app if you wish.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-                <div class="col-span-1 lg:col-span-3 p-1 bg-gradient-to-b from-rose-500 to-amber-300 rounded-2xl">
-                    <div class="gap-8 items-center justify-between rounded-xl p-6 bg-white/70 lg:flex lg:p-12">
-                        <div class="flex-shrink-0">
-                            <h3 class="font-heading text-gray-800 text-4xl">
-                                <span>
-                                    Admin Panel
-                                </span>
-
-                                <span class="font-sans text-medium text-xl text-rose-600">
-                                    v2
-                                </span>
-                            </h3>
-
-                            <div class="mt-4 text-lg max-w-lg text-gray-700">
-                                <p>
-                                    A fully-featured Laravel admin panel.
-                                </p>
-
-                                <p class="mt-3">
-                                    Build complex and interactive tables, complete with sort, search and filter functionalities, easily.
-                                </p>
-
-                                <p class="mt-3">
-                                    Craft intuitive forms using a wide range of field types, using our simple, class-based form builder.
-                                </p>
-                            </div>
-
-                            <x-composer-command package="filament/filament" class="mt-8 hidden xl:block" />
-
-                            <div class="mt-8">
-                                <a href="https://demo.filamentphp.com" target="_blank" class="block text-gray-800 transition hover:text-primary-600 font-medium text-lg">
-                                    Demo &rarr;
-                                </a>
-
-                                <a href="/docs/admin" class="block text-gray-800 transition hover:text-primary-600 font-medium text-lg">
-                                    Documentation &rarr;
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="hidden lg:block lg:-mr-16 2xl:-mr-24">
-                            <img
-                                src="/images/admin/form.jpg"
-                                class="w-full rounded-2xl ring-1 ring-white/10 shadow-2xl"
-                            />
-                        </div>
+                    <div class="inline-block mt-4 link-underline font-medium">
+                        Learn more &rarr;
                     </div>
                 </div>
 
-                <div class="col-span-1 p-1 bg-amber-300 rounded-2xl">
-                    <div class="rounded-xl bg-white/70 h-full p-6">
-                        <h3 class="font-heading text-gray-800 text-3xl">
-                            <span>
-                                Form builder
-                            </span>
-
-                            <span class="font-sans text-medium text-xl text-primary-600">
-                                v2
-                            </span>
-                        </h3>
-
-                        <div class="mt-4 text-gray-700">
-                            <p>
-                                An intuitive Laravel form builder.
-                            </p>
-
-                            <p class="mt-3">
-                                Generate date pickers, searchable select menus, rich text editors and file upload fields with just one line of PHP.
-                            </p>
-                        </div>
-
-                        <x-composer-command package="filament/forms" class="mt-8 hidden xl:block" />
-
-                        <div class="mt-8">
-                            <a href="/docs/forms" class="block text-gray-800 transition hover:text-primary-600 font-medium">
-                                Documentation &rarr;
-                            </a>
-                        </div>
-                    </div>
+                <div class="mt-8 lg:mt-0 lg:block lg:-mr-16 2xl:-mr-24">
+                    <img
+                        src="/images/admin/form.jpg"
+                        class="w-full rounded-2xl ring-1 ring-white/10 shadow-2xl"
+                    />
                 </div>
+            </a>
 
-                <div class="col-span-1 p-1 bg-amber-300 rounded-2xl">
-                    <div class="rounded-xl bg-white/70 h-full p-6">
-                        <h3 class="font-heading text-gray-800 text-3xl">
-                            <span>
-                                Table builder
-                            </span>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <a href="{{ route('packages.forms') }}" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
+                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                        <span>
+                            Form builder
+                        </span>
 
-                            <span class="font-sans text-medium text-xl text-primary-600">
-                                v2
-                            </span>
-                        </h3>
+                        <span class="font-sans text-medium text-xl text-primary-600">
+                            v2
+                        </span>
+                    </h3>
 
-                        <div class="mt-4 text-gray-700">
-                            <p>
-                                An interactive Laravel table builder.
-                            </p>
+                    <div class="mt-4 text-gray-800/80">
+                        <p>
+                            An intuitive Laravel form builder.
+                        </p>
 
-                            <p class="mt-3">
-                                Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface.
-                            </p>
-                        </div>
-
-                        <x-composer-command package="filament/tables" class="mt-8 hidden xl:block" />
-
-                        <div class="mt-8">
-                            <a href="/docs/tables" class="block text-gray-800 transition hover:text-primary-600 font-medium">
-                                Documentation &rarr;
-                            </a>
-                        </div>
+                        <p class="mt-3">
+                            Generate date pickers, searchable select menus, rich text editors, file upload fields and more. Integrates perfectly with your TALL stack app.
+                        </p>
                     </div>
-                </div>
 
-                <div class="col-span-1 p-1 bg-amber-300 rounded-2xl">
-                    <div class="rounded-xl bg-white/70 h-full p-6">
-                        <h3 class="font-heading text-gray-800 text-3xl">
-                            <span>
-                                Notifications
-                            </span>
-
-                            <span class="font-sans text-medium text-xl text-primary-600">
-                                v2
-                            </span>
-                        </h3>
-
-                        <div class="mt-4 text-gray-700">
-                            <p>
-                                Powerful Laravel notifications.
-                            </p>
-
-                            <p class="mt-3">
-                                Send beautiful notifications, with animations and the full power of Livewire, using a fluent PHP interface.
-                            </p>
-                        </div>
-
-                        <x-composer-command package="filament/notifications" class="mt-8 hidden xl:block" />
-
-                        <div class="mt-8">
-                            <a href="/docs/notifications" class="block text-gray-800 transition hover:text-primary-600 font-medium">
-                                Documentation &rarr;
-                            </a>
-                        </div>
+                    <div class="inline-block mt-4 link-underline font-medium">
+                        Learn more &rarr;
                     </div>
-                </div>
+                </a>
+
+                <a href="{{ route('packages.tables') }}" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
+                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                        <span>
+                            Table builder
+                        </span>
+
+                        <span class="font-sans text-medium text-xl text-primary-600">
+                            v2
+                        </span>
+                    </h3>
+
+                    <div class="mt-4 text-gray-800/80">
+                        <p>
+                            An interactive Laravel table builder.
+                        </p>
+
+                        <p class="mt-3">
+                            Build custom datatables, complete with sort, search and filter functionalities, with a simple PHP interface, all powered by Livewire.
+                        </p>
+                    </div>
+
+                    <div class="inline-block mt-4 link-underline font-medium">
+                        Learn more &rarr;
+                    </div>
+                </a>
+
+                <a href="/docs/notifications" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
+                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                        <span>
+                            Notifications
+                        </span>
+
+                        <span class="font-sans text-medium text-xl text-primary-600">
+                            v2
+                        </span>
+                    </h3>
+
+                    <div class="mt-4 text-gray-800/80">
+                        <p>
+                            Powerful Laravel notifications.
+                        </p>
+
+                        <p class="mt-3">
+                            Send beautiful notifications, complete with slick animations and action buttons. Easily brandable using our customizable Blade components.
+                        </p>
+                    </div>
+
+                    <div class="inline-block mt-4 link-underline font-medium">
+                        Documentation &rarr;
+                    </div>
+                </a>
             </div>
         </div>
     </section>

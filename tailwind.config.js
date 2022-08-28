@@ -17,6 +17,7 @@ module.exports = {
                 warning: colors.yellow,
             },
             fontFamily: {
+                cursive: ['Kalam', ...fontFamily.serif],
                 heading: ['Lexend', ...fontFamily.sans],
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],

@@ -27,19 +27,15 @@
 .link-underline {
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent), linear-gradient(#f43f5e, #f43f5e);
-    background-size: 0 3px;
+    background-size: 0 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease-in-out;
 }
 
-.link-underline:hover {
-    background-size: 100% 3px;
-    background-position: 0 100%
-}
-
-.link-underline:form {
-    background-size: 100% 3px;
+.link-underline:hover,
+.group:hover .link-underline {
+    background-size: 100% 2px;
     background-position: 0 100%
 }
 
