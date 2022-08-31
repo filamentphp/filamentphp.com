@@ -768,6 +768,13 @@
                     github="https://github.com/pxlrbt"
                     twitter="https://twitter.com/pixelarbeit"
                 />
+
+                <x-team-member
+                    name="Adam Weston"
+                    avatar="https://avatars.githubusercontent.com/u/3596800?v=4"
+                    github="https://github.com/awcodes"
+                    twitter="https://twitter.com/awcodes1"
+                />
             </div>
         </div>
     </section>
