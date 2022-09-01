@@ -47,7 +47,7 @@
         'antialiased font-sans text-gray-900',
         'dark:text-white dark:bg-gray-900' => $darkMode,
     ])>
-        @if($docSearch)
+        @if ($docSearch)
             <div id="docsearch" class="hidden"></div>
         @endif
 
