@@ -3,7 +3,7 @@
     'title' => $page->title,
     'subtitle' => $package->description,
     'repository' => $package->package,
-]" dark-mode>
+]" dark-mode :doc-search="false">
     <x-nav dark-mode />
 
     <div x-data="{}" class="space-y-12">
