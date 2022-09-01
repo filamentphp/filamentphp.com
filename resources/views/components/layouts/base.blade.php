@@ -2,7 +2,7 @@
     'darkMode' => false,
     'previewify' => null,
     'previewifyData' => [],
-    'docSearch' => true
+    'docSearch' => true,
 ])
 
 <!DOCTYPE html>
