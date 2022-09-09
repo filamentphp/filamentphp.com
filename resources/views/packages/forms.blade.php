@@ -78,11 +78,11 @@
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Take complete control over the layout and behaviour of your forms, using our simple builder API.
+                    Take complete control over the layout and behaviour of your forms, using our simple Livewire form builder API.
                 </x-feature.paragraph>
 
                 <x-feature.paragraph>
-                    We use PHP and Livewire to provide you with a clean approach to writing dependant fields and handling other user interactions.
+                    We use PHP and Livewire to provide you with a consistent approach to writing many forms with advanced functionality.
                 </x-feature.paragraph>
             </x-feature>
 
@@ -116,7 +116,7 @@
                 </x-slot>
 
                 <x-feature.paragraph>
-                    A beautiful design, complete with polished animations and versatile action buttons. Easily send messages from any part of the Livewire forms panel.
+                    Don't limit yourself to one Eloquent model per form. Repeaters can read and write to relationships, select fields can auto-populate options, file uploads can save media data, and more.
                 </x-feature.paragraph>
             </x-feature>
 
@@ -126,7 +126,7 @@
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Simply trigger a modal from anywhere, collect user input with a form, and run an operation. We include a set of handy helpers for your test suite that help you ensure these important interactions work as expected.
+                    Change fields based on the values of others, in any way. Read and write data to other fields from lifecycle hooks. All without a single line of JavaScript.
                 </x-feature.paragraph>
             </x-feature>
 

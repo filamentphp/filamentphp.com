@@ -78,11 +78,11 @@
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Take complete control over the layout and behaviour of your forms, using our simple builder API.
+                    Present any type of data, using our Livewire table builder. Text, status badges, images, or even custom HTML.
                 </x-feature.paragraph>
 
                 <x-feature.paragraph>
-                    We use PHP and Livewire to provide you with a clean approach to writing dependant fields and handling other user interactions.
+                    We use PHP and Livewire to provide you with a clean approach to building fully-interactive interfaces for your data.
                 </x-feature.paragraph>
             </x-feature>
 
@@ -92,11 +92,31 @@
                 </x-slot>
 
                 <x-feature.paragraph>
-                    We've harnessed the power of Eloquent to build a table component with first class features.
+                    We've harnessed the power of Eloquent to build a table component with first class filtering.
                 </x-feature.paragraph>
 
                 <x-feature.paragraph>
-                    Advanced filtering, pagination, bulk-actions, drag and drop reordering, relationship data presentation and aggregation.
+                    Use our form builder to craft custom filter forms, which allow your users to sift through thousands of records with ease.
+                </x-feature.paragraph>
+            </x-feature>
+
+            <x-feature icon="heroicon-o-switch-horizontal">
+                <x-slot name="heading">
+                    Relationship integrations
+                </x-slot>
+
+                <x-feature.paragraph>
+                    Don't limit yourself to one Eloquent model per table. Fetch data from relationships, with zero-config automatic eager loading when you do.
+                </x-feature.paragraph>
+            </x-feature>
+
+            <x-feature icon="heroicon-o-sort-descending">
+                <x-slot name="heading">
+                    Sorting and reordering
+                </x-slot>
+
+                <x-feature.paragraph>
+                    Easily sort your data by any column in your table, even through relationships. Reorder records with simple drag and drop.
                 </x-feature.paragraph>
             </x-feature>
 
@@ -107,26 +127,6 @@
 
                 <x-feature.paragraph>
                     Simply trigger a modal from anywhere, collect user input with a form, and run an operation. We include a set of handy helpers for your test suite that help you ensure these important interactions work as expected.
-                </x-feature.paragraph>
-            </x-feature>
-
-            <x-feature icon="heroicon-o-switch-horizontal">
-                <x-slot name="heading">
-                    Relationship integrations
-                </x-slot>
-
-                <x-feature.paragraph>
-                    A beautiful design, complete with polished animations and versatile action buttons. Easily send messages from any part of the Livewire admin panel.
-                </x-feature.paragraph>
-            </x-feature>
-
-            <x-feature icon="heroicon-o-sort-descending">
-                <x-slot name="heading">
-                    Sorting and reordering
-                </x-slot>
-
-                <x-feature.paragraph>
-                    Our beautiful set of dashboard widgets let you present your data in a range of formats. Interactive charts, stat counters, tables, and anything custom that you can imagine.
                 </x-feature.paragraph>
             </x-feature>
 
