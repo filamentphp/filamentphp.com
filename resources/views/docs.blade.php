@@ -42,7 +42,7 @@
                                         'bg-gray-100 dark:bg-gray-700 text-primary-600 dark:text-primary-500' => $package->slug === $product->slug,
                                     ])
                                 >
-                                    <div class="flex items-center justify-center bg-white dark:bg-gray-900 text-primary-600 rounded h-6 w-6 ring-1 ring-gray-900/5 dark:ring-gray-100/5 shadow-sm group-hover:shadow group-hover:ring-gray-900/10 dark:group-hover:ring-gray-100/10 group-hover:shadow-primary-200 dark:group-hover:shadow-primary-800">
+                                    <div class="flex items-center justify-center bg-white dark:bg-gray-900 text-primary-600 rounded h-6 w-6 ring-1 ring-black/5 dark:ring-gray-100/5 shadow-sm group-hover:shadow group-hover:ring-gray-900/10 dark:group-hover:ring-gray-100/10 group-hover:shadow-primary-200 dark:group-hover:shadow-primary-800">
                                         <x-dynamic-component :component="$product->icon" class="h-4 w-4" />
                                     </div>
 

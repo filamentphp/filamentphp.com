@@ -1,7 +1,7 @@
 <x-layouts.app previewify="757" :previewify-data="[
-    'title' => 'Filament - Admin Panel for Laravel',
-    'subtitle' => 'Build beautiful admin panels using the TALL stack.',
-    'code' => 'composer require filament/filament',
+    'title' => 'Filament - Form Builder for Laravel',
+    'subtitle' => 'Build beautiful forms using the TALL stack.',
+    'code' => 'composer require filament/forms',
 ]">
     <header class="max-w-7xl mx-auto text-center py-12 px-8 md:py-24">
         <h4 class="font-cursive md:text-2xl">
@@ -14,17 +14,17 @@
             </span>
 
             <span class="text-primary-500">
-                Admin Panel
+                Form Builder
             </span>
         </h1>
 
         <h3 class="mt-8 text-gray-600 font-medium text-xl md:text-3xl">
-            Fully featured, simply intuitive and <span class="italic">insanely</span> attractive.
+            Easily build stunning forms with over 25 components out of the box.
         </h3>
 
         <div class="flex justify-center items-center flex-wrap gap-4 mt-4 md:mt-8">
             <a
-                href="/docs/admin"
+                href="/docs/forms"
                 class="inline-flex items-center font-medium text-lg px-4 py-2 rounded-lg bg-primary-500 text-white transition hover:text-primary-50 hover:scale-105"
             >
                 <x-heroicon-o-academic-cap class="w-6 h-6 mr-3" />
@@ -50,7 +50,7 @@
         </div>
 
         <div class="mt-12 md:mt-28">
-            <x-admin-demo shadow="shadow-2xl shadow-black/40" />
+            <x-forms-demo shadow="shadow-2xl shadow-black/40" />
         </div>
     </header>
 
@@ -59,12 +59,12 @@
             <div class="max-w-8xl mx-auto px-8 py-16 lg:pt-32">
                 <div class="text-center">
                     <h2 class="font-heading text-black-900/80 text-4xl">
-                        The entire power of Filament in one package
+                        Consistency for every form in your app
                     </h2>
 
                     <div class="mt-8 mx-auto max-w-5xl">
                         <p class="text-gray-800/80 font-medium text-xl">
-                            Our TALL stack admin panel is a collaboration between all our other packages. Each package already provides you with a comprehensive set of features, now experience all of those combined into one product!
+                            Our TALL stack form builder is your gateway to fast form creation. A simple trait and interface added to your Livewire component unlocks the full functionality of our powerful package.
                         </p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
         <div class="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
             <x-feature icon="icons.form-input">
                 <x-slot name="heading">
-                    Over 25 form components, built-in
+                    Over 25 form components out of the box
                 </x-slot>
 
                 <x-feature.paragraph>
@@ -86,43 +86,43 @@
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-table">
+            <x-feature icon="heroicon-o-template">
                 <x-slot name="heading">
-                    Datatables on steroids
+                    A variety of layouts
                 </x-slot>
 
                 <x-feature.paragraph>
-                    We've harnessed the power of Eloquent to build a table component with first class features.
+                    Position your form fields in any way, using the power of our grid system.
                 </x-feature.paragraph>
 
                 <x-feature.paragraph>
-                    Advanced filtering, pagination, bulk-actions, drag and drop reordering, relationship data presentation and aggregation.
+                    Even group your fields into tabs, wizard steps, collapsible sections, and more.
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-chart-square-bar">
+            <x-feature icon="heroicon-o-device-mobile">
                 <x-slot name="heading">
-                    Dashboard widgets with style
+                    Responsive positioning
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Our beautiful set of dashboard widgets let you present your data in a range of formats. Interactive charts, stat counters, tables, and anything custom that you can imagine.
+                    Even build completely responsive layouts without touching CSS media queries. Mobile users will have an exemplary experience filling out your forms.
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-annotation">
+            <x-feature icon="heroicon-o-switch-horizontal">
                 <x-slot name="heading">
-                    Slick notifications
+                    Relationship integrations
                 </x-slot>
 
                 <x-feature.paragraph>
-                    A beautiful design, complete with polished animations and versatile action buttons. Easily send messages from any part of the Livewire admin panel.
+                    A beautiful design, complete with polished animations and versatile action buttons. Easily send messages from any part of the Livewire forms panel.
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-inbox">
+            <x-feature icon="heroicon-o-adjustments">
                 <x-slot name="heading">
-                    Effortless modals
+                    Dependant fields
                 </x-slot>
 
                 <x-feature.paragraph>
@@ -143,7 +143,7 @@
 
         <div class="mt-16">
             <h3 class="text-xl text-center font-medium transition hover:scale-105">
-                <a href="/docs/admin" class="link-underline">
+                <a href="/docs/forms" class="link-underline">
                     Well. What are you waiting for? &rarr;
                 </a>
             </h3>

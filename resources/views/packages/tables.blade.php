@@ -1,7 +1,7 @@
 <x-layouts.app previewify="757" :previewify-data="[
-    'title' => 'Filament - Admin Panel for Laravel',
-    'subtitle' => 'Build beautiful admin panels using the TALL stack.',
-    'code' => 'composer require filament/filament',
+    'title' => 'Filament - Table Builder for Laravel',
+    'subtitle' => 'Build beautiful tables using the TALL stack.',
+    'code' => 'composer require filament/tables',
 ]">
     <header class="max-w-7xl mx-auto text-center py-12 px-8 md:py-24">
         <h4 class="font-cursive md:text-2xl">
@@ -14,17 +14,17 @@
             </span>
 
             <span class="text-primary-500">
-                Admin Panel
+                Table Builder
             </span>
         </h1>
 
         <h3 class="mt-8 text-gray-600 font-medium text-xl md:text-3xl">
-            Fully featured, simply intuitive and <span class="italic">insanely</span> attractive.
+            Craft beautiful, optimized, and interactive datatables for any situation.
         </h3>
 
         <div class="flex justify-center items-center flex-wrap gap-4 mt-4 md:mt-8">
             <a
-                href="/docs/admin"
+                href="/docs/tables"
                 class="inline-flex items-center font-medium text-lg px-4 py-2 rounded-lg bg-primary-500 text-white transition hover:text-primary-50 hover:scale-105"
             >
                 <x-heroicon-o-academic-cap class="w-6 h-6 mr-3" />
@@ -50,7 +50,7 @@
         </div>
 
         <div class="mt-12 md:mt-28">
-            <x-admin-demo shadow="shadow-2xl shadow-black/40" />
+            <x-tables-demo shadow="shadow-2xl shadow-black/40" />
         </div>
     </header>
 
@@ -59,12 +59,12 @@
             <div class="max-w-8xl mx-auto px-8 py-16 lg:pt-32">
                 <div class="text-center">
                     <h2 class="font-heading text-black-900/80 text-4xl">
-                        The entire power of Filament in one package
+                        Beautiful datatables for your app
                     </h2>
 
                     <div class="mt-8 mx-auto max-w-5xl">
                         <p class="text-gray-800/80 font-medium text-xl">
-                            Our TALL stack admin panel is a collaboration between all our other packages. Each package already provides you with a comprehensive set of features, now experience all of those combined into one product!
+                            Our TALL stack table builder pairs a friendly user experience with a host of features to suit any mass data presentation needs you require.
                         </p>
                     </div>
                 </div>
@@ -72,9 +72,9 @@
         </div>
 
         <div class="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
-            <x-feature icon="icons.form-input">
+            <x-feature icon="heroicon-o-table">
                 <x-slot name="heading">
-                    Over 25 form components, built-in
+                    7 column types out of the box
                 </x-slot>
 
                 <x-feature.paragraph>
@@ -86,9 +86,9 @@
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-table">
+            <x-feature icon="heroicon-o-filter">
                 <x-slot name="heading">
-                    Datatables on steroids
+                    Advanced filtering
                 </x-slot>
 
                 <x-feature.paragraph>
@@ -100,19 +100,19 @@
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-chart-square-bar">
+            <x-feature icon="heroicon-o-inbox">
                 <x-slot name="heading">
-                    Dashboard widgets with style
+                    Effortless actions
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Our beautiful set of dashboard widgets let you present your data in a range of formats. Interactive charts, stat counters, tables, and anything custom that you can imagine.
+                    Simply trigger a modal from anywhere, collect user input with a form, and run an operation. We include a set of handy helpers for your test suite that help you ensure these important interactions work as expected.
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-annotation">
+            <x-feature icon="heroicon-o-switch-horizontal">
                 <x-slot name="heading">
-                    Slick notifications
+                    Relationship integrations
                 </x-slot>
 
                 <x-feature.paragraph>
@@ -120,13 +120,13 @@
                 </x-feature.paragraph>
             </x-feature>
 
-            <x-feature icon="heroicon-o-inbox">
+            <x-feature icon="heroicon-o-sort-descending">
                 <x-slot name="heading">
-                    Effortless modals
+                    Sorting and reordering
                 </x-slot>
 
                 <x-feature.paragraph>
-                    Simply trigger a modal from anywhere, collect user input with a form, and run an operation. We include a set of handy helpers for your test suite that help you ensure these important interactions work as expected.
+                    Our beautiful set of dashboard widgets let you present your data in a range of formats. Interactive charts, stat counters, tables, and anything custom that you can imagine.
                 </x-feature.paragraph>
             </x-feature>
 

@@ -45,7 +45,7 @@ Route::prefix('/links')->group(function () {
 Route::name('packages.')->prefix('/packages')->group(function () {
     Route::view('/admin', 'packages.admin')->name('admin');
     Route::view('/forms', 'packages.forms')->name('forms');
-    Route::view('/tables', 'packages.widgets')->name('tables');
+    Route::view('/tables', 'packages.tables')->name('tables');
 });
 
 Route::prefix('/plugins')->group(function () {

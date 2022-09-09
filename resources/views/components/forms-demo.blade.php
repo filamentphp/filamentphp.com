@@ -63,33 +63,17 @@
             </button>
         </div>
 
-        <a href="https://demo.filamentphp.com" target="_blank" class="flex w-full rounded-b-2xl overflow-hidden max-h-[190px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[500px]">
-            <div class="relative overflow-hidden max-h-full -ml-px -mr-px">
-                <img
-                    src="/images/admin/demo/light-sidebar.jpg"
-                    aria-hidden="true"
-                />
-
-                <img
-                    src="/images/admin/demo/dark-sidebar.jpg"
-                    aria-hidden="true"
-                    x-bind:class="{
-                        'opacity-0': theme === 'light',
-                    }"
-                    class="absolute top-0 transition"
-                />
-            </div>
-
+        <a href="https://demo.filamentphp.com/shop/products/{{ rand(1, 50) }}/edit" target="_blank" class="flex w-full rounded-b-2xl overflow-hidden max-h-[200px] sm:max-h-[300px] md:max-h-[500px] lg:max-h-[600px]">
             <div class="relative max-h-full group-hover:overflow-y-auto">
                 <img
-                    src="/images/admin/demo/light-content.jpg"
-                    alt="Screenshot of the admin panel demo"
+                    src="/images/forms/demo/light.jpg"
+                    alt="Screenshot of the form builder demo"
                 />
 
                 <img
-                    src="/images/admin/demo/dark-content.jpg"
+                    src="/images/forms/demo/dark.jpg"
                     aria-hidden="true"
-                    alt="Screenshot of the admin panel demo"
+                    alt="Screenshot of the form builder demo"
                     x-bind:class="{
                         'opacity-0': theme === 'light',
                     }"
@@ -102,7 +86,7 @@
             <div class="flex items-center bg-gray-900 py-2 px-4 rounded-lg font-medium sm:text-xl text-white">
                 <x-heroicon-o-play class="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
 
-                Try our admin panel
+                Try our form builder
             </div>
         </div>
     </div>

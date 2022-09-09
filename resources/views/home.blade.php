@@ -115,7 +115,7 @@
 
                 <div class="mt-8 lg:mt-0 lg:block lg:-mr-16 2xl:-mr-24">
                     <img
-                        src="/images/admin/form.jpg"
+                        src="/images/forms/form.jpg"
                         class="w-full rounded-2xl ring-1 ring-white/10 shadow-2xl"
                     />
                 </div>

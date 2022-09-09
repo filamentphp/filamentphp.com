@@ -15,7 +15,7 @@
         x-cloak
         type="button"
         aria-hidden="true"
-        class="fixed inset-0 w-full h-full bg-black/50 focus:outline-none lg:hidden"
+        class="fixed z-10 inset-0 w-full h-full bg-black/50 focus:outline-none lg:hidden"
     ></button>
 
     <aside
