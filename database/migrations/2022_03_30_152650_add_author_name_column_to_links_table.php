@@ -16,9 +16,5 @@ return new class extends Migration
         Schema::table('links', function (Blueprint $table) {
             $table->string('author_name')->nullable()->after('author_id');
         });
-
-        Schema::table('plugins', function (Blueprint $table) {
-            $table->string('author_name')->nullable()->after('author_id');
-        });
     }
 };
