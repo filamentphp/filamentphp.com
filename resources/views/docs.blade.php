@@ -137,6 +137,8 @@
                 <div class="mx-auto prose dark:prose-invert max-w-none">
                     <h1 class="font-heading">
                         {{ $page->title }}
+
+                        <a href="{{ $page->github_link }}" class="pl-5 font-bold underline">Edit on GitHub</a>
                     </h1>
 
                     @if (filled($page->section))
