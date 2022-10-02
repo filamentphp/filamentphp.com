@@ -16,7 +16,9 @@ class ListTricksController extends Controller
                 ->published()
                 ->with(['author'])
                 ->orderByDesc('favorites')
-                ->first(),
+                ->limit(3)
+                ->get()
+                ->random(),
             'latestTrick' => Trick::query()
                 ->published()
                 ->with(['author'])
