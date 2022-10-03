@@ -17,7 +17,9 @@ class ListLinksController extends Controller
                 ->published()
                 ->with(['author', 'media'])
                 ->orderByDesc('views')
-                ->first(),
+                ->limit(5)
+                ->get()
+                ->random(),
             'latestLink' => Link::query()
                 ->published()
                 ->with(['author', 'media'])
