@@ -18,7 +18,7 @@ class ListPluginsController extends Controller
                 ->published()
                 ->with(['author', 'media'])
                 ->orderByDesc('views')
-                ->limit(4)
+                ->limit(5)
                 ->get()
                 ->random(),
             'featuredPlugins' => Plugin::query()
