@@ -49,6 +49,11 @@ class DocumentationPage extends Model
                         'slug' => $slug,
                         'title' => $page->matter('title'),
                         'version_id' => $versionNumber,
+                        'github_link' => Str::of($package['path'])
+                            ->after(resource_path())
+                            ->after("filament")
+                            ->prepend("https://github.com/filamentphp/filament/edit")
+                            ->append("/{$file->getRelativePath()}/{$file->getFilename()}")
                     ];
                 }
             }
