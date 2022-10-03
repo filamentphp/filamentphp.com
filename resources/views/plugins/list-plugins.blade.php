@@ -29,7 +29,7 @@
     </x-header>
 
     <x-section>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div class="space-y-2">
                 <h2 class="text-lg font-heading text-gray-900">
                     ⭐️ Famous plugin
