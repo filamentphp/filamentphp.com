@@ -52,7 +52,7 @@ class DocumentationPage extends Model
                         'github_link' => Str::of($package['path'])
                             ->after(resource_path())
                             ->after('filament')
-                            ->prepend("https://github.com/filamentphp/filament/edit")
+                            ->prepend('https://github.com/filamentphp/filament/edit')
                             ->append("/{$file->getRelativePath()}/{$file->getFilename()}")
                     ];
                 }
