@@ -49,7 +49,7 @@ class DocumentationPage extends Model
                         'slug' => $slug,
                         'title' => $page->matter('title'),
                         'version_id' => $versionNumber,
-                        'path_name' => $file->getPathName()
+                        'path_name' => $file->getPathName(),
                     ];
                 }
             }
@@ -78,12 +78,11 @@ class DocumentationPage extends Model
 
     public function getGithubLink(): string 
     {
-        return  Str::of($this->path_name)
+        return Str::of($this->path_name)
             ->after(resource_path())
             ->after('filament')
             ->prepend('https://github.com/filamentphp/filament/edit');
     }
-
 
     public function getSectionUrl(): ?string
     {
