@@ -169,6 +169,10 @@
                     @markdown($page->content)
                 </div>
 
+                <x-filament-support::link :href="$page->getGitHubLink()" target="_blank">
+                    Edit on GitHub
+                </x-filament-support::link>
+
                 <p class="text-lg">
                     Still need help? Join our <a href="{{ route('discord') }}" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
                 </p>
