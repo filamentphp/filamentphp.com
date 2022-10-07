@@ -32,7 +32,6 @@
                 route('tricks') => 'Tricks',
                 route('blog') => 'Blog',
                 route('links') => 'Links',
-                route('consulting') => 'Consulting',
             ] as $url => $label)
                 <li>
                     <a
@@ -43,6 +42,15 @@
                     </a>
                 </li>
             @endforeach
+            <li>
+                <a
+                    href="{{ route('consulting') }}"
+                    target="_blank"
+                    class="block px-4 py-2 w-full rounded-lg transition hover:bg-gray-500/10 focus:bg-gray-500/10"
+                >
+                    Consulting
+                </a>
+            </li>
         </ul>
     </aside>
 
