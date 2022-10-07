@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers;
-use App\Models\DocumentationPackage;
-use App\Models\DocumentationVersion;
 use Illuminate\Support\Facades\Route;
+use Pirsch\Facades\Pirsch;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,5 +72,10 @@ Route::prefix('/blog')->group(function () {
         });
     });
 });
+
+Route::get('/consulting', function () {
+    Pirsch::track();
+    return redirect('https://www.ringerhq.com/i/filamentphp/filament');
+})->name('consulting');
 
 Route::redirect('/login', '/admin/login')->name('login');
