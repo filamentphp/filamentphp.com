@@ -32,6 +32,7 @@
                 route('tricks') => 'Tricks',
                 route('blog') => 'Blog',
                 route('links') => 'Links',
+                route('consulting') => 'Consulting',
             ] as $url => $label)
                 <li>
                     <a

@@ -74,4 +74,6 @@ Route::prefix('/blog')->group(function () {
     });
 });
 
+Route::view('/consulting', 'consulting')->name('consulting');
+
 Route::redirect('/login', '/admin/login')->name('login');
