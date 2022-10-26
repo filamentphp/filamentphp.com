@@ -17,12 +17,12 @@
             class="fixed inset-0 w-full h-full bg-black/50 focus:outline-none lg:hidden"
         ></button>
 
-        <div class="max-w-8xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-5 lg:divide-x lg:dark:divide-gray-600">
+        <div class="max-w-8xl mx-auto grid grid-cols-1 gap-8 lg:grid-cols-11 lg:divide-x lg:dark:divide-gray-600">
             <aside
                 x-cloak
                 :aria-hidden="$store.sidebar.isOpen.toString()"
                 :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-50 dark:bg-gray-800 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
+                class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-50 dark:bg-gray-800 lg:col-span-2 lg:w-auto lg:max-w-full lg:ml-8 lg:mr-4 lg:p-0 lg:-translate-x-0 lg:bg-transparent lg:relative lg:overflow-visible"
             >
                 <div
                     x-data="{ version: '{{ $version->slug }}' }"
@@ -133,7 +133,7 @@
                 </ul>
             </aside>
 
-            <main class="p-8 space-y-16 overflow-x-auto lg:pr-0 lg:py-0 lg:col-span-3">
+            <main class="p-8 space-y-16 overflow-x-auto lg:pr-0 lg:py-0 lg:col-span-7">
                 <div class="mx-auto prose dark:prose-invert max-w-none">
                     <h1 class="font-heading">
                         {{ $page->title }}
@@ -178,7 +178,7 @@
                 </p>
             </main>
 
-            <aside class="space-y-8 pr-2 lg:pl-8 lg:sticky lg:top-8 lg:self-start lg:h-screen">
+            <aside class="space-y-8 pr-2 lg:pl-8 lg:col-span-2">
                 <h4 class="font-heading text-center text-3xl">
                     Sponsors
                 </h4>
@@ -192,6 +192,18 @@
                         <img
                             src="https://user-images.githubusercontent.com/41773797/178451980-762bc3f0-3dc5-4fcb-ba1d-00f264a8936c.png"
                             alt="Codecourse"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
+                        href="https://laradir.com"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/198047886-3cbed5d7-f855-4529-9ab6-eebdb708b974.png"
+                            alt="Laradir"
                             class="block rounded-xl"
                         />
                     </a>
