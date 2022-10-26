@@ -16,7 +16,9 @@ class ListArticlesController extends Controller
                 ->published()
                 ->with(['author'])
                 ->orderByDesc('views')
-                ->first(),
+                ->limit(5)
+                ->get()
+                ->random(),
             'latestArticle' => Article::query()
                 ->published()
                 ->with(['author'])

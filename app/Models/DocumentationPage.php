@@ -31,7 +31,9 @@ class DocumentationPage extends Model
                     /** @var SplFileInfo $file */
 
                     $page = YamlFrontMatter::parseFile($file->getRealPath());
+                    $pageOrder = (string) Str::of($file->getFilename())->before('-');
 
+                    $sectionOrder = (string) Str::of($file->getRelativePath())->before('-');
                     $sectionSlug = (string) Str::of($file->getRelativePath())->after('-')->beforeLast('.')->replace('-', ' ');
                     $section = Str::title($sectionSlug);
 
@@ -40,13 +42,14 @@ class DocumentationPage extends Model
 
                     $pages[] = [
                         'content' => $page->body(),
-                        'order' => (string) Str::of($file->getFilename())->before('-'),
+                        'order' => filled($sectionOrder) ? "{$sectionOrder}{$pageOrder}" : "{$pageOrder}00",
                         'package_slug' => $packageSlug,
                         'section' => filled($section) ? $section : null,
                         'section_slug' => $sectionSlug,
                         'slug' => $slug,
                         'title' => $page->matter('title'),
                         'version_id' => $versionNumber,
+                        'path_name' => $file->getPathName(),
                     ];
                 }
             }
@@ -71,6 +74,14 @@ class DocumentationPage extends Model
         }
 
         return $sections;
+    }
+
+    public function getGithubLink(): string 
+    {
+        return Str::of($this->path_name)
+            ->after(resource_path())
+            ->after('filament')
+            ->prepend('https://github.com/filamentphp/filament/edit');
     }
 
     public function getSectionUrl(): ?string
