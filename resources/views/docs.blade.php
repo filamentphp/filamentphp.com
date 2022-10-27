@@ -262,7 +262,7 @@
                         class="block mx-auto max-w-xs"
                     >
                         <img
-                            src="https://user-images.githubusercontent.com/41773797/166422472-e722264e-3e77-480a-91af-e3fde597063c.png"
+                            src="https://user-images.githubusercontent.com/41773797/198252053-a2ae3314-5076-4383-9d1c-9507362f847f.jpg"
                             alt="Oh Dear"
                             class="block rounded-xl"
                         />
