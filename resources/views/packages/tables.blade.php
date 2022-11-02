@@ -143,7 +143,7 @@
 
         <div class="mt-16">
             <h3 class="text-xl text-center font-medium transition hover:scale-105">
-                <a href="/docs/admin" class="link-underline">
+                <a href="/docs/tables" class="link-underline">
                     Well. What are you waiting for? &rarr;
                 </a>
             </h3>

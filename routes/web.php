@@ -22,13 +22,12 @@ Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
 Route::prefix('/docs')->group(function () {
     Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
 
-    Route::redirect('/getting-started', '/docs/admin/getting-started');
-    Route::redirect('/resources', '/docs/admin/resources');
-    Route::redirect('/pages', '/docs/admin/pages');
-    Route::redirect('/dashboard', '/docs/admin/dashboard');
-    Route::redirect('/navigation', '/docs/admin/navigation');
-    Route::redirect('/theming', '/docs/admin/theming');
-    Route::redirect('/plugin-development', '/docs/admin/plugin-development');
+    Route::redirect('/getting-started', '/docs/app/getting-started');
+    Route::redirect('/resources', '/docs/app/resources');
+    Route::redirect('/pages', '/docs/app/pages');
+    Route::redirect('/dashboard', '/docs/app/dashboard');
+    Route::redirect('/navigation', '/docs/app/navigation');
+    Route::redirect('/plugin-development', '/docs/app/plugin-development');
 });
 
 Route::prefix('/links')->group(function () {
@@ -42,7 +41,7 @@ Route::prefix('/links')->group(function () {
 });
 
 Route::name('packages.')->prefix('/packages')->group(function () {
-    Route::view('/admin', 'packages.admin')->name('admin');
+    Route::view('/app', 'packages.app')->name('app');
     Route::view('/forms', 'packages.forms')->name('forms');
     Route::view('/tables', 'packages.tables')->name('tables');
 });

@@ -1,6 +1,6 @@
 <x-layouts.app previewify="757" :previewify-data="[
-    'title' => 'Filament - Admin Panel for Laravel',
-    'subtitle' => 'Build beautiful admin panels using the TALL stack.',
+    'title' => 'Filament - App Framework and Admin Panel for Laravel',
+    'subtitle' => 'Build beautiful apps and admin panels using the TALL stack.',
     'code' => 'composer require filament/filament',
 ]">
     <header class="max-w-7xl mx-auto text-center py-12 px-8 md:py-24">
@@ -24,7 +24,7 @@
 
         <div class="flex justify-center items-center flex-wrap gap-4 mt-4 md:mt-8">
             <a
-                href="/docs/admin"
+                href="/docs/app"
                 class="inline-flex items-center font-medium text-lg px-4 py-2 rounded-lg bg-primary-500 text-white transition hover:text-primary-50 hover:scale-105"
             >
                 <x-heroicon-o-academic-cap class="w-6 h-6 mr-3" />
@@ -143,7 +143,7 @@
 
         <div class="mt-16">
             <h3 class="text-xl text-center font-medium transition hover:scale-105">
-                <a href="/docs/admin" class="link-underline">
+                <a href="/docs/app" class="link-underline">
                     Well. What are you waiting for? &rarr;
                 </a>
             </h3>

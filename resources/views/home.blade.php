@@ -75,7 +75,7 @@
 
         <div class="mt-16 space-y-8">
             <a
-                href="{{ route('packages.admin') }}"
+                href="{{ route('packages.app') }}"
                 class="block gap-8 items-center justify-between group p-6 lg:flex lg:p-12 border-4 border-transparent bg-gradient-to-b rounded-2xl"
                 style="background: linear-gradient(to bottom, rgb(248, 194, 204), rgba(250, 238, 199)) padding-box, linear-gradient(to bottom, rgb(244, 63, 94), rgb(252, 211, 77)) border-box"
             >
