@@ -10,6 +10,10 @@ class DocumentationController extends Controller
 {
     public function __invoke($versionSlug = null, ?string $packageSlug = null, ?string $pageSlug = null)
     {
+        if ($packageSlug === 'admin') {
+            $packageSlug = 'app';
+        }
+
         // Get requested version
         $version = DocumentationVersion::where('slug', $versionSlug)->first();
 

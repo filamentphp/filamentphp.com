@@ -76,7 +76,7 @@ class DocumentationPage extends Model
         return $sections;
     }
 
-    public function getGithubLink(): string 
+    public function getGithubLink(): string
     {
         return Str::of($this->path_name)
             ->after(resource_path())

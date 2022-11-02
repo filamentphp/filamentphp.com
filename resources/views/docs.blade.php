@@ -32,7 +32,7 @@
                     class="space-y-2 -mx-3"
                 >
                     <div class="mb-8 bg-gray-50 dark:bg-gray-800 -mx-2 px-1 rounded-lg text-sm flex flex-col">
-                        @foreach (\App\Models\DocumentationPackage::query()->product()->get()->unique('slug') as $product)
+                        @foreach (\App\Models\DocumentationPackage::query()->product()->where('version_id', $version->getKey())->get()->unique('slug') as $product)
                             <div class="py-1">
                                 <a
                                     href="{{ route('docs', ['versionSlug' => $version->slug, 'packageSlug' => $product->slug]) }}"
