@@ -185,6 +185,18 @@
 
                 <div class="space-y-4">
                     <a
+                        href="https://ploi.io"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png"
+                            alt="Ploi"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://codecourse.com"
                         target="__blank"
                         class="block mx-auto max-w-xs"
@@ -197,6 +209,18 @@
                     </a>
 
                     <a
+                        href="https://devdojo.com"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/200077885-df84ffda-e265-4056-b129-a3ce05fd33b5.png"
+                            alt="Devdojo"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://laradir.com"
                         target="__blank"
                         class="block mx-auto max-w-xs"
@@ -204,18 +228,6 @@
                         <img
                             src="https://user-images.githubusercontent.com/41773797/198047886-3cbed5d7-f855-4529-9ab6-eebdb708b974.png"
                             alt="Laradir"
-                            class="block rounded-xl"
-                        />
-                    </a>
-
-                    <a
-                        href="https://ploi.io"
-                        target="__blank"
-                        class="block mx-auto max-w-xs"
-                    >
-                        <img
-                            src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png"
-                            alt="Ploi"
                             class="block rounded-xl"
                         />
                     </a>
