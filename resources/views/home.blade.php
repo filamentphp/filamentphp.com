@@ -328,7 +328,7 @@
                     6 months ago, Sam recommended Filament. I was put off because I use Vue not Livewire. Just spent 30 minutes with it, and <strong>WOW</strong>. Definitely pitching this at work!
 
                     <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/10789117?v=4">
-                        Chris
+                        Chris Oliver
                     </x-slot>
                 </x-testimonial>
 
@@ -408,7 +408,7 @@
                     We chose Filament and <strong>clients love it</strong>. It is <strong>consistent</strong> and <strong>clean</strong> so the <strong>learning curve is better</strong>.
 
                     <x-slot name="author" avatar="https://avatars.githubusercontent.com/u/1298094?v=4">
-                        nKornel
+                        Kornel M. Novak
                     </x-slot>
                 </x-testimonial>
 
