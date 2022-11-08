@@ -65,7 +65,7 @@
 
                                     {{ $stars }} {{ str('star')->plural($stars) }}
 
-                                    <x-heroicon-s-star class="w-3 h-3 text-yellow-500" />
+                                    <x-heroicon-s-star class="w-3 h-3 text-amber-500" />
                                 </a>
                             @endif
                         </p>

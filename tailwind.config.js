@@ -12,9 +12,9 @@ module.exports = {
         extend: {
             colors: {
                 danger: colors.rose,
-                primary: colors.yellow,
+                primary: colors.amber,
                 success: colors.green,
-                warning: colors.yellow,
+                warning: colors.amber,
             },
             fontFamily: {
                 heading: ['Lexend', ...fontFamily.sans],

@@ -4,7 +4,7 @@
     class="group flex items-center gap-2"
 >
     <dt>
-        <x-heroicon-o-star class="w-5 h-5 text-yellow-500" />
+        <x-heroicon-o-star class="w-5 h-5 text-amber-500" />
     </dt>
 
     <dd class="font-medium">
