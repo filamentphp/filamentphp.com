@@ -19,7 +19,7 @@ class FeedController extends Controller
                 'name' => $plugin->name,
                 'slug' => $plugin->slug,
                 'description' => $plugin->description,
-                'thumbnail' => $plugin->getThumbnailUrl(),
+                'thumbnail_url' => $plugin->getThumbnailUrl(),
                 'categories' => collect($plugin->categories)->map(fn (string $category): string => PluginCategory::tryFrom($category)?->getLabel())->all(),
                 'github_repository' => $plugin->github_repository,
                 'license' => $plugin->license,
