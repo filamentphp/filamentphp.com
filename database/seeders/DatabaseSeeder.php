@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@filamentphp.com',
             'password' => Hash::make('password'),
             'is_admin' => true,
+            'email_verified_at' => now(),
         ]);
     }
 }
