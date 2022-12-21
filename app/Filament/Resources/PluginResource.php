@@ -63,7 +63,7 @@ class PluginResource extends Resource
                     ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
                     ->disableLabel()
                     ->columnSpan('full'),
-                Forms\Components\TextInput::make('unlock_id')
+                Forms\Components\TextInput::make('anystack_id')
                     ->label('Anystack Product ID')
                     ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
                     ->maxLength(255)
