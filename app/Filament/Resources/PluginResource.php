@@ -58,17 +58,17 @@ class PluginResource extends Resource
                     ->placeholder('vendor/filament-plugin')
                     ->maxLength(255)
                     ->hidden(fn (Closure $get): bool => (bool) $get('is_paid')),
-                Forms\Components\Placeholder::make('unlock_advertising_notice')
-                    ->content(new HtmlString('We\'ve partnered with <a href="https://unlock.sh" target="_blank"><strong>Unlock.sh</strong></a> to allow you to advertise your paid plugins on our website. To set this up, visit the <strong>Advertising</strong> section of your Unlock product page, and opt-in to advertising on the <strong>Filament Website</strong>. If you do not follow these instructions, visitors will not see a checkout link for your product.'))
+                Forms\Components\Placeholder::make('anystack_advertising_notice')
+                    ->content(new HtmlString('We\'ve partnered with <a href="https://anystack.sh" target="_blank"><strong>Anystack.sh</strong></a> to allow you to advertise your paid plugins on our website. To set this up, visit the <strong>Advertising</strong> section of your Anystack product page, and opt-in to advertising on the <strong>Filament Website</strong>. If you do not follow these instructions, visitors will not see a checkout link for your product.'))
                     ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
                     ->disableLabel()
                     ->columnSpan('full'),
                 Forms\Components\TextInput::make('unlock_id')
-                    ->label('Unlock ID')
+                    ->label('Anystack Product ID')
                     ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
                     ->maxLength(255)
                     ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
-                    ->helperText('You can find this from your <a href="https://unlock.sh" target="_blank">Unlock.sh</a> product settings.'),
+                    ->helperText('You can find this from your <a href="https://anystack.sh" target="_blank">Anystack.sh</a> product settings.'),
                 Forms\Components\TextInput::make('url')
                     ->label('URL')
                     ->placeholder('https://yourwebsite.com/filament-plugin')

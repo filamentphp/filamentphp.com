@@ -8,7 +8,7 @@ use App\Models\Plugin;
 use Illuminate\Support\Facades\Http;
 use Throwable;
 
-class FetchPluginDataFromUnlock
+class FetchPluginDataFromAnystack
 {
     public function __invoke(): void
     {
@@ -26,11 +26,11 @@ class FetchPluginDataFromUnlock
          * it really isn't vital to this app servicing its users :)
          */
 
-        $unlock = Http::withToken(config('services.unlock.token'));
+        $anystack = Http::withToken(config('services.anystack.token'));
 
         try {
-            $advertismentChannels = $unlock
-                ->get('https://api.unlock.sh/v1/affiliate-beta')
+            $advertismentChannels = $anystack
+                ->get('https://api.anystack.sh/v1/affiliate-beta')
                 ->json()
                 ['data'];
 
@@ -91,7 +91,7 @@ class FetchPluginDataFromUnlock
                     echo "Caching price for plugin {$plugin->getKey()} - {$price}. \n";
                 });
         } catch (Throwable $exception) {
-            echo "Failed to fetch any data from Unlock. \n";
+            echo "Failed to fetch any data from Anystack. \n";
 
             // 👹
         }
