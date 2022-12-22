@@ -8,7 +8,7 @@ use App\Models\Plugin;
 use Illuminate\Support\Facades\Http;
 use Throwable;
 
-class FetchPluginDataFromUnlock
+class FetchPluginDataFromAnystack
 {
     public function __invoke(): void
     {
@@ -26,11 +26,11 @@ class FetchPluginDataFromUnlock
          * it really isn't vital to this app servicing its users :)
          */
 
-        $unlock = Http::withToken(config('services.unlock.token'));
+        $anystack = Http::withToken(config('services.anystack.token'));
 
         try {
-            $advertismentChannels = $unlock
-                ->get('https://api.unlock.sh/v1/affiliate-beta')
+            $advertismentChannels = $anystack
+                ->get('https://api.anystack.sh/v1/affiliate-beta')
                 ->json()
                 ['data'];
 
@@ -45,21 +45,21 @@ class FetchPluginDataFromUnlock
             Plugin::query()
                 ->inRandomOrder()
                 ->where('is_paid', true)
-                ->whereNotNull('unlock_id')
+                ->whereNotNull('anystack_id')
                 ->get()
                 ->each(function (Plugin $plugin) use ($advertisedProducts): void {
-                    if (blank($plugin->unlock_id)) {
+                    if (blank($plugin->anystack_id)) {
                         return;
                     }
 
-                    if (! $advertisedProducts->has($plugin->unlock_id)) {
+                    if (! $advertisedProducts->has($plugin->anystack_id)) {
                         cache()->forget($plugin->getCheckoutUrlCacheKey());
                         cache()->forget($plugin->getPriceCacheKey());
 
                         return;
                     }
 
-                    $advertisedProducts = $advertisedProducts->get($plugin->unlock_id);
+                    $advertisedProducts = $advertisedProducts->get($plugin->anystack_id);
 
                     $checkoutUrl = $advertisedProducts['checkout_url'];
 
@@ -91,7 +91,7 @@ class FetchPluginDataFromUnlock
                     echo "Caching price for plugin {$plugin->getKey()} - {$price}. \n";
                 });
         } catch (Throwable $exception) {
-            echo "Failed to fetch any data from Unlock. \n";
+            echo "Failed to fetch any data from Anystack. \n";
 
             // 👹
         }
