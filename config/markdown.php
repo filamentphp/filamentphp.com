@@ -65,6 +65,7 @@ return [
 
     'table_of_contents' => [
         'style' => 'bullet',
+        'max_heading_level' => 2,
     ],
 
     /*

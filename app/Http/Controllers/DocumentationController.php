@@ -68,6 +68,7 @@ class DocumentationController extends Controller
                             ->orWhereNull('section_slug');
                     });
                 })
+                ->where('slug', '!=', 'installation')
                 ->first();
 
             $page ??= $package->getPagesQuery()->first();

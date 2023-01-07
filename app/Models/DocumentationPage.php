@@ -34,8 +34,8 @@ class DocumentationPage extends Model
                     $pageOrder = (string) Str::of($file->getFilename())->before('-');
 
                     $sectionOrder = (string) Str::of($file->getRelativePath())->before('-');
-                    $sectionSlug = (string) Str::of($file->getRelativePath())->after('-')->beforeLast('.')->replace('-', ' ');
-                    $section = Str::title($sectionSlug);
+                    $sectionSlug = (string) Str::of($file->getRelativePath())->after('-')->beforeLast('.');
+                    $section = (string) Str::of($sectionSlug)->ucfirst()->replace('-', ' ');
 
                     $slug = Str::of($file->getFilename())->after('-')->beforeLast('.');
                     $slug = filled($sectionSlug) ? ("{$sectionSlug}/{$slug}") : $slug;
