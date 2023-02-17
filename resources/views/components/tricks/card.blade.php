@@ -30,7 +30,7 @@
                     <span class="text-xs inline-flex items-center gap-1">
                         {{ $trick->favorites ?: 0 }}
 
-                        <x-heroicon-s-star class="w-3 h-3 text-yellow-500" />
+                        <x-heroicon-s-star class="w-3 h-3 text-amber-500" />
                     </span>
 
                     <span class="shrink-0 text-xs inline-flex items-center gap-1">

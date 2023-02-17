@@ -14,7 +14,7 @@ module.exports = {
                 danger: colors.rose,
                 primary: colors.amber,
                 success: colors.green,
-                warning: colors.yellow,
+                warning: colors.amber,
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

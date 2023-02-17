@@ -209,18 +209,6 @@
                     </a>
 
                     <a
-                        href="https://devdojo.com"
-                        target="__blank"
-                        class="block mx-auto max-w-xs"
-                    >
-                        <img
-                            src="https://user-images.githubusercontent.com/41773797/200077885-df84ffda-e265-4056-b129-a3ce05fd33b5.png"
-                            alt="Devdojo"
-                            class="block rounded-xl"
-                        />
-                    </a>
-
-                    <a
                         href="https://laradir.com"
                         target="__blank"
                         class="block mx-auto max-w-xs"

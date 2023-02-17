@@ -42,7 +42,7 @@
             </ul>
 
             <p>
-                Wanna sell your plugins? 🤑 We've partnered with <a href="https://unlock.sh" target="_blank">Unlock</a>. They make it easy to sell, license and distribute your plugins. If you submit your plugin to their platform and opt-in to Filament's "affiliate channel". A link to your Unlock checkout will be automatically added to your plugin page. 🤯
+                Wanna sell your plugins? 🤑 We've partnered with <a href="https://anystack.sh" target="_blank">Anystack</a>. They make it easy to sell, license and distribute your plugins. If you submit your plugin to their platform and opt-in to Filament's "affiliate channel". A link to your Anystack checkout will be automatically added to your plugin page. 🤯
             </p>
         </div>
     </x-filament::card>

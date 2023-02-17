@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Actions\FetchLinkThumbnails;
 use App\Actions\FetchPluginDataFromGitHub;
 use App\Actions\FetchPluginDataFromPackagist;
-use App\Actions\FetchPluginDataFromUnlock;
+use App\Actions\FetchPluginDataFromAnystack;
 use App\Actions\FetchPluginThumbnails;
 use Illuminate\Console\Command;
 
@@ -18,13 +18,13 @@ class FetchRemoteData extends Command
     public function handle(
         FetchLinkThumbnails $fetchLinkThumbnails,
         FetchPluginDataFromGitHub $fetchPluginDataFromGitHub,
-        FetchPluginDataFromUnlock $fetchPluginDataFromUnlock,
+        FetchPluginDataFromAnystack $fetchPluginDataFromAnystack,
         FetchPluginThumbnails $fetchPluginThumbnails,
     ): int
     {
         $fetchLinkThumbnails();
         $fetchPluginDataFromGitHub();
-        $fetchPluginDataFromUnlock();
+        $fetchPluginDataFromAnystack();
         $fetchPluginThumbnails();
 
         return 0;
