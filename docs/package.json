@@ -10,7 +10,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "generate": "npm run sync && astro build && npm run torchlight",
+    "generate": "npm run sync && astro build && npm run torchlight && mv dist ../public/docs",
     "preview": "astro preview",
     "astro": "astro"
   },

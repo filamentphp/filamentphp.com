@@ -4,18 +4,18 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                                           |
-| :--------------------- | :--------------------------------------------------------------- |
-| `npm run checkout`     | Pulls down the latest Filament docs                              |
-| `npm run sync`         | Pulls down the latest Filament docs and syncs the markdown files |
-| `npm run torchlight`   | Process files with Torchlight.dev                                |
-| `npm install`          | Installs dependencies                                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`                      |
-| `npm run build`        | Build your production site to `./dist/`                          |
-| `npm run generate`     | Sync, Build and Highlight the production site to `./dist/`       |
-| `npm run preview`      | Preview your build locally, before deploying                     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check`                 |
-| `npm run astro --help` | Get help using the Astro CLI                                     |
+| Command                | Action                                                             |
+| :--------------------- |:-------------------------------------------------------------------|
+| `npm run checkout`     | Pulls down the latest Filament docs                                |
+| `npm run sync`         | Pulls down the latest Filament docs and syncs the markdown files   |
+| `npm run torchlight`   | Process files with Torchlight.dev                                  |
+| `npm install`          | Installs dependencies                                              |
+| `npm run dev`          | Starts local dev server at `localhost:3000`                        |
+| `npm run build`        | Build your production site to `./dist/`                            |
+| `npm run generate`     | Sync, Build and Highlight the production site to `../public/docs/` |
+| `npm run preview`      | Preview your build locally, before deploying                       |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check`                   |
+| `npm run astro --help` | Get help using the Astro CLI                                       |
 
 ## MDX Components
 
