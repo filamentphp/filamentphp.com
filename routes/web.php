@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use Illuminate\Http\File;
 use Illuminate\Support\Facades\Route;
 use Pirsch\Facades\Pirsch;
 
@@ -20,14 +21,24 @@ Route::view('/', 'home')->name('home');
 Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
 
 Route::prefix('/docs')->group(function () {
-    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
-
     Route::redirect('/getting-started', '/docs/app/getting-started');
     Route::redirect('/resources', '/docs/app/resources');
     Route::redirect('/pages', '/docs/app/pages');
     Route::redirect('/dashboard', '/docs/app/dashboard');
     Route::redirect('/navigation', '/docs/app/navigation');
     Route::redirect('/plugin-development', '/docs/app/plugin-development');
+
+    Route::get('/{slug?}', function (?string $slug = null): string {
+        $slug = trim($slug, '/');
+
+        $filePath = public_path("docs/{$slug}/index.html");
+
+        if (! file_exists($filePath)) {
+            abort(404);
+        }
+
+        return file_get_contents($filePath);
+    })->where('slug', '.*')->name('docs');
 });
 
 Route::prefix('/links')->group(function () {

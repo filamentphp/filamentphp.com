@@ -4,7 +4,6 @@
 /public/build
 /public/js
 /public/mix-manifest.json
-/resources/filament
 /public/storage
 /storage/*.key
 /vendor
