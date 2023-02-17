@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import './fonts.css';
+@import './docsearch.css';
+@import './torchlight.css';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    iframe {
+        max-width: 100%;
+    }
+}
+
+@layer components {
+    details summary {
+        cursor: pointer;
+    }
+
+    details summary p {
+        display: inline-block;
+        margin-block: .75em !important;
+    }
+}

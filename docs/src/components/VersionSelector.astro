@@ -1,0 +1,49 @@
+---
+import navigation from '../navigation.json'
+
+const versions = navigation.map((item) => {
+  return {
+    version: item.version,
+    href: item.href,
+  }
+}).reverse();
+
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/2.x/admin/", "2.x", "admin"];
+let currentVersion = segments[1].replaceAll("/", "");
+---
+
+<div x-data>
+  <p class="sr-only">Version</p>
+    <button
+        x-on:click="$refs.panel.toggle"
+        type="button"
+        class="flex h-6 items-center justify-center whitespace-nowrap rounded-lg px-3 text-sm text-slate-600 shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-700 dark:text-slate-300 dark:ring-inset dark:ring-white/5"
+        aria-label="Open version options"
+    >
+      <span class="inline xl:hidden">v&nbsp;</span>
+      <span class="hidden xl:inline">Version&nbsp;</span>
+      <span>{currentVersion}</span>
+    </button>
+
+    <div
+        x-ref="panel"
+        x-float.shift.offset.trap="{shift: {padding: 12}}"
+        class="absolute space-y-1 rounded-xl bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/5"
+        aria-label="Version options"
+    >
+        {versions.map((version) => (
+          <a
+            href={version.href}
+            class="flex justify-center items-center rounded-[0.625rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white"
+            x-bind:class={`{
+              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': '${version.version}' === '${currentVersion}',
+              'text-slate-700 dark:text-slate-300': '${version.version}' !== '${currentVersion}',
+            }`}
+          >
+            <span class="inline xl:hidden">v&nbsp;</span>
+            <span class="hidden xl:inline">Version&nbsp;</span>
+            <span>{version.version}</span>
+          </a>
+        ))}
+    </div>
+</div>

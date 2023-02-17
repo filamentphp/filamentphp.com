@@ -1,0 +1,70 @@
+---
+import { Icon } from 'astro-icon'
+
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/2.x/admin/", "2.x", "admin"];
+
+let currentPackage = segments[2].replaceAll("/", "");
+
+const { navigation } = Astro.props;
+
+let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage);
+
+const pathName = Astro.url.pathname.replace(/\/+$/, '');
+---
+
+<nav
+  class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16"
+>
+  <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
+    {navigation?.links.map((section) => (
+      <li>
+        <a
+          href={section.href}
+          class:list={[
+            "block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900",
+            { "text-amber-500 before:bg-amber-500": pathName.includes(`/${section.slug}/`) },
+            { "text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": ! pathName.includes(`/${section.slug}/`) },
+          ]}
+        >
+          <h2 class="flex items-center gap-3">
+            <Icon name={section.icon} class="h-5 w-5" />
+            <span>{section.title}</span>
+          </h2>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <ul role="list" class="space-y-9">
+    {packageNavigation?.links.map((section) => (
+      <li>
+        <a
+          href={section.href}
+          class:list={[
+            "font-display font-bold",
+            { "text-amber-500 before:bg-amber-500": section.href === pathName },
+            { "text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": section.href !== pathName },
+          ]}
+        >
+          <h2 class="">{section.title}</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+          {section.links.map((link) => (
+            <li class="relative">
+              <a
+                href={link.href}
+                class:list={[
+                  "block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full",
+                  { "font-semibold text-amber-500 before:bg-amber-500": link.href === pathName },
+                  { "text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": link.href !== pathName },
+                ]}
+              >
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+  </ul>
+</nav>

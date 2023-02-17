@@ -1,0 +1,211 @@
+---
+import { collectHeadings, getAllLinks } from "src/lib/helpers";
+import Navigation from "@components/Navigation.astro";
+import Header from "@components/Header.astro";
+import Sponsors from "@components/Sponsors.astro";
+import Prose from "@components/Prose.astro";
+import Hero from "@components/Hero.astro";
+import rawNavigation from '../navigation.json';
+import "../styles/tailwind.css";
+
+function buildTitle(title, packageNavigation) {
+  if (packageNavigation) {
+    return `${title} - ${packageNavigation.title} - Filament`;
+  }
+
+  return `${title} - Filament`;
+}
+
+let { title = "Filament", description = "", pageTitle = null, githubUrl = null } = Astro.props.frontmatter || Astro.props;
+
+let { headings = [] } = Astro.props;
+
+let isHomePage = Astro.url.pathname === "/docs/";
+
+let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
+
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/2.x/admin/", "2.x", "admin", ""];
+
+let currentVersion = segments[1].replaceAll("/", "");
+let currentPackage = segments[2].replaceAll("/", "");
+let currentSection = segments[3].replaceAll("/", "");
+
+let navigation = rawNavigation.find((item) => item.version === currentVersion);
+let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage);
+
+let allLinks = getAllLinks(packageNavigation.links)
+let linkIndex = allLinks.findIndex((link) => link.href === Astro.url.pathname.replace(/\/+$/, ''))
+let previousPage = allLinks[linkIndex - 1]
+let nextPage = allLinks[linkIndex + 1]
+
+let section = packageNavigation.links.find((item) => item.slug === currentSection);
+
+pageTitle = pageTitle ?? buildTitle(title, packageNavigation);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/docs/favicon.ico" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <script src="../scripts/app.js"></script>
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- hack for flash of theme -->
+    <script>
+      let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+      let theme = window.localStorage.theme ?? "system";
+
+      if (theme === "dark" || (theme === "system" && isDarkMode.matches)) {
+        document.documentElement.classList.add("dark");
+      } else if (theme === "light" || (theme === "system" && !isDarkMode.matches)) {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <Header navigation={navigation} />
+
+    {isHomePage && <Hero getStartedLink={navigation.href} />}
+
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+      <div class="hidden lg:relative lg:block lg:flex-none">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5" x-data={`{
+          position: 0,
+          init() {
+            this.position = localStorage.getItem('sidebarScrollPosition') || 0;
+
+            if (this.position > 0) {
+              this.$el.scrollTop = this.position;
+            }
+
+            this.$el.addEventListener('scroll', () => {
+              this.position = this.$el.scrollTop;
+              localStorage.setItem('sidebarScrollPosition', this.position);
+            });
+          }
+        }`}>
+          <Navigation navigation={navigation} />
+        </div>
+      </div>
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+        <article>
+          {(title || section) && (
+            <header class="mb-9 space-y-1">
+              {! isHomePage && (
+                <p class="font-display text-sm font-bold text-amber-500">
+                  {packageNavigation.title} {section && (
+                    <>
+                      - {section.title}
+                    </>
+                    )}
+                </p>
+              )}
+              {title && (
+                <h1 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                  {title}
+                </h1>
+              )}
+            </header>
+          )}
+          <Prose>
+            <slot />
+            {githubUrl && (
+              <a href={githubUrl} class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a>
+            )}
+            <p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+          </p>
+          </Prose>
+        </article>
+        <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+          {previousPage && (
+              <div>
+                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                  Previous
+                </dt>
+                <dd class="mt-1">
+                  <a
+                    href={previousPage.href}
+                    class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300"
+                  >
+                    <span aria-hidden="true">&larr;</span> {previousPage.title}
+                  </a>
+                </dd>
+              </div>
+            )}
+            {nextPage && (
+              <div class="ml-auto text-right">
+                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                  Next
+                </dt>
+                <dd class="mt-1">
+                  <a
+                    href={nextPage.href}
+                    class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300"
+                  >
+                    {nextPage.title} <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </dd>
+              </div>
+            )}
+        </dl>
+      </div>
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
+          {
+            tableOfContents.length > 0 && (
+              <>
+                <h2 id="on-this-page-title" class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                  On this page
+                </h2>
+                <ol role="list" class="mt-4 space-y-3 text-sm"
+                  x-data={`tableOfContents(${JSON.stringify(tableOfContents)})`}
+                  x-on:scroll.window="updateCurrentSection"
+                >
+                  {tableOfContents.map((section) => (
+                    <li>
+                      <h3>
+                        <a
+                          href={`#${section.slug}`}
+                          x-bind:class={`current == '${section.slug}' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'`}
+                        >
+                          {section.title}
+                        </a>
+                      </h3>
+                      {section.children.length > 0 && (
+                        <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                          {section.children.map((subSection) => (
+                            <li>
+                              <a
+                                href={`#${subSection.slug}`}
+                                x-bind:class={`current == '${subSection.slug}' ? "text-amber-500" : "hover:text-slate-600 dark:hover:text-slate-300"`}
+                              >
+                                {subSection.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </>
+            )
+          }
+        </nav>
+        <div class="w-56">
+          <Sponsors />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

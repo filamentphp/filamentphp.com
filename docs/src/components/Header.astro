@@ -1,0 +1,36 @@
+---
+import Logo from "@components/Logo.astro";
+import MobileNavigation from "@components/MobileNavigation.astro";
+import VersionSelector from "@components/VersionSelector.astro";
+import ThemeSelector from "@components/ThemeSelector.astro";
+import { Icon } from "astro-icon";
+
+let { navigation = null } = Astro.props;
+---
+
+<header
+  x-data="{ isScrolled: false }"
+  x-on:scroll.window="isScrolled = window.scrollY > 0"
+  x-init="isScrolled = window.scrollY > 0"
+  class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8"
+  x-bind:class="isScrolled ? 'bg-white dark:bg-slate-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75' : 'bg-white dark:bg-transparent'"
+>
+  <div class="mr-6 flex lg:hidden">
+    <MobileNavigation navigation={navigation} pack={} />
+  </div>
+  <div class="relative flex flex-grow basis-0 items-center">
+    <a href="/docs/" aria-label="Home page" class="text-gray-900 dark:text-amber-500">
+      <Logo className="h-6 w-auto fill-slate-700 dark:fill-amber-500 md:block md:h-7" />
+    </a>
+  </div>
+  <div class="-my-5 mr-4 md:mr-8">
+    <div id="docsearch"></div>
+  </div>
+  <div class="relative flex basis-0 justify-end gap-4 md:flex-grow md:gap-8">
+    <VersionSelector class="relative z-10" />
+    <ThemeSelector class="relative z-10" />
+    <a href="https://github.com/filamentphp/filament" class="group hidden sm:block" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+      <Icon name="github" class="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
+    </a>
+  </div>
+</header>
