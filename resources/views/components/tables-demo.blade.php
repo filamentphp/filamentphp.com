@@ -82,7 +82,7 @@
             </div>
         </a>
 
-        <div class="absolute inset-0 flex items-center justify-center transition backdrop-blur-sm bg-white/20 group-hover:opacity-0 group-hover:hidden rounded-2xl">
+        <div class="absolute inset-0 flex items-center justify-center transition backdrop-blur-sm bg-white/10 group-hover:opacity-0 group-hover:hidden rounded-2xl">
             <div class="flex items-center bg-gray-900 py-2 px-4 rounded-lg font-medium sm:text-xl text-white">
                 <x-heroicon-o-play class="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
 

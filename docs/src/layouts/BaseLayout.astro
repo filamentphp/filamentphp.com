@@ -68,16 +68,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
     </script>
   </head>
-  <body class="bg-white dark:bg-slate-900">
+  <body class="bg-white dark:bg-gray-900">
     <Header navigation={navigation} />
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
 
     <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block"></div>
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-gray-50 dark:hidden"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
         <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5" x-data={`{
           position: 0,
           init() {
@@ -101,7 +101,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           {(title || section) && (
             <header class="mb-9 space-y-1">
               {! isHomePage && (
-                <p class="font-display text-sm font-bold text-amber-500">
+                <p class="font-display text-sm font-bold text-primary-500">
                   {packageNavigation.title} {section && (
                     <>
                       - {section.title}
@@ -110,7 +110,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 </p>
               )}
               {title && (
-                <h1 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {title}
                 </h1>
               )}
@@ -126,16 +126,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           </p>
           </Prose>
         </article>
-        <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
           {previousPage && (
               <div>
-                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   Previous
                 </dt>
                 <dd class="mt-1">
                   <a
                     href={previousPage.href}
-                    class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300"
+                    class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
                   >
                     <span aria-hidden="true">&larr;</span> {previousPage.title}
                   </a>
@@ -144,13 +144,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )}
             {nextPage && (
               <div class="ml-auto text-right">
-                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   Next
                 </dt>
                 <dd class="mt-1">
                   <a
                     href={nextPage.href}
-                    class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300"
+                    class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
                   >
                     {nextPage.title} <span aria-hidden="true">&rarr;</span>
                   </a>
@@ -164,7 +164,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           {
             tableOfContents.length > 0 && (
               <>
-                <h2 id="on-this-page-title" class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
                 </h2>
                 <ol role="list" class="mt-4 space-y-3 text-sm"
@@ -176,18 +176,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                       <h3>
                         <a
                           href={`#${section.slug}`}
-                          x-bind:class={`current == '${section.slug}' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'`}
+                          x-bind:class={`current == '${section.slug}' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'`}
                         >
                           {section.title}
                         </a>
                       </h3>
                       {section.children.length > 0 && (
-                        <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                        <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           {section.children.map((subSection) => (
                             <li>
                               <a
                                 href={`#${subSection.slug}`}
-                                x-bind:class={`current == '${subSection.slug}' ? "text-amber-500" : "hover:text-slate-600 dark:hover:text-slate-300"`}
+                                x-bind:class={`current == '${subSection.slug}' ? "text-primary-500" : "hover:text-gray-600 dark:hover:text-gray-300"`}
                               >
                                 {subSection.title}
                               </a>

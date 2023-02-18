@@ -21,9 +21,9 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
         <a
           href={section.href}
           class:list={[
-            "block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900",
-            { "text-amber-500 before:bg-amber-500": pathName.includes(`/${section.slug}/`) },
-            { "text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": ! pathName.includes(`/${section.slug}/`) },
+            "block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900",
+            { "text-primary-500 before:bg-primary-500": pathName.includes(`/${section.slug}/`) },
+            { "text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": ! pathName.includes(`/${section.slug}/`) },
           ]}
         >
           <h2 class="flex items-center gap-3">
@@ -41,22 +41,22 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
           href={section.href}
           class:list={[
             "font-display font-bold",
-            { "text-amber-500 before:bg-amber-500": section.href === pathName },
-            { "text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": section.href !== pathName },
+            { "text-primary-500 before:bg-primary-500": section.href === pathName },
+            { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": section.href !== pathName },
           ]}
         >
           <h2 class="">{section.title}</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           {section.links.map((link) => (
             <li class="relative">
               <a
                 href={link.href}
                 class:list={[
                   "block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full",
-                  { "font-semibold text-amber-500 before:bg-amber-500": link.href === pathName },
-                  { "text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300": link.href !== pathName },
+                  { "font-semibold text-primary-500 before:bg-primary-500": link.href === pathName },
+                  { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": link.href !== pathName },
                 ]}
               >
                 {link.title}
