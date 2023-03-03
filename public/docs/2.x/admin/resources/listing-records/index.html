@@ -12,23 +12,23 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.c7de98f6.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
-  <body class="bg-white dark:bg-slate-900">
-    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-slate-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75' : 'bg-white dark:bg-transparent'">
+  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <body class="bg-white dark:bg-gray-900">
+    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
     <div x-data class="flex items-center">
   <button type="button" class="relative" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
-    <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-slate-500" astro-icon="menu-icon"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-gray-500" astro-icon="menu-icon"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
   <div x-ref="panel" class="fixed !inset-0 z-50 flex items-start overflow-y-auto pr-10 lg:hidden" x-float.flip.teleport aria-label="Navigation" x-on:scroll="document.querySelector('body').classList.add('overflow-hidden')">
-    <div class="bg-slate-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"></div>
-    <div class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-slate-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black">
+    <div class="bg-gray-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"></div>
+    <div class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-gray-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black">
       <div class="flex items-center">
         <button type="button" aria-label="Close navigation">
-          <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-slate-500" astro-icon="close-icon"><path d="m5 5 14 14m0-14L5 19"/></svg>
+          <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-gray-500" astro-icon="close-icon"><path d="m5 5 14 14m0-14L5 19"/></svg>
         </button>
         <a href="/docs/" class="ml-6" aria-label="Home page">
-          <svg aria-hidden="true" viewBox="0 0 227 36" fill="none" class="h-6 w-auto fill-slate-700 dark:fill-amber-500 md:h-7">
+          <svg aria-hidden="true" viewBox="0 0 227 36" fill="none" class="h-6 w-auto fill-gray-700 dark:fill-primary-500 md:h-7">
   <path d="M6.21933775,30.869404 C6.53615894,29.3954967 6.8392053,27.9698013 7.12847682,26.5923179 C7.36953642,25.444415 7.6392936,24.172156 7.93774834,22.7755408 L8.1202649,21.922649 L9.59610573,14.8974834 L15.2487417,14.8974834 L16.2405298,10.2484768 L10.3311258,10.2484768 C10.3724503,10.0418543 10.4344371,9.73536424 10.5170861,9.32900662 C10.5997351,8.92264901 10.6686093,8.58172185 10.7237086,8.30622517 C10.944106,7.24556291 11.3435762,6.45006623 11.9221192,5.9197351 C12.5006623,5.38940397 13.2996026,5.12423841 14.3189404,5.12423841 C14.8974834,5.12423841 15.4691391,5.19311258 16.0339073,5.33086093 C16.5986755,5.46860927 17.135894,5.66145695 17.6455629,5.90940397 L19.133245,0.950463576 C18.6924503,0.757615894 18.1793377,0.588874172 17.5939073,0.444238411 C17.0084768,0.299602649 16.392053,0.189403974 15.7446358,0.113642384 C15.0972185,0.0378807947 14.4498013,-7.52892965e-15 13.8023841,-7.52892965e-15 C12.7830464,-7.52892965e-15 11.8050331,0.120529801 10.8683444,0.361589404 C9.93165563,0.602649007 9.07761589,1.00900662 8.30622517,1.58066225 C7.53483444,2.15231788 6.86331126,2.92715232 6.29165563,3.90516556 C5.72,4.88317881 5.28264901,6.10225166 4.97960265,7.56238411 C4.78675497,8.48529801 4.57668874,9.48741722 4.34940397,10.5687417 L4.41676798,10.2484768 L0.991788079,10.2484768 L1.88223241e-15,14.8974834 L3.42974811,14.8974834 L3.37951788,15.1342728 C3.28805298,15.5634967 3.19769007,15.9883126 3.10842914,16.4087205 L2.97536424,17.0360265 C2.75496689,18.0760265 2.55523179,19.0230464 2.37615894,19.8770861 L1.94225166,21.9433113 C1.58410596,23.6513907 1.25695364,25.1976159 0.960794702,26.5819868 C0.664635762,27.9663576 0.365033113,29.3954967 0.061986755,30.869404 L6.21933775,30.869404 Z"></path>
   <path d="M6.21933775 30.869404C6.53615894 29.3954967 6.8392053 27.9698013 7.12847682 26.5923179 7.36953642 25.444415 7.6392936 24.172156 7.93774834 22.7755408L8.1202649 21.922649 9.59610573 14.8974834 15.2487417 14.8974834 16.2405298 10.2484768 10.3311258 10.2484768C10.3724503 10.0418543 10.4344371 9.73536424 10.5170861 9.32900662 10.5997351 8.92264901 10.6686093 8.58172185 10.7237086 8.30622517 10.944106 7.24556291 11.3435762 6.45006623 11.9221192 5.9197351 12.5006623 5.38940397 13.2996026 5.12423841 14.3189404 5.12423841 14.8974834 5.12423841 15.4691391 5.19311258 16.0339073 5.33086093 16.5986755 5.46860927 17.135894 5.66145695 17.6455629 5.90940397L19.133245.950463576C18.6924503.757615894 18.1793377.588874172 17.5939073.444238411 17.0084768.299602649 16.392053.189403974 15.7446358.113642384 15.0972185.0378807947 14.4498013-7.52892965e-15 13.8023841-7.52892965e-15 12.7830464-7.52892965e-15 11.8050331.120529801 10.8683444.361589404 9.93165563.602649007 9.07761589 1.00900662 8.30622517 1.58066225 7.53483444 2.15231788 6.86331126 2.92715232 6.29165563 3.90516556 5.72 4.88317881 5.28264901 6.10225166 4.97960265 7.56238411 4.78675497 8.48529801 4.57668874 9.48741722 4.34940397 10.5687417L4.41676798 10.2484768.991788079 10.2484768 1.88223241e-15 14.8974834 3.42974811 14.8974834 3.37951788 15.1342728C3.28805298 15.5634967 3.19769007 15.9883126 3.10842914 16.4087205L2.97536424 17.0360265C2.75496689 18.0760265 2.55523179 19.0230464 2.37615894 19.8770861L1.94225166 21.9433113C1.58410596 23.6513907 1.25695364 25.1976159.960794702 26.5819868.664635762 27.9663576.365033113 29.3954967.061986755 30.869404L6.21933775 30.869404zM33.0168884 30.869404C33.3199347 29.3954967 33.6160937 27.9698013 33.9053652 26.5923179 34.1946367 25.2148344 34.5252328 23.6582781 34.8971533 21.922649L37.3146367 10.4757616C37.7141069 8.57483444 38.0963586 6.76688742 38.4613917 5.05192053 38.8264248 3.33695364 39.1811268 1.66675497 39.5254977.0413245033L33.2441732.578543046C32.8998023 2.23152318 32.5554314 3.87761589 32.2110606 5.51682119 31.8666897 7.15602649 31.508544 8.81589404 31.1366235 10.4964238L28.7398023 21.9433113C28.3678818 23.6513907 28.0372857 25.1976159 27.7480142 26.5819868 27.4587427 27.9663576 27.1556963 29.3954967 26.8388751 30.869404L33.0168884 30.869404z"></path>
   <path d="M7.76360127,10.0220563 L7.17400019,11.5167484 L9.93683655,13.4295679 C10.08577,13.5317892 10.165237,13.7232391 10.1433155,13.9157181 L10.1433155,13.9157181 L10.1336655,13.9734045 L9.94797514,14.8110642 C9.90120494,15.0220472 9.73878007,15.1744877 9.54721047,15.1871934 L9.54721047,15.1871934 L7.10850424,15.348384 L9.1940752,16.7802068 C9.3430087,16.8824281 9.42247562,17.073878 9.40055415,17.266357 L9.40055415,17.266357 L9.39090414,17.3240433 L9.2052138,18.161703 C9.1584436,18.3726861 8.99601872,18.5251265 8.80444913,18.5378323 L8.80444913,18.5378323 L6.36568243,18.6994056 L8.45131386,20.1308457 C8.60024735,20.2330669 8.67971427,20.4245169 8.65779281,20.6169958 L8.65779281,20.6169958 L8.64814279,20.6746822 L8.46245246,21.5123419 C8.41568226,21.7233249 8.25325738,21.8757654 8.06168779,21.8884711 L8.06168779,21.8884711 L5.62330701,22.0499389 L7.70855252,23.4814845 C7.85748601,23.5837058 7.93695293,23.7751557 7.91503146,23.9676347 L7.91503146,23.9676347 L7.90538145,24.025321 L7.71969111,24.8629808 C7.67292091,25.0739638 7.51049604,25.2264042 7.31892644,25.23911 L7.31892644,25.23911 L4.88049368,25.4004644 L6.96579117,26.8321234 C7.11472467,26.9343446 7.19419159,27.1257946 7.17227012,27.3182735 L7.17227012,27.3182735 L7.1626201,27.3759599 L6.97692977,28.2136196 C6.93015957,28.4246027 6.76773469,28.5770431 6.5761651,28.5897489 L6.5761651,28.5897489 L3.15615734,28.8867356 L2.73059667,30.6834437 L1.65810338e-13,30.6834437 L0.844309309,27.3823469 C0.891079509,27.1713638 1.05350438,27.0189234 1.24507398,27.0062176 L1.24507398,27.0062176 L3.68360647,26.8441405 L1.59820925,25.4132042 C1.44927575,25.310983 1.36980884,25.119533 1.3917303,24.9270541 L1.3917303,24.9270541 L1.40138032,24.8693677 L1.58707065,24.031708 C1.63384085,23.820725 1.79626573,23.6682845 1.98783532,23.6555788 L1.98783532,23.6555788 L4.42598189,23.4936072 L2.34097059,22.0625654 C2.1920371,21.9603441 2.11257018,21.7688942 2.13449165,21.5764152 L2.13449165,21.5764152 L2.14414166,21.5187289 L2.329832,20.6810692 C2.3766022,20.4700861 2.53902707,20.3176457 2.73059667,20.3049399 L2.73059667,20.3049399 L5.16879522,20.1430817 L3.08373193,18.7119265 C2.93479844,18.6097053 2.85533152,18.4182553 2.87725299,18.2257764 L2.87725299,18.2257764 L2.886903,18.16809 L3.07259334,17.3304303 C3.11936354,17.1194473 3.28178842,16.9670068 3.47335801,16.954301 L3.47335801,16.954301 L5.91160855,16.7925562 L3.82649328,15.3612877 C3.67755979,15.2590664 3.59809287,15.0676165 3.62001433,14.8751375 L3.62001433,14.8751375 L3.62966435,14.8174512 L3.81535468,13.9797914 C3.86212488,13.7688084 4.02454976,13.6163679 4.21611935,13.6036622 L4.21611935,13.6036622 L6.65442188,13.4420307 L4.56925462,12.0106488 C4.42032113,11.9084276 4.34085421,11.7169776 4.36277568,11.5244987 L4.36277568,11.5244987 L4.37242569,11.4668123 L4.75211424,10.136163 L7.76360127,10.0220563 Z M9.86368572,-7.2183613e-14 C10.9833126,-7.2183613e-14 11.8129156,0.375364238 12.3524948,1.12609272 C12.892074,1.87682119 13.0539478,2.77562914 12.8381161,3.82251656 C12.5953054,5.02092715 12.0928223,5.83019868 11.3306667,6.25033113 C10.5685111,6.67046358 9.62087508,6.8805298 8.48775876,6.8805298 C7.38162139,6.8805298 6.548646,6.55337748 5.98883258,5.89907285 C5.42901916,5.24476821 5.27051777,4.31152318 5.51332841,3.09933775 C5.74264957,1.99735099 6.2451327,1.20529801 7.0207778,0.723178808 C7.79642291,0.241059603 8.74405888,-7.2183613e-14 9.86368572,-7.2183613e-14 Z" transform="translate(16.045 .186)"></path>
@@ -40,28 +40,28 @@
         <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/2.x/admin/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-amber-500 before:bg-amber-500">
+        <a href="/docs/2.x/admin/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/forms/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/forms/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
             <span>Form Builder</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/notifications/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/notifications/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
             <span>Notifications</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/tables/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
             <span>Table Builder</span>
@@ -71,163 +71,163 @@
   </ul>
   <ul role="list" class="space-y-9">
     <li>
-        <a href="/docs/2.x/admin/installation" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/installation" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Installation</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/resources/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/resources/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Resources</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/resources/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/listing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full font-semibold text-amber-500 before:bg-amber-500">
+              <a href="/docs/2.x/admin/resources/listing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full font-semibold text-primary-500 before:bg-primary-500">
                 Listing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/creating-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/creating-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Creating Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/editing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/editing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Editing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/viewing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/viewing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Viewing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/deleting-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/deleting-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Deleting Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/relation-managers" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/relation-managers" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Relation Managers
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/global-search" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/global-search" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Global Search
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Widgets
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/custom-pages" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/custom-pages" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Custom Pages
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/security" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/security" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Security
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/pages/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/pages/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Pages</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/pages/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/pages/actions" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/actions" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Actions
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/pages/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Widgets
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/dashboard/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/dashboard/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Dashboard</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/dashboard/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/stats" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/stats" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Stats
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/charts" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/charts" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Charts
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/tables" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/tables" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Tables
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/navigation" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/navigation" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Navigation</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/users" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/users" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Users</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/notifications" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/notifications" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Notifications</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/appearance" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/appearance" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Appearance</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/plugins" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/plugins" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Plugins</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/testing" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/upgrade-guide" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Upgrade Guide</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li>
@@ -239,8 +239,8 @@
 </div>
   </div>
   <div class="relative flex flex-grow basis-0 items-center">
-    <a href="/docs/" aria-label="Home page" class="text-gray-900 dark:text-amber-500">
-      <svg aria-hidden="true" viewBox="0 0 227 36" fill="none" class="h-6 w-auto fill-slate-700 dark:fill-amber-500 md:block md:h-7">
+    <a href="/docs/" aria-label="Home page" class="text-gray-900 dark:text-primary-500">
+      <svg aria-hidden="true" viewBox="0 0 227 36" fill="none" class="h-6 w-auto fill-gray-700 dark:fill-primary-500 md:block md:h-7">
   <path d="M6.21933775,30.869404 C6.53615894,29.3954967 6.8392053,27.9698013 7.12847682,26.5923179 C7.36953642,25.444415 7.6392936,24.172156 7.93774834,22.7755408 L8.1202649,21.922649 L9.59610573,14.8974834 L15.2487417,14.8974834 L16.2405298,10.2484768 L10.3311258,10.2484768 C10.3724503,10.0418543 10.4344371,9.73536424 10.5170861,9.32900662 C10.5997351,8.92264901 10.6686093,8.58172185 10.7237086,8.30622517 C10.944106,7.24556291 11.3435762,6.45006623 11.9221192,5.9197351 C12.5006623,5.38940397 13.2996026,5.12423841 14.3189404,5.12423841 C14.8974834,5.12423841 15.4691391,5.19311258 16.0339073,5.33086093 C16.5986755,5.46860927 17.135894,5.66145695 17.6455629,5.90940397 L19.133245,0.950463576 C18.6924503,0.757615894 18.1793377,0.588874172 17.5939073,0.444238411 C17.0084768,0.299602649 16.392053,0.189403974 15.7446358,0.113642384 C15.0972185,0.0378807947 14.4498013,-7.52892965e-15 13.8023841,-7.52892965e-15 C12.7830464,-7.52892965e-15 11.8050331,0.120529801 10.8683444,0.361589404 C9.93165563,0.602649007 9.07761589,1.00900662 8.30622517,1.58066225 C7.53483444,2.15231788 6.86331126,2.92715232 6.29165563,3.90516556 C5.72,4.88317881 5.28264901,6.10225166 4.97960265,7.56238411 C4.78675497,8.48529801 4.57668874,9.48741722 4.34940397,10.5687417 L4.41676798,10.2484768 L0.991788079,10.2484768 L1.88223241e-15,14.8974834 L3.42974811,14.8974834 L3.37951788,15.1342728 C3.28805298,15.5634967 3.19769007,15.9883126 3.10842914,16.4087205 L2.97536424,17.0360265 C2.75496689,18.0760265 2.55523179,19.0230464 2.37615894,19.8770861 L1.94225166,21.9433113 C1.58410596,23.6513907 1.25695364,25.1976159 0.960794702,26.5819868 C0.664635762,27.9663576 0.365033113,29.3954967 0.061986755,30.869404 L6.21933775,30.869404 Z"></path>
   <path d="M6.21933775 30.869404C6.53615894 29.3954967 6.8392053 27.9698013 7.12847682 26.5923179 7.36953642 25.444415 7.6392936 24.172156 7.93774834 22.7755408L8.1202649 21.922649 9.59610573 14.8974834 15.2487417 14.8974834 16.2405298 10.2484768 10.3311258 10.2484768C10.3724503 10.0418543 10.4344371 9.73536424 10.5170861 9.32900662 10.5997351 8.92264901 10.6686093 8.58172185 10.7237086 8.30622517 10.944106 7.24556291 11.3435762 6.45006623 11.9221192 5.9197351 12.5006623 5.38940397 13.2996026 5.12423841 14.3189404 5.12423841 14.8974834 5.12423841 15.4691391 5.19311258 16.0339073 5.33086093 16.5986755 5.46860927 17.135894 5.66145695 17.6455629 5.90940397L19.133245.950463576C18.6924503.757615894 18.1793377.588874172 17.5939073.444238411 17.0084768.299602649 16.392053.189403974 15.7446358.113642384 15.0972185.0378807947 14.4498013-7.52892965e-15 13.8023841-7.52892965e-15 12.7830464-7.52892965e-15 11.8050331.120529801 10.8683444.361589404 9.93165563.602649007 9.07761589 1.00900662 8.30622517 1.58066225 7.53483444 2.15231788 6.86331126 2.92715232 6.29165563 3.90516556 5.72 4.88317881 5.28264901 6.10225166 4.97960265 7.56238411 4.78675497 8.48529801 4.57668874 9.48741722 4.34940397 10.5687417L4.41676798 10.2484768.991788079 10.2484768 1.88223241e-15 14.8974834 3.42974811 14.8974834 3.37951788 15.1342728C3.28805298 15.5634967 3.19769007 15.9883126 3.10842914 16.4087205L2.97536424 17.0360265C2.75496689 18.0760265 2.55523179 19.0230464 2.37615894 19.8770861L1.94225166 21.9433113C1.58410596 23.6513907 1.25695364 25.1976159.960794702 26.5819868.664635762 27.9663576.365033113 29.3954967.061986755 30.869404L6.21933775 30.869404zM33.0168884 30.869404C33.3199347 29.3954967 33.6160937 27.9698013 33.9053652 26.5923179 34.1946367 25.2148344 34.5252328 23.6582781 34.8971533 21.922649L37.3146367 10.4757616C37.7141069 8.57483444 38.0963586 6.76688742 38.4613917 5.05192053 38.8264248 3.33695364 39.1811268 1.66675497 39.5254977.0413245033L33.2441732.578543046C32.8998023 2.23152318 32.5554314 3.87761589 32.2110606 5.51682119 31.8666897 7.15602649 31.508544 8.81589404 31.1366235 10.4964238L28.7398023 21.9433113C28.3678818 23.6513907 28.0372857 25.1976159 27.7480142 26.5819868 27.4587427 27.9663576 27.1556963 29.3954967 26.8388751 30.869404L33.0168884 30.869404z"></path>
   <path d="M7.76360127,10.0220563 L7.17400019,11.5167484 L9.93683655,13.4295679 C10.08577,13.5317892 10.165237,13.7232391 10.1433155,13.9157181 L10.1433155,13.9157181 L10.1336655,13.9734045 L9.94797514,14.8110642 C9.90120494,15.0220472 9.73878007,15.1744877 9.54721047,15.1871934 L9.54721047,15.1871934 L7.10850424,15.348384 L9.1940752,16.7802068 C9.3430087,16.8824281 9.42247562,17.073878 9.40055415,17.266357 L9.40055415,17.266357 L9.39090414,17.3240433 L9.2052138,18.161703 C9.1584436,18.3726861 8.99601872,18.5251265 8.80444913,18.5378323 L8.80444913,18.5378323 L6.36568243,18.6994056 L8.45131386,20.1308457 C8.60024735,20.2330669 8.67971427,20.4245169 8.65779281,20.6169958 L8.65779281,20.6169958 L8.64814279,20.6746822 L8.46245246,21.5123419 C8.41568226,21.7233249 8.25325738,21.8757654 8.06168779,21.8884711 L8.06168779,21.8884711 L5.62330701,22.0499389 L7.70855252,23.4814845 C7.85748601,23.5837058 7.93695293,23.7751557 7.91503146,23.9676347 L7.91503146,23.9676347 L7.90538145,24.025321 L7.71969111,24.8629808 C7.67292091,25.0739638 7.51049604,25.2264042 7.31892644,25.23911 L7.31892644,25.23911 L4.88049368,25.4004644 L6.96579117,26.8321234 C7.11472467,26.9343446 7.19419159,27.1257946 7.17227012,27.3182735 L7.17227012,27.3182735 L7.1626201,27.3759599 L6.97692977,28.2136196 C6.93015957,28.4246027 6.76773469,28.5770431 6.5761651,28.5897489 L6.5761651,28.5897489 L3.15615734,28.8867356 L2.73059667,30.6834437 L1.65810338e-13,30.6834437 L0.844309309,27.3823469 C0.891079509,27.1713638 1.05350438,27.0189234 1.24507398,27.0062176 L1.24507398,27.0062176 L3.68360647,26.8441405 L1.59820925,25.4132042 C1.44927575,25.310983 1.36980884,25.119533 1.3917303,24.9270541 L1.3917303,24.9270541 L1.40138032,24.8693677 L1.58707065,24.031708 C1.63384085,23.820725 1.79626573,23.6682845 1.98783532,23.6555788 L1.98783532,23.6555788 L4.42598189,23.4936072 L2.34097059,22.0625654 C2.1920371,21.9603441 2.11257018,21.7688942 2.13449165,21.5764152 L2.13449165,21.5764152 L2.14414166,21.5187289 L2.329832,20.6810692 C2.3766022,20.4700861 2.53902707,20.3176457 2.73059667,20.3049399 L2.73059667,20.3049399 L5.16879522,20.1430817 L3.08373193,18.7119265 C2.93479844,18.6097053 2.85533152,18.4182553 2.87725299,18.2257764 L2.87725299,18.2257764 L2.886903,18.16809 L3.07259334,17.3304303 C3.11936354,17.1194473 3.28178842,16.9670068 3.47335801,16.954301 L3.47335801,16.954301 L5.91160855,16.7925562 L3.82649328,15.3612877 C3.67755979,15.2590664 3.59809287,15.0676165 3.62001433,14.8751375 L3.62001433,14.8751375 L3.62966435,14.8174512 L3.81535468,13.9797914 C3.86212488,13.7688084 4.02454976,13.6163679 4.21611935,13.6036622 L4.21611935,13.6036622 L6.65442188,13.4420307 L4.56925462,12.0106488 C4.42032113,11.9084276 4.34085421,11.7169776 4.36277568,11.5244987 L4.36277568,11.5244987 L4.37242569,11.4668123 L4.75211424,10.136163 L7.76360127,10.0220563 Z M9.86368572,-7.2183613e-14 C10.9833126,-7.2183613e-14 11.8129156,0.375364238 12.3524948,1.12609272 C12.892074,1.87682119 13.0539478,2.77562914 12.8381161,3.82251656 C12.5953054,5.02092715 12.0928223,5.83019868 11.3306667,6.25033113 C10.5685111,6.67046358 9.62087508,6.8805298 8.48775876,6.8805298 C7.38162139,6.8805298 6.548646,6.55337748 5.98883258,5.89907285 C5.42901916,5.24476821 5.27051777,4.31152318 5.51332841,3.09933775 C5.74264957,1.99735099 6.2451327,1.20529801 7.0207778,0.723178808 C7.79642291,0.241059603 8.74405888,-7.2183613e-14 9.86368572,-7.2183613e-14 Z" transform="translate(16.045 .186)"></path>
@@ -254,30 +254,30 @@
   <div class="relative flex basis-0 justify-end gap-4 md:flex-grow md:gap-8">
     <div x-data>
   <p class="sr-only">Version</p>
-    <button x-on:click="$refs.panel.toggle" type="button" class="flex h-6 items-center justify-center whitespace-nowrap rounded-lg px-3 text-sm text-slate-600 shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-700 dark:text-slate-300 dark:ring-inset dark:ring-white/5" aria-label="Open version options">
+    <button x-on:click="$refs.panel.toggle" type="button" class="flex h-6 items-center justify-center whitespace-nowrap rounded-md px-3 text-sm text-gray-600 shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:text-gray-300 dark:ring-inset dark:ring-white/5" aria-label="Open version options">
       <span class="inline xl:hidden">v&nbsp;</span>
       <span class="hidden xl:inline">Version&nbsp;</span>
       <span>2.x</span>
     </button>
 
-    <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-xl bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.625rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': '3.x' === '2.x',
-              'text-slate-700 dark:text-slate-300': '3.x' !== '2.x',
+    <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
+        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '2.x',
+              'text-gray-700 dark:text-gray-300': '3.x' !== '2.x',
             }">
             <span class="inline xl:hidden">v&nbsp;</span>
             <span class="hidden xl:inline">Version&nbsp;</span>
             <span>3.x</span>
-          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.625rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': '2.x' === '2.x',
-              'text-slate-700 dark:text-slate-300': '2.x' !== '2.x',
+          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '2.x',
+              'text-gray-700 dark:text-gray-300': '2.x' !== '2.x',
             }">
             <span class="inline xl:hidden">v&nbsp;</span>
             <span class="hidden xl:inline">Version&nbsp;</span>
             <span>2.x</span>
-          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.625rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': '1.x' === '2.x',
-              'text-slate-700 dark:text-slate-300': '1.x' !== '2.x',
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '2.x',
+              'text-gray-700 dark:text-gray-300': '1.x' !== '2.x',
             }">
             <span class="inline xl:hidden">v&nbsp;</span>
             <span class="hidden xl:inline">Version&nbsp;</span>
@@ -287,42 +287,42 @@
 </div>
     <div x-data="themeSelector">
   <p class="sr-only">Theme</p>
-  <button type="button" class="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-5 w-5 fill-amber-500 [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-4 w-4 fill-amber-500 [[data-theme=dark]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-5 w-5 fill-slate-400 [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-4 w-4 fill-slate-400 [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+  <button type="button" class="flex h-6 w-6 items-center justify-center rounded-md shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-5 w-5 fill-primary-500 [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-4 w-4 fill-primary-500 [[data-theme=dark]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-5 w-5 fill-gray-400 [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-4 w-4 fill-gray-400 [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
   </button>
-  <div x-ref="panel" class="absolute w-36 space-y-1 rounded-xl bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
-      <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': selected === 'light',
-              'text-slate-700 dark:text-slate-300': selected !== 'light',
+  <div x-ref="panel" class="absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
+      <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === 'light',
+              'text-gray-700 dark:text-gray-300': selected !== 'light',
             }">
-          <div class="rounded-md bg-white p-1 shadow ring-1 ring-slate-900/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'light' ? 'fill-amber-500 dark:fill-amber-500' : 'fill-slate-400'" class="h-4 w-4" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+          <div class="rounded-md bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'light' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'" class="h-4 w-4" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
           </div>
           <div class="ml-3">Light</div>
-        </button><button x-bind:key="dark" x-on:click="updateTheme('dark'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': selected === 'dark',
-              'text-slate-700 dark:text-slate-300': selected !== 'dark',
+        </button><button x-bind:key="dark" x-on:click="updateTheme('dark'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === 'dark',
+              'text-gray-700 dark:text-gray-300': selected !== 'dark',
             }">
-          <div class="rounded-md bg-white p-1 shadow ring-1 ring-slate-900/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'dark' ? 'fill-amber-500 dark:fill-amber-500' : 'fill-slate-400'" class="h-4 w-4" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+          <div class="rounded-md bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'dark' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'" class="h-4 w-4" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
           </div>
           <div class="ml-3">Dark</div>
-        </button><button x-bind:key="system" x-on:click="updateTheme('system'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 hover:bg-gray-100 hover:dark:bg-slate-900/40 hover:dark:text-white" x-bind:class="{
-              'text-amber-500 hover:text-amber-500 hover:dark:text-amber-500': selected === 'system',
-              'text-slate-700 dark:text-slate-300': selected !== 'system',
+        </button><button x-bind:key="system" x-on:click="updateTheme('system'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === 'system',
+              'text-gray-700 dark:text-gray-300': selected !== 'system',
             }">
-          <div class="rounded-md bg-white p-1 shadow ring-1 ring-slate-900/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'system' ? 'fill-amber-500 dark:fill-amber-500' : 'fill-slate-400'" class="h-4 w-4" astro-icon="heroicons:computer-desktop"><path fill-rule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5z" clip-rule="evenodd"/></svg>
+          <div class="rounded-md bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'system' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'" class="h-4 w-4" astro-icon="heroicons:computer-desktop"><path fill-rule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5z" clip-rule="evenodd"/></svg>
           </div>
           <div class="ml-3">System</div>
         </button>
   </div>
 </div>
     <a href="https://github.com/filamentphp/filament" class="group hidden sm:block" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-      <svg aria-hidden="true" viewBox="0 0 16 16" class="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" astro-icon="github"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      <svg aria-hidden="true" viewBox="0 0 16 16" class="h-6 w-6 fill-gray-900 group-hover:fill-primary-600 dark:fill-gray-300 dark:group-hover:fill-primary-500" astro-icon="github"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
     </a>
   </div>
 </header>
@@ -331,9 +331,9 @@
 
     <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block"></div>
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-gray-50 dark:hidden"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
         <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5" x-data="{
           position: 0,
           init() {
@@ -352,28 +352,28 @@
           <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/2.x/admin/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-amber-500 before:bg-amber-500">
+        <a href="/docs/2.x/admin/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/forms/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/forms/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
             <span>Form Builder</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/notifications/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/notifications/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
             <span>Notifications</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/2.x/tables/installation" class="block rounded-md bg-slate-100 px-4 py-2 font-display font-bold dark:bg-slate-900 text-slate-600 before:hidden before:bg-slate-300 hover:text-amber-500 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
             <span>Table Builder</span>
@@ -383,163 +383,163 @@
   </ul>
   <ul role="list" class="space-y-9">
     <li>
-        <a href="/docs/2.x/admin/installation" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/installation" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Installation</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/resources/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/resources/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Resources</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/resources/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/listing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full font-semibold text-amber-500 before:bg-amber-500">
+              <a href="/docs/2.x/admin/resources/listing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full font-semibold text-primary-500 before:bg-primary-500">
                 Listing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/creating-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/creating-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Creating Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/editing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/editing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Editing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/viewing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/viewing-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Viewing Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/deleting-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/deleting-records" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Deleting Records
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/relation-managers" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/relation-managers" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Relation Managers
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/global-search" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/global-search" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Global Search
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Widgets
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/custom-pages" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/custom-pages" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Custom Pages
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/resources/security" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/resources/security" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Security
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/pages/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/pages/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Pages</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/pages/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/pages/actions" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/actions" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Actions
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/pages/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/pages/widgets" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Widgets
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/dashboard/getting-started" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/dashboard/getting-started" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Dashboard</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           <li class="relative">
-              <a href="/docs/2.x/admin/dashboard/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/getting-started" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Getting Started
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/stats" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/stats" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Stats
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/charts" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/charts" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Charts
               </a>
             </li><li class="relative">
-              <a href="/docs/2.x/admin/dashboard/tables" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+              <a href="/docs/2.x/admin/dashboard/tables" class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
                 Tables
               </a>
             </li>
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/navigation" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/navigation" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Navigation</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/users" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/users" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Users</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/notifications" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/notifications" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Notifications</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/appearance" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/appearance" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Appearance</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/plugins" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/plugins" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Plugins</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/testing" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li><li>
-        <a href="/docs/2.x/admin/upgrade-guide" class="font-display font-bold text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-300 dark:before:bg-slate-700 dark:hover:text-slate-300">
+        <a href="/docs/2.x/admin/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Upgrade Guide</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
       </li>
@@ -550,15 +550,15 @@
       <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
         <article>
           <header class="mb-9 space-y-1">
-              <p class="font-display text-sm font-bold text-amber-500">
+              <p class="font-display text-sm font-bold text-primary-500">
                   Admin Panel 
                       - Resources
                 </p>
-              <h1 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Listing records
                 </h1>
             </header>
-          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-slate-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-slate-500 dark:prose-lead:text-slate-300 dark:prose-a:text-amber-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10 prose-code:font-normal dark:prose-hr:border-slate-800">
+          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <h2 id="columns">Columns</h2>
 <p>The <code>$table-&gt;columns()</code> method is used to define the <a href="../../tables/columns">columns</a> in your table. It is an array of column objects, in the order they should appear in your table.</p>
 <p>We have many columns available for your tables, including:</p>
@@ -716,6 +716,7 @@ public static function table(Table $table): Table
         -&gt;reorderable('sort');
 }
 </textarea></code></pre>
+<p>If you’re using mass assignment protection on your model, you will also need to add the <code>sort</code> attribute to the <code>$fillable</code> array there.</p>
 <p>When making the table reorderable, a new button will be available on the table to toggle reordering. Pagination will be disabled in reorder mode to allow you to move records between pages.</p>
 <p>The <code>reorderable()</code> method passes in the name of a column to store the record order in. If you use something like <a href="https://github.com/spatie/eloquent-sortable"><code>spatie/eloquent-sortable</code></a> with an order column such as <code>order_column</code>, you may pass this in to <code>reorderable()</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">reorderable</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">order_column</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Table;
@@ -757,23 +758,23 @@ public static function table(Table $table): Table
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
           <div>
-                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   Previous
                 </dt>
                 <dd class="mt-1">
-                  <a href="/docs/2.x/admin/resources/getting-started" class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300">
+                  <a href="/docs/2.x/admin/resources/getting-started" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300">
                     <span aria-hidden="true">&larr;</span> Getting Started
                   </a>
                 </dd>
               </div>
             <div class="ml-auto text-right">
-                <dt class="font-display text-sm font-bold text-slate-900 dark:text-white">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   Next
                 </dt>
                 <dd class="mt-1">
-                  <a href="/docs/2.x/admin/resources/creating-records" class="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-300">
+                  <a href="/docs/2.x/admin/resources/creating-records" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300">
                     Creating Records <span aria-hidden="true">&rarr;</span>
                   </a>
                 </dd>
@@ -782,92 +783,92 @@ public static function table(Table $table): Table
       </div>
       <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-slate-900 dark:text-white">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
                 </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;columns&#34;,&#34;text&#34;:&#34;Columns&#34;,&#34;title&#34;:&#34;Columns&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;sorting-a-column-by-default&#34;,&#34;text&#34;:&#34;Sorting a column by default&#34;,&#34;title&#34;:&#34;Sorting a column by default&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;filters&#34;,&#34;text&#34;:&#34;Filters&#34;,&#34;title&#34;:&#34;Filters&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;displaying-filters-above-or-below-the-table-content&#34;,&#34;text&#34;:&#34;Displaying filters above or below the table content&#34;,&#34;title&#34;:&#34;Displaying filters above or below the table content&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;actions&#34;,&#34;text&#34;:&#34;Actions&#34;,&#34;title&#34;:&#34;Actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;grouping-actions&#34;,&#34;text&#34;:&#34;Grouping actions&#34;,&#34;title&#34;:&#34;Grouping actions&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;bulk-actions&#34;,&#34;text&#34;:&#34;Bulk actions&#34;,&#34;title&#34;:&#34;Bulk actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;record-select-checkbox-position&#34;,&#34;text&#34;:&#34;Record select checkbox position&#34;,&#34;title&#34;:&#34;Record select checkbox position&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;reordering-records&#34;,&#34;text&#34;:&#34;Reordering records&#34;,&#34;title&#34;:&#34;Reordering records&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;polling-content&#34;,&#34;text&#34;:&#34;Polling content&#34;,&#34;title&#34;:&#34;Polling content&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorization&#34;,&#34;text&#34;:&#34;Authorization&#34;,&#34;title&#34;:&#34;Authorization&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-eloquent-query&#34;,&#34;text&#34;:&#34;Customizing the Eloquent query&#34;,&#34;title&#34;:&#34;Customizing the Eloquent query&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-view&#34;,&#34;text&#34;:&#34;Custom view&#34;,&#34;title&#34;:&#34;Custom view&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
-                        <a href="#columns" x-bind:class="current == 'columns' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#columns" x-bind:class="current == 'columns' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Columns
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           <li>
-                              <a href="#sorting-a-column-by-default" x-bind:class="current == 'sorting-a-column-by-default' ? &#34;text-amber-500&#34; : &#34;hover:text-slate-600 dark:hover:text-slate-300&#34;">
+                              <a href="#sorting-a-column-by-default" x-bind:class="current == 'sorting-a-column-by-default' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Sorting a column by default
                               </a>
                             </li>
                         </ol>
                     </li><li>
                       <h3>
-                        <a href="#filters" x-bind:class="current == 'filters' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#filters" x-bind:class="current == 'filters' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Filters
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           <li>
-                              <a href="#displaying-filters-above-or-below-the-table-content" x-bind:class="current == 'displaying-filters-above-or-below-the-table-content' ? &#34;text-amber-500&#34; : &#34;hover:text-slate-600 dark:hover:text-slate-300&#34;">
+                              <a href="#displaying-filters-above-or-below-the-table-content" x-bind:class="current == 'displaying-filters-above-or-below-the-table-content' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Displaying filters above or below the table content
                               </a>
                             </li>
                         </ol>
                     </li><li>
                       <h3>
-                        <a href="#actions" x-bind:class="current == 'actions' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#actions" x-bind:class="current == 'actions' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Actions
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           <li>
-                              <a href="#grouping-actions" x-bind:class="current == 'grouping-actions' ? &#34;text-amber-500&#34; : &#34;hover:text-slate-600 dark:hover:text-slate-300&#34;">
+                              <a href="#grouping-actions" x-bind:class="current == 'grouping-actions' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Grouping actions
                               </a>
                             </li>
                         </ol>
                     </li><li>
                       <h3>
-                        <a href="#bulk-actions" x-bind:class="current == 'bulk-actions' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#bulk-actions" x-bind:class="current == 'bulk-actions' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Bulk actions
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-300">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           <li>
-                              <a href="#record-select-checkbox-position" x-bind:class="current == 'record-select-checkbox-position' ? &#34;text-amber-500&#34; : &#34;hover:text-slate-600 dark:hover:text-slate-300&#34;">
+                              <a href="#record-select-checkbox-position" x-bind:class="current == 'record-select-checkbox-position' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Record select checkbox position
                               </a>
                             </li>
                         </ol>
                     </li><li>
                       <h3>
-                        <a href="#reordering-records" x-bind:class="current == 'reordering-records' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#reordering-records" x-bind:class="current == 'reordering-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Reordering records
                         </a>
                       </h3>
                       
                     </li><li>
                       <h3>
-                        <a href="#polling-content" x-bind:class="current == 'polling-content' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#polling-content" x-bind:class="current == 'polling-content' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Polling content
                         </a>
                       </h3>
                       
                     </li><li>
                       <h3>
-                        <a href="#authorization" x-bind:class="current == 'authorization' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#authorization" x-bind:class="current == 'authorization' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Authorization
                         </a>
                       </h3>
                       
                     </li><li>
                       <h3>
-                        <a href="#customizing-the-eloquent-query" x-bind:class="current == 'customizing-the-eloquent-query' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#customizing-the-eloquent-query" x-bind:class="current == 'customizing-the-eloquent-query' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Customizing the Eloquent query
                         </a>
                       </h3>
                       
                     </li><li>
                       <h3>
-                        <a href="#custom-view" x-bind:class="current == 'custom-view' ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-300'">
+                        <a href="#custom-view" x-bind:class="current == 'custom-view' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Custom view
                         </a>
                       </h3>
@@ -877,7 +878,7 @@ public static function table(Table $table): Table
         </nav>
         <div class="w-56">
           <aside class="space-y-8">
-  <h4 class="text-center font-display text-xl font-bold text-slate-900 dark:text-white xl:text-left">Sponsors</h4>
+  <h4 class="text-center font-display text-xl font-bold text-gray-900 dark:text-white xl:text-left">Sponsors</h4>
 
   <div class="space-y-4 pb-12">
     <a href="https://ploi.io" target="__blank" class="mx-auto block max-w-xs">
@@ -894,6 +895,10 @@ public static function table(Table $table): Table
 
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
+    </a>
+
+    <a href="https://uselocale.com" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
