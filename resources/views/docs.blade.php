@@ -221,6 +221,18 @@
                     </a>
 
                     <a
+                        href="https://uselocale.com"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/222703942-927b565f-e389-47b3-b583-0e605b17d9bd.png"
+                            alt="Locale"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://ego-trace.com"
                         target="__blank"
                         class="block bg-white rounded-xl p-4 mx-auto max-w-xs"
