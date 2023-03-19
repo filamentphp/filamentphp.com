@@ -210,11 +210,4 @@ versions.forEach((version) => {
 // write the navigation structure to a file
 fs.writeFileSync("./src/navigation.json", JSON.stringify(structure));
 
-// get all pages and update the frontmatter
-// const pages = getDirContents("./src/pages");
-
-// pages.forEach((page) => {
-//   updateFrontmatter(page);
-// });
-
 console.log("Sycning complete.");
