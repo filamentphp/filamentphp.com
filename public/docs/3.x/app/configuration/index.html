@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -589,35 +589,35 @@
 <p>When this documentation refers to the “configuration”, this is the file you need to edit. It allows you to completely customize the app.</p>
 <h3 id="creating-a-new-context">Creating a new context</h3>
 <p>To create a new context, you can use the <code>make:filament-context</code> command, passing in the unique name of the new context:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:context</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">app</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:context app
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:context app
+</code></pre>
 <p>This command will create a new context called “app”. A configuration file will be created at <code>app/Providers/Filament/AppContextProvider.php</code>. You can access this context at <code>/app</code>, but you can <a href="#changing-the-path">customize the path</a> if you don’t want that.</p>
 <p>Since this configuration file is also a <a href="https://laravel.com/docs/providers">Laravel service provider</a>, it needs to be registered in <code>config/app.php</code>. Filament will attempt to do this for you, but if you get a 404 when trying to access your context then this process has probably failed. You can manually register the service provider by adding it to the <code>providers</code> array.</p>
 <h2 id="changing-the-path">Changing the path</h2>
 <p>In a context configuration file, you can change the path that the app is accessible at using the <code>path()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">path</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">app</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 
 public function context(Context $context): Context
 {
     return $context
         // ...
-        -&gt;path('app');
+        -&gt;path(&#39;app&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <p>If you want the app to be accessible without any prefix, you can set this to be an empty string:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">path</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 
 public function context(Context $context): Context
 {
     return $context
         // ...
-        -&gt;path('');
+        -&gt;path(&#39;&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="render-hooks">Render hooks</h2>
 <p>Filament allows you to render Blade content at various points in the app layout. This is useful for integrations with packages like <a href="https://github.com/wire-elements/modal"><code>wire-elements/modal</code></a> which require you to add a Livewire component to your app.</p>
 <p>Here’s an example, integrating <a href="https://github.com/wire-elements/modal"><code>wire-elements/modal</code></a> with Filament:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blade</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">renderHook</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">body.start</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Blade</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">render</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">@livewire(</span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">livewire-ui-modal</span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">)</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 use Illuminate\Support\Facades\Blade;
 
 public function context(Context $context): Context
@@ -625,17 +625,17 @@ public function context(Context $context): Context
     return $context
         // ...
         -&gt;renderHook(
-            'body.start',
-            fn (): string =&gt; Blade::render('@livewire(\'livewire-ui-modal\')'),
+            &#39;body.start&#39;,
+            fn (): string =&gt; Blade::render(&#39;@livewire(\&#39;livewire-ui-modal\&#39;)&#39;),
         );
 }
-</textarea></code></pre>
+</code></pre>
 <p>You could also render view content from a file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">renderHook</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">body.start</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">impersonation-banner</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">$context-&gt;renderHook(
-    'body.start',
-    fn (): View =&gt; view('impersonation-banner'),
+<pre><code class="language-php">$context-&gt;renderHook(
+    &#39;body.start&#39;,
+    fn (): View =&gt; view(&#39;impersonation-banner&#39;),
 );
-</textarea></code></pre>
+</code></pre>
 <p>The available hooks are as follows:</p>
 <ul>
 <li><code>body.start</code> - after <code>&lt;body&gt;</code></li>
@@ -671,16 +671,16 @@ public function context(Context $context): Context
 </ul>
 <h2 id="setting-a-domain">Setting a domain</h2>
 <p>By default, Filament will respond to requests from all domains. If you’d like to scope it to a specific domain, you can use the <code>domain()</code> method, similar to <a href="https://laravel.com/docs/routing#route-group-subdomain-routing"><code>Route::domain()</code> in Laravel</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">domain</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">admin.example.com</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 
 public function context(Context $context): Context
 {
     return $context
         // ...
-        -&gt;domain('admin.example.com');
+        -&gt;domain(&#39;admin.example.com&#39;);
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/09-configuration.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/09-configuration.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

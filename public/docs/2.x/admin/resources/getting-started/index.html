@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -562,17 +562,17 @@
   <p>Resources are static classes that are used to build CRUD interfaces for your Eloquent models. They describe how administrators should be able to interact with data from your app - using tables and forms.</p>
 <h2 id="creating-a-resource">Creating a resource</h2>
 <p>To create a resource for the <code>App\Models\Customer</code> model:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer
+</code></pre>
 <p>This will create several files in the <code>app/Filament/Resources</code> directory:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">.</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource.php</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource</span></div><div class='line'><span style="color: #A6ACCD;">|   +-- Pages</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- CreateCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- EditCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- ListCustomers.php</span></div><textarea data-torchlight-original="true" style="display: none !important;">.
+<pre><code>.
 +-- CustomerResource.php
 +-- CustomerResource
 |   +-- Pages
 |   |   +-- CreateCustomer.php
 |   |   +-- EditCustomer.php
 |   |   +-- ListCustomers.php
-</textarea></code></pre>
+</code></pre>
 <p>Your new resource class lives in <code>CustomerResource.php</code>.</p>
 <p>The classes in the <code>Pages</code> directory are used to customize the pages in the admin panel that interact with your resource. They’re all full-page <a href="https://laravel-livewire.com">Livewire</a> components that you can customize in any way you wish.</p>
 <blockquote>
@@ -580,54 +580,54 @@
 </blockquote>
 <h3 id="simple-modal-resources">Simple (modal) resources</h3>
 <p>Sometimes, your models are simple enough that you only want to manage records on one page, using modals to create, edit and delete records. To generate a simple resource with modals:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--simple</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --simple
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer --simple
+</code></pre>
 <p>Your resource will have a “Manage” page, which is a List page with modals added.</p>
 <p>Additionally, your simple resource will have no <code>getRelations()</code> method, as <a href="relation-managers">relation managers</a> are only displayed on the Edit and View pages, which are not present in simple resources. Everything else is the same.</p>
 <h3 id="automatically-generating-forms-and-tables">Automatically generating forms and tables</h3>
 <p>If you’d like to save time, Filament can automatically generate the <a href="#forms">form</a> and <a href="#tables">table</a> for you, based on your model’s database columns.</p>
 <p>The <code>doctrine/dbal</code> package is required to use this functionality:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">doctrine/dbal</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require doctrine/dbal --dev
-</textarea></code></pre>
+<pre><code class="language-bash">composer require doctrine/dbal --dev
+</code></pre>
 <p>When creating your resource, you may now use <code>--generate</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--generate</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --generate
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer --generate
+</code></pre>
 <blockquote>
 <p>Note: If your table contains ENUM columns, <code>doctrine/dbal</code> is unable to scan your table and will crash. Hence Filament is unable to generate the schema for your resource if it contains an ENUM column. Read more about this issue <a href="https://github.com/doctrine/dbal/issues/3819#issuecomment-573419808">here</a>.</p>
 </blockquote>
 <h3 id="handling-soft-deletes">Handling soft deletes</h3>
 <p>By default, you will not be able to interact with deleted records in the admin panel. If you’d like to add functionality to restore, force delete and filter trashed records in your resource, use the <code>--soft-deletes</code> flag when generating the resource:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--soft-deletes</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --soft-deletes
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer --soft-deletes
+</code></pre>
 <p>You can find out more about soft deleting <a href="deleting-records#handling-soft-deletes">here</a>.</p>
 <h3 id="generating-a-view-page">Generating a View page</h3>
 <p>By default, only List, Create and Edit pages are generated for your resource. If you’d also like a <a href="viewing-records">View page</a>, use the <code>--view</code> flag:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--view</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --view
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer --view
+</code></pre>
 <h2 id="record-titles">Record titles</h2>
 <p>A <code>$recordTitleAttribute</code> may be set for your resource, which is the name of the column on your model that can be used to identify it from others.</p>
 <p>For example, this could be a blog post’s <code>title</code> or a customer’s <code>name</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recordTitleAttribute </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $recordTitleAttribute = 'name';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $recordTitleAttribute = &#39;name&#39;;
+</code></pre>
 <p>This is required for features like <a href="global-search">global search</a> to work.</p>
 <blockquote>
 <p>You may specify the name of an <a href="https://laravel.com/docs/eloquent-mutators#defining-an-accessor">Eloquent accessor</a> if just one column is inadequate at identifying a record.</p>
 </blockquote>
 <h2 id="forms">Forms</h2>
 <p>Resource classes contain a static <code>form()</code> method that is used to build the forms on the Create and Edit pages:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Form</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">email</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms;
+<pre><code class="language-php">use Filament\Forms;
 use Filament\Resources\Form;
 
 public static function form(Form $form): Form
 {
     return $form
         -&gt;schema([
-            Forms\Components\TextInput::make('name')-&gt;required(),
-            Forms\Components\TextInput::make('email')-&gt;email()-&gt;required(),
+            Forms\Components\TextInput::make(&#39;name&#39;)-&gt;required(),
+            Forms\Components\TextInput::make(&#39;email&#39;)-&gt;email()-&gt;required(),
             // ...
         ]);
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="fields">Fields</h3>
 <p>The <code>schema()</code> method is used to define the structure of your form. It is an array of <a href="../../forms/fields">fields</a>, in the order they should appear in your form.</p>
 <p>We have many fields available for your forms, including:</p>
@@ -656,24 +656,24 @@ public static function form(Form $form): Form
 <h3 id="hiding-components-contextually">Hiding components contextually</h3>
 <p>The <code>hiddenOn()</code> method of form components allows you to dynamically hide fields based on the current page or action.</p>
 <p>In this example, we hide the <code>password</code> field on the <code>edit</code> page:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hiddenOn</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Livewire\Component;
+<pre><code class="language-php">use Livewire\Component;
 
-Forms\Components\TextInput::make('password')
+Forms\Components\TextInput::make(&#39;password&#39;)
     -&gt;password()
     -&gt;required()
-    -&gt;hiddenOn('edit'),
-</textarea></code></pre>
+    -&gt;hiddenOn(&#39;edit&#39;),
+</code></pre>
 <p>Alternatively, we have a <code>visibleOn()</code> shortcut method for only showing a field on one page or action:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">visibleOn</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Livewire\Component;
+<pre><code class="language-php">use Livewire\Component;
 
-Forms\Components\TextInput::make('password')
+Forms\Components\TextInput::make(&#39;password&#39;)
     -&gt;password()
     -&gt;required()
-    -&gt;visibleOn('create'),
-</textarea></code></pre>
+    -&gt;visibleOn(&#39;create&#39;),
+</code></pre>
 <h2 id="tables">Tables</h2>
 <p>Resource classes contain a static <code>table()</code> method that is used to build the table on the <a href="listing-records">List page</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">filters</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filters</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Filter</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">verified</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">whereNotNull</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email_verified_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">actions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">EditAction</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bulkActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">DeleteBulkAction</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Table;
+<pre><code class="language-php">use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -681,13 +681,13 @@ public static function table(Table $table): Table
 {
     return $table
         -&gt;columns([
-            Tables\Columns\TextColumn::make('name'),
-            Tables\Columns\TextColumn::make('email'),
+            Tables\Columns\TextColumn::make(&#39;name&#39;),
+            Tables\Columns\TextColumn::make(&#39;email&#39;),
             // ...
         ])
         -&gt;filters([
-            Tables\Filters\Filter::make('verified')
-                -&gt;query(fn (Builder $query): Builder =&gt; $query-&gt;whereNotNull('email_verified_at')),
+            Tables\Filters\Filter::make(&#39;verified&#39;)
+                -&gt;query(fn (Builder $query): Builder =&gt; $query-&gt;whereNotNull(&#39;email_verified_at&#39;)),
             // ...
         ])
         -&gt;actions([
@@ -697,50 +697,50 @@ public static function table(Table $table): Table
             Tables\Actions\DeleteBulkAction::make(),
         ]);
 }
-</textarea></code></pre>
+</code></pre>
 <p>Check out the <a href="listing-records">listing records</a> docs to find out how to add table <a href="listing-records#columns">columns</a>, <a href="listing-records#filters">filters</a>, <a href="listing-records#actions">actions</a>, <a href="listing-records#bulk-actions">bulk actions</a> and more.</p>
 <h2 id="relations">Relations</h2>
 <p>Filament has many utilities available for managing resource relationships. Which solution you choose to use depends on your use case:</p>
 <h3 id="belongsto"><code>BelongsTo</code></h3>
 <h4 id="select-field">Select field</h4>
 <p>Filament includes the ability to automatically load options from a <code>BelongsTo</code> relationship:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">author_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">author</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Select;
+<pre><code class="language-php">use Filament\Forms\Components\Select;
 
-Select::make('author_id')
-    -&gt;relationship('author', 'name')
-</textarea></code></pre>
+Select::make(&#39;author_id&#39;)
+    -&gt;relationship(&#39;author&#39;, &#39;name&#39;)
+</code></pre>
 <p>More information is available in the <a href="../../forms/fields#populating-automatically-from-a-relationship">Form docs</a>.</p>
 <h4 id="layout-component">Layout component</h4>
 <p>Layout form components are able to <a href="../../forms/layout#saving-data-to-relationships">save child data to relationships</a>, such as <code>BelongsTo</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Fieldset</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FileUpload</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Textarea</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Fieldset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Author</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">author</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Textarea</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">bio</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Fieldset;
+<pre><code class="language-php">use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
-Fieldset::make('Author')
-    -&gt;relationship('author')
+Fieldset::make(&#39;Author&#39;)
+    -&gt;relationship(&#39;author&#39;)
     -&gt;schema([
-        TextInput::make('name')-&gt;required(),
-        Textarea::make('bio'),
+        TextInput::make(&#39;name&#39;)-&gt;required(),
+        Textarea::make(&#39;bio&#39;),
     ])
-</textarea></code></pre>
+</code></pre>
 <p>For more information, see the <a href="../../forms/layout#saving-data-to-relationships">Form docs</a>.</p>
 <h3 id="hasone"><code>HasOne</code></h3>
 <h4 id="layout-component-1">Layout component</h4>
 <p>Layout form components are able to <a href="../../forms/layout#saving-data-to-relationships">save child data to relationships</a>, such as <code>HasOne</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Fieldset</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FileUpload</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Textarea</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Fieldset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Metadata</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">metadata</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Textarea</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">FileUpload</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">image</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Fieldset;
+<pre><code class="language-php">use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
-Fieldset::make('Metadata')
-    -&gt;relationship('metadata')
+Fieldset::make(&#39;Metadata&#39;)
+    -&gt;relationship(&#39;metadata&#39;)
     -&gt;schema([
-        TextInput::make('title'),
-        Textarea::make('description'),
-        FileUpload::make('image'),
+        TextInput::make(&#39;title&#39;),
+        Textarea::make(&#39;description&#39;),
+        FileUpload::make(&#39;image&#39;),
     ])
-</textarea></code></pre>
+</code></pre>
 <p>For more information, see the <a href="../../forms/layout#saving-data-to-relationships">Form docs</a>.</p>
 <h3 id="hasmany"><code>HasMany</code></h3>
 <h4 id="relation-manager">Relation manager</h4>
@@ -749,14 +749,14 @@ Fieldset::make('Metadata')
 <p>For more information on relation managers, see the <a href="relation-managers">full documentation</a>.</p>
 <h4 id="repeater">Repeater</h4>
 <p>Alternatively, if you’re looking to edit the relationship from the main form, you could use a <a href="../../forms/fields#populating-automatically-from-a-relationship">repeater</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
  
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;relationship()
     -&gt;schema([
         // ...
     ])
-</textarea></code></pre>
+</code></pre>
 <p>From a UX perspective, this solution is only suitable if your related model only has a few fields. Otherwise, the form can get very long.</p>
 <h3 id="hasmanythrough"><code>HasManyThrough</code></h3>
 <h4 id="relation-manager-1">Relation manager</h4>
@@ -766,20 +766,20 @@ Repeater::make('qualifications')
 <h3 id="belongstomany"><code>BelongsToMany</code></h3>
 <h4 id="multi-select-field">Multi-select field</h4>
 <p>Filament can automatically load <code>Select</code> options from a <code>BelongsToMany</code> relationship:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">multiple</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Select;
+<pre><code class="language-php">use Filament\Forms\Components\Select;
 
-Select::make('technologies')
+Select::make(&#39;technologies&#39;)
     -&gt;multiple()
-    -&gt;relationship('technologies', 'name')
-</textarea></code></pre>
+    -&gt;relationship(&#39;technologies&#39;, &#39;name&#39;)
+</code></pre>
 <p>More information is available in the <a href="../../forms/fields#populating-automatically-from-a-belongstomany-relationship">Form docs</a>.</p>
 <h4 id="checkbox-list-field">Checkbox list field</h4>
 <p>Filament can automatically load <code>CheckboxList</code> options from a <code>BelongsToMany</code> relationship:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('technologies')
-    -&gt;relationship('technologies', 'name')
-</textarea></code></pre>
+CheckboxList::make(&#39;technologies&#39;)
+    -&gt;relationship(&#39;technologies&#39;, &#39;name&#39;)
+</code></pre>
 <p>More information about <code>CheckboxList</code> is available in the <a href="../../forms/fields#populating-automatically-from-a-relationship-1">Form docs</a>.</p>
 <h4 id="relation-manager-2">Relation manager</h4>
 <p>“Relation managers” in Filament allow admins to list, create, attach, edit, detach and delete related records without leaving the resource’s Edit page.</p>
@@ -788,31 +788,31 @@ CheckboxList::make('technologies')
 <h3 id="morphto"><code>MorphTo</code></h3>
 <h4 id="select-field-1">Select field</h4>
 <p>Filament includes the ability to automatically load options from a <code>MorphTo</code> relationship:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">MorphToSelect</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">MorphToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">commentable</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">types</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        MorphToSelect</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Type</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Product</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">titleColumnName</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        MorphToSelect</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Type</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Post</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">titleColumnName</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\MorphToSelect;
+<pre><code class="language-php">use Filament\Forms\Components\MorphToSelect;
 
-MorphToSelect::make('commentable')
+MorphToSelect::make(&#39;commentable&#39;)
     -&gt;types([
-        MorphToSelect\Type::make(Product::class)-&gt;titleColumnName('name'),
-        MorphToSelect\Type::make(Post::class)-&gt;titleColumnName('title'),
+        MorphToSelect\Type::make(Product::class)-&gt;titleColumnName(&#39;name&#39;),
+        MorphToSelect\Type::make(Post::class)-&gt;titleColumnName(&#39;title&#39;),
     ])
-</textarea></code></pre>
+</code></pre>
 <p>More information is available in the <a href="../../forms/fields#handling-morphto-relationships">Form docs</a>.</p>
 <h3 id="morphone"><code>MorphOne</code></h3>
 <h4 id="layout-component-2">Layout component</h4>
 <p>Layout form components are able to <a href="../../forms/layout#saving-data-to-relationships">save child data to relationships</a>, such as <code>MorphOne</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Fieldset</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FileUpload</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Textarea</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Fieldset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Metadata</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">metadata</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Textarea</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">FileUpload</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">image</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Fieldset;
+<pre><code class="language-php">use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
-Fieldset::make('Metadata')
-    -&gt;relationship('metadata')
+Fieldset::make(&#39;Metadata&#39;)
+    -&gt;relationship(&#39;metadata&#39;)
     -&gt;schema([
-        TextInput::make('title'),
-        Textarea::make('description'),
-        FileUpload::make('image'),
+        TextInput::make(&#39;title&#39;),
+        Textarea::make(&#39;description&#39;),
+        FileUpload::make(&#39;image&#39;),
     ])
-</textarea></code></pre>
+</code></pre>
 <p>For more information, see the <a href="../../forms/layout#saving-data-to-relationships">Form docs</a>.</p>
 <h3 id="morphmany"><code>MorphMany</code></h3>
 <h4 id="relation-manager-3">Relation manager</h4>
@@ -821,13 +821,13 @@ Fieldset::make('Metadata')
 <p>For more information on relation managers, see the <a href="relation-managers">full documentation</a>.</p>
 <h4 id="repeater-1">Repeater</h4>
 <p>Alternatively, if you’re looking to edit the relationship from the main form, you could use a <a href="../../forms/fields#populating-automatically-from-a-relationship">repeater</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
  
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;schema([
         // ...
     ])
-</textarea></code></pre>
+</code></pre>
 <p>From a UX perspective, this solution is only suitable if your related model only has a few fields. Otherwise, the form can get very long.</p>
 <h3 id="morphtomany"><code>MorphToMany</code></h3>
 <h4 id="relation-manager-4">Relation manager</h4>
@@ -849,136 +849,136 @@ Repeater::make('qualifications')
 <h2 id="model-labels">Model labels</h2>
 <p>Each resource has a “model label” which is automatically generated from the model name. For example, an <code>App\Models\Customer</code> model will have a <code>customer</code> label.</p>
 <p>The label is used in several parts of the UI, and you may customize it using the <code>$modelLabel</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">modelLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">cliente</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $modelLabel = 'cliente';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $modelLabel = &#39;cliente&#39;;
+</code></pre>
 <p>Alternatively, you may use the <code>getModelLabel()</code> to define a dynamic label:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getModelLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getModelLabel(): string
+<pre><code class="language-php">public static function getModelLabel(): string
 {
-    return __('filament/resources/customer.label');
+    return __(&#39;filament/resources/customer.label&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="plural-model-label">Plural model label</h3>
 <p>Resources also have a “plural model label” which is automatically generated from the model label. For example, a <code>customer</code> label will be pluralized into <code>customers</code>.</p>
 <p>You may customize the plural version of the label using the <code>$pluralModelLabel</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">pluralModelLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">clientes</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $pluralModelLabel = 'clientes';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $pluralModelLabel = &#39;clientes&#39;;
+</code></pre>
 <p>Alternatively, you may set a dynamic plural label in the <code>getPluralModelLabel()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPluralModelLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.plural_label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPluralModelLabel(): string
+<pre><code class="language-php">public static function getPluralModelLabel(): string
 {
-    return __('filament/resources/customer.plural_label');
+    return __(&#39;filament/resources/customer.plural_label&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="navigation">Navigation</h2>
 <p>Filament will automatically generate a navigation menu item for your resource using the <a href="#plural-label">plural label</a>.</p>
 <p>If you’d like to customize the navigation item label, you may use the <code>$navigationLabel</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Mis Clientes</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationLabel = 'Mis Clientes';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $navigationLabel = &#39;Mis Clientes&#39;;
+</code></pre>
 <p>Alternatively, you may set a dynamic navigation label in the <code>getNavigationLabel()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.navigation_label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationLabel(): string
+<pre><code class="language-php">public static function getNavigationLabel(): string
 {
-    return __('filament/resources/customer.navigation_label');
+    return __(&#39;filament/resources/customer.navigation_label&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="icons">Icons</h3>
 <p>The <code>$navigationIcon</code> property supports the name of any Blade component. By default, the <a href="https://github.com/blade-ui-kit/blade-heroicons/tree/1.3.1">Blade Heroicons v1</a> package is installed, so you may use the name of any <a href="https://v1.heroicons.com">Heroicons v1</a> out of the box. However, you may create your own custom icon components or install an alternative library if you wish.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationIcon </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-user-group</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationIcon = 'heroicon-o-user-group';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $navigationIcon = &#39;heroicon-o-user-group&#39;;
+</code></pre>
 <p>Alternatively, you may set a dynamic navigation icon in the <code>getNavigationIcon()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationIcon</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-user-group</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationIcon(): string
+<pre><code class="language-php">public static function getNavigationIcon(): string
 {
-    return 'heroicon-o-user-group';
+    return &#39;heroicon-o-user-group&#39;;
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="sorting-navigation-items">Sorting navigation items</h3>
 <p>The <code>$navigationSort</code> property allows you to specify the order in which navigation items are listed:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationSort </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?int $navigationSort = 2;
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?int $navigationSort = 2;
+</code></pre>
 <p>Alternatively, you may set a dynamic navigation item order in the <code>getNavigationSort()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationSort</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationSort(): ?int
+<pre><code class="language-php">public static function getNavigationSort(): ?int
 {
     return 2;
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="grouping-navigation-items">Grouping navigation items</h3>
 <p>You may group navigation items by specifying a <code>$navigationGroup</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationGroup </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Shop</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationGroup = 'Shop';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $navigationGroup = &#39;Shop&#39;;
+</code></pre>
 <p>Alternatively, you may use the <code>getNavigationGroup()</code> method to set a dynamic group label:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationGroup</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/navigation.groups.shop</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static function getNavigationGroup(): ?string
+<pre><code class="language-php">protected static function getNavigationGroup(): ?string
 {
-    return __('filament/navigation.groups.shop');
+    return __(&#39;filament/navigation.groups.shop&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="customizing-the-eloquent-query">Customizing the Eloquent query</h2>
 <p>Within Filament, every query to your resource model will start with the <code>getEloquentQuery()</code> method.</p>
 <p>Because of this, it’s very easy to apply your own <a href="https://laravel.com/docs/eloquent#query-scopes">model scopes</a> that affect the entire resource. You can use this to implement <a href="#multi-tenancy">multi-tenancy</a> easily within the admin panel.</p>
 <h3 id="disabling-global-scopes">Disabling global scopes</h3>
 <p>By default, Filament will observe all global scopes that are registered to your model. However, this may not be ideal if you wish to access, for example, soft deleted records.</p>
 <p>To overcome this, you may override the <code>getEloquentQuery()</code> method that Filament uses:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">withoutGlobalScopes</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+<pre><code class="language-php">public static function getEloquentQuery(): Builder
 {
     return parent::getEloquentQuery()-&gt;withoutGlobalScopes();
 }
-</textarea></code></pre>
+</code></pre>
 <p>Alternatively, you may remove specific global scopes:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">withoutGlobalScopes</span><span style="color: #89DDFF;">([</span><span style="color: #FFCB6B;">ActiveScope</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+<pre><code class="language-php">public static function getEloquentQuery(): Builder
 {
     return parent::getEloquentQuery()-&gt;withoutGlobalScopes([ActiveScope::class]);
 }
-</textarea></code></pre>
+</code></pre>
 <p>More information about removing global scopes may be found in the <a href="https://laravel.com/docs/eloquent#removing-global-scopes">Laravel documentation</a>.</p>
 <h2 id="customizing-the-url-slug">Customizing the URL slug</h2>
 <p>By default, Filament will generate a resource URL based on the name of the model. You can customize this by setting the <code>$slug</code> property on the resource:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">pending-orders</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $slug = 'pending-orders';
-</textarea></code></pre>
+<pre><code class="language-php">protected static ?string $slug = &#39;pending-orders&#39;;
+</code></pre>
 <h2 id="multi-tenancy">Multi-tenancy</h2>
 <p>Multi-tenancy, simply, is the concept of users “owning” records, and only being able to access the records that they own within Filament.</p>
 <h3 id="simple-multi-tenancy-from-scratch">Simple multi-tenancy from scratch</h3>
 <p>Simple multi-tenancy is easy to set up with Filament.</p>
 <p>First, scope the <a href="#customizing-the-eloquent-query">base Eloquent query</a> for every “owned” resource by defining the <code>getEloquentQuery()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">whereBelongsTo</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">());</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+<pre><code class="language-php">public static function getEloquentQuery(): Builder
 {
     return parent::getEloquentQuery()-&gt;whereBelongsTo(auth()-&gt;user());
 }
-</textarea></code></pre>
+</code></pre>
 <p>In this example we use <code>whereBelongsTo()</code> to scope the records to only those that belong to the currently authenticated user. However, you may use whatever Eloquent method you wish here, including a manual <code>where()</code> clause, or a <a href="https://laravel.com/docs/eloquent#local-scopes">scope</a>.</p>
 <p>Finally, you need to ensure that records are attached to the current user when they are first created. The easiest way to do this is through a <a href="https://laravel.com/docs/eloquent#observers">model observer</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">creating</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Post</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">post</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">post</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">associate</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">());</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public function creating(Post $post): void
+<pre><code class="language-php">public function creating(Post $post): void
 {
     $post-&gt;user()-&gt;associate(auth()-&gt;user());
 }
-</textarea></code></pre>
+</code></pre>
 <p>Additionally, you may want to scope the options available in the <a href="relation-managers">relation manager</a> <code>AttachAction</code> or <code>AssociateAction</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">AttachAction</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">AttachAction</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">recordSelectOptionsQuery</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">whereBelongsTo</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">())</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Actions\AttachAction;
+<pre><code class="language-php">use Filament\Tables\Actions\AttachAction;
 use Illuminate\Database\Eloquent\Builder;
 
 AttachAction::make()
     -&gt;recordSelectOptionsQuery(fn (Builder $query) =&gt; $query-&gt;whereBelongsTo(auth()-&gt;user())
-</textarea></code></pre>
+</code></pre>
 <h3 id="stancltenancy"><code>stancl/tenancy</code></h3>
 <p>To set up <a href="https://tenancyforlaravel.com/docs"><code>stancl/tenancy</code></a> to work with Filament, you just need to add the <code>InitializeTenancyByDomain::class</code> middleware to <a href="https://tenancyforlaravel.com/docs/v3/integrations/livewire">Livewire</a> and the <a href="../installation#publishing-configuration">Filament config file</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Stancl</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tenancy</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Middleware</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">InitializeTenancyByDomain</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">middleware</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">base</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">InitializeTenancyByDomain</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #89DDFF;">],</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
+<pre><code class="language-php">use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 
-'middleware' =&gt; [
+&#39;middleware&#39; =&gt; [
     // ...
-    'base' =&gt; [
+    &#39;base&#39; =&gt; [
         // ...
         InitializeTenancyByDomain::class
     ],
 ],
-</textarea></code></pre>
+</code></pre>
 <h2 id="deleting-pages">Deleting pages</h2>
 <p>If you’d like to delete a page from your resource, you can just delete the page file from the <code>Pages</code> directory of your resource, and its entry in the <code>getPages()</code> method.</p>
 <p>For example, you may have a resource with records that may not be created by anyone. Delete the <code>Create</code> page file, and then remove it from <code>getPages()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPages</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ListCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">EditCustomer</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/{record}/edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPages(): array
+<pre><code class="language-php">public static function getPages(): array
 {
     return [
-        'index' =&gt; Pages\ListCustomers::route('/'),
-        'edit' =&gt; Pages\EditCustomer::route('/{record}/edit'),
+        &#39;index&#39; =&gt; Pages\ListCustomers::route(&#39;/&#39;),
+        &#39;edit&#39; =&gt; Pages\EditCustomer::route(&#39;/{record}/edit&#39;),
     ];
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/02-resources/01-getting-started.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/02-resources/01-getting-started.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -203,6 +203,14 @@
       </li><li>
         <a href="/docs/3.x/tables/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -498,6 +506,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -517,17 +533,17 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <h2 id="setting-up-the-livewire-component">Setting up the Livewire component</h2>
 <p>First, generate a new Livewire component:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:livewire</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">ListProducts</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:livewire ListProducts
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:livewire ListProducts
+</code></pre>
 <p>Then, render your Livewire component on the page:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #82AAFF;">@livewire</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">list-products</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">@livewire('list-products')
-</textarea></code></pre>
+<pre><code class="language-blade">@livewire(&#39;list-products&#39;)
+</code></pre>
 <p>Alternatively, you can use a full-page Livewire component:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">ListProducts</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Route</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">products</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ListProducts</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Http\Livewire\ListProducts;
+<pre><code class="language-php">use App\Http\Livewire\ListProducts;
 use Illuminate\Support\Facades\Route;
 
-Route::get('products', ListProducts::class);
-</textarea></code></pre>
+Route::get(&#39;products&#39;, ListProducts::class);
+</code></pre>
 <h3 id="adding-the-table">Adding the table</h3>
 <p>There are 3 tasks when adding a table to a Livewire component class:</p>
 <ol>
@@ -535,7 +551,7 @@ Route::get('products', ListProducts::class);
 <li>Add a <code>table()</code> method, which is where you configure the table. <a href="getting-started#columns">Add the table’s columns, filters, and actions</a>.</li>
 <li>Make sure to define the base query that will be used to fetch rows in the table. For example, if you’re listing products from your <code>Product</code> model, you will want to return <code>Product::query()</code>.</li>
 </ol>
-<pre class="torchlight has-focus-lines" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Post</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Shop</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Product</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Concerns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">InteractsWithTable</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HasTable</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line line-focus'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ListProducts</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Component</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">implements</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HasTable</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line line-focus'><span style="color: #A6ACCD;">    </span><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">InteractsWithTable</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Product</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">filters</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">actions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bulkActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">render</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">list-products</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
+<pre><code class="language-php">&lt;?php
 
 namespace App\Http\Livewire;
 
@@ -557,7 +573,7 @@ class ListProducts extends Component implements HasTable // [tl! focus]
         return $table
             -&gt;query(Product::query())
             -&gt;columns([
-                TextColumn::make('name'),
+                TextColumn::make(&#39;name&#39;),
             ])
             -&gt;filters([
                 // ...
@@ -572,33 +588,33 @@ class ListProducts extends Component implements HasTable // [tl! focus]
     
     public function render(): View
     {
-        return view('list-products');
+        return view(&#39;list-products&#39;);
     }
 }
-</textarea></code></pre>
+</code></pre>
 <p>Finally, in your Livewire component’s view, render the table:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">table </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
+<pre><code class="language-blade">&lt;div&gt;
     {{ $this-&gt;table }}
 &lt;/div&gt;
-</textarea></code></pre>
+</code></pre>
 <p>Visit your Livewire component in the browser, and you should see the table.</p>
 <p><img src="https://user-images.githubusercontent.com/41773797/147614478-5b40c645-107e-40ac-ba41-f0feb99dd480.png" alt=""/></p>
 <h2 id="generating-table-livewire-components-with-the-cli">Generating table Livewire components with the CLI</h2>
 <p>It’s advised that you learn how to set up a Livewire component with the table builder manually, but once you are confident, you can use the CLI to generate a table for you.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:livewire-table</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Products/ListProducts</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:livewire-table Products/ListProducts
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:livewire-table Products/ListProducts
+</code></pre>
 <p>This will ask you for the name of a prebuilt model, for example <code>Product</code>. Finally, it will generate a new <code>app/Http/Livewire/Products/ListProducts.php</code> component, which you can customize.</p>
 <h3 id="automatically-generating-table-columns">Automatically generating table columns</h3>
 <p>Filament is also able to guess which table columns you want in the table, based on the model’s database columns. The <code>doctrine/dbal</code> package is required to use this functionality:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">doctrine/dbal</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require doctrine/dbal --dev
-</textarea></code></pre>
+<pre><code class="language-bash">composer require doctrine/dbal --dev
+</code></pre>
 <p>Now, you can use the <code>--generate</code> flag when generating your table:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:livewire-table</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Products/ListProducts</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--generate</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:livewire-table Products/ListProducts --generate
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:livewire-table Products/ListProducts --generate
+</code></pre>
 <blockquote>
 <p>Note: If your table contains ENUM columns, <code>doctrine/dbal</code> is unable to scan your table and will crash. Hence Filament is unable to generate the schema for your table if it contains an ENUM column. Read more about this issue <a href="https://github.com/doctrine/dbal/issues/3819#issuecomment-573419808">here</a>.</p>
 </blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/08-adding-a-table-to-a-livewire-component.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

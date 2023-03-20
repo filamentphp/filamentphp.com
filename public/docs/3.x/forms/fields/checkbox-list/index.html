@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -636,91 +652,91 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>The checkbox list component allows you to select multiple values from a list of predefined options:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tailwind</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Tailwind CSS</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alpine</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Alpine.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel Livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('technologies')
+CheckboxList::make(&#39;technologies&#39;)
     -&gt;options([
-        'tailwind' =&gt; 'Tailwind CSS',
-        'alpine' =&gt; 'Alpine.js',
-        'laravel' =&gt; 'Laravel',
-        'livewire' =&gt; 'Laravel Livewire',
+        &#39;tailwind&#39; =&gt; &#39;Tailwind CSS&#39;,
+        &#39;alpine&#39; =&gt; &#39;Alpine.js&#39;,
+        &#39;laravel&#39; =&gt; &#39;Laravel&#39;,
+        &#39;livewire&#39; =&gt; &#39;Laravel Livewire&#39;,
     ])
-</textarea></code></pre>
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147761423-bd6e99ec-104d-40c2-875a-fed1d638f2c3.png" alt=""/></p>
 <p>These options are returned in JSON format. If you’re saving them using Eloquent, you should be sure to add an <code>array</code> <a href="https://laravel.com/docs/eloquent-mutators#array-and-json-casting">cast</a> to the model property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Model</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Model</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">casts </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">array</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Database\Eloquent\Model;
+<pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
 class App extends Model
 {
     protected $casts = [
-        'technologies' =&gt; 'array',
+        &#39;technologies&#39; =&gt; &#39;array&#39;,
     ];
 
     // ...
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="splitting-options-into-columns">Splitting options into columns</h2>
 <p>You may split options into columns by using the <code>columns()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tailwind</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Tailwind CSS</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alpine</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Alpine.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel Livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('technologies')
+CheckboxList::make(&#39;technologies&#39;)
     -&gt;options([
-        'tailwind' =&gt; 'Tailwind CSS',
-        'alpine' =&gt; 'Alpine.js',
-        'laravel' =&gt; 'Laravel',
-        'livewire' =&gt; 'Laravel Livewire',
+        &#39;tailwind&#39; =&gt; &#39;Tailwind CSS&#39;,
+        &#39;alpine&#39; =&gt; &#39;Alpine.js&#39;,
+        &#39;laravel&#39; =&gt; &#39;Laravel&#39;,
+        &#39;livewire&#39; =&gt; &#39;Laravel Livewire&#39;,
     ])
     -&gt;columns(2)
-</textarea></code></pre>
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147761438-558a9dcc-b81a-4fbe-a922-a6771407d928.png" alt=""/></p>
 <p>This method accepts the same options as the <code>columns()</code> method of the <a href="layout/grid">grid</a>. This allows you to responsively customize the number of columns at various breakpoints.</p>
 <h2 id="bulk-toggling-checkboxes">Bulk toggling checkboxes</h2>
 <p>You may allow users to toggle all checkboxes at once using the <code>bulkToggleable()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tailwind</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Tailwind CSS</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alpine</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Alpine.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Laravel Livewire</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bulkToggleable</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('technologies')
+CheckboxList::make(&#39;technologies&#39;)
     -&gt;options([
-        'tailwind' =&gt; 'Tailwind CSS',
-        'alpine' =&gt; 'Alpine.js',
-        'laravel' =&gt; 'Laravel',
-        'livewire' =&gt; 'Laravel Livewire',
+        &#39;tailwind&#39; =&gt; &#39;Tailwind CSS&#39;,
+        &#39;alpine&#39; =&gt; &#39;Alpine.js&#39;,
+        &#39;laravel&#39; =&gt; &#39;Laravel&#39;,
+        &#39;livewire&#39; =&gt; &#39;Laravel Livewire&#39;,
     ])
     -&gt;bulkToggleable()
-</textarea></code></pre>
+</code></pre>
 <h2 id="populating-automatically-from-a-relationship">Populating automatically from a relationship</h2>
 <p>You may employ the <code>relationship()</code> method to configure a relationship to automatically retrieve and save options from:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('technologies')
-    -&gt;relationship('technologies', 'name')
-</textarea></code></pre>
+CheckboxList::make(&#39;technologies&#39;)
+    -&gt;relationship(&#39;technologies&#39;, &#39;name&#39;)
+</code></pre>
 <blockquote>
 <p>To set this functionality up, <strong>you must also follow the instructions set out in the <a href="getting-started#field-relationships">field relationships</a> section</strong>. If you’re using the <a href="../../app">app framework</a>, you can skip this step.</p>
 </blockquote>
 <p>You may customize the database query that retrieves options using the third parameter of the <code>relationship()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">technologies</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">withTrashed</span><span style="color: #89DDFF;">())</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 use Illuminate\Database\Eloquent\Builder;
 
-CheckboxList::make('technologies')
-    -&gt;relationship('technologies', 'name', fn (Builder $query) =&gt; $query-&gt;withTrashed())
-</textarea></code></pre>
+CheckboxList::make(&#39;technologies&#39;)
+    -&gt;relationship(&#39;technologies&#39;, &#39;name&#39;, fn (Builder $query) =&gt; $query-&gt;withTrashed())
+</code></pre>
 <p>If you’d like to customize the label of each option, maybe to be more descriptive, or to concatenate a first and last name, you should use a virtual column in your database migration:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">full_name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">virtualAs</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">concat(first_name, </span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;"> </span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">, last_name)</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">$table-&gt;string('full_name')-&gt;virtualAs('concat(first_name, \' \', last_name)');
-</textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">participants</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">participants</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">full_name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">$table-&gt;string(&#39;full_name&#39;)-&gt;virtualAs(&#39;concat(first_name, \&#39; \&#39;, last_name)&#39;);
+</code></pre>
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 
-CheckboxList::make('participants')
-    -&gt;relationship('participants', 'full_name')
-</textarea></code></pre>
+CheckboxList::make(&#39;participants&#39;)
+    -&gt;relationship(&#39;participants&#39;, &#39;full_name&#39;)
+</code></pre>
 <p>Alternatively, you can use the <code>getOptionLabelFromRecordUsing()</code> method to transform the selected option’s Eloquent model into a label. But please note, this is much less performant than using a virtual column:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CheckboxList</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Model</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CheckboxList</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">participants</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">participants</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">first_name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getOptionLabelFromRecordUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Model</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;{$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">first_name</span><span style="color: #89DDFF;">}</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">{$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">last_name</span><span style="color: #89DDFF;">}&quot;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\CheckboxList;
+<pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
 use Illuminate\Database\Eloquent\Model;
 
-CheckboxList::make('participants')
-    -&gt;relationship('participants', 'first_name')
-    -&gt;getOptionLabelFromRecordUsing(fn (Model $record) =&gt; "{$record-&gt;first_name} {$record-&gt;last_name}")
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/06-checkbox-list.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+CheckboxList::make(&#39;participants&#39;)
+    -&gt;relationship(&#39;participants&#39;, &#39;first_name&#39;)
+    -&gt;getOptionLabelFromRecordUsing(fn (Model $record) =&gt; &quot;{$record-&gt;first_name} {$record-&gt;last_name}&quot;)
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/06-checkbox-list.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

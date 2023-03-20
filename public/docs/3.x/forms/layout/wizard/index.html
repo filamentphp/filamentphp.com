@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -636,75 +652,75 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Similar to <a href="tabs">tabs</a>, you may want to use a multistep form wizard to reduce the number of components that are visible at once. These are especially useful if your form has a definite chronological order, in which you want each step to be validated as the user progresses.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Wizard</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Order</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Delivery</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Billing</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 
 Wizard::make([
-    Wizard\Step::make('Order')
+    Wizard\Step::make(&#39;Order&#39;)
         -&gt;schema([
             // ...
         ]),
-    Wizard\Step::make('Delivery')
+    Wizard\Step::make(&#39;Delivery&#39;)
         -&gt;schema([
             // ...
         ]),
-    Wizard\Step::make('Billing')
+    Wizard\Step::make(&#39;Billing&#39;)
         -&gt;schema([
             // ...
         ]),
 ])
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>We have different setup instructions you’re looking to add a wizard to an app framework <a href="../../app/resources/creating-records#wizards">resource Create page</a> or a table <a href="../tables/actions#wizards">action</a>. Following that documentation will ensure that the ability to submit the form is only available on the last step.</p>
 </blockquote>
 <p>Each step has a mandatory label. You may optionally also add a description for extra detail:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Order</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Review your basket</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 
-Wizard\Step::make('Order')
-    -&gt;description('Review your basket')
+Wizard\Step::make(&#39;Order&#39;)
+    -&gt;description(&#39;Review your basket&#39;)
     -&gt;schema([
         // ...
     ]),
-</textarea></code></pre>
+</code></pre>
 <h2 id="setting-up-step-icons">Setting up step icons</h2>
 <p>Steps may also have an icon, which can be the name of any Blade icon component:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Order</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-shopping-bag</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 
-Wizard\Step::make('Order')
-    -&gt;icon('heroicon-m-shopping-bag')
+Wizard\Step::make(&#39;Order&#39;)
+    -&gt;icon(&#39;heroicon-m-shopping-bag&#39;)
     -&gt;schema([
         // ...
     ]),
-</textarea></code></pre>
+</code></pre>
 <h2 id="rendering-a-submit-button-on-the-last-step">Rendering a submit button on the last step</h2>
 <p>You may use the <code>submitAction()</code> method to render submit button HTML or a view at the end of the wizard, on the last step. This provides a clearer UX than displaying a submit button below the wizard at all times:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HtmlString</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Wizard</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">])-&gt;</span><span style="color: #82AAFF;">submitAction</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">order-form.submit-button</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Wizard</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">])-&gt;</span><span style="color: #82AAFF;">submitAction</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HtmlString</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 use Illuminate\Support\HtmlString;
 
 Wizard::make([
     // ...
-])-&gt;submitAction(view('order-form.submit-button'))
+])-&gt;submitAction(view(&#39;order-form.submit-button&#39;))
 
 Wizard::make([
     // ...
-])-&gt;submitAction(new HtmlString('&lt;button type="submit"&gt;Submit&lt;/button&gt;'))
-</textarea></code></pre>
+])-&gt;submitAction(new HtmlString(&#39;&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;&#39;))
+</code></pre>
 <h2 id="setting-the-default-active-step">Setting the default active step</h2>
 <p>You may use the <code>startOnStep()</code> method to load a specific step in the wizard:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Wizard</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">])-&gt;</span><span style="color: #82AAFF;">startOnStep</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 
 Wizard::make([
     // ...
 ])-&gt;startOnStep(2)
-</textarea></code></pre>
+</code></pre>
 <h2 id="allowing-steps-to-be-skipped">Allowing steps to be skipped</h2>
 <p>If you’d like to allow free navigation, so all steps are skippable, use the <code>skippable()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Wizard</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">])-&gt;</span><span style="color: #82AAFF;">skippable</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Wizard;
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
 
 Wizard::make([
     // ...
 ])-&gt;skippable()
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/04-layout/05-wizard.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/04-layout/05-wizard.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -582,45 +582,45 @@
   <p>Filament allows you to create completely custom pages for the app.</p>
 <h2 id="creating-a-page">Creating a page</h2>
 <p>To create a new page, you can use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-page</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Settings</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-page Settings
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-page Settings
+</code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of the Filament directory, and a view in the <code>/pages</code> directory of the Filament views directory.</p>
 <p>Page classes are all full-page <a href="https://laravel-livewire.com">Livewire</a> components with a few extra utilities you can use with the App Framework.</p>
 <h2 id="conditionally-hiding-pages-in-navigation">Conditionally hiding pages in navigation</h2>
 <p>You can prevent pages from appearing in the menu by overriding the <code>shouldRegisterNavigation()</code> method in your Page class. This is useful if you want to control which users can see the page in the sidebar.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">shouldRegisterNavigation</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">canManageSettings</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static function shouldRegisterNavigation(): bool
+<pre><code class="language-php">protected static function shouldRegisterNavigation(): bool
 {
     return auth()-&gt;user()-&gt;canManageSettings();
 }
-</textarea></code></pre>
+</code></pre>
 <p>Please be aware that all users will still be able to visit this page through its direct URL, so to fully limit access you must also also check in the <code>mount()</code> method of the page:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">mount</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">abort_unless</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">canManageSettings</span><span style="color: #89DDFF;">(),</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">403</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public function mount(): void
+<pre><code class="language-php">public function mount(): void
 {
     abort_unless(auth()-&gt;user()-&gt;canManageSettings(), 403);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="customization">Customization</h2>
 <p>Filament will automatically generate a title, navigation label and URL (slug) for your page based on its name. You may override it using static properties of your page class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Page Title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Navigation Label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-url-slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $title = 'Custom Page Title';
+<pre><code class="language-php">protected static ?string $title = &#39;Custom Page Title&#39;;
 
-protected static ?string $navigationLabel = 'Custom Navigation Label';
+protected static ?string $navigationLabel = &#39;Custom Navigation Label&#39;;
 
-protected static ?string $slug = 'custom-url-slug';
-</textarea></code></pre>
+protected static ?string $slug = &#39;custom-url-slug&#39;;
+</code></pre>
 <p>You may also specify a custom header and footer view for any page. You may return them from the <code>getHeader()</code> and <code>getFooter()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeader</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.settings.custom-header</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getFooter</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.settings.custom-footer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Contracts\View\View;
+<pre><code class="language-php">use Illuminate\Contracts\View\View;
 
 protected function getHeader(): View
 {
-    return view('filament.settings.custom-header');
+    return view(&#39;filament.settings.custom-header&#39;);
 }
 
 protected function getFooter(): View
 {
-    return view('filament.settings.custom-footer');
+    return view(&#39;filament.settings.custom-footer&#39;);
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/04-pages/01-getting-started.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/04-pages/01-getting-started.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

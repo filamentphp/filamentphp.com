@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -203,6 +203,14 @@
       </li><li>
         <a href="/docs/3.x/tables/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -498,6 +506,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -517,15 +533,15 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <h2 id="view-column">View column</h2>
 <p>You may render a custom view for a cell using the <code>view()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">ViewColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">ViewColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.tables.columns.status-switcher</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\ViewColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\ViewColumn;
 
-ViewColumn::make('status')-&gt;view('filament.tables.columns.status-switcher')
-</textarea></code></pre>
+ViewColumn::make(&#39;status&#39;)-&gt;view(&#39;filament.tables.columns.status-switcher&#39;)
+</code></pre>
 <p>Inside your view, you may retrieve the state of the cell using the <code>$getState()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getState</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
+<pre><code class="language-blade">&lt;div&gt;
     {{ $getState() }}
 &lt;/div&gt;
-</textarea></code></pre>
+</code></pre>
 <p>You can also access the entire Eloquent record with <code>$getRecord()</code>.</p>
 <h2 id="custom-classes">Custom classes</h2>
 <p>You may create your own custom column classes and cell views, which you can reuse across your project, and even release as a plugin to the community.</p>
@@ -533,23 +549,23 @@ ViewColumn::make('status')-&gt;view('filament.tables.columns.status-switcher')
 <p>If you’re just creating a simple custom column to use once, you could instead use a <a href="#view-column">view column</a> to render any custom Blade file.</p>
 </blockquote>
 <p>To create a custom column class and view, you may use the following command:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:table-column</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">StatusSwitcher</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:table-column StatusSwitcher
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:table-column StatusSwitcher
+</code></pre>
 <p>This will create the following column class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Column</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">StatusSwitcher</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Column</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">view </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.tables.columns.status-switcher</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\Column;
+<pre><code class="language-php">use Filament\Tables\Columns\Column;
 
 class StatusSwitcher extends Column
 {
-    protected string $view = 'filament.tables.columns.status-switcher';
+    protected string $view = &#39;filament.tables.columns.status-switcher&#39;;
 }
-</textarea></code></pre>
+</code></pre>
 <p>Inside your view, you may retrieve the state of the cell using the <code>$getState()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getState</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
+<pre><code class="language-blade">&lt;div&gt;
     {{ $getState() }}
 &lt;/div&gt;
-</textarea></code></pre>
+</code></pre>
 <p>You can also access the entire Eloquent record with <code>$getRecord()</code>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/10-custom.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

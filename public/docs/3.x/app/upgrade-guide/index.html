@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -580,270 +580,143 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <blockquote>
-<p>If you see anything missing from this guide, please do not hesitate to <a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/09-upgrade-guide.md">make a pull request</a> to our repository! Any help is appreciated!</p>
+<p>If you see anything missing from this guide, please do not hesitate to <a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/14-upgrade-guide.md">make a pull request</a> to our repository! Any help is appreciated!</p>
 </blockquote>
-<h2 id="high-impact-changes">High impact changes</h2>
-<h3 id="property-and-method-changes-to-resource-and-page-classes">Property and method changes to resource and page classes</h3>
-<details><summary><p>Changes to Resource classes</p></summary><p>The <code>Filament\Resources\Forms\Form</code> class has been renamed to <code>Filament\Resources\Form</code>.</p><p>The <code>Filament\Resources\Tables\Table</code> class has been renamed to <code>Filament\Resources\Table</code>.</p><p>The following properties and method signatures been updated:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">label</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">model</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationIcon</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Renamed from `$icon`. Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationSort</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?int` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recordTitleAttribute</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Renamed from `$primaryColumn`. Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Form</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Added the `Form` return type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Added the `Table` return type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getRelations</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Renamed from `relations()`. Added the `array` return type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPages</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Renamed from `routes()`. Added the `array` return type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $label; // Protected the property. Added the `?string` type.
+<h2 id="new-requirements">New requirements</h2>
+<ul>
+<li>Laravel v9.0+</li>
+<li>Livewire v3.0+</li>
+</ul>
+<h2 id="upgrading-automatically">Upgrading automatically</h2>
+<p>The easiest way to upgrade your app is to run the automated upgrade script. This script will automatically upgrade your application to the latest version of Filament, and make changes to your code which handle most breaking changes.</p>
+<pre><code class="language-bash">composer require filament/upgrade:&quot;^3.0&quot; --dev
+vendor/bin/filament-v3
+</code></pre>
+<p>Make sure to carefully follow the instructions, and review the changes made by the script. You may need to make some manual changes to your code afterwards, but the script should handle most of the repetitive work for you.</p>
+<p>Finally, you must run <code>php artisan filament:install</code> to finalize the Filament v3 installation. This command must be run for all new Filament projects.</p>
+<p>You can now <code>composer remove filament/upgrade</code> as you don’t need it any more.</p>
+<blockquote>
+<p>Some plugins you’re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they’ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
+</blockquote>
+<h2 id="upgrading-manually">Upgrading manually</h2>
+<h3 id="high-impact-changes">High impact changes</h3>
+<h4 id="context-service-provider-instead-of-the-config-file">Context service provider instead of the config file</h4>
+<p>The Filament v2 config file grew pretty big, and now it is incredibly small. Most of the configuration is now done in a service provider, which providers a cleaner API, more type safety, IDE autocomplete support, and <a href="configuration#introducing-contexts">the ability to create multiple admin panels in your app</a>. We call these special configuration service providers <strong>“context providers”</strong>.</p>
+<p>Before you can create the new context provider, make sure that you’ve got Filament v3 installed with Composer. Then, run the following command:</p>
+<pre><code class="language-bash">php artisan filament:install --app`
+</code></pre>
+<p>A new <code>app/Providers/Filament/AdminContextProvider.php</code> file will be created, ready for you to transfer over your old configuration from the <code>config/filament.php</code> file.</p>
+<p>Most configuration transfer is very self-explanatory, but if you get stuck please refer to the <a href="configuration">configuration documentation</a>.</p>
+<p>Finally, you can run the following command to replace the old config file with the shiny new one:</p>
+<pre><code class="language-bash">php artisan vendor:publish --tag=filament-config --force
+</code></pre>
+<h4 id="filament_filesystem_driver-env-variable"><code>FILAMENT_FILESYSTEM_DRIVER</code> .env variable</h4>
+<p>The <code>FILAMENT_FILESYSTEM_DRIVER</code> .env variable has been renamed to <code>FILAMENT_FILESYSTEM_DISK</code>. This is to make it more consistent with Laravel, as Laravel 9 introduced this change as well. Please ensure that you update your .env files accordingly, and don’t forget production!</p>
+<h4 id="resource-and-relation-manager-imports">Resource and relation manager imports</h4>
+<p>Some classes that are imported in resources and relation managers have moved:</p>
+<ul>
+<li><code>Filament\Resources\Form</code> has moved to <code>Filament\Forms\Form</code></li>
+<li><code>Filament\Resources\Table</code> has moved to <code>Filament\Tables\Table</code></li>
+</ul>
+<h4 id="method-signature-changes">Method signature changes</h4>
+<p>User model (with <code>FilamentUser</code> interface):</p>
+<ul>
+<li><code>canAccessFilament()</code> has a new <code>\Filament\Context $context</code> parameter</li>
+</ul>
+<p>Resource classes:</p>
+<ul>
+<li><code>applyGlobalSearchAttributeConstraint()</code> now has a <code>string $search</code> parameter before <code>$searchAttributes()</code> instead of <code>$searchQuery</code> after</li>
+<li><code>getGlobalSearchEloquentQuery()</code> is public</li>
+<li><code>getGlobalSearchResults()</code>has a <code>$search</code> parameter instead of <code>$searchQuery</code></li>
+<li><code>getRouteBaseName()</code> has a new <code>?string $context</code> parameter</li>
+</ul>
+<p>Resource classes and all page classes, including resource pages, custom pages, settings pages, and dashboard pages:</p>
+<ul>
+<li><code>getActiveNavigationIcon()</code> is public</li>
+<li><code>getNavigationBadge()</code> is public</li>
+<li><code>getNavigationBadgeColor()</code> is public</li>
+<li><code>getNavigationGroup()</code> is public</li>
+<li><code>getNavigationIcon()</code> is public</li>
+<li><code>getNavigationLabel()</code> is public</li>
+<li><code>getNavigationSort()</code> is public</li>
+<li><code>getNavigationUrl()</code> is public</li>
+<li><code>shouldRegisterNavigation()</code> is public</li>
+</ul>
+<p>All page classes, including resource pages, custom pages, settings pages, and custom dashboard pages:</p>
+<ul>
+<li><code>getBreadcrumbs()</code> is public</li>
+<li><code>getFooterWidgetsColumns()</code> is public</li>
+<li><code>getHeader()</code> is public</li>
+<li><code>getHeaderWidgetsColumns()</code> is public</li>
+<li><code>getHeading()</code> is public</li>
+<li><code>getRouteName()</code> has a new <code>?string $context</code> parameter</li>
+<li><code>getSubheading()</code> is public</li>
+<li><code>getTitle()</code> is public</li>
+<li><code>getVisibleFooterWidgets()</code> is public</li>
+<li><code>getVisibleHeaderWidgets()</code> is public</li>
+</ul>
+<p>List and Manage resource pages:</p>
+<ul>
+<li><code>table()</code> is public</li>
+</ul>
+<p>Create resource pages:</p>
+<ul>
+<li><code>canCreateAnother()</code> is public</li>
+</ul>
+<p>Edit and View resource pages:</p>
+<ul>
+<li><code>getFormTabLabel()</code> is now <code>getContentTabLabel()</code></li>
+</ul>
+<p>Relation managers:</p>
+<ul>
+<li><code>form()</code> is no longer static</li>
+<li><code>getInverseRelationshipName()</code></li>
+<li><code>table()</code> is no longer static</li>
+</ul>
+<p>Custom dashboard pages:</p>
+<ul>
+<li><code>getDashboard()</code> is public</li>
+<li><code>getWidgets()</code> is public</li>
+</ul>
+<h4 id="property-signature-changes">Property signature changes</h4>
+<p>Resource classes and all page classes, including resource pages, custom pages, settings pages, and dashboard pages:</p>
+<ul>
+<li><code>$middlewares</code> is now <code>$routeMiddleware</code></li>
+</ul>
+<h4 id="heroicons-have-been-updated-to-v2">Heroicons have been updated to v2</h4>
+<p>The Heroicons library has been updated to v2. This means that any icons you use in your app may have changed names. You can find a list of changes <a href="https://github.com/tailwindlabs/heroicons/releases/tag/v2.0.0">here</a>.</p>
+<h3 id="medium-impact-changes">Medium impact changes</h3>
+<h4 id="date-time-pickers">Date-time pickers</h4>
+<p>The date-time picker form field now uses the browser’s native date picker by default. It usually has a better UX than the old date picker, but you may notice features missing, bad browser compatibility, or behavioural bugs. If you want to revert to the old date picker, you can use the <code>native(false)</code> method:</p>
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-protected static ?string $model; // Protected the property. Added the `?string` type.
-
-protected static ?string $navigationIcon; // Renamed from `$icon`. Protected the property. Added the `?string` type.
-
-protected static ?string $navigationLabel; // Protected the property. Added the `?string` type.
-
-protected static ?int $navigationSort; // Protected the property. Added the `?int` type.
-
-protected static ?string $recordTitleAttribute; // Renamed from `$primaryColumn`. Protected the property. Added the `?string` type.
-
-protected static ?string $slug; // Protected the property. Added the `?string` type.
-
-public static function form(Form $form): Form; // Added the `Form` return type.
-
-public static function table(Table $table): Table; // Added the `Table` return type.
-
-public static function getRelations(): array; // Renamed from `relations()`. Added the `array` return type.
-
-public static function getPages(): array; // Renamed from `routes()`. Added the `array` return type.
-</textarea></code></pre><p>The syntax for registering pages in <code>getPages()</code> (formerly <code>routes()</code>) has been updated:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPages</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ListUsers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">CreateUser</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">EditUser</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/{record}/edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPages(): array
-{
-    return [
-        'index' =&gt; Pages\ListUsers::route('/'),
-        'create' =&gt; Pages\CreateUser::route('/create'),
-        'edit' =&gt; Pages\EditUser::route('/{record}/edit'),
-    ];
-}
-</textarea></code></pre></details>
-<details><summary><p>Changes to List page classes</p></summary><p>The following properties and method signatures been updated:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resource</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `string` type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static string $resource; // Protected the property. Added the `string` type.
-</textarea></code></pre></details>
-<details><summary><p>Changes to Create page classes</p></summary><p>The following properties and method signatures been updated:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resource</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `string` type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static string $resource; // Protected the property. Added the `string` type.
-</textarea></code></pre></details>
-<details><summary><p>Changes to Edit page classes</p></summary><p>The following properties and method signatures been updated:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resource</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `string` type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static string $resource; // Protected the property. Added the `string` type.
-</textarea></code></pre></details>
-<h3 id="forms">Forms</h3>
-<p>The entire <code>Filament\Resources\Forms</code> namespace has been moved to <code>Filament\Forms</code>.</p>
-<p>The <code>when()</code>, <code>only()</code> and <code>except()</code> methods have been removed. You may now pass a closure to any field configuration method, for example <code>hidden()</code>, which determines if the method should be applied. For more information, please see the <a href="/docs/forms/advanced#using-closure-customization">advanced forms documentation</a>;</p>
-<h4 id="fields">Fields</h4>
-<p>The <code>dependable()</code> method has been renamed to <code>reactive()</code>, to better describe its effects.</p>
-<p>The <code>helpMessage()</code> method has been renamed to <code>helperText()</code>.</p>
-<h5 id="checkbox">Checkbox</h5>
-<p>The <code>stacked()</code> method has been removed, and replaced with <code>inline(false)</code>.</p>
-<h5 id="select">Select</h5>
-<p>The <code>emptyOptionsMessage()</code> method has been renamed to <code>searchPrompt()</code>.</p>
-<h5 id="tags-input">Tags input</h5>
-<p>The tags input component now writes to a JSON array by default. To continue using the old behavior, use <code>separator(&#39;,&#39;)</code> method.</p>
-<h5 id="toggle">Toggle</h5>
-<p>The <code>stacked()</code> method has been removed, and replaced with <code>inline(false)</code>.</p>
-<h4 id="layout-components">Layout components</h4>
-<h5 id="fieldset">Fieldset</h5>
-<p>The form components within the fieldset now need to be in their own <code>schema()</code> method, instead of being passed into <code>make()</code>.</p>
-<h5 id="grid">Grid</h5>
-<p>The form components within the grid now need to be in their own <code>schema()</code> method, instead of being passed into <code>make()</code>.</p>
-<h5 id="section">Section</h5>
-<p>The form components within the section now need to be in their own <code>schema()</code> method, instead of being passed into <code>make()</code>.</p>
-<h5 id="tabs">Tabs</h5>
-<p>The <code>Filament\Resources\Forms\Tab</code> component has been moved to <code>Filament\Forms\Tabs\Tab</code>.</p>
-<p>The form components within each tab now need to be in their own <code>schema()</code> method, instead of being passed into <code>make()</code>.</p>
-<h3 id="tables">Tables</h3>
-<p>The entire <code>Filament\Resources\Tables</code> namespace has been moved to <code>Filament\Tables</code>.</p>
-<p>The <code>only()</code> and <code>except()</code> methods have been removed. You may now pass a closure to any column or filter configuration method, which determines if the method should be applied.</p>
-<h4 id="columns">Columns</h4>
-<p>Column class names now have <code>Column</code> at the end, for example <code>TextColumn</code> not <code>Text</code>.</p>
-<p>The <code>currency()</code> method has been renamed to <code>money()</code>.</p>
-<p>The <code>formatUsing()</code> method has been renamed to <code>formatStateUsing()</code>. It now accepts a <code>$state</code> parameter, instead of <code>$value</code>.</p>
-<p>The <code>getValueUsing()</code> method has been renamed to <code>getStateUsing()</code>.</p>
-<p>The <code>primary()</code> method has been removed from columns. All columns link to the record page by default unless another URL or action is specified for that column.</p>
-<h4 id="filters">Filters</h4>
-<p>The filter class has been moved from <code>Filament\Resources\Tables\Filter</code> to <code>Filament\Tables\Filters\Filter</code>.</p>
-<p>Filters now have a dedicated <code>query()</code> method for applying the query, instead of using the second parameter of the <code>make()</code> method. For more information, check out the <a href="/docs/tables/filters">table builder filters documentation</a>.</p>
-<p>The <code>apply()</code> method of reusable filters must now have the following signature:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">apply</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[]):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public function apply(Builder $query, array $data = []): Builder
-{
-    // ...
-}
-</textarea></code></pre>
-<h3 id="published-configuration-updates">Published configuration updates</h3>
-<p>If you’ve published the v1.x <code>filament.php</code> configuration file, you should republish it:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-config</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--force</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-config --force
-</textarea></code></pre>
-<p>If you had customized the <code>path</code>, <code>domain</code> or <code>default_filesystem_disk</code>, you should update the new file with these changes. If you’re using <code>.env</code> variables for these settings, you won’t need to make any changes when upgrading, and you may even choose to delete <code>filament.php</code>.</p>
-<h3 id="users">Users</h3>
-<p>Filament v2.x does not include a dedicated <code>filament_users</code> table as it did in v1.x. By default, all <code>App\Models\User</code>s can access the app locally, and in production you must apply the <code>FilamentUser</code> interface to the model to control admin access. You can read more about this <a href="users">here</a>.</p>
-<details><summary><p><strong>Recommended:</strong> Are you using the <code>filament_users</code> table, but would like to switch to <code>App\Models\User</code>?</p></summary><p>First, you’ll need to copy the old migrations to your app, to ensure that Laravel does not complain about them missing:</p><details><summary><code>database/migrations/0000_00_00_000000_create_filament_users_table.php</code></summary><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migrations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migration</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blueprint</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateFilamentUsersTable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Migration</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">up</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Blueprint</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">id</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">avatar</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">nullable</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">unique</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">rememberToken</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">timestamps</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">down</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-class CreateFilamentUsersTable extends Migration
-{
-    public function up(): void
-    {
-        Schema::create('filament_users', function (Blueprint $table): void {
-            $table-&gt;id();
-            $table-&gt;string('avatar')-&gt;nullable();
-            $table-&gt;string('email')-&gt;unique();
-            $table-&gt;string('name');
-            $table-&gt;string('password');
-            $table-&gt;rememberToken();
-            $table-&gt;timestamps();
-        });
-    }
-
-    public function down(): void
-    {
-        Schema::dropIfExists('filament_users');
-    }
-}
-</textarea></code></pre></details><details><summary><code>database/migrations/0000_00_00_000001_create_filament_password_resets_table.php</code></summary><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migrations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migration</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blueprint</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateFilamentPasswordResetsTable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Migration</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">up</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_password_resets</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Blueprint</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">index</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">token</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">timestamp</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">created_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">nullable</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">down</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_password_resets</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-class CreateFilamentPasswordResetsTable extends Migration
-{
-    public function up(): void
-    {
-        Schema::create('filament_password_resets', function (Blueprint $table): void {
-            $table-&gt;string('email')-&gt;index();
-            $table-&gt;string('token');
-            $table-&gt;timestamp('created_at')-&gt;nullable();
-        });
-    }
-
-    public function down(): void
-    {
-        Schema::dropIfExists('filament_password_resets');
-    }
-}
-</textarea></code></pre></details><p>Create a migration to drop the <code>filament_users</code> and <code>filament_password_resets</code> tables:</p><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migrations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migration</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">DropFilamentUsersAndFilamentPasswordResetsTables</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Migration</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">up</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_password_resets</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\Schema;
-
-class DropFilamentUsersAndFilamentPasswordResetsTables extends Migration
-{
-    public function up(): void
-    {
-        Schema::dropIfExists('filament_users');
-        Schema::dropIfExists('filament_password_resets');
-    }
-}
-</textarea></code></pre></details>
-<details><summary><p>Are you using the <code>filament_users</code> table, and would like to continue using it?</p></summary><p>To keep the <code>filament_users</code> and <code>filament_password_resets</code> tables in your app, you’ll need to copy the old migrations and model into your app.</p><details><summary><code>database/migrations/0000_00_00_000000_create_filament_users_table.php</code></summary><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migrations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migration</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blueprint</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateFilamentUsersTable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Migration</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">up</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Blueprint</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">id</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">avatar</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">nullable</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">unique</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">rememberToken</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">timestamps</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">down</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-class CreateFilamentUsersTable extends Migration
-{
-    public function up(): void
-    {
-        Schema::create('filament_users', function (Blueprint $table): void {
-            $table-&gt;id();
-            $table-&gt;string('avatar')-&gt;nullable();
-            $table-&gt;string('email')-&gt;unique();
-            $table-&gt;string('name');
-            $table-&gt;string('password');
-            $table-&gt;rememberToken();
-            $table-&gt;timestamps();
-        });
-    }
-
-    public function down(): void
-    {
-        Schema::dropIfExists('filament_users');
-    }
-}
-</textarea></code></pre></details><details><summary><code>database/migrations/0000_00_00_000001_create_filament_password_resets_table.php</code></summary><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migrations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Migration</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blueprint</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Schema</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateFilamentPasswordResetsTable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Migration</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">up</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_password_resets</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Blueprint</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">index</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">string</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">token</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">timestamp</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">created_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">nullable</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">down</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Schema</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">dropIfExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament_password_resets</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-class CreateFilamentPasswordResetsTable extends Migration
-{
-    public function up(): void
-    {
-        Schema::create('filament_password_resets', function (Blueprint $table): void {
-            $table-&gt;string('email')-&gt;index();
-            $table-&gt;string('token');
-            $table-&gt;timestamp('created_at')-&gt;nullable();
-        });
-    }
-
-    public function down(): void
-    {
-        Schema::dropIfExists('filament_password_resets');
-    }
-}
-</textarea></code></pre></details><details><summary><code>app/Models/FilamentUser.php</code></summary><pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Models</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Foundation</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Auth</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> Authenticatable</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">FilamentUser</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Authenticatable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">implements</span><span style="color: #A6ACCD;"> Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">FilamentUser</span><span style="color: #A6ACCD;">, Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">HasAvatar</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">guarded </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[];</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">hidden </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">remember_token</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">canAccessFilament</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getFilamentAvatarUrl</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">avatar</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
-
-namespace App\Models;
-
-use Filament\Models\Contracts;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class FilamentUser extends Authenticatable implements Contracts\FilamentUser, Contracts\HasAvatar
-{
-    protected $guarded = [];
-
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-    
-    public function canAccessFilament(): bool
-    {
-        return true;
-    }
-    
-    public function getFilamentAvatarUrl(): ?string
-    {
-        return $this-&gt;avatar;
-    }
-}
-</textarea></code></pre></details></details>
-<details><summary><p>Are you already using <code>App\Models\User</code>?</p></summary><ol>
-<li>Remove the <code>IsFilamentUser</code> trait from the model.</li>
-<li>Remove the <code>$filamentUserColumn</code> property if you use them. Instead, control admin access with <code>canAccessFilament()</code>.</li>
-<li>If you have a <code>canAccessFilament()</code> method, add a <code>bool</code> return type to it.</li>
-<li>Remove the <code>$filamentAdminColumn</code> and <code>$filamentRolesColumn</code> properties, and <code>isFilamentAdmin()</code> method, if you use them. Filament now only uses policies for authorization, so you may implement whichever roles system you wish there. We recommend <a href="https://github.com/spatie/laravel-permission"><code>spatie/laravel-permission</code></a>.</li>
-</ol></details>
-<h2 id="medium-impact-changes">Medium impact changes</h2>
-<h3 id="relation-managers">Relation managers</h3>
-<p><code>HasMany</code> relation manager classes should now extend <code>Filament\Resources\RelationManagers\HasManyRelationManager</code>. <code>MorphMany</code> relation manager classes should now extend <code>Filament\Resources\RelationManagers\MorphManyRelationManager</code>. <code>BelongsToMany</code> relation manager classes should now extend <code>Filament\Resources\RelationManagers\BelongsToManyRelationManager</code>.</p>
-<p>The <code>Filament\Resources\Forms\Form</code> class has been renamed to <code>Filament\Resources\Form</code>.</p>
-<p>The <code>Filament\Resources\Tables\Table</code> class has been renamed to <code>Filament\Resources\Table</code>.</p>
-<p>The following properties and method signatures been updated:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">inverseRelationship</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recordTitleAttribute</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Renamed from `$primaryColumn`. Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">relationship</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `string` type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $inverseRelationship; // Protected the property. Added the `?string` type.
-
-protected static ?string $recordTitleAttribute; // Renamed from `$primaryColumn`. Protected the property. Added the `?string` type.
-
-protected static string $relationship; // Protected the property. Added the `string` type.
-</textarea></code></pre>
-<h3 id="filamentfilament-facade-renamed-to-filamentfacadesfilament"><code>Filament\Filament</code> facade renamed to <code>Filament\Facades\Filament</code></h3>
-<p>You should be able to safely rename all instances of this class to the new one.</p>
-<h3 id="roles">Roles</h3>
-<p>Filament now only uses policies for authorization, so you may implement whichever roles system you wish there. We recommend <a href="https://github.com/spatie/laravel-permission"><code>spatie/laravel-permission</code></a>.</p>
-<p>You may remove any roles from the <code>App\Filament\Roles</code> directory, and delete any <code>authorization()</code> methods on your resources.</p>
-<h2 id="low-impact-changes">Low impact changes</h2>
-<h3 id="filamentignoremigrations-method-removed"><code>Filament::ignoreMigrations()</code> method removed</h3>
-<p>Since Filament doesn’t have any migrations anymore, you don’t need to ignore them.</p>
-<h3 id="property-changes-to-custom-page-classes">Property changes to custom page classes</h3>
-<p>The following properties and method signatures been updated:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug</span><span style="color: #89DDFF;">;</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Protected the property. Added the `?string` type.</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $title; // Protected the property. Added the `?string` type.
-
-protected static ?string $navigationLabel; // Protected the property. Added the `?string` type.
-
-protected static ?string $slug; // Protected the property. Added the `?string` type.
-</textarea></code></pre>
-<h3 id="theming-changes">Theming changes</h3>
-<p>The theming system has entirely changed, to add support for Tailwind JIT’s opacity features, which don’t support static color codes.</p>
-<p>Follow the instructions on the <a href="appearance#building-themes">appearance page</a> to find out how to compile your own Filament stylesheet.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/14-upgrade-guide.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+DateTimePicker::make(&#39;published_at&#39;)
+    -&gt;native(false)
+</code></pre>
+<h4 id="secondary-color">Secondary color</h4>
+<p>Filament v2 had a <code>secondary</code> color for many components which was gray. Now, you can define a non-gray <code>secondary</code> color alongside <code>primary</code>. All references to <code>secondary</code> should be replaced with <code>gray</code> to preserve the same appearance.</p>
+<h4 id="get-and-set-closure-parameters"><code>$get</code> and <code>$set</code> closure parameters</h4>
+<p>In the forms package, <code>$get</code> and <code>$set</code> parameters now use a type of either <code>\Filament\Forms\Get</code> or <code>\Filament\Forms\Set</code> instead of <code>\Closure</code>. This allows for better IDE autocomplete support of the parameters of each function.</p>
+<p>An easy way to upgrade your code quickly is to find and replace:</p>
+<ul>
+<li><code>Closure $get</code> to <code>\Filament\Forms\Get $get</code></li>
+<li><code>Closure $set</code> to <code>\Filament\Forms\Set $set</code></li>
+</ul>
+<h4 id="blade-icon-components-have-been-disabled">Blade icon components have been disabled</h4>
+<p>During v2, we noticed performance issues with Blade icon components. We’ve decided to disable them by default in v3, so we only use the <a href="https://github.com/blade-ui-kit/blade-icons#directive"><code>@svg()</code> syntax</a> for rendering icons.</p>
+<p>A side effect of this change is that all custom icons that you use must now be <a href="https://github.com/blade-ui-kit/blade-icons#defining-sets">registered in a set</a>. We no longer allow arbitrary Blade components to be used as custom icons.</p>
+<h4 id="plugins">Plugins</h4>
+<p>Filament v3 has a new universal plugin system that breaches the constraints of the admin panel. Learn how to build v3 plugins <a href="plugins">here</a>.</p>
+<h3 id="low-impact-changes">Low impact changes</h3>
+<h4 id="default-actions-and-type-specific-relation-manager-classes">Default actions and type-specific relation manager classes</h4>
+<blockquote>
+<p>If you started the Filament project after v2.13, you can skip this section. Since then, new resources and relation managers have been generated with the new syntax.</p>
+</blockquote>
+<p>Since v2.13, resources and relation managers now define actions within the <code>table()</code> method instead of them being assumed by default.</p>
+<p>When using simple resources, remove the <code>CanCreateRecords</code>, <code>CanDeleteRecords</code>, <code>CanEditRecords</code>, and <code>CanViewRecords</code> traits from the Manage page.</p>
+<p>We also deprecated type-specific relation manager classes. Any classes extending <code>BelongsToManyRelationManager</code>, <code>HasManyRelationManager</code>, <code>HasManyThroughRelationManager</code>, <code>MorphManyRelationManager</code>, or <code>MorphToManyRelationManager</code> should now extend <code>\Filament\Resources\RelationManagers\RelationManager</code>. You can also remove the <code>CanAssociateRecords</code>, <code>CanAttachRecords</code>, <code>CanCreateRecords</code>, <code>CanDeleteRecords</code>, <code>CanDetachRecords</code>, <code>CanDisassociateRecords</code>, <code>CanEditRecords</code>, and <code>CanViewRecords</code> traits from relation managers.</p>
+<p>To learn more about v2.13 changes, read our <a href="https://filamentphp.com/blog/v2130-admin-resources">blog post</a>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/14-upgrade-guide.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>
@@ -865,75 +738,39 @@ protected static ?string $slug; // Protected the property. Added the `?string` t
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;high-impact-changes&#34;,&#34;text&#34;:&#34;High impact changes&#34;,&#34;title&#34;:&#34;High impact changes&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;property-and-method-changes-to-resource-and-page-classes&#34;,&#34;text&#34;:&#34;Property and method changes to resource and page classes&#34;,&#34;title&#34;:&#34;Property and method changes to resource and page classes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;forms&#34;,&#34;text&#34;:&#34;Forms&#34;,&#34;title&#34;:&#34;Forms&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;tables&#34;,&#34;text&#34;:&#34;Tables&#34;,&#34;title&#34;:&#34;Tables&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;published-configuration-updates&#34;,&#34;text&#34;:&#34;Published configuration updates&#34;,&#34;title&#34;:&#34;Published configuration updates&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;users&#34;,&#34;text&#34;:&#34;Users&#34;,&#34;title&#34;:&#34;Users&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;medium-impact-changes&#34;,&#34;text&#34;:&#34;Medium impact changes&#34;,&#34;title&#34;:&#34;Medium impact changes&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;relation-managers&#34;,&#34;text&#34;:&#34;Relation managers&#34;,&#34;title&#34;:&#34;Relation managers&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;filamentfilament-facade-renamed-to-filamentfacadesfilament&#34;,&#34;text&#34;:&#34;Filament\\Filament facade renamed to Filament\\Facades\\Filament&#34;,&#34;title&#34;:&#34;Filament\\Filament facade renamed to Filament\\Facades\\Filament&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;roles&#34;,&#34;text&#34;:&#34;Roles&#34;,&#34;title&#34;:&#34;Roles&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;low-impact-changes&#34;,&#34;text&#34;:&#34;Low impact changes&#34;,&#34;title&#34;:&#34;Low impact changes&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;filamentignoremigrations-method-removed&#34;,&#34;text&#34;:&#34;Filament::ignoreMigrations() method removed&#34;,&#34;title&#34;:&#34;Filament::ignoreMigrations() method removed&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;property-changes-to-custom-page-classes&#34;,&#34;text&#34;:&#34;Property changes to custom page classes&#34;,&#34;title&#34;:&#34;Property changes to custom page classes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;theming-changes&#34;,&#34;text&#34;:&#34;Theming changes&#34;,&#34;title&#34;:&#34;Theming changes&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;new-requirements&#34;,&#34;text&#34;:&#34;New requirements&#34;,&#34;title&#34;:&#34;New requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-automatically&#34;,&#34;text&#34;:&#34;Upgrading automatically&#34;,&#34;title&#34;:&#34;Upgrading automatically&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-manually&#34;,&#34;text&#34;:&#34;Upgrading manually&#34;,&#34;title&#34;:&#34;Upgrading manually&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;high-impact-changes&#34;,&#34;text&#34;:&#34;High impact changes&#34;,&#34;title&#34;:&#34;High impact changes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;medium-impact-changes&#34;,&#34;text&#34;:&#34;Medium impact changes&#34;,&#34;title&#34;:&#34;Medium impact changes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;low-impact-changes&#34;,&#34;text&#34;:&#34;Low impact changes&#34;,&#34;title&#34;:&#34;Low impact changes&#34;}]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
-                        <a href="#high-impact-changes" x-bind:class="current == 'high-impact-changes' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
-                          High impact changes
+                        <a href="#new-requirements" x-bind:class="current == 'new-requirements' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          New requirements
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
-                          <li>
-                              <a href="#property-and-method-changes-to-resource-and-page-classes" x-bind:class="current == 'property-and-method-changes-to-resource-and-page-classes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Property and method changes to resource and page classes
-                              </a>
-                            </li><li>
-                              <a href="#forms" x-bind:class="current == 'forms' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Forms
-                              </a>
-                            </li><li>
-                              <a href="#tables" x-bind:class="current == 'tables' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Tables
-                              </a>
-                            </li><li>
-                              <a href="#published-configuration-updates" x-bind:class="current == 'published-configuration-updates' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Published configuration updates
-                              </a>
-                            </li><li>
-                              <a href="#users" x-bind:class="current == 'users' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Users
-                              </a>
-                            </li>
-                        </ol>
+                      
                     </li><li>
                       <h3>
-                        <a href="#medium-impact-changes" x-bind:class="current == 'medium-impact-changes' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
-                          Medium impact changes
+                        <a href="#upgrading-automatically" x-bind:class="current == 'upgrading-automatically' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          Upgrading automatically
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
-                          <li>
-                              <a href="#relation-managers" x-bind:class="current == 'relation-managers' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Relation managers
-                              </a>
-                            </li><li>
-                              <a href="#filamentfilament-facade-renamed-to-filamentfacadesfilament" x-bind:class="current == 'filamentfilament-facade-renamed-to-filamentfacadesfilament' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Filament\Filament facade renamed to Filament\Facades\Filament
-                              </a>
-                            </li><li>
-                              <a href="#roles" x-bind:class="current == 'roles' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Roles
-                              </a>
-                            </li>
-                        </ol>
+                      
                     </li><li>
                       <h3>
-                        <a href="#low-impact-changes" x-bind:class="current == 'low-impact-changes' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
-                          Low impact changes
+                        <a href="#upgrading-manually" x-bind:class="current == 'upgrading-manually' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          Upgrading manually
                         </a>
                       </h3>
                       <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           <li>
-                              <a href="#filamentignoremigrations-method-removed" x-bind:class="current == 'filamentignoremigrations-method-removed' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Filament::ignoreMigrations() method removed
+                              <a href="#high-impact-changes" x-bind:class="current == 'high-impact-changes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                High impact changes
                               </a>
                             </li><li>
-                              <a href="#property-changes-to-custom-page-classes" x-bind:class="current == 'property-changes-to-custom-page-classes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Property changes to custom page classes
+                              <a href="#medium-impact-changes" x-bind:class="current == 'medium-impact-changes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Medium impact changes
                               </a>
                             </li><li>
-                              <a href="#theming-changes" x-bind:class="current == 'theming-changes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Theming changes
+                              <a href="#low-impact-changes" x-bind:class="current == 'low-impact-changes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Low impact changes
                               </a>
                             </li>
                         </ol>

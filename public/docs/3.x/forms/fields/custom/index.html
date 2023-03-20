@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -637,58 +653,58 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <h2 id="view-fields">View fields</h2>
 <p>Aside from <a href="custom">building custom fields</a>, you may create “view” fields which allow you to create custom fields without extra PHP classes.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">ViewField</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">ViewField</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">notifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.forms.components.range-slider</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\ViewField;
+<pre><code class="language-php">use Filament\Forms\Components\ViewField;
 
-ViewField::make('notifications')-&gt;view('filament.forms.components.range-slider')
-</textarea></code></pre>
+ViewField::make(&#39;notifications&#39;)-&gt;view(&#39;filament.forms.components.range-slider&#39;)
+</code></pre>
 <p>Inside your view, you may interact with the state of the form component using Livewire and Alpine.js.</p>
 <p>The <code>$getStatePath()</code> closure may be used by the view to retrieve the Livewire property path of the field. You could use this to <a href="https://laravel-livewire.com/docs/properties#data-binding"><code>wire:model</code></a> a value, or <a href="https://laravel-livewire.com/docs/alpine-js"><code>$wire.entangle</code></a> it with Alpine.js.</p>
 <p>Using <a href="https://laravel-livewire.com/docs/alpine-js#sharing-state">Livewire’s entangle</a> allows sharing state with Alpine.js:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-dynamic-component</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:component</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$getFieldWrapperView()</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:field</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$field</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{ state: $wire.entangle(&#39;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getStatePath</span><span style="color: #89DDFF;">()</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #C3E88D;">&#39;).defer }</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #676E95;">&lt;!-- Interact with the `state` property in Alpine.js --&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-dynamic-component</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-dynamic-component
-    :component="$getFieldWrapperView()"
-    :field="$field"
+<pre><code class="language-blade">&lt;x-dynamic-component
+    :component=&quot;$getFieldWrapperView()&quot;
+    :field=&quot;$field&quot;
 &gt;
-    &lt;div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }"&gt;
+    &lt;div x-data=&quot;{ state: $wire.entangle(&#39;{{ $getStatePath() }}&#39;).defer }&quot;&gt;
         &lt;!-- Interact with the `state` property in Alpine.js --&gt;
     &lt;/div&gt;
 &lt;/x-dynamic-component&gt;
-</textarea></code></pre>
+</code></pre>
 <p>Or, you may bind the value to a Livewire property using <a href="https://laravel-livewire.com/docs/properties#data-binding"><code>wire:model</code></a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-dynamic-component</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:component</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$getFieldWrapperView()</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:field</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$field</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">input</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">wire:model.defer</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getStatePath</span><span style="color: #89DDFF;">()</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-dynamic-component</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-dynamic-component
-    :component="$getFieldWrapperView()"
-    :field="$field"
+<pre><code class="language-blade">&lt;x-dynamic-component
+    :component=&quot;$getFieldWrapperView()&quot;
+    :field=&quot;$field&quot;
 &gt;
-    &lt;input wire:model.defer="{{ $getStatePath() }}" /&gt;
+    &lt;input wire:model.defer=&quot;{{ $getStatePath() }}&quot; /&gt;
 &lt;/x-dynamic-component&gt;
-</textarea></code></pre>
+</code></pre>
 <h2 id="custom-field-classes">Custom field classes</h2>
 <p>You may create your own custom field classes and views, which you can reuse across your project, and even release as a plugin to the community.</p>
 <blockquote>
 <p>If you’re just creating a simple custom field to use once, you could instead use a <a href="#view">view field</a> to render any custom Blade file.</p>
 </blockquote>
 <p>To create a custom field class and view, you may use the following command:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:form-field</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">RangeSlider</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:form-field RangeSlider
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:form-field RangeSlider
+</code></pre>
 <p>This will create the following field class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Field</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">RangeSlider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Field</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">view </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.forms.components.range-slider</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Field;
+<pre><code class="language-php">use Filament\Forms\Components\Field;
 
 class RangeSlider extends Field
 {
-    protected string $view = 'filament.forms.components.range-slider';
+    protected string $view = &#39;filament.forms.components.range-slider&#39;;
 }
-</textarea></code></pre>
+</code></pre>
 <p>Inside your view, you may interact with the state of the form component using Livewire and Alpine.js.</p>
 <p>The <code>$getStatePath()</code> closure may be used by the view to retrieve the Livewire property path of the field. You could use this to <a href="https://laravel-livewire.com/docs/properties#data-binding"><code>wire:model</code></a> a value, or <a href="https://laravel-livewire.com/docs/alpine-js"><code>$wire.entangle</code></a> it with Alpine.js:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-dynamic-component</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:component</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$getFieldWrapperView()</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:field</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$field</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{ state: $wire.entangle(&#39;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getStatePath</span><span style="color: #89DDFF;">()</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #C3E88D;">&#39;).defer }</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #676E95;">&lt;!-- Interact with the `state` property in Alpine.js --&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-dynamic-component</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-dynamic-component
-    :component="$getFieldWrapperView()"
-    :field="$field"
+<pre><code class="language-blade">&lt;x-dynamic-component
+    :component=&quot;$getFieldWrapperView()&quot;
+    :field=&quot;$field&quot;
 &gt;
-    &lt;div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }"&gt;
+    &lt;div x-data=&quot;{ state: $wire.entangle(&#39;{{ $getStatePath() }}&#39;).defer }&quot;&gt;
         &lt;!-- Interact with the `state` property in Alpine.js --&gt;
     &lt;/div&gt;
 &lt;/x-dynamic-component&gt;
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/19-custom.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/19-custom.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

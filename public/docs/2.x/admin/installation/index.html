@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -569,17 +569,17 @@
 <p>This package is compatible with other Filament v2.x products. The <a href="/docs/forms">form builder</a>, <a href="/docs/tables">table builder</a> and <a href="/docs/notifications">notifications</a> come pre-installed with the package, and no other installation steps are required to use them within the admin panel.</p>
 <h2 id="installation">Installation</h2>
 <p>To get started with the admin panel, you can install it using the command:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/filament:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^2.0</span><span style="color: #89DDFF;">&quot;</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/filament:"^2.0"
-</textarea></code></pre>
+<pre><code class="language-bash">composer require filament/filament:&quot;^2.0&quot;
+</code></pre>
 <p>Each time you upgrade Filament, you need to run the <code>filament:upgrade</code> command. We recommend adding this to your <code>composer.json</code>’s <code>post-update-cmd</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">post-update-cmd</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">@php artisan filament:upgrade</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">]</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"post-update-cmd": [
+<pre><code class="language-json">&quot;post-update-cmd&quot;: [
     // ...
-    "@php artisan filament:upgrade"
+    &quot;@php artisan filament:upgrade&quot;
 ],
-</textarea></code></pre>
+</code></pre>
 <p>If you don’t have one, you may create a new user account using:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-user</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-user
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-user
+</code></pre>
 <p>Visit your admin panel at <code>/admin</code> to sign in, and you’re now ready to start <a href="resources">building resources</a>!</p>
 <p><a href="https://demo.filamentphp.com"><img src="https://user-images.githubusercontent.com/41773797/147615302-daec5d1c-e3ac-428a-98c2-c3fb40d945b5.png" alt=""/></a></p>
 <h2 id="deploying-to-production">Deploying to production</h2>
@@ -588,29 +588,29 @@
 <p>If you don’t complete these steps, there will be a 403 error when you try to access the admin panel in production.</p>
 <h2 id="publishing-configuration">Publishing configuration</h2>
 <p>If you wish, you may publish the configuration of the package using:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-config</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-config
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan vendor:publish --tag=filament-config
+</code></pre>
 <h2 id="publishing-translations">Publishing translations</h2>
 <p>If you wish to translate the package, you may publish the language files using:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-translations</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-translations
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan vendor:publish --tag=filament-translations
+</code></pre>
 <p>Since this package depends on other Filament packages, you may wish to translate those as well:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-forms-translations</span></div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-tables-translations</span></div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-support-translations</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-forms-translations
+<pre><code class="language-bash">php artisan vendor:publish --tag=filament-forms-translations
 php artisan vendor:publish --tag=filament-tables-translations
 php artisan vendor:publish --tag=filament-support-translations
-</textarea></code></pre>
+</code></pre>
 <h2 id="upgrading">Upgrading</h2>
 <p>To upgrade the package to the latest version, you must run:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">update</span></div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:upgrade</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer update
+<pre><code class="language-bash">composer update
 php artisan filament:upgrade
-</textarea></code></pre>
+</code></pre>
 <p>We recommend adding the <code>filament:upgrade</code> command to your <code>composer.json</code>’s <code>post-update-cmd</code> to run it automatically:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">post-update-cmd</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">@php artisan filament:upgrade</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">]</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"post-update-cmd": [
+<pre><code class="language-json">&quot;post-update-cmd&quot;: [
     // ...
-    "@php artisan filament:upgrade"
+    &quot;@php artisan filament:upgrade&quot;
 ],
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/01-installation.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/01-installation.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

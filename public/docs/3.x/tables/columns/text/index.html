@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -203,6 +203,14 @@
       </li><li>
         <a href="/docs/3.x/tables/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -498,6 +506,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/tables/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -516,75 +532,75 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Text columns display simple text from your database:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('title')
-</textarea></code></pre>
+TextColumn::make(&#39;title&#39;)
+</code></pre>
 <h2 id="displaying-as-a-badge">Displaying as a “badge”</h2>
 <p>By default, text is quite plain and has no background color. You can make it appear as a “badge” instead using the <code>badge()</code> method. A great use case for this is with statuses, where may want to display a badge with a <a href="#customizing-the-color">color</a> that matches the status:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badge</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">color</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">status</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">match</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">status</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">draft</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">gray</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">reviewing</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">warning</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">success</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rejected</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">danger</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('status')
+TextColumn::make(&#39;status&#39;)
     -&gt;badge()
     -&gt;color(fn (string $status): string =&gt; match ($status) {
-        'draft' =&gt; 'gray',
-        'reviewing' =&gt; 'warning',
-        'published' =&gt; 'success',
-        'rejected' =&gt; 'danger',
+        &#39;draft&#39; =&gt; &#39;gray&#39;,
+        &#39;reviewing&#39; =&gt; &#39;warning&#39;,
+        &#39;published&#39; =&gt; &#39;success&#39;,
+        &#39;rejected&#39; =&gt; &#39;danger&#39;,
     })
-</textarea></code></pre>
+</code></pre>
 <p>You may add other things to the badge, like an <a href="#adding-an-icon">icon</a>.</p>
 <h2 id="displaying-a-description">Displaying a description</h2>
 <p>Descriptions may be used to easily render additional text above or below the column contents.</p>
 <p>You can display a description below the contents of a text column using the <code>description()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Post</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">description</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('title')
+TextColumn::make(&#39;title&#39;)
     -&gt;description(fn (Post $record): string =&gt; $record-&gt;description)
-</textarea></code></pre>
+</code></pre>
 <p>By default, the description is displayed below the main text, but you can move it above using the second parameter:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Post</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">description</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">position</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">above</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('title')
-    -&gt;description(fn (Post $record): string =&gt; $record-&gt;description, position: 'above')
-</textarea></code></pre>
+TextColumn::make(&#39;title&#39;)
+    -&gt;description(fn (Post $record): string =&gt; $record-&gt;description, position: &#39;above&#39;)
+</code></pre>
 <h2 id="date-formatting">Date formatting</h2>
 <p>You may use the <code>date()</code> and <code>dateTime()</code> methods to format the column’s state using <a href="https://www.php.net/manual/en/datetime.format.php">PHP date formatting tokens</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">created_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">dateTime</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('created_at')-&gt;dateTime()
-</textarea></code></pre>
+TextColumn::make(&#39;created_at&#39;)-&gt;dateTime()
+</code></pre>
 <p>You may use the <code>since()</code> method to format the column’s state using <a href="https://carbon.nesbot.com/docs/#api-humandiff">Carbon’s <code>diffForHumans()</code></a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">created_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">since</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('created_at')-&gt;since()
-</textarea></code></pre>
+TextColumn::make(&#39;created_at&#39;)-&gt;since()
+</code></pre>
 <h2 id="number-formatting">Number formatting</h2>
 <p>The <code>numeric()</code> method allows you to format a column as a number, using PHP’s <code>number_format()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">stock</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">numeric</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">decimalPlaces</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">0</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">decimalSeparator</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">thousandsSeparator</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">,</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('stock')-&gt;numeric(
+TextColumn::make(&#39;stock&#39;)-&gt;numeric(
     decimalPlaces: 0,
-    decimalSeparator: '.',
-    thousandsSeparator: ',',
+    decimalSeparator: &#39;.&#39;,
+    thousandsSeparator: &#39;,&#39;,
 )
-</textarea></code></pre>
+</code></pre>
 <h2 id="currency-formatting">Currency formatting</h2>
-<p>The <code>money()</code> method allows you to easily format monetary values, in any currency. This functionality uses <a href="https://github.com/akaunting/laravel-money"><code>akaunting/laravel-money</code></a> internally:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">price</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">money</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">eur</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<p>The <code>money()</code> method allows you to easily format monetary values, in any currency:</p>
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('price')-&gt;money('eur')
-</textarea></code></pre>
+TextColumn::make(&#39;price&#39;)-&gt;money(&#39;eur&#39;)
+</code></pre>
 <h2 id="limiting-text-length">Limiting text length</h2>
 <p>You may <code>limit()</code> the length of the cell’s value:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">limit</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">50</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('description')-&gt;limit(50)
-</textarea></code></pre>
+TextColumn::make(&#39;description&#39;)-&gt;limit(50)
+</code></pre>
 <p>You may also reuse the value that is being passed to <code>limit()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">limit</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">50</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">tooltip</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">column</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">column</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getState</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">if</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">strlen</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&lt;=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">column</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getCharacterLimit</span><span style="color: #89DDFF;">())</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">null;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Only render the tooltip if the column contents exceeds the length limit.</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('description')
+TextColumn::make(&#39;description&#39;)
     -&gt;limit(50)
     -&gt;tooltip(function (TextColumn $column): ?string {
         $state = $column-&gt;getState();
@@ -596,62 +612,62 @@ TextColumn::make('description')
         // Only render the tooltip if the column contents exceeds the length limit.
         return $state;
     })
-</textarea></code></pre>
+</code></pre>
 <h2 id="limiting-word-count">Limiting word count</h2>
 <p>You may limit the number of <code>words()</code> displayed in the cell:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">words</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('description')-&gt;words(10)
-</textarea></code></pre>
+TextColumn::make(&#39;description&#39;)-&gt;words(10)
+</code></pre>
 <h2 id="wrapping-content">Wrapping content</h2>
 <p>If you’d like your column’s content to wrap if it’s too long, you may use the <code>wrap()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">wrap</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('description')-&gt;wrap()
-</textarea></code></pre>
+TextColumn::make(&#39;description&#39;)-&gt;wrap()
+</code></pre>
 <h2 id="listing-multiple-values">Listing multiple values</h2>
 <p>By default, if there are multiple values inside your text column, they will be comma-separated. You may use the <code>listWithLineBreaks()</code> method to display them on new lines instead:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authors.name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">listWithLineBreaks</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('authors.name')
+TextColumn::make(&#39;authors.name&#39;)
     -&gt;listWithLineBreaks()
-</textarea></code></pre>
+</code></pre>
 <h3 id="adding-bullet-points-to-the-list">Adding bullet points to the list</h3>
 <p>You may add a bullet point to each list item using the <code>bulleted()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authors.name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">listWithLineBreaks</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bulleted</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('authors.name')
+TextColumn::make(&#39;authors.name&#39;)
     -&gt;listWithLineBreaks()
     -&gt;bulleted()
-</textarea></code></pre>
+</code></pre>
 <h3 id="limiting-the-number-of-values-in-the-list">Limiting the number of values in the list</h3>
 <p>You can limit the number of values in the list using the <code>limitList()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authors.name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">listWithLineBreaks</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">limitList</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">3</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('authors.name')
+TextColumn::make(&#39;authors.name&#39;)
     -&gt;listWithLineBreaks()
     -&gt;limitList(3)
-</textarea></code></pre>
+</code></pre>
 <h3 id="using-a-list-separator">Using a list separator</h3>
 <p>If you want to “explode” a text string from your model into multiple list items, you can do so with the <code>separator()</code> method. This is useful for displaying comma-separated tags <a href="#displaying-as-a-badge">as badges</a>, for example:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tags</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badge</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">separator</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">,</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('tags')
+TextColumn::make(&#39;tags&#39;)
     -&gt;badge()
-    -&gt;separator(',')
-</textarea></code></pre>
+    -&gt;separator(&#39;,&#39;)
+</code></pre>
 <h2 id="rendering-html">Rendering HTML</h2>
 <p>If your column value is HTML, you may render it using <code>html()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">html</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('description')-&gt;html()
-</textarea></code></pre>
+TextColumn::make(&#39;description&#39;)-&gt;html()
+</code></pre>
 <h2 id="displaying-the-row-index">Displaying the row index</h2>
 <p>You may want a column to contain the number of the current row in the table:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HasTable</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">getStateUsing</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">HasTable</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">stdClass</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">rowLoop</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">string</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">rowLoop</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">iteration </span><span style="color: #89DDFF;">+</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getTableRecordsPerPage</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">*</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getTablePage</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">1</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Contracts\HasTable;
 
-TextColumn::make('index')-&gt;getStateUsing(
+TextColumn::make(&#39;index&#39;)-&gt;getStateUsing(
     static function (HasTable $livewire, stdClass $rowLoop): string {
         return (string) (
             $rowLoop-&gt;iteration +
@@ -661,88 +677,88 @@ TextColumn::make('index')-&gt;getStateUsing(
         );
     }
 ),
-</textarea></code></pre>
+</code></pre>
 <p>As <code>$rowLoop</code> is Laravel Blade’s <code>$loop</code> object, you can reference all other <code>$loop</code> properties.</p>
 <p>As a shortcut, you may use the <code>rowIndex()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">rowIndex</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('index')-&gt;rowIndex()
-</textarea></code></pre>
+TextColumn::make(&#39;index&#39;)-&gt;rowIndex()
+</code></pre>
 <p>To start counting from 0 instead of 1, use <code>isFromZero: true</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">rowIndex</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">isFromZero</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('index')-&gt;rowIndex(isFromZero: true)
-</textarea></code></pre>
+TextColumn::make(&#39;index&#39;)-&gt;rowIndex(isFromZero: true)
+</code></pre>
 <h2 id="custom-formatting">Custom formatting</h2>
 <p>You may instead pass a custom formatting callback to <code>formatStateUsing()</code>, which accepts the <code>$state</code> of the cell, and optionally its <code>$record</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">formatStateUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">statuses.</span><span style="color: #89DDFF;">{$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">}&quot;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('status')
-    -&gt;formatStateUsing(fn (string $state): string =&gt; __("statuses.{$state}"))
-</textarea></code></pre>
+TextColumn::make(&#39;status&#39;)
+    -&gt;formatStateUsing(fn (string $state): string =&gt; __(&quot;statuses.{$state}&quot;))
+</code></pre>
 <h2 id="customizing-the-color">Customizing the color</h2>
 <p>You may set a color for the text, either <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>warning</code> or <code>danger</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">color</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">primary</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('status')
-    -&gt;color('primary')
-</textarea></code></pre>
+TextColumn::make(&#39;status&#39;)
+    -&gt;color(&#39;primary&#39;)
+</code></pre>
 <h2 id="adding-an-icon">Adding an icon</h2>
 <p>Text columns may also have an icon:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-envelope</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('email')
-    -&gt;icon('heroicon-m-envelope')
-</textarea></code></pre>
+TextColumn::make(&#39;email&#39;)
+    -&gt;icon(&#39;heroicon-m-envelope&#39;)
+</code></pre>
 <p>You may set the position of an icon using <code>iconPosition()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-envelope</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">iconPosition</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">after</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// `before` or `after`</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('email')
-    -&gt;icon('heroicon-m-envelope')
-    -&gt;iconPosition('after') // `before` or `after`
-</textarea></code></pre>
+TextColumn::make(&#39;email&#39;)
+    -&gt;icon(&#39;heroicon-m-envelope&#39;)
+    -&gt;iconPosition(&#39;after&#39;) // `before` or `after`
+</code></pre>
 <h2 id="customizing-the-text-size">Customizing the text size</h2>
 <p>You may make the text smaller using <code>size(&#39;sm&#39;)</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">size</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sm</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('email')
-    -&gt;size('sm')
-</textarea></code></pre>
+TextColumn::make(&#39;email&#39;)
+    -&gt;size(&#39;sm&#39;)
+</code></pre>
 <p>Or you can make it larger using <code>size(&#39;lg&#39;)</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">size</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">lg</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('title')
-    -&gt;size('lg')
-</textarea></code></pre>
+TextColumn::make(&#39;title&#39;)
+    -&gt;size(&#39;lg&#39;)
+</code></pre>
 <h2 id="customizing-the-font-weight">Customizing the font weight</h2>
 <p>Text columns have regular font weight by default but you may change this to any of the the following options: <code>thin</code>, <code>extralight</code>, <code>light</code>, <code>medium</code>, <code>semibold</code>, <code>bold</code>, <code>extrabold</code> or <code>black</code>.</p>
 <p>For instance, you may make the font bold using <code>weight(&#39;bold&#39;)</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">weight</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">bold</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('email')
-    -&gt;weight('bold')
-</textarea></code></pre>
+TextColumn::make(&#39;email&#39;)
+    -&gt;weight(&#39;bold&#39;)
+</code></pre>
 <h2 id="customizing-the-font-family">Customizing the font family</h2>
 <p>You can change the text font family to any of the following options: <code>sans</code>, <code>serif</code> or <code>mono</code>.</p>
 <p>For instance, you may make the font mono using <code>fontFamily(&#39;mono&#39;)</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">text</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fontFamily</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">mono</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('text')
-    -&gt;fontFamily('mono')
-</textarea></code></pre>
+TextColumn::make(&#39;text&#39;)
+    -&gt;fontFamily(&#39;mono&#39;)
+</code></pre>
 <h2 id="allowing-the-text-to-be-copied-to-the-clipboard">Allowing the text to be copied to the clipboard</h2>
 <p>You may make the text copyable, such that clicking on the cell copies the text to the clipboard, and optionally specify a custom confirmation message and duration in milliseconds. This feature only works when SSL is enabled for the app.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">copyable</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">copyMessage</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Email address copied</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">copyMessageDuration</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">1500</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\TextColumn;
+<pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('email')
+TextColumn::make(&#39;email&#39;)
     -&gt;copyable()
-    -&gt;copyMessage('Email address copied')
+    -&gt;copyMessage(&#39;Email address copied&#39;)
     -&gt;copyMessageDuration(1500)
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Filament uses tooltips to display the copy message in the admin panel. If you want to use the copyable feature outside of the admin panel, make sure you have <a href="https://github.com/ryangjchandler/alpine-tooltip#installation"><code>@ryangjchandler/alpine-tooltip</code> installed</a> in your app.</p>
 </blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/02-text.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -343,43 +343,43 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Plugins can be used to extend Filament’s default behaviour and create reusable modules for use in multiple applications.</p>
 <p>To create a new plugin, extend the <code>Filament\PluginServiceProvider</code> class provided by Filament:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">PluginServiceProvider</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\PluginServiceProvider;
+<pre><code class="language-php">use Filament\PluginServiceProvider;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
     // ...
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="registering-plugins">Registering Plugins</h2>
 <h3 id="application-plugins">Application Plugins</h3>
 <p>If you’re developing a plugin for a specific application, you should register the new service provider in your <code>config/app.php</code> file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">providers</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Providers</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">];</span></div><textarea data-torchlight-original="true" style="display: none !important;">return [
+<pre><code class="language-php">return [
 
-    'providers' =&gt; [
+    &#39;providers&#39; =&gt; [
         // ...
 
         \App\Providers\ExampleServiceProvider::class,
     ]
 
 ];
-</textarea></code></pre>
+</code></pre>
 <p>Laravel will load your service provider when bootstrapping and your plugin will be initialised.</p>
 <h3 id="distributed-plugins">Distributed Plugins</h3>
 <p>Much like a normal Laravel package, you should add your service provider’s fully qualified class name to the <code>extra.laravel.providers</code> array in your package’s <code>composer.json</code> file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C792EA;">extra</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&quot;</span><span style="color: #FFCB6B;">laravel</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&quot;</span><span style="color: #F78C6C;">providers</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Vendor</span><span style="color: #A6ACCD;">\\</span><span style="color: #C3E88D;">Package</span><span style="color: #A6ACCD;">\\</span><span style="color: #C3E88D;">ExampleServiceProvider</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">{
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Vendor\\Package\\ExampleServiceProvider"
+<pre><code class="language-json">{
+    &quot;extra&quot;: {
+        &quot;laravel&quot;: {
+            &quot;providers&quot;: [
+                &quot;Vendor\\Package\\ExampleServiceProvider&quot;
             ]
         }
     }
 }
-</textarea></code></pre>
+</code></pre>
 <p>This will ensure your service provider is automatically loaded by Laravel when the package is installed.</p>
 <h2 id="resources">Resources</h2>
 <p>To register a custom resource, add the fully qualified class name to the <code>protected $resources</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomResource</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resources </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomResource</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Resources\CustomResource;
+<pre><code class="language-php">use Vendor\Package\Resources\CustomResource;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -387,11 +387,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomResource::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Resource</code> and ensure that Livewire can discover it.</p>
 <h2 id="pages">Pages</h2>
 <p>To register a custom page, add the fully qualified class name to the <code>protected $pages</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomPage</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">pages </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomPage</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Pages\CustomPage;
+<pre><code class="language-php">use Vendor\Package\Pages\CustomPage;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -399,11 +399,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomPage::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Page</code> and ensure that Livewire can discover it.</p>
 <h2 id="widgets">Widgets</h2>
 <p>To register a custom widget, add the fully qualified class name to the <code>protected $widgets</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Widgers</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomWidget</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">widgets </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomWidget</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Widgers\CustomWidget;
+<pre><code class="language-php">use Vendor\Package\Widgers\CustomWidget;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -411,11 +411,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomWidget::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Widget</code> and ensure that Livewire can discover it.</p>
 <h2 id="roles">Roles</h2>
 <p>To register a custom role, add the fully qualified class name to the <code>protected $roles</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomRole</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">roles </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomRole</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Roles\CustomRole;
+<pre><code class="language-php">use Vendor\Package\Roles\CustomRole;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -423,67 +423,67 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomRole::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Role</code> and ensure it’s available for use throughout your application.</p>
 <h2 id="frontend-assets">Frontend Assets</h2>
 <p>Filament plugins can also register their own frontend assets. These assets will be included on all Filament related pages, allowing you to use your own CSS and JavaScript.</p>
 <h3 id="stylesheets">Stylesheets</h3>
 <p>To include a custom stylesheet, add it to the <code>protected $styles</code> property in your service provider. You should use a unique name as the key and the URL to the stylesheet as the value.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">styles </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-styles</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/css/style.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected $styles = [
-        'my-package-styles' =&gt; '/vendor/my-package/css/style.css',
+        &#39;my-package-styles&#39; =&gt; &#39;/vendor/my-package/css/style.css&#39;,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>If you need to dynamically generate the key or value, you can overwrite the <code>protected styles()</code> method and return an <code>array</code> of key/value pairs, just like the <code>$styles</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">styles</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-styles</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/css/style.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function styles()
     {
         return [
-            'my-package-styles' =&gt; asset('/vendor/my-package/css/style.css'),
+            &#39;my-package-styles&#39; =&gt; asset(&#39;/vendor/my-package/css/style.css&#39;),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="scripts">Scripts</h3>
 <p>To include a custom script, add it to the <code>protected $scripts</code> property in your service provider. You should use a unique name as the key and the URL to the script as the value.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">scripts </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-scripts</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/js/main.js</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected $scripts = [
-        'my-package-scripts' =&gt; '/vendor/my-package/js/main.js'
+        &#39;my-package-scripts&#39; =&gt; &#39;/vendor/my-package/js/main.js&#39;
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>If you need to dynamically generate the key or value, you can overwrite the <code>protected scripts()</code> method and return an <code>array</code> of key/value pairs, just like the <code>$scripts</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">scripts</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-scripts</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/js/main.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function scripts()
     {
         return [
-            'my-package-scripts' =&gt; asset('/vendor/my-package/js/main.js'),
+            &#39;my-package-scripts&#39; =&gt; asset(&#39;/vendor/my-package/js/main.js&#39;),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="providing-data-to-the-frontend">Providing Data to the Frontend</h3>
 <p>Whilst building your plugin, you might find the need to generate some data on the server and access it on the client.</p>
 <p>To do this, add a new <code>protected function scriptData()</code> to your service provider and return an array of <code>string</code> keys and values that can be passed to converted into JSON.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">scriptData</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">user</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Auth</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function scriptData()
     {
         return [
-            'user' =&gt; Auth::user(),
+            &#39;user&#39; =&gt; Auth::user(),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Filament uses the <code>@json</code> Blade directive to convert your script data into a valid JavaScript object. You can find out more about this directive in the <a href="https://laravel.com/docs/blade#rendering-json">official Laravel documentation</a>.</p>
 </blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/09-plugin-development.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

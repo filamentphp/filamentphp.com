@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -581,63 +581,63 @@
   <h2 id="changing-the-brand-logo">Changing the brand logo</h2>
 <p>By default, Filament will use your app’s name as a brand logo.</p>
 <p>You may create a <code>resources/views/vendor/filament/components/brand.blade.php</code> file to provide a custom logo:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">img</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">src</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(&#39;</span><span style="color: #C3E88D;">/images/logo.svg</span><span style="color: #89DDFF;">&#39;)</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">alt</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Logo</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">h-10</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;img src="{{ asset('/images/logo.svg') }}" alt="Logo" class="h-10"&gt;
-</textarea></code></pre>
+<pre><code class="language-blade">&lt;img src=&quot;{{ asset(&#39;/images/logo.svg&#39;) }}&quot; alt=&quot;Logo&quot; class=&quot;h-10&quot;&gt;
+</code></pre>
 <h2 id="dark-mode">Dark mode</h2>
 <p>By default, Filament only includes a light theme. However, you may allow the user to switch to dark mode if they wish, using the <code>dark_mode</code> setting of the <a href="installation#publishing-configuration">configuration file</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">dark_mode</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true,</span></div><textarea data-torchlight-original="true" style="display: none !important;">'dark_mode' =&gt; true,
-</textarea></code></pre>
+<pre><code class="language-php">&#39;dark_mode&#39; =&gt; true,
+</code></pre>
 <p>When dark mode is enabled, the design will automatically obey your system’s dark / light mode preference. You may switch to dark / light mode permanently through the button in the user dropdown menu.</p>
 <p>If you’re using a <a href="#building-themes">custom theme</a>, make sure that you have the <code>darkMode: &#39;class&#39;</code> setting in your <code>tailwind.config.js</code> file.</p>
 <blockquote>
 <p>Please note: before enabling dark mode in production, please thoroughly test your app - especially third party plugins, which may not be properly tested with dark mode.</p>
 </blockquote>
 <p>When the user toggles between dark or light mode, a browser event called <strong>dark-mode-toggled</strong> is dispatched. You can listen to it:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-html"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{ mode: &#39;light&#39; }</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-on:dark-mode-toggled.window</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">mode = $event.detail</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-show</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">mode === &#39;light&#39;</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Light mode</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-show</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">mode === &#39;dark&#39;</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Dark mode</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div
-    x-data="{ mode: 'light' }"
-    x-on:dark-mode-toggled.window="mode = $event.detail"
+<pre><code class="language-html">&lt;div
+    x-data=&quot;{ mode: &#39;light&#39; }&quot;
+    x-on:dark-mode-toggled.window=&quot;mode = $event.detail&quot;
 &gt;
-    &lt;span x-show="mode === 'light'"&gt;
+    &lt;span x-show=&quot;mode === &#39;light&#39;&quot;&gt;
         Light mode
     &lt;/span&gt;
 
-    &lt;span x-show="mode === 'dark'"&gt;
+    &lt;span x-show=&quot;mode === &#39;dark&#39;&quot;&gt;
         Dark mode
     &lt;/span&gt;
 &lt;/div&gt;
-</textarea></code></pre>
+</code></pre>
 <h2 id="collapsible-sidebar">Collapsible sidebar</h2>
 <p>By default, the sidebar is only collapsible on mobile. You may make it collapsible on desktop as well.</p>
 <p>You must <a href="installation#publishing-configuration">publish the configuration</a> in order to access this feature.</p>
 <p>In <code>config/filament.php</code>, set the <code>layouts.sidebar.is_collapsible_on_desktop</code> to <code>true</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">layout</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sidebar</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_collapsible_on_desktop</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #89DDFF;">],</span></div><textarea data-torchlight-original="true" style="display: none !important;">'layout' =&gt; [
-    'sidebar' =&gt; [
-        'is_collapsible_on_desktop' =&gt; true,
+<pre><code class="language-php">&#39;layout&#39; =&gt; [
+    &#39;sidebar&#39; =&gt; [
+        &#39;is_collapsible_on_desktop&#39; =&gt; true,
     ],
 ],
-</textarea></code></pre>
+</code></pre>
 <h2 id="non-sticky-topbar">Non-sticky topbar</h2>
 <p>By default, the topbar sticks to the top of the page.</p>
 <p>You may make the topbar scroll out of view instead by adding the following styles to your <a href="#building-theme">theme</a> or by <a href="#including-frontend-assets">registering a new stylesheet</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">.</span><span style="color: #FFCB6B;">filament-main-topbar</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #B2CCD6;">position</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> relative</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">.filament-main-topbar {
+<pre><code class="language-css">.filament-main-topbar {
     position: relative;
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="building-themes">Building themes</h2>
 <p>Filament allows you to change the fonts and color scheme used in the UI, by compiling a custom stylesheet to replace the default one. This custom stylesheet is called a “theme”.</p>
 <p>Themes use <a href="https://tailwindcss.com">Tailwind CSS</a>, the Tailwind Forms plugin, and the Tailwind Typography plugin, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="https://atomiks.github.io/tippyjs/">Tippy.js</a>. You may install these through NPM:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">npm</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">tailwindcss</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">@tailwindcss/forms</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">@tailwindcss/typography</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">autoprefixer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">tippy.js</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--save-dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">npm install tailwindcss @tailwindcss/forms @tailwindcss/typography autoprefixer tippy.js --save-dev
-</textarea></code></pre>
+<pre><code class="language-bash">npm install tailwindcss @tailwindcss/forms @tailwindcss/typography autoprefixer tippy.js --save-dev
+</code></pre>
 <p>To finish installing Tailwind, you must create a new <code>tailwind.config.js</code> file in the root of your project. The easiest way to do this is by running <code>npx tailwindcss init</code>.</p>
 <p>In <code>tailwind.config.js</code>, register the plugins you installed, and add custom colors used by the form builder:</p>
-<pre class="torchlight has-focus-lines" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-js"><!-- Syntax highlighted by torchlight.dev --><div class='line line-focus'><span style="color: #C792EA;">const</span><span style="color: #A6ACCD;"> colors </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">require</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tailwindcss/colors</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">) </span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">module.exports</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">content</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> [</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.blade.php</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">./vendor/filament/**/*.blade.php</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">    ]</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">darkMode</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">class</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">theme</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #F07178;">extend</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line line-focus'><span style="color: #A6ACCD;">            </span><span style="color: #F07178;">colors</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span><span style="color: #A6ACCD;"> </span></div><div class='line line-focus'><span style="color: #A6ACCD;">                </span><span style="color: #F07178;">danger</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> colors</span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;">rose</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">                </span><span style="color: #F07178;">primary</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> colors</span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;">blue</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">                </span><span style="color: #F07178;">secondary</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> colors</span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;">gray</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">                </span><span style="color: #F07178;">success</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> colors</span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;">green</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">                </span><span style="color: #F07178;">warning</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> colors</span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;">yellow</span><span style="color: #89DDFF;">,</span></div><div class='line line-focus'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">},</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">},</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">},</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">plugins</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> [</span></div><div class='line line-focus'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">require</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">@tailwindcss/forms</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span></div><div class='line line-focus'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">require</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">@tailwindcss/typography</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">    ]</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">const colors = require('tailwindcss/colors') // [tl! focus]
+<pre><code class="language-js">const colors = require(&#39;tailwindcss/colors&#39;) // [tl! focus]
 
 module.exports = {
     content: [
-        './resources/**/*.blade.php',
-        './vendor/filament/**/*.blade.php', // [tl! focus]
+        &#39;./resources/**/*.blade.php&#39;,
+        &#39;./vendor/filament/**/*.blade.php&#39;, // [tl! focus]
     ],
-    darkMode: 'class',
+    darkMode: &#39;class&#39;,
     theme: {
         extend: {
             colors: { // [tl! focus:start]
@@ -650,123 +650,123 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'), // [tl! focus:start]
-        require('@tailwindcss/typography'), // [tl! focus:end]
+        require(&#39;@tailwindcss/forms&#39;), // [tl! focus:start]
+        require(&#39;@tailwindcss/typography&#39;), // [tl! focus:end]
     ],
 }
-</textarea></code></pre>
+</code></pre>
 <p>You may specify your own colors, which will be used throughout the app.</p>
 <p>If you use Vite to compile assets, in your <code>vite.config.js</code> file, register the <code>filament.css</code> theme file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-js"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">import</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span><span style="color: #F07178;"> </span><span style="color: #A6ACCD;">defineConfig</span><span style="color: #F07178;"> </span><span style="color: #89DDFF;">}</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">from</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">vite</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'><span style="color: #89DDFF;">import</span><span style="color: #A6ACCD;"> laravel </span><span style="color: #89DDFF;">from</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">laravel-vite-plugin</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">export</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">default</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">defineConfig</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">plugins</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> [</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">laravel</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #F07178;">input</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> [</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">resources/css/index.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">            ]</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">}</span><span style="color: #A6ACCD;">)</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    ]</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">}</span><span style="color: #A6ACCD;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">import { defineConfig } from 'vite'
-import laravel from 'laravel-vite-plugin'
+<pre><code class="language-js">import { defineConfig } from &#39;vite&#39;
+import laravel from &#39;laravel-vite-plugin&#39;
 
 export default defineConfig({
     plugins: [
         laravel({
             input: [
                 // ...
-                'resources/css/index.css',
+                &#39;resources/css/index.css&#39;,
             ],
             // ...
         }),
     ],
 })
-</textarea></code></pre>
+</code></pre>
 <p>And add Tailwind to the <code>postcss.config.js</code> file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-js"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">module.exports</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">plugins</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #F07178;">tailwindcss</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{},</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #F07178;">autoprefixer</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{},</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">},</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">module.exports = {
+<pre><code class="language-js">module.exports = {
     plugins: {
         tailwindcss: {},
         autoprefixer: {},
     },
 }
-</textarea></code></pre>
+</code></pre>
 <p>Or if you’re using Laravel Mix instead of Vite, in your <code>webpack.mix.js</code> file, register Tailwind CSS as a PostCSS plugin:</p>
-<pre class="torchlight has-focus-lines" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-js"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">const</span><span style="color: #A6ACCD;"> mix </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">require</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">laravel-mix</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">mix</span><span style="color: #89DDFF;">.</span><span style="color: #82AAFF;">postCss</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">resources/css/index.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> [</span></div><div class='line line-focus'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">require</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tailwindcss</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span></div><div class='line'><span style="color: #A6ACCD;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">const mix = require('laravel-mix')
+<pre><code class="language-js">const mix = require(&#39;laravel-mix&#39;)
 
-mix.postCss('resources/css/index.css', 'public/css', [
-    require('tailwindcss'), // [tl! focus]
+mix.postCss(&#39;resources/css/index.css&#39;, &#39;public/css&#39;, [
+    require(&#39;tailwindcss&#39;), // [tl! focus]
 ])
-</textarea></code></pre>
+</code></pre>
 <p>In <code>/resources/css/filament.css</code>, import Filament’s vendor CSS:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">@import</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">../../vendor/filament/filament/resources/css/app.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">@import '../../vendor/filament/filament/resources/css/app.css';
-</textarea></code></pre>
+<pre><code class="language-css">@import &#39;../../vendor/filament/filament/resources/css/app.css&#39;;
+</code></pre>
 <p>Now, you may register the theme file in a service provider’s <code>boot()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Foundation</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Vite</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">serving</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// Using Vite</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerViteTheme</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">resources/css/index.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// Using Laravel Mix</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerTheme</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">mix</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">css/index.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Facades\Filament;
+<pre><code class="language-php">use Filament\Facades\Filament;
 use Illuminate\Foundation\Vite;
 
 Filament::serving(function () {
     // Using Vite
-    Filament::registerViteTheme('resources/css/index.css');
+    Filament::registerViteTheme(&#39;resources/css/index.css&#39;);
 
     // Using Laravel Mix
     Filament::registerTheme(
-        mix('css/index.css'),
+        mix(&#39;css/index.css&#39;),
     );
 });
-</textarea></code></pre>
+</code></pre>
 <h3 id="loading-google-fonts">Loading Google Fonts</h3>
 <p>If you specify a custom font family in your <code>tailwind.config.js</code>, you may wish to import it via Google Fonts.</p>
 <p>You must <a href="installation#publishing-configuration">publish the configuration</a> in order to access this feature.</p>
 <p>Set the <code>google_fonts</code> config option to a new Google Fonts URL to load:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">google_fonts</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">'google_fonts' =&gt; 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap',
-</textarea></code></pre>
+<pre><code class="language-php">&#39;google_fonts&#39; =&gt; &#39;https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap&#39;,
+</code></pre>
 <h2 id="including-frontend-assets">Including frontend assets</h2>
 <p>You may register your own scripts and styles using the <code>registerScripts()</code> and <code>registerStyles()</code> methods in a service provider’s <code>boot()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerScripts</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">js/my-script.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerStyles</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">https://unpkg.com/tippy.js@6/dist/tippy.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">css/my-styles.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Facades\Filament;
+<pre><code class="language-php">use Filament\Facades\Filament;
 
 Filament::registerScripts([
-    asset('js/my-script.js'),
+    asset(&#39;js/my-script.js&#39;),
 ]);
 
 Filament::registerStyles([
-    'https://unpkg.com/tippy.js@6/dist/tippy.css',
-    asset('css/my-styles.css'),
+    &#39;https://unpkg.com/tippy.js@6/dist/tippy.css&#39;,
+    asset(&#39;css/my-styles.css&#39;),
 ]);
-</textarea></code></pre>
+</code></pre>
 <p>You may pass <code>true</code> as a parameter to <code>registerScripts()</code> to load it before Filament’s core JavaScript. This is useful for registering Alpine.js plugins from a CDN:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerScripts</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@0.x.x/dist/cdn.min.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">],</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><textarea data-torchlight-original="true" style="display: none !important;">Filament::registerScripts([
-    'https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@0.x.x/dist/cdn.min.js',
+<pre><code class="language-php">Filament::registerScripts([
+    &#39;https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@0.x.x/dist/cdn.min.js&#39;,
 ], true);
-</textarea></code></pre>
+</code></pre>
 <h2 id="custom-meta-tags">Custom meta tags</h2>
 <p>You can add custom tags to the header, such as <code>&lt;meta&gt;</code> and <code>&lt;link&gt;</code>, using the following:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HtmlString</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">pushMeta</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HtmlString</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">&lt;link rel=&quot;manifest&quot; href=&quot;/site.webmanifest&quot; /&gt;</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Facades\Filament;
+<pre><code class="language-php">use Filament\Facades\Filament;
 use Illuminate\Support\HtmlString;
 
 Filament::pushMeta([
-    new HtmlString('&lt;link rel="manifest" href="/site.webmanifest" /&gt;'),
+    new HtmlString(&#39;&lt;link rel=&quot;manifest&quot; href=&quot;/site.webmanifest&quot; /&gt;&#39;),
 ]);
-</textarea></code></pre>
+</code></pre>
 <h2 id="notification-position">Notification position</h2>
 <p>Filament allows you to customize the position of notifications.</p>
 <p>In <code>config/filament.php</code>, set the <code>layouts.notifications.alignment</code> to any value of <code>left</code>, <code>center</code> or <code>right</code> and <code>layouts.notifications.vertical_alignment</code> to any value of <code>top</code>, <code>center</code> or <code>bottom</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">layout</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">notifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">vertical_alignment</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">top</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alignment</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">center</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #89DDFF;">],</span></div><textarea data-torchlight-original="true" style="display: none !important;">'layout' =&gt; [
-    'notifications' =&gt; [
-        'vertical_alignment' =&gt; 'top'
-        'alignment' =&gt; 'center',
+<pre><code class="language-php">&#39;layout&#39; =&gt; [
+    &#39;notifications&#39; =&gt; [
+        &#39;vertical_alignment&#39; =&gt; &#39;top&#39;
+        &#39;alignment&#39; =&gt; &#39;center&#39;,
     ],
 ],
-</textarea></code></pre>
+</code></pre>
 <h2 id="render-hooks">Render hooks</h2>
 <p>Filament allows you to render Blade content at various points in the app layout. This is useful for integrations with packages like <a href="https://github.com/wire-elements/modal"><code>wire-elements/modal</code></a> which require you to add a Livewire component to your app.</p>
 <p>Here’s an example, integrating <a href="https://github.com/wire-elements/modal"><code>wire-elements/modal</code></a> with Filament in a service provider:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Blade</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerRenderHook</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">body.start</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Blade</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">render</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">@livewire(</span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">livewire-ui-modal</span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">)</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Facades\Filament;
+<pre><code class="language-php">use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Blade;
 
 Filament::registerRenderHook(
-    'body.start',
-    fn (): string =&gt; Blade::render('@livewire(\'livewire-ui-modal\')'),
+    &#39;body.start&#39;,
+    fn (): string =&gt; Blade::render(&#39;@livewire(\&#39;livewire-ui-modal\&#39;)&#39;),
 );
-</textarea></code></pre>
+</code></pre>
 <p>You could also render view content from a file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerRenderHook</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">body.start</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">impersonation-banner</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Facades\Filament;
+<pre><code class="language-php">use Filament\Facades\Filament;
 use Illuminate\Contracts\View\View;
 
 Filament::registerRenderHook(
-    'body.start',
-    fn (): View =&gt; view('impersonation-banner'),
+    &#39;body.start&#39;,
+    fn (): View =&gt; view(&#39;impersonation-banner&#39;),
 );
-</textarea></code></pre>
+</code></pre>
 <p>The available hooks are as follows:</p>
 <ul>
 <li><code>body.start</code> - after <code>&lt;body&gt;</code></li>
@@ -800,7 +800,7 @@ Filament::registerRenderHook(
 <li><code>page.actions.start</code> - before page actions</li>
 <li><code>page.actions.end</code> - after page actions</li>
 </ul><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/09-appearance.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

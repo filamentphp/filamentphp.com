@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -636,187 +652,187 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>The repeater component allows you to output a JSON array of repeated form components.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">role</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">member</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Member</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">administrator</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Administrator</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">owner</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Owner</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
-        TextInput::make('name')-&gt;required(),
-        Select::make('role')
+        TextInput::make(&#39;name&#39;)-&gt;required(),
+        Select::make(&#39;role&#39;)
             -&gt;options([
-                'member' =&gt; 'Member',
-                'administrator' =&gt; 'Administrator',
-                'owner' =&gt; 'Owner',
+                &#39;member&#39; =&gt; &#39;Member&#39;,
+                &#39;administrator&#39; =&gt; &#39;Administrator&#39;,
+                &#39;owner&#39; =&gt; &#39;Owner&#39;,
             ])
             -&gt;required(),
     ])
     -&gt;columns(2)
-</textarea></code></pre>
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613690-9c36779b-f3dc-4710-bdba-dc5c81ddd3cd.png" alt=""/></p>
 <p>We recommend that you store repeater data with a <code>JSON</code> column in your database. Additionally, if you’re using Eloquent, make sure that column has an <code>array</code> cast.</p>
 <p>As evident in the above example, the component schema can be defined within the <code>schema()</code> method of the component:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
-        TextInput::make('name')-&gt;required(),
+        TextInput::make(&#39;name&#39;)-&gt;required(),
         // ...
     ])
-</textarea></code></pre>
+</code></pre>
 <p>If you wish to define a repeater with multiple schema blocks that can be repeated in any order, please use the <a href="builder">builder</a>.</p>
 <h2 id="setting-empty-default-items">Setting empty default items</h2>
 <p>Repeaters may have a certain number of empty items created by default, using the <code>defaultItems()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">defaultItems</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">3</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;defaultItems(3)
-</textarea></code></pre>
+</code></pre>
 <h2 id="setting-a-create-item-button-label">Setting a create item button label</h2>
 <p>You may set a label to customize the text that should be displayed in the button for adding a repeater item:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">addButtonLabel</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Add member</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
         // ...
     ])
-    -&gt;addButtonLabel('Add member')
-</textarea></code></pre>
+    -&gt;addButtonLabel(&#39;Add member&#39;)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613748-6fdf2eff-de09-4ba0-8d01-68888802b152.png" alt=""/></p>
 <h2 id="disabling-functionality">Disabling functionality</h2>
 <p>You may also prevent the user from adding items, deleting items, or moving items inside the repeater:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">addable</span><span style="color: #89DDFF;">(false)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">deletable</span><span style="color: #89DDFF;">(false)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">reorderable</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;addable(false)
     -&gt;deletable(false)
     -&gt;reorderable(false)
-</textarea></code></pre>
+</code></pre>
 <h2 id="validation">Validation</h2>
 <p>You may customize the number of items that may be created, using the <code>minItems()</code> and <code>maxItems()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">minItems</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">1</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">maxItems</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;minItems(1)
     -&gt;maxItems(10)
-</textarea></code></pre>
+</code></pre>
 <h2 id="collapsible">Collapsible</h2>
 <p>The repeater may be <code>collapsible()</code> to optionally hide content in long forms:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">collapsible</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;collapsible()
-</textarea></code></pre>
+</code></pre>
 <p>You may collapse all items by default:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">collapsed</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;collapsed()
-</textarea></code></pre>
+</code></pre>
 <h2 id="cloning-items">Cloning items</h2>
 <p>You may allow repeater items to be duplicated using the <code>cloneable()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">cloneable</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;cloneable()
-</textarea></code></pre>
+</code></pre>
 <h2 id="populating-automatically-from-a-relationship">Populating automatically from a relationship</h2>
 <p>You may employ the <code>relationship()</code> method of the repeater to configure a relationship to automatically retrieve and save repeater items:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;relationship()
     -&gt;schema([
         // ...
     ])
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>To set this functionality up, <strong>you must also follow the instructions set out in the <a href="getting-started#field-relationships">field relationships</a> section</strong>. If you’re using the <a href="../../app">app framework</a>, you can skip this step.</p>
 </blockquote>
 <h3 id="ordering-items">Ordering items</h3>
 <p>By default, ordering relationship repeater items is disabled. This is because your related model needs an <code>sort</code> column to store the order of related records. To enable ordering, you may use the <code>orderable()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">orderable</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;relationship()
     -&gt;schema([
         // ...
     ])
     -&gt;orderable()
-</textarea></code></pre>
+</code></pre>
 <p>This assumes that your related model has a <code>sort</code> column.</p>
 <p>If you use something like <a href="https://github.com/spatie/eloquent-sortable"><code>spatie/eloquent-sortable</code></a> with an order column such as <code>order_column</code>, you may pass this in to <code>orderable()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">qualifications</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">orderable</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">order_column</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('qualifications')
+Repeater::make(&#39;qualifications&#39;)
     -&gt;relationship()
     -&gt;schema([
         // ...
     ])
-    -&gt;orderable('order_column')
-</textarea></code></pre>
+    -&gt;orderable(&#39;order_column&#39;)
+</code></pre>
 <h2 id="grid-layout">Grid layout</h2>
 <p>You may organize repeater items into columns by using the <code>grid()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">grid</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;grid(2)
-</textarea></code></pre>
+</code></pre>
 <p>This method accepts the same options as the <code>columns()</code> method of the <a href="layout/grid">grid</a>. This allows you to responsively customize the number of grid columns at various breakpoints.</p>
 <h2 id="item-labels">Item labels</h2>
 <p>You may add a label for repeater items using the <code>itemLabel()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Repeater</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Repeater</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">members</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">lazy</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">itemLabel</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">??</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">null),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Repeater;
+<pre><code class="language-php">use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 
-Repeater::make('members')
+Repeater::make(&#39;members&#39;)
     -&gt;schema([
-        TextInput::make('name')
+        TextInput::make(&#39;name&#39;)
             -&gt;lazy(),
     ])
-    -&gt;itemLabel(fn (array $state): ?string =&gt; $state['name'] ?? null),
-</textarea></code></pre>
+    -&gt;itemLabel(fn (array $state): ?string =&gt; $state[&#39;name&#39;] ?? null),
+</code></pre>
 <p>Any fields that you use from <code>$state</code> should be <code>reactive()</code> or <code>lazy()</code> if you wish to see the item label update live as you use the form.</p>
 <h2 id="using-get-to-access-parent-field-values">Using <code>$get()</code> to access parent field values</h2>
 <p>All form components are able to <a href="advanced">use <code>$get()</code> and <code>$set()</code></a> to access another field’s value. However, you might experience unexpected behaviour when using this inside the repeater’s schema.</p>
 <p>This is because <code>$get()</code> and <code>$set()</code>, by default, are scoped to the current repeater item. This means that you are able to interact with another field inside that repeater item easily without knowing which repeater item the current form component belongs to.</p>
 <p>The consequence of this, is that you may be confused when you are unable to interact with a field outside the repeater. We use <code>../</code> syntax to solve this problem - <code>$get(&#39;../../parent_field_name&#39;)</code>.</p>
 <p>Consider your form has this data structure:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">client_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">1</span><span style="color: #89DDFF;">,</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">repeater</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">item1</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">service_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #89DDFF;">]</span></div><textarea data-torchlight-original="true" style="display: none !important;">[
-    'client_id' =&gt; 1,
+<pre><code class="language-php">[
+    &#39;client_id&#39; =&gt; 1,
 
-    'repeater' =&gt; [
-        'item1' =&gt; [
-            'service_id' =&gt; 2,
+    &#39;repeater&#39; =&gt; [
+        &#39;item1&#39; =&gt; [
+            &#39;service_id&#39; =&gt; 2,
         ],
     ],
 ]
-</textarea></code></pre>
+</code></pre>
 <p>You are trying to retrieve the value of <code>client_id</code> from inside the repeater item.</p>
 <p><code>$get()</code> is relative to the current repeater item, so <code>$get(&#39;client_id&#39;)</code> is looking for <code>$get(&#39;repeater.item1.client_id&#39;)</code>.</p>
 <p>You can use <code>../</code> to go up a level in the data structure, so <code>$get(&#39;../client_id&#39;)</code> is $get(‘repeater.client_id’) and <code>$get(&#39;../../client_id&#39;)</code> is <code>$get(&#39;client_id&#39;)</code>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/12-repeater.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

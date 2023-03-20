@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -127,6 +127,14 @@
       </li><li>
         <a href="/docs/3.x/notifications/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/notifications/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -346,6 +354,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/notifications/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -378,23 +394,23 @@
 </ul>
 <h2 id="custom-notification-view">Custom notification view</h2>
 <p>If your desired customization can’t be achieved using the CSS classes above, you can create a custom view to render the notification. To configure the notification view, call the static <code>configureUsing()</code> method inside a service provider’s <code>boot()</code> method and specify the view to use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">configureUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Notification</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">notification</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">notification</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament-notifications.notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
 Notification::configureUsing(function (Notification $notification): void {
-    $notification-&gt;view('filament-notifications.notification');
+    $notification-&gt;view(&#39;filament-notifications.notification&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <p>Next, create the view, in this example <code>resources/views/notifications/notification.blade.php</code>. The view should use the package’s base notification component for the notification functionality and pass the available <code>$notification</code> variable through the <code>notification</code> attribute. This is the bare minimum required to create your own notification view:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament-notifications::notification</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">:notification</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$notification</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Notification content --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament-notifications::notification</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament-notifications::notification :notification="$notification"&gt;
+<pre><code class="language-blade">&lt;x-filament-notifications::notification :notification=&quot;$notification&quot;&gt;
     {{-- Notification content --}}
 &lt;/x-filament-notifications::notification&gt;
-</textarea></code></pre>
+</code></pre>
 <p>Getters for all notification properties will be available in the view. So, a custom notification view might look like this:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament-notifications::notification</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:notification</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$notification</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">flex w-80 rounded-lg transition duration-200</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-transition:enter-start</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">opacity-0</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-transition:leave-end</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">opacity-0</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">h4</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getTitle</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">h4</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">p</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getDate</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">p</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">p</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getBody</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">p</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-on:click</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">close</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Close</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">span</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament-notifications::notification</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament-notifications::notification
-    :notification="$notification"
-    class="flex w-80 rounded-lg transition duration-200"
-    x-transition:enter-start="opacity-0"
-    x-transition:leave-end="opacity-0"
+<pre><code class="language-blade">&lt;x-filament-notifications::notification
+    :notification=&quot;$notification&quot;
+    class=&quot;flex w-80 rounded-lg transition duration-200&quot;
+    x-transition:enter-start=&quot;opacity-0&quot;
+    x-transition:leave-end=&quot;opacity-0&quot;
 &gt;
     &lt;h4&gt;
         {{ $getTitle() }}
@@ -408,15 +424,15 @@ Notification::configureUsing(function (Notification $notification): void {
         {{ $getBody() }}
     &lt;/p&gt;
     
-    &lt;span x-on:click="close"&gt;
+    &lt;span x-on:click=&quot;close&quot;&gt;
         Close
     &lt;/span&gt;
 &lt;/x-filament-notifications::notification&gt;
-</textarea></code></pre>
+</code></pre>
 <h2 id="custom-notification-object">Custom notification object</h2>
 <p>Maybe your notifications require additional functionality that’s not defined in the package’s <code>Notification</code> class. Then you can create your own <code>Notification</code> class, which extends the package’s <code>Notification</code> class. For example, your notification design might need a size property.</p>
 <p>Your custom <code>Notification</code> class in <code>app/Notifications/Notification.php</code> might contain:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> BaseNotification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Notification</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BaseNotification</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">size </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">md</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">toArray</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">...</span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">toArray</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">size</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">getSize</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fromArray</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">fromArray</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">size</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">size</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">size</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">size</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">size </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">size</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getSize</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">size</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
+<pre><code class="language-php">&lt;?php
 
 namespace App\Notifications;
 
@@ -424,19 +440,19 @@ use Filament\Notifications\Notification as BaseNotification;
 
 class Notification extends BaseNotification
 {
-    protected string $size = 'md';
+    protected string $size = &#39;md&#39;;
 
     public function toArray(): array
     {
         return [
             ...parent::toArray(),
-            'size' =&gt; $this-&gt;getSize(),
+            &#39;size&#39; =&gt; $this-&gt;getSize(),
         ];
     }
 
     public static function fromArray(array $data): static
     {
-        return parent::fromArray()-&gt;size($data['size']);
+        return parent::fromArray()-&gt;size($data[&#39;size&#39;]);
     }
 
     public function size(string $size): static
@@ -451,15 +467,15 @@ class Notification extends BaseNotification
         return $this-&gt;size;
     }
 }
-</textarea></code></pre>
+</code></pre>
 <p>Next, you should bind your custom <code>Notification</code> class into the container inside a service provider’s <code>boot()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> BaseNotification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">app</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bind</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">BaseNotification</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Notifications\Notification;
+<pre><code class="language-php">use App\Notifications\Notification;
 use Filament\Notifications\Notification as BaseNotification;
 
 $this-&gt;app-&gt;bind(BaseNotification::class, Notification::class);
-</textarea></code></pre>
+</code></pre>
 <p>You can now use your custom <code>Notification</code> class in the same way as you would with the default <code>Notification</code> object.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/notifications/docs/05-customizing-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

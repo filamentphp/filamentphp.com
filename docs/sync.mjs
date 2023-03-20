@@ -210,4 +210,4 @@ versions.forEach((version) => {
 // write the navigation structure to a file
 fs.writeFileSync("./src/navigation.json", JSON.stringify(structure));
 
-console.log("Sycning complete.");
+console.log("Syncing complete.");

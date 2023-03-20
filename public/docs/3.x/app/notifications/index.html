@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -586,7 +586,7 @@
 <h2 id="database-notifications">Database notifications</h2>
 <p>Instead of enabling database notifications inside the notifications package, you must enable it for the app framework specifically.</p>
 <p>Inside the [configuration], enable database notifications:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 
 public function context(Context $context): Context
 {
@@ -594,34 +594,34 @@ public function context(Context $context): Context
         // ...
         -&gt;databaseNotifications();
 }
-</textarea></code></pre>
+</code></pre>
 <p>You may also control <a href="../notifications/database-notifications#polling">polling</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Context</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">context</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Context</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Context</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">context</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">databaseNotificationsPolling</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">30s</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Context;
+<pre><code class="language-php">use Filament\Context;
 
 public function context(Context $context): Context
 {
     return $context
         // ...
         -&gt;databaseNotifications()
-        -&gt;databaseNotificationsPolling('30s');
+        -&gt;databaseNotificationsPolling(&#39;30s&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="echo">Echo</h2>
 <p>Some features of the notifications package, including <a href="../notifications/database-notifications#echo">receiving real-time database notifications</a> and <a href="../notifications/broadcast-notifications">broadcast notifications</a>, require Laravel Echo to be installed.</p>
 <p>Firstly, you must set up a <a href="https://laravel.com/docs/broadcasting#server-side-installation">server-side websockets integration</a> like Pusher.</p>
 <p>Then, define your Echo configuration within the app framework <a href="installation#publishing-configuration">configuration file</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">broadcasting</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">echo</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">broadcaster</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">pusher</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">key</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">env</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">VITE_PUSHER_APP_KEY</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">cluster</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">env</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">VITE_PUSHER_APP_CLUSTER</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">forceTLS</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #89DDFF;">],</span></div><textarea data-torchlight-original="true" style="display: none !important;">'broadcasting' =&gt; [
+<pre><code class="language-php">&#39;broadcasting&#39; =&gt; [
 
-    'echo' =&gt; [
-        'broadcaster' =&gt; 'pusher',
-        'key' =&gt; env('VITE_PUSHER_APP_KEY'),
-        'cluster' =&gt; env('VITE_PUSHER_APP_CLUSTER'),
-        'forceTLS' =&gt; true,
+    &#39;echo&#39; =&gt; [
+        &#39;broadcaster&#39; =&gt; &#39;pusher&#39;,
+        &#39;key&#39; =&gt; env(&#39;VITE_PUSHER_APP_KEY&#39;),
+        &#39;cluster&#39; =&gt; env(&#39;VITE_PUSHER_APP_CLUSTER&#39;),
+        &#39;forceTLS&#39; =&gt; true,
     ],
     
 ],
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/07-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/07-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

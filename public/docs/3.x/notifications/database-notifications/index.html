@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -127,6 +127,14 @@
       </li><li>
         <a href="/docs/3.x/notifications/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/notifications/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -346,6 +354,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/notifications/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -367,8 +383,8 @@
 <p>To start, make sure the package is <a href="installation">installed</a> - <code>@livewire(&#39;notifications&#39;)</code> should be in your Blade layout somewhere.</p>
 </blockquote>
 <p>Before we start, make sure that the <a href="https://laravel.com/docs/notifications#database-prerequisites">Laravel notifications table</a> is added to your database:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">notifications:table</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan notifications:table
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan notifications:table
+</code></pre>
 <blockquote>
 <p>If you’re using PostgreSQL, make sure that the <code>data</code> column in the migration is using <code>json()</code>: <code>$table-&gt;json(&#39;data&#39;)</code>.</p>
 </blockquote>
@@ -376,97 +392,97 @@
 <p>If you’re using UUIDs for your <code>User</code> model, make sure that your <code>notifiable</code> column is using <code>uuidMorphs()</code>: <code>$table-&gt;uuidMorphs(&#39;notifiable&#39;)</code>.</p>
 </blockquote>
 <p>To enable database notifications, add the following to a service provider:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">();</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Http\Livewire\Notifications;
+<pre><code class="language-php">use Filament\Notifications\Http\Livewire\Notifications;
 
 Notifications::databaseNotifications();
-</textarea></code></pre>
+</code></pre>
 <p>Database notifications will be rendered within a modal. To open this modal, you must have a “trigger” button in your view. Create a new trigger button component in your app, for instance at <code>/resources/views/notifications/database-notifications-trigger.blade.php</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">button</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">type</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">button</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    Notifications (</span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">unreadNotificationsCount </span><span style="color: #82AAFF;">}}</span><span style="color: #A6ACCD;"> unread)</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">button</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;button type="button"&gt;
+<pre><code class="language-blade">&lt;button type=&quot;button&quot;&gt;
     Notifications ({{ $unreadNotificationsCount }} unread)
 &lt;/button&gt;
-</textarea></code></pre>
+</code></pre>
 <p><code>$unreadNotificationsCount</code> is a variable automatically passed to this view, which provides it with a real-time count of the number of unread notifications the user has.</p>
 <p>In the service provider, point to this new trigger view:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotificationsTrigger</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament-notifications.database-notifications-trigger</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Http\Livewire\Notifications;
+<pre><code class="language-php">use Filament\Notifications\Http\Livewire\Notifications;
 
 Notifications::databaseNotifications();
-Notifications::databaseNotificationsTrigger('filament-notifications.database-notifications-trigger');
-</textarea></code></pre>
+Notifications::databaseNotificationsTrigger(&#39;filament-notifications.database-notifications-trigger&#39;);
+</code></pre>
 <p>Now, simply move the <code>@livewire(&#39;notifications&#39;)</code> component to the position in your HTML that you wish to render the database notifications trigger button. It should appear, and open the database notifications modal when clicked!</p>
 <h2 id="sending-notifications">Sending notifications</h2>
 <p>There are several ways to send database notifications, depending on which one suits you best.</p>
 <p>You may use our fluent API:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">sendToDatabase</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
 $recipient = auth()-&gt;user();
 
 Notification::make()
-    -&gt;title('Saved successfully')
+    -&gt;title(&#39;Saved successfully&#39;)
     -&gt;sendToDatabase($recipient);
-</textarea></code></pre>
+</code></pre>
 <p>Or, use the <code>notify()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">notify</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">toDatabase</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
 $recipient = auth()-&gt;user();
 
 $recipient-&gt;notify(
     Notification::make()
-        -&gt;title('Saved successfully')
+        -&gt;title(&#39;Saved successfully&#39;)
         -&gt;toDatabase(),
 );
-</textarea></code></pre>
+</code></pre>
 <p>Alternatively, use a traditional <a href="https://laravel.com/docs/notifications#generating-notifications">Laravel notification class</a> by returning the notification from the <code>toDatabase()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">toDatabase</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">User</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">notifiable</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getDatabaseMessage</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
+<pre><code class="language-php">use App\Models\User;
 use Filament\Notifications\Notification;
 
 public function toDatabase(User $notifiable): array
 {
     return Notification::make()
-        -&gt;title('Saved successfully')
+        -&gt;title(&#39;Saved successfully&#39;)
         -&gt;getDatabaseMessage();
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="receiving-notifications">Receiving notifications</h2>
 <p>Without any setup, new database notifications will only be received when the page is first loaded.</p>
 <h3 id="polling">Polling</h3>
 <p>Polling is the practice of periodically making a request to the server to check for new notifications. This is a good approach as the setup is simple, but some may say that it is not a scalable solution as it increases server load.</p>
 <p>By default, Livewire polls for new notifications every 30 seconds:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotificationsPollingInterval</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">30s</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Http\Livewire\Notifications;
+<pre><code class="language-php">use Filament\Notifications\Http\Livewire\Notifications;
 
 Notifications::databaseNotifications();
-Notifications::databaseNotificationsPollingInterval('30s');
-</textarea></code></pre>
+Notifications::databaseNotificationsPollingInterval(&#39;30s&#39;);
+</code></pre>
 <p>You may completely disable polling if you wish:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Http</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotifications</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #FFCB6B;">Notifications</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">databaseNotificationsPollingInterval</span><span style="color: #89DDFF;">(null);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Http\Livewire\Notifications;
+<pre><code class="language-php">use Filament\Notifications\Http\Livewire\Notifications;
 
 Notifications::databaseNotifications();
 Notifications::databaseNotificationsPollingInterval(null);
-</textarea></code></pre>
+</code></pre>
 <h3 id="echo">Echo</h3>
 <p>Alternatively, the package has a native integration with <a href="https://laravel.com/docs/broadcasting#client-side-installation">Laravel Echo</a>. Make sure Echo is installed, as well as a <a href="https://laravel.com/docs/broadcasting#server-side-installation">server-side websockets integration</a> like Pusher.</p>
 <p>Once websockets are set up, after sending a database notification you may emit a <code>DatabaseNotificationsSent</code> event, which will immediately fetch new notifications for that user:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Events</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DatabaseNotificationsSent</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">sendToDatabase</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">event</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">DatabaseNotificationsSent</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">));</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Events\DatabaseNotificationsSent;
+<pre><code class="language-php">use Filament\Notifications\Events\DatabaseNotificationsSent;
 use Filament\Notifications\Notification;
 
 $recipient = auth()-&gt;user();
 
 Notification::make()
-    -&gt;title('Saved successfully')
+    -&gt;title(&#39;Saved successfully&#39;)
     -&gt;sendToDatabase($recipient);
 
 event(new DatabaseNotificationsSent($recipient));
-</textarea></code></pre>
+</code></pre>
 <h2 id="opening-the-notifications-modal">Opening the notifications modal</h2>
 <p>Instead of rendering the trigger button as described above, you can always open the database notifications modal from anywhere by dispatching an <code>open-modal</code> browser event:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">button</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{}</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-on:click</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$dispatch(&#39;open-modal&#39;, { id: &#39;database-notifications&#39; })</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">type</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">button</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    Notifications</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">button</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;button
-    x-data="{}"
-    x-on:click="$dispatch('open-modal', { id: 'database-notifications' })"
-    type="button"
+<pre><code class="language-blade">&lt;button
+    x-data=&quot;{}&quot;
+    x-on:click=&quot;$dispatch(&#39;open-modal&#39;, { id: &#39;database-notifications&#39; })&quot;
+    type=&quot;button&quot;
 &gt;
     Notifications
 &lt;/button&gt;
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/notifications/docs/03-database-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/notifications/docs/03-database-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

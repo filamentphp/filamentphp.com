@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -637,109 +653,109 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Similar to a <a href="repeater">repeater</a>, the builder component allows you to output a JSON array of repeated form components. Unlike the repeater, which only defines one form schema to repeat, the builder allows you to define different schema “blocks”, which you can repeat in any order. This makes it useful for building more advanced array structures.</p>
 <p>The primary use of the builder component is to build web page content using predefined blocks. The example below defines multiple blocks for different elements in the page content. On the frontend of your website, you could loop through each block in the JSON and format it how you wish.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FileUpload</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">MarkdownEditor</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Builder</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">blocks</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">level</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h1</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 1</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h2</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 2</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h3</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 3</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h4</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 4</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h5</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 5</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">h6</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Heading 6</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">        Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">paragraph</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">MarkdownEditor</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Paragraph</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">        Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">image</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">FileUpload</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">url</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Image</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">image</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alt</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Alt text</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 
-Builder::make('content')
+Builder::make(&#39;content&#39;)
     -&gt;blocks([
-        Builder\Block::make('heading')
+        Builder\Block::make(&#39;heading&#39;)
             -&gt;schema([
-                TextInput::make('content')
-                    -&gt;label('Heading')
+                TextInput::make(&#39;content&#39;)
+                    -&gt;label(&#39;Heading&#39;)
                     -&gt;required(),
-                Select::make('level')
+                Select::make(&#39;level&#39;)
                     -&gt;options([
-                        'h1' =&gt; 'Heading 1',
-                        'h2' =&gt; 'Heading 2',
-                        'h3' =&gt; 'Heading 3',
-                        'h4' =&gt; 'Heading 4',
-                        'h5' =&gt; 'Heading 5',
-                        'h6' =&gt; 'Heading 6',
+                        &#39;h1&#39; =&gt; &#39;Heading 1&#39;,
+                        &#39;h2&#39; =&gt; &#39;Heading 2&#39;,
+                        &#39;h3&#39; =&gt; &#39;Heading 3&#39;,
+                        &#39;h4&#39; =&gt; &#39;Heading 4&#39;,
+                        &#39;h5&#39; =&gt; &#39;Heading 5&#39;,
+                        &#39;h6&#39; =&gt; &#39;Heading 6&#39;,
                     ])
                     -&gt;required(),
             ]),
-        Builder\Block::make('paragraph')
+        Builder\Block::make(&#39;paragraph&#39;)
             -&gt;schema([
-                MarkdownEditor::make('content')
-                    -&gt;label('Paragraph')
+                MarkdownEditor::make(&#39;content&#39;)
+                    -&gt;label(&#39;Paragraph&#39;)
                     -&gt;required(),
             ]),
-        Builder\Block::make('image')
+        Builder\Block::make(&#39;image&#39;)
             -&gt;schema([
-                FileUpload::make('url')
-                    -&gt;label('Image')
+                FileUpload::make(&#39;url&#39;)
+                    -&gt;label(&#39;Image&#39;)
                     -&gt;image()
                     -&gt;required(),
-                TextInput::make('alt')
-                    -&gt;label('Alt text')
+                TextInput::make(&#39;alt&#39;)
+                    -&gt;label(&#39;Alt text&#39;)
                     -&gt;required(),
             ]),
     ])
-</textarea></code></pre>
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613850-8693abe9-78c9-4f01-b40e-9cd9a567e168.png" alt=""/></p>
 <p>We recommend that you store builder data with a <code>JSON</code> column in your database. Additionally, if you’re using Eloquent, make sure that column has an <code>array</code> cast.</p>
 <p>As evident in the above example, blocks can be defined within the <code>blocks()</code> method of the component. Blocks are <code>Builder\Block</code> objects, and require a unique name, and a component schema:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Builder</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">blocks</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\TextInput;
 
-Builder::make('content')
+Builder::make(&#39;content&#39;)
     -&gt;blocks([
-        Builder\Block::make('heading')
+        Builder\Block::make(&#39;heading&#39;)
             -&gt;schema([
-                TextInput::make('content')-&gt;required(),
+                TextInput::make(&#39;content&#39;)-&gt;required(),
                 // ...
             ]),
         // ...
     ])
-</textarea></code></pre>
+</code></pre>
 <h2 id="setting-a-block-label">Setting a block label</h2>
 <p>By default, the label of the block will be automatically determined based on its name. To override the block’s label, you may use the <code>label()</code> method. Customizing the label in this way is useful if you wish to use a <a href="https://laravel.com/docs/localization#retrieving-translation-strings">translation string for localization</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">blocks.heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 
-Builder\Block::make('heading')-&gt;label(__('blocks.heading'))
-</textarea></code></pre>
+Builder\Block::make(&#39;heading&#39;)-&gt;label(__(&#39;blocks.heading&#39;))
+</code></pre>
 <h2 id="setting-a-block-icon">Setting a block icon</h2>
 <p>Blocks may also have an icon, which is displayed next to the label. The <code>icon()</code> method accepts the name of any Blade icon component:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Block</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heading</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-bookmark</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 
-Builder\Block::make('heading')-&gt;icon('heroicon-m-bookmark')
-</textarea></code></pre>
+Builder\Block::make(&#39;heading&#39;)-&gt;icon(&#39;heroicon-m-bookmark&#39;)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147614039-d9aa43dd-acfe-43b6-9cd1-1fc322aa4526.png" alt=""/></p>
 <h2 id="validation">Validation</h2>
 <p>You may customize the number of items that may be created, using the <code>minItems()</code> and <code>maxItems()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Builder</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">blocks</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">minItems</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">1</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">maxItems</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\TextInput;
 
-Builder::make('content')
+Builder::make(&#39;content&#39;)
     -&gt;blocks([
         // ...
     ])
     -&gt;minItems(1)
     -&gt;maxItems(10)
-</textarea></code></pre>
+</code></pre>
 <h2 id="collapsible">Collapsible</h2>
 <p>The builder may be <code>collapsible()</code> to optionally hide content in long forms:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Builder</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">blocks</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">collapsible</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 
-Builder::make('content')
+Builder::make(&#39;content&#39;)
     -&gt;blocks([
         // ...
     ])
     -&gt;collapsible()
-</textarea></code></pre>
+</code></pre>
 <p>You may collapse all items by default:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Builder</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">blocks</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">collapsed</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Builder;
+<pre><code class="language-php">use Filament\Forms\Components\Builder;
 
-Builder::make('content')
+Builder::make(&#39;content&#39;)
     -&gt;blocks([
         // ...
     ])
     -&gt;collapsed()
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/13-builder.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/13-builder.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

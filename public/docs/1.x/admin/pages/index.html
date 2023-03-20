@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -343,17 +343,17 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Filament allows you to create completely custom pages for the admin panel.</p>
 <p>To create a new page, you can use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-page</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Settings</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-page Settings
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-page Settings
+</code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of the Filament directory, and a view in the <code>/pages</code> directory of the Filament views directory.</p>
 <p>Page classes are essentially <a href="https://laravel-livewire.com">Laravel Livewire</a> components with custom integration utilities for use with Filament.</p>
 <h2 id="authorization">Authorization</h2>
 <p>You may create roles for users of Filament that allow them to access specific pages. You may create a <code>Manager</code> role using:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">php artisan make</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">filament</span><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;">role Manager</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-role Manager
-</textarea></code></pre>
+<pre><code class="language-php">php artisan make:filament-role Manager
+</code></pre>
 <p>Administrators will now be able to assign this role to any Filament user using the admin panel.</p>
 <p>To only allow users with the <code>Manager</code> role to access this page, declare so in the static <code>authorization()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -361,13 +361,13 @@ public static function authorization()
         Roles\Manager::allow(),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>You may authorize as many roles as you wish.</p>
 <blockquote>
 <p>Please note: administrators will always have full access to every page in your admin panel.</p>
 </blockquote>
 <p>You may want to only deny users with the <code>Manager</code> role from accessing this page. To do this, you may use the static <code>deny()</code> method instead:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">deny</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -375,16 +375,16 @@ public static function authorization()
         Roles\Manager::deny(),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="customization">Customization</h2>
 <p>Filament will automatically generate a title, navigation label and URL (slug) for your page based on its name. You may override it using static properties of your page class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">label </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Navigation Label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-url-slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Page Title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $label = 'Custom Navigation Label';
+<pre><code class="language-php">public static $label = &#39;Custom Navigation Label&#39;;
 
-public static $slug = 'custom-url-slug';
+public static $slug = &#39;custom-url-slug&#39;;
 
-public static $title = 'Custom Page Title';
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/05-pages.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+public static $title = &#39;Custom Page Title&#39;;
+</code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/05-pages.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

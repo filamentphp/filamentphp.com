@@ -1,0 +1,20 @@
+---
+const { name, alt, version } = Astro.props;
+---
+
+<div>
+  <img
+    src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/light/${name}.jpg?raw=true`}
+    alt={alt}
+    loading="lazy"
+    class="rounded-xl dark:hidden"
+  />
+
+  <img
+    src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/dark/${name}.jpg?raw=true`}
+    alt={alt}
+    loading="lazy"
+    class="rounded-xl hidden dark:block"
+  />
+</div>
+

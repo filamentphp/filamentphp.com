@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -338,49 +338,49 @@
   <p>All examples in this guide will be written using <a href="https://pestphp.com">Pest</a>. However, you can easily adapt this to PHPUnit.</p>
 <h2 id="session-notifications">Session notifications</h2>
 <p>To check if a notification was sent using the session, use the <code>assertNotified()</code> helper:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sends a notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertNotified</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-it('sends a notification', function () {
+it(&#39;sends a notification&#39;, function () {
     livewire(CreatePost::class)
         -&gt;assertNotified();
 });
-</textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sends a notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">assertNotified</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+</code></pre>
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
-it('sends a notification', function () {
+it(&#39;sends a notification&#39;, function () {
     Notification::assertNotified();
 });
-</textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Testing</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">assertNotified</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sends a notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">assertNotified</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Filament\Notifications\Testing\assertNotified;
+</code></pre>
+<pre><code class="language-php">use function Filament\Notifications\Testing\assertNotified;
 
-it('sends a notification', function () {
+it(&#39;sends a notification&#39;, function () {
     assertNotified();
 });
-</textarea></code></pre>
+</code></pre>
 <p>You may optionally pass a notification title to test for:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sends a notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertNotified</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Unable to create post</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 use function Pest\Livewire\livewire;
 
-it('sends a notification', function () {
+it(&#39;sends a notification&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertNotified('Unable to create post');
+        -&gt;assertNotified(&#39;Unable to create post&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <p>Or test if the exact notification was sent:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sends a notification</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertNotified</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">danger</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Unable to create post</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">body</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Something went wrong.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 use function Pest\Livewire\livewire;
 
-it('sends a notification', function () {
+it(&#39;sends a notification&#39;, function () {
     livewire(CreatePost::class)
         -&gt;assertNotified(
             Notification::make()
                 -&gt;danger(),
-                -&gt;title('Unable to create post')
-                -&gt;body('Something went wrong.'),
+                -&gt;title(&#39;Unable to create post&#39;)
+                -&gt;body(&#39;Something went wrong.&#39;),
         );
 });
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/notifications/docs/06-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/notifications/docs/06-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

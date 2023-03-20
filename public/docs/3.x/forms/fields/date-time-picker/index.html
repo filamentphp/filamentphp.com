@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -636,83 +652,83 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>The date-time picker provides an interactive interface for selecting a date and a time.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DatePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #FFCB6B;">DatePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">date_of_birth</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #FFCB6B;">TimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">alarm_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DatePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TimePicker;
 
-DateTimePicker::make('published_at')
-DatePicker::make('date_of_birth')
-TimePicker::make('alarm_at')
-</textarea></code></pre>
+DateTimePicker::make(&#39;published_at&#39;)
+DatePicker::make(&#39;date_of_birth&#39;)
+TimePicker::make(&#39;alarm_at&#39;)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613326-004b09c8-c224-4676-a70f-cf6b7e3f0306.png" alt=""/></p>
 <h2 id="validation">Validation</h2>
 <p>You may restrict the minimum and maximum date that can be selected with the picker. The <code>minDate()</code> and <code>maxDate()</code> methods accept a <code>DateTime</code> instance (e.g. Carbon), or a string:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DatePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DatePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">date_of_birth</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">minDate</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">now</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">subYears</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">150</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">maxDate</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">now</span><span style="color: #89DDFF;">())</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DatePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DatePicker;
 
-DatePicker::make('date_of_birth')
+DatePicker::make(&#39;date_of_birth&#39;)
     -&gt;minDate(now()-&gt;subYears(150))
     -&gt;maxDate(now())
-</textarea></code></pre>
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613432-41e22381-af01-4f5e-8d0d-0ba535d1e444.png" alt=""/></p>
 <p>To disable specific dates:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">date</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Appointment date</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">minDate</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">now</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">maxDate</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Carbon</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">now</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">addDays</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">30</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabledDates</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">2022-10-02</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">2022-10-05</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">2022-10-15</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('date')
-    -&gt;label('Appointment date')
+DateTimePicker::make(&#39;date&#39;)
+    -&gt;label(&#39;Appointment date&#39;)
     -&gt;minDate(now())
     -&gt;maxDate(Carbon::now()-&gt;addDays(30))
-    -&gt;disabledDates(['2022-10-02', '2022-10-05', '2022-10-15'])
-</textarea></code></pre>
+    -&gt;disabledDates([&#39;2022-10-02&#39;, &#39;2022-10-05&#39;, &#39;2022-10-15&#39;])
+</code></pre>
 <h2 id="customizing-the-storage-format">Customizing the storage format</h2>
 <p>You may customize the format of the field when it is saved in your database, using the <code>format()</code> method. This accepts a string date format, using <a href="https://www.php.net/manual/en/datetime.format.php">PHP date formatting tokens</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DatePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DatePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">date_of_birth</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">format</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">d/m/Y</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DatePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DatePicker;
 
-DatePicker::make('date_of_birth')-&gt;format('d/m/Y')
-</textarea></code></pre>
+DatePicker::make(&#39;date_of_birth&#39;)-&gt;format(&#39;d/m/Y&#39;)
+</code></pre>
 <h2 id="customizing-the-display-format">Customizing the display format</h2>
 <p>You may also customize the display format of the field, separately from the format used when it is saved in your database. For this, use the <code>displayFormat()</code> method, which also accepts a string date format, using <a href="https://www.php.net/manual/en/datetime.format.php">PHP date formatting tokens</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DatePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DatePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">date_of_birth</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">displayFormat</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">d/m/Y</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DatePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DatePicker;
 
-DatePicker::make('date_of_birth')-&gt;displayFormat('d/m/Y')
-</textarea></code></pre>
+DatePicker::make(&#39;date_of_birth&#39;)-&gt;displayFormat(&#39;d/m/Y&#39;)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613473-51ffe805-2a7f-47e5-af8b-e7871e9c5a85.png" alt=""/></p>
 <h2 id="disabling-the-seconds-input">Disabling the seconds input</h2>
 <p>When using the time picker, you may disable the seconds input using the <code>seconds()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">seconds</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('published_at')-&gt;seconds(false)
-</textarea></code></pre>
+DateTimePicker::make(&#39;published_at&#39;)-&gt;seconds(false)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613511-30d7b2d8-227a-42ff-a6c7-e080d22305ad.png" alt=""/></p>
 <h2 id="configuring-the-time-input-intervals">Configuring the time input intervals</h2>
 <p>You may customize the input interval for increasing / decreasing the hours / minutes / seconds using the <code>hoursStep()</code> , <code>minutesStep()</code> or <code>secondsStep()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hoursStep</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">minutesStep</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">15</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">secondsStep</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('published_at')
+DateTimePicker::make(&#39;published_at&#39;)
     -&gt;hoursStep(2)
     -&gt;minutesStep(15)
     -&gt;secondsStep(10)
-</textarea></code></pre>
+</code></pre>
 <h2 id="configuring-the-first-day-of-the-week">Configuring the first day of the week</h2>
 <p>In some countries, the first day of the week is not Monday. To customize the first day of the week in the date picker, use the <code>forms.components.date_time_picker.first_day_of_week</code> config option, or the <code>firstDayOfWeek()</code> method on the component. 0 to 7 are accepted values, with Monday as 1 and Sunday as 7 or 0:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">firstDayOfWeek</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">7</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('published_at')-&gt;firstDayOfWeek(7)
-</textarea></code></pre>
+DateTimePicker::make(&#39;published_at&#39;)-&gt;firstDayOfWeek(7)
+</code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613536-6c2bdc63-03f8-4dd9-92eb-9a0aca5e7263.png" alt=""/></p>
 <p>There are additionally convenient helper methods to set the first day of the week more semantically:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">weekStartsOnMonday</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">weekStartsOnSunday</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('published_at')-&gt;weekStartsOnMonday()
-DateTimePicker::make('published_at')-&gt;weekStartsOnSunday()
-</textarea></code></pre>
+DateTimePicker::make(&#39;published_at&#39;)-&gt;weekStartsOnMonday()
+DateTimePicker::make(&#39;published_at&#39;)-&gt;weekStartsOnSunday()
+</code></pre>
 <h2 id="timezones">Timezones</h2>
 <p>If you’d like users to be able to manage dates in their own timezone, you can use the <code>timezone()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">DateTimePicker</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">DateTimePicker</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">published_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">timezone</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">America/New_York</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\DateTimePicker;
+<pre><code class="language-php">use Filament\Forms\Components\DateTimePicker;
 
-DateTimePicker::make('published_at')-&gt;timezone('America/New_York')
-</textarea></code></pre>
+DateTimePicker::make(&#39;published_at&#39;)-&gt;timezone(&#39;America/New_York&#39;)
+</code></pre>
 <p>While dates will still be stored using the app’s configured timezone, the date will now load in the new timezone, and it will be converted back when the form is saved.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/08-date-time-picker.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

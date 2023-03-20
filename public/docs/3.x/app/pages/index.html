@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -582,59 +582,59 @@
   <p>Filament allows you to create completely custom pages for the app.</p>
 <h2 id="creating-a-page">Creating a page</h2>
 <p>To create a new page, you can use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-page</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Settings</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-page Settings
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-page Settings
+</code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of the Filament directory, and a view in the <code>/pages</code> directory of the Filament views directory.</p>
 <p>Page classes are all full-page <a href="https://laravel-livewire.com">Livewire</a> components with a few extra utilities you can use with the app framework.</p>
 <h2 id="conditionally-hiding-pages-in-navigation">Conditionally hiding pages in navigation</h2>
 <p>You can prevent pages from appearing in the menu by overriding the <code>shouldRegisterNavigation()</code> method in your Page class. This is useful if you want to control which users can see the page in the sidebar.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">shouldRegisterNavigation</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">canManageSettings</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function shouldRegisterNavigation(): bool
+<pre><code class="language-php">public static function shouldRegisterNavigation(): bool
 {
     return auth()-&gt;user()-&gt;canManageSettings();
 }
-</textarea></code></pre>
+</code></pre>
 <p>Please be aware that all users will still be able to visit this page through its direct URL, so to fully limit access you must also also check in the <code>mount()</code> method of the page:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">mount</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">abort_unless</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">canManageSettings</span><span style="color: #89DDFF;">(),</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">403</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public function mount(): void
+<pre><code class="language-php">public function mount(): void
 {
     abort_unless(auth()-&gt;user()-&gt;canManageSettings(), 403);
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="actions">Actions</h2>
 <p>Actions are buttons that can perform tasks on the page, or visit a URL. You can read more about their capabilities <a href="../actions">here</a>.</p>
 <p>Since all pages are Livewire components, you can <a href="../actions/adding-an-action-to-a-livewire-component#adding-the-action">add actions</a> anywhere. Pages already have the <code>InteractsWithActions</code> trait, <code>HasActions</code> interface, and <code>&lt;x-filament-actions::modals /&gt;</code> Blade component all set up for you.</p>
 <h3 id="header-actions">Header actions</h3>
 <p>You can also easily add actions to the header of any page, including <a href="resources">resource pages</a>. You don’t need to worry about adding anything to the Blade, we handle that for you. Just return your actions from the <code>getHeaderActions()</code> method of the page class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Action</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeaderActions</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">url</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">posts.edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">post</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">post</span><span style="color: #89DDFF;">])),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">post</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">delete</span><span style="color: #89DDFF;">()),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Actions\Action;
+<pre><code class="language-php">use Filament\Actions\Action;
 
 protected function getHeaderActions(): array
 {
     return [
-        Action::make('edit')
-            -&gt;url(route('posts.edit', ['post' =&gt; $this-&gt;post])),
-        Action::make('delete')
+        Action::make(&#39;edit&#39;)
+            -&gt;url(route(&#39;posts.edit&#39;, [&#39;post&#39; =&gt; $this-&gt;post])),
+        Action::make(&#39;delete&#39;)
             -&gt;requiresConfirmation()
             -&gt;action(fn () =&gt; $this-&gt;post-&gt;delete()),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="refreshing-form-data">Refreshing form data</h3>
 <p>If you’re using actions on an <a href="resources/editing-records">Edit</a> or <a href="resources/viewing-records">View</a> resource page, you can refresh data within the main form using the <code>refreshFormData()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Action</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">approve</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">approve</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">refreshFormData</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Actions\Action;
+<pre><code class="language-php">use Filament\Actions\Action;
 
-Action::make('approve')
+Action::make(&#39;approve&#39;)
     -&gt;action(function () {
         $this-&gt;record-&gt;approve();
 
         $this-&gt;refreshFormData([
-            'status',
+            &#39;status&#39;,
         ]);
     })
-</textarea></code></pre>
+</code></pre>
 <p>This method accepts an array of model attributes that you wish to refresh in the form.</p>
 <h2 id="widgets">Widgets</h2>
 <p>Filament allows you to display <a href="dashboard">widgets</a> inside pages, below the header and above the footer.</p>
 <p>To add a widget to a page, use the <code>getHeaderWidgets()</code> or <code>getFooterWidgets()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #FFCB6B;">/</span><span style="color: #A6ACCD;">Filament</span><span style="color: #FFCB6B;">/</span><span style="color: #A6ACCD;">Widgets</span><span style="color: #FFCB6B;">/</span><span style="color: #A6ACCD;">StatsOverviewWidget</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeaderWidgets</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">StatsOverviewWidget</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App/Filament/Widgets/StatsOverviewWidget;
+<pre><code class="language-php">use App/Filament/Widgets/StatsOverviewWidget;
 
 protected function getHeaderWidgets(): array
 {
@@ -642,50 +642,50 @@ protected function getHeaderWidgets(): array
         StatsOverviewWidget::class
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p><code>getHeaderWidgets()</code> returns an array of widgets to display above the page content, whereas <code>getFooterWidgets()</code> are displayed below.</p>
 <p>If you’d like to learn how to build and customize widgets, check out the <a href="dashboard">Dashboard</a> documentation section.</p>
 <h3 id="customizing-the-widgets-grid">Customizing the widgets grid</h3>
 <p>You may change how many grid columns are used to display widgets.</p>
 <p>You may override the <code>getHeaderWidgetsColumns()</code> or <code>getFooterWidgetsColumns()</code> methods to return a number of grid columns to use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeaderWidgetsColumns</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">|</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">3</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getHeaderWidgetsColumns(): int | array
+<pre><code class="language-php">protected function getHeaderWidgetsColumns(): int | array
 {
     return 3;
 }
-</textarea></code></pre>
+</code></pre>
 <h4 id="responsive-widgets-grid">Responsive widgets grid</h4>
 <p>You may wish to change the number of widget grid columns based on the responsive <a href="https://tailwindcss.com/docs/responsive-design#overview">breakpoint</a> of the browser. You can do this using an array that contains the number of columns that should be used at each breakpoint:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeaderWidgetsColumns</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">|</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">md</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">4</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">xl</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">5</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getHeaderWidgetsColumns(): int | array
+<pre><code class="language-php">protected function getHeaderWidgetsColumns(): int | array
 {
     return [
-        'md' =&gt; 4,
-        'xl' =&gt; 5,
+        &#39;md&#39; =&gt; 4,
+        &#39;xl&#39; =&gt; 5,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>This pairs well with <a href="dashboard#responsive-widget-widths">responsive widget widths</a>.</p>
 <h2 id="customization">Customization</h2>
 <p>Filament will automatically generate a title, navigation label and URL (slug) for your page based on its name. You may override it using static properties of your page class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Page Title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Navigation Label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-url-slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $title = 'Custom Page Title';
+<pre><code class="language-php">protected static ?string $title = &#39;Custom Page Title&#39;;
 
-protected static ?string $navigationLabel = 'Custom Navigation Label';
+protected static ?string $navigationLabel = &#39;Custom Navigation Label&#39;;
 
-protected static ?string $slug = 'custom-url-slug';
-</textarea></code></pre>
+protected static ?string $slug = &#39;custom-url-slug&#39;;
+</code></pre>
 <p>You may also specify a custom header and footer view for any page. You may return them from the <code>getHeader()</code> and <code>getFooter()</code> methods:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getHeader</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.settings.custom-header</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getFooter</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.settings.custom-footer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Contracts\View\View;
+<pre><code class="language-php">use Illuminate\Contracts\View\View;
 
 protected function getHeader(): View
 {
-    return view('filament.settings.custom-header');
+    return view(&#39;filament.settings.custom-header&#39;);
 }
 
 protected function getFooter(): View
 {
-    return view('filament.settings.custom-footer');
+    return view(&#39;filament.settings.custom-footer&#39;);
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/04-pages.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/04-pages.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

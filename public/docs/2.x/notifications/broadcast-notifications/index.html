@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -343,38 +343,38 @@
 <h2 id="sending-notifications">Sending notifications</h2>
 <p>There are several ways to send broadcast notifications, depending on which one suits you best.</p>
 <p>You may use our fluent API:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">broadcast</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
 $recipient = auth()-&gt;user();
 
 Notification::make()
-    -&gt;title('Saved successfully')
+    -&gt;title(&#39;Saved successfully&#39;)
     -&gt;broadcast($recipient);
-</textarea></code></pre>
+</code></pre>
 <p>Or, use the <code>notify()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipient</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">notify</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">toBroadcast</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Notifications\Notification;
+<pre><code class="language-php">use Filament\Notifications\Notification;
 
 $recipient = auth()-&gt;user();
 
 $recipient-&gt;notify(
     Notification::make()
-        -&gt;title('Saved successfully')
+        -&gt;title(&#39;Saved successfully&#39;)
         -&gt;toBroadcast(),
 )
-</textarea></code></pre>
+</code></pre>
 <p>Alternatively, use a traditional <a href="https://laravel.com/docs/notifications#generating-notifications">Laravel notification class</a> by returning the notification from the <code>toBroadcast()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notification</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Notifications</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Messages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">BroadcastMessage</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">toBroadcast</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">User</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">notifiable</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BroadcastMessage</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Notification</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">title</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Saved successfully</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getBroadcastMessage</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
+<pre><code class="language-php">use App\Models\User;
 use Filament\Notifications\Notification;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 
 public function toBroadcast(User $notifiable): BroadcastMessage
 {
     return Notification::make()
-        -&gt;title('Saved successfully')
+        -&gt;title(&#39;Saved successfully&#39;)
         -&gt;getBroadcastMessage();
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/notifications/docs/04-broadcast-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/notifications/docs/04-broadcast-notifications.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>

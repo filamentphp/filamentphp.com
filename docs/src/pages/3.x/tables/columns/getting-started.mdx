@@ -115,6 +115,23 @@ public function table(Table $table): Table
 }
 ```
 
+### Persist sort in session
+
+To persist the sorting in the user's session, use the `persistSortInSession()` method:
+
+```php
+use Filament\Tables\Table;
+
+public function table(Table $table): Table
+{
+    return $table
+        ->columns([
+            // ...
+        ])
+        ->persistSortInSession();
+}
+```
+
 ## Searching
 
 Columns may be searchable, by using the text input in the top right of the table. To make a column searchable, you must use the `searchable()` method:

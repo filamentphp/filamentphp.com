@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.b2841af9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.55183720.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -263,6 +263,14 @@
       </li><li>
         <a href="/docs/3.x/forms/testing" class="font-display font-bold text-primary-500 before:bg-primary-500">
           <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
         </a>
 
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
@@ -618,6 +626,14 @@
         <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           
         </ul>
+      </li><li>
+        <a href="/docs/3.x/forms/upgrade-guide" class="font-display font-bold text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="">Upgrade Guide</h2>
+        </a>
+
+        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+          
+        </ul>
       </li>
   </ul>
 </nav>
@@ -639,124 +655,124 @@
 <p>Since the form builder works on Livewire components, you can use the <a href="https://laravel-livewire.com/docs/testing">Livewire testing helpers</a>. However, we have custom testing helpers that you can use with forms:</p>
 <h2 id="filling-a-form">Filling a form</h2>
 <p>To fill a form with data, pass the data to <code>fillform()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fake</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">sentence</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
 livewire(CreatePost::class)
     -&gt;fillForm([
-        'title' =&gt; fake()-&gt;sentence(),
+        &#39;title&#39; =&gt; fake()-&gt;sentence(),
         // ...
     ]);
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that if you have multiple forms on a Livewire component, you can specify which form you want to fill using <code>fillForm([...], &#39;createPostForm&#39;)</code>.</p>
 </blockquote>
 <p>To check that a form has data, use <code>assertFormSet()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Str</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can automatically generate a slug from the title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fake</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">sentence</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormSet</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Str</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">slug</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">title</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Support\Str;
+<pre><code class="language-php">use Illuminate\Support\Str;
 use function Pest\Livewire\livewire;
 
-it('can automatically generate a slug from the title', function () {
+it(&#39;can automatically generate a slug from the title&#39;, function () {
     $title = fake()-&gt;sentence();
 
     livewire(CreatePost::class)
         -&gt;fillForm([
-            'title' =&gt; $title,
+            &#39;title&#39; =&gt; $title,
         ])
         -&gt;assertFormSet([
-            'slug' =&gt; Str::slug($title),
+            &#39;slug&#39; =&gt; Str::slug($title),
         ]);
 });
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that if you have multiple forms on a Livewire component, you can specify which form you want to check using <code>assertFormSet([...], &#39;createPostForm&#39;)</code>.</p>
 </blockquote>
 <h2 id="validation">Validation</h2>
 <p>Use <code>assertHasFormErrors()</code> to ensure that data is properly validated in a form:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can validate input</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">null,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertHasFormErrors</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">required</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-it('can validate input', function () {
+it(&#39;can validate input&#39;, function () {
     livewire(CreatePost::class)
         -&gt;fillForm([
-            'title' =&gt; null,
+            &#39;title&#39; =&gt; null,
         ])
-        -&gt;assertHasFormErrors(['title' =&gt; 'required']);
+        -&gt;assertHasFormErrors([&#39;title&#39; =&gt; &#39;required&#39;]);
 });
-</textarea></code></pre>
+</code></pre>
 <p>And <code>assertHasNoFormErrors()</code> to ensure there are no validation errors:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fake</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">sentence</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">call</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">save</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertHasNoFormErrors</span><span style="color: #89DDFF;">();</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
 livewire(CreatePost::class)
     -&gt;fillForm([
-        'title' =&gt; fake()-&gt;sentence(),
+        &#39;title&#39; =&gt; fake()-&gt;sentence(),
         // ...
     ])
-    -&gt;call('save')
+    -&gt;call(&#39;save&#39;)
     -&gt;assertHasNoFormErrors();
-</textarea></code></pre>
+</code></pre>
 <h2 id="form-existence">Form existence</h2>
 <p>To check that a Livewire component has a form, use <code>assertFormExists()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">has a form</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormExists</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-it('has a form', function () {
+it(&#39;has a form&#39;, function () {
     livewire(CreatePost::class)
         -&gt;assertFormExists();
 });
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that if you have multiple forms on a Livewire component, you can pass the name of a specific form like <code>assertFormExists(&#39;createPostForm&#39;)</code>.</p>
 </blockquote>
 <h2 id="fields">Fields</h2>
 <p>To ensure that a form has a given field pass the field name to <code>assertFormFieldExists()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">has a title field</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormFieldExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-it('has a title field', function () {
+it(&#39;has a title field&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertFormFieldExists('title');
+        -&gt;assertFormFieldExists(&#39;title&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that if you have multiple forms on a Livewire component, you can specify which form you want to check for the existence of the field like <code>assertFormFieldExists(&#39;title&#39;, &#39;createPostForm&#39;)</code>.</p>
 </blockquote>
 <h3 id="hidden-fields">Hidden fields</h3>
 <p>To ensure that a field is visible pass the name to <code>assertFormFieldIsVisible()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">test</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title is visible</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormFieldIsVisible</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-test('title is visible', function () {
+test(&#39;title is visible&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertFormFieldIsVisible('title');
+        -&gt;assertFormFieldIsVisible(&#39;title&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <p>Or to ensure that a field is hidden you can pass the name to <code>assertFormFieldIsHidden()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">test</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title is hidden</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormFieldIsHidden</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-test('title is hidden', function () {
+test(&#39;title is hidden&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertFormFieldIsHidden('title');
+        -&gt;assertFormFieldIsHidden(&#39;title&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that for both <code>assertFormFieldIsHidden()</code> and <code>assertFormFieldIsVisible()</code> you can pass the name of a specific form the field belongs to as the second argument like <code>assertFormFieldIsHidden(&#39;title&#39;, &#39;createPostForm&#39;)</code>.</p>
 </blockquote>
 <h3 id="disabled-fields">Disabled fields</h3>
 <p>To ensure that a field is enabled pass the name to <code>assertFormFieldIsEnabled()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">test</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title is enabled</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormFieldIsEnabled</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-test('title is enabled', function () {
+test(&#39;title is enabled&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertFormFieldIsEnabled('title');
+        -&gt;assertFormFieldIsEnabled(&#39;title&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <p>Or to ensure that a field is disabled you can pass the name to <code>assertFormFieldIsDisabled()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">test</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title is disabled</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">CreatePost</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertFormFieldIsDisabled</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
+<pre><code class="language-php">use function Pest\Livewire\livewire;
 
-test('title is disabled', function () {
+test(&#39;title is disabled&#39;, function () {
     livewire(CreatePost::class)
-        -&gt;assertFormFieldIsDisabled('title');
+        -&gt;assertFormFieldIsDisabled(&#39;title&#39;);
 });
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Note that for both <code>assertFormFieldIsEnabled()</code> and <code>assertFormFieldIsDisabled()</code> you can pass the name of a specific form the field belongs to as the second argument like <code>assertFormFieldIsEnabled(&#39;title&#39;, &#39;createPostForm&#39;)</code>.</p>
 </blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/09-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
-              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+              Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
         </article>
@@ -771,7 +787,16 @@ test('title is disabled', function () {
                   </a>
                 </dd>
               </div>
-            
+            <div class="ml-auto text-right">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
+                  Next
+                </dt>
+                <dd class="mt-1">
+                  <a href="/docs/3.x/forms/upgrade-guide" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300">
+                    Upgrade Guide <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </dd>
+              </div>
         </dl>
       </div>
       <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
