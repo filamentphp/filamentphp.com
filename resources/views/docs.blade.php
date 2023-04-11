@@ -233,6 +233,18 @@
                     </a>
 
                     <a
+                        href="https://docuwriter.ai"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://user-images.githubusercontent.com/41773797/231168744-48222757-98b3-45f0-9517-d1b0f0b66677.png"
+                            alt="DocuWriter.ai"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://ego-trace.com"
                         target="__blank"
                         class="block bg-white rounded-xl p-4 mx-auto max-w-xs"

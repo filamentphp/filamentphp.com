@@ -18,7 +18,7 @@ use Pirsch\Facades\Pirsch;
 
 Route::view('/', 'home')->name('home');
 
-Route::redirect('/discord', 'https://discord.gg/cpqnMTHZja')->name('discord');
+Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
 Route::prefix('/docs')->group(function () {
     Route::redirect('/getting-started', '/docs/app/getting-started');
