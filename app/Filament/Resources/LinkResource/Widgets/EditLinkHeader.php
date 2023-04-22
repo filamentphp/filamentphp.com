@@ -13,7 +13,7 @@ class EditLinkHeader extends Widget
         'linkUpdated' => '$refresh',
     ];
 
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     protected static string $view = 'filament.resources.link-resource.widgets.edit-link-header';
 }

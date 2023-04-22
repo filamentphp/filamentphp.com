@@ -14,14 +14,12 @@
     --docsearch-primary-color: #eab308;
     --docsearch-key-gradient: #fff;
     --docsearch-key-shadow: none;
-    --docsearch-footer-shadow:none
+    --docsearch-footer-shadow: none
 }
 
 .highlight {
-    background: linear-gradient(120deg, rgba(252, 211, 77, 0.4) 0%, rgba(252, 211, 77, 0.4) 100%);
-    background-repeat: no-repeat;
     background-size: 100% 39%;
-    background-position: 0 63%;
+    background: linear-gradient(120deg, rgba(252, 211, 77, 0.4) 0%, rgba(252, 211, 77, 0.4) 100%) no-repeat 0 63%;
 }
 
 .link-underline {
@@ -40,12 +38,10 @@
 }
 
 .DocSearch-Button {
-    width: 100%;
-    margin: 0;
     border-radius: 0.45rem;
     background-color: #fafafa;
     transition: all .1s ease-in-out;
-    @apply dark:text-gray-300 dark:bg-gray-800 dark:hover:text-gray-300 dark:hover:bg-gray-800 !important;
+    @apply w-full m-0 dark:text-gray-300 dark:bg-gray-800 dark:hover:text-gray-300 dark:hover:bg-gray-800 !important;
 }
 
 .DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
@@ -69,7 +65,7 @@
 }
 
 .DocSearch-Input {
-    background-color: transparent;
+    @apply bg-transparent;
 }
 
 .DocSearch-Hit > a:focus, .DocSearch-Input:focus {
@@ -110,8 +106,7 @@
 }
 
 pre {
-    @apply rounded overflow-x-auto;
-    padding: 0 !important;
+    @apply rounded overflow-x-auto !p-0;
 }
 
 pre code.torchlight {
@@ -124,8 +119,7 @@ pre code.torchlight .line {
 
 pre code.torchlight .line-number,
 pre code.torchlight .summary-caret {
-    @apply mr-4;
-    user-select: none;
+    @apply mr-4 select-none;
 }
 
 .torchlight.has-focus-lines .line:not(.line-focus) {

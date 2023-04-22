@@ -1,5 +1,5 @@
 pre {
-  @apply overflow-x-auto rounded p-0;
+  @apply p-0 overflow-x-auto rounded;
 }
 
 pre.astro-code {
@@ -20,7 +20,7 @@ pre.torchlight {
 
 pre.torchlight .line-number,
 pre.torchlight .summary-caret {
-  @apply mr-4 select-none;
+  @apply select-none me-4;
 }
 
 .torchlight.has-focus-lines .line:not(.line-focus) {

@@ -3,16 +3,18 @@
 namespace App\Filament\Resources\PluginResource\Pages;
 
 use App\Filament\Resources\PluginResource;
-use Filament\Pages\Actions\Action;
+use Filament\Pages\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
 class ListPlugins extends ListRecords
 {
     protected static string $resource = PluginResource::class;
 
-    protected function getCreateAction(): Action
+    protected function getActions(): array
     {
-        return parent::getCreateAction()->label('Submit plugin');
+        return [
+            CreateAction::make()->label('Submit plugin'),
+        ];
     }
 
     protected function getHeaderWidgets(): array

@@ -5,7 +5,6 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 use App\Enums\ArticleStatus;
 use App\Filament\Resources\ArticleResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateArticle extends CreateRecord
@@ -13,7 +12,9 @@ class CreateArticle extends CreateRecord
     protected static string $resource = ArticleResource::class;
 
     protected static ?string $title = 'Submit Article';
+
     protected static ?string $breadcrumb = 'Submit';
+
     protected static bool $canCreateAnother = false;
 
     protected bool $shouldCreateAsDraft = false;
@@ -24,13 +25,11 @@ class CreateArticle extends CreateRecord
             return $data;
         }
 
-        $data['status'] = $this->shouldCreateAsDraft ?
-            ArticleStatus::Draft :
-            ArticleStatus::Pending;
-
-        $data['author_id'] = auth()->user()->getKey();
-
-        return $data;
+        return [
+            ...$data,
+            'status' => $this->shouldCreateAsDraft ? ArticleStatus::Draft : ArticleStatus::Pending,
+            'author_id' => auth()->user()->getKey(),
+        ];
     }
 
     protected function getCreateFormAction(): Action
@@ -40,9 +39,9 @@ class CreateArticle extends CreateRecord
 
     protected function getCreateAsDraftFormAction(): Action
     {
-        return ButtonAction::make('createAsDraft')
+        return Action::make('createAsDraft')
             ->label('Save draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldCreateAsDraft = true;
 
                 $this->create();

@@ -41,12 +41,12 @@
         'w-6 h-6' => $size === 'md',
         'w-7 h-7' => $size === 'lg',
         'w-5 h-5' => $size === 'sm',
-        'mr-1 -ml-2 rtl:ml-1 rtl:-mr-2' => ($iconPosition === 'before') && ($size === 'md'),
-        'mr-2 -ml-3 rtl:ml-2 rtl:-mr-3' => ($iconPosition === 'before') && ($size === 'lg'),
-        'mr-1 -ml-1.5 rtl:ml-1 rtl:-mr-1.5' => ($iconPosition === 'before') && ($size === 'sm'),
-        'ml-1 -mr-2 rtl:mr-1 rtl:-ml-2' => ($iconPosition === 'after') && ($size === 'md'),
-        'ml-2 -mr-3 rtl:mr-2 rtl:-ml-3' => ($iconPosition === 'after') && ($size === 'lg'),
-        'ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5' => ($iconPosition === 'after') && ($size === 'sm'),
+        'me-1 -ms-2' => ($iconPosition === 'before') && ($size === 'md'),
+        'me-2 -ms-3' => ($iconPosition === 'before') && ($size === 'lg'),
+        'me-1 -ms-1.5' => ($iconPosition === 'before') && ($size === 'sm'),
+        'ms-1 -me-2' => ($iconPosition === 'after') && ($size === 'md'),
+        'ms-2 -me-3' => ($iconPosition === 'after') && ($size === 'lg'),
+        'ms-1 -me-1.5' => ($iconPosition === 'after') && ($size === 'sm'),
     ]);
 
     $hasLoadingIndicator = filled($attributes->get('wire:click')) || (($type === 'submit') && filled($form));
@@ -64,7 +64,7 @@
         @endif
         type="{{ $type }}"
         wire:loading.attr="disabled"
-        {!! $hasLoadingIndicator ? 'wire:loading.class="opacity-70 cursor-wait"' : '' !!}
+        {!! $hasLoadingIndicator ? 'wire:loading.class="cursor-wait opacity-70"' : '' !!}
         {!! ($hasLoadingIndicator && $loadingIndicatorTarget) ? "wire:target=\"{$loadingIndicatorTarget}\"" : '' !!}
         {!! $disabled ? 'disabled' : '' !!}
         {{ $attributes->class($buttonClasses) }}
@@ -97,7 +97,7 @@
         x-tooltip.raw="{{ $tooltip }}"
         @endif
         wire:loading.attr="disabled"
-        {!! $hasLoadingIndicator ? 'wire:loading.class="opacity-70 cursor-wait"' : '' !!}
+        {!! $hasLoadingIndicator ? 'wire:loading.class="cursor-wait opacity-70"' : '' !!}
         {!! ($hasLoadingIndicator && $loadingIndicatorTarget) ? "wire:target=\"{$loadingIndicatorTarget}\"" : '' !!}
         {{ $attributes->class($buttonClasses) }}
     >

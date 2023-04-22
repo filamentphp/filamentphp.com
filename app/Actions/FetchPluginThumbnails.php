@@ -4,7 +4,6 @@ namespace App\Actions;
 
 use App\Models\Plugin;
 use Embed\Embed;
-use Flowframe\Previewify\Previewify;
 use Throwable;
 
 class FetchPluginThumbnails
@@ -24,11 +23,9 @@ class FetchPluginThumbnails
          * can clean this all up and handle the errors properly. But
          * it really isn't vital to this app servicing its users :)
          */
-
         Plugin::query()
             ->inRandomOrder()
             ->with(['media'])
-            ->get()
             ->each(function (Plugin $plugin): void {
                 if ($plugin->media->count()) {
                     return;

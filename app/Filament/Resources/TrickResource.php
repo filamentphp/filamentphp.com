@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Enums\TrickCategory;
 use App\Enums\TrickStatus;
 use App\Filament\Resources\TrickResource\Pages;
-use App\Filament\Resources\TrickResource\RelationManagers;
 use App\Models\Trick;
 use Closure;
 use Filament\Forms;
@@ -21,6 +20,7 @@ class TrickResource extends Resource
     protected static ?string $model = Trick::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-lightning-bolt';
+
     protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
@@ -44,10 +44,11 @@ class TrickResource extends Resource
                     ->maxLength(255)
                     ->disabled(fn (?Trick $record) => (! auth()->user()->is_admin) && $record?->status === TrickStatus::Published),
                 Forms\Components\MarkdownEditor::make('content')
-                    ->columnSpan('full'),
-                Forms\Components\MultiSelect::make('categories')
+                    ->columnSpanFull(),
+                Forms\Components\Select::make('categories')
+                    ->multiple()
                     ->options(collect(TrickCategory::cases())->mapWithKeys(fn (TrickCategory $category): array => [$category->value => $category->getLabel()]))
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\Select::make('status')
                     ->options(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $category): array => [$category->value => $category->getLabel()]))
                     ->visible(auth()->user()->is_admin)
@@ -62,7 +63,7 @@ class TrickResource extends Resource
                     ->default(0)
                     ->required()
                     ->visible(auth()->user()->is_admin),
-                Forms\Components\BelongsToSelect::make('author_id')
+                Forms\Components\Select::make('author_id')
                     ->relationship('author', 'name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
@@ -91,13 +92,6 @@ class TrickResource extends Resource
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $status): array => [$status->value => $status->getLabel()])),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

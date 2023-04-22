@@ -13,10 +13,10 @@ enum TrickCategory: string
     public function getLabel(): string
     {
         return match ($this) {
-            static::Admin => 'Admin panel',
-            static::Faq => 'FAQ',
-            static::Forms => 'Form builder',
-            static::Tables => 'Table builder',
+            self::Admin => 'Admin panel',
+            self::Faq => 'FAQ',
+            self::Forms => 'Form builder',
+            self::Tables => 'Table builder',
             default => str($this->value)->replace('_', ' ')->ucfirst()->toString(),
         };
     }

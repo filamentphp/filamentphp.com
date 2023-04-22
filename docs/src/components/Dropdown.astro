@@ -36,7 +36,7 @@
             <span><slot name="trigger" /></span>
 
             <!-- Heroicon: chevron-down -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
         </button>
@@ -49,7 +49,7 @@
             x-on:click.outside="close($refs.button)"
             x-bind:id="$id('dropdown-button')"
             style="display: none;"
-            class="absolute left-0 mt-2 w-40 rounded-md bg-white shadow-md"
+            class="absolute w-40 mt-2 bg-white rounded-md shadow-md start-0"
         >
             <slot />
         </div>

@@ -2,8 +2,6 @@
 
 namespace App\Actions;
 
-use Akaunting\Money\Currency;
-use Akaunting\Money\Money;
 use App\Models\Plugin;
 use Illuminate\Support\Facades\Http;
 use Throwable;
@@ -25,14 +23,12 @@ class FetchPluginDataFromAnystack
          * can clean this all up and handle the errors properly. But
          * it really isn't vital to this app servicing its users :)
          */
-
         $anystack = Http::withToken(config('services.anystack.token'));
 
         try {
             $advertismentChannels = $anystack
                 ->get('https://api.anystack.sh/v1/affiliate-beta')
-                ->json()
-                ['data'];
+                ->json('data');
 
             $advertisementChannel = collect($advertismentChannels)->keyBy('id')['da7855a9-36a1-44a4-87b9-8e5852ae08d2'] ?? null;
 
@@ -90,7 +86,7 @@ class FetchPluginDataFromAnystack
 
                     echo "Caching price for plugin {$plugin->getKey()} - {$price}. \n";
                 });
-        } catch (Throwable $exception) {
+        } catch (Throwable) {
             echo "Failed to fetch any data from Anystack. \n";
 
             // 👹

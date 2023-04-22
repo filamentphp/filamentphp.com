@@ -5,7 +5,7 @@ namespace App\Filament\Resources\TrickResource\Pages;
 use App\Enums\TrickStatus;
 use App\Filament\Resources\TrickResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
+use Filament\Pages\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditTrick extends EditRecord
@@ -38,7 +38,7 @@ class EditTrick extends EditRecord
         return $data;
     }
 
-    protected function getSavedNotificationMessage(): ?string
+    protected function getSavedNotificationTitle(): ?string
     {
         if ($this->shouldSaveAsDraft) {
             return 'Saved as draft';
@@ -48,14 +48,14 @@ class EditTrick extends EditRecord
             return 'Submitted for review. You\'re awesome!';
         }
 
-        return parent::getSavedNotificationMessage();
+        return parent::getSavedNotificationTitle();
     }
 
     protected function getSaveAsDraftFormAction(): Action
     {
-        return ButtonAction::make('saveAsDraft')
+        return Action::make('saveAsDraft')
             ->label('Save as draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsDraft = true;
 
                 $this->save();
@@ -66,9 +66,9 @@ class EditTrick extends EditRecord
 
     protected function getSaveAsPendingFormAction(): Action
     {
-        return ButtonAction::make('saveAsPending')
+        return Action::make('saveAsPending')
             ->label('Submit for review')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsPending = true;
 
                 $this->save();
@@ -96,16 +96,12 @@ class EditTrick extends EditRecord
 
     protected function getActions(): array
     {
-        return array_merge([
-            $this->getViewAction(),
-        ], parent::getActions());
-    }
-
-    protected function getViewAction(): Action
-    {
-        return parent::getViewAction()
-            ->label('Preview on our website')
-            ->openUrlInNewTab()
-            ->url(route('tricks.view', ['trick' => $this->record]));
+        return [
+            ViewAction::make()
+                ->label('Preview on our website')
+                ->openUrlInNewTab()
+                ->url(route('tricks.view', ['trick' => $this->record])),
+            ...parent::getActions(),
+        ];
     }
 }

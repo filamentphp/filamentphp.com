@@ -5,9 +5,7 @@ namespace App\Filament\Resources\LinkResource\Pages;
 use App\Enums\LinkStatus;
 use App\Filament\Resources\LinkResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\EditRecord;
-use Illuminate\Contracts\View\View;
 
 class EditLink extends EditRecord
 {
@@ -39,7 +37,7 @@ class EditLink extends EditRecord
         return $data;
     }
 
-    protected function getSavedNotificationMessage(): ?string
+    protected function getSavedNotificationTitle(): ?string
     {
         if ($this->shouldSaveAsDraft) {
             return 'Saved as draft';
@@ -49,14 +47,14 @@ class EditLink extends EditRecord
             return 'Submitted for review. You\'re awesome!';
         }
 
-        return parent::getSavedNotificationMessage();
+        return parent::getSavedNotificationTitle();
     }
 
     protected function getSaveAsDraftFormAction(): Action
     {
-        return ButtonAction::make('saveAsDraft')
+        return Action::make('saveAsDraft')
             ->label('Save as draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsDraft = true;
 
                 $this->save();
@@ -67,9 +65,9 @@ class EditLink extends EditRecord
 
     protected function getSaveAsPendingFormAction(): Action
     {
-        return ButtonAction::make('saveAsPending')
+        return Action::make('saveAsPending')
             ->label('Submit for review')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsPending = true;
 
                 $this->save();

@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use Illuminate\Contracts\View\View;
 
 class ListArticlesController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): View
     {
         seo()->title('Blog');
 

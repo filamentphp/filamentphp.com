@@ -4,7 +4,6 @@ namespace App\Actions;
 
 use App\Models\Link;
 use Embed\Embed;
-use Flowframe\Previewify\Previewify;
 use Throwable;
 
 class FetchLinkThumbnails
@@ -24,7 +23,6 @@ class FetchLinkThumbnails
          * can clean this all up and handle the errors properly. But
          * it really isn't vital to this app servicing its users :)
          */
-
         Link::query()
             ->inRandomOrder()
             ->with(['media'])

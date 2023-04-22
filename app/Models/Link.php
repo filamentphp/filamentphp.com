@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Enums\LinkStatus;
-use App\Enums\PluginStatus;
 use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

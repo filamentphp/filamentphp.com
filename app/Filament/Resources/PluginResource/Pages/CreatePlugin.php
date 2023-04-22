@@ -5,16 +5,16 @@ namespace App\Filament\Resources\PluginResource\Pages;
 use App\Enums\PluginStatus;
 use App\Filament\Resources\PluginResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Contracts\View\View;
 
 class CreatePlugin extends CreateRecord
 {
     protected static string $resource = PluginResource::class;
 
     protected static ?string $title = 'Submit Plugin';
+
     protected static ?string $breadcrumb = 'Submit';
+
     protected static bool $canCreateAnother = false;
 
     protected bool $shouldCreateAsDraft = false;
@@ -25,13 +25,11 @@ class CreatePlugin extends CreateRecord
             return $data;
         }
 
-        $data['status'] = $this->shouldCreateAsDraft ?
-            PluginStatus::Draft :
-            PluginStatus::Pending;
-
-        $data['author_id'] = auth()->user()->getKey();
-
-        return $data;
+        return [
+            ...$data,
+            'status' => $this->shouldCreateAsDraft ? PluginStatus::Draft : PluginStatus::Pending,
+            'author_id' => auth()->user()->getKey(),
+        ];
     }
 
     protected function getCreateFormAction(): Action
@@ -41,9 +39,9 @@ class CreatePlugin extends CreateRecord
 
     protected function getCreateAsDraftFormAction(): Action
     {
-        return ButtonAction::make('createAsDraft')
+        return Action::make('createAsDraft')
             ->label('Save draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldCreateAsDraft = true;
 
                 $this->create();

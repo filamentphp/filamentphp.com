@@ -57,7 +57,7 @@ class Trick extends Model
 
     public function getFavoriteKey(): string
     {
-        return "tricks.{$this->getKey()}.favorites." . request()->ip();
+        return "tricks.{$this->getKey()}.favorites.".request()->ip();
     }
 
     public function isFavorite(): bool

@@ -132,7 +132,7 @@
                                 <li>
                                     <a
                                         href="https://twitter.com/share?url={{ route('plugins.view', ['plugin' => $plugin]) }}&text={{ urlencode("💖 {$plugin->name} by {$plugin->getAuthorName()}") }}"
-                                        target="__blank"
+                                        target="_blank"
                                         class="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500"
                                     >
                                         <span class="sr-only">Share on Twitter</span>
@@ -159,7 +159,7 @@
 
                                 <a
                                     href="{{ route('discord') }}"
-                                    target="__blank"
+                                    target="_blank"
                                     class="font-medium text-gray-600 hover:text-gray-500"
                                 >
                                     Discord
@@ -184,7 +184,7 @@
                                 <p class="mt-4 text-sm text-gray-500">
                                     <a
                                         {!! filled($plugin->license_url) ? "href=\"{$plugin->license_url}\"" : '' !!}
-                                        target="__blank"
+                                        target="_blank"
                                         @class([
                                             'font-medium',
                                             'text-primary-600 hover:text-primary-600' => $plugin->license_url,

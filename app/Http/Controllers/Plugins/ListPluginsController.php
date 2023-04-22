@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Plugins;
 
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
-use App\Models\Trick;
-use App\Models\User;
+use Illuminate\Contracts\View\View;
 
 class ListPluginsController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): View
     {
         seo()->title('Plugins');
 

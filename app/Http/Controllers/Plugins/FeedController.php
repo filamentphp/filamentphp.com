@@ -8,7 +8,7 @@ use App\Models\Plugin;
 
 class FeedController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): array
     {
         $plugins = Plugin::query()
             ->published()
@@ -29,7 +29,7 @@ class FeedController extends Controller
                     'name' => $plugin->getAuthorName(),
                 ],
                 'created_at' => $plugin->created_at->toDateTimeString(),
-                'updated_at' => $plugin->updated_at->toDateTimeString()
+                'updated_at' => $plugin->updated_at->toDateTimeString(),
             ])
             ->all();
 

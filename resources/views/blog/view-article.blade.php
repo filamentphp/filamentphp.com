@@ -82,7 +82,7 @@
                 <div class="text-sm flex items-center gap-3 w-full mt-8">
                     <a
                         href="https://twitter.com/share?url={{ $article->getUrl() }}&text={{ urlencode("📝 {$article->title} by {$article->author->name}") }}"
-                        target="__blank"
+                        target="_blank"
                         class="flex items-center gap-2 text-gray-500 hover:text-gray-600"
                     >
                         <svg class="w-4 h-4 text-blue-400 hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -94,7 +94,7 @@
 
                     <a
                         href="/blog/feed"
-                        target="__blank"
+                        target="_blank"
                         class="flex items-center gap-2 text-gray-500 hover:text-gray-600"
                     >
                         <svg class="w-4 h-4 text-orange-400 hover:text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

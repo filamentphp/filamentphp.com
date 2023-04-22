@@ -5,7 +5,6 @@ namespace App\Filament\Resources\TrickResource\Pages;
 use App\Enums\TrickStatus;
 use App\Filament\Resources\TrickResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateTrick extends CreateRecord
@@ -13,7 +12,9 @@ class CreateTrick extends CreateRecord
     protected static string $resource = TrickResource::class;
 
     protected static ?string $title = 'Submit Trick';
+
     protected static ?string $breadcrumb = 'Submit';
+
     protected static bool $canCreateAnother = false;
 
     protected bool $shouldCreateAsDraft = false;
@@ -24,13 +25,11 @@ class CreateTrick extends CreateRecord
             return $data;
         }
 
-        $data['status'] = $this->shouldCreateAsDraft ?
-            TrickStatus::Draft :
-            TrickStatus::Pending;
-
-        $data['author_id'] = auth()->user()->getKey();
-
-        return $data;
+        return [
+            ...$data,
+            'status' => $this->shouldCreateAsDraft ? TrickStatus::Draft : TrickStatus::Pending,
+            'author_id' => auth()->user()->getKey(),
+        ];
     }
 
     protected function getCreateFormAction(): Action
@@ -40,9 +39,9 @@ class CreateTrick extends CreateRecord
 
     protected function getCreateAsDraftFormAction(): Action
     {
-        return ButtonAction::make('createAsDraft')
+        return Action::make('createAsDraft')
             ->label('Save draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldCreateAsDraft = true;
 
                 $this->create();

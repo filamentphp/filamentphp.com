@@ -3,9 +3,8 @@
 namespace App\Http\Livewire\Plugins;
 
 use App\Models\Plugin;
-use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -32,7 +31,7 @@ class SearchPlugins extends Component
         }
     }
 
-    protected function getPlugins()
+    protected function getPlugins(): LengthAwarePaginator
     {
         return Plugin::query()
             ->published()
@@ -92,7 +91,7 @@ class SearchPlugins extends Component
 
             if (false !== $key) {
                 unset($this->categoryFilter[$key]);
-                
+
                 $this->resetPage();
             }
 
@@ -100,7 +99,7 @@ class SearchPlugins extends Component
         }
 
         $this->categoryFilter[] = $category;
-        
+
         $this->resetPage();
     }
 }

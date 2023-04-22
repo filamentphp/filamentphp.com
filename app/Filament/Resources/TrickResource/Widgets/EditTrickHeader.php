@@ -13,7 +13,7 @@ class EditTrickHeader extends Widget
         'trickUpdated' => '$refresh',
     ];
 
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     protected static string $view = 'filament.resources.trick-resource.widgets.edit-trick-header';
 }

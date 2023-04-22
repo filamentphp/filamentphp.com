@@ -18,9 +18,9 @@ let { type = 'note', title = null} = Astro.props;
 ---
 
 <div class={`my-8 flex rounded-3xl p-6 ${styles[type].container}`}>
-  {type == 'note' && <Icon name="heroicons:light-bulb" class="h-8 w-8 flex-none" />}
-  {type == 'warning' && <Icon name="heroicons:exclamation-circle" class="h-8 w-8 flex-none text-orange-500" />}
-  <div class="ml-4 flex-auto">
+  {type == 'note' && <Icon name="heroicons:light-bulb" class="flex-none w-8 h-8" />}
+  {type == 'warning' && <Icon name="heroicons:exclamation-circle" class="flex-none w-8 h-8 text-orange-500" />}
+  <div class="flex-auto ms-4">
     {title && <p class={`m-0 font-display text-xl mb-2.5 ${styles[type].title}`}>{title}</p>}
     <div class={`prose ${styles[type].body}`}><slot /></div>
   </div>

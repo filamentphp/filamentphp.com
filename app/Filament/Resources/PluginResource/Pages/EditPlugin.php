@@ -5,7 +5,7 @@ namespace App\Filament\Resources\PluginResource\Pages;
 use App\Enums\PluginStatus;
 use App\Filament\Resources\PluginResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
+use Filament\Pages\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditPlugin extends EditRecord
@@ -38,7 +38,7 @@ class EditPlugin extends EditRecord
         return $data;
     }
 
-    protected function getSavedNotificationMessage(): ?string
+    protected function getSavedNotificationTitle(): ?string
     {
         if ($this->shouldSaveAsDraft) {
             return 'Saved as draft';
@@ -48,14 +48,14 @@ class EditPlugin extends EditRecord
             return 'Submitted for review. You\'re awesome!';
         }
 
-        return parent::getSavedNotificationMessage();
+        return parent::getSavedNotificationTitle();
     }
 
     protected function getSaveAsDraftFormAction(): Action
     {
-        return ButtonAction::make('saveAsDraft')
+        return Action::make('saveAsDraft')
             ->label('Save as draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsDraft = true;
 
                 $this->save();
@@ -66,9 +66,9 @@ class EditPlugin extends EditRecord
 
     protected function getSaveAsPendingFormAction(): Action
     {
-        return ButtonAction::make('saveAsPending')
+        return Action::make('saveAsPending')
             ->label('Submit for review')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldSaveAsPending = true;
 
                 $this->save();
@@ -89,17 +89,13 @@ class EditPlugin extends EditRecord
 
     protected function getActions(): array
     {
-        return array_merge([
-            $this->getViewAction(),
-        ], parent::getActions());
-    }
-
-    protected function getViewAction(): Action
-    {
-        return parent::getViewAction()
-            ->label('Preview on our website')
-            ->openUrlInNewTab()
-            ->url(route('plugins.view', ['plugin' => $this->record]));
+        return [
+            ViewAction::make()
+                ->label('Preview on our website')
+                ->openUrlInNewTab()
+                ->url(route('plugins.view', ['plugin' => $this->record])),
+            ...parent::getActions(),
+        ];
     }
 
     protected function getHeaderWidgets(): array

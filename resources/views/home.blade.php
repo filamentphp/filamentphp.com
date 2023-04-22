@@ -3,33 +3,33 @@
     'subtitle' => 'Rapidly build Laravel UIs using the TALL stack.',
     'code' => 'composer require filament/filament',
 ]">
-    <header class="max-w-7xl text-center mx-auto py-12 px-8 md:py-24">
+    <header class="px-8 py-12 mx-auto text-center max-w-7xl md:py-24">
         <h1 class="text-4xl font-heading md:text-6xl">
             <span class="block text-gray-800 xl:inline">
                 Laravel development.
             </span>
 
-            <span class="inline-block mt-3 italic text-primary-500 relative md:mt-6 xl:mt-0 xl:inline">
-                <span class="absolute opacity-[10%] left-[-1px]" aria-hidden="true">Accelerated</span>
-                <span class="absolute opacity-[10%] left-[-2px]" aria-hidden="true">Accelerated</span>
-                <span class="absolute opacity-[9%] left-[-3px]" aria-hidden="true">Accelerated</span>
-                <span class="absolute opacity-[9%] left-[-4px]" aria-hidden="true">Accelerated</span>
-                <span class="absolute opacity-[8%] left-[-5px]" aria-hidden="true">Accelerated</span>
-                <span class="absolute opacity-[8%] left-[-6px]" aria-hidden="true">Accelerated</span>
+            <span class="relative inline-block mt-3 italic text-primary-500 md:mt-6 xl:mt-0 xl:inline">
+                <span class="absolute opacity-[10%] start-[-1px]" aria-hidden="true">Accelerated</span>
+                <span class="absolute opacity-[10%] start-[-2px]" aria-hidden="true">Accelerated</span>
+                <span class="absolute opacity-[9%] start-[-3px]" aria-hidden="true">Accelerated</span>
+                <span class="absolute opacity-[9%] start-[-4px]" aria-hidden="true">Accelerated</span>
+                <span class="absolute opacity-[8%] start-[-5px]" aria-hidden="true">Accelerated</span>
+                <span class="absolute opacity-[8%] start-[-6px]" aria-hidden="true">Accelerated</span>
                 <span>Accelerated.</span>
             </span>
         </h1>
 
-        <h3 class="mt-8 text-gray-600 font-medium text-xl md:text-3xl">
-            Stop rebuilding the same UI over and <span class="bg-gradient-to-r from-gray-700 to-transparent text-transparent bg-clip-text">over <span aria-hidden="true">and over and over an</span></span>
+        <h3 class="mt-8 text-xl font-medium text-gray-600 md:text-3xl">
+            Stop rebuilding the same UI over and <span class="text-transparent bg-gradient-to-r from-gray-700 to-transparent bg-clip-text">over <span aria-hidden="true">and over and over an</span></span>
         </h3>
 
-        <div class="flex justify-center items-center flex-wrap gap-4 mt-4 md:mt-8">
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-4 md:mt-8">
             <a
                 href="{{ route('docs') }}"
-                class="inline-flex items-center font-medium text-lg px-4 py-2 rounded-lg bg-primary-500 text-white transition hover:text-primary-50 hover:scale-105"
+                class="inline-flex items-center px-4 py-2 text-lg font-medium text-white transition rounded-lg bg-primary-500 hover:text-primary-50 hover:scale-105"
             >
-                <x-heroicon-o-academic-cap class="w-6 h-6 mr-3" />
+                <x-heroicon-o-academic-cap class="w-6 h-6 me-3" />
 
                 Visit the documentation
             </a>
@@ -37,9 +37,9 @@
             <a
                 href="{{ route('discord') }}"
                 target="_blank"
-                class="inline-flex items-center font-medium text-lg px-4 py-2 rounded-lg bg-gray-900 text-white transition hover:text-primary-100 hover:scale-105"
+                class="inline-flex items-center px-4 py-2 text-lg font-medium text-white transition bg-gray-900 rounded-lg hover:text-primary-100 hover:scale-105"
             >
-                <svg class="w-5 mr-3" fill="none" viewBox="0 0 71 55" aria-hidden="true">
+                <svg class="w-5 me-3" fill="none" viewBox="0 0 71 55" aria-hidden="true">
                     <g clip-path="url(#clip0)">
                         <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="currentColor"/>
                     </g>
@@ -56,18 +56,18 @@
 
     <x-tall-stack class="-mt-[8rem] md:-mt-[20rem] pt-[8rem] md:pt-[16rem] lg:-mt-[24rem]" />
 
-    <section class="max-w-8xl relative mx-auto px-8 py-16">
+    <section class="relative px-8 py-16 mx-auto max-w-8xl">
         <div class="text-center">
-            <h2 class="font-heading text-gray-black/80 text-4xl">
+            <h2 class="text-4xl font-heading text-gray-black/80">
                 What is Filament?
             </h2>
 
-            <div class="mt-8 mx-auto max-w-5xl">
-                <p class="text-gray-600 font-medium text-xl">
+            <div class="max-w-5xl mx-auto mt-8">
+                <p class="text-xl font-medium text-gray-600">
                     Filament is a collection of packages: <mark class="highlight">UI components</mark> that you can install into your Laravel app.
                 </p>
 
-                <p class="mt-4 text-gray-600 font-medium text-xl">
+                <p class="mt-4 text-xl font-medium text-gray-600">
                     The <mark class="highlight">admin panel</mark> combines those components into one intuitive interface to <mark class="highlight">manage your app's data</mark>, but each package can be used individually in your own <mark class="highlight">TALL stack</mark> app if you wish.
                 </p>
             </div>
@@ -76,21 +76,21 @@
         <div class="mt-16 space-y-8">
             <a
                 href="{{ route('packages.app') }}"
-                class="block gap-8 items-center justify-between group p-6 lg:flex lg:p-12 border-4 border-transparent bg-gradient-to-b rounded-2xl"
+                class="items-center justify-between block gap-8 p-6 border-4 border-transparent group lg:flex lg:p-12 bg-gradient-to-b rounded-2xl"
                 style="background: linear-gradient(to bottom, rgb(248, 194, 204), rgba(250, 238, 199)) padding-box, linear-gradient(to bottom, rgb(244, 63, 94), rgb(252, 211, 77)) border-box"
             >
                 <div class="flex-shrink-0">
-                    <h3 class="font-heading text-gray-black/80 text-4xl">
+                    <h3 class="text-4xl font-heading text-gray-black/80">
                         <span>
                             Admin Panel
                         </span>
 
-                        <span class="font-sans text-medium text-xl text-rose-600">
+                        <span class="font-sans text-xl text-medium text-rose-600">
                             v2
                         </span>
                     </h3>
 
-                    <div class="mt-4 text-lg max-w-lg text-gray-700">
+                    <div class="max-w-lg mt-4 text-lg text-gray-700">
                         <p>
                             A fully-featured Laravel admin panel.
                         </p>
@@ -108,27 +108,27 @@
                         </p>
                     </div>
 
-                    <div class="inline-block mt-4 link-underline font-medium">
+                    <div class="inline-block mt-4 font-medium link-underline">
                         Learn more &rarr;
                     </div>
                 </div>
 
-                <div class="mt-8 lg:mt-0 lg:block lg:-mr-16 2xl:-mr-24">
+                <div class="mt-8 lg:mt-0 lg:block lg:-me-16 2xl:-me-24">
                     <img
-                        src="/images/forms/form.jpg"
-                        class="w-full rounded-2xl ring-1 ring-white/10 shadow-2xl"
+                        src="{{ asset('images/forms/form.jpg') }}"
+                        class="w-full shadow-2xl rounded-2xl ring-1 ring-white/10"
                     />
                 </div>
             </a>
 
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                <a href="{{ route('packages.forms') }}" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
-                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                <a href="{{ route('packages.forms') }}" class="col-span-1 p-6 transition border-4 group border-primary-300 bg-primary-300/30 rounded-2xl hover:scale-105">
+                    <h3 class="text-3xl font-heading text-gray-black/80">
                         <span>
                             Form builder
                         </span>
 
-                        <span class="font-sans text-medium text-xl text-primary-600">
+                        <span class="font-sans text-xl text-medium text-primary-600">
                             v2
                         </span>
                     </h3>
@@ -143,18 +143,18 @@
                         </p>
                     </div>
 
-                    <div class="inline-block mt-4 link-underline font-medium">
+                    <div class="inline-block mt-4 font-medium link-underline">
                         Learn more &rarr;
                     </div>
                 </a>
 
-                <a href="{{ route('packages.tables') }}" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
-                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                <a href="{{ route('packages.tables') }}" class="col-span-1 p-6 transition border-4 group border-primary-300 bg-primary-300/30 rounded-2xl hover:scale-105">
+                    <h3 class="text-3xl font-heading text-gray-black/80">
                         <span>
                             Table builder
                         </span>
 
-                        <span class="font-sans text-medium text-xl text-primary-600">
+                        <span class="font-sans text-xl text-medium text-primary-600">
                             v2
                         </span>
                     </h3>
@@ -169,18 +169,18 @@
                         </p>
                     </div>
 
-                    <div class="inline-block mt-4 link-underline font-medium">
+                    <div class="inline-block mt-4 font-medium link-underline">
                         Learn more &rarr;
                     </div>
                 </a>
 
-                <a href="/docs/notifications" class="group col-span-1 border-4 border-primary-300 p-6 bg-primary-300/30 rounded-2xl transition hover:scale-105">
-                    <h3 class="font-heading text-gray-black/80 text-3xl">
+                <a href="/docs/notifications" class="col-span-1 p-6 transition border-4 group border-primary-300 bg-primary-300/30 rounded-2xl hover:scale-105">
+                    <h3 class="text-3xl font-heading text-gray-black/80">
                         <span>
                             Notifications
                         </span>
 
-                        <span class="font-sans text-medium text-xl text-primary-600">
+                        <span class="font-sans text-xl text-medium text-primary-600">
                             v2
                         </span>
                     </h3>
@@ -195,7 +195,7 @@
                         </p>
                     </div>
 
-                    <div class="inline-block mt-4 link-underline font-medium">
+                    <div class="inline-block mt-4 font-medium link-underline">
                         Documentation &rarr;
                     </div>
                 </a>
@@ -222,7 +222,7 @@
                 target="_blank"
                 title="Agiledrop"
             >
-                <svg class="w-auto h-9 mt-2 fill-current" viewBox="0 0 480 141">
+                <svg class="w-auto mt-2 fill-current h-9" viewBox="0 0 480 141">
                     <path d="M125.517 73.6046C122.465 73.6046 119.514 73.039 116.739 71.9222C113.966 70.8074 111.492 69.2224 109.384 67.2063C107.22 65.1364 105.547 62.7432 104.412 60.091C103.275 57.443 102.698 54.6437 102.698 51.7802C102.698 48.8628 103.272 46.0387 104.412 43.3865C105.547 40.7344 107.22 38.3391 109.384 36.2713C111.494 34.2552 113.966 32.6701 116.739 31.5554C119.512 30.4427 122.467 29.875 125.517 29.875C128.565 29.875 131.518 30.4407 134.291 31.5554C137.062 32.6701 139.536 34.2552 141.646 36.2713C143.808 38.3391 145.485 40.7323 146.622 43.3865C147.76 46.0428 148.342 48.8649 148.342 51.7802V73.153C148.342 73.4099 148.123 73.6171 147.853 73.6171H142.309C142.04 73.6171 141.821 73.4099 141.821 73.153V67.7782C141.821 67.3493 141.269 67.1483 140.972 67.4694C140.27 68.2257 139.553 68.9012 138.767 69.4751C137.432 70.4614 136.033 71.2674 134.557 71.8828C133.084 72.4878 131.563 72.9354 130.006 73.2006C128.459 73.4679 126.953 73.6046 125.517 73.6046ZM125.517 36.0185C123.266 36.0185 121.121 36.4329 119.137 37.2534C117.15 38.0739 115.398 39.2052 113.925 40.6163C112.449 42.0273 111.266 43.716 110.411 45.6388C109.555 47.5616 109.12 49.6274 109.12 51.7823C109.12 53.9351 109.555 55.9885 110.411 57.8823C111.269 59.7802 112.449 61.4586 113.925 62.8634C115.4 64.2765 117.153 65.4078 119.137 66.2304C121.117 67.0488 123.264 67.4632 125.517 67.4632C127.768 67.4632 129.915 67.0488 131.893 66.2304C133.877 65.4078 135.632 64.2765 137.107 62.8634C138.583 61.4565 139.763 59.7802 140.623 57.8823C141.481 55.9843 141.915 53.931 141.915 51.7823C141.915 49.6295 141.481 47.5637 140.621 45.6388C139.761 43.7139 138.583 42.0252 137.107 40.6163C135.632 39.2073 133.877 38.0739 131.893 37.2534C129.911 36.4329 127.764 36.0185 125.517 36.0185Z"/>
                     <path d="M176.841 90.7336C173.799 90.7336 170.863 90.1716 168.119 89.081C162.53 86.5301 159.011 82.4102 158.003 81.1253C157.834 80.9101 157.886 80.6072 158.113 80.4547L162.532 77.4566C162.755 77.3041 163.053 77.3522 163.214 77.5674C163.908 78.4824 165.895 80.8704 168.933 82.6337C171.265 83.9374 173.946 84.5432 176.839 84.5432C179.087 84.5432 181.23 84.1233 183.212 83.296C185.194 82.4666 186.946 81.33 188.418 79.9052C189.889 78.4804 191.053 76.7923 191.912 74.8807C192.769 72.9649 193.183 70.8945 193.183 68.728V68.3038C193.183 67.886 192.672 67.6729 192.354 67.9591C190.281 69.8122 187.981 71.2308 185.674 72.1939C182.846 73.3702 179.877 73.9677 176.833 73.9677C173.786 73.9677 170.839 73.3973 168.071 72.2712C165.299 71.1472 162.831 69.549 160.727 67.5162C158.563 65.4291 156.895 63.0161 155.761 60.3419C154.625 57.6719 154.05 54.8494 154.05 51.9621C154.05 49.0205 154.625 46.1729 155.761 43.4987C156.895 40.8245 158.568 38.4094 160.727 36.3244C162.833 34.2916 165.304 32.6933 168.073 31.5693C170.843 30.4474 173.795 29.875 176.839 29.875C178.334 29.875 179.91 30.038 181.513 30.3576C183.114 30.6773 184.683 31.1411 186.178 31.726C187.68 32.3173 189.099 33.0924 190.406 34.0304C191.233 34.6259 191.995 35.2568 192.683 35.9441C192.964 36.2241 193.453 36.0862 193.525 35.6997L194.187 30.3806C194.23 30.1529 194.433 29.9857 194.671 29.9857H199.2C199.473 29.9857 199.694 30.2009 199.694 30.4642V68.7238C199.694 71.6591 199.086 74.5067 197.95 77.1851C196.814 79.8592 195.126 82.2493 192.964 84.2821C190.861 86.3608 188.381 87.9779 185.609 89.0768C182.842 90.1715 179.886 90.7336 176.841 90.7336ZM176.841 36.0695C174.595 36.0695 172.451 36.4873 170.471 37.3147C168.487 38.142 166.736 39.2827 165.263 40.7054C163.791 42.1282 162.608 43.8309 161.753 45.7697C160.896 47.7105 160.463 49.7914 160.463 51.9642C160.463 54.1349 160.896 56.2053 161.753 58.1148C162.61 60.0285 163.791 61.7208 165.263 63.1372C166.736 64.5621 168.487 65.7028 170.471 66.5322C172.449 67.3574 174.593 67.7753 176.841 67.7753C179.09 67.7753 181.234 67.3574 183.214 66.5322C185.196 65.7028 186.949 64.5621 188.42 63.1372C189.891 61.7187 191.073 60.0285 191.93 58.1148C192.787 56.2011 193.222 54.1307 193.222 51.9642C193.222 49.7935 192.787 47.7105 191.93 45.7697C191.073 43.8288 189.894 42.1261 188.42 40.7054C186.946 39.2827 185.194 38.142 183.214 37.3147C181.232 36.4873 179.09 36.0695 176.841 36.0695Z"/>
                     <path d="M211.896 73.1467V30.8021C211.896 30.5431 212.176 30.3314 212.512 30.3314H219.374C219.715 30.3314 219.99 30.5431 219.99 30.8021V73.1467C219.99 73.4036 219.715 73.6174 219.374 73.6174H212.512C212.173 73.6174 211.896 73.4036 211.896 73.1467ZM215.803 23.8241C214.468 23.8241 213.341 23.4788 212.45 22.7964C211.554 22.114 211.102 21.2528 211.102 20.2313C211.102 19.216 211.551 18.3445 212.442 17.6354C213.338 16.9222 214.471 16.5625 215.806 16.5625C217.137 16.5625 218.284 16.9201 219.215 17.6292C220.14 18.3404 220.611 19.216 220.611 20.2313C220.611 21.2528 220.14 22.1161 219.209 22.8005C218.276 23.4788 217.135 23.8241 215.803 23.8241Z"/>
@@ -244,7 +244,7 @@
                 target="_blank"
                 title="Codecourse"
             >
-                <svg class="w-auto h-7 fill-current" viewBox="0 0 725 117">
+                <svg class="w-auto fill-current h-7" viewBox="0 0 725 117">
                     <path d="M110.276 31.3396C109.356 36.1361 106.794 40.4621 103.029 43.5732C99.2641 46.6843 94.5328 48.3859 89.6489 48.3853C88.5004 48.3788 87.3543 48.2791 86.222 48.087C87.4832 51.4287 88.1282 54.9715 88.1256 58.5433C88.1256 74.9116 74.8554 88.1806 58.4871 88.1806C54.5943 88.1857 50.7389 87.4215 47.1424 85.9318C43.5459 84.4422 40.2792 82.2565 37.5301 79.5003L17.1218 99.9075C22.5479 105.348 28.9957 109.662 36.0945 112.603C43.1934 115.543 50.8034 117.052 58.4871 117.042C90.7967 117.042 116.987 90.8505 116.987 58.5421C116.998 49.0635 114.694 39.7256 110.276 31.3396Z" />
                     <path d="M58.4871 0.0421176C26.1787 0.0421176 -0.0128761 26.2326 -0.0128761 58.5421C-0.0229374 68.0203 2.28078 77.3576 6.69824 85.7434C7.61797 80.9468 10.1808 76.6206 13.9458 73.5095C17.7108 70.3984 22.4424 68.6969 27.3265 68.6977C28.4747 68.7046 29.6203 68.8048 30.7523 68.9972C29.4921 65.6556 28.8475 62.1134 28.8499 58.5421C28.8499 42.1738 42.1188 28.9048 58.4871 28.9048C62.3797 28.8999 66.2349 29.6642 69.8312 31.1538C73.4276 32.6434 76.694 34.8291 79.443 37.5851L99.8536 17.1756C94.4271 11.7355 87.9791 7.42131 80.8801 4.48099C73.7811 1.54066 66.171 0.0321427 58.4871 0.0421176Z" />
                     <path d="M99.8537 17.1756C91.728 9.05814 78.9867 5.71428 69.333 5.71428C55.9635 5.71428 28.851 14.2377 28.851 58.5421C28.8499 42.1738 42.12 28.899 58.4871 28.899C62.3801 28.8949 66.2356 29.6601 69.8319 31.1507C73.4282 32.6414 76.6945 34.8281 79.443 37.5851C82.1495 40.2917 85.8203 41.8123 89.6479 41.8124C93.4756 41.8125 97.1465 40.2921 99.8531 37.5857C102.56 34.8792 104.08 31.2084 104.08 27.3808C104.081 23.5531 102.56 19.8822 99.8537 17.1756Z" />
@@ -294,7 +294,7 @@
                 target="_blank"
                 title="Flare"
             >
-                <svg class="w-auto h-20 fill-current -my-2 lg:-my-12" viewBox="0 0 2599.5 1482.4">
+                <svg class="w-auto h-20 -my-2 fill-current lg:-my-12" viewBox="0 0 2599.5 1482.4">
                     <polygon points="641.4,740.9 427.6,617.5 427.6,370.6 642.7,494.5 	"/>
                     <polygon points="641.4,1235.2 427.6,1111.8 427.6,864.9 640.9,988.3 	"/>
                     <path d="M641.4,287.6l357.8,206.3l-144.2,83L497.6,370.6L641.4,287.6 M641.4,247.2L427.6,370.6L855,617.3l214.3-123.4L641.4,247.2z"/>
@@ -325,13 +325,13 @@
         </x-slot>
     </x-sponsor-banner>
 
-    <section class="relative max-w-7xl mx-auto px-8 py-16">
+    <section class="relative px-8 py-16 mx-auto max-w-7xl">
         <div class="space-y-16">
-            <h2 class="font-heading text-4xl text-center">
+            <h2 class="text-4xl text-center font-heading">
                 Here's what users say
             </h2>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <x-testimonial url="https://twitter.com/shocm/status/1487841457088045059">
                     Filament has become <strong>one of my required packages</strong> for all my new projects. I talk about it almost as much as I talk about Livewire and <strong>that is a lot</strong>. Thanks for the <strong>great work</strong>.
 
@@ -454,7 +454,7 @@
             </div>
 
             <div>
-                <h3 class="text-xl text-center font-medium transition hover:scale-105">
+                <h3 class="text-xl font-medium text-center transition hover:scale-105">
                     <a href="{{ route('docs') }}" class="link-underline">
                         Well. What are you waiting for? &rarr;
                     </a>

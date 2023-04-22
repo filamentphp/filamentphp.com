@@ -17,14 +17,14 @@ enum PluginLicense: string
     public function getLabel(): string
     {
         return match ($this) {
-            static::GnuAgplv3 => 'GNU AGPLv3',
-            static::GnuGplv3 => 'GNU GPLv3',
-            static::GnuLgplv3 => 'GNU LGPLv3',
-            static::MozillaPublic20 => 'Mozilla Public 2.0',
-            static::Apache20 => 'Apache 2.0',
-            static::BoostSoftware10 => 'Boost Software 1.0',
-            static::Unlicense => 'Unlicense',
-            static::Mit => 'MIT',
+            self::GnuAgplv3 => 'GNU AGPLv3',
+            self::GnuGplv3 => 'GNU GPLv3',
+            self::GnuLgplv3 => 'GNU LGPLv3',
+            self::MozillaPublic20 => 'Mozilla Public 2.0',
+            self::Apache20 => 'Apache 2.0',
+            self::BoostSoftware10 => 'Boost Software 1.0',
+            self::Unlicense => 'Unlicense',
+            self::Mit => 'MIT',
             default => str($this->value)->replace('_', ' ')->ucfirst()->toString(),
         };
     }

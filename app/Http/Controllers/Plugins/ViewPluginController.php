@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Plugins;
 
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
-use App\Models\User;
-use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Contracts\View\View;
 
 class ViewPluginController extends Controller
 {
-    public function __invoke(Plugin $plugin)
+    public function __invoke(Plugin $plugin): View
     {
         $plugin->load(['author']);
 
@@ -18,13 +17,12 @@ class ViewPluginController extends Controller
             ->description($plugin->description ?? '')
             ->image($plugin->getThumbnailUrl());
 
-        $viewingKey = "plugins.{$plugin->getKey()}.views." . request()->ip();
+        $viewingKey = "plugins.{$plugin->getKey()}.views.".request()->ip();
 
         if (! cache()->has($viewingKey)) {
             cache()->put($viewingKey, now());
 
-            $plugin->views++;
-            $plugin->save();
+            $plugin->increment('views');
         }
 
         return view('plugins.view-plugin', [

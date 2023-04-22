@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Tricks;
 
 use App\Models\Trick;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -30,7 +31,7 @@ class SearchTricks extends Component
         }
     }
 
-    protected function getTricks()
+    protected function getTricks(): LengthAwarePaginator
     {
         return Trick::query()
             ->published()

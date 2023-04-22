@@ -8,14 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('plugins', function (Blueprint $table) {
             $table->string('license')->nullable()->change();
             $table->string('license_url')->nullable()->change();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('plugins', function (Blueprint $table) {
+            $table->string('license')->change();
+            $table->string('license_url')->change();
         });
     }
 };

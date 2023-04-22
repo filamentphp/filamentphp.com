@@ -13,9 +13,9 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
 ---
 
 <nav
-  class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16"
+  class="w-64 text-base pe-8 lg:text-sm xl:w-72 xl:pe-16"
 >
-  <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
+  <ul role="list" class="p-2 space-y-2 bg-gray-200 rounded-md mb-9 dark:bg-gray-800">
     {navigation?.links.map((section) => (
       <li>
         <a
@@ -27,7 +27,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
           ]}
         >
           <h2 class="flex items-center gap-3">
-            <Icon name={section.icon} class="h-5 w-5" />
+            <Icon name={section.icon} class="w-5 h-5" />
             <span>{section.title}</span>
           </h2>
         </a>
@@ -48,13 +48,13 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
           <h2 class="">{section.title}</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+        <ul role="list" class="mt-2 space-y-2 border-gray-100 border-s-2 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
           {section.links.map((link) => (
             <li class="relative">
               <a
                 href={link.href}
                 class:list={[
-                  "block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full",
+                  "block w-full ps-3.5 before:pointer-events-none before:absolute before:-start-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full",
                   { "font-semibold text-primary-500 before:bg-primary-500": link.href === pathName },
                   { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": link.href !== pathName },
                 ]}

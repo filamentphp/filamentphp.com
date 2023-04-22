@@ -8,10 +8,8 @@ class CreatePluginsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('plugins', function (Blueprint $table) {
             $table->id();
@@ -37,10 +35,8 @@ class CreatePluginsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('plugins');
     }

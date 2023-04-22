@@ -12,7 +12,7 @@ const themes = [
   <p class="sr-only">Theme</p>
   <button
     type="button"
-    class="flex h-6 w-6 items-center justify-center rounded-md shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5"
+    class="flex items-center justify-center w-6 h-6 rounded-md shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5"
     aria-label="Open navigation"
     x-on:click="$refs.panel.toggle"
   >
@@ -23,7 +23,7 @@ const themes = [
   </button>
   <div
     x-ref="panel"
-    class="absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5"
+    class="absolute p-3 space-y-1 text-sm bg-white rounded-lg shadow-md w-36 shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5"
     x-float.shift.offset.trap="{shift: {padding: 12}}"
     aria-label="Theme options"
   >
@@ -37,10 +37,10 @@ const themes = [
               'text-gray-700 dark:text-gray-300': selected !== '${theme.value}',
             }`}
         >
-          <div class="rounded-md bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
-            <Icon name={theme.icon} class="h-4 w-4" x-bind:class={`selected == '${theme.value}' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'`} />
+          <div class="p-1 bg-white rounded-md shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
+            <Icon name={theme.icon} class="w-4 h-4" x-bind:class={`selected == '${theme.value}' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'`} />
           </div>
-          <div class="ml-3">{theme.name}</div>
+          <div class="ms-3">{theme.name}</div>
         </button>
       ))}
   </div>

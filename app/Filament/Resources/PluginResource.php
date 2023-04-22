@@ -6,9 +6,7 @@ use App\Enums\PluginCategory;
 use App\Enums\PluginLicense;
 use App\Enums\PluginStatus;
 use App\Filament\Resources\PluginResource\Pages;
-use App\Filament\Resources\PluginResource\RelationManagers;
 use App\Filament\Resources\PluginResource\Widgets;
-use App\Filament\Resources\PluginResource\Widgets\PluginStatusSwitcher;
 use App\Models\Plugin;
 use Closure;
 use Filament\Forms;
@@ -18,7 +16,6 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\HtmlString;
 
 class PluginResource extends Resource
@@ -26,6 +23,7 @@ class PluginResource extends Resource
     protected static ?string $model = Plugin::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-puzzle';
+
     protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
@@ -52,7 +50,7 @@ class PluginResource extends Resource
                     ->label('Paid plugin')
                     ->reactive()
                     ->default(false)
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\TextInput::make('github_repository')
                     ->label('GitHub repository')
                     ->placeholder('vendor/filament-plugin')
@@ -62,7 +60,7 @@ class PluginResource extends Resource
                     ->content(new HtmlString('We\'ve partnered with <a href="https://anystack.sh" target="_blank"><strong>Anystack.sh</strong></a> to allow you to advertise your paid plugins on our website. To set this up, visit the <strong>Advertising</strong> section of your Anystack product page, and opt-in to advertising on the <strong>Filament Website</strong>. If you do not follow these instructions, visitors will not see a checkout link for your product.'))
                     ->visible(fn (Closure $get): bool => (bool) $get('is_paid'))
                     ->disableLabel()
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\TextInput::make('anystack_id')
                     ->label('Anystack Product ID')
                     ->placeholder('34d01c30-3caf-4571-8259-add9dc21d85f')
@@ -75,9 +73,10 @@ class PluginResource extends Resource
                     ->hint('External documentation or marketing website')
                     ->helperText(fn (Closure $get): string => $get('is_paid') ? '' : 'We\'ll use your GitHub repository if you don\'t provide a custom URL here.')
                     ->maxLength(255),
-                Forms\Components\MultiSelect::make('categories')
+                Forms\Components\Select::make('categories')
+                    ->multiple()
                     ->options(collect(PluginCategory::cases())->mapWithKeys(fn (PluginCategory $category): array => [$category->value => $category->getLabel()]))
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\Select::make('status')
                     ->options(collect(PluginStatus::cases())->mapWithKeys(fn (PluginStatus $status): array => [$status->value => $status->getLabel()]))
                     ->visible(auth()->user()->is_admin)
@@ -87,7 +86,7 @@ class PluginResource extends Resource
                     ->default(0)
                     ->required()
                     ->visible(auth()->user()->is_admin),
-                Forms\Components\BelongsToSelect::make('author_id')
+                Forms\Components\Select::make('author_id')
                     ->relationship('author', 'name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
@@ -109,7 +108,7 @@ class PluginResource extends Resource
                                         'preview',
                                         'strike',
                                     ])
-                                    ->columnSpan('full')
+                                    ->columnSpanFull()
                                     ->disableLabel(),
                             ]),
                         Forms\Components\Tabs\Tab::make('Images')
@@ -120,14 +119,14 @@ class PluginResource extends Resource
                                     ->maxSize(10240)
                                     ->enableReordering()
                                     ->helperText('Recommended dimensions 1200 x 600 pixels. Max file size 10 MB. Please use light mode when taking screenshots where possible.')
-                                    ->columnSpan('full')
+                                    ->columnSpanFull()
                                     ->disableLabel(),
                             ]),
                         Forms\Components\Tabs\Tab::make('Documentation')
                             ->schema([
                                 Forms\Components\MarkdownEditor::make('docs')
                                     ->maxLength(4294967295)
-                                    ->columnSpan('full')
+                                    ->columnSpanFull()
                                     ->disableLabel(),
                             ]),
                         Forms\Components\Tabs\Tab::make('License')
@@ -138,9 +137,9 @@ class PluginResource extends Resource
                                     ->default(PluginLicense::Mit->value),
                                 Forms\Components\TextInput::make('license_url')->label('URL'),
                             ])
-                            ->columns(2),
+                            ->columns(),
                     ])
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -166,13 +165,6 @@ class PluginResource extends Resource
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(PluginStatus::cases())->mapWithKeys(fn (PluginStatus $status): array => [$status->value => $status->getLabel()])),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

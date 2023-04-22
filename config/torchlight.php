@@ -28,7 +28,7 @@ return [
     // https://torchlight.dev/docs/options
     'options' => [
         // Turn line numbers on or off globally.
-         'lineNumbers' => false,
+        'lineNumbers' => false,
 
         // Control the `style` attribute applied to line numbers.
         // 'lineNumbersStyle' => '',
@@ -43,5 +43,5 @@ return [
         // When lines are collapsed, this is the text that will
         // be shown to indicate that they can be expanded.
         // 'summaryCollapsedIndicator' => '...',
-    ]
+    ],
 ];

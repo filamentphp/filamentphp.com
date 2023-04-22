@@ -13,7 +13,7 @@ class EditArticleHeader extends Widget
         'articleUpdated' => '$refresh',
     ];
 
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     protected static string $view = 'filament.resources.article-resource.widgets.edit-article-header';
 }

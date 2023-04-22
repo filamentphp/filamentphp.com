@@ -4,23 +4,22 @@ namespace App\Http\Controllers\Tricks;
 
 use App\Http\Controllers\Controller;
 use App\Models\Trick;
+use Illuminate\Contracts\View\View;
 
 class ViewTrickController extends Controller
 {
-    public function __invoke(Trick $trick)
+    public function __invoke(Trick $trick): View
     {
         $trick->load(['author']);
 
-        seo()
-            ->title("{$trick->title} by {$trick->author->name} - Tricks");
+        seo()->title("{$trick->title} by {$trick->author->name} - Tricks");
 
-        $viewingKey = "tricks.{$trick->getKey()}.views." . request()->ip();
+        $viewingKey = "tricks.{$trick->getKey()}.views.".request()->ip();
 
         if (! cache()->has($viewingKey)) {
             cache()->put($viewingKey, now());
 
-            $trick->views++;
-            $trick->save();
+            $trick->increment('views');
         }
 
         return view('tricks.view-trick', [

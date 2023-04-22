@@ -2,7 +2,6 @@
 
 namespace App\Comments;
 
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Arr;
 use League\CommonMark\ConverterInterface;
 use League\CommonMark\Environment\Environment;
@@ -29,7 +28,7 @@ class CommentTransformer implements Contract
             collect($config['extensions'])
                 ->reject(fn (string $extension): bool => in_array($extension, [
                     HeadingPermalinkExtension::class,
-                    TableOfContentsExtension::class
+                    TableOfContentsExtension::class,
                 ]))
                 ->each(fn (string $extension) => $environment->addExtension(app($extension)));
 

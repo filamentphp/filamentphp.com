@@ -3,9 +3,8 @@
 namespace App\Http\Livewire\Links;
 
 use App\Models\Link;
-use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -32,7 +31,7 @@ class SearchLinks extends Component
         }
     }
 
-    protected function getLinks()
+    protected function getLinks(): LengthAwarePaginator
     {
         return Link::query()
             ->published()
@@ -91,7 +90,7 @@ class SearchLinks extends Component
 
             if (false !== $key) {
                 unset($this->categoryFilter[$key]);
-                
+
                 $this->resetPage();
             }
 
@@ -99,7 +98,7 @@ class SearchLinks extends Component
         }
 
         $this->categoryFilter[] = $category;
-        
+
         $this->resetPage();
     }
 }

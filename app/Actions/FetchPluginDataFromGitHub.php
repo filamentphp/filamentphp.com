@@ -3,15 +3,12 @@
 namespace App\Actions;
 
 use App\Models\Plugin;
-use Embed\Embed;
 use GrahamCampbell\GitHub\GitHubManager;
 use Throwable;
 
 class FetchPluginDataFromGitHub
 {
-    public function __construct(
-        protected GitHubManager $github,
-    )
+    public function __construct(protected GitHubManager $github)
     {
     }
 
@@ -30,12 +27,10 @@ class FetchPluginDataFromGitHub
          * can clean this all up and handle the errors properly. But
          * it really isn't vital to this app servicing its users :)
          */
-
         Plugin::query()
             ->inRandomOrder()
             ->where('is_paid', false)
             ->whereNotNull('github_repository')
-            ->get()
             ->each(function (Plugin $plugin): void {
                 $repositoryAuthor = str($plugin->github_repository)->before('/');
 

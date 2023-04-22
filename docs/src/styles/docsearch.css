@@ -12,7 +12,7 @@
 
 /* Button */
 .DocSearch-Button {
-  @apply flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-72 md:flex-none md:rounded-lg md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-slate-200 md:hover:ring-slate-300 dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500 lg:w-96;
+  @apply flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-72 md:flex-none md:rounded-lg md:py-2.5 md:ps-4 md:pe-3.5 md:text-sm md:ring-1 md:ring-slate-200 md:hover:ring-slate-300 dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500 lg:w-96;
 }
 
 .DocSearch-Button:active,
@@ -35,11 +35,11 @@
 }
 
 .DocSearch-Button-Placeholder {
-  @apply text-sm font-thin ml-2 text-slate-500;
+  @apply text-sm font-thin ms-2 text-slate-500;
 }
 
 .DocSearch-Button-Keys {
-  @apply flex items-center ml-auto;
+  @apply flex items-center ms-auto;
 }
 
 .DocSearch-Button-Key {
@@ -59,7 +59,7 @@
 }
 
 .DocSearch-Container {
-  @apply fixed top-0 left-0 cursor-auto;
+  @apply fixed top-0 cursor-auto start-0;
   z-index: 200;
   width: 100vw;
   height: 100vh;
@@ -74,11 +74,11 @@
 }
 
 .DocSearch-Link {
-  @apply bg-none border-none text-amber-500 cursor-pointer m-0 p-0 appearance-none;
+  @apply p-0 m-0 border-none appearance-none cursor-pointer bg-none text-amber-500;
 }
 
 .DocSearch-Modal {
-  @apply bg-white rounded-xl shadow-lg flex flex-col m-auto mt-16 max-w-xl relative font-thin dark:bg-slate-800;
+  @apply relative flex flex-col max-w-xl m-auto mt-16 font-thin bg-white shadow-lg rounded-xl dark:bg-slate-800;
 }
 
 .DocSearch-SearchBar {
@@ -87,15 +87,15 @@
 }
 
 .DocSearch-Form {
-  @apply relative w-full flex items-center px-4;
+  @apply relative flex items-center w-full px-4;
 }
 
 .DocSearch-Input {
-  @apply appearance-none text-slate-900 flex-1 text-sm bg-transparent py-0 px-3 outline-none font-thin dark:text-slate-100;
+  @apply flex-1 px-3 py-0 text-sm font-thin bg-transparent outline-none appearance-none text-slate-900 dark:text-slate-100;
 }
 
 .DocSearch-Input::placeholder {
-  @apply text-slate-400 opacity-100;
+  @apply opacity-100 text-slate-400;
 }
 
 .DocSearch-Input::-webkit-search-cancel-button,
@@ -140,7 +140,7 @@
 }
 
 .DocSearch-LoadingIndicator svg {
-  @apply h-4 w-4 overflow-visible;
+  @apply w-4 h-4 overflow-visible;
 }
 
 .DocSearch-LoadingIndicator path,
@@ -160,7 +160,7 @@
 
 .DocSearch-LoadingIndicator,
 .DocSearch-MagnifierLabel {
-  @apply pointer-events-none w-4 h-4;
+  @apply w-4 h-4 pointer-events-none;
 }
 
 .DocSearch-LoadingIndicator svg,
@@ -170,12 +170,12 @@
 
 @media screen and (prefers-reduced-motion: reduce) {
   .DocSearch-Reset {
-    @apply animate-none appearance-none bg-none border-none rounded-full text-gray-400 cursor-pointer;
+    @apply text-gray-400 border-none rounded-full appearance-none cursor-pointer animate-none bg-none;
   }
 }
 
 .DocSearch-Reset {
-  @apply appearance-none bg-none border-none text-gray-400 cursor-pointer p-0 stroke-2;
+  @apply p-0 text-gray-400 border-none appearance-none cursor-pointer stroke-2 bg-none;
   animation: fade-in 0.1s ease-in forwards;
 }
 
@@ -216,7 +216,7 @@
 }
 
 .DocSearch-Dropdown ul {
-  @apply list-none m-0 p-0;
+  @apply p-0 m-0 list-none;
 }
 
 .DocSearch-Label {
@@ -226,11 +226,11 @@
 
 .DocSearch-Help,
 .DocSearch-Label {
-  @apply text-slate-500 font-thin dark:text-slate-400;
+  @apply font-thin text-slate-500 dark:text-slate-400;
 }
 
 .DocSearch-Help {
-  @apply text-sm m-0 select-none;
+  @apply m-0 text-sm select-none;
 }
 
 .DocSearch-Title {
@@ -250,7 +250,7 @@
 }
 
 .DocSearch-HitsFooter {
-  @apply flex justify-center text-sm text-slate-500 font-thin;
+  @apply flex justify-center text-sm font-thin text-slate-500;
   margin-bottom: var(--docsearch-spacing);
   padding: var(--docsearch-spacing);
 }
@@ -260,7 +260,7 @@
 }
 
 .DocSearch-Hit {
-  @apply flex relative;
+  @apply relative flex;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -288,15 +288,15 @@
 }
 
 .DocSearch-Hit a {
-  @apply block w-full rounded-md p-2 dark:text-slate-100;
+  @apply block w-full p-2 rounded-md dark:text-slate-100;
 }
 
 .DocSearch-Hit-source {
-  @apply font-medium text-sm leading-8 sticky top-0 z-10 pt-2 px-1 pb-0 dark:text-slate-100;
+  @apply sticky top-0 z-10 px-1 pt-2 pb-0 text-sm font-medium leading-8 dark:text-slate-100;
 }
 
 .DocSearch-Hit-Tree {
-  @apply w-6 stroke-2 opacity-50 text-gray-500;
+  @apply w-6 text-gray-500 opacity-50 stroke-2;
 }
 
 .DocSearch-Hit[aria-selected="true"] a {
@@ -316,19 +316,19 @@
 }
 
 .DocSearch-Hit-action {
-  @apply flex items-center h-5 w-5;
+  @apply flex items-center w-5 h-5;
 }
 
 .DocSearch-Hit-action svg {
-  @apply text-slate-500 stroke-2 w-4 h-4 block;
+  @apply block w-4 h-4 stroke-2 text-slate-500;
 }
 
 .DocSearch-Hit-action + .DocSearch-Hit-action {
-  @apply mr-4;
+  @apply me-4;
 }
 
 .DocSearch-Hit-action-button {
-  @apply appearance-none bg-none border-none text-gray-400 cursor-pointer p-1 rounded-full text-inherit;
+  @apply p-1 text-gray-400 border-none rounded-full appearance-none cursor-pointer bg-none text-inherit;
 }
 
 svg.DocSearch-Hit-Select-Icon {
@@ -358,7 +358,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Hit-content-wrapper {
-  @apply flex flex-1 flex-col overflow-x-hidden text-ellipsis relative whitespace-nowrap justify-center;
+  @apply relative flex flex-col justify-center flex-1 overflow-x-hidden text-ellipsis whitespace-nowrap;
 }
 
 .DocSearch-Hit-title {
@@ -401,7 +401,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-NoResults .DocSearch-Title {
-  @apply text-slate-500 text-center text-sm py-12 px-4 dark:text-slate-400;
+  @apply px-4 py-12 text-sm text-center text-slate-500 dark:text-slate-400;
 }
 
 .DocSearch-Prefill {
@@ -409,11 +409,11 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-NoResults-Prefill-List {
-  @apply block pb-6 text-left -mx-3 pt-4 px-4 border-t dark:border-slate-700;
+  @apply block px-4 pt-4 pb-6 -mx-3 text-left border-t dark:border-slate-700;
 }
 
 .DocSearch-NoResults-Prefill-List ul {
-  @apply list-none p-0 m-0;
+  @apply p-0 m-0 list-none;
 }
 
 .DocSearch-NoResults-Prefill-List li {
@@ -421,21 +421,21 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Prefill {
-  @apply appearance-none bg-none border-none rounded-md text-left text-sm text-slate-900 cursor-pointer inline-block p-2 dark:text-slate-100;
+  @apply inline-block p-2 text-sm text-left border-none rounded-md appearance-none cursor-pointer bg-none text-slate-900 dark:text-slate-100;
 }
 
 .DocSearch-Prefill:focus,
 .DocSearch-Prefill:hover {
-  @apply bg-slate-100 text-amber-500 outline-none dark:bg-slate-700;
+  @apply outline-none bg-slate-100 text-amber-500 dark:bg-slate-700;
 }
 
 .DocSearch-Footer {
-  @apply flex items-center border-t border-slate-200 py-2 px-4 flex-row-reverse relative select-none w-full z-30 dark:border-slate-700;
+  @apply relative z-30 flex flex-row-reverse items-center w-full px-4 py-2 border-t select-none border-slate-200 dark:border-slate-700;
   height: var(--docsearch-footer-height);
 }
 
 .DocSearch-Commands {
-  @apply text-slate-500 flex list-none p-0 m-0 font-thin mr-auto dark:text-slate-400;
+  @apply flex p-0 m-0 font-thin list-none me-auto text-slate-500 dark:text-slate-400;
 }
 
 .DocSearch-Commands li {
@@ -447,7 +447,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Commands-Key {
-  @apply flex items-center justify-center rounded bg-slate-100 p-1 border-none mr-1 dark:bg-slate-700;
+  @apply flex items-center justify-center p-1 border-none rounded me-1 bg-slate-100 dark:bg-slate-700;
 }
 
 .dark .DocSearch-Logo svg .cls-1,
@@ -500,7 +500,7 @@ svg.DocSearch-Hit-Select-Icon {
   }
 
   .DocSearch-Cancel {
-    @apply appearance-none bg-none border-none cursor-pointer inline-block py-1.5 px-2 leading-none bg-slate-100 rounded-md text-xs mr-3 dark:bg-slate-700 dark:text-slate-400;
+    @apply appearance-none bg-none border-none cursor-pointer inline-block py-1.5 px-2 leading-none bg-slate-100 rounded-md text-xs me-3 dark:bg-slate-700 dark:text-slate-400;
   }
 
   .DocSearch-Commands,

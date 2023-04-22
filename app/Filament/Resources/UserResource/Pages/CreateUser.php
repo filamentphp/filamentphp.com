@@ -13,9 +13,10 @@ class CreateUser extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        return array_merge($data, [
+        return [
+            ...$data,
             'email_verified_at' => now(),
-            'password' => Hash::make(Str::random(16)),
-        ]);
+            'password' => Hash::make(Str::random()),
+        ];
     }
 }

@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Links;
 
 use App\Http\Controllers\Controller;
 use App\Models\Link;
-use App\Models\User;
+use Illuminate\Contracts\View\View;
 
 class ListLinksController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): View
     {
         seo()->title('Links');
 

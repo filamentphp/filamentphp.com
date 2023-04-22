@@ -11,11 +11,11 @@
         x-bind:class="theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'"
     >
         <div
-            class="rounded-t-2xl flex justify-between items-center space-x-4 py-1 px-5 border-b transition"
+            class="flex items-center justify-between px-5 py-1 space-x-4 transition border-b rounded-t-2xl"
             x-bind:class="theme === 'dark' ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'"
         >
-            <div class="py-4 space-x-2 flex">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="flex py-4 space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div class="w-3 h-3 rounded-full bg-primary-300"></div>
                 <div class="w-3 h-3 rounded-full bg-success-400"></div>
             </div>
@@ -36,28 +36,28 @@
                         'translate-x-6 rtl:-translate-x-6': theme === 'light',
                         'translate-x-0': theme === 'dark',
                     }"
-                    class="pointer-events-none relative inline-block h-6 w-6 px-2 rounded-lg bg-white shadow transform ring-0 ease-in-out transition duration-200"
+                    class="relative inline-block w-6 h-6 px-2 transition duration-200 ease-in-out transform bg-white rounded-lg shadow pointer-events-none ring-0"
                 >
                     <span
-                        class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
+                        class="absolute inset-0 flex items-center justify-center w-full h-full transition-opacity"
                         aria-hidden="true"
                         x-bind:class="{
                             'opacity-0 ease-out duration-100': theme === 'light',
                             'opacity-100 ease-in duration-200': theme === 'dark',
                         }"
                     >
-                        <x-heroicon-s-moon class="h-4 w-4 text-gray-400" />
+                        <x-heroicon-s-moon class="w-4 h-4 text-gray-400" />
                     </span>
 
                     <span
-                        class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
+                        class="absolute inset-0 flex items-center justify-center w-full h-full transition-opacity"
                         aria-hidden="true"
                         x-bind:class="{
                             'opacity-100 ease-in duration-200': theme === 'light',
                             'opacity-0 ease-out duration-100': theme === 'dark',
                         }"
                     >
-                        <x-heroicon-s-sun class="h-4 w-4 text-primary-600" />
+                        <x-heroicon-s-sun class="w-4 h-4 text-primary-600" />
                     </span>
                 </span>
             </button>
@@ -66,12 +66,12 @@
         <a href="https://demo.filamentphp.com/shop/products/{{ rand(1, 50) }}/edit" target="_blank" class="flex w-full rounded-b-2xl overflow-hidden max-h-[200px] sm:max-h-[300px] md:max-h-[500px] lg:max-h-[600px]">
             <div class="relative max-h-full group-hover:overflow-y-auto">
                 <img
-                    src="/images/forms/demo/light.jpg"
+                    src="{{ asset('images/forms/demo/light.jpg') }}"
                     alt="Screenshot of the form builder demo"
                 />
 
                 <img
-                    src="/images/forms/demo/dark.jpg"
+                    src="{{ asset('images/forms/demo/dark.jpg') }}"
                     aria-hidden="true"
                     alt="Screenshot of the form builder demo"
                     x-bind:class="{
@@ -83,21 +83,21 @@
         </a>
 
         <div class="absolute inset-0 flex items-center justify-center transition backdrop-blur-sm bg-white/10 group-hover:opacity-0 group-hover:hidden rounded-2xl">
-            <div class="flex items-center bg-gray-900 py-2 px-4 rounded-lg font-medium sm:text-xl text-white">
-                <x-heroicon-o-play class="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
+            <div class="flex items-center px-4 py-2 font-medium text-white bg-gray-900 rounded-lg sm:text-xl">
+                <x-heroicon-o-play class="w-5 h-5 sm:w-6 sm:h-6 me-2" />
 
                 Try our form builder
             </div>
         </div>
     </div>
 
-    <div class="hidden absolute -top-[4.5rem] right-16 md:flex">
+    <div class="hidden absolute -top-[4.5rem] end-16 md:flex">
         <div class="relative">
-            <span class="absolute font-cursive top-1 text-2xl right-[4.5rem] whitespace-nowrap">
+            <span class="absolute font-cursive top-1 text-2xl end-[4.5rem] whitespace-nowrap">
                 it's open source
             </span>
 
-            <img src="/images/arrow-turn.svg" class="h-20 -scale-x-100 -rotate-90" />
+            <img src="{{ asset('images/arrow-turn.svg') }}" class="h-20 -rotate-90 -scale-x-100" />
         </div>
     </div>
 </div>

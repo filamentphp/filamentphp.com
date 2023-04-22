@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './config/markdown.php',
         './resources/views/**/*.blade.php',
         './vendor/filament/**/*.blade.php',

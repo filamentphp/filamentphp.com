@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Enums\ArticleCategory;
 use App\Enums\ArticleStatus;
 use App\Filament\Resources\ArticleResource\Pages;
-use App\Filament\Resources\ArticleResource\RelationManagers;
 use App\Models\Article;
 use Closure;
 use Filament\Forms;
@@ -21,7 +20,9 @@ class ArticleResource extends Resource
     protected static ?string $model = Article::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-bookmark-alt';
+
     protected static ?string $navigationLabel = 'Blog';
+
     protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
@@ -45,10 +46,11 @@ class ArticleResource extends Resource
                     ->maxLength(255)
                     ->disabled(fn (?Article $record) => (! auth()->user()->is_admin) && $record?->status === ArticleStatus::Published),
                 Forms\Components\MarkdownEditor::make('content')
-                    ->columnSpan('full'),
-                Forms\Components\MultiSelect::make('categories')
+                    ->columnSpanFull(),
+                Forms\Components\Select::make('categories')
+                    ->multiple()
                     ->options(collect(ArticleCategory::cases())->mapWithKeys(fn (ArticleCategory $category): array => [$category->value => $category->getLabel()]))
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\Select::make('status')
                     ->options(collect(ArticleStatus::cases())->mapWithKeys(fn (ArticleStatus $category): array => [$category->value => $category->getLabel()]))
                     ->visible(auth()->user()->is_admin)
@@ -58,7 +60,7 @@ class ArticleResource extends Resource
                     ->default(0)
                     ->required()
                     ->visible(auth()->user()->is_admin),
-                Forms\Components\BelongsToSelect::make('author_id')
+                Forms\Components\Select::make('author_id')
                     ->relationship('author', 'name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
@@ -85,13 +87,6 @@ class ArticleResource extends Resource
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(ArticleStatus::cases())->mapWithKeys(fn (ArticleStatus $status): array => [$status->value => $status->getLabel()])),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

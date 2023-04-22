@@ -13,7 +13,7 @@ class EditPluginHeader extends Widget
         'pluginUpdated' => '$refresh',
     ];
 
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     protected static string $view = 'filament.resources.plugin-resource.widgets.edit-plugin-header';
 }

@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Tricks;
 
 use App\Http\Controllers\Controller;
 use App\Models\Trick;
+use Illuminate\Contracts\View\View;
 
 class ListTricksController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): View
     {
         seo()->title('Tricks');
 

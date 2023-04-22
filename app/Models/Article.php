@@ -4,14 +4,11 @@ namespace App\Models;
 
 use App\Enums\ArticleCategory;
 use App\Enums\ArticleStatus;
-use App\Enums\TrickCategory;
-use App\Enums\TrickStatus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
 use Spatie\Comments\Models\Concerns\HasComments;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
@@ -75,7 +72,7 @@ class Article extends Model implements Feedable
         return route('blog.article', ['article' => $this]);
     }
 
-    public static function getFeedItems()
+    public static function getFeedItems(): Collection
     {
         return Article::all();
     }

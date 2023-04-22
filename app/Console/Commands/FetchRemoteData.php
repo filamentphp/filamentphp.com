@@ -3,9 +3,8 @@
 namespace App\Console\Commands;
 
 use App\Actions\FetchLinkThumbnails;
-use App\Actions\FetchPluginDataFromGitHub;
-use App\Actions\FetchPluginDataFromPackagist;
 use App\Actions\FetchPluginDataFromAnystack;
+use App\Actions\FetchPluginDataFromGitHub;
 use App\Actions\FetchPluginThumbnails;
 use Illuminate\Console\Command;
 
@@ -20,13 +19,12 @@ class FetchRemoteData extends Command
         FetchPluginDataFromGitHub $fetchPluginDataFromGitHub,
         FetchPluginDataFromAnystack $fetchPluginDataFromAnystack,
         FetchPluginThumbnails $fetchPluginThumbnails,
-    ): int
-    {
+    ): int {
         $fetchLinkThumbnails();
         $fetchPluginDataFromGitHub();
         $fetchPluginDataFromAnystack();
         $fetchPluginThumbnails();
 
-        return 0;
+        return self::SUCCESS;
     }
 }

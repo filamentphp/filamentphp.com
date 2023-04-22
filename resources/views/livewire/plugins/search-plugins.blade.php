@@ -1,6 +1,6 @@
 <div class="space-y-8">
     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <h2 class="shrink-0 text-lg font-heading text-gray-900">
+        <h2 class="text-lg text-gray-900 shrink-0 font-heading">
             Plugins
         </h2>
 
@@ -11,7 +11,7 @@
                 </label>
 
                 <div class="relative group">
-                    <span class="absolute inset-y-0 left-0 flex items-center justify-center w-10 h-10 text-gray-400 transition pointer-events-none group-focus-within:text-primary-600">
+                    <span class="absolute inset-y-0 flex items-center justify-center w-10 h-10 text-gray-400 transition pointer-events-none start-0 group-focus-within:text-primary-600">
                         <x-heroicon-o-search class="w-5 h-5" />
                     </span>
 
@@ -20,7 +20,7 @@
                         id="search"
                         placeholder="Search"
                         type="search"
-                        class="block w-full h-10 pl-10 placeholder-gray-400 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
+                        class="block w-full h-10 placeholder-gray-400 transition duration-75 border-gray-300 rounded-lg shadow-sm ps-10 focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
                     >
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <select
                     wire:model="sort"
                     id="sort"
-                    class="text-gray-900 block w-full transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
+                    class="block w-full text-gray-900 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600"
                 >
                     <option value="popular">Popular</option>
                     <option value="recent">Recently added</option>

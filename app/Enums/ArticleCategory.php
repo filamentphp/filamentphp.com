@@ -16,11 +16,11 @@ enum ArticleCategory: string
     public function getLabel(): string
     {
         return match ($this) {
-            static::Admin => 'Admin panel',
-            static::AlpineJs => 'Alpine.js',
-            static::Forms => 'Form builder',
-            static::Tables => 'Table builder',
-            static::TailwindCss => 'Tailwind CSS',
+            self::Admin => 'Admin panel',
+            self::AlpineJs => 'Alpine.js',
+            self::Forms => 'Form builder',
+            self::Tables => 'Table builder',
+            self::TailwindCss => 'Tailwind CSS',
             default => str($this->value)->replace('_', ' ')->ucfirst()->toString(),
         };
     }

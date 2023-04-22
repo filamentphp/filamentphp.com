@@ -1,29 +1,29 @@
 <a
     href="{{ $url }}"
     target="_blank"
-    class="group transition rounded-2xl shadow border border-gray-300 p-8 hover:scale-105"
+    class="p-8 transition border border-gray-300 shadow group rounded-2xl hover:scale-105"
 >
-    <div class="flex flex-col space-y-8 justify-between h-full">
+    <div class="flex flex-col justify-between h-full space-y-8">
         <div class="relative">
-            <span class="absolute top-0 left-0 -mt-12 -ml-8">
+            <span class="absolute top-0 -mt-12 start-0 -ms-8">
                 <span class="transition font-heading font-bold text-gray-100 relative leading-none text-[10rem] -z-1 group-hover:text-primary-100">
                     “
                 </span>
             </span>
 
-            <blockquote class="text-gray-900 text-lg">
+            <blockquote class="text-lg text-gray-900">
                 "{{ $slot }}"
             </blockquote>
         </div>
 
-        <div class="flex space-x-4 px-4 items-center justify-center">
+        <div class="flex items-center justify-center px-4 space-x-4">
             <img
                 src="{{ $author->attributes->get('avatar') }}"
                 alt="{{ $author }}"
-                class="rounded-full w-12 h-12"
+                class="w-12 h-12 rounded-full"
             />
 
-            <span class="text-xl font-cursive transition group-hover:text-primary-600">
+            <span class="text-xl transition font-cursive group-hover:text-primary-600">
                 {{ $author }}
             </span>
         </div>

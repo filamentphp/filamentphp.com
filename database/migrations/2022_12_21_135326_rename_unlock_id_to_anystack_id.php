@@ -8,13 +8,21 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('plugins', function (Blueprint $table) {
             $table->renameColumn('unlock_id', 'anystack_id');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('plugins', function (Blueprint $table) {
+            $table->renameColumn('anystack_id', 'unlock_id');
         });
     }
 };

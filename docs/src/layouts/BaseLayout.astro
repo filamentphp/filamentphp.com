@@ -73,12 +73,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+    <div class="relative flex justify-center mx-auto max-w-8xl sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-gray-50 dark:hidden"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5" x-data={`{
+        <div class="absolute inset-y-0 end-0 w-[50vw] bg-gray-50 dark:hidden"></div>
+        <div class="absolute bottom-0 hidden w-px h-12 end-0 top-16 bg-gradient-to-t from-gray-800 dark:block"></div>
+        <div class="absolute bottom-0 hidden w-px bg-gray-800 end-0 top-28 dark:block"></div>
+        <div class="sticky top-[4.5rem] -ms-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 ps-0.5" x-data={`{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -96,12 +96,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <Navigation navigation={navigation} />
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+      <div class="flex-auto max-w-2xl min-w-0 px-4 py-16 lg:max-w-none lg:pe-0 lg:ps-8 xl:px-16">
         <article>
           {(title || section) && (
-            <header class="mb-9 space-y-1">
+            <header class="space-y-1 mb-9">
               {! isHomePage && (
-                <p class="font-display text-sm font-bold text-primary-500">
+                <p class="text-sm font-bold font-display text-primary-500">
                   {packageNavigation.title} {section && (
                     <>
                       - {section.title}
@@ -110,7 +110,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 </p>
               )}
               {title && (
-                <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 font-display dark:text-white">
                   {title}
                 </h1>
               )}
@@ -126,10 +126,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           </p>
           </Prose>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
+        <dl class="flex pt-6 mt-12 border-t border-gray-200 dark:border-gray-800">
           {previousPage && (
               <div>
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
+                <dt class="text-sm font-bold text-gray-900 font-display dark:text-white">
                   Previous
                 </dt>
                 <dd class="mt-1">
@@ -143,8 +143,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               </div>
             )}
             {nextPage && (
-              <div class="ml-auto text-right">
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white">
+              <div class="text-right ms-auto">
+                <dt class="text-sm font-bold text-gray-900 font-display dark:text-white">
                   Next
                 </dt>
                 <dd class="mt-1">
@@ -159,12 +159,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )}
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-me-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pe-6">
+        <nav aria-labelledby="on-this-page-title" class="w-56 mb-9">
           {
             tableOfContents.length > 0 && (
               <>
-                <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
+                <h2 id="on-this-page-title" class="text-sm font-bold text-gray-900 font-display dark:text-white">
                   On this page
                 </h2>
                 <ol role="list" class="mt-4 space-y-3 text-sm"
@@ -182,7 +182,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                         </a>
                       </h3>
                       {section.children.length > 0 && (
-                        <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
+                        <ol role="list" class="mt-2 space-y-3 text-gray-500 ps-5 dark:text-gray-300">
                           {section.children.map((subSection) => (
                             <li>
                               <a

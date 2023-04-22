@@ -2,31 +2,24 @@
 
 namespace App\Filament\Resources;
 
-use App\Enums\LinkStatus;
 use App\Enums\LinkCategory;
+use App\Enums\LinkStatus;
 use App\Filament\Resources\LinkResource\Pages;
-use App\Filament\Resources\LinkResource\RelationManagers;
 use App\Filament\Resources\LinkResource\Widgets;
-use App\Filament\Resources\LinkResource\Widgets\CreateLinkHeader;
-use App\Filament\Resources\LinkResource\Widgets\EditLinkHeader;
-use App\Filament\Resources\LinkResource\Widgets\LinkStatusSwitcher;
-use App\Filament\Resources\LinkResource\Widgets\ListLinksHeader;
 use App\Models\Link;
-use Closure;
 use Filament\Forms;
-use Filament\Pages\Page;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
 class LinkResource extends Resource
 {
     protected static ?string $model = Link::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-link';
+
     protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
@@ -42,9 +35,10 @@ class LinkResource extends Resource
                     ->placeholder('https://yourwebsite.com/filament-article')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\MultiSelect::make('categories')
+                Forms\Components\Select::make('categories')
+                    ->multiple()
                     ->options(collect(LinkCategory::cases())->mapWithKeys(fn (LinkCategory $category): array => [$category->value => $category->getLabel()]))
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
                 Forms\Components\Select::make('status')
                     ->options(collect(LinkStatus::cases())->mapWithKeys(fn (LinkStatus $status): array => [$status->value => $status->getLabel()]))
                     ->visible(auth()->user()->is_admin)
@@ -54,7 +48,7 @@ class LinkResource extends Resource
                     ->default(0)
                     ->required()
                     ->visible(auth()->user()->is_admin),
-                Forms\Components\BelongsToSelect::make('author_id')
+                Forms\Components\Select::make('author_id')
                     ->relationship('author', 'name')
                     ->searchable()
                     ->visible(auth()->user()->is_admin)
@@ -76,7 +70,7 @@ class LinkResource extends Resource
                                         'preview',
                                         'strike',
                                     ])
-                                    ->columnSpan('full')
+                                    ->columnSpanFull()
                                     ->disableLabel(),
                             ]),
                         Forms\Components\Tabs\Tab::make('Image')
@@ -84,12 +78,12 @@ class LinkResource extends Resource
                                 Forms\Components\SpatieMediaLibraryFileUpload::make('image')
                                     ->image()
                                     ->maxSize(10240)
-                                    ->helperText('Recommended dimensions 2560 x 1440 pixels (16:9 aspect ratio). Max file size 10 MB.  Please use light mode when taking screenshots where possible.')
-                                    ->columnSpan('full')
+                                    ->helperText('Recommended dimensions 2560 x 1440 pixels (16:9 aspect ratio). Max file size 10 MB. Please use light mode when taking screenshots where possible.')
+                                    ->columnSpanFull()
                                     ->disableLabel(),
                             ]),
                     ])
-                    ->columnSpan('full'),
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -115,13 +109,6 @@ class LinkResource extends Resource
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options(collect(LinkStatus::cases())->mapWithKeys(fn (LinkStatus $status): array => [$status->value => $status->getLabel()])),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

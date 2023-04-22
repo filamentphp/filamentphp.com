@@ -3,17 +3,18 @@
 namespace App\Filament\Resources\TrickResource\Pages;
 
 use App\Filament\Resources\TrickResource;
-use Filament\Pages\Actions\Action;
+use Filament\Pages\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
-use Illuminate\Contracts\View\View;
 
 class ListTricks extends ListRecords
 {
     protected static string $resource = TrickResource::class;
 
-    protected function getCreateAction(): Action
+    protected function getActions(): array
     {
-        return parent::getCreateAction()->label('Submit trick');
+        return [
+            CreateAction::make()->label('Submit trick'),
+        ];
     }
 
     protected function getHeaderWidgets(): array

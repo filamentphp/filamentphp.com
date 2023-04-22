@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Plugin;
 use App\Models\User;
-use Database\Factories\PluginFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -12,9 +11,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-         Plugin::factory()
-             ->count(100)
-             ->create();
+        Plugin::factory()
+            ->count(100)
+            ->create();
 
         User::create([
             'name' => 'Admin',

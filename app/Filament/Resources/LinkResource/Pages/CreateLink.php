@@ -5,16 +5,16 @@ namespace App\Filament\Resources\LinkResource\Pages;
 use App\Enums\LinkStatus;
 use App\Filament\Resources\LinkResource;
 use Filament\Pages\Actions\Action;
-use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Contracts\View\View;
 
 class CreateLink extends CreateRecord
 {
     protected static string $resource = LinkResource::class;
 
     protected static ?string $title = 'Submit Link';
+
     protected static ?string $breadcrumb = 'Submit';
+
     protected static bool $canCreateAnother = false;
 
     protected bool $shouldCreateAsDraft = false;
@@ -25,13 +25,11 @@ class CreateLink extends CreateRecord
             return $data;
         }
 
-        $data['status'] = $this->shouldCreateAsDraft ?
-            LinkStatus::Draft :
-            LinkStatus::Pending;
-
-        $data['author_id'] = auth()->user()->getKey();
-
-        return $data;
+        return [
+            ...$data,
+            'status' => $this->shouldCreateAsDraft ? LinkStatus::Draft : LinkStatus::Pending,
+            'author_id' => auth()->user()->getKey(),
+        ];
     }
 
     protected function getCreateFormAction(): Action
@@ -41,9 +39,9 @@ class CreateLink extends CreateRecord
 
     protected function getCreateAsDraftFormAction(): Action
     {
-        return ButtonAction::make('createAsDraft')
+        return Action::make('createAsDraft')
             ->label('Save draft')
-            ->action(function () {
+            ->action(function (): void {
                 $this->shouldCreateAsDraft = true;
 
                 $this->create();
