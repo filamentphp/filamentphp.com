@@ -84,18 +84,14 @@
             Links
         </a>
 
-        <a
-            href="{{ route('consulting') }}"
-            target="_blank"
-            @class([
-                'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
-                'dark:hover:text-primary-500 dark:focus:text-primary-500' => $darkMode,
-                'text-gray-900' => ! request()->routeIs('consulting'),
-                'dark:text-gray-200' => $darkMode && (! request()->routeIs('consulting')),
-                'text-primary-600' => request()->routeIs('consulting'),
-                'dark:text-primary-500' => $darkMode && request()->routeIs('consulting'),
-            ])
-        >
+        <a href="{{ route('consulting') }}" @class([
+            'hidden font-medium transition hover:text-primary-600 focus:text-primary-600 lg:block',
+            'dark:hover:text-primary-500 dark:focus:text-primary-500' => $darkMode,
+            'text-gray-900' => ! request()->routeIs('consulting'),
+            'dark:text-gray-200' => $darkMode && (! request()->routeIs('consulting')),
+            'text-primary-600' => request()->routeIs('consulting'),
+            'dark:text-primary-500' => $darkMode && request()->routeIs('consulting'),
+        ])>
             Consulting
         </a>
 
