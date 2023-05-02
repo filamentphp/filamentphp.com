@@ -1,6 +1,6 @@
 <div class="space-y-4">
     <a
-        href="{{ $github }}"
+        href="{{ $website }}"
         target="_blank"
         class="space-y-4"
     >

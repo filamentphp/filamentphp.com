@@ -834,6 +834,7 @@
                 <x-team-member
                     name="Ryan Chandler"
                     avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
+                    website="https://ryangjchandler.co.uk?ref=filamentphp.com"
                     github="https://github.com/ryangjchandler"
                     twitter="https://twitter.com/ryangjchandler"
                 />
@@ -841,6 +842,7 @@
                 <x-team-member
                     name="Dan Harrin"
                     avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
+                    website="https://github.com/danharrin"
                     github="https://github.com/danharrin"
                     twitter="https://twitter.com/danjharrin"
                 />
@@ -848,6 +850,7 @@
                 <x-team-member
                     name="Ryan Scherler"
                     avatar="https://avatars.githubusercontent.com/u/881938?v=4"
+                    website="https://ryanscherler.com?ref=filamentphp.com"
                     github="https://github.com/ryanscherler"
                     twitter="https://twitter.com/ryanscherler"
                 />
@@ -855,6 +858,7 @@
                 <x-team-member
                     name="Zep Fietje"
                     avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
+                    website="https://zepfietje.com?ref=filamentphp.com"
                     github="https://github.com/zepfietje"
                     twitter="https://twitter.com/zepfietje"
                 />
@@ -862,6 +866,7 @@
                 <x-team-member
                     name="Dennis Koch"
                     avatar="https://avatars.githubusercontent.com/u/22632550?v=4"
+                    website="https://github.com/pxlrbt"
                     github="https://github.com/pxlrbt"
                     twitter="https://twitter.com/pixelarbeit"
                 />
@@ -869,6 +874,7 @@
                 <x-team-member
                     name="Adam Weston"
                     avatar="https://avatars.githubusercontent.com/u/3596800?v=4"
+                    website="https://aw.codes?ref=filamentphp.com"
                     github="https://github.com/awcodes"
                     twitter="https://twitter.com/awcodes1"
                 />
