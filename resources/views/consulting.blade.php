@@ -1,3 +1,9 @@
+@php
+    seo()
+        ->title('Consulting')
+        ->description('Looking for expert help with your Filament project? Schedule a consulting call with a Filament team member.')
+@endphp
+
 <x-layouts.app previewify="858" :previewify-data="[
     'title' => 'Filament Consulting',
     'subtitle' => 'Expert help from the Filament team',
