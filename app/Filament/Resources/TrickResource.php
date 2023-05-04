@@ -48,6 +48,9 @@ class TrickResource extends Resource
                 Forms\Components\MultiSelect::make('categories')
                     ->options(collect(TrickCategory::cases())->mapWithKeys(fn (TrickCategory $category): array => [$category->value => $category->getLabel()]))
                     ->columnSpan('full'),
+                Forms\Components\TextInput::make('filament_version')
+                    ->hidden()
+                    ->disabled(),
                 Forms\Components\Select::make('status')
                     ->options(collect(TrickStatus::cases())->mapWithKeys(fn (TrickStatus $category): array => [$category->value => $category->getLabel()]))
                     ->visible(auth()->user()->is_admin)
