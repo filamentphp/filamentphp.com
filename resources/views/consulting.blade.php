@@ -49,7 +49,7 @@
                 <x-consultant
                     avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
                     name="Zep Fietje"
-                    url="https://filament.expert?ref=filamentphp.com"
+                    url="https://zepfietje.com/consult?ref=filamentphp.com"
                 />
 
                 <x-consultant
