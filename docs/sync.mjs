@@ -50,7 +50,7 @@ const packageSlugToIcon = (slug) => {
       return "heroicons:chart-bar";
       break;
     default:
-      return "";
+      return "heroicons:cube-transparent";
   }
 };
 
