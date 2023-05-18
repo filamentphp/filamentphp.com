@@ -132,7 +132,7 @@
 
             <a
                 class="flex items-center justify-center text-gray-400 hover:text-gray-200"
-                href="https://uselocale.com"
+                href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web"
                 target="_blank"
                 title="Lucky Media"
             >
