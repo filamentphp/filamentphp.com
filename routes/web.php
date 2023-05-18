@@ -3,7 +3,6 @@
 use App\Http\Controllers;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Route;
-use Pirsch\Facades\Pirsch;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,8 @@ use Pirsch\Facades\Pirsch;
 */
 
 Route::view('/', 'home')->name('home');
+
+Route::view('/consulting', 'consulting')->name('consulting');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
@@ -90,10 +91,5 @@ Route::prefix('/blog')->group(function () {
         });
     });
 });
-
-Route::get('/consulting', function () {
-    Pirsch::track();
-    return redirect('https://www.ringerhq.com/i/filamentphp/filament');
-})->name('consulting');
 
 Route::redirect('/login', '/admin/login')->name('login');
