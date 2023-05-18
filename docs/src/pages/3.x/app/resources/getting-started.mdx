@@ -4,6 +4,8 @@ githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/0
 title: Getting started
 ---
 
+## Overview
+
 Resources are static classes that are used to build CRUD interfaces for your Eloquent models. They describe how administrators should be able to interact with data from your app - using tables and forms.
 
 ## Creating a resource
@@ -169,7 +171,9 @@ public static function table(Table $table): Table
             Tables\Actions\EditAction::make(),
         ])
         ->bulkActions([
-            Tables\Actions\DeleteBulkAction::make(),
+            Tables\Actions\BulkActionGroup::make([
+                Tables\Actions\DeleteBulkAction::make(),
+            ]),
         ]);
 }
 ```

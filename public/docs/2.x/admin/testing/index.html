@@ -655,7 +655,7 @@ it(&#39;can retrieve data&#39;, function () {
     $post = Post::factory()-&gt;create();
 
     livewire(PostResource\Pages\EditPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;assertFormSet([
             &#39;author_id&#39; =&gt; $post-&gt;author-&gt;getKey(),
@@ -674,7 +674,7 @@ it(&#39;can save&#39;, function () {
     $newData = Post::factory()-&gt;make();
 
     livewire(PostResource\Pages\EditPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;fillForm([
             &#39;author_id&#39; =&gt; $newData-&gt;author-&gt;getKey(),
@@ -686,7 +686,7 @@ it(&#39;can save&#39;, function () {
         -&gt;assertHasNoFormErrors();
 
     expect($post-&gt;refresh())
-        -&gt;author-&gt;toBeSameModel($newData-&gt;author)
+        -&gt;author_id-&gt;toBe($newData-&gt;author-&gt;getKey())
         -&gt;content-&gt;toBe($newData-&gt;content)
         -&gt;tags-&gt;toBe($newData-&gt;tags)
         -&gt;title-&gt;toBe($newData-&gt;title);
@@ -701,7 +701,7 @@ it(&#39;can validate input&#39;, function () {
     $newData = Post::factory()-&gt;make();
 
     livewire(PostResource\Pages\EditPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;fillForm([
             &#39;title&#39; =&gt; null,
@@ -719,7 +719,7 @@ it(&#39;can delete&#39;, function () {
     $post = Post::factory()-&gt;create();
 
     livewire(PostResource\Pages\EditPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;callPageAction(DeleteAction::class);
 
@@ -734,7 +734,7 @@ it(&#39;can not delete&#39;, function () {
     $post = Post::factory()-&gt;create();
 
     livewire(PostResource\Pages\EditPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;assertPageActionHidden(DeleteAction::class);
 });
@@ -756,7 +756,7 @@ it(&#39;can retrieve data&#39;, function () {
     $post = Post::factory()-&gt;create();
 
     livewire(PostResource\Pages\ViewPost::class, [
-        &#39;record&#39; =&gt; $post-&gt;getKey(),
+        &#39;record&#39; =&gt; $post-&gt;getRouteKey(),
     ])
         -&gt;assertFormSet([
             &#39;author_id&#39; =&gt; $post-&gt;author-&gt;getKey(),
@@ -799,6 +799,7 @@ it(&#39;can list posts&#39;, function () {
 });
 </code></pre>
 <h2 id="page-actions">Page actions</h2>
+<h3 id="calling-actions">Calling actions</h3>
 <p>You can call a <a href="pages/actions">page action</a> by passing its name or class to <code>callPageAction()</code>:</p>
 <pre><code class="language-php">use function Pest\Livewire\livewire;
 
@@ -833,6 +834,36 @@ it(&#39;can send invoices&#39;, function () {
         -&gt;recipient_email-&gt;toBe($email);
 });
 </code></pre>
+<p>If you ever need to only set a page action’s data without immediately calling it, you can use <code>setPageActionData()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;can send invoices&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;mountPageAction(&#39;send&#39;)
+        -&gt;setPageActionData(&#39;send&#39;, data: [
+            &#39;email&#39; =&gt; $email = fake()-&gt;email(),
+        ])
+});
+</code></pre>
+<h3 id="execution">Execution</h3>
+<p>To check if an action has been halted, you can use <code>assertPageActionHalted()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;stops sending if invoice has no email address&#39;, function () {
+    $invoice = Invoice::factory([&#39;email&#39; =&gt; null])-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;callPageAction(&#39;send&#39;)
+        -&gt;assertPageActionHalted(&#39;send&#39;);
+});
+</code></pre>
+<h3 id="errors">Errors</h3>
 <p><code>assertHasNoPageActionErrors()</code> is used to assert that no validation errors occurred when submitting the action form.</p>
 <p>To check if a validation error has occurred with the data, use <code>assertHasPageActionErrors()</code>, similar to <code>assertHasErrors()</code> in Livewire:</p>
 <pre><code class="language-php">use function Pest\Livewire\livewire;
@@ -849,6 +880,7 @@ it(&#39;can validate invoice recipient email&#39;, function () {
         -&gt;assertHasPageActionErrors([&#39;email&#39; =&gt; [&#39;email&#39;]]);
 });
 </code></pre>
+<h3 id="pre-filled-data">Pre-filled data</h3>
 <p>To check if a page action is pre-filled with data, you can use the <code>assertPageActionDataSet()</code> method:</p>
 <pre><code class="language-php">use function Pest\Livewire\livewire;
 
@@ -865,13 +897,53 @@ it(&#39;can send invoices to the primary contact by default&#39;, function () {
         ])
         -&gt;callMountedPageAction()
         -&gt;assertHasNoPageActionErrors();
-        
+
     expect($invoice-&gt;refresh())
         -&gt;isSent()-&gt;toBeTrue()
         -&gt;recipient_email-&gt;toBe($recipientEmail);
 });
 </code></pre>
-<p>To check if a page action is hidden to a user, you can use the <code>assertPageActionHidden()</code> method:</p>
+<h3 id="action-state">Action State</h3>
+<p>To ensure that an action exists or doesn’t in a table, you can use the <code>assertPageActionExists()</code> or  <code>assertPageActionDoesNotExist()</code> method:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;can send but not unsend invoices&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionExists(&#39;send&#39;)
+        -&gt;assertPageActionDoesNotExist(&#39;unsend&#39;);
+});
+</code></pre>
+<p>To ensure a page action is hidden or visible for a user, you can use the <code>assertPageActionHidden()</code> or <code>assertPageActionVisible()</code> methods:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;can only print invoices&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionHidden(&#39;send&#39;)
+        -&gt;assertPageActionVisible(&#39;print&#39;);
+});
+</code></pre>
+<p>To ensure a page action is enabled or disabled for a user, you can use the <code>assertPageActionEnabled()</code> or <code>assertPageActionDisabled()</code> methods:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;can only print a sent invoice&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionDisabled(&#39;send&#39;)
+        -&gt;assertPageActionEnabled(&#39;print&#39;);
+});
+</code></pre>
+<p>To ensure sets of actions exist in the correct order, you can use <code>assertPageActionsExistInOrder()</code>:</p>
 <pre><code class="language-php">use function Pest\Livewire\livewire;
 
 it(&#39;can not send invoices&#39;, function () {
@@ -880,7 +952,64 @@ it(&#39;can not send invoices&#39;, function () {
     livewire(EditInvoice::class, [
         &#39;invoice&#39; =&gt; $invoice,
     ])
-        -&gt;assertPageActionHidden(&#39;send&#39;);
+        -&gt;assertPageActionsExistInOrder([&#39;send&#39;, &#39;export&#39;]);
+});
+</code></pre>
+<h3 id="button-appearance">Button appearance</h3>
+<p>To ensure an action has the correct label, you can use <code>assertPageActionHasLabel()</code> and <code>assertPageActionDoesNotHaveLabel()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;send action has correct label&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionHasLabel(&#39;send&#39;, &#39;Email Invoice&#39;)
+        -&gt;assertPageActionDoesNotHaveLabel(&#39;send&#39;, &#39;Send&#39;);
+});
+</code></pre>
+<p>To ensure an action’s button is showing the correct icon, you can use <code>assertPageActionHasIcon()</code> or <code>assertPageActionDoesNotHaveIcon()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;when enabled the send button has correct icon&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionEnabled(&#39;send&#39;)
+        -&gt;assertPageActionHasIcon(&#39;send&#39;, &#39;envelope-open&#39;)
+        -&gt;assertPageActionDoesNotHaveIcon(&#39;send&#39;, &#39;envelope&#39;);
+});
+</code></pre>
+<p>To ensure an action’s button is displaying the right color, you can use <code>assertPageActionHasColor()</code> or <code>assertPageActionDoesNotHaveColor()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;actions display proper colors&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionHasColor(&#39;delete&#39;, &#39;danger&#39;)
+        -&gt;assertPageActionDoesNotHaveColor(&#39;print&#39;, &#39;danger&#39;);
+});
+</code></pre>
+<h3 id="url">URL</h3>
+<p>To ensure an action has the correct URL, you can use <code>assertPageActionHasUrl()</code>, <code>assertPageActionDoesNotHaveUrl()</code>, <code>assertPageActionShouldOpenUrlInNewTab()</code>, and <code>assertPageActionShouldNotOpenUrlInNewTab()</code>:</p>
+<pre><code class="language-php">use function Pest\Livewire\livewire;
+
+it(&#39;links to the correct Filament sites&#39;, function () {
+    $invoice = Invoice::factory()-&gt;create();
+
+    livewire(EditInvoice::class, [
+        &#39;invoice&#39; =&gt; $invoice,
+    ])
+        -&gt;assertPageActionHasUrl(&#39;filament&#39;, &#39;https://filamentphp.com/&#39;)
+        -&gt;assertPageActionDoesNotHaveUrl(&#39;filament&#39;, &#39;https://github.com/filamentphp/filament&#39;)
+        -&gt;assertPageActionShouldOpenUrlInNewTab(&#39;filament&#39;)
+        -&gt;assertPageActionShouldNotOpenUrlInNewTab(&#39;github&#39;);
 });
 </code></pre><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/10-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
@@ -914,7 +1043,7 @@ it(&#39;can not send invoices&#39;, function () {
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;getting-started&#34;,&#34;text&#34;:&#34;Getting started&#34;,&#34;title&#34;:&#34;Getting started&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resources&#34;,&#34;text&#34;:&#34;Resources&#34;,&#34;title&#34;:&#34;Resources&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;relation-managers&#34;,&#34;text&#34;:&#34;Relation managers&#34;,&#34;title&#34;:&#34;Relation managers&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;page-actions&#34;,&#34;text&#34;:&#34;Page actions&#34;,&#34;title&#34;:&#34;Page actions&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;getting-started&#34;,&#34;text&#34;:&#34;Getting started&#34;,&#34;title&#34;:&#34;Getting started&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resources&#34;,&#34;text&#34;:&#34;Resources&#34;,&#34;title&#34;:&#34;Resources&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;relation-managers&#34;,&#34;text&#34;:&#34;Relation managers&#34;,&#34;title&#34;:&#34;Relation managers&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;page-actions&#34;,&#34;text&#34;:&#34;Page actions&#34;,&#34;title&#34;:&#34;Page actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;calling-actions&#34;,&#34;text&#34;:&#34;Calling actions&#34;,&#34;title&#34;:&#34;Calling actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;execution&#34;,&#34;text&#34;:&#34;Execution&#34;,&#34;title&#34;:&#34;Execution&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;errors&#34;,&#34;text&#34;:&#34;Errors&#34;,&#34;title&#34;:&#34;Errors&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;pre-filled-data&#34;,&#34;text&#34;:&#34;Pre-filled data&#34;,&#34;title&#34;:&#34;Pre-filled data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;action-state&#34;,&#34;text&#34;:&#34;Action State&#34;,&#34;title&#34;:&#34;Action State&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;button-appearance&#34;,&#34;text&#34;:&#34;Button appearance&#34;,&#34;title&#34;:&#34;Button appearance&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;url&#34;,&#34;text&#34;:&#34;URL&#34;,&#34;title&#34;:&#34;URL&#34;}]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#getting-started" x-bind:class="current == 'getting-started' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -945,7 +1074,37 @@ it(&#39;can not send invoices&#39;, function () {
                           Page actions
                         </a>
                       </h3>
-                      
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
+                          <li>
+                              <a href="#calling-actions" x-bind:class="current == 'calling-actions' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Calling actions
+                              </a>
+                            </li><li>
+                              <a href="#execution" x-bind:class="current == 'execution' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Execution
+                              </a>
+                            </li><li>
+                              <a href="#errors" x-bind:class="current == 'errors' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Errors
+                              </a>
+                            </li><li>
+                              <a href="#pre-filled-data" x-bind:class="current == 'pre-filled-data' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Pre-filled data
+                              </a>
+                            </li><li>
+                              <a href="#action-state" x-bind:class="current == 'action-state' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Action State
+                              </a>
+                            </li><li>
+                              <a href="#button-appearance" x-bind:class="current == 'button-appearance' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Button appearance
+                              </a>
+                            </li><li>
+                              <a href="#url" x-bind:class="current == 'url' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                URL
+                              </a>
+                            </li>
+                        </ol>
                     </li>
                 </ol>
         </nav>
@@ -962,10 +1121,6 @@ it(&#39;can not send invoices&#39;, function () {
       <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
     </a>
 
-    <a href="https://devdojo.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/devdojo.30600843.png" alt="Devdojo" class="block rounded-xl" width="224" height="82" loading="lazy">
-    </a>
-
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
@@ -974,16 +1129,16 @@ it(&#39;can not send invoices&#39;, function () {
       <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
+    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
+    </a>
+
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
       <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
     </a>
 
     <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://larasapien.com/?utm_source=filamentphp.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/larasapien.7244da4a.png" alt="Larasapien" class="block rounded-xl" width="224" height="113" loading="lazy">
     </a>
 
     <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">

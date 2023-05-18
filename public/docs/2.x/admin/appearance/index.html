@@ -599,7 +599,7 @@
 </code></pre>
 <h2 id="non-sticky-topbar">Non-sticky topbar</h2>
 <p>By default, the topbar sticks to the top of the page.</p>
-<p>You may make the topbar scroll out of view instead by adding the following styles to your <a href="#building-theme">theme</a> or by <a href="#including-frontend-assets">registering a new stylesheet</a>:</p>
+<p>You may make the topbar scroll out of view instead by adding the following styles to your <a href="#building-themes">theme</a> or by <a href="#including-frontend-assets">registering a new stylesheet</a>:</p>
 <pre><code class="language-css">.filament-main-topbar {
     position: relative;
 }
@@ -788,6 +788,10 @@ Filament::registerRenderHook(
 <li><code>page.footer-widgets.end</code> - after page footer widgets</li>
 <li><code>page.actions.start</code> - before page actions</li>
 <li><code>page.actions.end</code> - after page actions</li>
+<li><code>resource.pages.list-records.table.start</code> - before the resource table</li>
+<li><code>resource.pages.list-records.table.end</code> - after the resource table</li>
+<li><code>resource.relation-manager.start</code> - before the relation manager table</li>
+<li><code>resource.relation-manager.end</code> - after the relation manager table</li>
 </ul><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/08-appearance.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
@@ -913,10 +917,6 @@ Filament::registerRenderHook(
       <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
     </a>
 
-    <a href="https://devdojo.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/devdojo.30600843.png" alt="Devdojo" class="block rounded-xl" width="224" height="82" loading="lazy">
-    </a>
-
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
@@ -925,16 +925,16 @@ Filament::registerRenderHook(
       <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
+    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
+    </a>
+
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
       <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
     </a>
 
     <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://larasapien.com/?utm_source=filamentphp.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/larasapien.7244da4a.png" alt="Larasapien" class="block rounded-xl" width="224" height="113" loading="lazy">
     </a>
 
     <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">

@@ -1157,6 +1157,9 @@ FileUpload::make(&#39;attachment&#39;)
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/41773797/147613556-62c62153-4d21-4801-8a71-040d528d5757.png" alt=""/></p>
 <p>By default, files will be uploaded publicly to your default storage disk.</p>
+<blockquote>
+<p>Please note, to correctly preview images and other files, FilePond requires files to be served from the same domain as the app, or the appropriate CORS headers need to be present. Ensure that the <code>APP_URL</code> environment variable is correct, or modify the <a href="https://laravel.com/docs/10.x/filesystem">filesystem</a> driver to set the correct URL. If you’re hosting files on a separate domain like S3, ensure that CORS headers are set up.</p>
+</blockquote>
 <p>To change the disk and directory that files are saved in, and their visibility, use the <code>disk()</code>, <code>directory()</code> and <code>visibility</code> methods:</p>
 <pre><code class="language-php">use Filament\Forms\Components\FileUpload;
 
@@ -1203,7 +1206,7 @@ FileUpload::make(&#39;attachment&#39;)
     -&gt;maxSize(1024)
 </code></pre>
 <blockquote>
-<p>To customize Livewire’s default file upload validation rules, please refer to its <a href="https://laravel-livewire.com/docs/file-uploads#global-validation">documentation</a>.</p>
+<p>To customize Livewire’s default file upload validation rules, including the 12MB file size maximum, please refer to its <a href="https://laravel-livewire.com/docs/file-uploads#global-validation">documentation</a>.</p>
 </blockquote>
 <p>Filepond allows you to crop and resize images before they are uploaded. You can customize this behaviour using the <code>imageResizeMode()</code>, <code>imageCropAspectRatio()</code>, <code>imageResizeTargetHeight()</code> and <code>imageResizeTargetWidth()</code> methods. <code>imageResizeMode()</code> should be set for the other methods to have an effect - either <a href="https://pqina.nl/filepond/docs/api/plugins/image-resize"><code>force</code>, <code>cover</code>, or <code>contain</code></a>.</p>
 <pre><code class="language-php">use Filament\Forms\Components\FileUpload;
@@ -2153,10 +2156,6 @@ class RangeSlider extends Field
       <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
     </a>
 
-    <a href="https://devdojo.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/devdojo.30600843.png" alt="Devdojo" class="block rounded-xl" width="224" height="82" loading="lazy">
-    </a>
-
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
@@ -2165,16 +2164,16 @@ class RangeSlider extends Field
       <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
+    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
+    </a>
+
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
       <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
     </a>
 
     <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://larasapien.com/?utm_source=filamentphp.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/larasapien.7244da4a.png" alt="Larasapien" class="block rounded-xl" width="224" height="113" loading="lazy">
     </a>
 
     <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">

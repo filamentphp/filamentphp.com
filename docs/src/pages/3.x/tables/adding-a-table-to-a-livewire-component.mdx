@@ -1,6 +1,6 @@
 ---
 layout: "@layouts/BaseLayout.astro"
-githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/08-adding-a-table-to-a-livewire-component.md"
+githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/11-adding-a-table-to-a-livewire-component.md"
 title: Adding a table to a Livewire component
 ---
 
@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('products', ListProducts::class);
 ```
 
-### Adding the table
+## Adding the table
 
 There are 3 tasks when adding a table to a Livewire component class:
 
@@ -49,9 +49,9 @@ use Filament\Tables\Table;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class ListProducts extends Component implements HasTable // [tl! focus]
+class ListProducts extends Component implements HasTable
 {
-    use InteractsWithTable; // [tl! focus]
+    use InteractsWithTable;
     
     public function table(Table $table): Table
     {
@@ -69,7 +69,7 @@ class ListProducts extends Component implements HasTable // [tl! focus]
             ->bulkActions([
                 // ...
             ]);
-    } // [tl! focus:start]
+    }
     
     public function render(): View
     {

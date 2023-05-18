@@ -550,7 +550,19 @@ BadgeColumn::make(&#39;status&#39;)
     -&gt;iconPosition(&#39;after&#39;) // `before` or `after`
 </code></pre>
 <h2 id="formatting-the-text">Formatting the text</h2>
-<p>All formatting options available for <a href="text">text columns</a> are also available for badge columns.</p><a href="https://github.com/filamentphp/filament/edit/2.x/packages/tables/docs/03-columns/05-badge.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+<p>All formatting options available for <a href="text">text columns</a> are also available for badge columns.</p>
+<h2 id="allowing-the-text-to-be-copied-to-the-clipboard">Allowing the text to be copied to the clipboard</h2>
+<p>You may make the text copyable, such that clicking on the cell copies the text to the clipboard, and optionally specify a custom confirmation message and duration in milliseconds. This feature only works when SSL is enabled for the app.</p>
+<pre><code class="language-php">use Filament\Tables\Columns\BadgeColumn;
+
+BadgeColumn::make(&#39;email&#39;)
+    -&gt;copyable()
+    -&gt;copyMessage(&#39;Email address copied&#39;)
+    -&gt;copyMessageDuration(1500)
+</code></pre>
+<blockquote>
+<p>Filament uses tooltips to display the copy message in the admin panel. If you want to use the copyable feature outside of the admin panel, make sure you have <a href="https://github.com/ryangjchandler/alpine-tooltip#installation"><code>@ryangjchandler/alpine-tooltip</code> installed</a> in your app.</p>
+</blockquote><a href="https://github.com/filamentphp/filament/edit/2.x/packages/tables/docs/03-columns/05-badge.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
@@ -582,7 +594,7 @@ BadgeColumn::make(&#39;status&#39;)
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-color&#34;,&#34;text&#34;:&#34;Customizing the color&#34;,&#34;title&#34;:&#34;Customizing the color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-an-icon&#34;,&#34;text&#34;:&#34;Adding an icon&#34;,&#34;title&#34;:&#34;Adding an icon&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;formatting-the-text&#34;,&#34;text&#34;:&#34;Formatting the text&#34;,&#34;title&#34;:&#34;Formatting the text&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-color&#34;,&#34;text&#34;:&#34;Customizing the color&#34;,&#34;title&#34;:&#34;Customizing the color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-an-icon&#34;,&#34;text&#34;:&#34;Adding an icon&#34;,&#34;title&#34;:&#34;Adding an icon&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;formatting-the-text&#34;,&#34;text&#34;:&#34;Formatting the text&#34;,&#34;title&#34;:&#34;Formatting the text&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-text-to-be-copied-to-the-clipboard&#34;,&#34;text&#34;:&#34;Allowing the text to be copied to the clipboard&#34;,&#34;title&#34;:&#34;Allowing the text to be copied to the clipboard&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#customizing-the-color" x-bind:class="current == 'customizing-the-color' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -604,6 +616,13 @@ BadgeColumn::make(&#39;status&#39;)
                         </a>
                       </h3>
                       
+                    </li><li>
+                      <h3>
+                        <a href="#allowing-the-text-to-be-copied-to-the-clipboard" x-bind:class="current == 'allowing-the-text-to-be-copied-to-the-clipboard' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          Allowing the text to be copied to the clipboard
+                        </a>
+                      </h3>
+                      
                     </li>
                 </ol>
         </nav>
@@ -620,10 +639,6 @@ BadgeColumn::make(&#39;status&#39;)
       <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
     </a>
 
-    <a href="https://devdojo.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/devdojo.30600843.png" alt="Devdojo" class="block rounded-xl" width="224" height="82" loading="lazy">
-    </a>
-
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
@@ -632,16 +647,16 @@ BadgeColumn::make(&#39;status&#39;)
       <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
+    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
+    </a>
+
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
       <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
     </a>
 
     <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://larasapien.com/?utm_source=filamentphp.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/larasapien.7244da4a.png" alt="Larasapien" class="block rounded-xl" width="224" height="113" loading="lazy">
     </a>
 
     <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">

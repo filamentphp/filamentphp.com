@@ -359,11 +359,11 @@
 </blockquote>
 <h2 id="available-rules">Available rules</h2>
 <h3 id="active-url">Active URL</h3>
-<p>The field must have a valid A or AAAA record according to the <code>dns_get_record()</code> PHP function. <a href="https://laravel.com/docs/validation#rule-active-url">See the Laravel documentation</a></p>
+<p>The field must have a valid A or AAAA record according to the <code>dns_get_record()</code> PHP function. <a href="https://laravel.com/docs/validation#rule-active-url">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;activeUrl()
 </code></pre>
 <h3 id="after-date">After (date)</h3>
-<p>The field value must be a value after a given date. <a href="https://laravel.com/docs/validation#rule-after">See the Laravel documentation</a></p>
+<p>The field value must be a value after a given date. <a href="https://laravel.com/docs/validation#rule-after">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;startDate&#39;)-&gt;after(&#39;tomorrow&#39;)
 </code></pre>
 <p>Alternatively, you may pass the name of another field to compare against:</p>
@@ -371,7 +371,7 @@
 Field::make(&#39;endDate&#39;)-&gt;after(&#39;startDate&#39;)
 </code></pre>
 <h3 id="after-or-equal-to-date">After or equal to (date)</h3>
-<p>The field value must be a date after or equal to the given date. <a href="https://laravel.com/docs/validation#rule-after-or-equal">See the Laravel documentation</a></p>
+<p>The field value must be a date after or equal to the given date. <a href="https://laravel.com/docs/validation#rule-after-or-equal">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;startDate&#39;)-&gt;afterOrEqual(&#39;tomorrow&#39;)
 </code></pre>
 <p>Alternatively, you may pass the name of another field to compare against:</p>
@@ -379,19 +379,23 @@ Field::make(&#39;endDate&#39;)-&gt;after(&#39;startDate&#39;)
 Field::make(&#39;endDate&#39;)-&gt;afterOrEqual(&#39;startDate&#39;)
 </code></pre>
 <h3 id="alpha">Alpha</h3>
-<p>The field must be entirely alphabetic characters. <a href="https://laravel.com/docs/validation#rule-alpha">See the Laravel documentation</a></p>
+<p>The field must be entirely alphabetic characters. <a href="https://laravel.com/docs/validation#rule-alpha">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;alpha()
 </code></pre>
 <h3 id="alpha-dash">Alpha Dash</h3>
-<p>The field may have alpha-numeric characters, as well as dashes and underscores. <a href="https://laravel.com/docs/validation#rule-alpha-dash">See the Laravel documentation</a></p>
+<p>The field may have alpha-numeric characters, as well as dashes and underscores. <a href="https://laravel.com/docs/validation#rule-alpha-dash">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;alphaDash()
 </code></pre>
 <h3 id="alpha-numeric">Alpha Numeric</h3>
-<p>The field must be entirely alpha-numeric characters. <a href="https://laravel.com/docs/validation#rule-alpha-num">See the Laravel documentation</a></p>
+<p>The field must be entirely alpha-numeric characters. <a href="https://laravel.com/docs/validation#rule-alpha-num">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;alphaNum()
 </code></pre>
+<h3 id="ascii">ASCII</h3>
+<p>The field must be entirely 7-bit ASCII characters. <a href="https://laravel.com/docs/10.x/validation#rule-ascii">See the Laravel documentation.</a></p>
+<pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;ascii()
+</code></pre>
 <h3 id="before-date">Before (date)</h3>
-<p>The field value must be a date before a given date. <a href="https://laravel.com/docs/validation#rule-before">See the Laravel documentation</a></p>
+<p>The field value must be a date before a given date. <a href="https://laravel.com/docs/validation#rule-before">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;startDate&#39;)-&gt;before(&#39;first day of next month&#39;)
 </code></pre>
 <p>Alternatively, you may pass the name of another field to compare against:</p>
@@ -399,7 +403,7 @@ Field::make(&#39;endDate&#39;)-&gt;afterOrEqual(&#39;startDate&#39;)
 Field::make(&#39;endDate&#39;)
 </code></pre>
 <h3 id="before-or-equal-to-date">Before or equal to (date)</h3>
-<p>The field value must be a date before or equal to the given date. <a href="https://laravel.com/docs/validation#rule-before-or-equal">See the Laravel documentation</a></p>
+<p>The field value must be a date before or equal to the given date. <a href="https://laravel.com/docs/validation#rule-before-or-equal">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;startDate&#39;)-&gt;beforeOrEqual(&#39;end of this month&#39;)
 </code></pre>
 <p>Alternatively, you may pass the name of another field to compare against:</p>
@@ -407,32 +411,32 @@ Field::make(&#39;endDate&#39;)
 Field::make(&#39;endDate&#39;)
 </code></pre>
 <h3 id="confirmed">Confirmed</h3>
-<p>The field must have a matching field of <code>{field}_confirmation</code>. <a href="https://laravel.com/docs/validation#rule-confirmed">See the Laravel documentation</a></p>
+<p>The field must have a matching field of <code>{field}_confirmation</code>. <a href="https://laravel.com/docs/validation#rule-confirmed">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;password&#39;)-&gt;confirmed()
 Field::make(&#39;password_confirmation&#39;)
 </code></pre>
 <h3 id="different">Different</h3>
-<p>The field value must be different to another. <a href="https://laravel.com/docs/validation#rule-different">See the Laravel documentation</a></p>
+<p>The field value must be different to another. <a href="https://laravel.com/docs/validation#rule-different">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;backupEmail&#39;)-&gt;different(&#39;email&#39;)
 </code></pre>
 <h3 id="doesnt-start-with">Doesnt Start With</h3>
-<p>The field must not start with one of the given values. <a href="https://laravel.com/docs/validation#rule-doesnt-start-with">See the Laravel documentation</a></p>
+<p>The field must not start with one of the given values. <a href="https://laravel.com/docs/validation#rule-doesnt-start-with">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;doesntStartWith([&#39;admin&#39;])
 </code></pre>
 <h3 id="doesnt-end-with">Doesnt End With</h3>
-<p>The field must not end with one of the given values. <a href="https://laravel.com/docs/validation#rule-doesnt-end-with">See the Laravel documentation</a></p>
+<p>The field must not end with one of the given values. <a href="https://laravel.com/docs/validation#rule-doesnt-end-with">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;doesntEndWith([&#39;admin&#39;])
 </code></pre>
 <h3 id="ends-with">Ends With</h3>
-<p>The field must end with one of the given values. <a href="https://laravel.com/docs/validation#rule-ends-with">See the Laravel documentation</a></p>
+<p>The field must end with one of the given values. <a href="https://laravel.com/docs/validation#rule-ends-with">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;endsWith([&#39;bot&#39;])
 </code></pre>
 <h3 id="enum">Enum</h3>
-<p>The field must contain a valid enum value. <a href="https://laravel.com/docs/validation#rule-enum">See the Laravel documentation</a></p>
+<p>The field must contain a valid enum value. <a href="https://laravel.com/docs/validation#rule-enum">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;status&#39;)-&gt;enum(MyStatus::class)
 </code></pre>
 <h3 id="exists">Exists</h3>
-<p>The field value must exist in the database. <a href="https://laravel.com/docs/validation#rule-exists">See the Laravel documentation</a>.</p>
+<p>The field value must exist in the database. <a href="https://laravel.com/docs/validation#rule-exists">See the Laravel documentation.</a>.</p>
 <pre><code class="language-php">Field::make(&#39;invitation&#39;)-&gt;exists()
 </code></pre>
 <p>By default, the form’s model will be searched, <a href="getting-started#registering-a-model">if it is registered</a>. You may specify a custom table name or model to search:</p>
@@ -452,101 +456,101 @@ Field::make(&#39;invitation&#39;)
     })
 </code></pre>
 <h3 id="filled">Filled</h3>
-<p>The field must not be empty when it is present. <a href="https://laravel.com/docs/validation#rule-filled">See the Laravel documentation</a></p>
+<p>The field must not be empty when it is present. <a href="https://laravel.com/docs/validation#rule-filled">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;filled()
 </code></pre>
 <h3 id="greater-than">Greater than</h3>
-<p>The field value must be greater than another. <a href="https://laravel.com/docs/validation#rule-gt">See the Laravel documentation</a></p>
+<p>The field value must be greater than another. <a href="https://laravel.com/docs/validation#rule-gt">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;newNumber&#39;)-&gt;gt(&#39;oldNumber&#39;)
 </code></pre>
 <h3 id="greater-than-or-equal-to">Greater than or equal to</h3>
-<p>The field value must be greater than or equal to another. <a href="https://laravel.com/docs/validation#rule-gte">See the Laravel documentation</a></p>
+<p>The field value must be greater than or equal to another. <a href="https://laravel.com/docs/validation#rule-gte">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;newNumber&#39;)-&gt;gte(&#39;oldNumber&#39;)
 </code></pre>
 <h3 id="in">In</h3>
-<p>The field must be included in the given list of values. <a href="https://laravel.com/docs/validation#rule-in">See the Laravel documentation</a></p>
+<p>The field must be included in the given list of values. <a href="https://laravel.com/docs/validation#rule-in">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;status&#39;)-&gt;in([&#39;pending&#39;, &#39;completed&#39;])
 </code></pre>
 <h3 id="ip-address">Ip Address</h3>
-<p>The field must be an IP address. <a href="https://laravel.com/docs/validation#rule-ip">See the Laravel documentation</a></p>
+<p>The field must be an IP address. <a href="https://laravel.com/docs/validation#rule-ip">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;ip_address&#39;)-&gt;ip()
 Field::make(&#39;ip_address&#39;)-&gt;ipv4()
 Field::make(&#39;ip_address&#39;)-&gt;ipv6()
 </code></pre>
 <h3 id="json">JSON</h3>
-<p>The field must be a valid JSON string. <a href="https://laravel.com/docs/validation#rule-json">See the Laravel documentation</a></p>
+<p>The field must be a valid JSON string. <a href="https://laravel.com/docs/validation#rule-json">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;ip_address&#39;)-&gt;json()
 </code></pre>
 <h3 id="less-than">Less than</h3>
-<p>The field value must be less than another. <a href="https://laravel.com/docs/validation#rule-lt">See the Laravel documentation</a></p>
+<p>The field value must be less than another. <a href="https://laravel.com/docs/validation#rule-lt">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;newNumber&#39;)-&gt;lt(&#39;oldNumber&#39;)
 </code></pre>
 <h3 id="less-than-or-equal-to">Less than or equal to</h3>
-<p>The field value must be less than or equal to another. <a href="https://laravel.com/docs/validation#rule-lte">See the Laravel documentation</a></p>
+<p>The field value must be less than or equal to another. <a href="https://laravel.com/docs/validation#rule-lte">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;newNumber&#39;)-&gt;lte(&#39;oldNumber&#39;)
 </code></pre>
 <h3 id="mac-address">Mac Address</h3>
-<p>The field must be a MAC address. <a href="https://laravel.com/docs/validation#rule-mac">See the Laravel documentation</a></p>
+<p>The field must be a MAC address. <a href="https://laravel.com/docs/validation#rule-mac">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;mac_address&#39;)-&gt;macAddress()
 </code></pre>
 <h3 id="multiple-of">Multiple Of</h3>
-<p>The field must be a multiple of value. <a href="https://laravel.com/docs/validation#multiple-of">See the Laravel documentation</a></p>
+<p>The field must be a multiple of value. <a href="https://laravel.com/docs/validation#multiple-of">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;number&#39;)-&gt;multipleOf(2)
 </code></pre>
 <h3 id="not-in">Not In</h3>
-<p>The field must not be included in the given list of values. <a href="https://laravel.com/docs/validation#rule-not-in">See the Laravel documentation</a></p>
+<p>The field must not be included in the given list of values. <a href="https://laravel.com/docs/validation#rule-not-in">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;status&#39;)-&gt;notIn([&#39;cancelled&#39;, &#39;rejected&#39;])
 </code></pre>
 <h3 id="not-regex">Not Regex</h3>
-<p>The field must not match the given regular expression. <a href="https://laravel.com/docs/validation#rule-not-regex">See the Laravel documentation</a></p>
+<p>The field must not match the given regular expression. <a href="https://laravel.com/docs/validation#rule-not-regex">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;email&#39;)-&gt;notRegex(&#39;/^.+$/i&#39;)
 </code></pre>
 <h3 id="nullable">Nullable</h3>
-<p>The field value can be empty. This rule is applied by default if the <code>required</code> rule is not present. <a href="https://laravel.com/docs/validation#rule-nullable">See the Laravel documentation</a></p>
+<p>The field value can be empty. This rule is applied by default if the <code>required</code> rule is not present. <a href="https://laravel.com/docs/validation#rule-nullable">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;nullable()
 </code></pre>
 <h3 id="prohibited">Prohibited</h3>
-<p>The field value must be empty. <a href="https://laravel.com/docs/validation#rule-prohibited">See the Laravel documentation</a></p>
+<p>The field value must be empty. <a href="https://laravel.com/docs/validation#rule-prohibited">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;prohibited()
 </code></pre>
 <h3 id="required">Required</h3>
-<p>The field value must not be empty. <a href="https://laravel.com/docs/validation#rule-required">See the Laravel documentation</a></p>
+<p>The field value must not be empty. <a href="https://laravel.com/docs/validation#rule-required">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;required()
 </code></pre>
 <h3 id="required-with">Required With</h3>
-<p>The field value must not be empty <em>only if</em> any of the other specified fields are not empty. <a href="https://laravel.com/docs/validation#rule-required-with">See the Laravel documentation</a></p>
+<p>The field value must not be empty <em>only if</em> any of the other specified fields are not empty. <a href="https://laravel.com/docs/validation#rule-required-with">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;requiredWith(&#39;field,another_field&#39;)
 </code></pre>
 <h3 id="required-with-all">Required With All</h3>
-<p>The field value must not be empty <em>only if</em> all of the other specified fields are not empty. <a href="https://laravel.com/docs/validation#rule-required-with-all">See the Laravel documentation</a></p>
+<p>The field value must not be empty <em>only if</em> all of the other specified fields are not empty. <a href="https://laravel.com/docs/validation#rule-required-with-all">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;requiredWithAll(&#39;field,another_field&#39;)
 </code></pre>
 <h3 id="required-without">Required Without</h3>
-<p>The field value must not be empty <em>only when</em> any of the other specified fields are empty. <a href="https://laravel.com/docs/validation#rule-required-without">See the Laravel documentation</a></p>
+<p>The field value must not be empty <em>only when</em> any of the other specified fields are empty. <a href="https://laravel.com/docs/validation#rule-required-without">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;requiredWithout(&#39;field,another_field&#39;)
 </code></pre>
 <h3 id="required-without-all">Required Without All</h3>
-<p>The field value must not be empty <em>only when</em> all of the other specified fields are empty. <a href="https://laravel.com/docs/validation#rule-required-without-all">See the Laravel documentation</a></p>
+<p>The field value must not be empty <em>only when</em> all of the other specified fields are empty. <a href="https://laravel.com/docs/validation#rule-required-without-all">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;requiredWithoutAll(&#39;field,another_field&#39;)
 </code></pre>
 <h3 id="regex">Regex</h3>
-<p>The field must match the given regular expression. <a href="https://laravel.com/docs/validation#rule-regex">See the Laravel documentation</a></p>
+<p>The field must match the given regular expression. <a href="https://laravel.com/docs/validation#rule-regex">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;email&#39;)-&gt;regex(&#39;/^.+@.+$/i&#39;)
 </code></pre>
 <h3 id="same">Same</h3>
-<p>The field value must be the same as another. <a href="https://laravel.com/docs/validation#rule-same">See the Laravel documentation</a></p>
+<p>The field value must be the same as another. <a href="https://laravel.com/docs/validation#rule-same">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;password&#39;)-&gt;same(&#39;passwordConfirmation&#39;)
 </code></pre>
 <h3 id="starts-with">Starts With</h3>
-<p>The field must start with one of the given values. <a href="https://laravel.com/docs/validation#rule-starts-with">See the Laravel documentation</a></p>
+<p>The field must start with one of the given values. <a href="https://laravel.com/docs/validation#rule-starts-with">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;startsWith([&#39;a&#39;])
 </code></pre>
 <h3 id="string">String</h3>
-<p>The field must be a string. <a href="https://laravel.com/docs/validation#rule-string">See the Laravel documentation</a></p>
+<p>The field must be a string. <a href="https://laravel.com/docs/validation#rule-string">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;name&#39;)-&gt;string()
 </code></pre>
 <h3 id="unique">Unique</h3>
-<p>The field value must not exist in the database. <a href="https://laravel.com/docs/validation#rule-unique">See the Laravel documentation</a></p>
+<p>The field value must not exist in the database. <a href="https://laravel.com/docs/validation#rule-unique">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;email&#39;)-&gt;unique()
 </code></pre>
 <p>By default, the form’s model will be searched, <a href="getting-started#registering-a-model">if it is registered</a>. You may specify a custom table name or model to search:</p>
@@ -572,7 +576,7 @@ Field::make(&#39;email&#39;)
     })
 </code></pre>
 <h3 id="uuid">UUID</h3>
-<p>The field must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID). <a href="https://laravel.com/docs/validation#rule-uuid">See the Laravel documentation</a></p>
+<p>The field must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID). <a href="https://laravel.com/docs/validation#rule-uuid">See the Laravel documentation.</a></p>
 <pre><code class="language-php">Field::make(&#39;identifer&#39;)-&gt;uuid()
 </code></pre>
 <h2 id="other-rules">Other rules</h2>
@@ -657,7 +661,7 @@ Page::$reportValidationErrorUsing = function (ValidationException $exception) {
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;getting-started&#34;,&#34;text&#34;:&#34;Getting started&#34;,&#34;title&#34;:&#34;Getting started&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-rules&#34;,&#34;text&#34;:&#34;Available rules&#34;,&#34;title&#34;:&#34;Available rules&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;active-url&#34;,&#34;text&#34;:&#34;Active URL&#34;,&#34;title&#34;:&#34;Active URL&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;after-date&#34;,&#34;text&#34;:&#34;After (date)&#34;,&#34;title&#34;:&#34;After (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;after-or-equal-to-date&#34;,&#34;text&#34;:&#34;After or equal to (date)&#34;,&#34;title&#34;:&#34;After or equal to (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha&#34;,&#34;text&#34;:&#34;Alpha&#34;,&#34;title&#34;:&#34;Alpha&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha-dash&#34;,&#34;text&#34;:&#34;Alpha Dash&#34;,&#34;title&#34;:&#34;Alpha Dash&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha-numeric&#34;,&#34;text&#34;:&#34;Alpha Numeric&#34;,&#34;title&#34;:&#34;Alpha Numeric&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;before-date&#34;,&#34;text&#34;:&#34;Before (date)&#34;,&#34;title&#34;:&#34;Before (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;before-or-equal-to-date&#34;,&#34;text&#34;:&#34;Before or equal to (date)&#34;,&#34;title&#34;:&#34;Before or equal to (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;confirmed&#34;,&#34;text&#34;:&#34;Confirmed&#34;,&#34;title&#34;:&#34;Confirmed&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;different&#34;,&#34;text&#34;:&#34;Different&#34;,&#34;title&#34;:&#34;Different&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;doesnt-start-with&#34;,&#34;text&#34;:&#34;Doesnt Start With&#34;,&#34;title&#34;:&#34;Doesnt Start With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;doesnt-end-with&#34;,&#34;text&#34;:&#34;Doesnt End With&#34;,&#34;title&#34;:&#34;Doesnt End With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ends-with&#34;,&#34;text&#34;:&#34;Ends With&#34;,&#34;title&#34;:&#34;Ends With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;enum&#34;,&#34;text&#34;:&#34;Enum&#34;,&#34;title&#34;:&#34;Enum&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;exists&#34;,&#34;text&#34;:&#34;Exists&#34;,&#34;title&#34;:&#34;Exists&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;filled&#34;,&#34;text&#34;:&#34;Filled&#34;,&#34;title&#34;:&#34;Filled&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;greater-than&#34;,&#34;text&#34;:&#34;Greater than&#34;,&#34;title&#34;:&#34;Greater than&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;greater-than-or-equal-to&#34;,&#34;text&#34;:&#34;Greater than or equal to&#34;,&#34;title&#34;:&#34;Greater than or equal to&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;in&#34;,&#34;text&#34;:&#34;In&#34;,&#34;title&#34;:&#34;In&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ip-address&#34;,&#34;text&#34;:&#34;Ip Address&#34;,&#34;title&#34;:&#34;Ip Address&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;json&#34;,&#34;text&#34;:&#34;JSON&#34;,&#34;title&#34;:&#34;JSON&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;less-than&#34;,&#34;text&#34;:&#34;Less than&#34;,&#34;title&#34;:&#34;Less than&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;less-than-or-equal-to&#34;,&#34;text&#34;:&#34;Less than or equal to&#34;,&#34;title&#34;:&#34;Less than or equal to&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;mac-address&#34;,&#34;text&#34;:&#34;Mac Address&#34;,&#34;title&#34;:&#34;Mac Address&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;multiple-of&#34;,&#34;text&#34;:&#34;Multiple Of&#34;,&#34;title&#34;:&#34;Multiple Of&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;not-in&#34;,&#34;text&#34;:&#34;Not In&#34;,&#34;title&#34;:&#34;Not In&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;not-regex&#34;,&#34;text&#34;:&#34;Not Regex&#34;,&#34;title&#34;:&#34;Not Regex&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;nullable&#34;,&#34;text&#34;:&#34;Nullable&#34;,&#34;title&#34;:&#34;Nullable&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;prohibited&#34;,&#34;text&#34;:&#34;Prohibited&#34;,&#34;title&#34;:&#34;Prohibited&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required&#34;,&#34;text&#34;:&#34;Required&#34;,&#34;title&#34;:&#34;Required&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-with&#34;,&#34;text&#34;:&#34;Required With&#34;,&#34;title&#34;:&#34;Required With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-with-all&#34;,&#34;text&#34;:&#34;Required With All&#34;,&#34;title&#34;:&#34;Required With All&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-without&#34;,&#34;text&#34;:&#34;Required Without&#34;,&#34;title&#34;:&#34;Required Without&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-without-all&#34;,&#34;text&#34;:&#34;Required Without All&#34;,&#34;title&#34;:&#34;Required Without All&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;regex&#34;,&#34;text&#34;:&#34;Regex&#34;,&#34;title&#34;:&#34;Regex&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;same&#34;,&#34;text&#34;:&#34;Same&#34;,&#34;title&#34;:&#34;Same&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;starts-with&#34;,&#34;text&#34;:&#34;Starts With&#34;,&#34;title&#34;:&#34;Starts With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;string&#34;,&#34;text&#34;:&#34;String&#34;,&#34;title&#34;:&#34;String&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;unique&#34;,&#34;text&#34;:&#34;Unique&#34;,&#34;title&#34;:&#34;Unique&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;uuid&#34;,&#34;text&#34;:&#34;UUID&#34;,&#34;title&#34;:&#34;UUID&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;other-rules&#34;,&#34;text&#34;:&#34;Other rules&#34;,&#34;title&#34;:&#34;Other rules&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-rules&#34;,&#34;text&#34;:&#34;Custom rules&#34;,&#34;title&#34;:&#34;Custom rules&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;validation-attributes&#34;,&#34;text&#34;:&#34;Validation attributes&#34;,&#34;title&#34;:&#34;Validation attributes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;sending-validation-notifications&#34;,&#34;text&#34;:&#34;Sending validation notifications&#34;,&#34;title&#34;:&#34;Sending validation notifications&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;getting-started&#34;,&#34;text&#34;:&#34;Getting started&#34;,&#34;title&#34;:&#34;Getting started&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-rules&#34;,&#34;text&#34;:&#34;Available rules&#34;,&#34;title&#34;:&#34;Available rules&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;active-url&#34;,&#34;text&#34;:&#34;Active URL&#34;,&#34;title&#34;:&#34;Active URL&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;after-date&#34;,&#34;text&#34;:&#34;After (date)&#34;,&#34;title&#34;:&#34;After (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;after-or-equal-to-date&#34;,&#34;text&#34;:&#34;After or equal to (date)&#34;,&#34;title&#34;:&#34;After or equal to (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha&#34;,&#34;text&#34;:&#34;Alpha&#34;,&#34;title&#34;:&#34;Alpha&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha-dash&#34;,&#34;text&#34;:&#34;Alpha Dash&#34;,&#34;title&#34;:&#34;Alpha Dash&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;alpha-numeric&#34;,&#34;text&#34;:&#34;Alpha Numeric&#34;,&#34;title&#34;:&#34;Alpha Numeric&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ascii&#34;,&#34;text&#34;:&#34;ASCII&#34;,&#34;title&#34;:&#34;ASCII&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;before-date&#34;,&#34;text&#34;:&#34;Before (date)&#34;,&#34;title&#34;:&#34;Before (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;before-or-equal-to-date&#34;,&#34;text&#34;:&#34;Before or equal to (date)&#34;,&#34;title&#34;:&#34;Before or equal to (date)&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;confirmed&#34;,&#34;text&#34;:&#34;Confirmed&#34;,&#34;title&#34;:&#34;Confirmed&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;different&#34;,&#34;text&#34;:&#34;Different&#34;,&#34;title&#34;:&#34;Different&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;doesnt-start-with&#34;,&#34;text&#34;:&#34;Doesnt Start With&#34;,&#34;title&#34;:&#34;Doesnt Start With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;doesnt-end-with&#34;,&#34;text&#34;:&#34;Doesnt End With&#34;,&#34;title&#34;:&#34;Doesnt End With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ends-with&#34;,&#34;text&#34;:&#34;Ends With&#34;,&#34;title&#34;:&#34;Ends With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;enum&#34;,&#34;text&#34;:&#34;Enum&#34;,&#34;title&#34;:&#34;Enum&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;exists&#34;,&#34;text&#34;:&#34;Exists&#34;,&#34;title&#34;:&#34;Exists&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;filled&#34;,&#34;text&#34;:&#34;Filled&#34;,&#34;title&#34;:&#34;Filled&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;greater-than&#34;,&#34;text&#34;:&#34;Greater than&#34;,&#34;title&#34;:&#34;Greater than&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;greater-than-or-equal-to&#34;,&#34;text&#34;:&#34;Greater than or equal to&#34;,&#34;title&#34;:&#34;Greater than or equal to&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;in&#34;,&#34;text&#34;:&#34;In&#34;,&#34;title&#34;:&#34;In&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ip-address&#34;,&#34;text&#34;:&#34;Ip Address&#34;,&#34;title&#34;:&#34;Ip Address&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;json&#34;,&#34;text&#34;:&#34;JSON&#34;,&#34;title&#34;:&#34;JSON&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;less-than&#34;,&#34;text&#34;:&#34;Less than&#34;,&#34;title&#34;:&#34;Less than&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;less-than-or-equal-to&#34;,&#34;text&#34;:&#34;Less than or equal to&#34;,&#34;title&#34;:&#34;Less than or equal to&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;mac-address&#34;,&#34;text&#34;:&#34;Mac Address&#34;,&#34;title&#34;:&#34;Mac Address&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;multiple-of&#34;,&#34;text&#34;:&#34;Multiple Of&#34;,&#34;title&#34;:&#34;Multiple Of&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;not-in&#34;,&#34;text&#34;:&#34;Not In&#34;,&#34;title&#34;:&#34;Not In&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;not-regex&#34;,&#34;text&#34;:&#34;Not Regex&#34;,&#34;title&#34;:&#34;Not Regex&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;nullable&#34;,&#34;text&#34;:&#34;Nullable&#34;,&#34;title&#34;:&#34;Nullable&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;prohibited&#34;,&#34;text&#34;:&#34;Prohibited&#34;,&#34;title&#34;:&#34;Prohibited&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required&#34;,&#34;text&#34;:&#34;Required&#34;,&#34;title&#34;:&#34;Required&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-with&#34;,&#34;text&#34;:&#34;Required With&#34;,&#34;title&#34;:&#34;Required With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-with-all&#34;,&#34;text&#34;:&#34;Required With All&#34;,&#34;title&#34;:&#34;Required With All&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-without&#34;,&#34;text&#34;:&#34;Required Without&#34;,&#34;title&#34;:&#34;Required Without&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;required-without-all&#34;,&#34;text&#34;:&#34;Required Without All&#34;,&#34;title&#34;:&#34;Required Without All&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;regex&#34;,&#34;text&#34;:&#34;Regex&#34;,&#34;title&#34;:&#34;Regex&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;same&#34;,&#34;text&#34;:&#34;Same&#34;,&#34;title&#34;:&#34;Same&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;starts-with&#34;,&#34;text&#34;:&#34;Starts With&#34;,&#34;title&#34;:&#34;Starts With&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;string&#34;,&#34;text&#34;:&#34;String&#34;,&#34;title&#34;:&#34;String&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;unique&#34;,&#34;text&#34;:&#34;Unique&#34;,&#34;title&#34;:&#34;Unique&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;uuid&#34;,&#34;text&#34;:&#34;UUID&#34;,&#34;title&#34;:&#34;UUID&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;other-rules&#34;,&#34;text&#34;:&#34;Other rules&#34;,&#34;title&#34;:&#34;Other rules&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-rules&#34;,&#34;text&#34;:&#34;Custom rules&#34;,&#34;title&#34;:&#34;Custom rules&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;validation-attributes&#34;,&#34;text&#34;:&#34;Validation attributes&#34;,&#34;title&#34;:&#34;Validation attributes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;sending-validation-notifications&#34;,&#34;text&#34;:&#34;Sending validation notifications&#34;,&#34;title&#34;:&#34;Sending validation notifications&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#getting-started" x-bind:class="current == 'getting-started' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -695,6 +699,10 @@ Page::$reportValidationErrorUsing = function (ValidationException $exception) {
                             </li><li>
                               <a href="#alpha-numeric" x-bind:class="current == 'alpha-numeric' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Alpha Numeric
+                              </a>
+                            </li><li>
+                              <a href="#ascii" x-bind:class="current == 'ascii' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                ASCII
                               </a>
                             </li><li>
                               <a href="#before-date" x-bind:class="current == 'before-date' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
@@ -878,10 +886,6 @@ Page::$reportValidationErrorUsing = function (ValidationException $exception) {
       <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
     </a>
 
-    <a href="https://devdojo.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/devdojo.30600843.png" alt="Devdojo" class="block rounded-xl" width="224" height="82" loading="lazy">
-    </a>
-
     <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
@@ -890,16 +894,16 @@ Page::$reportValidationErrorUsing = function (ValidationException $exception) {
       <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
     </a>
 
+    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
+      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
+    </a>
+
     <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
       <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
     </a>
 
     <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
       <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://larasapien.com/?utm_source=filamentphp.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/larasapien.7244da4a.png" alt="Larasapien" class="block rounded-xl" width="224" height="113" loading="lazy">
     </a>
 
     <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">
