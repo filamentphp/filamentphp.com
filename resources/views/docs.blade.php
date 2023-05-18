@@ -233,6 +233,18 @@
                     </a>
 
                     <a
+                        href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://github.com/filamentphp/filament/assets/41773797/68e31a53-0d4e-463e-91bc-3b9258807908"
+                            alt="Lucky Media"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://docuwriter.ai"
                         target="__blank"
                         class="block mx-auto max-w-xs"
@@ -264,18 +276,6 @@
                         <img
                             src="https://user-images.githubusercontent.com/41773797/166236825-250ad64d-92b1-4291-bd97-306d51bb0ce7.png"
                             alt="Flare"
-                            class="block rounded-xl"
-                        />
-                    </a>
-
-                    <a
-                        href="https://larasapien.com/?utm_source=filamentphp.com"
-                        target="__blank"
-                        class="block mx-auto max-w-xs"
-                    >
-                        <img
-                            src="https://user-images.githubusercontent.com/41773797/181019787-8cdb8813-5973-4a63-ae59-d85ff91dedd0.png"
-                            alt="Larasapien"
                             class="block rounded-xl"
                         />
                     </a>
