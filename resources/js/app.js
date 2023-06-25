@@ -29,3 +29,7 @@ docsearch({
     container: '#docsearch',
     debug: false,
 })
+
+import.meta.glob([
+  '../svg/**',
+]);

@@ -1,19 +1,45 @@
+# node_modules
 /node_modules
-/public/css
+
+# public
 /public/hot
-/public/build
+/public/css
 /public/js
-/public/mix-manifest.json
 /public/storage
+/public/build
+/public/mix-manifest.json
+
+# storage
 /storage/*.key
+
+# vendor
 /vendor
-.env
-.env.backup
-.phpunit.result.cache
-docker-compose.override.yml
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
+
+# ide
+/.fleet
 /.idea
 /.vscode
+_ide_helper*
+.phpstorm.meta.php
+.phpunit.result.cache
+
+# .env
+.env*
+
+# cache
+*.cache
+
+# homestead
+Homestead.json
+Homestead.yaml
+
+# docker
+docker-compose.override.yml
+
+# package managers
+npm-debug.log
+yarn-error.log
+
+# windows 
+*:Zone.Identifier
+Thumbs.db

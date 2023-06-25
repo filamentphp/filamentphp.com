@@ -4,7 +4,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
     content: [
         './config/markdown.php',
-        './resources/views/**/*.blade.php',
+        './resources/**/*.{js,blade.php}',
         './vendor/filament/**/*.blade.php',
     ],
     theme: {
@@ -14,6 +14,10 @@ module.exports = {
                 primary: colors.amber,
                 success: colors.green,
                 warning: colors.amber,
+                'cream': '#FFF9F5',
+                'butter': '#FDAE4B',
+                'midnight': '#0F033A',
+                'evening': '#251A4D',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

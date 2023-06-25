@@ -16,6 +16,7 @@
 
         <x-seo::meta />
 
+        <!-- Previewify -->
         @if ($previewify)
             <meta property="og:image" content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}">
             <meta name="twitter:image" content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}">
@@ -43,7 +44,7 @@
         @stack('scripts')
     </head>
 
-    <body class="antialiased font-vietnam bg-[#FFF9F5] text-[#0F033A]">
+    <body class="antialiased font-vietnam bg-cream text-midnight relative overflow-clip min-h-screen">
         @if ($docSearch)
             <div id="docsearch" class="hidden"></div>
         @endif
