@@ -43,10 +43,7 @@
         @stack('scripts')
     </head>
 
-    <body @class([
-        'antialiased font-sans bg-gray-50 text-gray-900',
-        'dark:text-white dark:bg-gray-900' => $darkMode,
-    ])>
+    <body class="antialiased font-vietnam bg-[#FFF9F5] text-[#0F033A]">
         @if ($docSearch)
             <div id="docsearch" class="hidden"></div>
         @endif

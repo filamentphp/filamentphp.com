@@ -20,6 +20,7 @@ module.exports = {
                 heading: ['Lexend', ...fontFamily.sans],
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],
+                vietnam: ['Be Vietnam Pro', ...fontFamily.sans],
             },
             maxWidth: {
                 '8xl': '88rem',

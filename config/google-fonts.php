@@ -7,7 +7,7 @@ return [
      * The google-fonts:fetch command will prefetch these fonts.
      */
     'fonts' => [
-        'default' => 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend:wght@700&family=Kalam:wght@400;700&family=JetBrains+Mono',
+        'default' => 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend:wght@700&family=Kalam:wght@400;700&family=JetBrains+Mono&family=Be+Vietnam+Pro',
     ],
 
     /*
