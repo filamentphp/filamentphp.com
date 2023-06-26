@@ -1,8 +1,9 @@
-<div class="pt-20 max-w-screen-lg mx-auto">
-    <div class="flex gap-5 items-start justify-between">
-        <div>
+<div class="pt-20 px-5 max-w-screen-lg mx-auto">
+    <div class="flex gap-0 md:gap-20 lg:gap-40 items-start justify-center xl:justify-between">
+        <div class="pl-10 xl:pl-0">
             {{-- Accelerated --}}
-            <div class="text-4xl font-black italic relative"
+            <div
+                class="text-3xl lg:text-4xl font-black italic relative"
                 x-data="{}"
                 x-init="$nextTick(() => {
                     gsap.timeline()
@@ -85,7 +86,8 @@
             </div>
 
             {{-- Header --}}
-            <div class="pt-3"
+            <div
+                class="pt-3"
                 x-data="{}"
                 x-init="$nextTick(() => {
                     gsap.fromTo($refs.title, {
@@ -124,7 +126,7 @@
                         x: -60,
                     }, {
                         autoAlpha: 1,
-                        scale: 0.65,
+                        scale: 1,
                         rotate: 0,
                         x: 0,
                         duration: 0.8,
@@ -134,10 +136,10 @@
                 <div class="font-black space-y-3 relative">
                     {{-- Title --}}
                     <div x-ref="title">
-                        <div class="text-7xl">
+                        <div class="text-6xl lg:text-7xl">
                             Laravel
                         </div>
-                        <div class="text-5xl">
+                        <div class="text-4xl lg:text-5xl">
                             Development
                             <span class="inline-block text-butter -translate-x-2">.</span>
                         </div>
@@ -145,15 +147,16 @@
 
                     {{-- Star --}}
                     <div
-                        class="absolute top-1 -left-20">
-                        <svg x-ref="star1" width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
+                        x-ref="star1"
+                        class="absolute top-1 -left-14 lg:-left-20">
+                        <svg  width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
                     </div>
                 </div>
                 <div class="pt-5 relative">
                     {{-- Description --}}
                     <div
                         x-ref="description"
-                        class="text-2xl font-medium leading-normal opacity-90">
+                        class="text-xl lg:text-2xl font-medium leading-normal opacity-90">
                         Build web apps that are beautiful,
                         <br>
                         powerful and intuitive, using the
@@ -162,8 +165,10 @@
                     </div>
 
                     {{-- Star --}}
-                    <div class="absolute top-1 -right-5">
-                        <svg x-ref="star2" width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
+                    <div
+                        x-ref="star2"
+                        class="absolute top-1 right-10 lg:-right-5">
+                        <svg  width="31" height="31" fill="none" class="scale-[0.65]" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
                     </div>
                 </div>
             </div>
@@ -316,7 +321,7 @@
             })"
             class="relative">
             {{-- Rocket --}}
-            <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt="" class="w-80" />
+            <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt="" class="w-60 lg:w-80" />
 
             {{-- Decoration Circles --}}
             <div x-ref="circle1" class="absolute bottom-0 -right-5 w-4 h-4 rounded-full bg-[#FFCEA0]"></div>
