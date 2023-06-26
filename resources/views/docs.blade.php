@@ -281,6 +281,18 @@
                     </a>
 
                     <a
+                        href="https://native-media.fr"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://github.com/filamentphp/filament/assets/44533235/31c1de77-3a70-413a-8564-3c82f512c424"
+                            alt="Native Media"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://ohdear.app"
                         target="__blank"
                         class="block mx-auto max-w-xs"
