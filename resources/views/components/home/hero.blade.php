@@ -8,46 +8,49 @@
                     gsap.timeline()
                     .fromTo($refs.accelerated, {
                         autoAlpha: 0,
-                        x: -30,
+                        x: -100,
+                    }, {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.5,
+                        ease: 'circ.out',
+                    })
+                    .fromTo($refs.shadow, {
+                        autoAlpha: 0,
+                        x: -100,
                     }, {
                         autoAlpha: 1,
                         x: 0,
                         duration: 0.7,
                         ease: 'circ.out',
-                    })
-                    .fromTo($refs.shadow, {
-                        autoAlpha: 0,
-                    }, {
-                        autoAlpha: 1,
-                        duration: 0.3,
-                    }, '<0.1')
+                    }, '<0.01')
                     .fromTo($refs.line1, {
                         autoAlpha: 0,
-                        x: -30,
+                        x: -50,
                     }, {
                         autoAlpha: 1,
                         x: 0,
                         duration: 0.3,
                         ease: 'circ.out',
-                    }, '<0.1')
+                    }, '<0.2')
                     .fromTo($refs.line2, {
                         autoAlpha: 0,
-                        x: -30,
+                        x: -50,
                     }, {
                         autoAlpha: 1,
                         x: 0,
                         duration: 0.3,
                         ease: 'circ.out',
-                    }, '<0.05')
+                    }, '<0.02')
                     .fromTo($refs.line3, {
                         autoAlpha: 0,
-                        x: -30,
+                        x: -50,
                     }, {
                         autoAlpha: 1,
                         x: 0,
                         duration: 0.3,
                         ease: 'circ.out',
-                    }, '<0.05')
+                    }, '<0.02')
                 })">
                 {{-- Title --}}
                 <div 
@@ -105,27 +108,27 @@
                         autoAlpha: 0,
                         scale: 0,
                         rotate: 200,
-                        x: 20,
+                        x: 50,
                     }, {
                         autoAlpha: 1,
                         scale: 1,
                         rotate: 0,
                         x: 0,
                         duration: 0.8,
-                        ease: 'back.out',
+                        ease: 'expo.out',
                     })
                     gsap.fromTo($refs.star2, {
                         autoAlpha: 0,
                         scale: 0,
                         rotate: -200,
-                        x: -40,
+                        x: -60,
                     }, {
                         autoAlpha: 1,
                         scale: 0.65,
                         rotate: 0,
                         x: 0,
                         duration: 0.8,
-                        ease: 'back.out',
+                        ease: 'expo.out',
                     })
                 })">
                 <div class="font-black space-y-3 relative">
