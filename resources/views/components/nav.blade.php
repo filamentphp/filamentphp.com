@@ -22,10 +22,9 @@
     <img
         src="{{ Vite::asset('resources/svg/background-blob.svg') }}" alt=""
         class="absolute z-[-100]
-        -top-[10rem] -right-[5rem]
-        min-[400px]:-top-[20rem]
-        sm:-top-[32rem] sm:-right-[10rem]
-        lg:-top-[40rem] lg:-right-[10rem]
+        -top-[10rem,clamp(50vw),40rem] -right-[5rem]
+        sm:-right-[10rem]
+        lg:-right-[10rem]
         ">
 
     <button

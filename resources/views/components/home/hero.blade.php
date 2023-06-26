@@ -336,7 +336,10 @@
                 })"
                 class="relative">
                 {{-- Rocket --}}
-                <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt="" class="w-32 min-[550px]:w-40 md:w-60 lg:w-80" />
+                <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt=""
+                    class="w-32 min-[550px]:w-40 md:w-60 lg:w-80"
+                    />
+
                 {{-- Decoration Circles --}}
                 <div x-ref="circle1"
                     class="hidden min-[550px]:block
