@@ -44,7 +44,7 @@
         @stack('scripts')
     </head>
 
-    <body class="antialiased font-vietnam bg-cream text-midnight relative overflow-clip min-h-screen">
+    <body class="antialiased font-vietnam bg-cream text-midnight relative overflow-clip min-h-screen selection:bg-stone-500/10">
         @if ($docSearch)
             <div id="docsearch" class="hidden"></div>
         @endif

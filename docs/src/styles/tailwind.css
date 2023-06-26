@@ -6,6 +6,9 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
     iframe {
         max-width: 100%;
     }

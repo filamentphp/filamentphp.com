@@ -31,5 +31,6 @@ docsearch({
 })
 
 import.meta.glob([
+  '../images/**',
   '../svg/**',
 ]);

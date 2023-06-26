@@ -3,6 +3,5 @@
     'subtitle' => 'Rapidly build Laravel UIs using the TALL stack.',
     'code' => 'composer require filament/filament',
 ]">
-
-
+    <x-home.hero />
 </x-layouts.app>
