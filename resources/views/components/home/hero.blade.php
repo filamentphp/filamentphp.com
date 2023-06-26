@@ -1,9 +1,14 @@
-<div class="pt-20 px-5 max-w-screen-lg mx-auto">
-    <div class="flex gap-0 md:gap-20 lg:gap-40 items-start justify-center xl:justify-between">
-        <div class="pl-10 xl:pl-0">
+<div class="pt-20 px-5 min-[550px]:px-10 w-full max-w-screen-lg mx-auto">
+    <div class="flex relative
+        md:gap-20 lg:gap-40
+        items-start
+        justify-center min-[550px]:justify-start xl:justify-between
+        ">
+        <div class="sm:shrink-0 min-[500px]:pl-10 sm:pl-14 xl:pl-0">
             {{-- Accelerated --}}
             <div
-                class="text-3xl lg:text-4xl font-black italic relative"
+                class="translate-x-10 min-[500px]:translate-x-0
+                text-3xl lg:text-4xl font-black italic relative"
                 x-data="{}"
                 x-init="$nextTick(() => {
                     gsap.timeline()
@@ -149,7 +154,7 @@
                     <div
                         x-ref="star1"
                         class="absolute top-1 -left-14 lg:-left-20">
-                        <svg  width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
+                        <svg  width="31" height="31" fill="none" class="hidden min-[450px]:block scale-75 min-[500px]:scale-100" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
                     </div>
                 </div>
                 <div class="pt-5 relative">
@@ -167,8 +172,8 @@
                     {{-- Star --}}
                     <div
                         x-ref="star2"
-                        class="absolute top-1 right-10 lg:-right-5">
-                        <svg  width="31" height="31" fill="none" class="scale-[0.65]" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
+                        class="absolute top-1 -right-10 min-[500px]:right-10 lg:-right-5">
+                        <svg  width="31" height="31" fill="none" class="hidden min-[450px]:block scale-[0.65]" xmlns="http://www.w3.org/2000/svg"><path d="m17.664 29.354 3.06-8.755 8.679-3.27a2.183 2.183 0 0 0-.05-4.092l-8.754-3.06-3.27-8.679a2.183 2.183 0 0 0-4.092.05l-3.06 8.754-8.68 3.27a2.183 2.183 0 0 0 .05 4.092l8.755 3.06 3.27 8.679a2.183 2.183 0 0 0 4.092-.05Zm-5.325-9.391a2.142 2.142 0 0 0-1.325-1.294l-8.741-3.06 8.665-3.27a2.143 2.143 0 0 0 1.294-1.325l3.06-8.741 3.27 8.665a2.142 2.142 0 0 0 1.325 1.294l8.74 3.06-8.664 3.27a2.141 2.141 0 0 0-1.294 1.325l-3.06 8.741-3.27-8.665Z" fill="#0F033A"/></svg>
                     </div>
                 </div>
             </div>
@@ -198,7 +203,11 @@
                         duration: 0.5,
                     })
                 })"
-                class="pt-10 flex gap-5 items-center text-white">
+                class="pt-10
+                flex flex-col min-[500px]:flex-row gap-5
+                min-[500px]:items-center
+                text-white
+                ">
                 <a
                     x-ref="getstarted"
                     href="#"
@@ -207,7 +216,7 @@
                     <div class="px-9 py-4
                         rounded-tr-3xl rounded-bl-3xl
                         transition duration-200
-                        flex gap-3 items-center
+                        flex gap-3 items-center justify-center
                         bg-midnight
                         group-hover:translate-x-0.5 group-hover:-translate-y-0.5
                         ">
@@ -236,7 +245,7 @@
                     <div class="px-9 py-4
                         rounded-tl-3xl rounded-br-3xl
                         transition duration-200
-                        flex gap-3 items-center
+                        flex gap-3 items-center justify-center
                         bg-butter
                         group-hover:-translate-x-0.5 group-hover:-translate-y-0.5
                         ">
@@ -278,54 +287,64 @@
                         delay: 0.2,
                     })
                 })"    
-                class="pt-2 -translate-x-32">
+                class="pt-2 hidden min-[500px]:block -translate-x-16 lg:-translate-x-32">
                 <img x-ref="arrow" src="{{ Vite::asset('resources/svg/home/decoration-up-arrow-red.svg') }}" alt="" class="w-32" />
             </div>
         </div>
 
-        <div
-            x-data="{}"
-            x-init="$nextTick(() => {
-                gsap.fromTo($refs.rocket, {
-                    autoAlpha: 0,
-                    scale: 0.9,
-                    x: -50,
-                    y: 50,
-                }, {
-                    autoAlpha: 1,
-                    scale: 1,
-                    x: 0,
-                    y: 0,
-                    duration: 0.8,
-                    ease: 'circ.out'
-                })
-                gsap.timeline()
-                .fromTo($refs.circle1, {
-                    autoAlpha: 0,
-                    scale: 0,
-                }, {
-                    autoAlpha: 1,
-                    scale: 1,
-                    duration: 0.7,
-                    ease: 'back.out'
-                })
-                .fromTo($refs.circle2, {
-                    autoAlpha: 0,
-                    scale: 0,
-                }, {
-                    autoAlpha: 1,
-                    scale: 1,
-                    duration: 0.7,
-                    ease: 'back.out'
-                }, '<0.1')
-            })"
-            class="relative">
-            {{-- Rocket --}}
-            <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt="" class="w-60 lg:w-80" />
-
-            {{-- Decoration Circles --}}
-            <div x-ref="circle1" class="absolute bottom-0 -right-5 w-4 h-4 rounded-full bg-[#FFCEA0]"></div>
-            <div x-ref="circle2" class="absolute -bottom-20 right-20 w-7 h-7 rounded-full bg-[#FFE69A]"></div>
+        <div class="hidden min-[500px]:block
+            absolute md:relative
+            -z-10
+            -top-10 right-10
+            md:top-auto md:right-auto
+            ">
+            <div
+                x-data="{}"
+                x-init="$nextTick(() => {
+                    gsap.fromTo($refs.rocket, {
+                        autoAlpha: 0,
+                        scale: 0.9,
+                        x: -50,
+                        y: 50,
+                    }, {
+                        autoAlpha: 1,
+                        scale: 1,
+                        x: 0,
+                        y: 0,
+                        duration: 0.8,
+                        ease: 'circ.out'
+                    })
+                    gsap.timeline()
+                    .fromTo($refs.circle1, {
+                        autoAlpha: 0,
+                        scale: 0,
+                    }, {
+                        autoAlpha: 1,
+                        scale: 1,
+                        duration: 0.7,
+                        ease: 'back.out'
+                    })
+                    .fromTo($refs.circle2, {
+                        autoAlpha: 0,
+                        scale: 0,
+                    }, {
+                        autoAlpha: 1,
+                        scale: 1,
+                        duration: 0.7,
+                        ease: 'back.out'
+                    }, '<0.1')
+                })"
+                class="relative">
+                {{-- Rocket --}}
+                <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt="" class="w-32 min-[550px]:w-40 md:w-60 lg:w-80" />
+                {{-- Decoration Circles --}}
+                <div x-ref="circle1"
+                    class="hidden min-[550px]:block
+                    absolute bottom-0 -right-4 w-3 md:w-4 h-3 md:h-4 rounded-full bg-[#FFCEA0]"></div>
+                <div x-ref="circle2"
+                    class="hidden min-[550px]:block
+                    absolute -bottom-20 right-20 w-5 md:w-7 h-5 md:h-7 rounded-full bg-[#FFE69A]"></div>
+            </div>
         </div>
     </div>
 </div>
