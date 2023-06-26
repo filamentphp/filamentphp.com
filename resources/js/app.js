@@ -6,6 +6,8 @@ import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 import Persist from '@alpinejs/persist'
 import docsearch from '@docsearch/js'
 import Splide from '@splidejs/splide'
+import { gsap } from 'gsap'
+import * as ScrollTrigger from 'gsap/ScrollTrigger'
 
 Alpine.store('sidebar', { isOpen: false })
 
@@ -30,7 +32,12 @@ docsearch({
     debug: false,
 })
 
+// Asset loading
 import.meta.glob([
   '../images/**',
   '../svg/**',
 ]);
+
+// GSAP
+gsap.registerPlugin(ScrollTrigger)
+window.gsap = gsap

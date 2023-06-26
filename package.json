@@ -17,6 +17,7 @@
         "alpinejs": "^3.12.2",
         "autoprefixer": "^10.4.14",
         "axios": "^1.4.0",
+        "gsap": "^3.12.1",
         "laravel-vite-plugin": "^0.7.8",
         "lodash": "^4.17.21",
         "postcss": "^8.4.24",
