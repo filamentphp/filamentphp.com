@@ -1,4 +1,4 @@
-<div class="pt-20 px-5 min-[550px]:px-10 w-full max-w-screen-lg mx-auto">
+<div x-cloak x-data="{}" class="pt-20 px-5 min-[550px]:px-10 w-full max-w-screen-lg mx-auto">
     <div class="flex relative
         md:gap-20 lg:gap-40
         items-start
@@ -11,8 +11,17 @@
                 class="translate-x-10 min-[500px]:translate-x-0
                 text-3xl lg:text-4xl font-black italic relative"
                 x-data="{}"
-                x-init="$nextTick(() => {
+                x-init="() => {
                     gsap.timeline()
+                    .fromTo($refs.supercar, {
+                        autoAlpha: 1,
+                        x: -450,
+                    }, {
+                        autoAlpha: 0,
+                        x: 0,
+                        duration: 1,
+                        ease: 'circ.in',
+                    })
                     .fromTo($refs.accelerated, {
                         autoAlpha: 0,
                         x: -100,
@@ -21,7 +30,7 @@
                         x: 0,
                         duration: 0.5,
                         ease: 'circ.out',
-                    })
+                    }, '>-0.1')
                     .fromTo($refs.shadow, {
                         autoAlpha: 0,
                         x: -100,
@@ -58,7 +67,7 @@
                         duration: 0.3,
                         ease: 'circ.out',
                     }, '<0.02')
-                })">
+                }">
                 {{-- Title --}}
                 <div 
                     x-ref="accelerated"
@@ -89,13 +98,19 @@
                         <div x-ref="line3" class="w-12 h-0.5 rounded-full bg-gradient-to-r from-transparent to-[#FFC089]"></div>
                     </div>
                 </div>
+
+                {{-- Supercar --}}
+                <div class="absolute top-1/2 -translate-y-1/2 right-0">
+                    <img x-ref="supercar" src="{{ Vite::asset('resources/images/home/supercar.webp') }}" alt="" class="w-28"
+                        />
+                </div>
             </div>
 
             {{-- Header --}}
             <div
                 class="pt-3 group/header"
                 x-data="{}"
-                x-init="$nextTick(() => {
+                x-init="() => {
                     gsap.fromTo($refs.title, {
                         autoAlpha: 0,
                         x: 20,
@@ -138,7 +153,7 @@
                         duration: 0.8,
                         ease: 'expo.out',
                     })
-                })">
+                }">
                 <div class="font-black space-y-3 relative">
                     {{-- Title --}}
                     <div x-ref="title">
@@ -204,7 +219,7 @@
             {{-- Links --}}
             <div
                 x-data="{}"
-                x-init="$nextTick(() => {
+                x-init="() => {
                     gsap.fromTo($refs.getstarted, {
                         autoAlpha: 0,
                         x: -10,
@@ -225,7 +240,7 @@
                         y: 0,
                         duration: 0.5,
                     })
-                })"
+                }"
                 class="pt-10
                 flex flex-col min-[500px]:flex-row gap-5
                 min-[500px]:items-center
@@ -298,7 +313,7 @@
             {{-- Decoration Arrow --}}
             <div
                 x-data="{}"
-                x-init="$nextTick(() => {
+                x-init="() => {
                     gsap.fromTo($refs.arrow, {
                         autoAlpha: 0,
                         x: -10,
@@ -309,7 +324,7 @@
                         ease: 'circ.out',
                         delay: 0.2,
                     })
-                })"    
+                }"
                 class="pt-2 hidden min-[500px]:block -translate-x-16 lg:-translate-x-32">
                 <img x-ref="arrow" src="{{ Vite::asset('resources/svg/home/decoration-up-arrow-red.svg') }}" alt="" class="w-32" />
             </div>
@@ -324,7 +339,7 @@
             ">
             <div
                 x-data="{}"
-                x-init="$nextTick(() => {
+                x-init="() => {
                     gsap.fromTo($refs.rocket, {
                         autoAlpha: 0,
                         scale: 0.9,
@@ -357,7 +372,7 @@
                         duration: 0.7,
                         ease: 'back.out'
                     }, '<0.1')
-                })"
+                }"
                 class="relative">
                 {{-- Rocket --}}
                 <img x-ref="rocket" src="{{ Vite::asset('resources/images/home/rocket.webp') }}" alt=""

@@ -9,6 +9,17 @@ import Splide from '@splidejs/splide'
 import { gsap } from 'gsap'
 import * as ScrollTrigger from 'gsap/ScrollTrigger'
 
+// Asset loading
+import.meta.glob([
+  '../images/**',
+  '../svg/**',
+]);
+
+// GSAP
+gsap.registerPlugin(ScrollTrigger)
+window.gsap = gsap
+
+// Alpine
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Clipboard)
@@ -31,13 +42,3 @@ docsearch({
     container: '#docsearch',
     debug: false,
 })
-
-// Asset loading
-import.meta.glob([
-  '../images/**',
-  '../svg/**',
-]);
-
-// GSAP
-gsap.registerPlugin(ScrollTrigger)
-window.gsap = gsap
