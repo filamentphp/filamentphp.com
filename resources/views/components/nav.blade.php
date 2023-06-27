@@ -76,7 +76,7 @@
             </div>
 
             {{-- Packages Menu --}}
-            <div class="p-4 w-screen max-w-4xl z-[100]
+            <div class="p-5 w-screen max-w-4xl z-[100]
                 opacity-0 -translate-y-2 invisible
                 hover:opacity-100 hover:translate-y-0 hover:visible
                 peer-hover:opacity-100 peer-hover:translate-y-0 peer-hover:visible
