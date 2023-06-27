@@ -80,8 +80,9 @@
                 opacity-0 -translate-y-2 invisible
                 hover:opacity-100 hover:translate-y-0 hover:visible
                 peer-hover:opacity-100 peer-hover:translate-y-0 peer-hover:visible
-                absolute top-6 right-1/2
-                translate-x-1/3 min-[1400px]:translate-x-1/2
+                absolute top-6
+                -right-[40rem] min-[1100px]:-right-[30rem] min-[1400px]:right-1/2
+                min-[1400px]:translate-x-1/2
                 transition duration-300 delay-75
                 ">
                 <div class="px-8 pt-7 pb-8 rounded-xl
@@ -231,7 +232,7 @@
                     </div>
                     {{-- Seperator --}}
                     <div class="pt-10 pl-4 pr-6">
-                        <div class="w-px h-80 bg-hurricane/20 rounded-full"></div>
+                        <div class="w-px h-80 bg-hurricane/10 rounded-full"></div>
                     </div>
 
                     {{-- Right Side --}}
