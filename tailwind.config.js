@@ -21,6 +21,7 @@ module.exports = {
                 'merino': '#F2E7DD',
                 'hurricane': '#807575',
                 'rum': '#6C6489',
+                'peach-orange': '#FFC497',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

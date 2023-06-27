@@ -76,7 +76,7 @@
             </div>
 
             {{-- Packages Menu --}}
-            <div class="p-4 w-screen max-w-3xl z-[100]
+            <div class="p-4 w-screen max-w-[51rem] z-[100]
                 opacity-0 -translate-y-2 invisible
                 hover:opacity-100 hover:translate-y-0 hover:visible
                 peer-hover:opacity-100 peer-hover:translate-y-0 peer-hover:visible
@@ -84,74 +84,193 @@
                 translate-x-1/3 min-[1400px]:translate-x-1/2
                 transition duration-300 delay-75
                 ">
-                <div class="p-7 rounded-xl
-                    flex justify-between gap-8
+                <div class="px-8 py-7 rounded-xl
+                    flex items-start gap-5
                     bg-cream shadow-xl shadow-black/5
+                    ring-1 ring-black/5
                     ">
-                    <a
-                        href="#"
-                        class="group/package-link
-                        flex gap-5 items-center
-                        transition duration-300
-                        hover:translate-x-0.5
-                        ">
-                        <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
-                            bg-merino text-hurricane
-                            grid place-items-center
+                    {{-- Left Side --}}
+                    <div class="grid gap-7">
+                        <div class="text-hurricane/70 font-medium text-sm">
+                            Essentials
+                        </div>
+                        <a
+                            href="#"
+                            class="group/package-link
+                            flex gap-5 items-center
+                            transition duration-300
+                            hover:translate-x-0.5
+                            will-change-transform
                             ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M7 18V9m5 9V6m5 12v-5m5-1c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/></svg>
-                        </div>
-                        <div class="space-y-0.5">
-                            <div class="flex gap-2 items-center">
-                                <div class="text-evening text-base font-bold">
-                                    Panel Builder
+                            <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                                bg-merino text-hurricane
+                                grid place-items-center
+                                ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m17.498 15.498l-.01-10a2 2 0 0 0-2-1.998h-10a2 2 0 0 0-1.995 1.85l-.006.152l.01 10a2 2 0 0 0 2 1.998h10a2 2 0 0 0 1.995-1.85zM7.5 7.5v9.817m10-9.817h-14"/></svg>
+                            </div>
+                            <div class="space-y-0.5">
+                                <div class="flex gap-2 items-center">
+                                    <div class="text-evening text-base font-bold">
+                                        Panel Builder
+                                    </div>
+                                    <div class="text-butter
+                                        opacity-0 group-hover/package-link:opacity-100
+                                        scale-x-90 group-hover/package-link:scale-x-100
+                                        -translate-x-1 group-hover/package-link:translate-x-0
+                                        transition duration-300
+                                        ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                    </div>
                                 </div>
-                                <div class="text-butter
-                                    opacity-0 group-hover/package-link:opacity-100
-                                    scale-x-90 group-hover/package-link:scale-x-100
-                                    -translate-x-1 group-hover/package-link:translate-x-0
-                                    transition duration-300
-                                    ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                <div class="max-w-xs text-sm font-medium text-rum">
+                                    Fully featured, simply intuitive and insanely attractive.
                                 </div>
                             </div>
-                            <div class="max-w-[15rem] text-sm font-medium text-rum">
-                                Fully featured, simply intuitive and insanely attractive.
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        class="group/package-link
-                        flex gap-5 items-center
-                        transition duration-300
-                        hover:translate-x-0.5
-                        ">
-                        <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
-                            bg-merino text-hurricane
-                            grid place-items-center
+                        </a>
+                        <a
+                            href="#"
+                            class="group/package-link
+                            flex gap-5 items-center
+                            transition duration-300
+                            hover:translate-x-0.5
+                            will-change-transform
                             ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M7 18V9m5 9V6m5 12v-5m5-1c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/></svg>
-                        </div>
-                        <div class="space-y-0.5">
-                            <div class="flex gap-2 items-center">
-                                <div class="text-evening text-base font-bold">
-                                    Panel Builder
+                            <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                                bg-merino text-hurricane
+                                grid place-items-center
+                                ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 24 24"><path fill="currentColor" d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.514 2.514 0 0 0 2.5-2.5V5.56a2.514 2.514 0 0 0-2.5-2.5ZM8.71 19.94H5.56a1.5 1.5 0 0 1-1.5-1.5v-3.11h4.65Zm0-5.61H4.06V9.67h4.65Zm0-5.66H4.06V5.56a1.5 1.5 0 0 1 1.5-1.5h3.15Zm11.23 9.77a1.511 1.511 0 0 1-1.5 1.5H9.71v-4.61h10.23Zm0-4.11H9.71V9.67h10.23Zm0-5.66H9.71V4.06h8.73a1.511 1.511 0 0 1 1.5 1.5Z"/></svg>
+                            </div>
+                            <div class="space-y-0.5">
+                                <div class="flex gap-2 items-center">
+                                    <div class="text-evening text-base font-bold">
+                                        Table Builder
+                                    </div>
+                                    <div class="text-butter
+                                        opacity-0 group-hover/package-link:opacity-100
+                                        scale-x-90 group-hover/package-link:scale-x-100
+                                        -translate-x-1 group-hover/package-link:translate-x-0
+                                        transition duration-300
+                                        ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                    </div>
                                 </div>
-                                <div class="text-butter
-                                    opacity-0 group-hover/package-link:opacity-100
-                                    scale-x-90 group-hover/package-link:scale-x-100
-                                    -translate-x-1 group-hover/package-link:translate-x-0
-                                    transition duration-300
-                                    ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                <div class="max-w-xs text-sm font-medium text-rum">
+                                    Craft beautiful, optimized, and interactive datatables for any situation.
                                 </div>
                             </div>
-                            <div class="max-w-[15rem] text-sm font-medium text-rum">
-                                Fully featured, simply intuitive and insanely attractive.
+                        </a>
+                        <a
+                            href="#"
+                            class="group/package-link
+                            flex gap-5 items-center
+                            transition duration-300
+                            hover:translate-x-0.5
+                            will-change-transform
+                            ">
+                            <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                                bg-merino text-hurricane
+                                grid place-items-center
+                                ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 48 48"><path fill="currentColor" d="M21 21.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-2.5 0a2 2 0 1 0-4 0a2 2 0 0 0 4 0Zm-2 15.5a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9Zm0-2.5a2 2 0 1 1 0-4a2 2 0 0 1 0 4ZM13.25 12a1.25 1.25 0 1 0 0 2.5h21.5a1.25 1.25 0 1 0 0-2.5h-21.5ZM23 21.75c0-.69.56-1.25 1.25-1.25h10.5a1.25 1.25 0 1 1 0 2.5h-10.5c-.69 0-1.25-.56-1.25-1.25ZM24.25 31a1.25 1.25 0 1 0 0 2.5h10.5a1.25 1.25 0 1 0 0-2.5h-10.5Zm-12-25A6.25 6.25 0 0 0 6 12.25v23.5A6.25 6.25 0 0 0 12.25 42h23.5A6.25 6.25 0 0 0 42 35.75v-23.5A6.25 6.25 0 0 0 35.75 6h-23.5ZM8.5 12.25a3.75 3.75 0 0 1 3.75-3.75h23.5a3.75 3.75 0 0 1 3.75 3.75v23.5a3.75 3.75 0 0 1-3.75 3.75h-23.5a3.75 3.75 0 0 1-3.75-3.75v-23.5Z"/></svg>
                             </div>
+                            <div class="space-y-0.5">
+                                <div class="flex gap-2 items-center">
+                                    <div class="text-evening text-base font-bold">
+                                        Form Builder
+                                    </div>
+                                    <div class="text-butter
+                                        opacity-0 group-hover/package-link:opacity-100
+                                        scale-x-90 group-hover/package-link:scale-x-100
+                                        -translate-x-1 group-hover/package-link:translate-x-0
+                                        transition duration-300
+                                        ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                    </div>
+                                </div>
+                                <div class="max-w-xs text-sm font-medium text-rum">
+                                    Easily build stunning forms with over 25 components out of the box.
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            href="#"
+                            class="group/package-link
+                            flex gap-5 items-center
+                            transition duration-300
+                            hover:translate-x-0.5
+                            will-change-transform
+                            ">
+                            <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                                bg-merino text-hurricane
+                                grid place-items-center
+                                ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.75 9.71v-.705C18.75 5.136 15.726 2 12 2S5.25 5.136 5.25 9.005v.705a4.4 4.4 0 0 1-.692 2.375L3.45 13.81c-1.011 1.575-.239 3.716 1.52 4.214a25.775 25.775 0 0 0 14.06 0c1.759-.498 2.531-2.639 1.52-4.213l-1.108-1.725a4.4 4.4 0 0 1-.693-2.375Z"/><path stroke-linecap="round" d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3"/></g></svg>
+                            </div>
+                            <div class="space-y-0.5">
+                                <div class="flex gap-2 items-center">
+                                    <div class="text-evening text-base font-bold">
+                                        Notifications
+                                    </div>
+                                    <div class="text-butter
+                                        opacity-0 group-hover/package-link:opacity-100
+                                        scale-x-90 group-hover/package-link:scale-x-100
+                                        -translate-x-1 group-hover/package-link:translate-x-0
+                                        transition duration-300
+                                        ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                    </div>
+                                </div>
+                                <div class="max-w-xs text-sm font-medium text-rum">
+                                    Effortless solution to send notifications.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {{-- Seperator --}}
+                    <div class="pt-14">
+                        <div class="w-px h-80 bg-hurricane/20 rounded-full"></div>
+                    </div>
+
+                    {{-- Right Side --}}
+                    <div class="grid gap-7">
+                        <div class="text-hurricane/70 font-medium text-sm">
+                            New in V3
                         </div>
-                    </a>
+                        <a
+                            href="#"
+                            class="group/package-link
+                            flex gap-5 items-center
+                            transition duration-300
+                            hover:translate-x-0.5
+                            will-change-transform
+                            ">
+                            <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                                bg-merino text-hurricane
+                                grid place-items-center
+                                ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m17.498 15.498l-.01-10a2 2 0 0 0-2-1.998h-10a2 2 0 0 0-1.995 1.85l-.006.152l.01 10a2 2 0 0 0 2 1.998h10a2 2 0 0 0 1.995-1.85zM7.5 7.5v9.817m10-9.817h-14"/></svg>
+                            </div>
+                            <div class="space-y-0.5">
+                                <div class="flex gap-2 items-center">
+                                    <div class="text-evening text-base font-bold">
+                                        Info Lists
+                                    </div>
+                                    <div class="text-butter
+                                        opacity-0 group-hover/package-link:opacity-100
+                                        scale-x-90 group-hover/package-link:scale-x-100
+                                        -translate-x-1 group-hover/package-link:translate-x-0
+                                        transition duration-300
+                                        ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                    </div>
+                                </div>
+                                <div class="max-w-xs text-sm font-medium text-rum">
+                                    Summarize your data into beautiful lists and report cards.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
