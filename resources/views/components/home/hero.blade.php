@@ -144,17 +144,25 @@
                     <div x-ref="title">
                         <div class="text-6xl lg:text-7xl relative max-w-fit">
                             Laravel
+
+                            {{-- Heart Shapes --}}
                             <div class="opacity-0 group-hover/header:opacity-100
                                 -translate-x-1 group-hover/header:translate-x-0
                                 transition duration-200 ease-out
-                                absolute -top-7 -right-5 text-rose-500 rotate-12
+                                absolute rotate-12
+                                -top-5 min-[500px]:-top-7
+                                -right-7 min-[500px]:-right-5
+                                text-rose-500
                                 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 9.137C2 14 6.02 16.591 8.962 18.911C10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138c0-4.863-5.5-8.312-10-3.636C7.5.825 2 4.274 2 9.137Z"/></svg>
                             </div>
                             <div class="opacity-0 group-hover/header:opacity-100
                                 -translate-x-1 group-hover/header:translate-x-0
-                                transition duration-200 ease-out
-                                absolute top-0 -right-10 text-rose-500 -rotate-12 delay-75
+                                transition duration-200 ease-out delay-75
+                                absolute -rotate-12
+                                top-2 min-[500px]:top-0
+                                -right-12 min-[500px]:-right-10
+                                text-rose-500
                                 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="scale-75" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 9.137C2 14 6.02 16.591 8.962 18.911C10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138c0-4.863-5.5-8.312-10-3.636C7.5.825 2 4.274 2 9.137Z"/></svg>
                             </div>
