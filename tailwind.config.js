@@ -18,6 +18,9 @@ module.exports = {
                 'butter': '#FDAE4B',
                 'midnight': '#0F033A',
                 'evening': '#251A4D',
+                'merino': '#F2E7DD',
+                'hurricane': '#807575',
+                'rum': '#6C6489',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

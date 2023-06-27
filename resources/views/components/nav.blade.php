@@ -1,7 +1,8 @@
 <nav
+    x-cloak
     x-data="{}"
     x-ref="nav"
-    x-init="$nextTick(() => {
+    x-init="() => {
         gsap.timeline()
         .fromTo($refs.nav.querySelectorAll('.fadein'), {
             autoAlpha: 0,
@@ -12,7 +13,7 @@
             duration: 0.5,
             stagger: 0.05,
         })
-    })"
+    }"
     class="max-w-8xl mx-auto
     flex items-center justify-between
     py-10 px-8
@@ -54,8 +55,107 @@
     </a>
 
     {{-- Nav Links --}}
-    <div class="flex items-center justify-end gap-8 sm:gap-16
+    <div class="flex items-center justify-end gap-8 sm:gap-14
         font-semibold">
+        <div class="relative group/packages">
+            <div class="peer text-evening
+                hidden lg:block
+                opacity-80 group-hover/packages:opacity-100
+                transition duration-300 delay-75
+                ">
+                <div class="fadein flex gap-2 items-center">
+                    <div class="">
+                        Packages
+                    </div>
+                    <div class="group-hover/packages:rotate-180
+                        transition duration-200
+                        ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="scale-90" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9l-7 6l-7-6"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Packages Menu --}}
+            <div class="p-4 w-screen max-w-3xl z-[100]
+                opacity-0 -translate-y-2 invisible
+                hover:opacity-100 hover:translate-y-0 hover:visible
+                peer-hover:opacity-100 peer-hover:translate-y-0 peer-hover:visible
+                absolute top-6 right-1/2
+                translate-x-1/3 min-[1400px]:translate-x-1/2
+                transition duration-300 delay-75
+                ">
+                <div class="p-7 rounded-xl
+                    flex justify-between gap-8
+                    bg-cream shadow-xl shadow-black/5
+                    ">
+                    <a
+                        href="#"
+                        class="group/package-link
+                        flex gap-5 items-center
+                        transition duration-300
+                        hover:translate-x-0.5
+                        ">
+                        <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                            bg-merino text-hurricane
+                            grid place-items-center
+                            ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M7 18V9m5 9V6m5 12v-5m5-1c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/></svg>
+                        </div>
+                        <div class="space-y-0.5">
+                            <div class="flex gap-2 items-center">
+                                <div class="text-evening text-base font-bold">
+                                    Panel Builder
+                                </div>
+                                <div class="text-butter
+                                    opacity-0 group-hover/package-link:opacity-100
+                                    scale-x-90 group-hover/package-link:scale-x-100
+                                    -translate-x-1 group-hover/package-link:translate-x-0
+                                    transition duration-300
+                                    ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                </div>
+                            </div>
+                            <div class="max-w-[15rem] text-sm font-medium text-rum">
+                                Fully featured, simply intuitive and insanely attractive.
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="group/package-link
+                        flex gap-5 items-center
+                        transition duration-300
+                        hover:translate-x-0.5
+                        ">
+                        <div class="shrink-0 h-[3.25rem] w-[3.25rem] rounded-xl
+                            bg-merino text-hurricane
+                            grid place-items-center
+                            ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M7 18V9m5 9V6m5 12v-5m5-1c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"/></svg>
+                        </div>
+                        <div class="space-y-0.5">
+                            <div class="flex gap-2 items-center">
+                                <div class="text-evening text-base font-bold">
+                                    Panel Builder
+                                </div>
+                                <div class="text-butter
+                                    opacity-0 group-hover/package-link:opacity-100
+                                    scale-x-90 group-hover/package-link:scale-x-100
+                                    -translate-x-1 group-hover/package-link:translate-x-0
+                                    transition duration-300
+                                    ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+                                </div>
+                            </div>
+                            <div class="max-w-[15rem] text-sm font-medium text-rum">
+                                Fully featured, simply intuitive and insanely attractive.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <a
             href="{{ route('docs') }}"
             @class([
@@ -109,12 +209,12 @@
         </a>
 
         {{-- Github --}}
-        <div class="relative group">
+        <div class="relative group/github">
             {{-- Github Icon --}}
             <a
                 href="https://github.com/filamentphp/filament"
                 target="_blank"
-                class="peer text-evening opacity-80 transition duration-300 delay-75 group-hover:opacity-100">
+                class="peer text-evening opacity-80 transition duration-300 delay-75 group-hover/github:opacity-100">
                 <div class="fadein">
                     <svg fill="currentColor" viewBox="0 0 29 29" class="w-7 h-7">
                         <path fill-rule="evenodd" d="M1372.32,16.8097415 C1372.32,23.1517351 1376.33105,28.5314586 1381.89427,30.4295626 C1382.59472,30.5617425 1382.84997,30.1184991 1382.84997,29.7378209 C1382.84997,29.3976778 1382.83794,28.4944483 1382.83107,27.296898 C1378.9369,28.1639984 1378.11527,25.3723581 1378.11527,25.3723581 C1377.47841,23.7139404 1376.56052,23.2724594 1376.56052,23.2724594 C1375.2894,22.3824478 1376.65678,22.4000718 1376.65678,22.4000718 C1378.06198,22.5014098 1378.80111,23.8796059 1378.80111,23.8796059 C1380.04989,26.0729117 1382.07819,25.4393292 1382.87576,25.071869 C1383.00296,24.144847 1383.36478,23.5121457 1383.76443,23.1534975 C1380.6558,22.7913244 1377.38731,21.5594074 1377.38731,16.0589595 C1377.38731,14.4921866 1377.93306,13.2100411 1378.82861,12.207236 C1378.68422,11.8441818 1378.20379,10.384034 1378.96612,8.40838451 C1378.96612,8.40838451 1380.14099,8.02241909 1382.8156,9.87998785 C1383.93202,9.56099359 1385.13009,9.40237767 1386.32043,9.39620927 C1387.50991,9.40237767 1388.70712,9.56099359 1389.82526,9.87998785 C1392.49815,8.02241909 1393.6713,8.40838451 1393.6713,8.40838451 C1394.43535,10.384034 1393.95492,11.8441818 1393.81139,12.207236 C1394.70866,13.2100411 1395.25011,14.4921866 1395.25011,16.0589595 C1395.25011,21.5735066 1391.97647,22.7869184 1388.85838,23.1420419 C1389.3603,23.5852853 1389.80808,24.4611977 1389.80808,25.8006211 C1389.80808,27.7189926 1389.79089,29.2672603 1389.79089,29.7378209 C1389.79089,30.1220239 1390.04356,30.5687921 1390.75347,30.4286814 C1396.31239,28.5261714 1400.32,23.1499727 1400.32,16.8097415 C1400.32,8.8815887 1394.05118,2.455 1386.31871,2.455 C1378.58882,2.455 1372.32,8.8815887 1372.32,16.8097415 Z" transform="translate(-1372 -2)"></path>
@@ -132,11 +232,11 @@
                 transition duration-300 delay-75
                 ">
                 <div class="pl-2.5 pr-4 py-2.5 whitespace-nowrap rounded-xl
-                    bg-white shadow-lg shadow-black/5
+                    bg-cream shadow-xl shadow-black/5
                     flex gap-2 items-center justify-center
                     ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="scale-90 text-butter" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"/></svg>
-                    <div class="text-sm">
+                    <div class="text-sm text-evening">
                         7.1k Stars
                     </div>
                 </div>

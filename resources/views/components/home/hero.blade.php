@@ -19,7 +19,7 @@
                     }, {
                         autoAlpha: 0,
                         x: 0,
-                        duration: 1,
+                        duration: 0.9,
                         ease: 'circ.in',
                     })
                     .fromTo($refs.accelerated, {
