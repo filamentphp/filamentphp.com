@@ -4,6 +4,7 @@
         items-start
         justify-center min-[550px]:justify-start xl:justify-between
         ">
+        {{-- Left Side --}}
         <div class="sm:shrink-0 min-[500px]:pl-10 sm:pl-14 xl:pl-0">
             {{-- Accelerated --}}
             <div
@@ -292,6 +293,7 @@
             </div>
         </div>
 
+        {{-- Right Side --}}
         <div class="hidden min-[500px]:block
             absolute md:relative
             -z-10
