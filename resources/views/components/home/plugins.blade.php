@@ -1,7 +1,7 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-10 pt-20 lg:px-5"
+    class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div class="">
         <div class="flex justify-end">
@@ -14,7 +14,7 @@
         </div>
         <div class="relative mx-auto w-[95%]">
             <div
-                class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-14 text-white"
+                class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-10 text-white lg:p-14"
             >
                 {{-- Header --}}
                 <div class="flex items-center justify-center gap-7">
@@ -37,11 +37,11 @@
                     </div>
                 </div>
                 <div
-                    class="grid grid-cols-2 gap-x-12 gap-y-10 px-16 pb-7 pt-16"
+                    class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center md:px-16 lg:grid-cols-2"
                 >
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -61,7 +61,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1">
+                        <div class="space-y-1 md:w-80 lg:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Panel Builder
@@ -94,7 +94,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -111,7 +111,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1">
+                        <div class="space-y-1 md:w-80 lg:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Table Builder
@@ -144,7 +144,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -161,7 +161,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1">
+                        <div class="space-y-1 md:w-80 lg:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Form Builder
@@ -194,7 +194,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -220,7 +220,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="space-y-1">
+                        <div class="space-y-1 md:w-80 lg:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Notifications
@@ -252,7 +252,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -308,7 +308,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -375,7 +375,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -440,7 +440,7 @@
 
             {{-- Decoration Background --}}
             <div
-                class="absolute -left-2.5 top-2.5 -z-10 h-full w-full rotate-1 rounded-[2.5rem] bg-butter"
+                class="absolute -left-2.5 top-2.5 -z-10 h-full w-full rounded-[2.5rem] bg-butter md:rotate-1"
             ></div>
         </div>
         <div class="flex justify-start">
@@ -448,7 +448,7 @@
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-three-lines.svg') }}"
                 alt=""
-                class="relative -left-5 -top-2 w-14"
+                class="relative -left-7 w-14 md:-left-5 md:-top-2"
             />
         </div>
     </div>
