@@ -4,7 +4,11 @@
     'previewifyData' => [],
 ])
 
-<x-layouts.base {{ $attributes }} :previewify="$previewify" :previewify-data="$previewifyData">
+<x-layouts.base
+    {{ $attributes }}
+    :previewify="$previewify"
+    :previewify-data="$previewifyData"
+>
     <x-nav />
 
     <button
@@ -15,7 +19,7 @@
         x-cloak
         type="button"
         aria-hidden="true"
-        class="fixed z-10 inset-0 w-full h-full bg-black/50 focus:outline-none lg:hidden"
+        class="fixed inset-0 z-10 h-full w-full bg-black/50 focus:outline-none lg:hidden"
     ></button>
 
     <aside
@@ -23,9 +27,9 @@
         x-cloak
         :aria-hidden="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-        class="fixed w-full max-w-xs p-8 space-y-8 inset-y-0 left-0 z-10 overflow-y-auto transition-transform duration-500 ease-in-out transform bg-gray-50"
+        class="fixed inset-y-0 left-0 z-10 w-full max-w-xs transform space-y-8 overflow-y-auto bg-gray-50 p-8 transition-transform duration-500 ease-in-out"
     >
-        <ul class="space-y-2 -mx-3">
+        <ul class="-mx-3 space-y-2">
             @foreach ([
                 route('docs') => 'Documentation',
                 route('plugins') => 'Plugins',
@@ -36,17 +40,18 @@
                 <li>
                     <a
                         href="{{ $url }}"
-                        class="block px-4 py-2 w-full rounded-lg transition hover:bg-gray-500/10 focus:bg-gray-500/10"
+                        class="block w-full rounded-lg px-4 py-2 transition hover:bg-gray-500/10 focus:bg-gray-500/10"
                     >
                         {{ $label }}
                     </a>
                 </li>
             @endforeach
+
             <li>
                 <a
                     href="{{ route('consulting') }}"
                     target="_blank"
-                    class="block px-4 py-2 w-full rounded-lg transition hover:bg-gray-500/10 focus:bg-gray-500/10"
+                    class="block w-full rounded-lg px-4 py-2 transition hover:bg-gray-500/10 focus:bg-gray-500/10"
                 >
                     Consulting
                 </a>
