@@ -3,8 +3,48 @@
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-5 pt-40"
 >
-    <div class="flex items-center justify-between gap-10">
-        <div class="">
+    <div
+        x-data="{}"
+        x-init="
+            () => {
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: $refs.header,
+                        start: 'top bottom',
+                    },
+                })
+                    .fromTo(
+                        $refs.header,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                    )
+                    .fromTo(
+                        $refs.mockup,
+                        {
+                            autoAlpha: 0,
+                            x: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+            }
+        "
+        class="flex items-center justify-between gap-10"
+    >
+        <div x-ref="header">
             {{-- Header --}}
             <div class="text-3xl">
                 <span class="">Live</span>
@@ -53,11 +93,16 @@
         </div>
 
         {{-- Demo Mockup --}}
-        <div class="relative">
+        <div
+            x-ref="mockup"
+            class="group/mockup relative z-10"
+        >
             {{-- Screenshot --}}
-            <div class="w-[33rem] shadow-lg shadow-black/5">
+            <div
+                class="w-[33rem] overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-500 [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(3deg)]"
+            >
                 <div
-                    class="flex h-6 w-full items-center gap-5 rounded-tl-lg rounded-tr-lg bg-[#262B2F]/80 px-3"
+                    class="flex h-6 w-full items-center gap-5 bg-[#262B2F]/80 px-3"
                 >
                     <div class="flex items-center gap-1">
                         <div class="h-1.5 w-1.5 rounded-full bg-red-400"></div>
@@ -77,7 +122,7 @@
                 <img
                     src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"
                     alt=""
-                    class="w-full rounded-bl-lg rounded-br-lg"
+                    class="w-full"
                 />
             </div>
 
