@@ -45,11 +45,12 @@
         class="flex flex-col items-center justify-center gap-20 md:flex-row md:gap-10 lg:justify-between"
     >
         <div x-ref="header">
-            {{-- Header --}}
+            {{-- Live Demo --}}
             <div class="text-3xl">
                 <span class="">Live</span>
                 <span class="font-bold">Demo</span>
             </div>
+
             {{-- Description --}}
             <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-rum">
                 We’ve put together an extensive demo app that showcase all
@@ -57,6 +58,7 @@
                 <br />
                 It’s also open-source!
             </div>
+
             {{-- Links --}}
             <div class="flex flex-wrap items-center gap-5 pt-20">
                 <a
@@ -97,10 +99,11 @@
             x-ref="mockup"
             class="group/mockup relative grid w-full max-w-lg"
         >
-            {{-- Screenshot --}}
+            {{-- Mockup --}}
             <div
                 class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-500 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(3deg)]"
             >
+                {{-- Window Header --}}
                 <div
                     class="flex h-6 w-full items-center gap-5 bg-[#262B2F]/80 px-3"
                 >
@@ -119,6 +122,8 @@
                         demo.filamentphp.com
                     </div>
                 </div>
+
+                {{-- Screenshot --}}
                 <img
                     src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"
                     alt=""

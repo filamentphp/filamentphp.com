@@ -8,4 +8,5 @@
 >
     <x-home.hero />
     <x-home.livedemo />
+    <x-home.plugins />
 </x-layouts.app>
