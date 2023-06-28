@@ -1,7 +1,7 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-40"
+    class="mx-auto w-full max-w-screen-lg px-10 pt-40 lg:px-5"
 >
     <div
         x-data="{}"
@@ -42,7 +42,7 @@
                     )
             }
         "
-        class="flex items-center justify-between gap-10"
+        class="flex flex-col items-center justify-center gap-20 md:flex-row md:gap-10 lg:justify-between"
     >
         <div x-ref="header">
             {{-- Header --}}
@@ -51,7 +51,7 @@
                 <span class="font-bold">Demo</span>
             </div>
             {{-- Description --}}
-            <div class="max-w-[22rem] pt-7 font-medium text-rum">
+            <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-rum">
                 We’ve put together an extensive demo app that showcase all
                 Filament’s features.
                 <br />
@@ -95,11 +95,11 @@
         {{-- Demo Mockup --}}
         <div
             x-ref="mockup"
-            class="group/mockup relative z-10"
+            class="group/mockup relative grid w-full max-w-lg"
         >
             {{-- Screenshot --}}
             <div
-                class="w-[33rem] overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-500 [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(3deg)]"
+                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-500 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(3deg)]"
             >
                 <div
                     class="flex h-6 w-full items-center gap-5 bg-[#262B2F]/80 px-3"
@@ -128,7 +128,7 @@
 
             {{-- Decoration Background --}}
             <div
-                class="absolute -top-8 left-10 -z-10 h-[27rem] w-[35rem] rotate-2 rounded-[3rem] bg-gradient-to-br from-dawn-pink to-transparent"
+                class="relative -z-10 h-[120%] w-[110%] self-center justify-self-center rounded-[3rem] bg-gradient-to-br from-dawn-pink to-transparent [grid-area:1/-1] md:left-10 md:rotate-2 md:justify-self-start lg:h-[25rem]"
             ></div>
         </div>
     </div>
