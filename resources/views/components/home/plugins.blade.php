@@ -14,7 +14,7 @@
         </div>
         <div class="relative mx-auto w-[95%]">
             <div
-                class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-10 text-white lg:p-14"
+                class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-10 text-white min-[900px]:p-14"
             >
                 {{-- Header --}}
                 <div class="flex items-center justify-center gap-7">
@@ -23,21 +23,21 @@
                         <img
                             src="{{ Vite::asset('resources/images/home/lightingbolt.webp') }}"
                             alt=""
-                            class="w-5"
+                            class="w-4 md:w-5"
                         />
                         {{-- Blur Background --}}
                         <div
-                            class="absolute right-1/2 top-1/2 h-5 w-5 -translate-y-1/2 translate-x-1/2 rounded-full bg-yellow-400 blur-lg"
+                            class="absolute right-1/2 top-1/2 h-4 w-4 -translate-y-1/2 translate-x-1/2 rounded-full bg-yellow-400 blur-lg md:h-5 md:w-5"
                         ></div>
                     </div>
                     {{-- Batteries Included --}}
-                    <div class="text-3xl">
+                    <div class="text-2xl md:text-3xl">
                         <span class="font-bold">Batteries</span>
                         <span class="">Included</span>
                     </div>
                 </div>
                 <div
-                    class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center md:px-16 lg:grid-cols-2"
+                    class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center min-[900px]:grid-cols-2 lg:px-16"
                 >
                     <a
                         href="#"
@@ -61,7 +61,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1 md:w-80 lg:w-auto">
+                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Panel Builder
@@ -111,7 +111,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1 md:w-80 lg:w-auto">
+                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Table Builder
@@ -161,7 +161,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="space-y-1 md:w-80 lg:w-auto">
+                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Form Builder
@@ -220,7 +220,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="space-y-1 md:w-80 lg:w-auto">
+                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
                                     Notifications
