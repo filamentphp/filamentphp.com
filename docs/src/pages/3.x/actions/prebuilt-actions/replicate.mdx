@@ -1,6 +1,6 @@
 ---
 layout: "@layouts/BaseLayout.astro"
-githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/06-prebuilt-actions/05-replicate.md"
+githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/07-prebuilt-actions/05-replicate.md"
 title: Replicate action
 ---
 
@@ -38,6 +38,19 @@ The `excludeAttributes()` method is used to instruct the action which columns to
 ```php
 ReplicateAction::make()
     ->excludeAttributes(['slug'])
+```
+
+## Customizing data before filling the form
+
+You may wish to modify the data from a record before it is filled into the form. To do this, you may use the `mutateRecordDataUsing()` method to modify the `$data` array, and return the modified version before it is filled into the form:
+
+```php
+ReplicateAction::make()
+    ->mutateRecordDataUsing(function (array $data): array {
+        $data['user_id'] = auth()->id();
+
+        return $data;
+    })
 ```
 
 ## Redirecting after replication
