@@ -74,7 +74,7 @@
     </head>
 
     <body
-        class="relative min-h-screen overflow-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
+        class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
     >
         @if ($docSearch)
             <div

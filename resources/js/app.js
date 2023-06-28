@@ -18,6 +18,7 @@ import.meta.glob([
 // GSAP
 gsap.registerPlugin(ScrollTrigger)
 window.gsap = gsap
+window.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 // Alpine
 Alpine.store('sidebar', { isOpen: false })

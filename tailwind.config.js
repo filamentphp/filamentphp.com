@@ -22,6 +22,7 @@ module.exports = {
                 'hurricane': '#807575',
                 'rum': '#6C6489',
                 'peach-orange': '#FFC497',
+                'dawn-pink': '#F1E5E4',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],
