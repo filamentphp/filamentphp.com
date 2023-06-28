@@ -3,8 +3,64 @@
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
-    <div class="">
-        <div class="flex justify-end">
+    <div
+        x-data="{}"
+        x-init="
+            () => {
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: $refs.content,
+                        start: 'top bottom-=100px',
+                    },
+                })
+                    .fromTo(
+                        $refs.arrow,
+                        {
+                            autoAlpha: 0,
+                            y: -20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                    )
+                    .fromTo(
+                        $refs.content,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.lines,
+                        {
+                            autoAlpha: 0,
+                            y: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+            }
+        "
+    >
+        <div
+            x-ref="arrow"
+            class="flex justify-end"
+        >
             {{-- Decoration Arrow --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-down-arrow-peach.svg') }}"
@@ -12,7 +68,10 @@
                 class="w-24"
             />
         </div>
-        <div class="relative mx-auto w-[95%]">
+        <div
+            x-ref="content"
+            class="relative mx-auto w-[95%]"
+        >
             <div
                 class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-10 text-white min-[900px]:p-14"
             >
@@ -443,7 +502,10 @@
                 class="absolute -left-2.5 top-2.5 -z-10 h-full w-full rounded-[2.5rem] bg-butter md:rotate-1"
             ></div>
         </div>
-        <div class="flex justify-start">
+        <div
+            x-ref="lines"
+            class="flex justify-start"
+        >
             {{-- Decoration Lines --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-three-lines.svg') }}"
