@@ -236,7 +236,7 @@
             {{-- Fade Arc --}}
             <svg
                 width="28"
-                class="absolute right-[8.5rem] -top-[3.3rem] -rotate-[102deg]"
+                class="absolute -top-[3.3rem] right-[8.5rem] -rotate-[102deg]"
                 height="129"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -462,6 +462,58 @@
                 <br />
                 applications with little effort.
             </div>
+        </div>
+
+        {{-- Orange Speed Decoration --}}
+        <div class="self-end justify-self-start [grid-area:1/-1] relative -top-20">
+            <svg
+                width="129"
+                height="102"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect
+                    x="27"
+                    y="26.161"
+                    width="80"
+                    height="80"
+                    rx="20"
+                    transform="rotate(-19 27 26.161)"
+                    fill="#FFF0E8"
+                />
+                <path
+                    d="M2 38h76M55 51.115h33"
+                    stroke="#FFD1BB"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </div>
+
+        {{-- Gray Speed Decoration --}}
+        <div class="self-end justify-self-end [grid-area:1/-1]">
+            <svg
+                width="105"
+                height="102"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect
+                    x="3"
+                    y="26.161"
+                    width="80"
+                    height="80"
+                    rx="20"
+                    transform="rotate(-19 3 26.161)"
+                    fill="#FAF4F4"
+                />
+                <path
+                    d="M2 59.115h60M44 72.115h27"
+                    stroke="#E6D1D1"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+            </svg>
         </div>
     </div>
 </div>
