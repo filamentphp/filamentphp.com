@@ -22,6 +22,7 @@ module.exports = {
                 'hurricane': '#807575',
                 'rum': '#6C6489',
                 'peach-orange': '#FFC497',
+                'seashell-peach': '#FFF0E8',
                 'dawn-pink': '#F1E5E4',
             },
             fontFamily: {
@@ -30,6 +31,7 @@ module.exports = {
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],
                 vietnam: ['Be Vietnam Pro', ...fontFamily.sans],
+                'roboto-mono': ['Roboto Mono', ...fontFamily.sans],
             },
             maxWidth: {
                 '8xl': '88rem',

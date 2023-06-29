@@ -25,6 +25,73 @@
             class="h-[30rem] w-[30rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/80 [grid-area:1/-1]"
         ></div>
 
+        {{-- Stats --}}
+        <div
+            class="relative top-20 space-y-5 self-start justify-self-start [grid-area:1/-1]"
+        >
+            {{-- Downloads --}}
+            <div
+                class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
+            >
+                <div class="text-center font-roboto-mono text-2xl font-medium">
+                    +1000000
+                </div>
+                <div class="flex items-center justify-center gap-3 text-butter">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                    >
+                        <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                d="M6.286 19C3.919 19 2 17.104 2 14.765c0-2.34 1.919-4.236 4.286-4.236c.284 0 .562.028.83.08m7.265-2.582a5.765 5.765 0 0 1 1.905-.321c.654 0 1.283.109 1.87.309m-11.04 2.594a5.577 5.577 0 0 1-.354-1.962C6.762 5.528 9.32 3 12.476 3c2.94 0 5.361 2.194 5.68 5.015m-11.04 2.594a4.29 4.29 0 0 1 1.55.634m9.49-3.228C20.392 8.78 22 10.881 22 13.353c0 2.707-1.927 4.97-4.5 5.52"
+                            />
+                            <path
+                                stroke-linejoin="round"
+                                d="M12 22v-6m0 6l2-2m-2 2l-2-2"
+                            />
+                        </g>
+                    </svg>
+                    <div class="min-w-[5.5rem] text-sm font-medium">
+                        Downloads
+                    </div>
+                </div>
+            </div>
+
+            {{-- Github Stars --}}
+            <div
+                class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
+            >
+                <div class="text-center font-roboto-mono text-2xl font-medium">
+                    +7000
+                </div>
+                <div class="flex items-center justify-center gap-3 text-butter">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
+                        />
+                    </svg>
+                    <div class="min-w-[5.5rem] text-sm font-medium">
+                        Github Stars
+                    </div>
+                </div>
+            </div>
+        </div>
+
         {{-- Speedometer Circle --}}
         <div
             class="relative h-[18rem] w-[18rem] self-center justify-self-center rounded-full bg-gradient-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 [grid-area:1/-1]"
@@ -65,7 +132,7 @@
                         <span class="text-2xl font-bold">T</span>
                         <span
                             class="relative -left-0.5 text-lg transition duration-500"
-                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                            :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
                         >
                             ailwind CSS
                         </span>
@@ -106,7 +173,7 @@
                         <span class="text-2xl font-bold">A</span>
                         <span
                             class="text-lg transition duration-500"
-                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                            :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
                         >
                             lpine.js
                         </span>
@@ -140,7 +207,7 @@
                         <span class="text-2xl font-bold">L</span>
                         <span
                             class="text-lg transition duration-500"
-                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                            :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
                         >
                             aravel
                         </span>
@@ -209,7 +276,7 @@
                         <span class="text-2xl font-bold">L</span>
                         <span
                             class="text-lg transition duration-500"
-                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                            :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
                         >
                             ivewire
                         </span>
@@ -465,7 +532,9 @@
         </div>
 
         {{-- Orange Speed Decoration --}}
-        <div class="self-end justify-self-start [grid-area:1/-1] relative -top-20">
+        <div
+            class="relative -top-20 self-end justify-self-start [grid-area:1/-1]"
+        >
             <svg
                 width="129"
                 height="102"
@@ -491,7 +560,9 @@
         </div>
 
         {{-- Gray Speed Decoration --}}
-        <div class="self-end justify-self-end [grid-area:1/-1]">
+        <div
+            class="relative -top-10 self-end justify-self-end [grid-area:1/-1]"
+        >
             <svg
                 width="105"
                 height="102"
