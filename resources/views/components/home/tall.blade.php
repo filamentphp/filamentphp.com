@@ -65,7 +65,7 @@
                         $refs.inner_circle,
                         {
                             autoAlpha: 0,
-                            scale: 1.1,
+                            scale: 1.5,
                         },
                         {
                             autoAlpha: 1,
@@ -79,7 +79,7 @@
                         $refs.middle_circle,
                         {
                             autoAlpha: 0,
-                            scale: 1.1,
+                            scale: 1.5,
                         },
                         {
                             autoAlpha: 1,
@@ -93,7 +93,7 @@
                         $refs.outer_circle,
                         {
                             autoAlpha: 0,
-                            scale: 1.1,
+                            scale: 1.5,
                         },
                         {
                             autoAlpha: 1,
@@ -107,13 +107,11 @@
                         $refs.speedometer_circle,
                         {
                             autoAlpha: 0,
-                            y: -30,
-                            x: 30,
+                            scale: 1.5,
                         },
                         {
                             autoAlpha: 1,
-                            y: 0,
-                            x: 0,
+                            scale: 1,
                             duration: 0.7,
                             ease: 'circ.out',
                         },
@@ -123,28 +121,14 @@
                         $refs.speed_lines.querySelectorAll('path'),
                         {
                             autoAlpha: 0,
+                            scale: 5,
                         },
                         {
                             autoAlpha: 1,
-                            duration: 0.3,
-                            ease: 'circ.out',
+                            scale: 1,
+                            duration: 0.4,
+                            ease: 'power4.out',
                             stagger: 0.03,
-                        },
-                        '<',
-                    )
-                    .fromTo(
-                        $refs.tall_stack_description,
-                        {
-                            autoAlpha: 0,
-                            y: 30,
-                            x: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            x: 0,
-                            duration: 1,
-                            ease: 'circ.out',
                         },
                         '<',
                     )
@@ -157,9 +141,46 @@
                         {
                             autoAlpha: 1,
                             x: 0,
-                            duration: 0.7,
+                            duration: 0.6,
                             ease: 'circ.out',
                             stagger: 0.15,
+                        },
+                        '<0.4',
+                    )
+                    .fromTo(
+                        $refs.fade_arc,
+                        {
+                            clipPath: 'polygon(0 0, 0 0, 100% 0, 0 0)',
+                        },
+                        {
+                            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+                            duration: 0.2,
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.orange_arc,
+                        {
+                            clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+                        },
+                        {
+                            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.05',
+                    )
+                    .fromTo(
+                        $refs.tall_stack_description,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 1,
+                            ease: 'circ.out',
                         },
                         '<0.3',
                     )
@@ -404,6 +425,7 @@
                 </div>
                 {{-- Orange Arc --}}
                 <svg
+                    x-ref="orange_arc"
                     width="64"
                     class="absolute right-[0rem] top-[1.2rem] z-20 -rotate-[3deg]"
                     height="204"
@@ -419,6 +441,7 @@
                 </svg>
                 {{-- Fade Arc --}}
                 <svg
+                    x-ref="fade_arc"
                     width="28"
                     class="absolute -top-[3.2rem] right-[7.2rem] -rotate-[92deg]"
                     height="129"
