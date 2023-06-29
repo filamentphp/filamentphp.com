@@ -9,4 +9,5 @@
     <x-home.hero />
     <x-home.livedemo />
     <x-home.plugins />
+    <x-home.tall />
 </x-layouts.app>
