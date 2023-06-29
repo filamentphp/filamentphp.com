@@ -221,7 +221,7 @@
             <svg
                 width="88"
                 height="228"
-                class="absolute right-0 top-3 -rotate-2"
+                class="absolute right-[0rem] top-[0.45rem] z-20 -rotate-1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -231,6 +231,39 @@
                     stroke-width="5"
                     stroke-linecap="round"
                 />
+            </svg>
+
+            {{-- Fade Arc --}}
+            <svg
+                width="28"
+                class="absolute right-[8.5rem] -top-[3.3rem] -rotate-[102deg]"
+                height="129"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M19.179 2.807A162.722 162.722 0 0 1 2.923 126.284"
+                    stroke="url(#a)"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                />
+                <defs>
+                    <linearGradient
+                        id="a"
+                        x1="4"
+                        y1="129.5"
+                        x2="-51.33"
+                        y2="73.589"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stop-color="#F1E3E3" />
+                        <stop
+                            offset="1"
+                            stop-color="#F1E3E3"
+                            stop-opacity="0"
+                        />
+                    </linearGradient>
+                </defs>
             </svg>
 
             {{-- Speed Lines --}}
