@@ -1,6 +1,8 @@
 <div
     x-cloak
-    x-data="{}"
+    x-data="{
+        tall_stack_is_hovering: false,
+    }"
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div class="text-center text-3xl">
@@ -61,7 +63,10 @@
                     {{-- Title --}}
                     <div class="flex items-end">
                         <span class="text-2xl font-bold">T</span>
-                        <span class="relative -left-0.5 text-lg">
+                        <span
+                            class="relative -left-0.5 text-lg transition duration-500"
+                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                        >
                             ailwind CSS
                         </span>
                     </div>
@@ -99,7 +104,12 @@
                     {{-- Title --}}
                     <div class="flex items-end gap-px">
                         <span class="text-2xl font-bold">A</span>
-                        <span class="text-lg">lpine.js</span>
+                        <span
+                            class="text-lg transition duration-500"
+                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                        >
+                            lpine.js
+                        </span>
                     </div>
                 </a>
             </div>
@@ -128,7 +138,12 @@
                     {{-- Title --}}
                     <div class="flex items-end gap-px">
                         <span class="text-2xl font-bold">L</span>
-                        <span class="text-lg">aravel</span>
+                        <span
+                            class="text-lg transition duration-500"
+                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                        >
+                            aravel
+                        </span>
                     </div>
                 </a>
             </div>
@@ -192,7 +207,12 @@
                     {{-- Title --}}
                     <div class="flex items-end gap-px">
                         <span class="text-2xl font-bold">L</span>
-                        <span class="text-lg">ivewire</span>
+                        <span
+                            class="text-lg transition duration-500"
+                            :class="{ 'opacity-40 translate-x-1': tall_stack_is_hovering, }"
+                        >
+                            ivewire
+                        </span>
                     </div>
                 </a>
             </div>
@@ -382,6 +402,8 @@
 
         {{-- TALL Stack --}}
         <div
+            x-on:mouseenter="tall_stack_is_hovering = true"
+            x-on:mouseleave="tall_stack_is_hovering = false"
             class="relative z-10 self-center justify-self-center pr-36 pt-10 [grid-area:1/-1]"
         >
             <div class="flex justify-end">

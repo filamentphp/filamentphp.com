@@ -102,7 +102,7 @@
         >
             {{-- Mockup --}}
             <div
-                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-500 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(3deg)]"
+                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-1000 [grid-area:1/-1] [transform-style:preserve-3d] md:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(5deg)_translateZ(0)] group-hover/mockup:[transform:perspective(1500px)_rotateY(0deg)_rotateX(0deg)_translateZ(0)]"
             >
                 {{-- Window Header --}}
                 <div
