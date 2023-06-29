@@ -8,8 +8,9 @@
         x-init="
             () => {
                 gsap.timeline({
+                    delay: 0.4,
                     scrollTrigger: {
-                        trigger: $refs.content,
+                        trigger: $refs.arrow,
                         start: 'top bottom-=100px',
                     },
                 })
@@ -23,20 +24,67 @@
                             autoAlpha: 1,
                             y: 0,
                             duration: 0.7,
-                            ease: 'circ.out',
+                            ease: 'power4.out',
                         },
                     )
                     .fromTo(
                         $refs.content,
                         {
                             autoAlpha: 0,
-                            x: -50,
+                            x: 30,
+                            y: -30,
                         },
                         {
                             autoAlpha: 1,
                             x: 0,
+                            y: 0,
                             duration: 0.7,
-                            ease: 'circ.out',
+                            ease: 'power4.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.decorationbg,
+                        {
+                            autoAlpha: 0,
+                            x: 30,
+                            y: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'back.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.header,
+                        {
+                            autoAlpha: 0,
+                            y: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power4.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.content.querySelectorAll('a > div'),
+                        {
+                            autoAlpha: 0,
+                            x: -20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.5,
+                            ease: 'power4.out',
+                            stagger: 0.05,
                         },
                         '>-0.5',
                     )
@@ -50,7 +98,7 @@
                             autoAlpha: 1,
                             y: 0,
                             duration: 0.7,
-                            ease: 'circ.out',
+                            ease: 'power4.out',
                         },
                         '>-0.5',
                     )
@@ -65,18 +113,19 @@
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-down-arrow-peach.svg') }}"
                 alt=""
-                class="w-24"
+                class="w-[6.5rem]"
             />
         </div>
-        <div
-            x-ref="content"
-            class="relative mx-auto w-[95%]"
-        >
+        <div class="relative mx-auto w-[95%]">
             <div
+                x-ref="content"
                 class="rounded-[2.5rem] bg-gradient-to-tr from-[#24263A] to-[#2E2F47] p-10 text-white min-[900px]:p-14"
             >
                 {{-- Header --}}
-                <div class="flex items-center justify-center gap-7">
+                <div
+                    x-ref="header"
+                    class="flex items-center justify-center gap-7"
+                >
                     <div class="relative">
                         {{-- Lighting Bolt --}}
                         <img
@@ -499,6 +548,7 @@
 
             {{-- Decoration Background --}}
             <div
+                x-ref="decorationbg"
                 class="absolute -left-2.5 top-2.5 -z-10 h-full w-full rounded-[2.5rem] bg-butter md:rotate-1"
             ></div>
         </div>
