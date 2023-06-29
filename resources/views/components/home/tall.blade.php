@@ -504,7 +504,7 @@
         <div
             x-on:mouseenter="tall_stack_is_hovering = true"
             x-on:mouseleave="tall_stack_is_hovering = false"
-            class="relative z-10 self-center justify-self-center pr-36 pt-10 [grid-area:1/-1]"
+            class="relative z-30 self-center justify-self-center pr-36 pt-10 [grid-area:1/-1]"
         >
             <div class="flex justify-end">
                 <div class="">
@@ -533,7 +533,7 @@
 
         {{-- Orange Speed Decoration --}}
         <div
-            class="relative -top-20 self-end justify-self-start [grid-area:1/-1]"
+            class="relative -top-32 self-end justify-self-start [grid-area:1/-1]"
         >
             <svg
                 width="129"
