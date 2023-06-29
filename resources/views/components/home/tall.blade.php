@@ -61,6 +61,108 @@
                         },
                         '>-0.6',
                     )
+                    .fromTo(
+                        $refs.inner_circle,
+                        {
+                            autoAlpha: 0,
+                            scale: 1.1,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.middle_circle,
+                        {
+                            autoAlpha: 0,
+                            scale: 1.1,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.outer_circle,
+                        {
+                            autoAlpha: 0,
+                            scale: 1.1,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.speedometer_circle,
+                        {
+                            autoAlpha: 0,
+                            y: -30,
+                            x: 30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.speed_lines.querySelectorAll('path'),
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            duration: 0.3,
+                            ease: 'circ.out',
+                            stagger: 0.03,
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.tall_stack_description,
+                        {
+                            autoAlpha: 0,
+                            y: 30,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.speedometer_circle.querySelectorAll('.tall-link-wrapper'),
+                        {
+                            autoAlpha: 0,
+                            x: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                            stagger: 0.15,
+                        },
+                        '<0.3',
+                    )
             }
         "
     >
@@ -90,22 +192,28 @@
         <div class="relative pt-5 min-[630px]:grid">
             {{-- Outer Circle --}}
             <div
+                x-ref="outer_circle"
                 class="hidden h-[50rem] w-[50rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/40 [grid-area:1/-1] min-[800px]:block"
             ></div>
             {{-- Middle Circle --}}
             <div
+                x-ref="middle_circle"
                 class="hidden h-[40rem] w-[40rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/60 [grid-area:1/-1] min-[700px]:block"
             ></div>
             {{-- Inner Circle --}}
             <div
+                x-ref="inner_circle"
                 class="hidden h-[30rem] w-[30rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/80 [grid-area:1/-1] min-[700px]:block"
             ></div>
             {{-- Speedometer Circle --}}
             <div
+                x-ref="speedometer_circle"
                 class="absolute right-1/2 top-32 hidden h-[18rem] w-[18rem] translate-x-1/3 self-center justify-self-center rounded-full bg-gradient-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 min-[630px]:block min-[700px]:relative min-[700px]:right-0 min-[700px]:top-0 min-[700px]:translate-x-0 min-[700px]:[grid-area:1/-1]"
             >
                 {{-- Tailwind --}}
-                <div class="group/tall-link absolute -right-36 -top-16 z-20">
+                <div
+                    class="tall-link-wrapper group/tall-link absolute -right-36 -top-16 z-20"
+                >
                     <a
                         href="https://tailwindcss.com"
                         target="_blank"
@@ -149,7 +257,7 @@
                 </div>
                 {{-- Alpine --}}
                 <div
-                    class="group/tall-link absolute -right-[11.5rem] top-7 z-20"
+                    class="tall-link-wrapper group/tall-link absolute -right-[11.5rem] top-7 z-20"
                 >
                     <a
                         href="https://alpinejs.dev"
@@ -191,7 +299,7 @@
                 </div>
                 {{-- Laravel --}}
                 <div
-                    class="group/tall-link absolute -right-48 top-[8.5rem] z-20"
+                    class="tall-link-wrapper group/tall-link absolute -right-48 top-[8.5rem] z-20"
                 >
                     <a
                         href="https://laravel.com"
@@ -226,7 +334,7 @@
                 </div>
                 {{-- Livewire --}}
                 <div
-                    class="group/tall-link absolute -right-[10rem] top-64 z-20"
+                    class="tall-link-wrapper group/tall-link absolute -right-[10rem] top-64 z-20"
                 >
                     <a
                         href="https://laravel-livewire.com"
@@ -343,6 +451,7 @@
                 </svg>
                 {{-- Speed Lines --}}
                 <svg
+                    x-ref="speed_lines"
                     class="absolute -right-16 -top-16 w-72 rotate-2"
                     width="311"
                     height="333"
@@ -376,6 +485,12 @@
                         stroke-linecap="round"
                     />
                     <path
+                        d="M90.426 19.2023V1.55276"
+                        stroke="#F1E3E3"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    />
+                    <path
                         d="M106.899 20.379L108.076 12.1426"
                         stroke="#F1E3E3"
                         stroke-linecap="round"
@@ -398,6 +513,12 @@
                     <path
                         d="M173.967 38.7672L177.497 32.1453"
                         stroke="#F1E3E3"
+                        stroke-linecap="round"
+                    />
+                    <path
+                        d="M190.44 47.4417L199.853 32.1454"
+                        stroke="#FF7323"
+                        stroke-width="2"
                         stroke-linecap="round"
                     />
                     <path
@@ -426,6 +547,12 @@
                         stroke-linecap="round"
                     />
                     <path
+                        d="M264.569 120.393L278.688 112.157"
+                        stroke="#FF7323"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    />
+                    <path
                         d="M270.978 134.731L278.559 131.303"
                         stroke="#FF7323"
                         stroke-linecap="round"
@@ -448,6 +575,12 @@
                     <path
                         d="M289.278 203.333L296.76 202.758"
                         stroke="#FF7323"
+                        stroke-linecap="round"
+                    />
+                    <path
+                        d="M290.454 220.407L309.281 220.407"
+                        stroke="#FF7323"
+                        stroke-width="2"
                         stroke-linecap="round"
                     />
                     <path
@@ -476,32 +609,8 @@
                         stroke-linecap="round"
                     />
                     <path
-                        d="M190.44 47.4417L199.853 32.1454"
-                        stroke="#FF7323"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
-                    <path
-                        d="M264.569 120.393L278.688 112.157"
-                        stroke="#FF7323"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
-                    <path
-                        d="M290.454 220.407L309.281 220.407"
-                        stroke="#FF7323"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
-                    <path
                         d="M264.569 321.598L279.865 331.011"
                         stroke="#FF7323"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
-                    <path
-                        d="M90.426 19.2023V1.55276"
-                        stroke="#F1E3E3"
                         stroke-width="2"
                         stroke-linecap="round"
                     />
@@ -690,6 +799,7 @@
                     </a>
                 </div>
                 <div
+                    x-ref="tall_stack_description"
                     x-on:mouseenter="tall_stack_is_hovering = true"
                     x-on:mouseleave="tall_stack_is_hovering = false"
                     class="relative z-30 w-full min-[600px]:w-auto min-[630px]:top-40 min-[630px]:pl-5 min-[630px]:pt-10 min-[700px]:top-0 min-[700px]:pl-0 min-[700px]:pr-36"
