@@ -2,6 +2,8 @@
     x-cloak
     x-data="{
         tall_stack_is_hovering: false,
+        download_counter: { val: 1 },
+        github_stars_counter: { val: 1 },
     }"
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
@@ -183,6 +185,80 @@
                             ease: 'circ.out',
                         },
                         '<0.3',
+                    )
+                    .fromTo(
+                        $refs.downloads,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<0.3',
+                    )
+                    .to(
+                        download_counter,
+                        {
+                            val: 1000000,
+                            duration: 1.5,
+                            roundProps: 'val',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.github_stars,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<0.2',
+                    )
+                    .to(
+                        github_stars_counter,
+                        {
+                            val: 7000,
+                            duration: 1.5,
+                            roundProps: 'val',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.orange_speed_decoration,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<0.3',
+                    )
+                    .fromTo(
+                        $refs.gray_speed_decoration,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<0.2',
                     )
             }
         "
@@ -864,6 +940,7 @@
             </div>
             {{-- Orange Speed Decoration --}}
             <div
+                x-ref="orange_speed_decoration"
                 class="relative top-10 hidden self-start justify-self-start [grid-area:1/-1] min-[700px]:block md:-top-32 md:self-end"
             >
                 <svg
@@ -891,6 +968,7 @@
             </div>
             {{-- Gray Speed Decoration --}}
             <div
+                x-ref="gray_speed_decoration"
                 class="relative hidden self-end justify-self-end [grid-area:1/-1] min-[700px]:block md:-top-10"
             >
                 <svg
@@ -922,13 +1000,13 @@
             >
                 {{-- Downloads --}}
                 <div
+                    x-ref="downloads"
                     class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
                 >
                     <div
+                        x-text="'+' + download_counter.val"
                         class="text-center font-roboto-mono text-2xl font-medium"
-                    >
-                        +1000000
-                    </div>
+                    ></div>
                     <div
                         class="flex items-center justify-center gap-3 text-butter"
                     >
@@ -960,13 +1038,13 @@
                 </div>
                 {{-- Github Stars --}}
                 <div
+                    x-ref="github_stars"
                     class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
                 >
                     <div
+                        x-text="'+' + github_stars_counter.val"
                         class="text-center font-roboto-mono text-2xl font-medium"
-                    >
-                        +7000
-                    </div>
+                    ></div>
                     <div
                         class="flex items-center justify-center gap-3 text-butter"
                     >
