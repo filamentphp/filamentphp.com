@@ -286,14 +286,14 @@
 
             {{-- Orange Arc --}}
             <svg
-                width="88"
-                height="228"
-                class="absolute right-[0rem] top-[0.45rem] z-20 -rotate-1"
+                width="64"
+                class="absolute right-[0rem] top-[1.2rem] z-20 -rotate-[3deg]"
+                height="204"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
-                    d="M3.362 3a162.723 162.723 0 0 1 59.56 222.284"
+                    d="M38.922 201.284A162.725 162.725 0 0 0 55.179 77.807C49.648 57.166 40.5 40.5 27.096 24.5 20.5 17.5 10 7.5 2.5 2.5"
                     stroke="#FF7323"
                     stroke-width="5"
                     stroke-linecap="round"
@@ -303,7 +303,7 @@
             {{-- Fade Arc --}}
             <svg
                 width="28"
-                class="absolute -top-[3.3rem] right-[8.5rem] -rotate-[102deg]"
+                class="absolute -top-[3.2rem] right-[7.2rem] -rotate-[92deg]"
                 height="129"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
