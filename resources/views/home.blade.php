@@ -10,4 +10,5 @@
     <x-home.livedemo />
     <x-home.plugins />
     <x-home.tall />
+    <x-home.v3features />
 </x-layouts.app>
