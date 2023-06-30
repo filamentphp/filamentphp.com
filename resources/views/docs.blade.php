@@ -245,6 +245,18 @@
                     </a>
 
                     <a
+                        href="https://zimplerapps.com"
+                        target="__blank"
+                        class="block bg-white rounded-xl p-4 mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://github.com/filamentphp/filament/assets/44533235/7098329d-3b1d-457d-bbeb-125af76433d4"
+                            alt="ZimplerApps"
+                            class="block"
+                        />
+                    </a>
+
+                    <a
                         href="https://docuwriter.ai"
                         target="__blank"
                         class="block mx-auto max-w-xs"
