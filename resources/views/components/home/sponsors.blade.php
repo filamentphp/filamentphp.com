@@ -6,7 +6,7 @@
     <div
         x-data="{}"
         x-init="() => {}"
-        class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] pb-32"
+        class="relative z-[1] overflow-hidden px-5 rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] pb-32"
     >
         {{-- Title --}}
         <div class="grid place-items-center pt-14">
@@ -40,17 +40,17 @@
         </div>
 
         {{-- Message --}}
-        <div class="mx-auto max-w-lg pt-10 text-lg text-rum">
+        <div class="mx-auto max-w-lg pt-10 text-center text-lg text-rum">
             Filament is open source at heart. Our sponsors fund new features,
             bug fixes, and our community support.
         </div>
 
         {{-- Sponsor List --}}
         <div
-            class="mx-auto grid w-full max-w-xl grid-cols-3 gap-x-20 gap-y-10 py-14"
+            class="mx-auto grid w-full max-w-xl grid-cols-1 min-[500px]:grid-cols-2 gap-x-20 gap-y-12 py-14 min-[850px]:grid-cols-3"
         >
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://ploi.io"
                 target="_blank"
                 title="Ploi"
@@ -66,7 +66,7 @@
             </a>
 
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://www.agiledrop.com/laravel?utm_source=filament"
                 target="_blank"
                 title="Agiledrop"
@@ -115,7 +115,7 @@
             </a>
 
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://codecourse.com"
                 target="_blank"
                 title="Codecourse"
@@ -143,7 +143,7 @@
             </a>
 
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://laradir.com"
                 target="_blank"
                 title="Laradir"
@@ -161,7 +161,7 @@
             </a>
 
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://uselocale.com"
                 target="_blank"
                 title="Locale"
@@ -186,7 +186,7 @@
             </a>
 
             <a
-                class="grid place-items-center"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
                 href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web"
                 target="_blank"
                 title="Lucky Media"
@@ -236,8 +236,10 @@
             </a>
         </div>
 
-        {{-- Heart 1 --}}
-        <div class="absolute right-20 top-32 -z-30">
+        {{-- Big Heart: Top Right --}}
+        <div
+            class="absolute right-10 top-1/3 min-[500px]:top-10 -z-30 min-[850px]:right-20 min-[850px]:top-32"
+        >
             <svg
                 width="52"
                 class="scale-75"
@@ -271,11 +273,14 @@
             </svg>
         </div>
 
-        {{-- Heart 2 --}}
-        <div class="absolute left-20 top-32 -z-30">
+        {{-- Big Heart: Top Left --}}
+        <div
+            class="absolute left-10 top-1/2 min-[500px]:top-10 -z-30 min-[850px]:left-20 min-[850px]:top-32"
+        >
             <svg
                 width="82"
                 height="147"
+                class="scale-75 min-[850px]:scale-100"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -318,8 +323,8 @@
             </svg>
         </div>
 
-        {{-- Heart 3 --}}
-        <div class="absolute bottom-40 right-32 -z-30">
+        {{-- Big Heart: Bottom Right --}}
+        <div class="absolute bottom-40 right-10 min-[850px]:right-32 -z-30">
             <svg
                 width="64"
                 class="scale-90"
@@ -383,11 +388,11 @@
         </div>
 
         {{-- Mini Heart 2 --}}
-        <div class="absolute bottom-20 right-60 -z-30">
+        <div class="absolute bottom-20 right-20 min-[850px]:right-60 -z-30">
             <svg
                 width="27"
                 height="24"
-                class="-rotate-12 scale-90"
+                class="rotate-12 scale-90"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -403,7 +408,7 @@
             <svg
                 width="27"
                 height="24"
-                class="rotate-[20deg] scale-90"
+                class="-rotate-[20deg] scale-90"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -415,10 +420,9 @@
         </div>
 
         {{-- White Cloud --}}
-        <div class="absolute -bottom-2 left-0 -z-40 w-full">
+        <div class="absolute -bottom-2 left-0 -z-40">
             <svg
                 width="1192"
-                class="w-full"
                 height="129"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -431,11 +435,10 @@
         </div>
 
         {{-- Gray Cloud --}}
-        <div class="absolute -bottom-3 left-0 -z-50 w-full">
+        <div class="absolute -bottom-3 left-0 -z-50">
             <svg
                 width="1192"
                 height="200"
-                class="w-full"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
