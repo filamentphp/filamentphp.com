@@ -142,7 +142,7 @@
                         $refs.take_off,
                         {
                             autoAlpha: 0,
-                            y: 30,
+                            y: -30,
                         },
                         {
                             autoAlpha: 1,
@@ -150,13 +150,13 @@
                             duration: 0.7,
                             ease: 'circ.out',
                         },
-                        '>-0.3',
+                        '<0.2',
                     )
                     .fromTo(
                         $refs.take_off_message,
                         {
                             autoAlpha: 0,
-                            y: -30,
+                            y: 30,
                         },
                         {
                             autoAlpha: 1,
