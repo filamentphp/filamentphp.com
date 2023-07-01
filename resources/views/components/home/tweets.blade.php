@@ -11,7 +11,7 @@
                 gsap.timeline({
                     delay: 0.5,
                     scrollTrigger: {
-                        trigger: $refs.sponsors_section,
+                        trigger: $refs.tweets_section,
                         start: 'top bottom-=200px',
                     },
                 })
