@@ -1,12 +1,12 @@
 ---
 layout: "@layouts/BaseLayout.astro"
-githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/app/docs/02-getting-started.md"
+githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/02-getting-started.md"
 title: Getting started
 ---
 
 ## Overview
 
-You may be wondering how to get started building an app with Filament. There are many features, spread across several packages, that compose even the simplest of apps. This guide will teach you a few core concepts of the framework, and give you a glimpse of what is possible.
+You may be wondering how to get started building a panel with Filament. There are many features, spread across several packages, that compose even the simplest of apps. This guide will teach you a few core concepts of the framework, and give you a glimpse of what is possible.
 
 Before using Filament, you need to be familiar with Laravel. Many core Laravel concepts are used within Filament, especially [database migrations](https://laravel.com/docs/migrations) and [Eloquent ORM](https://laravel.com/docs/eloquent). If you've never used Laravel before, or need a refresher, we highly recommend that you follow the [Laravel Bootcamp](https://bootcamp.laravel.com/blade/installation) to build a small app. The guide will give you a great foundation of knowledge that you would otherwise be missing, and you will find Filament much easier and faster to understand and use.
 
@@ -113,9 +113,9 @@ class Treatment extends Model
 
 ## Introducing resources
 
-In Filament, resources are static classes that are used to build CRUD interfaces for your Eloquent models. They describe how administrators should be able to interact with data from your app - using tables and forms.
+In Filament, resources are static classes that are used to build CRUD interfaces for your Eloquent models. They describe how administrators should be able to interact with data from your panel - using tables and forms.
 
-In our vet management app, patients are at the core of all operations. Patients should be listed in a table, and clicking on a patient should open a new page where their details are editable. Patients should be able to be deleted from this page too. Above the patient list, there should be a button to allow the user to add a new patient to the system.
+In our vet management panel, patients are at the core of all operations. Patients should be listed in a table, and clicking on a patient should open a new page where their details are editable. Patients should be able to be deleted from this page too. Above the patient list, there should be a button to allow the user to add a new patient to the system.
 
 We need to create a new resource for the `Patient` model:
 
@@ -639,7 +639,7 @@ public function table(Table $table): Table
 
 ## Introducing widgets
 
-Filament has "widgets" - which are components that you can use to display information, especially statistics. Widgets typically get added to the Dashboard of the app, but you can add them to any page you wish, including resource pages. Filament includes built-in widgets, like the [stats widget](../stats-overview) to render important statistics in a simple card, [chart widget](../widgets/charts) which can render an interactive chart, and [table widget](../app/dashboard#table-widgets) which allows you to easily embed the table builder.
+Filament has "widgets" - which are components that you can use to display information, especially statistics. Widgets typically get added to the Dashboard of the panel, but you can add them to any page you wish, including resource pages. Filament includes built-in widgets, like the [stats widget](../stats-overview) to render important statistics in a simple card, [chart widget](../widgets/charts) which can render an interactive chart, and [table widget](../panels/dashboard#table-widgets) which allows you to easily embed the table builder.
 
 In our system, we could add statistics for the type of patient, as well as treatments that are administered over time.
 
@@ -691,7 +691,7 @@ You can set the `$heading` of the chart to `'Treatments'`.
 
 The `getData()` method is used to return an array of datasets and labels. Each dataset is a labeled array of points to plot on the chart, and each label is a string. This structure is identical with the [Chart.js](https://www.chartjs.org/docs) library, which Filament uses to render charts.
 
-To generate chart data from an Eloquent model, Filament recommends that you install the `flowframe/laravel-trend` package. You can view the documentation on the [Flowframe website](https://docs.flowfra.me/docs/laravel-trend/installation-and-setup). Install the package:
+To generate chart data from an Eloquent model, Filament recommends that you install the `flowframe/laravel-trend` package. You can view the [documentation](https://github.com/Flowframe/laravel-trend). Install the package:
 
 ```bash
 composer require flowframe/laravel-trend
@@ -728,14 +728,14 @@ protected function getData(): array
 
 Now, check out your widget in the dashboard.
 
-## Next steps with the app framework
+## Next steps with the panel builder
 
 Now you've finished reading this guide, where to next? Here are some suggestions:
 
-- [Create custom pages in the app that don't belong to resources.](pages)
+- [Create custom pages in the panel that don't belong to resources.](pages)
 - [Learn more about adding action buttons to pages and resources, with modals to get user input or confirmation.](../actions/overview)
 - [Explore the available fields to collect input from your users.](../forms/fields/getting-started#available-fields)
 - [Check out the list of layout components to craft intuitive form structures with.](../forms/fields/getting-started#available-fields)
 - [Discover how to build complex, responsive table layouts without touching CSS.](../tables/layout)
 - [Add summaries to your tables, which give an overview of the data inside of them.](../tables/summaries)
-- [Write automated tests for your app using our suite of helper methods.](testing)
+- [Write automated tests for your panel using our suite of helper methods.](testing)

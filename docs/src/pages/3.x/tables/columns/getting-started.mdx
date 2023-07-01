@@ -234,9 +234,7 @@ use Filament\Tables\Columns\TextColumn;
 
 TextColumn::make('title')
     ->action(function (Post $record): void {
-        $this->dispatchBrowserEvent('open-post-edit-modal', [
-            'post' => $record->getKey(),
-        ]);
+        $this->dispatch('open-post-edit-modal', post: $record->getKey());
     })
 ```
 
@@ -253,9 +251,7 @@ TextColumn::make('title')
         Action::make('select')
             ->requiresConfirmation()
             ->action(function (Post $record): void {
-                $this->dispatchBrowserEvent('select-post', [
-                    'post' => $record->getKey(),
-                ]);
+                $this->dispatch('select-post', post: $record->getKey());
             }),
     )
 ```
@@ -319,6 +315,8 @@ TextColumn::make('id')
     ->toggleable()
 ```
 
+#### Making toggleable columns hidden by default
+
 By default, toggleable columns are visible. To make them hidden instead:
 
 ```php
@@ -328,22 +326,44 @@ TextColumn::make('id')
     ->toggleable(isToggledHiddenByDefault: true)
 ```
 
+#### Customizing the toggle columns dropdown trigger action
+
+To customize the toggle dropdown trigger button, you may use the `toggleColumnsTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](../actions/trigger-button) can be used:
+
+```php
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Table;
+
+public function table(Table $table): Table
+{
+    return $table
+        ->filters([
+            // ...
+        ])
+        ->toggleColumnsTriggerAction(
+            fn (Action $action) => $action
+                ->button()
+                ->label('Toggle columns'),
+        );
+}
+```
+
 ## Calculated state
 
 Sometimes you need to calculate the state of a column, instead of directly reading it from a database column.
 
-By passing a callback function to the `getStateUsing()` method, you can customize the returned state for that column based on the `$record`:
+By passing a callback function to the `state()` method, you can customize the returned state for that column based on the `$record`:
 
 ```php
 Tables\Columns\TextColumn::make('amount_including_vat')
-    ->getStateUsing(function (Model $record): float {
+    ->state(function (Model $record): float {
         return $record->amount * (1 + $record->vat_rate);
     })
 ```
 
 ## Tooltips
 
-> If you want to use tooltips outside of the app framework, make sure you have [`@ryangjchandler/alpine-tooltip` installed](https://github.com/ryangjchandler/alpine-tooltip#installation) in your app, including [`tippy.css`](https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager). You'll also need to install [`tippy.css`](https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager) if you're using a [custom app framework theme](../../app/themes).
+> If you want to use tooltips outside of a panel, make sure you have [`@ryangjchandler/alpine-tooltip` installed](https://github.com/ryangjchandler/alpine-tooltip#installation) in your app, including [`tippy.css`](https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager). You'll also need to install [`tippy.css`](https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager) if you're using a [custom panel theme](../../panels/themes).
 
 You may specify a tooltip to display when you hover over a cell:
 
@@ -362,6 +382,26 @@ use Illuminate\Database\Eloquent\Model;
 
 TextColumn::make('title')
     ->tooltip(fn (Model $record): string => "By {$record->author->name}")
+```
+
+## Aligning column content
+
+Table columns are aligned to the start (left in LTR interfaces or right in RTL interfaces) by default. You may change the alignment using the `alignment()` method, and passing it `start`, `center`, `end`, `left`, `right` or `justify` options:
+
+```php
+use Filament\Tables\Columns\TextColumn;
+
+TextColumn::make('name')
+    ->alignment('end')
+```
+
+Alternatively, you may use shorthand methods like `alignEnd()`:
+
+```php
+use Filament\Tables\Columns\TextColumn;
+
+TextColumn::make('name')
+    ->alignEnd()
 ```
 
 ## Custom attributes

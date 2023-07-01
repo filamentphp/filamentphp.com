@@ -116,7 +116,7 @@ DatabaseNotifications::databaseNotificationsPollingInterval(null);
 
 Alternatively, the package has a native integration with [Laravel Echo](https://laravel.com/docs/broadcasting#client-side-installation). Make sure Echo is installed, as well as a [server-side websockets integration](https://laravel.com/docs/broadcasting#server-side-installation) like Pusher.
 
-Once websockets are set up, after sending a database notification you may emit a `DatabaseNotificationsSent` event, which will immediately fetch new notifications for that user:
+Once websockets are set up, after sending a database notification you may dispatch a `DatabaseNotificationsSent` event, which will immediately fetch new notifications for that user:
 
 ```php
 use Filament\Notifications\Events\DatabaseNotificationsSent;
@@ -129,6 +129,44 @@ Notification::make()
     ->sendToDatabase($recipient);
 
 event(new DatabaseNotificationsSent($recipient));
+```
+
+## Marking database notifications as read
+
+There is a button at the top of the modal to mark all notifications as read at once. You may also add [actions](sending-notifications#adding-actions-to-notifications) to notifications, which you can use to mark individual notifications as read. To do this, use the `markAsRead()` method on the action:
+
+```php
+use Filament\Notifications\Actions\Action;
+use Filament\Notifications\Notification;
+
+Notification::make()
+    ->title('Saved successfully')
+    ->success()
+    ->body('Changes to the **post** have been saved.')
+    ->actions([
+        Action::make('view')
+            ->button()
+            ->markAsRead(),
+    ])
+    ->send();
+```
+
+Alternatively, you may use the `markAsUnread()` method to mark a notification as unread:
+
+```php
+use Filament\Notifications\Actions\Action;
+use Filament\Notifications\Notification;
+
+Notification::make()
+    ->title('Saved successfully')
+    ->success()
+    ->body('Changes to the **post** have been saved.')
+    ->actions([
+        Action::make('markAsUnread')
+            ->button()
+            ->markAsUnread(),
+    ])
+    ->send();
 ```
 
 ## Opening the database notifications modal
