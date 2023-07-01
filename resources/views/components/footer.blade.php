@@ -3,11 +3,38 @@
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-5 pt-10"
 >
-    <div class="py-10">
-        <div class="flex flex-wrap justify-between gap-10">
+    <div
+        x-data="{}"
+        x-ref="footer"
+        x-init="
+            () => {
+                gsap.timeline({
+                    delay: 0.5,
+                    scrollTrigger: {
+                        trigger: $refs.footer,
+                        start: 'top bottom',
+                    },
+                }).fromTo(
+                    $refs.footer,
+                    {
+                        autoAlpha: 0,
+                        y: 20,
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                )
+            }
+        "
+        class="py-10"
+    >
+        <div class="flex flex-wrap justify-between items-start gap-x-40 gap-y-10">
             <a
                 href="/"
-                class="group/filament fadein relative"
+                class="block p-2 transition duration-300 will-change-transform hover:scale-105"
             >
                 <div class="text-black">
                     <svg
@@ -38,6 +65,58 @@
                     </svg>
                 </div>
             </a>
+            <div class="flex flex-1 flex-wrap justify-start gap-x-40 gap-y-3">
+                <div
+                    class="flex flex-col items-start gap-3 text-sm font-medium"
+                >
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Documentation
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Plugins
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Community
+                    </a>
+                </div>
+                <div
+                    class="flex flex-col items-start gap-3 text-sm font-medium"
+                >
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Help
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Sponsor Us
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                    >
+                        Consulting
+                    </a>
+                </div>
+            </div>
         </div>
         <div
             class="mt-7 flex flex-wrap items-start justify-between gap-10 border-t border-slate-200 pt-5"
