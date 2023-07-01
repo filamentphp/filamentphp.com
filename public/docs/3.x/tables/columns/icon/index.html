@@ -595,54 +595,32 @@
 <p>Icon columns render an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> representing their contents:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
 
-IconColumn::make(&#39;is_featured&#39;)
-    -&gt;icons([
-        &#39;heroicon-o-x-circle&#39;,
-        &#39;heroicon-o-pencil&#39; =&gt; &#39;draft&#39;,
-        &#39;heroicon-o-clock&#39; =&gt; &#39;reviewing&#39;,
-        &#39;heroicon-o-check-circle&#39; =&gt; &#39;published&#39;,
-    ])
+IconColumn::make(&#39;status&#39;)
+    -&gt;icon(fn (string $state): string =&gt; match ($state) {
+        &#39;draft&#39; =&gt; &#39;heroicon-o-pencil&#39;,
+        &#39;reviewing&#39; =&gt; &#39;heroicon-o-clock&#39;,
+        &#39;published&#39; =&gt; &#39;heroicon-o-check-circle&#39;,
+    })
 </code></pre>
-<p>You may also pass a callback to activate an option, accepting the cell’s <code>$state</code> and <code>$record</code>:</p>
-<pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
-
-IconColumn::make(&#39;is_featured&#39;)
-    -&gt;icons([
-        &#39;heroicon-o-x-circle&#39;,
-        &#39;heroicon-o-pencil&#39; =&gt; fn ($state, $record): bool =&gt; $record-&gt;status === 2,
-        &#39;heroicon-o-clock&#39; =&gt; fn ($state): bool =&gt; $state === &#39;reviewing&#39;,
-        &#39;heroicon-o-check-circle&#39; =&gt; fn ($state): bool =&gt; $state === &#39;published&#39;,
-    ])
-</code></pre>
+<p>In the function, <code>$state</code> is the value of the column, and <code>$record</code> can be used to access the underlying Eloquent record.</p>
 <h2 id="customizing-the-color">Customizing the color</h2>
 <p>Icon columns may also have a set of icon colors, using the same syntax. They may be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> or <code>warning</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
 
-IconColumn::make(&#39;is_featured&#39;)
-    -&gt;icons([
-        &#39;heroicon-o-x-circle&#39;,
-        &#39;heroicon-o-pencil&#39; =&gt; &#39;draft&#39;,
-        &#39;heroicon-o-clock&#39; =&gt; &#39;reviewing&#39;,
-        &#39;heroicon-o-check-circle&#39; =&gt; &#39;published&#39;,
-    ])
-    -&gt;colors([
-        &#39;gray&#39;,
-        &#39;danger&#39; =&gt; &#39;draft&#39;,
-        &#39;warning&#39; =&gt; &#39;reviewing&#39;,
-        &#39;success&#39; =&gt; &#39;published&#39;,
-    ])
+IconColumn::make(&#39;status&#39;)
+    -&gt;color(fn (string $state): string =&gt; match ($state) {
+        &#39;draft&#39; =&gt; &#39;danger&#39;,
+        &#39;reviewing&#39; =&gt; &#39;warning&#39;,
+        &#39;published&#39; =&gt; &#39;success&#39;,
+        default =&gt; &#39;gray&#39;,
+    })
 </code></pre>
+<p>In the function, <code>$state</code> is the value of the column, and <code>$record</code> can be used to access the underlying Eloquent record.</p>
 <h2 id="customizing-the-size">Customizing the size</h2>
 <p>The default icon size is <code>lg</code>, but you may customize the size to be either <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code> or <code>xl</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
 
-IconColumn::make(&#39;is_featured&#39;)
-    -&gt;icons([
-        &#39;heroicon-o-x-circle&#39;,
-        &#39;heroicon-o-pencil&#39; =&gt; &#39;draft&#39;,
-        &#39;heroicon-o-clock&#39; =&gt; &#39;reviewing&#39;,
-        &#39;heroicon-o-check-circle&#39; =&gt; &#39;published&#39;,
-    ])
+IconColumn::make(&#39;status&#39;)
     -&gt;size(&#39;md&#39;)
 </code></pre>
 <h2 id="handling-booleans">Handling booleans</h2>

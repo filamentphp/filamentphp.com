@@ -514,6 +514,11 @@ TextEntry::make(&#39;title&#39;)
 
 TextEntry::make(&#39;author.name&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/simple.jpg?raw=true" alt="Entries in an infolist" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/simple.jpg?raw=true" alt="Entries in an infolist" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="available-entries">Available entries</h2>
 <ul>
 <li><a href="text">Text entry</a></li>
@@ -558,6 +563,61 @@ TextEntry::make(&#39;title&#39;)
 TextEntry::make(&#39;title&#39;)
     -&gt;default(&#39;Untitled&#39;)
 </code></pre>
+<h2 id="adding-helper-text-below-the-entry">Adding helper text below the entry</h2>
+<p>Sometimes, you may wish to provide extra information for the user of the infolist. For this purpose, you may add helper text below the entry.</p>
+<p>The <code>helperText()</code> method is used to add helper text, and supports Markdown formatting:</p>
+<pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
+
+TextEntry::make(&#39;name&#39;)
+    -&gt;helperText(&#39;Your **full name** here, including any middle names.&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/helper-text.jpg?raw=true" alt="Entry with helper text" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/helper-text.jpg?raw=true" alt="Entry with helper text" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<h2 id="adding-a-hint-next-to-the-label">Adding a hint next to the label</h2>
+<p>As well as <a href="#adding-helper-text-below-the-entry">helper text</a> below the entry, you may also add a “hint” next to the label of the entry. This is useful for displaying additional information about the entry, such as a link to a help page.</p>
+<p>The <code>hint()</code> method is used to add a hint, and supports Markdown formatting:</p>
+<pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
+
+TextEntry::make(&#39;apiKey&#39;)
+    -&gt;label(&#39;API key&#39;)
+    -&gt;hint(&#39;[Documentation](/documentation)&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/hint.jpg?raw=true" alt="Entry with hint" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/hint.jpg?raw=true" alt="Entry with hint" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<h3 id="changing-the-text-color-of-the-hint">Changing the text color of the hint</h3>
+<p>You can change the text color of the hint. By default, it’s gray, but you may use <code>danger</code>, <code>info</code>, <code>primary</code>, <code>success</code> and <code>warning</code>:</p>
+<pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
+
+TextEntry::make(&#39;apiKey&#39;)
+    -&gt;label(&#39;API key&#39;)
+    -&gt;hint(&#39;[Documentation](/documentation)&#39;)
+    -&gt;hintColor(&#39;primary&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/hint-color.jpg?raw=true" alt="Entry with hint color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/hint-color.jpg?raw=true" alt="Entry with hint color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<h3 id="adding-an-icon-aside-the-hint">Adding an icon aside the hint</h3>
+<p>Hints may also have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> rendered next to them:</p>
+<pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
+
+TextEntry::make(&#39;apiKey&#39;)
+    -&gt;label(&#39;API key&#39;)
+    -&gt;hint(&#39;[Documentation](/documentation)&#39;)
+    -&gt;hintIcon(&#39;heroicon-m-question-mark-circle&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/hint-icon.jpg?raw=true" alt="Entry with hint icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/hint-icon.jpg?raw=true" alt="Entry with hint icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="hiding-entries">Hiding entries</h2>
 <p>To hide an entry conditionally, you may use the <code>hidden()</code> and <code>visible()</code> methods, whichever you prefer:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
@@ -577,15 +637,17 @@ TextEntry::make(&#39;role&#39;)
     })
 </code></pre>
 <h2 id="tooltips">Tooltips</h2>
-<blockquote>
-<p>If you want to use tooltips outside of a panel, make sure you have <a href="https://github.com/ryangjchandler/alpine-tooltip#installation"><code>@ryangjchandler/alpine-tooltip</code> installed</a> in your app, including <a href="https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager"><code>tippy.css</code></a>. You’ll also need to install <a href="https://atomiks.github.io/tippyjs/v6/getting-started/#1-package-manager"><code>tippy.css</code></a> if you’re using a <a href="../../panels/themes">custom panel theme</a>.</p>
-</blockquote>
 <p>You may specify a tooltip to display when you hover over an entry:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
 
 TextEntry::make(&#39;title&#39;)
-    -&gt;tooltip(&#39;Title&#39;)
+    -&gt;tooltip(&#39;Shown at the top of the page&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/tooltips.jpg?raw=true" alt="Entry with tooltip" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/tooltips.jpg?raw=true" alt="Entry with tooltip" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This method also accepts a closure that can access the current infolist record:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
 use Illuminate\Database\Eloquent\Model;
@@ -647,7 +709,7 @@ TextEntry::make(&#39;name&#39;)
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-entries&#34;,&#34;text&#34;:&#34;Available entries&#34;,&#34;title&#34;:&#34;Available entries&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-label&#34;,&#34;text&#34;:&#34;Setting a label&#34;,&#34;title&#34;:&#34;Setting a label&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;entry-urls&#34;,&#34;text&#34;:&#34;Entry URLs&#34;,&#34;title&#34;:&#34;Entry URLs&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls&#34;,&#34;text&#34;:&#34;Opening URLs&#34;,&#34;title&#34;:&#34;Opening URLs&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-default-value&#34;,&#34;text&#34;:&#34;Setting a default value&#34;,&#34;title&#34;:&#34;Setting a default value&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;hiding-entries&#34;,&#34;text&#34;:&#34;Hiding entries&#34;,&#34;title&#34;:&#34;Hiding entries&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;calculated-state&#34;,&#34;text&#34;:&#34;Calculated state&#34;,&#34;title&#34;:&#34;Calculated state&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;tooltips&#34;,&#34;text&#34;:&#34;Tooltips&#34;,&#34;title&#34;:&#34;Tooltips&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-attributes&#34;,&#34;text&#34;:&#34;Custom attributes&#34;,&#34;title&#34;:&#34;Custom attributes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;global-settings&#34;,&#34;text&#34;:&#34;Global settings&#34;,&#34;title&#34;:&#34;Global settings&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-entries&#34;,&#34;text&#34;:&#34;Available entries&#34;,&#34;title&#34;:&#34;Available entries&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-label&#34;,&#34;text&#34;:&#34;Setting a label&#34;,&#34;title&#34;:&#34;Setting a label&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;entry-urls&#34;,&#34;text&#34;:&#34;Entry URLs&#34;,&#34;title&#34;:&#34;Entry URLs&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls&#34;,&#34;text&#34;:&#34;Opening URLs&#34;,&#34;title&#34;:&#34;Opening URLs&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-default-value&#34;,&#34;text&#34;:&#34;Setting a default value&#34;,&#34;title&#34;:&#34;Setting a default value&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-helper-text-below-the-entry&#34;,&#34;text&#34;:&#34;Adding helper text below the entry&#34;,&#34;title&#34;:&#34;Adding helper text below the entry&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-a-hint-next-to-the-label&#34;,&#34;text&#34;:&#34;Adding a hint next to the label&#34;,&#34;title&#34;:&#34;Adding a hint next to the label&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;changing-the-text-color-of-the-hint&#34;,&#34;text&#34;:&#34;Changing the text color of the hint&#34;,&#34;title&#34;:&#34;Changing the text color of the hint&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;adding-an-icon-aside-the-hint&#34;,&#34;text&#34;:&#34;Adding an icon aside the hint&#34;,&#34;title&#34;:&#34;Adding an icon aside the hint&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;hiding-entries&#34;,&#34;text&#34;:&#34;Hiding entries&#34;,&#34;title&#34;:&#34;Hiding entries&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;calculated-state&#34;,&#34;text&#34;:&#34;Calculated state&#34;,&#34;title&#34;:&#34;Calculated state&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;tooltips&#34;,&#34;text&#34;:&#34;Tooltips&#34;,&#34;title&#34;:&#34;Tooltips&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-attributes&#34;,&#34;text&#34;:&#34;Custom attributes&#34;,&#34;title&#34;:&#34;Custom attributes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;global-settings&#34;,&#34;text&#34;:&#34;Global settings&#34;,&#34;title&#34;:&#34;Global settings&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#overview" x-bind:class="current == 'overview' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -689,6 +751,30 @@ TextEntry::make(&#39;name&#39;)
                         </a>
                       </h3>
                       
+                    </li><li>
+                      <h3>
+                        <a href="#adding-helper-text-below-the-entry" x-bind:class="current == 'adding-helper-text-below-the-entry' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          Adding helper text below the entry
+                        </a>
+                      </h3>
+                      
+                    </li><li>
+                      <h3>
+                        <a href="#adding-a-hint-next-to-the-label" x-bind:class="current == 'adding-a-hint-next-to-the-label' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
+                          Adding a hint next to the label
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
+                          <li>
+                              <a href="#changing-the-text-color-of-the-hint" x-bind:class="current == 'changing-the-text-color-of-the-hint' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Changing the text color of the hint
+                              </a>
+                            </li><li>
+                              <a href="#adding-an-icon-aside-the-hint" x-bind:class="current == 'adding-an-icon-aside-the-hint' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Adding an icon aside the hint
+                              </a>
+                            </li>
+                        </ol>
                     </li><li>
                       <h3>
                         <a href="#hiding-entries" x-bind:class="current == 'hiding-entries' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">

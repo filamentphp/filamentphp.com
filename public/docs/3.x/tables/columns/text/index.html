@@ -603,7 +603,7 @@ TextColumn::make(&#39;title&#39;)
 
 TextColumn::make(&#39;status&#39;)
     -&gt;badge()
-    -&gt;color(fn (string $status): string =&gt; match ($status) {
+    -&gt;color(fn (string $state): string =&gt; match ($state) {
         &#39;draft&#39; =&gt; &#39;gray&#39;,
         &#39;reviewing&#39; =&gt; &#39;warning&#39;,
         &#39;published&#39; =&gt; &#39;success&#39;,
@@ -811,9 +811,6 @@ TextColumn::make(&#39;email&#39;)
     -&gt;copyMessage(&#39;Email address copied&#39;)
     -&gt;copyMessageDuration(1500)
 </code></pre>
-<blockquote>
-<p>Filament uses tooltips to display the copy message in the admin panel. If you want to use the copyable feature outside of the admin panel, make sure you have <a href="https://github.com/ryangjchandler/alpine-tooltip#installation"><code>@ryangjchandler/alpine-tooltip</code> installed</a> in your app.</p>
-</blockquote>
 <h2 id="displaying-the-row-index">Displaying the row index</h2>
 <p>You may want a column to contain the number of the current row in the table:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;

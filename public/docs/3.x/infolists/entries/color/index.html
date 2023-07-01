@@ -501,15 +501,25 @@
 
 ColorEntry::make(&#39;color&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/color/simple.jpg?raw=true" alt="Color entry" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/color/simple.jpg?raw=true" alt="Color entry" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="allowing-the-color-to-be-copied-to-the-clipboard">Allowing the color to be copied to the clipboard</h2>
 <p>You may make the color copyable, such that clicking on the preview copies the CSS value to the clipboard, and optionally specify a custom confirmation message and duration in milliseconds. This feature only works when SSL is enabled for the app.</p>
 <pre><code class="language-php">use Filament\Infolists\Components\ColorEntry;
 
 ColorEntry::make(&#39;color&#39;)
     -&gt;copyable()
-    -&gt;copyMessage(&#39;Color code copied&#39;)
+    -&gt;copyMessage(&#39;Copied!&#39;)
     -&gt;copyMessageDuration(1500)
-</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/03-entries/05-color.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/color/copyable.jpg?raw=true" alt="Color entry with a button to copy it" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/color/copyable.jpg?raw=true" alt="Color entry with a button to copy it" loading="lazy" class="rounded-xl hidden dark:block">
+</div><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/03-entries/05-color.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
