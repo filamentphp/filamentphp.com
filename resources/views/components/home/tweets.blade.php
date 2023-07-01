@@ -5,13 +5,113 @@
 >
     <div
         x-data="{}"
-        x-init=""
+        x-ref="tweets_section"
+        x-init="
+            () => {
+                gsap.timeline({
+                    delay: 0.5,
+                    scrollTrigger: {
+                        trigger: $refs.sponsors_section,
+                        start: 'top bottom-=200px',
+                    },
+                })
+                    .fromTo(
+                        $refs.tweets_section,
+                        {
+                            autoAlpha: 0,
+                            x: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                    )
+                    .fromTo(
+                        $refs.twitter_icon,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                            y: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.community,
+                        {
+                            autoAlpha: 0,
+                            x: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.community_quote,
+                        {
+                            autoAlpha: 0,
+                            scale: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.feedback_header,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.feedback_header_underline,
+                        {
+                            autoAlpha: 0,
+                            scaleX: 0,
+                            transformOrigin: 'left',
+                        },
+                        {
+                            autoAlpha: 1,
+                            scaleX: 1,
+                            duration: 0.5,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+            }
+        "
         class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-t from-transparent via-[#F1F3FF] to-[#F1F3FF] px-5 pb-5"
     >
         {{-- Title --}}
         <div class="grid place-items-center pt-14">
             {{-- Twitter Icon --}}
-            <div class="">
+            <div
+                x-ref="twitter_icon"
+                class=""
+            >
                 <svg
                     width="40"
                     height="40"
@@ -25,12 +125,12 @@
                 </svg>
             </div>
             <div
-                x-ref="premium"
+                x-ref="community"
                 class="relative mt-3 text-xl font-medium tracking-wider"
             >
                 Community
                 <div
-                    x-ref="premium_heart"
+                    x-ref="community_quote"
                     class="absolute -right-7 -top-2"
                 >
                     <svg
@@ -61,13 +161,13 @@
             </div>
             <div class="relative z-10 inline-grid">
                 <div
-                    x-ref="sponsors_header"
+                    x-ref="feedback_header"
                     class="text-2xl font-extrabold [grid-area:1/-1] lg:text-3xl"
                 >
                     Feedback
                 </div>
                 <div
-                    x-ref="sponsors_header_underline"
+                    x-ref="feedback_header_underline"
                     class="relative -left-1 -z-10 h-5 w-[98%] self-end justify-self-start bg-sky-300/50 [grid-area:1/-1]"
                 ></div>
             </div>
@@ -75,7 +175,7 @@
 
         {{-- Testimonial Tweets --}}
         <div
-            class="tweets-parent grid grid-cols-1 gap-6 px-5 pt-10 sm:grid-cols-2 lg:grid-cols-3"
+            class="tweets-parent grid grid-cols-1 gap-6 px-5 pt-10 sm:grid-cols-2 lg:grid-cols-3 [&_.testimonial-component.not-hovered]:opacity-50"
         >
             <div class="space-y-9">
                 <x-home.testimonial
@@ -181,14 +281,27 @@
                         Jorge González
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/DaronSpence/status/1507602035641929729"
+                >
+                    Big shoutout to Filament for making a
+                    <strong>really slick</strong>
+                    admin panel kit.
+                    <strong>Loving the markdown editor</strong>
+                    w/ builtin file uploads!
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/4062087?v=4"
+                        twitter-handle="DaronSpence"
+                        title="Laravel Developer"
+                    >
+                        Daron Spence
+                    </x-slot>
+                </x-home.testimonial>
             </div>
         </div>
-        <style>
-            .tweets-parent .testimonial-component.not-hovered {
-                opacity: 0.5;
-            }
-        </style>
         <script>
+            // Custom function to blur (opacity-50) all the testimonial tweets except the one being hovered
             const testimonialComponents = document.querySelectorAll(
                 '.testimonial-component',
             )
