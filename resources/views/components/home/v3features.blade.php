@@ -231,7 +231,7 @@
                 })
                 gsap.to($refs.geometric_shape_6, {
                     yPercent: -300,
-                    xPercent: -100,
+                    xPercent: -50,
                     rotate: 45,
                     scrollTrigger: {
                         trigger: $refs.feature_6,
@@ -559,7 +559,7 @@
                 x-ref="feature_6"
                 class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
             >
-                <div class="absolute -bottom-40 right-10 hidden lg:block">
+                <div class="absolute -bottom-20 -right-10 hidden lg:block">
                     <img
                         x-ref="geometric_shape_6"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-6.webp') }}"

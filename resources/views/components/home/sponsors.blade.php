@@ -5,14 +5,238 @@
 >
     <div
         x-data="{}"
-        x-init="() => {}"
-        class="relative z-[1] overflow-hidden px-5 rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] pb-32"
+        x-ref="sponsors_section"
+        x-init="
+            () => {
+                gsap.timeline({
+                    delay: 0.5,
+                    scrollTrigger: {
+                        trigger: $refs.sponsors_section,
+                        start: 'top bottom-=200px',
+                    },
+                })
+                    .fromTo(
+                        $refs.sponsors_section,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                    )
+                    .fromTo(
+                        $refs.premium,
+                        {
+                            autoAlpha: 0,
+                            x: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.premium_heart,
+                        {
+                            autoAlpha: 0,
+                            scale: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out',
+                        },
+                        '>-0.6',
+                    )
+                    .fromTo(
+                        $refs.sponsors_header,
+                        {
+                            autoAlpha: 0,
+                            x: -50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.sponsors_header_underline,
+                        {
+                            autoAlpha: 0,
+                            scaleX: 0,
+                            transformOrigin: 'left',
+                        },
+                        {
+                            autoAlpha: 1,
+                            scaleX: 1,
+                            duration: 0.5,
+                            ease: 'circ.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.message,
+                        {
+                            autoAlpha: 0,
+                            y: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.sponsors_list.querySelectorAll('a > *'),
+                        {
+                            autoAlpha: 0,
+                            scale: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out',
+                            stagger: 0.1,
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.sponsor_button,
+                        {
+                            autoAlpha: 0,
+                            y: 50,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.big_heart_top_right,
+                        {
+                            autoAlpha: 0,
+                            scale: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.big_heart_top_left,
+                        {
+                            autoAlpha: 0,
+                            y: 100,
+                            x: -20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'sine.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.big_heart_bottom_right,
+                        {
+                            autoAlpha: 0,
+                            y: 100,
+                            x: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'sine.out',
+                        },
+                        '>-0.5',
+                    )
+                    .fromTo(
+                        $refs.mini_heart_1,
+                        {
+                            autoAlpha: 0,
+                            y: 50,
+                            x: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'sine.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.mini_heart_2,
+                        {
+                            autoAlpha: 0,
+                            y: 50,
+                            x: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'sine.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.mini_heart_3,
+                        {
+                            autoAlpha: 0,
+                            y: 50,
+                            x: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            x: 0,
+                            duration: 1,
+                            ease: 'sine.out',
+                        },
+                        '<',
+                    )
+            }
+        "
+        class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] px-5 pb-32"
     >
         {{-- Title --}}
         <div class="grid place-items-center pt-14">
-            <div class="relative text-xl font-medium tracking-wider">
+            <div
+                x-ref="premium"
+                class="relative text-xl font-medium tracking-wider"
+            >
                 Our Premium
-                <div class="absolute -left-9 -top-2">
+                <div
+                    x-ref="premium_heart"
+                    class="absolute -left-9 -top-2"
+                >
                     <svg
                         width="26"
                         height="29"
@@ -29,25 +253,31 @@
             </div>
             <div class="relative z-10 inline-grid">
                 <div
+                    x-ref="sponsors_header"
                     class="text-2xl font-extrabold [grid-area:1/-1] lg:text-3xl"
                 >
                     Sponsors
                 </div>
                 <div
+                    x-ref="sponsors_header_underline"
                     class="relative -left-1 -z-10 h-5 w-[98%] self-end justify-self-start bg-rose-400/50 [grid-area:1/-1]"
                 ></div>
             </div>
         </div>
 
         {{-- Message --}}
-        <div class="mx-auto max-w-lg pt-10 text-center text-lg text-rum">
+        <div
+            x-ref="message"
+            class="mx-auto max-w-lg pt-10 text-center text-lg text-rum"
+        >
             Filament is open source at heart. Our sponsors fund new features,
             bug fixes, and our community support.
         </div>
 
         {{-- Sponsor List --}}
         <div
-            class="mx-auto grid w-full max-w-xl grid-cols-1 min-[500px]:grid-cols-2 gap-x-20 gap-y-12 py-14 min-[850px]:grid-cols-3"
+            x-ref="sponsors_list"
+            class="mx-auto grid w-full max-w-xl grid-cols-1 gap-x-20 gap-y-12 py-14 min-[500px]:grid-cols-2 min-[850px]:grid-cols-3"
         >
             <a
                 class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
@@ -202,8 +432,11 @@
             </a>
         </div>
 
-        {{-- Sponsor Link --}}
-        <div class="flex justify-center py-10">
+        {{-- Sponsor Button --}}
+        <div
+            x-ref="sponsor_button"
+            class="flex justify-center py-10"
+        >
             <a
                 x-ref="getstarted"
                 href="#"
@@ -238,7 +471,8 @@
 
         {{-- Big Heart: Top Right --}}
         <div
-            class="absolute right-10 top-1/3 min-[500px]:top-10 -z-30 min-[850px]:right-20 min-[850px]:top-32"
+            x-ref="big_heart_top_right"
+            class="absolute right-10 top-1/3 -z-30 min-[500px]:top-10 min-[850px]:right-20 min-[850px]:top-32"
         >
             <svg
                 width="52"
@@ -275,7 +509,8 @@
 
         {{-- Big Heart: Top Left --}}
         <div
-            class="absolute left-10 top-1/2 min-[500px]:top-10 -z-30 min-[850px]:left-20 min-[850px]:top-32"
+            x-ref="big_heart_top_left"
+            class="absolute left-10 top-1/2 -z-30 min-[500px]:top-10 min-[850px]:left-20 min-[850px]:top-32"
         >
             <svg
                 width="82"
@@ -324,7 +559,10 @@
         </div>
 
         {{-- Big Heart: Bottom Right --}}
-        <div class="absolute bottom-40 right-10 min-[850px]:right-32 -z-30">
+        <div
+            x-ref="big_heart_bottom_right"
+            class="absolute bottom-40 right-10 -z-30 min-[850px]:right-32"
+        >
             <svg
                 width="64"
                 class="scale-90"
@@ -372,7 +610,10 @@
         </div>
 
         {{-- Mini Heart 1 --}}
-        <div class="absolute bottom-24 left-20 -z-30">
+        <div
+            x-ref="mini_heart_1"
+            class="absolute bottom-24 left-20 -z-30"
+        >
             <svg
                 width="27"
                 height="24"
@@ -388,7 +629,10 @@
         </div>
 
         {{-- Mini Heart 2 --}}
-        <div class="absolute bottom-20 right-20 min-[850px]:right-60 -z-30">
+        <div
+            x-ref="mini_heart_2"
+            class="absolute bottom-20 right-20 -z-30 min-[850px]:right-60"
+        >
             <svg
                 width="27"
                 height="24"
@@ -404,11 +648,14 @@
         </div>
 
         {{-- Mini Heart 3 --}}
-        <div class="absolute bottom-44 left-52 -z-30">
+        <div
+            x-ref="mini_heart_3"
+            class="absolute bottom-44 left-52 -z-30"
+        >
             <svg
                 width="27"
                 height="24"
-                class="-rotate-[20deg] scale-90"
+                class="rotate-[20deg] scale-90"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
