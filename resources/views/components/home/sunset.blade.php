@@ -21,34 +21,34 @@
             <div
                 class="relative top-14 z-20 self-end justify-self-center [grid-area:1/-1]"
             >
-                <div class="h-32 w-60 bg-cream/10 backdrop-blur-md"></div>
+                <div class="h-28 sm:h-32 w-60 bg-cream/10 backdrop-blur-md"></div>
             </div>
 
             {{-- Cloud 1 --}}
             <div
-                class="relative -top-3 left-5 self-start justify-self-start [grid-area:1/-1]"
+                class="relative -top-10 sm:-top-3 left-10 sm:left-5 self-start justify-self-start [grid-area:1/-1]"
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud1.svg') }}"
                     alt=""
-                    class="w-[14rem]"
+                    class="w-[10rem] sm:w-[14rem]"
                 />
             </div>
 
             {{-- Cloud 2 --}}
             <div
-                class="relative -right-40 -top-3 self-start justify-self-center [grid-area:1/-1]"
+                class="relative -right-40 -top-10 sm:-top-3 self-start justify-self-center [grid-area:1/-1]"
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud2.svg') }}"
                     alt=""
-                    class="w-[12rem]"
+                    class="w-[8rem] sm:w-[12rem]"
                 />
             </div>
 
             {{-- Cloud 3 --}}
             <div
-                class="relative -top-10 right-20 self-center justify-self-end [grid-area:1/-1]"
+                class="relative -top-10 right-20 self-center justify-self-end [grid-area:1/-1] hidden sm:block"
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud3.svg') }}"
@@ -59,7 +59,7 @@
 
             {{-- Left Birds --}}
             <div
-                class="relative right-32 self-start justify-self-center [grid-area:1/-1]"
+                class="relative right-32 self-start justify-self-center [grid-area:1/-1] hidden sm:block"
             >
                 <div class="flex items-center gap-10">
                     <img
@@ -84,7 +84,7 @@
 
             {{-- Right Birds --}}
             <div
-                class="relative -right-44 top-20 w-32 self-start justify-self-center [grid-area:1/-1]"
+                class="relative -right-44 sm:top-20 w-32 self-start justify-self-center [grid-area:1/-1]"
             >
                 <div class="flex justify-center">
                     <img
@@ -103,7 +103,7 @@
             </div>
 
             {{-- Left Mountain --}}
-            <div class="self-end justify-self-start [grid-area:1/-1]">
+            <div class="self-end justify-self-start [grid-area:1/-1] hidden sm:block">
                 <img
                     src="{{ Vite::asset('resources/svg/home/mountain1.svg') }}"
                     alt=""
@@ -142,14 +142,14 @@
         <div class="pt-10">
             <a
                 href="#"
-                class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-10 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40"
+                class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 sm:py-10 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40"
             >
-                <div class="text-3xl font-bold">Get Started</div>
+                <div class="text-2xl sm:text-3xl font-bold">Get Started</div>
                 <div class="pr-4">
                     <svg
                         width="24"
                         height="24"
-                        class="scale-[2.5] transition duration-300 will-change-transform group-hover/getstarted:translate-x-3"
+                        class="scale-[2] sm:scale-[2.5] transition duration-300 will-change-transform group-hover/getstarted:translate-x-3"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
