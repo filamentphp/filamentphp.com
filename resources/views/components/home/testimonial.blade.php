@@ -1,7 +1,7 @@
 <a
     href="{{ $url }}"
     target="_blank"
-    class="group/testimonial block text-sm"
+    class="group/testimonial testimonial-component block text-sm transition duration-300"
 >
     <div
         class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:-translate-y-2 group-hover/testimonial:translate-x-2 group-hover/testimonial:scale-105"
@@ -31,7 +31,9 @@
             </svg>
         </div>
     </div>
-    <div class="flex items-center gap-4 px-2 pt-5 transition duration-300 will-change-transform group-hover/testimonial:translate-x-1">
+    <div
+        class="flex items-center gap-4 px-2 pt-5 transition duration-300 will-change-transform group-hover/testimonial:translate-x-1"
+    >
         <img
             src="{{ $author->attributes->get('avatar') }}"
             alt="{{ $author }}"
@@ -49,8 +51,9 @@
                     {{ $author->attributes->get('title') }}
                 </div>
                 <div
-                    class="text-sky-400 -translate-x-5 self-center justify-self-start opacity-0 transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-0 group-hover/testimonial:opacity-100"
+                    class="-translate-x-5 self-center justify-self-start text-sky-400 opacity-0 transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-0 group-hover/testimonial:opacity-100"
                 >
+                    @
                     {{ $author->attributes->get('twitter-handle') }}
                 </div>
             </div>

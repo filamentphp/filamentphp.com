@@ -75,10 +75,9 @@
 
         {{-- Testimonial Tweets --}}
         <div
-            class="grid grid-cols-1 gap-6 px-5 pt-10 sm:grid-cols-2 lg:grid-cols-3"
+            class="tweets-parent grid grid-cols-1 gap-6 px-5 pt-10 sm:grid-cols-2 lg:grid-cols-3"
         >
-            {{-- Column 1 --}}
-            <div class="space-y-10">
+            <div class="space-y-9">
                 <x-home.testimonial
                     url="https://twitter.com/shocm/status/1487841457088045059"
                 >
@@ -90,17 +89,15 @@
                     . Thanks for the
                     <strong>great work</strong>
                     .
-
                     <x-slot
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/89408?v=4"
-                        twitter-handle="@shocm"
+                        twitter-handle="shocm"
                         title="Cofounder at phparch"
                     >
                         Eric Van Johnson
                     </x-slot>
                 </x-home.testimonial>
-
                 <x-home.testimonial
                     url="https://twitter.com/ChrisHardie/status/1507793007470428167"
                 >
@@ -111,23 +108,109 @@
                     <strong>powerful, friendly</strong>
                     application interfaces with it.
                     <strong>Impressive stuff.</strong>
-
                     <x-slot
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/311772?v=4"
-                        twitter-handle="@ChrisHardie"
-                        title="Software developer. Newspaper publisher"
+                        twitter-handle="ChrisHardie"
+                        title="Software developer"
                     >
                         Chris Hardie
                     </x-slot>
                 </x-home.testimonial>
             </div>
 
-            {{-- Column 2 --}}
-            <div class="space-y-10"></div>
+            <div class="space-y-9">
+                <x-home.testimonial
+                    url="https://twitter.com/mrchrxs/status/1491159440250540033"
+                >
+                    Started my second
+                    <strong>Filament</strong>
+                    project a while ago. It's the first time in my career that I
+                    can sit down and
+                    <strong>focus</strong>
+                    on
+                    <strong>productivity</strong>
+                    and what's important, without dealing with
+                    <strong>implementation difficulties</strong>
+                    and
+                    <strong>business logic</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/15275787?v=4"
+                        twitter-handle="HassanZahirnia"
+                        title="Web designer & developer"
+                    >
+                        Hassan Zahirnia
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/mrchrxs/status/1491159440250540033"
+                >
+                    6 months ago,
+                    @carre
+                    _sam recommended Filament. I was put off because I use Vue
+                    not Livewire. Just spent 30 minutes with it, and
+                    <strong>WOW</strong>
+                    . Definitely pitching this at work!
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/10789117?v=4"
+                        twitter-handle="mrchrxs"
+                        title="Laravel Developer"
+                    >
+                        Chris
+                    </x-slot>
+                </x-home.testimonial>
+            </div>
 
-            {{-- Column 3 --}}
-            <div class="space-y-10"></div>
+            <div class="space-y-9">
+                <x-home.testimonial url="https://twitter.com/iksaku2">
+                    Filament is the
+                    <strong>
+                        Swiss Army Knife dashboard for TALL stack apps
+                    </strong>
+                    . Just sit down, install and you'll have a full CMS in two
+                    shakes.
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/4632429?v=4"
+                        twitter-handle="iksaku2"
+                        title="Laravel Developer"
+                    >
+                        Jorge González
+                    </x-slot>
+                </x-home.testimonial>
+            </div>
         </div>
+        <style>
+            .tweets-parent .testimonial-component.not-hovered {
+                opacity: 0.5;
+            }
+        </style>
+        <script>
+            const testimonialComponents = document.querySelectorAll(
+                '.testimonial-component',
+            )
+
+            function handleTestimonialHover(event) {
+                testimonialComponents.forEach((component) => {
+                    if (component !== event.currentTarget) {
+                        component.classList.add('not-hovered')
+                    } else {
+                        component.classList.remove('not-hovered')
+                    }
+                })
+            }
+
+            testimonialComponents.forEach((component) => {
+                component.addEventListener('mouseenter', handleTestimonialHover)
+                component.addEventListener('mouseleave', () => {
+                    testimonialComponents.forEach((component) => {
+                        component.classList.remove('not-hovered')
+                    })
+                })
+            })
+        </script>
     </div>
 </div>
