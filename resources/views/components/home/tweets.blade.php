@@ -298,6 +298,25 @@
                         Daron Spence
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/jacques_van_wyk/status/1507401233937711104"
+                >
+                    I must say this Filament is
+                    <strong>amazing</strong>
+                    and such
+                    <strong>a pleasure to work with</strong>
+                    .
+                    @danjharrin
+                    you and team have done great job.
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/12008702?v=4"
+                        twitter-handle="jacques_van_wyk"
+                        title="Laravel Developer"
+                    >
+                        Jacques van Wyk
+                    </x-slot>
+                </x-home.testimonial>
             </div>
         </div>
         <script>

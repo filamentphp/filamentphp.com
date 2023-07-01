@@ -16,4 +16,5 @@
         <div class="h-full border-r-[1.5px] border-dashed border-r-black/50"></div>
     </div>
     <x-home.tweets />
+    <x-home.sunset />
 </x-layouts.app>
