@@ -230,14 +230,14 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_6, {
-                    yPercent: -300,
+                    yPercent: -500,
                     xPercent: -50,
                     rotate: 45,
                     scrollTrigger: {
                         trigger: $refs.feature_6,
                         scrub: 1.5,
                         start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
+                        end: 'bottom+=500px center',
                     },
                 })
             })

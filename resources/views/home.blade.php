@@ -12,4 +12,8 @@
     <x-home.tall />
     <x-home.v3features />
     <x-home.sponsors />
+    <div class="grid h-24 place-items-center bg-red my-8">
+        <div class="h-full border-r-[1.5px] border-dashed border-r-black/50"></div>
+    </div>
+    <x-home.tweets />
 </x-layouts.app>
