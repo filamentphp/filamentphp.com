@@ -756,7 +756,9 @@ public function table(Table $table): Table
 
 TextColumn::make(&#39;title&#39;)
     -&gt;action(function (Post $record): void {
-        $this-&gt;dispatch(&#39;open-post-edit-modal&#39;, post: $record-&gt;getKey());
+        $this-&gt;dispatchBrowserEvent(&#39;open-post-edit-modal&#39;, [
+            &#39;post&#39; =&gt; $record-&gt;getKey(),
+        ]);
     })
 </code></pre>
 <h4 id="action-modals">Action modals</h4>
@@ -769,7 +771,9 @@ TextColumn::make(&#39;title&#39;)
         Action::make(&#39;select&#39;)
             -&gt;requiresConfirmation()
             -&gt;action(function (Post $record): void {
-                $this-&gt;dispatch(&#39;select-post&#39;, post: $record-&gt;getKey());
+                $this-&gt;dispatchBrowserEvent(&#39;select-post&#39;, [
+                    &#39;post&#39; =&gt; $record-&gt;getKey(),
+                ]);
             }),
     )
 </code></pre>

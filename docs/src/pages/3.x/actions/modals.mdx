@@ -90,7 +90,7 @@ Action::make('create')
             ->schema([
                 TextInput::make('name')
                     ->required()
-                    ->live()
+                    ->reactive()
                     ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')
                     ->disabled()
@@ -164,6 +164,8 @@ Action::make('delete')
     ->requiresConfirmation()
     ->modalIcon('heroicon-o-trash')
 ```
+
+<AutoScreenshot name="actions/modal/icon" alt="Confirmation modal with icon" version="3.x" />
 
 By default, the icon will inherit the color of the action button. You may customize the color of the icon using the `modalIconColor()` method:
 

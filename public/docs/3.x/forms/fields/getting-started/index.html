@@ -687,6 +687,11 @@
 
 TextInput::make(&#39;name&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/simple.jpg?raw=true" alt="Form field" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/simple.jpg?raw=true" alt="Form field" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="available-fields">Available fields</h2>
 <p>Filament ships with many types of field, suitable for editing different types of data:</p>
 <ul>
@@ -745,6 +750,11 @@ TextInput::make(&#39;name&#39;)
 TextInput::make(&#39;name&#39;)
     -&gt;helperText(&#39;Your **full name** here, including any middle names.&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/helper-text.jpg?raw=true" alt="Form field with helper text" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/helper-text.jpg?raw=true" alt="Form field with helper text" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-a-hint-next-to-the-label">Adding a hint next to the label</h2>
 <p>As well as <a href="#adding-helper-text-below-the-field">helper text</a> below the field, you may also add a “hint” next to the label of the field. This is useful for displaying additional information about the field, such as a link to a help page.</p>
 <p>The <code>hint()</code> method is used to add a hint, and supports Markdown formatting:</p>
@@ -753,6 +763,11 @@ TextInput::make(&#39;name&#39;)
 TextInput::make(&#39;password&#39;)
     -&gt;hint(&#39;[Forgotten your password?](forgotten-password)&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint.jpg?raw=true" alt="Form field with hint" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/hint.jpg?raw=true" alt="Form field with hint" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="changing-the-text-color-of-the-hint">Changing the text color of the hint</h3>
 <p>You can change the text color of the hint. By default it’s gray, but you may use <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> and <code>warning</code>:</p>
 <pre><code class="language-php">use Filament\Forms\Components\RichEditor;
@@ -761,6 +776,11 @@ RichEditor::make(&#39;content&#39;)
     -&gt;hint(&#39;Translatable&#39;)
     -&gt;hintColor(&#39;primary&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint-color.jpg?raw=true" alt="Form field with hint color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/hint-color.jpg?raw=true" alt="Form field with hint color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="adding-an-icon-aside-the-hint">Adding an icon aside the hint</h3>
 <p>Hints may also have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> rendered next to them:</p>
 <pre><code class="language-php">use Filament\Forms\Components\RichEditor;
@@ -769,6 +789,11 @@ RichEditor::make(&#39;content&#39;)
     -&gt;hint(&#39;Translatable&#39;)
     -&gt;hintIcon(&#39;heroicon-m-language&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint-icon.jpg?raw=true" alt="Form field with hint icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/hint-icon.jpg?raw=true" alt="Form field with hint icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-extra-html-attributes">Adding extra HTML attributes</h2>
 <p>You can pass extra HTML attributes to the field, which will be merged onto the outer DOM element. Pass an array of attributes to the <code>extraAttributes()</code> method, where the key is the attribute name and the value is the attribute value:</p>
 <pre><code class="language-php">use Filament\Forms\Components\TextInput;
@@ -789,6 +814,11 @@ TextInput::make(&#39;categories&#39;)
 TextInput::make(&#39;name&#39;)
     -&gt;disabled()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/disabled.jpg?raw=true" alt="Disabled form field" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/disabled.jpg?raw=true" alt="Disabled form field" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Optionally, you may pass a boolean value to control if the field should be disabled or not:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Toggle;
 
@@ -828,6 +858,11 @@ TextInput::make(&#39;name&#39;)
 TextInput::make(&#39;name&#39;)
     -&gt;placeholder(&#39;John Doe&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/placeholder.jpg?raw=true" alt="Form field with placeholder" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/placeholder.jpg?raw=true" alt="Form field with placeholder" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="marking-a-field-as-required">Marking a field as required</h2>
 <p>By default, <a href="validation#required">required fields</a> will show an asterisk <code>*</code> next to their label. You may want to hide the asterisk on forms where all fields are required, or where it makes sense to add a <a href="#adding-a-hint-next-to-the-label">hint</a> to optional fields instead:</p>
 <pre><code class="language-php">use Filament\Forms\Components\TextInput;

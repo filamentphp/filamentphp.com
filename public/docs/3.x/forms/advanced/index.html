@@ -683,7 +683,7 @@
 <p>Filament forms are designed to be flexible and customizable. Many existing form builders allow users to define a form schema, but don’t provide a great interface for defining inter-field interactions, or custom logic. Since all Filament forms are built on top of <a href="https://laravel-livewire.com">Livewire</a>, the form can adapt dynamically to user input, even after it has been initially rendered. Developers can use <a href="#form-component-utility-injection">parameter injection</a> to access many utilities in real time and build dynamic forms based on user input. The <a href="#field-lifecycle">lifecycle</a> of fields is open to extension using hook functions to define custom functionality for each field. This allows developers to build complex forms with ease.</p>
 <h2 id="the-basics-of-reactivity">The basics of reactivity</h2>
 <p><a href="https://laravel-livewire.com">Livewire</a> is a tool that allows Blade-rendered HTML to dynamically re-render without requiring a full page reload. Filament forms are built on top of Livewire, so they are able to re-render dynamically, allowing their layout to adapt after they are initially rendered.</p>
-<p>By default, when a user uses a field, the form will not re-render. Since rendering requires a round-trip to the server, this is a performance optimization. However, if you wish to re-render the form after a field is interacted with by the user, you can use the <code>live()</code> method:</p>
+<p>By default, when a user uses a field, the form will not re-render. Since rendering requires a round-trip to the server, this is a performance optimization. However, if you wish to re-render the form after a field is interacted with by the user, you can use the <code>reactive()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Select;
 
 Select::make(&#39;status&#39;)
@@ -692,11 +692,11 @@ Select::make(&#39;status&#39;)
         &#39;reviewing&#39; =&gt; &#39;Reviewing&#39;,
         &#39;published&#39; =&gt; &#39;Published&#39;,
     ])
-    -&gt;live()
+    -&gt;reactive()
 </code></pre>
 <p>In this example, when the user changes the value of the <code>status</code> field, the form will re-render. This allows you to then make changes to fields in the form based on the new value of the <code>status</code> field. Also, you can <a href="#field-updates">hook in to the field’s lifecycle</a> to perform custom logic when the field is updated.</p>
 <h3 id="lazily-reactive-fields">Lazily reactive fields</h3>
-<p>By default, when a field is set to <code>live()</code>, the form will re-render every time the field is interacted with. However, this may not be appropriate for some fields like the text input, since making network requests while the user is still typing results in suboptimal performance. You may wish to re-render the form only after the user has finished using the field, often when it becomes out of focus. You can do this using the <code>lazy()</code> method <em>instead</em> of <code>live()</code>:</p>
+<p>By default, when a field is set to <code>reactive()</code>, the form will re-render every time the field is interacted with. However, this may not be appropriate for some fields like the text input, since making network requests while the user is still typing results in suboptimal performance. You may wish to re-render the form only after the user has finished using the field, often when it becomes out of focus. You can do this using the <code>lazy()</code> method <em>instead</em> of <code>reactive()</code>:</p>
 <pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
 TextInput::make(&#39;username&#39;)
@@ -872,19 +872,19 @@ use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 
 Checkbox::make(&#39;is_company&#39;)
-    -&gt;live()
+    -&gt;reactive()
 
 TextInput::make(&#39;company_name&#39;)
     -&gt;hidden(fn (Get $get): bool =&gt; ! $get(&#39;is_company&#39;))
 </code></pre>
-<p>In this example, the <code>is_company</code> checkbox is <a href="#the-basics-of-reactivity"><code>live()</code></a>. This allows the form to rerender when the value of the <code>is_company</code> field changes. You can access the value of that field from within the <code>hidden()</code> function using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>. The value of the field is inverted using <code>!</code> so that the <code>company_name</code> field is hidden when the <code>is_company</code> field is <code>false</code>.</p>
+<p>In this example, the <code>is_company</code> checkbox is <a href="#the-basics-of-reactivity"><code>reactive()</code></a>. This allows the form to rerender when the value of the <code>is_company</code> field changes. You can access the value of that field from within the <code>hidden()</code> function using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>. The value of the field is inverted using <code>!</code> so that the <code>company_name</code> field is hidden when the <code>is_company</code> field is <code>false</code>.</p>
 <p>Alternatively, you can use the <code>visible()</code> method to show a field conditionally. It does the exact inverse of <code>hidden()</code>, and could be used if you prefer the clarity of the code when written this way:</p>
 <pre><code class="language-php">use Filament\Forms\Get;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 
 Checkbox::make(&#39;is_company&#39;)
-    -&gt;live()
+    -&gt;reactive()
     
 TextInput::make(&#39;company_name&#39;)
     -&gt;visible(fn (Get $get): bool =&gt; $get(&#39;is_company&#39;))
@@ -909,12 +909,12 @@ use Filament\Forms\Set;
 use Illuminate\Support\Str;
 
 TextInput::make(&#39;title&#39;)
-    -&gt;live()
+    -&gt;reactive()
     -&gt;afterStateUpdated(fn (Set $set, ?string $state) =&gt; $set(&#39;slug&#39;, Str::slug($state)))
     
 TextInput::make(&#39;slug&#39;)
 </code></pre>
-<p>In this example, the <code>title</code> field is <a href="#the-basics-of-reactivity"><code>live()</code></a>. This allows the form to rerender when the value of the <code>title</code> field changes. The <code>afterStateUpdated()</code> method is used to run a function after the state of the <code>title</code> field is updated. The function injects the <a href="#injecting-a-function-to-set-the-state-of-another-field"><code>$set()</code> utility</a> and the new state of the <code>title</code> field. The <code>Str::slug()</code> utility method is part of Laravel and is used to generate a slug from a string. The <code>slug</code> field is then updated using the <code>$set()</code> function.</p>
+<p>In this example, the <code>title</code> field is <a href="#the-basics-of-reactivity"><code>reactive()</code></a>. This allows the form to rerender when the value of the <code>title</code> field changes. The <code>afterStateUpdated()</code> method is used to run a function after the state of the <code>title</code> field is updated. The function injects the <a href="#injecting-a-function-to-set-the-state-of-another-field"><code>$set()</code> utility</a> and the new state of the <code>title</code> field. The <code>Str::slug()</code> utility method is part of Laravel and is used to generate a slug from a string. The <code>slug</code> field is then updated using the <code>$set()</code> function.</p>
 <p>One thing to note is that the user may customize the slug manually, and we don’t want to overwrite their changes if the title changes. To prevent this, we can</p>
 <h3 id="dependant-select-options">Dependant select options</h3>
 <p>To dynamically update the options of a <a href="fields/select">select field</a> based on the value of another field, you can pass a function to the <code>options()</code> method of the select field. The function can <a href="#form-component-utility-injection">inject utilities</a> as parameters, so you can do things like check the value of another field using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>:</p>
@@ -927,7 +927,7 @@ Select::make(&#39;category&#39;)
         &#39;mobile&#39; =&gt; &#39;Mobile development&#39;,
         &#39;design&#39; =&gt; &#39;Design&#39;,
     ])
-    -&gt;live()
+    -&gt;reactive()
 
 Select::make(&#39;sub_category&#39;)
     -&gt;options(fn (Get $get): array =&gt; match ($get(&#39;category&#39;)) {
@@ -946,7 +946,7 @@ Select::make(&#39;sub_category&#39;)
         default =&gt; [],
     })
 </code></pre>
-<p>In this example, the <code>category</code> field is <a href="#the-basics-of-reactivity"><code>live()</code></a>. This allows the form to rerender when the value of the <code>category</code> field changes. You can access the value of that field from within the <code>options()</code> function using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>. The value of the field is used to determine which options should be available in the <code>sub_category</code> field. The <code>match ()</code> statement in PHP is used to return an array of options based on the value of the <code>category</code> field. The result is that the <code>sub_category</code> field will only show options relevant to the selected <code>category</code> field.</p>
+<p>In this example, the <code>category</code> field is <a href="#the-basics-of-reactivity"><code>reactive()</code></a>. This allows the form to rerender when the value of the <code>category</code> field changes. You can access the value of that field from within the <code>options()</code> function using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>. The value of the field is used to determine which options should be available in the <code>sub_category</code> field. The <code>match ()</code> statement in PHP is used to return an array of options based on the value of the <code>category</code> field. The result is that the <code>sub_category</code> field will only show options relevant to the selected <code>category</code> field.</p>
 <p>You could adapt this example to use options loaded from an Eloquent model or other data source, by querying within the function:</p>
 <pre><code class="language-php">use Filament\Forms\Get;
 use Filament\Forms\Components\Select;
@@ -954,7 +954,7 @@ use Illuminate\Support\Collection;
 
 Select::make(&#39;category&#39;)
     -&gt;options(Category::query()-&gt;pluck(&#39;name&#39;, &#39;id&#39;))
-    -&gt;live()
+    -&gt;reactive()
     
 Select::make(&#39;sub_category&#39;)
     -&gt;options(fn (Get $get): Collection =&gt; SubCategory::query()
@@ -974,7 +974,7 @@ Select::make(&#39;type&#39;)
         &#39;employee&#39; =&gt; &#39;Employee&#39;,
         &#39;freelancer&#39; =&gt; &#39;Freelancer&#39;,
     ])
-    -&gt;live()
+    -&gt;reactive()
     -&gt;afterStateUpdated(fn (Select $component) =&gt; $component
         -&gt;getContainer()
         -&gt;getComponent(&#39;dynamicTypeFields&#39;)
@@ -1010,7 +1010,7 @@ Grid::make(2)
     })
     -&gt;key(&#39;dynamicTypeFields&#39;)
 </code></pre>
-<p>In this example, the <code>type</code> field is <a href="#the-basics-of-reactivity"><code>live()</code></a>. This allows the form to rerender when the value of the <code>type</code> field changes. The <code>afterStateUpdated()</code> method is used to run a function after the state of the <code>type</code> field is updated. In this case, we <a href="#injecting-the-current-form-component-instance">inject the current select field instance</a>, which we can then use to get the form “container” instance that holds both the select and the grid components. With this container, we can target the grid component using a unique key (<code>dynamicTypeFields</code>) that we have assigned to it. With that grid component instance, we can call <code>fill()</code>, just as we do on a normal form to initialise it. The <code>schema()</code> method of the grid component is then used to return a different schema based on the value of the <code>type</code> field. This is done by using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>, and returning a different schema array dynamically.</p>
+<p>In this example, the <code>type</code> field is <a href="#the-basics-of-reactivity"><code>reactive()</code></a>. This allows the form to rerender when the value of the <code>type</code> field changes. The <code>afterStateUpdated()</code> method is used to run a function after the state of the <code>type</code> field is updated. In this case, we <a href="#injecting-the-current-form-component-instance">inject the current select field instance</a>, which we can then use to get the form “container” instance that holds both the select and the grid components. With this container, we can target the grid component using a unique key (<code>dynamicTypeFields</code>) that we have assigned to it. With that grid component instance, we can call <code>fill()</code>, just as we do on a normal form to initialise it. The <code>schema()</code> method of the grid component is then used to return a different schema based on the value of the <code>type</code> field. This is done by using the <a href="#injecting-the-current-state-of-a-field"><code>$get()</code> utility</a>, and returning a different schema array dynamically.</p>
 <h3 id="auto-hashing-password-field">Auto-hashing password field</h3>
 <p>You have a password field:</p>
 <pre><code class="language-php">use Filament\Forms\Components\TextInput;

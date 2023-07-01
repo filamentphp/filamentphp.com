@@ -691,7 +691,11 @@ CheckboxList::make(&#39;technologies&#39;)
         &#39;livewire&#39; =&gt; &#39;Laravel Livewire&#39;,
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147761423-bd6e99ec-104d-40c2-875a-fed1d638f2c3.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox-list/simple.jpg?raw=true" alt="Checkbox list" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox-list/simple.jpg?raw=true" alt="Checkbox list" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>These options are returned in JSON format. If you’re saving them using Eloquent, you should be sure to add an <code>array</code> <a href="https://laravel.com/docs/eloquent-mutators#array-and-json-casting">cast</a> to the model property:</p>
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
@@ -714,7 +718,11 @@ CheckboxList::make(&#39;technologies&#39;)
     ])
     -&gt;columns(2)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147761438-558a9dcc-b81a-4fbe-a922-a6771407d928.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox-list/columns.jpg?raw=true" alt="Checkbox list with 2 columns" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox-list/columns.jpg?raw=true" alt="Checkbox list with 2 columns" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This method accepts the same options as the <code>columns()</code> method of the <a href="layout/grid">grid</a>. This allows you to responsively customize the number of columns at various breakpoints.</p>
 <h3 id="setting-the-grid-direction">Setting the grid direction</h3>
 <p>By default, when you arrange checkboxes into columns, they will be listed in order vertically. If you’d like to list them horizontally, you may use the <code>gridDirection(&#39;row&#39;)</code> method:</p>
@@ -727,6 +735,11 @@ CheckboxList::make(&#39;technologies&#39;)
     -&gt;columns(2)
     -&gt;gridDirection(&#39;row&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox-list/rows.jpg?raw=true" alt="Checkbox list with 2 rows" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox-list/rows.jpg?raw=true" alt="Checkbox list with 2 rows" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="searching-options">Searching options</h2>
 <p>You may enable a search input to allow easier access to many options, using the <code>searchable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
@@ -737,6 +750,11 @@ CheckboxList::make(&#39;technologies&#39;)
     ])
     -&gt;searchable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox-list/searchable.jpg?raw=true" alt="Searchable checkbox list" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox-list/searchable.jpg?raw=true" alt="Searchable checkbox list" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="bulk-toggling-checkboxes">Bulk toggling checkboxes</h2>
 <p>You may allow users to toggle all checkboxes at once using the <code>bulkToggleable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\CheckboxList;
@@ -747,6 +765,11 @@ CheckboxList::make(&#39;technologies&#39;)
     ])
     -&gt;bulkToggleable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox-list/bulk-toggleable.jpg?raw=true" alt="Bulk toggleable checkbox list" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox-list/bulk-toggleable.jpg?raw=true" alt="Bulk toggleable checkbox list" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="integrating-with-an-eloquent-relationship">Integrating with an Eloquent relationship</h2>
 <blockquote>
 <p>If you’re building a form inside your Livewire component, make sure you have set up the <a href="../adding-a-form-to-a-livewire-component#setting-a-form-model">form’s model</a>. Otherwise, Filament doesn’t know which model to use to retrieve the relationship from.</p>

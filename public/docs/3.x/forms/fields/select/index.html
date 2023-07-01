@@ -690,7 +690,11 @@ Select::make(&#39;status&#39;)
         &#39;published&#39; =&gt; &#39;Published&#39;,
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147612885-888dfd64-6256-482d-b4bc-840191306d2d.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/simple.jpg?raw=true" alt="Select" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/simple.jpg?raw=true" alt="Select" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="searching-options">Searching options</h2>
 <p>You may enable a search input to allow easier access to many options, using the <code>searchable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Select;
@@ -700,7 +704,11 @@ Select::make(&#39;author_id&#39;)
     -&gt;options(User::all()-&gt;pluck(&#39;name&#39;, &#39;id&#39;))
     -&gt;searchable()
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613023-cb7d1907-e4d3-4a33-aa86-1c25d780c861.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/searchable.jpg?raw=true" alt="Searchable select" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/searchable.jpg?raw=true" alt="Searchable select" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="returning-custom-search-results">Returning custom search results</h3>
 <p>If you have lots of options and want to populate them based on a database search or other external data source, you can use the <code>getSearchResultsUsing()</code> and <code>getOptionLabelUsing()</code> methods instead of <code>options()</code>.</p>
 <p>The <code>getSearchResultsUsing()</code> method accepts a callback that returns search results in <code>$key =&gt; $value</code> format. The current user’s search is available as <code>$search</code>, and you should use that to filter your results.</p>
@@ -724,7 +732,11 @@ Select::make(&#39;technologies&#39;)
         &#39;livewire&#39; =&gt; &#39;Laravel Livewire&#39;,
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613070-cd82703a-fa05-4f29-b0ac-3eb03b542077.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/multiple.jpg?raw=true" alt="Multi-select" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/multiple.jpg?raw=true" alt="Multi-select" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>These options are returned in JSON format. If you’re saving them using Eloquent, you should be sure to add an <code>array</code> <a href="https://laravel.com/docs/eloquent-mutators#array-and-json-casting">cast</a> to the model property:</p>
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
@@ -827,7 +839,17 @@ Select::make(&#39;author_id&#39;)
             -&gt;email(),
     ]),
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/create-option.jpg?raw=true" alt="Select with create option button" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/create-option.jpg?raw=true" alt="Select with create option button" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>The form opens in a modal, where the user can fill it with data. Upon form submission, the new record is selected by the field.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/create-option-modal.jpg?raw=true" alt="Select with create option modal" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/create-option-modal.jpg?raw=true" alt="Select with create option modal" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="editing-the-selected-option-in-a-modal">Editing the selected option in a modal</h3>
 <p>You may define a custom form that can be used to edit the selected record and save it back to the <code>BelongsTo</code> relationship:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Select;
@@ -843,7 +865,17 @@ Select::make(&#39;author_id&#39;)
             -&gt;email(),
     ]),
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/edit-option.jpg?raw=true" alt="Select with edit option button" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/edit-option.jpg?raw=true" alt="Select with edit option button" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>The form opens in a modal, where the user can fill it with data. Upon form submission, the data from the form is saved back to the record.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/edit-option-modal.jpg?raw=true" alt="Select with edit option modal" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/edit-option-modal.jpg?raw=true" alt="Select with edit option modal" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="handling-morphto-relationships">Handling <code>MorphTo</code> relationships</h3>
 <p><code>MorphTo</code> relationships are special, since they give the user the ability to select records from a range of different models. Because of this, we have a dedicated <code>MorphToSelect</code> component which is not actually a select field, rather 2 select fields inside a fieldset. The first select field allows you to select the type, and the second allows you to select the record of that type.</p>
 <p>To use the <code>MorphToSelect</code>, you must pass <code>types()</code> into the component, which tell it how to render options for different types:</p>
@@ -949,14 +981,23 @@ Select::make(&#39;domain&#39;)
     -&gt;prefix(&#39;https://&#39;)
     -&gt;suffix(&#39;.com&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/affix.jpg?raw=true" alt="Select with affixes" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/affix.jpg?raw=true" alt="Select with affixes" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="using-icons-as-affixes">Using icons as affixes</h3>
 <p>You may place an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> before and after the input using the <code>prefixIcon()</code> and <code>suffixIcon()</code> methods:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Select;
 
 Select::make(&#39;domain&#39;)
-    -&gt;prefixIcon(&#39;heroicon-m-arrow-top-right-on-square&#39;)
-    -&gt;suffixIcon(&#39;heroicon-m-arrow-top-right-on-square&#39;)
+    -&gt;suffixIcon(&#39;heroicon-m-globe-alt&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/suffix-icon.jpg?raw=true" alt="Select with suffix icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/suffix-icon.jpg?raw=true" alt="Select with suffix icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-a-custom-loading-message">Setting a custom loading message</h2>
 <p>When you’re using a searchable select or multi-select, you may want to display a custom message while the options are loading. You can do this using the <code>loadingMessage()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Select;

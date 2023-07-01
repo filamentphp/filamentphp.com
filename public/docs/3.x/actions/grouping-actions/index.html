@@ -487,6 +487,11 @@
     Action::make(&#39;delete&#39;),
 ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/group/simple.jpg?raw=true" alt="Action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/group/simple.jpg?raw=true" alt="Action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This page is about customizing the look of the group’s trigger button and dropdown.</p>
 <h2 id="customizing-the-group-trigger-style">Customizing the group trigger style</h2>
 <p>The button which opens the dropdown may be customized in the same way as a normal action. <a href="trigger-button">All of the methods available for trigger buttons</a> may be used to customize the group trigger button:</p>
@@ -499,13 +504,23 @@
     -&gt;color(&#39;primary&#39;)
     -&gt;button()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/group/customized.jpg?raw=true" alt="Action group with custom trigger style" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/group/customized.jpg?raw=true" alt="Action group with custom trigger style" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-placement-of-the-dropdown">Setting the placement of the dropdown</h2>
 <p>The dropdown may be positioned relative to the trigger button by using the <code>placement()</code> method:</p>
 <pre><code class="language-php">ActionGroup::make([
     // Array of actions
 ])
-    -&gt;placement(&#39;bottom-start&#39;)
+    -&gt;placement(&#39;top-start&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/group/placement.jpg?raw=true" alt="Action group with top placement style" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/group/placement.jpg?raw=true" alt="Action group with top placement style" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-dividers-between-actions">Adding dividers between actions</h2>
 <p>You may add dividers between groups of actions by using nested <code>ActionGroup</code> objects:</p>
 <pre><code class="language-php">ActionGroup::make([
@@ -516,6 +531,11 @@
 ])
 </code></pre>
 <p>The <code>dropdown(false)</code> method puts the actions inside the parent dropdown, instead of a new nested dropdown.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/group/nested.jpg?raw=true" alt="Action groups nested with dividers" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/group/nested.jpg?raw=true" alt="Action groups nested with dividers" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-width-of-the-dropdown">Setting the width of the dropdown</h2>
 <p>The dropdown may be set to a width by using the <code>width()</code> method. Options correspond to <a href="https://tailwindcss.com/docs/max-width">Tailwind’s max-width scale</a>. The options are <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>, <code>3xl</code>, <code>4xl</code>, <code>5xl</code>, <code>6xl</code> and <code>7xl</code>:</p>
 <pre><code class="language-php">ActionGroup::make([

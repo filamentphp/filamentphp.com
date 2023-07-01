@@ -628,7 +628,7 @@ CreateAction::make()
             -&gt;schema([
                 TextInput::make(&#39;name&#39;)
                     -&gt;required()
-                    -&gt;live()
+                    -&gt;reactive()
                     -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set(&#39;slug&#39;, Str::slug($state))),
                 TextInput::make(&#39;slug&#39;)
                     -&gt;disabled()

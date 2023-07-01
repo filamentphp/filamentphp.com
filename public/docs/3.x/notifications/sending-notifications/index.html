@@ -563,7 +563,7 @@ Notification::make()
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/44533235/180995813-ce93e747-0f66-4fc5-becb-7e535fb80e46.png" alt="Notification with Markdown body"/></p>
 <h2 id="adding-actions-to-notifications">Adding actions to notifications</h2>
-<p>Notifications support <a href="../actions/trigger-button">actions</a>, which are buttons that render below the content of the notification. They can open a URL or dispatch a Livewire event. Actions can be defined as follows:</p>
+<p>Notifications support <a href="../actions/trigger-button">actions</a>, which are buttons that render below the content of the notification. They can open a URL or emit a Livewire event. Actions can be defined as follows:</p>
 <pre><code class="language-php">use Filament\Notifications\Actions\Action;
 use Filament\Notifications\Notification;
 
@@ -627,8 +627,8 @@ Notification::make()
     ])
     .send()
 </code></pre>
-<h3 id="dispatching-livewire-events-from-notification-actions">Dispatching Livewire events from notification actions</h3>
-<p>Sometimes you want to execute additional code when a notification action is clicked. This can be achieved by setting a Livewire event which should be dispatchted on clicking the action. You may optionally pass an array of data, which will be available as parameters in the event listener on your Livewire component:</p>
+<h3 id="emitting-livewire-events-from-notification-actions">Emitting Livewire events from notification actions</h3>
+<p>Sometimes you want to execute additional code when a notification action is clicked. This can be achieved by setting a Livewire event which should be emitted on clicking the action. You may optionally pass an array of data, which will be available as parameters in the event listener on your Livewire component:</p>
 <pre><code class="language-php">use Filament\Notifications\Actions\Action;
 use Filament\Notifications\Notification;
 
@@ -642,18 +642,22 @@ Notification::make()
             -&gt;url(route(&#39;posts.show&#39;, $post), shouldOpenInNewTab: true),
         Action::make(&#39;undo&#39;)
             -&gt;color(&#39;gray&#39;)
-            -&gt;dispatch(&#39;undoEditingPost&#39;, [$post-&gt;id]),
+            -&gt;emit(&#39;undoEditingPost&#39;, [$post-&gt;id]),
     ])
     -&gt;send();
 </code></pre>
-<p>You can also <code>dispatchSelf</code> and <code>dispatchTo</code>:</p>
+<p>You can also <code>emitSelf</code>, <code>emitUp</code> and <code>emitTo</code>:</p>
 <pre><code class="language-php">Action::make(&#39;undo&#39;)
     -&gt;color(&#39;gray&#39;)
-    -&gt;dispatchSelf(&#39;undoEditingPost&#39;, [$post-&gt;id])
+    -&gt;emitSelf(&#39;undoEditingPost&#39;, [$post-&gt;id])
 
 Action::make(&#39;undo&#39;)
     -&gt;color(&#39;gray&#39;)
-    -&gt;dispatchTo(&#39;another_component&#39;, &#39;undoEditingPost&#39;, [$post-&gt;id])
+    -&gt;emitUp(&#39;undoEditingPost&#39;, [$post-&gt;id])
+
+Action::make(&#39;undo&#39;)
+    -&gt;color(&#39;gray&#39;)
+    -&gt;emitTo(&#39;another_component&#39;, &#39;undoEditingPost&#39;, [$post-&gt;id])
 </code></pre>
 <p>Or with JavaScript:</p>
 <pre><code class="language-js">new Notification()
@@ -667,21 +671,25 @@ Action::make(&#39;undo&#39;)
             .openUrlInNewTab(),
         new NotificationAction(&#39;undo&#39;)
             .color(&#39;gray&#39;)
-            .dispatch(&#39;undoEditingPost&#39;),
+            .emit(&#39;undoEditingPost&#39;),
     ])
     .send()
 </code></pre>
-<p>Similarly, <code>dispatchSelf</code> and <code>dispatchTo</code> are also available:</p>
+<p>Similarly, <code>emitSelf</code>, <code>emitUp</code> and <code>emitTo</code> are also available:</p>
 <pre><code class="language-js">new NotificationAction(&#39;undo&#39;)
     .color(&#39;gray&#39;)
-    .dispatchSelf(&#39;undoEditingPost&#39;)
+    .emitSelf(&#39;undoEditingPost&#39;)
 
 new NotificationAction(&#39;undo&#39;)
     .color(&#39;gray&#39;)
-    .dispatchTo(&#39;another_component&#39;, &#39;undoEditingPost&#39;)
+    .emitUp(&#39;undoEditingPost&#39;)
+
+new NotificationAction(&#39;undo&#39;)
+    .color(&#39;gray&#39;)
+    .emitTo(&#39;another_component&#39;, &#39;undoEditingPost&#39;)
 </code></pre>
 <h3 id="closing-notifications-from-actions">Closing notifications from actions</h3>
-<p>After opening a URL or dispatching an event from your action, you may want to close the notification right away:</p>
+<p>After opening a URL or emitting an event from your action, you may want to close the notification right away:</p>
 <pre><code class="language-php">use Filament\Notifications\Actions\Action;
 use Filament\Notifications\Notification;
 
@@ -695,7 +703,7 @@ Notification::make()
             -&gt;url(route(&#39;posts.show&#39;, $post), shouldOpenInNewTab: true),
         Action::make(&#39;undo&#39;)
             -&gt;color(&#39;gray&#39;)
-            -&gt;dispatch(&#39;undoEditingPost&#39;, [$post-&gt;id])
+            -&gt;emit(&#39;undoEditingPost&#39;, [$post-&gt;id])
             -&gt;close(),
     ])
     -&gt;send();
@@ -712,7 +720,7 @@ Notification::make()
             .openUrlInNewTab(),
         new NotificationAction(&#39;undo&#39;)
             .color(&#39;gray&#39;)
-            .dispatch(&#39;undoEditingPost&#39;)
+            .emit(&#39;undoEditingPost&#39;)
             .close(),
     ])
     .send()
@@ -755,7 +763,7 @@ Notification::make()
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-title&#34;,&#34;text&#34;:&#34;Setting a title&#34;,&#34;title&#34;:&#34;Setting a title&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-an-icon&#34;,&#34;text&#34;:&#34;Setting an icon&#34;,&#34;title&#34;:&#34;Setting an icon&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-background-color&#34;,&#34;text&#34;:&#34;Setting a background color&#34;,&#34;title&#34;:&#34;Setting a background color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-duration&#34;,&#34;text&#34;:&#34;Setting a duration&#34;,&#34;title&#34;:&#34;Setting a duration&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-body-text&#34;,&#34;text&#34;:&#34;Setting body text&#34;,&#34;title&#34;:&#34;Setting body text&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-actions-to-notifications&#34;,&#34;text&#34;:&#34;Adding actions to notifications&#34;,&#34;title&#34;:&#34;Adding actions to notifications&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls-from-notification-actions&#34;,&#34;text&#34;:&#34;Opening URLs from notification actions&#34;,&#34;title&#34;:&#34;Opening URLs from notification actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dispatching-livewire-events-from-notification-actions&#34;,&#34;text&#34;:&#34;Dispatching Livewire events from notification actions&#34;,&#34;title&#34;:&#34;Dispatching Livewire events from notification actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;closing-notifications-from-actions&#34;,&#34;text&#34;:&#34;Closing notifications from actions&#34;,&#34;title&#34;:&#34;Closing notifications from actions&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-the-javascript-objects&#34;,&#34;text&#34;:&#34;Using the JavaScript objects&#34;,&#34;title&#34;:&#34;Using the JavaScript objects&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-title&#34;,&#34;text&#34;:&#34;Setting a title&#34;,&#34;title&#34;:&#34;Setting a title&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-an-icon&#34;,&#34;text&#34;:&#34;Setting an icon&#34;,&#34;title&#34;:&#34;Setting an icon&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-background-color&#34;,&#34;text&#34;:&#34;Setting a background color&#34;,&#34;title&#34;:&#34;Setting a background color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-duration&#34;,&#34;text&#34;:&#34;Setting a duration&#34;,&#34;title&#34;:&#34;Setting a duration&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-body-text&#34;,&#34;text&#34;:&#34;Setting body text&#34;,&#34;title&#34;:&#34;Setting body text&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-actions-to-notifications&#34;,&#34;text&#34;:&#34;Adding actions to notifications&#34;,&#34;title&#34;:&#34;Adding actions to notifications&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls-from-notification-actions&#34;,&#34;text&#34;:&#34;Opening URLs from notification actions&#34;,&#34;title&#34;:&#34;Opening URLs from notification actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;emitting-livewire-events-from-notification-actions&#34;,&#34;text&#34;:&#34;Emitting Livewire events from notification actions&#34;,&#34;title&#34;:&#34;Emitting Livewire events from notification actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;closing-notifications-from-actions&#34;,&#34;text&#34;:&#34;Closing notifications from actions&#34;,&#34;title&#34;:&#34;Closing notifications from actions&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-the-javascript-objects&#34;,&#34;text&#34;:&#34;Using the JavaScript objects&#34;,&#34;title&#34;:&#34;Using the JavaScript objects&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#overview" x-bind:class="current == 'overview' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -810,8 +818,8 @@ Notification::make()
                                 Opening URLs from notification actions
                               </a>
                             </li><li>
-                              <a href="#dispatching-livewire-events-from-notification-actions" x-bind:class="current == 'dispatching-livewire-events-from-notification-actions' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Dispatching Livewire events from notification actions
+                              <a href="#emitting-livewire-events-from-notification-actions" x-bind:class="current == 'emitting-livewire-events-from-notification-actions' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
+                                Emitting Livewire events from notification actions
                               </a>
                             </li><li>
                               <a href="#closing-notifications-from-actions" x-bind:class="current == 'closing-notifications-from-actions' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">

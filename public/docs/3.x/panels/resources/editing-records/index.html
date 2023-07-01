@@ -817,7 +817,7 @@ class EditUser extends EditRecord
 <p>This assumes that you have created a view at <code>resources/views/filament/resources/users/pages/edit-user.blade.php</code>.</p>
 <p>Here’s a very simple example of what that view might contain:</p>
 <pre><code class="language-blade">&lt;x-filament::page&gt;
-    &lt;x-filament::form wire:submit=&quot;save&quot;&gt;
+    &lt;x-filament::form wire:submit.prevent=&quot;save&quot;&gt;
         {{ $this-&gt;form }}
 
         &lt;x-filament::form.actions

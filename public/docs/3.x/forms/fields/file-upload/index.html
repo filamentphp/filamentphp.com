@@ -685,7 +685,11 @@
 
 FileUpload::make(&#39;attachment&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613556-62c62153-4d21-4801-8a71-040d528d5757.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/file-upload/simple.jpg?raw=true" alt="File upload" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/file-upload/simple.jpg?raw=true" alt="File upload" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <blockquote>
 <p>Filament also supports <a href="https://github.com/spatie/laravel-medialibrary"><code>spatie/laravel-medialibrary</code></a>. See our <a href="/plugins/spatie-media-library">plugin documentation</a> for more information.</p>
 </blockquote>
@@ -735,7 +739,7 @@ FileUpload::make(&#39;attachment&#39;)
 </code></pre>
 <h3 id="generating-custom-file-names">Generating custom file names</h3>
 <p>You may completely customize how file names are generated using the <code>getUploadedFileNameForStorageUsing()</code> method, and returning a string from the closure based on the <code>$file</code> that was uploaded:</p>
-<pre><code class="language-php">use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+<pre><code class="language-php">use Livewire\TemporaryUploadedFile;
 
 FileUpload::make(&#39;attachment&#39;)
     -&gt;getUploadedFileNameForStorageUsing(
@@ -776,7 +780,6 @@ FileUpload::make(&#39;attachment&#39;)
     -&gt;uploadButtonPosition(&#39;left&#39;)
     -&gt;uploadProgressIndicatorPosition(&#39;left&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613590-9ee07ce7-a43e-46a0-bb40-7a21a3692aea.png" alt=""/></p>
 <h2 id="reordering-files">Reordering files</h2>
 <p>You can also allow users to re-order uploaded files using the <code>reorderable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\FileUpload;

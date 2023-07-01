@@ -685,7 +685,11 @@
 
 Toggle::make(&#39;is_admin&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613146-f5ebde21-f72d-44dd-b5c0-5d229fcd91ef.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/simple.jpg?raw=true" alt="Toggle" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/simple.jpg?raw=true" alt="Toggle" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you’re saving the boolean value using Eloquent, you should be sure to add a <code>boolean</code> <a href="https://laravel.com/docs/eloquent-mutators#attribute-casting">cast</a> to the model property:</p>
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
@@ -706,6 +710,11 @@ Toggle::make(&#39;is_admin&#39;)
     -&gt;onIcon(&#39;heroicon-m-bolt&#39;)
     -&gt;offIcon(&#39;heroicon-m-user&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/icons.jpg?raw=true" alt="Toggle icons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/icons.jpg?raw=true" alt="Toggle icons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="customizing-the-color-of-the-toggle-button">Customizing the color of the toggle button</h2>
 <p>You may also customize the color representing the “on” or “off” state of the toggle. These may be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> or <code>warning</code>. To add a color to the “on” state, use the <code>onColor()</code> method. To add a color to the “off” state, use the <code>offColor()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Toggle;
@@ -714,7 +723,16 @@ Toggle::make(&#39;is_admin&#39;)
     -&gt;onColor(&#39;success&#39;)
     -&gt;offColor(&#39;danger&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613184-9086c102-ad71-4c4e-9170-9a4201a80c66.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/off-color.jpg?raw=true" alt="Toggle off color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/off-color.jpg?raw=true" alt="Toggle off color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/on-color.jpg?raw=true" alt="Toggle on color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/on-color.jpg?raw=true" alt="Toggle on color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="positioning-the-label-above">Positioning the label above</h2>
 <p>Toggle fields have two layout modes, inline and stacked. By default, they are inline.</p>
 <p>When the toggle is inline, its label is adjacent to it:</p>
@@ -723,14 +741,22 @@ Toggle::make(&#39;is_admin&#39;)
 Toggle::make(&#39;is_admin&#39;)
     -&gt;inline()
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613146-f5ebde21-f72d-44dd-b5c0-5d229fcd91ef.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/inline.jpg?raw=true" alt="Toggle with its label inline" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/inline.jpg?raw=true" alt="Toggle with its label inline" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>When the toggle is stacked, its label is above it:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Toggle;
 
 Toggle::make(&#39;is_admin&#39;)
     -&gt;inline(false)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613161-43bfa094-0916-4e01-b86d-dbcf8ee63a17.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/toggle/not-inline.jpg?raw=true" alt="Toggle with its label above" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/toggle/not-inline.jpg?raw=true" alt="Toggle with its label above" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="toggle-validation">Toggle validation</h2>
 <p>As well as all rules listed on the <a href="../validation">validation</a> page, there are additional rules that are specific to toggles.</p>
 <h3 id="accepted-validation">Accepted validation</h3>

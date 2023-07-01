@@ -690,7 +690,11 @@ Radio::make(&#39;status&#39;)
         &#39;published&#39; =&gt; &#39;Published&#39;
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613206-644bd6a4-4814-4a99-b398-d03625179bfa.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/radio/simple.jpg?raw=true" alt="Radio" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/radio/simple.jpg?raw=true" alt="Radio" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-option-descriptions">Setting option descriptions</h2>
 <p>You can optionally provide descriptions to each option using the <code>descriptions()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Radio;
@@ -707,7 +711,11 @@ Radio::make(&#39;status&#39;)
         &#39;published&#39; =&gt; &#39;Is visible.&#39;
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613223-0114ad7e-091c-43cf-b156-67cd0aaf5c0c.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/radio/option-descriptions.jpg?raw=true" alt="Radio with option descriptions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/radio/option-descriptions.jpg?raw=true" alt="Radio with option descriptions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Be sure to use the same <code>key</code> in the descriptions array as the <code>key</code> in the options array so the right description matches the right option.</p>
 <h2 id="boolean-options">Boolean options</h2>
 <p>If you want a simple boolean radio button group, with “Yes” and “No” options, you can use the <code>boolean()</code> method:</p>
@@ -715,7 +723,11 @@ Radio::make(&#39;status&#39;)
     -&gt;label(&#39;Do you like this post?&#39;)
     -&gt;boolean()
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613274-04745624-3ddd-46bb-b25c-1e756d6f4958.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/radio/boolean.jpg?raw=true" alt="Boolean radio" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/radio/boolean.jpg?raw=true" alt="Boolean radio" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="positioning-the-options-inline-with-the-label">Positioning the options inline with the label</h2>
 <p>You may wish to display the options <code>inline()</code> with the label instead of below it:</p>
 <pre><code class="language-php">Radio::make(&#39;feedback&#39;)
@@ -723,7 +735,11 @@ Radio::make(&#39;status&#39;)
     -&gt;boolean()
     -&gt;inline()
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147709853-198d54fb-1bb1-4e82-87d0-3034b9152f0e.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/radio/inline.jpg?raw=true" alt="Inline radio" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/radio/inline.jpg?raw=true" alt="Inline radio" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="disabling-specific-options">Disabling specific options</h2>
 <p>You can disable specific options using the <code>disableOptionWhen()</code> method. It accepts a closure, in which you can check if the option with a specific <code>$value</code> should be disabled:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Radio;
@@ -736,6 +752,11 @@ Radio::make(&#39;status&#39;)
     ])
     -&gt;disableOptionWhen(fn (string $value): bool =&gt; $value === &#39;published&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/radio/disabled-option.jpg?raw=true" alt="Radio with disabled option" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/radio/disabled-option.jpg?raw=true" alt="Radio with disabled option" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you want to retrieve the options that have not been disabled, e.g. for validation purposes, you can do so using <code>getEnabledOptions()</code>:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Radio;
 

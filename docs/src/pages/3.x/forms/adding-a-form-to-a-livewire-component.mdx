@@ -90,7 +90,7 @@ Finally, in your Livewire component's view, render the form:
 
 ```blade
 <div>
-    <form wire:submit="create">
+    <form wire:submit.prevent="create">
         {{ $this->form }}
         
         <button type="submit">

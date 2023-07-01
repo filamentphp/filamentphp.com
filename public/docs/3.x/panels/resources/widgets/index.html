@@ -651,45 +651,6 @@ class ListCustomers extends ListRecords
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
 public ?Model $record = null;
-</code></pre>
-<h2 id="accessing-page-table-data-in-the-widget">Accessing page table data in the widget</h2>
-<p>If you’re using a widget on a <a href="listing-records">List</a> page, you may access the table data by first adding the <code>ExposesTableToWidgets</code> trait to the page class:</p>
-<pre><code class="language-php">use Filament\Pages\Concerns\ExposesTableToWidgets;
-use Filament\Resources\Pages\ListRecords;
-
-class ListProducts extends ListRecords
-{
-    use ExposesTableToWidgets;
-    
-    // ...
-}
-</code></pre>
-<p>Now, on the widget class, you must add the <code>InteractsWithPageTable</code> trait, and return the name of the page class from the <code>getTablePage()</code> method:</p>
-<pre><code class="language-php">use App\Filament\Resources\ProductResource\Pages\ListProducts;
-use Filament\Widgets\Concerns\InteractsWithPageTable;
-use Filament\Widgets\Widget;
-
-class ProductStats extends Widget
-{
-    use InteractsWithPageTable;
-
-    protected function getTablePage(): string
-    {
-        return ListProducts::class;
-    }
-
-    // ...
-}
-</code></pre>
-<p>In the widget class, you can now access the Eloquent query builder instance for the table data using the <code>$this-&gt;getPageTableQuery()</code> method:</p>
-<pre><code class="language-php">use Filament\Widgets\StatsOverviewWidget\Card;
-
-Card::make(&#39;Total Products&#39;, $this-&gt;getPageTableQuery()-&gt;count()),
-</code></pre>
-<p>Alternatively, you can access a collection of the records on the current page using the <code>$this-&gt;getPageTableRecords()</code> method:</p>
-<pre><code class="language-php">use Filament\Widgets\StatsOverviewWidget\Card;
-
-Card::make(&#39;Total Products&#39;, $this-&gt;getPageTableRecords()-&gt;count()),
 </code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/09-widgets.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
@@ -722,7 +683,7 @@ Card::make(&#39;Total Products&#39;, $this-&gt;getPageTableRecords()-&gt;count()
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-a-resource-widget&#34;,&#34;text&#34;:&#34;Creating a resource widget&#34;,&#34;title&#34;:&#34;Creating a resource widget&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;displaying-a-widget-on-a-resource-page&#34;,&#34;text&#34;:&#34;Displaying a widget on a resource page&#34;,&#34;title&#34;:&#34;Displaying a widget on a resource page&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-current-record-in-the-widget&#34;,&#34;text&#34;:&#34;Accessing the current record in the widget&#34;,&#34;title&#34;:&#34;Accessing the current record in the widget&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-page-table-data-in-the-widget&#34;,&#34;text&#34;:&#34;Accessing page table data in the widget&#34;,&#34;title&#34;:&#34;Accessing page table data in the widget&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-a-resource-widget&#34;,&#34;text&#34;:&#34;Creating a resource widget&#34;,&#34;title&#34;:&#34;Creating a resource widget&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;displaying-a-widget-on-a-resource-page&#34;,&#34;text&#34;:&#34;Displaying a widget on a resource page&#34;,&#34;title&#34;:&#34;Displaying a widget on a resource page&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-current-record-in-the-widget&#34;,&#34;text&#34;:&#34;Accessing the current record in the widget&#34;,&#34;title&#34;:&#34;Accessing the current record in the widget&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#overview" x-bind:class="current == 'overview' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -748,13 +709,6 @@ Card::make(&#39;Total Products&#39;, $this-&gt;getPageTableRecords()-&gt;count()
                       <h3>
                         <a href="#accessing-the-current-record-in-the-widget" x-bind:class="current == 'accessing-the-current-record-in-the-widget' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
                           Accessing the current record in the widget
-                        </a>
-                      </h3>
-                      
-                    </li><li>
-                      <h3>
-                        <a href="#accessing-page-table-data-in-the-widget" x-bind:class="current == 'accessing-page-table-data-in-the-widget' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
-                          Accessing page table data in the widget
                         </a>
                       </h3>
                       

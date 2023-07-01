@@ -431,7 +431,7 @@ class StatsOverview extends BaseWidget
             -&gt;color(&#39;success&#39;)
             -&gt;extraAttributes([
                 &#39;class&#39; =&gt; &#39;cursor-pointer&#39;,
-                &#39;wire:click&#39; =&gt; &#39;$dispatch(&quot;setStatusFilter&quot;, &quot;processed&quot;)&#39;,
+                &#39;wire:click&#39; =&gt; &#39;$emitUp(&quot;setStatusFilter&quot;, &quot;processed&quot;)&#39;,
             ]),
         // ...
     ];

@@ -107,7 +107,7 @@ Compile your new CSS and JS assets using `npm run dev`.
 
 ### Configuring layout
 
-Finally, create a new `resources/views/components/layouts/app.blade.php` layout file for Livewire components:
+Finally, create a new `resources/views/layouts/app.blade.php` layout file for Livewire components:
 
 ```blade
 <!DOCTYPE html>
@@ -122,6 +122,7 @@ Finally, create a new `resources/views/components/layouts/app.blade.php` layout 
         <title>{{ config('app.name') }}</title>
 
         <style>[x-cloak] { display: none !important; }</style>
+        @livewireStyles
         @filamentStyles
         @vite('resources/css/app.css')
     </head>
@@ -131,6 +132,7 @@ Finally, create a new `resources/views/components/layouts/app.blade.php` layout 
 
         @livewire('notifications')
 
+        @livewireScripts
         @filamentScripts
         @vite('resources/js/app.js')
         <script src="//unpkg.com/alpinejs" defer></script>

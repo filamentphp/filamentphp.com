@@ -686,7 +686,11 @@
 
 TagsInput::make(&#39;tags&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147614098-14d6eecb-2674-49b6-a5ee-e963c4d88a6e.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/tags-input/simple.jpg?raw=true" alt="Tags input" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/tags-input/simple.jpg?raw=true" alt="Tags input" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you’re saving the JSON tags using Eloquent, you should be sure to add an <code>array</code> <a href="https://laravel.com/docs/eloquent-mutators#array-and-json-casting">cast</a> to the model property:</p>
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
@@ -721,7 +725,6 @@ TagsInput::make(&#39;tags&#39;)
         &#39;livewire&#39;,
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147614115-7570a6cb-dd91-4912-8adf-e54a51f1c567.png" alt=""/></p>
 <h2 id="defining-split-keys">Defining split keys</h2>
 <p>Split keys allow you to map specific buttons on your user’s keyboard to create a new tag. By default, when the user presses “Enter” a new tag is created in the input. You may also define other keys to create new tags, such as “Tab” or ” “. To do this, pass an array of keys to the <code>splitKeys()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\TagsInput;

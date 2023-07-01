@@ -683,29 +683,39 @@
 <p>You may want to separate your fields into sections, each with a heading and description. To do this, you can use a section component:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;schema([
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/section/simple.jpg?raw=true" alt="Section" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/section/simple.jpg?raw=true" alt="Section" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-an-icon-to-the-sections-header">Adding an icon to the section’s header</h2>
-<p>You may add an icon to the section’s header using the <code>icon()</code> method:</p>
+<p>You may add an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> to the section’s header using the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;icon(&#39;heroicon-m-shopping-bag&#39;)
     -&gt;schema([
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/section/icons.jpg?raw=true" alt="Section with icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/section/icons.jpg?raw=true" alt="Section with icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="positioning-the-heading-and-description-aside">Positioning the heading and description aside</h2>
 <p>You may use the <code>aside()</code> to align heading &amp; description on the left, and the form components inside a card on the right:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;aside()
     -&gt;schema([
         // ...
@@ -715,7 +725,8 @@ Section::make(&#39;Heading&#39;)
 <p>Sections may be <code>collapsible()</code> to optionally hide content in long forms:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;schema([
         // ...
     ])
@@ -724,7 +735,8 @@ Section::make(&#39;Heading&#39;)
 <p>Your sections may be <code>collapsed()</code> by default:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;schema([
         // ...
     ])
@@ -734,7 +746,8 @@ Section::make(&#39;Heading&#39;)
 <p>When nesting sections, you can use a more compact styling:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;schema([
         // ...
     ])

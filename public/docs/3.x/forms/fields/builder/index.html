@@ -684,8 +684,8 @@
 <p>The primary use of the builder component is to build web page content using predefined blocks. This could be content for a marketing website, or maybe even fields in an online form. The example below defines multiple blocks for different elements in the page content. On the frontend of your website, you could loop through each block in the JSON and format it how you wish.</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
 Builder::make(&#39;content&#39;)
@@ -705,10 +705,11 @@ Builder::make(&#39;content&#39;)
                         &#39;h6&#39; =&gt; &#39;Heading 6&#39;,
                     ])
                     -&gt;required(),
-            ]),
+            ])
+            -&gt;columns(2),
         Builder\Block::make(&#39;paragraph&#39;)
             -&gt;schema([
-                MarkdownEditor::make(&#39;content&#39;)
+                Textarea::make(&#39;content&#39;)
                     -&gt;label(&#39;Paragraph&#39;)
                     -&gt;required(),
             ]),
@@ -724,7 +725,11 @@ Builder::make(&#39;content&#39;)
             ]),
     ])
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613850-8693abe9-78c9-4f01-b40e-9cd9a567e168.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/simple.jpg?raw=true" alt="Builder" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/simple.jpg?raw=true" alt="Builder" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>We recommend that you store builder data with a <code>JSON</code> column in your database. Additionally, if you’re using Eloquent, make sure that column has an <code>array</code> cast.</p>
 <p>As evident in the above example, blocks can be defined within the <code>blocks()</code> method of the component. Blocks are <code>Builder\Block</code> objects, and require a unique name, and a component schema:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
@@ -759,15 +764,20 @@ Builder\Block::make(&#39;heading&#39;)
             -&gt;required(),
         // ...
     ]),
-    -&gt;label(function (?array $state): ?string {
+    -&gt;label(function (?array $state): string {
         if ($state === null) {
             return &#39;Heading&#39;;
         }
 
-        return $state[&#39;content&#39;];
+        return $state[&#39;content&#39;] ?? &#39;Untitled heading&#39;;
     })
 </code></pre>
-<p>Any fields that you use from <code>$state</code> should be <code>live()</code> or <code>lazy()</code> if you wish to see the item label update live as you use the form.</p>
+<p>Any fields that you use from <code>$state</code> should be <code>reactive()</code> or <code>lazy()</code> if you wish to see the item label update live as you use the form.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/labelled.jpg?raw=true" alt="Builder with labelled blocks based on the content" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/labelled.jpg?raw=true" alt="Builder with labelled blocks based on the content" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="numbering-builder-items">Numbering builder items</h3>
 <p>By default, items in the builder have a number next to their label. You may disable this using the <code>blockNumbers(false)</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
@@ -782,10 +792,14 @@ Builder::make(&#39;content&#39;)
 <p>Blocks may also have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a>, which is displayed next to the label. You can add an icon by passing its name to the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
 
-Builder\Block::make(&#39;heading&#39;)
-    -&gt;icon(&#39;heroicon-m-bookmark&#39;)
+Builder\Block::make(&#39;paragraph&#39;)
+    -&gt;icon(&#39;heroicon-m-bars-3-bottom-left&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147614039-d9aa43dd-acfe-43b6-9cd1-1fc322aa4526.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/icons.jpg?raw=true" alt="Builder with block icons in the dropdown" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/icons.jpg?raw=true" alt="Builder with block icons in the dropdown" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-items">Adding items</h2>
 <p>An action button is displayed below the builder to allow the user to add a new item.</p>
 <h2 id="setting-the-add-action-buttons-label">Setting the add action button’s label</h2>
@@ -842,6 +856,11 @@ Builder::make(&#39;content&#39;)
     ])
     -&gt;reorderableWithButtons()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/reorderable-with-buttons.jpg?raw=true" alt="Builder that is reorderable with buttons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/reorderable-with-buttons.jpg?raw=true" alt="Builder that is reorderable with buttons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="collapsing-items">Collapsing items</h2>
 <p>The builder may be <code>collapsible()</code> to optionally hide content in long forms:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
@@ -861,6 +880,11 @@ Builder::make(&#39;content&#39;)
     ])
     -&gt;collapsed()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/collapsed.jpg?raw=true" alt="Collapsed builder" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/collapsed.jpg?raw=true" alt="Collapsed builder" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="cloning-items">Cloning items</h2>
 <p>You may allow builder items to be duplicated using the <code>cloneable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
@@ -871,6 +895,11 @@ Builder::make(&#39;content&#39;)
     ])
     -&gt;cloneable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/cloneable.jpg?raw=true" alt="Builder repeater" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/cloneable.jpg?raw=true" alt="Builder repeater" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="enabling-the-inset-design">Enabling the “inset” design</h2>
 <p>As part of Filament’s design system, you can enable “inset” mode for a builder with the <code>inset()</code>. This will give the builder extra padding around the outside of the items, with a background color:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Builder;
@@ -881,6 +910,11 @@ Builder::make(&#39;content&#39;)
     ])
     -&gt;inset()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/builder/inset.jpg?raw=true" alt="Builder with inset design" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/builder/inset.jpg?raw=true" alt="Builder with inset design" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="builder-validation">Builder validation</h2>
 <p>As well as all rules listed on the <a href="../validation">validation</a> page, there are additional rules that are specific to builders.</p>
 <h3 id="number-of-items-validation">Number of items validation</h3>

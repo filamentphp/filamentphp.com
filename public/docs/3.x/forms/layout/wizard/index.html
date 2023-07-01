@@ -698,15 +698,11 @@ Wizard::make([
         ]),
 ])
 </code></pre>
-<p>Each step has a mandatory label. You may optionally also add a description for extra detail:</p>
-<pre><code class="language-php">use Filament\Forms\Components\Wizard;
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/wizard/simple.jpg?raw=true" alt="Wizard" loading="lazy" class="rounded-xl dark:hidden">
 
-Wizard\Step::make(&#39;Order&#39;)
-    -&gt;description(&#39;Review your basket&#39;)
-    -&gt;schema([
-        // ...
-    ]),
-</code></pre>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/wizard/simple.jpg?raw=true" alt="Wizard" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <blockquote>
 <p>We have different setup instructions if you’re looking to add a wizard to the creation process inside a <a href="../../panels/resources/creating-records#using-a-wizard">panel resource</a> or an <a href="../../actions/modals#using-a-wizard-as-a-modal-form">action modal</a>. Following that documentation will ensure that the ability to submit the form is only available on the last step of the wizard.</p>
 </blockquote>
@@ -723,6 +719,23 @@ Wizard::make([
     // ...
 ])-&gt;submitAction(new HtmlString(&#39;&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;&#39;))
 </code></pre>
+<p>Alternatively, you can use the built-in Filament button Blade component:</p>
+<pre><code class="language-php">use Filament\Forms\Components\Wizard;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\HtmlString;
+
+Wizard::make([
+    // ...
+])-&gt;submitAction(new HtmlString(Blade::render(&lt;&lt;&lt;BLADE
+    &lt;x-filament::button
+        type=&quot;submit&quot;
+        size=&quot;sm&quot;
+    &gt;
+        Submit
+    &lt;/button&gt;
+BLADE)))
+</code></pre>
+<p>You could use this component in a separate Blade view if you want.</p>
 <h2 id="setting-up-step-icons">Setting up step icons</h2>
 <p>Steps may also have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a>, set using the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Wizard;
@@ -733,6 +746,11 @@ Wizard\Step::make(&#39;Order&#39;)
         // ...
     ]),
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/wizard/icons.jpg?raw=true" alt="Wizard with step icons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/wizard/icons.jpg?raw=true" alt="Wizard with step icons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-descriptions-to-steps">Adding descriptions to steps</h2>
 <p>You may add a short description after the title of each step using the <code>description()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Wizard;
@@ -743,6 +761,11 @@ Wizard\Step::make(&#39;Order&#39;)
         // ...
     ]),
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/wizard/descriptions.jpg?raw=true" alt="Wizard with step descriptions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/wizard/descriptions.jpg?raw=true" alt="Wizard with step descriptions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-default-active-step">Setting the default active step</h2>
 <p>You may use the <code>startOnStep()</code> method to load a specific step in the wizard:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Wizard;

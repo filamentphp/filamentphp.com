@@ -683,9 +683,14 @@
 <p>Placeholders can be used to render text-only “fields” within your forms. Each placeholder has <code>content()</code>, which cannot be changed by the user.</p>
 <pre><code class="language-php">use Filament\Forms\Components\Placeholder;
 
-Placeholder::make(&#39;label&#39;)
-    -&gt;content(&#39;Content, displayed underneath the label&#39;)
+Placeholder::make(&#39;created&#39;)
+    -&gt;content($this-&gt;getRecord()-&gt;created_at-&gt;toFormattedDateString())
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/placeholder/simple.jpg?raw=true" alt="Placeholder" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/placeholder/simple.jpg?raw=true" alt="Placeholder" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <blockquote>
 <p><strong>Important:</strong> All form fields require a unique name. That also applies to Placeholders!</p>
 </blockquote>

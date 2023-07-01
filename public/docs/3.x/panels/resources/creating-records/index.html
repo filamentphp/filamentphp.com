@@ -779,7 +779,7 @@ protected function getSteps(): array
             -&gt;schema([
                 TextInput::make(&#39;name&#39;)
                     -&gt;required()
-                    -&gt;live()
+                    -&gt;reactive()
                     -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set(&#39;slug&#39;, Str::slug($state))),
                 TextInput::make(&#39;slug&#39;)
                     -&gt;disabled()
@@ -832,7 +832,7 @@ class CategoryResource extends Resource
     {
         return TextInput::make(&#39;name&#39;)
             -&gt;required()
-            -&gt;live()
+            -&gt;reactive()
             -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set(&#39;slug&#39;, Str::slug($state)));
     }
     
@@ -875,7 +875,7 @@ class CreateCategory extends CreateRecord
 <p>This assumes that you have created a view at <code>resources/views/filament/resources/users/pages/create-user.blade.php</code>.</p>
 <p>Here’s a very simple example of what that view might contain:</p>
 <pre><code class="language-blade">&lt;x-filament::page&gt;
-    &lt;x-filament::form wire:submit=&quot;create&quot;&gt;
+    &lt;x-filament::form wire:submit.prevent=&quot;create&quot;&gt;
         {{ $this-&gt;form }}
 
         &lt;x-filament::form.actions

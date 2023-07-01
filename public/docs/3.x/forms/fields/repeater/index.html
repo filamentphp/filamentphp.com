@@ -698,7 +698,11 @@ Repeater::make(&#39;members&#39;)
     ])
     -&gt;columns(2)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613690-9c36779b-f3dc-4710-bdba-dc5c81ddd3cd.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/simple.jpg?raw=true" alt="Repeater" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/simple.jpg?raw=true" alt="Repeater" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>We recommend that you store repeater data with a <code>JSON</code> column in your database. Additionally, if you’re using Eloquent, make sure that column has an <code>array</code> cast.</p>
 <p>As evident in the above example, the component schema can be defined within the <code>schema()</code> method of the component:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
@@ -734,7 +738,6 @@ Repeater::make(&#39;members&#39;)
     ])
     -&gt;addActionLabel(&#39;Add member&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613748-6fdf2eff-de09-4ba0-8d01-68888802b152.png" alt=""/></p>
 <h3 id="preventing-the-user-from-adding-items">Preventing the user from adding items</h3>
 <p>You may prevent the user from adding items to the repeater using the <code>addable(false)</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
@@ -779,6 +782,11 @@ Repeater::make(&#39;members&#39;)
     ])
     -&gt;reorderableWithButtons()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/reorderable-with-buttons.jpg?raw=true" alt="Repeater that is reorderable with buttons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/reorderable-with-buttons.jpg?raw=true" alt="Repeater that is reorderable with buttons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="collapsing-items">Collapsing items</h2>
 <p>The repeater may be <code>collapsible()</code> to optionally hide content in long forms:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
@@ -798,6 +806,11 @@ Repeater::make(&#39;qualifications&#39;)
     ])
     -&gt;collapsed()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/collapsed.jpg?raw=true" alt="Collapsed repeater" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/collapsed.jpg?raw=true" alt="Collapsed repeater" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="cloning-items">Cloning items</h2>
 <p>You may allow repeater items to be duplicated using the <code>cloneable()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
@@ -808,6 +821,11 @@ Repeater::make(&#39;qualifications&#39;)
     ])
     -&gt;cloneable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/cloneable.jpg?raw=true" alt="Cloneable repeater" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/cloneable.jpg?raw=true" alt="Cloneable repeater" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="integrating-with-an-eloquent-relationship">Integrating with an Eloquent relationship</h2>
 <blockquote>
 <p>If you’re building a form inside your Livewire component, make sure you have set up the <a href="../adding-a-form-to-a-livewire-component#setting-a-form-model">form’s model</a>. Otherwise, Filament doesn’t know which model to use to retrieve the relationship from.</p>
@@ -891,26 +909,46 @@ Repeater::make(&#39;qualifications&#39;)
 <p>You may organize repeater items into columns by using the <code>grid()</code> method:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
 
-Repeater::make(&#39;members&#39;)
+Repeater::make(&#39;qualifications&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;grid(2)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/grid.jpg?raw=true" alt="Repeater with a 2 column grid of items" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/grid.jpg?raw=true" alt="Repeater with a 2 column grid of items" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This method accepts the same options as the <code>columns()</code> method of the <a href="../layout/grid">grid</a>. This allows you to responsively customize the number of grid columns at various breakpoints.</p>
 <h2 id="adding-a-label-to-repeater-items-based-on-their-content">Adding a label to repeater items based on their content</h2>
-<p>You may add a label for repeater items using the <code>itemLabel()</code> method. This method accepts a closure that recieves the current item’s data in a <code>$state</code> variable. You must return a string to be used as the item label:</p>
+<p>You may add a label for repeater items using the <code>itemLabel()</code> method. This method accepts a closure that receives the current item’s data in a <code>$state</code> variable. You must return a string to be used as the item label:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 
 Repeater::make(&#39;members&#39;)
     -&gt;schema([
         TextInput::make(&#39;name&#39;)
+            -&gt;required()
             -&gt;lazy(),
+        Select::make(&#39;role&#39;)
+            -&gt;options([
+                &#39;member&#39; =&gt; &#39;Member&#39;,
+                &#39;administrator&#39; =&gt; &#39;Administrator&#39;,
+                &#39;owner&#39; =&gt; &#39;Owner&#39;,
+            ])
+            -&gt;required(),
     ])
+    -&gt;columns(2)
     -&gt;itemLabel(fn (array $state): ?string =&gt; $state[&#39;name&#39;] ?? null),
 </code></pre>
-<p>Any fields that you use from <code>$state</code> should be <code>live()</code> or <code>lazy()</code> if you wish to see the item label update live as you use the form.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/labelled.jpg?raw=true" alt="Repeater with item labels" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/labelled.jpg?raw=true" alt="Repeater with item labels" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<p>Any fields that you use from <code>$state</code> should be <code>reactive()</code> or <code>lazy()</code> if you wish to see the item label update live as you use the form.</p>
 <h2 id="using-get-to-access-parent-field-values">Using <code>$get()</code> to access parent field values</h2>
 <p>All form components are able to <a href="../advanced">use <code>$get()</code> and <code>$set()</code></a> to access another field’s value. However, you might experience unexpected behaviour when using this inside the repeater’s schema.</p>
 <p>This is because <code>$get()</code> and <code>$set()</code>, by default, are scoped to the current repeater item. This means that you are able to interact with another field inside that repeater item easily without knowing which repeater item the current form component belongs to.</p>
@@ -939,6 +977,11 @@ Repeater::make(&#39;members&#39;)
     ])
     -&gt;inset()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/repeater/inset.jpg?raw=true" alt="Repeater with inset design" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/repeater/inset.jpg?raw=true" alt="Repeater with inset design" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="repeater-validation">Repeater validation</h2>
 <p>As well as all rules listed on the <a href="../validation">validation</a> page, there are additional rules that are specific to repeaters.</p>
 <h3 id="number-of-items-validation">Number of items validation</h3>

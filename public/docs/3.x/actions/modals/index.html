@@ -553,7 +553,7 @@ Action::make(&#39;create&#39;)
             -&gt;schema([
                 TextInput::make(&#39;name&#39;)
                     -&gt;required()
-                    -&gt;live()
+                    -&gt;reactive()
                     -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set(&#39;slug&#39;, Str::slug($state))),
                 TextInput::make(&#39;slug&#39;)
                     -&gt;disabled()
@@ -621,6 +621,11 @@ Action::make(&#39;approvePost&#39;)
     -&gt;requiresConfirmation()
     -&gt;modalIcon(&#39;heroicon-o-trash&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/icon.jpg?raw=true" alt="Confirmation modal with icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/modal/icon.jpg?raw=true" alt="Confirmation modal with icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>By default, the icon will inherit the color of the action button. You may customize the color of the icon using the <code>modalIconColor()</code> method:</p>
 <pre><code class="language-php">Action::make(&#39;delete&#39;)
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;delete())

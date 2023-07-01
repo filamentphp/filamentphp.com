@@ -750,7 +750,7 @@ class CreatePost extends Component implements HasForms
 </code></pre>
 <p>Finally, in your Livewire component’s view, render the form:</p>
 <pre><code class="language-blade">&lt;div&gt;
-    &lt;form wire:submit=&quot;create&quot;&gt;
+    &lt;form wire:submit.prevent=&quot;create&quot;&gt;
         {{ $this-&gt;form }}
         
         &lt;button type=&quot;submit&quot;&gt;

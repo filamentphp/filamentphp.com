@@ -685,7 +685,11 @@
 
 Checkbox::make(&#39;is_admin&#39;)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613098-db8d3571-1835-4714-b422-619755c0b722.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox/simple.jpg?raw=true" alt="Checkbox" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox/simple.jpg?raw=true" alt="Checkbox" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you’re saving the boolean value using Eloquent, you should be sure to add a <code>boolean</code> <a href="https://laravel.com/docs/eloquent-mutators#attribute-casting">cast</a> to the model property:</p>
 <pre><code class="language-php">use Illuminate\Database\Eloquent\Model;
 
@@ -705,13 +709,21 @@ class User extends Model
 
 Checkbox::make(&#39;is_admin&#39;)-&gt;inline()
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613098-db8d3571-1835-4714-b422-619755c0b722.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox/inline.jpg?raw=true" alt="Checkbox with its label inline" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox/inline.jpg?raw=true" alt="Checkbox with its label inline" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>When the checkbox is stacked, its label is above it:</p>
 <pre><code class="language-php">use Filament\Forms\Components\Checkbox;
 
 Checkbox::make(&#39;is_admin&#39;)-&gt;inline(false)
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/41773797/147613119-0bc731dd-fcdd-4c1a-9a26-cce2b0f589d2.png" alt=""/></p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/checkbox/not-inline.jpg?raw=true" alt="Checkbox with its label above" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/checkbox/not-inline.jpg?raw=true" alt="Checkbox with its label above" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="checkbox-validation">Checkbox validation</h2>
 <p>As well as all rules listed on the <a href="../validation">validation</a> page, there are additional rules that are specific to checkboxes.</p>
 <h3 id="accepted-validation">Accepted validation</h3>

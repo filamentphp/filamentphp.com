@@ -479,7 +479,7 @@ export default defineConfig({
 </code></pre>
 <p>Compile your new CSS and JS assets using <code>npm run dev</code>.</p>
 <h3 id="configuring-layout">Configuring layout</h3>
-<p>Finally, create a new <code>resources/views/components/layouts/app.blade.php</code> layout file for Livewire components:</p>
+<p>Finally, create a new <code>resources/views/layouts/app.blade.php</code> layout file for Livewire components:</p>
 <pre><code class="language-blade">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;{{ str_replace(&#39;_&#39;, &#39;-&#39;, app()-&gt;getLocale()) }}&quot;&gt;
     &lt;head&gt;
@@ -492,6 +492,7 @@ export default defineConfig({
         &lt;title&gt;{{ config(&#39;app.name&#39;) }}&lt;/title&gt;
 
         &lt;style&gt;[x-cloak] { display: none !important; }&lt;/style&gt;
+        @livewireStyles
         @filamentStyles
         @vite(&#39;resources/css/app.css&#39;)
     &lt;/head&gt;
@@ -501,6 +502,7 @@ export default defineConfig({
 
         @livewire(&#39;notifications&#39;)
 
+        @livewireScripts
         @filamentScripts
         @vite(&#39;resources/js/app.js&#39;)
         &lt;script src=&quot;//unpkg.com/alpinejs&quot; defer&gt;&lt;/script&gt;
