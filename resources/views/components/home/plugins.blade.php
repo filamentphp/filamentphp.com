@@ -74,6 +74,20 @@
                         '<',
                     )
                     .fromTo(
+                        $refs.message,
+                        {
+                            autoAlpha: 0,
+                            x: -30,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            ease: 'power4.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
                         $refs.content.querySelectorAll('a > div'),
                         {
                             autoAlpha: 0,
@@ -144,6 +158,16 @@
                         <span class="">Included</span>
                     </div>
                 </div>
+
+                {{-- Message --}}
+                <div
+                    x-ref="message"
+                    class="truncate bg-gradient-to-r from-rum to-transparent bg-clip-text pt-5 text-center text-lg text-transparent brightness-150"
+                >
+                    Stop rebuilding the same UI over and over and over and over...
+                </div>
+
+                {{-- Plugins List --}}
                 <div
                     class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center min-[900px]:grid-cols-2 lg:px-16"
                 >
