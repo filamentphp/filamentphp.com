@@ -664,19 +664,19 @@ TextEntry::make(&#39;slug&#39;)
 </code></pre>
 <p>These get merged onto the outer <code>&lt;div&gt;</code> element of each entry in that entry.</p>
 <h2 id="global-settings">Global settings</h2>
-<p>If you wish to change the default behaviour of all entries globally, then you can call the static <code>configureUsing()</code> method inside a service provider’s <code>boot()</code> method, to which you pass a Closure to modify the entries using. For example, if you wish to make all <code>TextEntry</code> components <a href="text#wrapping-content"><code>wrap()</code></a>, you can do it like so:</p>
+<p>If you wish to change the default behaviour of all entries globally, then you can call the static <code>configureUsing()</code> method inside a service provider’s <code>boot()</code> method, to which you pass a Closure to modify the entries using. For example, if you wish to make all <code>TextEntry</code> components <a href="text#limiting-word-count"><code>words(10)</code></a>, you can do it like so:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
 
 TextEntry::configureUsing(function (TextEntry $entry): void {
     $entry
-        -&gt;wrap();
+        -&gt;words(10);
 });
 </code></pre>
 <p>Of course, you are still able to overwrite this on each entry individually:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\TextEntry;
 
 TextEntry::make(&#39;name&#39;)
-    -&gt;wrap(false)
+    -&gt;words(null)
 </code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/03-entries/01-getting-started.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>

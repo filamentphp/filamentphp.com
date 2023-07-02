@@ -420,6 +420,11 @@
 <p>To add database notifications to your app, you must add a new Livewire component to your Blade layout:</p>
 <pre><code class="language-blade">@livewire(&#39;database-notifications&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/notifications/database.jpg?raw=true" alt="Database notifications" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/notifications/database.jpg?raw=true" alt="Database notifications" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Database notifications will be rendered within a modal. To open this modal, you must have a “trigger” button in your view. Create a new trigger button component in your app, for instance at <code>/resources/views/notifications/database-notifications-trigger.blade.php</code>:</p>
 <pre><code class="language-blade">&lt;button type=&quot;button&quot;&gt;
     Notifications ({{ $unreadNotificationsCount }} unread)

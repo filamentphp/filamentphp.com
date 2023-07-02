@@ -603,19 +603,29 @@ IconColumn::make(&#39;status&#39;)
     })
 </code></pre>
 <p>In the function, <code>$state</code> is the value of the column, and <code>$record</code> can be used to access the underlying Eloquent record.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/simple.jpg?raw=true" alt="Icon column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/simple.jpg?raw=true" alt="Icon column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="customizing-the-color">Customizing the color</h2>
 <p>Icon columns may also have a set of icon colors, using the same syntax. They may be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> or <code>warning</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
 
 IconColumn::make(&#39;status&#39;)
     -&gt;color(fn (string $state): string =&gt; match ($state) {
-        &#39;draft&#39; =&gt; &#39;danger&#39;,
+        &#39;draft&#39; =&gt; &#39;info&#39;,
         &#39;reviewing&#39; =&gt; &#39;warning&#39;,
         &#39;published&#39; =&gt; &#39;success&#39;,
         default =&gt; &#39;gray&#39;,
     })
 </code></pre>
 <p>In the function, <code>$state</code> is the value of the column, and <code>$record</code> can be used to access the underlying Eloquent record.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/color.jpg?raw=true" alt="Icon column with color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/color.jpg?raw=true" alt="Icon column with color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="customizing-the-size">Customizing the size</h2>
 <p>The default icon size is <code>lg</code>, but you may customize the size to be either <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code> or <code>xl</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
@@ -623,6 +633,11 @@ IconColumn::make(&#39;status&#39;)
 IconColumn::make(&#39;status&#39;)
     -&gt;size(&#39;md&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/medium.jpg?raw=true" alt="Medium-sized icon column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/medium.jpg?raw=true" alt="Medium-sized icon column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="handling-booleans">Handling booleans</h2>
 <p>Icon columns can display a check or cross icon based on the contents of the database column, either true or false, using the <code>boolean()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
@@ -630,6 +645,11 @@ IconColumn::make(&#39;status&#39;)
 IconColumn::make(&#39;is_featured&#39;)
     -&gt;boolean()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/boolean.jpg?raw=true" alt="Icon column to display a boolean" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/boolean.jpg?raw=true" alt="Icon column to display a boolean" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="customizing-the-boolean-icons">Customizing the boolean icons</h3>
 <p>You may customize the icon representing each state. Icons are the name of a Blade component present. By default, <a href="https://v1.heroicons.com">Heroicons v1</a> are installed:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
@@ -637,17 +657,27 @@ IconColumn::make(&#39;is_featured&#39;)
 IconColumn::make(&#39;is_featured&#39;)
     -&gt;boolean()
     -&gt;trueIcon(&#39;heroicon-o-check-badge&#39;)
-    -&gt;falseIcon(&#39;heroicon-o-x-circle&#39;)
+    -&gt;falseIcon(&#39;heroicon-o-x-mark&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/boolean-icon.jpg?raw=true" alt="Icon column to display a boolean with custom icons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/boolean-icon.jpg?raw=true" alt="Icon column to display a boolean with custom icons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="customizing-the-boolean-colors">Customizing the boolean colors</h3>
 <p>You may customize the icon color representing each state. These may be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> or <code>warning</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\IconColumn;
 
 IconColumn::make(&#39;is_featured&#39;)
     -&gt;boolean()
-    -&gt;trueColor(&#39;primary&#39;)
+    -&gt;trueColor(&#39;info&#39;)
     -&gt;falseColor(&#39;warning&#39;)
-</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/03-icon.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/icon/boolean-color.jpg?raw=true" alt="Icon column to display a boolean with custom colors" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/icon/boolean-color.jpg?raw=true" alt="Icon column to display a boolean with custom colors" loading="lazy" class="rounded-xl hidden dark:block">
+</div><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/03-icon.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>

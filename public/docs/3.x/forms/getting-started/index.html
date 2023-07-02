@@ -702,6 +702,11 @@ public function form(Form $form): Form
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/getting-started/fields.jpg?raw=true" alt="Form fields" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/getting-started/fields.jpg?raw=true" alt="Form fields" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Forms within a panel and other packages usually have 2 columns by default. For custom forms, you can use the <code>columns()</code> method to achieve the same effect:</p>
 <pre><code class="language-php">$form
     -&gt;schema([
@@ -709,6 +714,11 @@ public function form(Form $form): Form
     ])
     -&gt;columns(2);
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/getting-started/columns.jpg?raw=true" alt="Form fields in 2 columns" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/getting-started/columns.jpg?raw=true" alt="Form fields in 2 columns" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Now, the <code>RichEditor</code> will only consume half of the available width. We can use the <code>columnSpan()</code> method to make it span the full width:</p>
 <pre><code class="language-php">use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
@@ -720,6 +730,11 @@ use Filament\Forms\Components\TextInput;
         -&gt;columnSpan(2), // or `columnSpan(&#39;full&#39;)`
 ]
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/getting-started/column-span.jpg?raw=true" alt="Form fields in 2 columns, but with the rich editor spanning the full width of the form" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/getting-started/column-span.jpg?raw=true" alt="Form fields in 2 columns, but with the rich editor spanning the full width of the form" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>You can learn more about columns and spans in the <a href="layout/grid">layout documentation</a>. You can even make them responsive!</p>
 <h3 id="adding-layout-components-to-a-form-schema">Adding layout components to a form schema</h3>
 <p>Let’s add a new <a href="layout/section"><code>Section</code></a> to our form. <code>Section</code> is a layout component, and it allows you to add a heading and description to a set of fields. It can also allow fields inside it to collapse, which saves space in long forms.</p>
@@ -756,6 +771,11 @@ Section::make(&#39;Publishing&#39;)
         DateTimePicker::make(&#39;published_at&#39;),
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/getting-started/section.jpg?raw=true" alt="Form with section component" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/getting-started/section.jpg?raw=true" alt="Form with section component" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This section now contains a <a href="fields/select"><code>Select</code> field</a> and a <a href="fields/date-time-picker"><code>DateTimePicker</code> field</a>. You can learn more about those fields and their functionalities on the respective docs pages.</p>
 <h2 id="validating-fields">Validating fields</h2>
 <p>In Laravel, validation rules are usually defined in arrays like <code>[&#39;required&#39;, &#39;max:255&#39;]</code> or a combined string like <code>required|max:255</code>. This is fine if you’re exclusively working in the backend with simple form requests. But Filament is also able to give your users frontend validation, so they can fix their mistakes before any backend requests are made.</p>
@@ -782,7 +802,7 @@ use Filament\Forms\Components\TextInput;
             Select::make(&#39;status&#39;)
                 -&gt;options([
                     &#39;draft&#39; =&gt; &#39;Draft&#39;,
-                &#39;reviewing&#39; =&gt; &#39;Reviewing&#39;,
+                    &#39;reviewing&#39; =&gt; &#39;Reviewing&#39;,
                     &#39;published&#39; =&gt; &#39;Published&#39;,
                 ])
                 -&gt;required(),

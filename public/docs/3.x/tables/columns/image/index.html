@@ -595,9 +595,14 @@
 <p>Images can be easily displayed within your table:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\ImageColumn;
 
-ImageColumn::make(&#39;header_image&#39;)
+ImageColumn::make(&#39;avatar&#39;)
 </code></pre>
 <p>The column in the database must contain the path to the image, relative to the root directory of its storage disk.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/image/simple.jpg?raw=true" alt="Image column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/image/simple.jpg?raw=true" alt="Image column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="managing-the-image-disk">Managing the image disk</h2>
 <p>By default, the <code>public</code> disk will be used to retrieve images. You may pass a custom disk name to the <code>disk()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\ImageColumn;
@@ -616,16 +621,26 @@ ImageColumn::make(&#39;header_image&#39;)
 <p>You may display the image using a 1:1 aspect ratio:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\ImageColumn;
 
-ImageColumn::make(&#39;author.avatar&#39;)
+ImageColumn::make(&#39;avatar&#39;)
     -&gt;square()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/image/square.jpg?raw=true" alt="Square image column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/image/square.jpg?raw=true" alt="Square image column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="circular-image">Circular image</h2>
 <p>You may make the image fully rounded, which is useful for rendering avatars:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\ImageColumn;
 
-ImageColumn::make(&#39;author.avatar&#39;)
+ImageColumn::make(&#39;avatar&#39;)
     -&gt;circular()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/image/circular.jpg?raw=true" alt="Circular image column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/image/circular.jpg?raw=true" alt="Circular image column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="customizing-the-size">Customizing the size</h2>
 <p>You may customize the image size by passing a <code>width()</code> and <code>height()</code>, or both with <code>size()</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\ImageColumn;

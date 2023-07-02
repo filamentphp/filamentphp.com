@@ -499,7 +499,7 @@
 <p>Some infolists can be long and complex. You may want to use tabs to reduce the number of components that are visible at once:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Tab 1&#39;)
             -&gt;schema([
@@ -515,11 +515,16 @@ Tabs::make(&#39;Heading&#39;)
             ]),
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/tabs/simple.jpg?raw=true" alt="Tabs" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/tabs/simple.jpg?raw=true" alt="Tabs" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-default-active-tab">Setting the default active tab</h2>
 <p>The first tab will be open by default. You can change the default open tab using the <code>activeTab()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Tab 1&#39;)
             -&gt;schema([
@@ -540,7 +545,7 @@ Tabs::make(&#39;Heading&#39;)
 <p>By default, the current tab is not persisted in the URL’s query string. You can change this behavior using the <code>persistTabInQueryString()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Tab 1&#39;)
             -&gt;schema([
@@ -560,7 +565,7 @@ Tabs::make(&#39;Heading&#39;)
 <p>By default, the current tab is persisted in the URL’s query string using the <code>tab</code> key. You can change this key by passing it to the <code>persistTabInQueryString()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Tab 1&#39;)
             -&gt;schema([
@@ -581,7 +586,7 @@ Tabs::make(&#39;Heading&#39;)
 <p>Tabs may have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a>, which you can set using the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Notifications&#39;)
             -&gt;icon(&#39;heroicon-m-bell&#39;)
@@ -591,11 +596,16 @@ Tabs::make(&#39;Heading&#39;)
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/layout/tabs/icons.jpg?raw=true" alt="Tabs with icons" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/layout/tabs/icons.jpg?raw=true" alt="Tabs with icons" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="setting-the-tab-icon-color">Setting the tab icon color</h3>
 <p>The icon of the tab may have a color to indicate its significance using the <code>iconColor()</code> method. It may be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> or <code>warning</code>:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Notifications&#39;)
             -&gt;icon(&#39;heroicon-m-bell&#39;)
@@ -610,7 +620,7 @@ Tabs::make(&#39;Heading&#39;)
 <p>The icon of the tab may be positioned before or after the label using the <code>iconPosition()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Notifications&#39;)
             -&gt;icon(&#39;heroicon-m-bell&#39;)
@@ -621,11 +631,16 @@ Tabs::make(&#39;Heading&#39;)
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/tabs/icons-after.jpg?raw=true" alt="Tabs with icons after their labels" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/tabs/icons-after.jpg?raw=true" alt="Tabs with icons after their labels" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-a-tab-badge">Setting a tab badge</h2>
 <p>Tabs may have a badge, which you can set using the <code>badge()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Notifications&#39;)
             -&gt;badge(5)
@@ -635,11 +650,16 @@ Tabs::make(&#39;Heading&#39;)
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/tabs/badges.jpg?raw=true" alt="Tabs with badges" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/tabs/badges.jpg?raw=true" alt="Tabs with badges" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="using-grid-columns-within-a-tab">Using grid columns within a tab</h2>
 <p>You may use the <code>columns()</code> method to customize the <a href="grid">grid</a> within the tab:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Tabs;
 
-Tabs::make(&#39;Heading&#39;)
+Tabs::make(&#39;Label&#39;)
     -&gt;tabs([
         Tabs\Tab::make(&#39;Tab 1&#39;)
             -&gt;schema([

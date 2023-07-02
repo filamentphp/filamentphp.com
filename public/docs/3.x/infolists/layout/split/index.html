@@ -503,9 +503,11 @@ use Filament\Infolists\Components\TextEntry;
 
 Split::make([
     Card::make([
-        TextEntry::make(&#39;title&#39;),
+        TextEntry::make(&#39;title&#39;)
+            -&gt;weight(&#39;bold&#39;),
         TextEntry::make(&#39;content&#39;)
-            -&gt;wrap()
+            -&gt;markdown()
+            -&gt;prose(),
     ])-&gt;grow(),
     Card::make([
         TextEntry::make(&#39;created_at&#39;)
@@ -516,7 +518,12 @@ Split::make([
 ])-&gt;from(&#39;md&#39;)
 </code></pre>
 <p>In this example, the first card will <code>grow()</code> to consume available vertical space, without affecting the amount of space needed to render the second card. This creates a sidebar effect.</p>
-<p>The <code>from()</code> method is used to control the <a href="https://tailwindcss.com/docs/responsive-design#overview">Tailwind breakpoint</a> (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>) at which the split layout should be used. In this example, the split layout will be used on medium devices and larger. On smaller devices, the cards will stack on top of each other.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/04-layout/07-split.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+<p>The <code>from()</code> method is used to control the <a href="https://tailwindcss.com/docs/responsive-design#overview">Tailwind breakpoint</a> (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>) at which the split layout should be used. In this example, the split layout will be used on medium devices and larger. On smaller devices, the cards will stack on top of each other.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/split/simple.jpg?raw=true" alt="Split" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/split/simple.jpg?raw=true" alt="Split" loading="lazy" class="rounded-xl hidden dark:block">
+</div><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/04-layout/07-split.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>

@@ -499,39 +499,55 @@
 <p>You may want to separate your entries into sections, each with a heading and description. To do this, you can use a section component:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;schema([
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/section/simple.jpg?raw=true" alt="Section" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/section/simple.jpg?raw=true" alt="Section" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-an-icon-to-the-sections-header">Adding an icon to the section’s header</h2>
 <p>You may add an icon to the section’s header using the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;icon(&#39;heroicon-m-shopping-bag&#39;)
     -&gt;schema([
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/section/icons.jpg?raw=true" alt="Section with icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/section/icons.jpg?raw=true" alt="Section with icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="positioning-the-heading-and-description-aside">Positioning the heading and description aside</h2>
 <p>You may use the <code>aside()</code> to align heading &amp; description on the left, and the infolist components inside a card on the right:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
-    -&gt;description(&#39;Description&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;aside()
     -&gt;schema([
         // ...
     ])
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/section/aside.jpg?raw=true" alt="Section with heading and description aside" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/section/aside.jpg?raw=true" alt="Section with heading and description aside" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="collapsing-sections">Collapsing sections</h2>
 <p>Sections may be <code>collapsible()</code> to optionally hide content in long infolists:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;schema([
         // ...
     ])
@@ -540,22 +556,34 @@ Section::make(&#39;Heading&#39;)
 <p>Your sections may be <code>collapsed()</code> by default:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Cart&#39;)
+    -&gt;description(&#39;The items you have selected for purchase&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;collapsed()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/section/collapsed.jpg?raw=true" alt="Collapsed section" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/section/collapsed.jpg?raw=true" alt="Collapsed section" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="compact-section-styling">Compact section styling</h2>
 <p>When nesting sections, you can use a more compact styling:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;
 
-Section::make(&#39;Heading&#39;)
+Section::make(&#39;Rate limiting&#39;)
+    -&gt;description(&#39;Prevent abuse by limiting the number of requests per period&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;compact()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/layout/section/compact.jpg?raw=true" alt="Compact section" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/layout/section/compact.jpg?raw=true" alt="Compact section" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="using-grid-columns-within-a-section">Using grid columns within a section</h2>
 <p>You may use the <code>columns()</code> method to easily create a <a href="grid">grid</a> within the section:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\Section;

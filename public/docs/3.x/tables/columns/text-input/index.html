@@ -595,8 +595,13 @@
 <p>The text input column allows you to render a text input inside the table, which can be used to update that database record without needing to open a new page or a modal:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextInputColumn;
 
-TextInputColumn::make(&#39;name&#39;)
+TextInputColumn::make(&#39;email&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text-input/simple.jpg?raw=true" alt="Text input column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text-input/simple.jpg?raw=true" alt="Text input column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="validation">Validation</h2>
 <p>You can validate the input by passing any <a href="https://laravel.com/docs/validation#available-validation-rules">Laravel validation rules</a> in an array:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextInputColumn;

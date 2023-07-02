@@ -505,28 +505,37 @@ RepeatableEntry::make(&#39;comments&#39;)
         TextEntry::make(&#39;author.name&#39;),
         TextEntry::make(&#39;title&#39;),
         TextEntry::make(&#39;content&#39;)
-            -&gt;wrap()
             -&gt;columnSpan(2),
     ])
     -&gt;columns(2)
 </code></pre>
 <p>As you can see, the repeatable entry has an embedded <code>schema()</code> which gets repeated for each item.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/repeatable/simple.jpg?raw=true" alt="Repeatable entry" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/repeatable/simple.jpg?raw=true" alt="Repeatable entry" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="grid-layout">Grid layout</h2>
 <p>You may organize repeatable items into columns by using the <code>grid()</code> method:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\RepeatableEntry;
 
-RepeatableEntry::make(&#39;members&#39;)
+RepeatableEntry::make(&#39;comments&#39;)
     -&gt;schema([
         // ...
     ])
     -&gt;grid(2)
 </code></pre>
 <p>This method accepts the same options as the <code>columns()</code> method of the <a href="../layout/grid">grid</a>. This allows you to responsively customize the number of grid columns at various breakpoints.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/infolists/entries/repeatable/grid.jpg?raw=true" alt="Repeatable entry in grid layout" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/repeatable/grid.jpg?raw=true" alt="Repeatable entry in grid layout" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="removing-the-wrapping-card">Removing the wrapping card</h2>
 <p>By default, each item in a repeatable entry gets wrapped in a card. This behavior can be disabled using <code>wrappedInCard()</code>:</p>
 <pre><code class="language-php">use Filament\Infolists\Components\RepeatableEntry;
 
-RepeatableEntry::make(&#39;members&#39;)
+RepeatableEntry::make(&#39;comments&#39;)
     -&gt;schema([
         // ...
     ])

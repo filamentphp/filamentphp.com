@@ -3,6 +3,7 @@ layout: "@layouts/BaseLayout.astro"
 githubUrl: "https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/06-select.md"
 title: Select column
 ---
+import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 ## Overview
 
@@ -20,6 +21,8 @@ SelectColumn::make('status')
         'published' => 'Published',
     ])
 ```
+
+<AutoScreenshot name="tables/columns/select/simple" alt="Select column" version="3.x" />
 
 ## Validation
 

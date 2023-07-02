@@ -611,15 +611,20 @@ public function table(Table $table): Table
 <pre><code class="language-php">use App\Models\Post;
 use Filament\Tables\Actions\Action;
 
-Action::make(&#39;delete&#39;)
-    -&gt;requiresConfirmation()
-    -&gt;action(fn (Post $record) =&gt; $record-&gt;delete())
-
 Action::make(&#39;edit&#39;)
     -&gt;url(fn (Post $record): string =&gt; route(&#39;posts.edit&#39;, $record))
     -&gt;openUrlInNewTab()
+
+Action::make(&#39;delete&#39;)
+    -&gt;requiresConfirmation()
+    -&gt;action(fn (Post $record) =&gt; $record-&gt;delete())
 </code></pre>
 <p>All methods on the action accept callback functions, where you can access the current table <code>$record</code> that was clicked.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/simple.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/simple.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="positioning-row-actions-before-columns">Positioning row actions before columns</h3>
 <p>By default, the row actions in your table are rendered in the final cell of each row. You may move them before the columns by using the <code>position</code> argument:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\Position;
@@ -633,6 +638,11 @@ public function table(Table $table): Table
         ], position: Position::BeforeColumns);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/before-columns.jpg?raw=true" alt="Table with actions before columns" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/before-columns.jpg?raw=true" alt="Table with actions before columns" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="positioning-row-actions-before-the-checkbox-column">Positioning row actions before the checkbox column</h3>
 <p>By default, the row actions in your table are rendered in the final cell of each row. You may move them before the checkbox column by using the <code>position</code> argument:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\Position;
@@ -646,6 +656,11 @@ public function table(Table $table): Table
         ], position: Position::BeforeCells);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/before-cells.jpg?raw=true" alt="Table with actions before cells" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/before-cells.jpg?raw=true" alt="Table with actions before cells" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="bulk-actions">Bulk actions</h2>
 <p>Tables also support “bulk actions”. These can be used when the user selects rows int the table. Traditionally, when rows are selected, a “bulk actions” button appears in the top left corner of the table. When the user clicks this button, they are presented with a dropdown menu of actions to choose from. You can put them in the <code>$table-&gt;bulkActions()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
@@ -667,6 +682,11 @@ BulkAction::make(&#39;delete&#39;)
     -&gt;action(fn (Collection $records) =&gt; $records-&gt;each-&gt;delete())
 </code></pre>
 <p>The function allows you to access the current table <code>$records</code> that are selected. It is an Eloquent collection of models.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/bulk.jpg?raw=true" alt="Table with bulk action" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/bulk.jpg?raw=true" alt="Table with bulk action" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="grouping-bulk-actions">Grouping bulk actions</h3>
 <p>You may use a <code>BulkActionGroup</code> object to <a href="../actions/grouping-actions">group multiple bulk actions together</a> in a dropdown. Any bulk actions that remain outside of the <code>BulkActionGroup</code> will be rendered next to the dropdown’s trigger button:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\BulkAction;
@@ -685,7 +705,7 @@ public function table(Table $table): Table
                     -&gt;requiresConfirmation()
                     -&gt;action(fn (Collection $records) =&gt; $records-&gt;each-&gt;forceDelete()),
             ]),
-            BulkAction::make(&#39;export&#39;)-&gt;action(fn (Collection $records) =&gt; ...),
+            BulkAction::make(&#39;export&#39;)-&gt;button()-&gt;action(fn (Collection $records) =&gt; ...),
         ]);
 }
 </code></pre>
@@ -745,6 +765,11 @@ public function table(Table $table): Table
 }
 </code></pre>
 <p>This is useful for things like “create” actions, which are not related to any specific table row, or bulk actions that need to be more visible.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/header.jpg?raw=true" alt="Table with header actions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/header.jpg?raw=true" alt="Table with header actions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="column-actions">Column actions</h2>
 <p>Actions can be added to columns, such that when a cell in that column is clicked, it acts as the trigger for an action. You can learn more about <a href="columns/getting-started#running-actions">column actions</a> in the documentation.</p>
 <h2 id="prebuilt-table-actions">Prebuilt table actions</h2>
@@ -779,61 +804,105 @@ public function table(Table $table): Table
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group.jpg?raw=true" alt="Table with action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group.jpg?raw=true" alt="Table with action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="choosing-a-action-group-button-style">Choosing a action group button style</h3>
 <p>Out of the box, action group triggers have 3 styles - “button”, “link”, and “icon button”.</p>
 <p>“Icon button” triggers are circular buttons with an <a href="#setting-the-action-group-button-icon">icon</a> and no label. Usually, this is the default button style, but you can use it manually with the <code>iconButton()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;edit&#39;)
-    -&gt;icon(&#39;heroicon-o-pencil-square&#39;)
-    -&gt;iconButton()
-</code></pre>
-<p>“Button” triggers have a background color, label, and optionally an <a href="#setting-the-action-group-button-icon">icon</a>. You can switch to that style with the <code>button()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;edit&#39;)
-    -&gt;button()
-</code></pre>
-<p>“Link” triggers have no background color. They must have a label and optionally an <a href="#setting-the-action-group-button-icon">icon</a>. They look like a link that you might find embedded within text. You can switch to that style with the <code>link()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;edit&#39;)
-    -&gt;link()
-</code></pre>
-<h3 id="setting-the-action-group-button-label">Setting the action group button label</h3>
-<p>You may set the label of the action group button using the <code>label()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
 
 ActionGroup::make([
     // ...
-])-&gt;label(&#39;Actions&#39;);
+])-&gt;iconButton()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-icon-button.jpg?raw=true" alt="Table with icon button action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-icon-button.jpg?raw=true" alt="Table with icon button action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<p>“Button” triggers have a background color, label, and optionally an <a href="#setting-the-action-group-button-icon">icon</a>. You can switch to that style with the <code>button()</code> method:</p>
+<pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
+
+ActionGroup::make([
+    // ...
+])
+    -&gt;button()
+    -&gt;label(&#39;Actions&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-button.jpg?raw=true" alt="Table with button action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-button.jpg?raw=true" alt="Table with button action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<p>“Link” triggers have no background color. They must have a label and optionally an <a href="#setting-the-action-group-button-icon">icon</a>. They look like a link that you might find embedded within text. You can switch to that style with the <code>link()</code> method:</p>
+<pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
+
+ActionGroup::make([
+    // ...
+])
+    -&gt;link()
+    -&gt;label(&#39;Actions&#39;)
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-link.jpg?raw=true" alt="Table with link action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-link.jpg?raw=true" alt="Table with link action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="setting-the-action-group-button-icon">Setting the action group button icon</h3>
 <p>You may set the <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> of the action group button using the <code>icon()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
 
 ActionGroup::make([
     // ...
-])-&gt;icon(&#39;heroicon-m-ellipsis-vertical&#39;);
+])-&gt;icon(&#39;heroicon-m-ellipsis-horizontal&#39;);
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-icon.jpg?raw=true" alt="Table with customized action group icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-icon.jpg?raw=true" alt="Table with customized action group icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="setting-the-action-group-button-color">Setting the action group button color</h3>
 <p>You may set the color of the action group button using the <code>color()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
 
 ActionGroup::make([
     // ...
-])-&gt;color(&#39;primary&#39;);
+])-&gt;color(&#39;info&#39;);
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-color.jpg?raw=true" alt="Table with customized action group color" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-color.jpg?raw=true" alt="Table with customized action group color" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="setting-the-action-group-button-size">Setting the action group button size</h3>
 <p>Buttons come in 3 sizes - <code>sm</code>, <code>md</code> or <code>lg</code>. You may set the size of the action group button using the <code>size()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
 
 ActionGroup::make([
     // ...
-])-&gt;size(&#39;md&#39;);
+])-&gt;size(&#39;sm&#39;);
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-small.jpg?raw=true" alt="Table with small action group" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-small.jpg?raw=true" alt="Table with small action group" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="setting-the-action-group-tooltip">Setting the action group tooltip</h3>
 <p>You may set the tooltip of the action group using the <code>tooltip()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\ActionGroup;
 
 ActionGroup::make([
     // ...
-])-&gt;tooltip(&#39;More actions&#39;);
-</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/05-actions.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+])-&gt;tooltip(&#39;Actions&#39;);
+</code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-tooltip.jpg?raw=true" alt="Table with action group tooltip" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-tooltip.jpg?raw=true" alt="Table with action group tooltip" loading="lazy" class="rounded-xl hidden dark:block">
+</div><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/05-actions.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
@@ -865,7 +934,7 @@ ActionGroup::make([
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;row-actions&#34;,&#34;text&#34;:&#34;Row actions&#34;,&#34;title&#34;:&#34;Row actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;positioning-row-actions-before-columns&#34;,&#34;text&#34;:&#34;Positioning row actions before columns&#34;,&#34;title&#34;:&#34;Positioning row actions before columns&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;positioning-row-actions-before-the-checkbox-column&#34;,&#34;text&#34;:&#34;Positioning row actions before the checkbox column&#34;,&#34;title&#34;:&#34;Positioning row actions before the checkbox column&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;bulk-actions&#34;,&#34;text&#34;:&#34;Bulk actions&#34;,&#34;title&#34;:&#34;Bulk actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;grouping-bulk-actions&#34;,&#34;text&#34;:&#34;Grouping bulk actions&#34;,&#34;title&#34;:&#34;Grouping bulk actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;deselecting-records-once-a-bulk-action-has-finished&#34;,&#34;text&#34;:&#34;Deselecting records once a bulk action has finished&#34;,&#34;title&#34;:&#34;Deselecting records once a bulk action has finished&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;disabling-bulk-actions-for-some-rows&#34;,&#34;text&#34;:&#34;Disabling bulk actions for some rows&#34;,&#34;title&#34;:&#34;Disabling bulk actions for some rows&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;header-actions&#34;,&#34;text&#34;:&#34;Header actions&#34;,&#34;title&#34;:&#34;Header actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;column-actions&#34;,&#34;text&#34;:&#34;Column actions&#34;,&#34;title&#34;:&#34;Column actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;prebuilt-table-actions&#34;,&#34;text&#34;:&#34;Prebuilt table actions&#34;,&#34;title&#34;:&#34;Prebuilt table actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grouping-actions&#34;,&#34;text&#34;:&#34;Grouping actions&#34;,&#34;title&#34;:&#34;Grouping actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;choosing-a-action-group-button-style&#34;,&#34;text&#34;:&#34;Choosing a action group button style&#34;,&#34;title&#34;:&#34;Choosing a action group button style&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-label&#34;,&#34;text&#34;:&#34;Setting the action group button label&#34;,&#34;title&#34;:&#34;Setting the action group button label&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-icon&#34;,&#34;text&#34;:&#34;Setting the action group button icon&#34;,&#34;title&#34;:&#34;Setting the action group button icon&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-color&#34;,&#34;text&#34;:&#34;Setting the action group button color&#34;,&#34;title&#34;:&#34;Setting the action group button color&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-size&#34;,&#34;text&#34;:&#34;Setting the action group button size&#34;,&#34;title&#34;:&#34;Setting the action group button size&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-tooltip&#34;,&#34;text&#34;:&#34;Setting the action group tooltip&#34;,&#34;title&#34;:&#34;Setting the action group tooltip&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;row-actions&#34;,&#34;text&#34;:&#34;Row actions&#34;,&#34;title&#34;:&#34;Row actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;positioning-row-actions-before-columns&#34;,&#34;text&#34;:&#34;Positioning row actions before columns&#34;,&#34;title&#34;:&#34;Positioning row actions before columns&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;positioning-row-actions-before-the-checkbox-column&#34;,&#34;text&#34;:&#34;Positioning row actions before the checkbox column&#34;,&#34;title&#34;:&#34;Positioning row actions before the checkbox column&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;bulk-actions&#34;,&#34;text&#34;:&#34;Bulk actions&#34;,&#34;title&#34;:&#34;Bulk actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;grouping-bulk-actions&#34;,&#34;text&#34;:&#34;Grouping bulk actions&#34;,&#34;title&#34;:&#34;Grouping bulk actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;deselecting-records-once-a-bulk-action-has-finished&#34;,&#34;text&#34;:&#34;Deselecting records once a bulk action has finished&#34;,&#34;title&#34;:&#34;Deselecting records once a bulk action has finished&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;disabling-bulk-actions-for-some-rows&#34;,&#34;text&#34;:&#34;Disabling bulk actions for some rows&#34;,&#34;title&#34;:&#34;Disabling bulk actions for some rows&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;header-actions&#34;,&#34;text&#34;:&#34;Header actions&#34;,&#34;title&#34;:&#34;Header actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;column-actions&#34;,&#34;text&#34;:&#34;Column actions&#34;,&#34;title&#34;:&#34;Column actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;prebuilt-table-actions&#34;,&#34;text&#34;:&#34;Prebuilt table actions&#34;,&#34;title&#34;:&#34;Prebuilt table actions&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grouping-actions&#34;,&#34;text&#34;:&#34;Grouping actions&#34;,&#34;title&#34;:&#34;Grouping actions&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;choosing-a-action-group-button-style&#34;,&#34;text&#34;:&#34;Choosing a action group button style&#34;,&#34;title&#34;:&#34;Choosing a action group button style&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-icon&#34;,&#34;text&#34;:&#34;Setting the action group button icon&#34;,&#34;title&#34;:&#34;Setting the action group button icon&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-color&#34;,&#34;text&#34;:&#34;Setting the action group button color&#34;,&#34;title&#34;:&#34;Setting the action group button color&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-button-size&#34;,&#34;text&#34;:&#34;Setting the action group button size&#34;,&#34;title&#34;:&#34;Setting the action group button size&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-action-group-tooltip&#34;,&#34;text&#34;:&#34;Setting the action group tooltip&#34;,&#34;title&#34;:&#34;Setting the action group tooltip&#34;}]}])" x-on:scroll.window="updateCurrentSection">
                   <li>
                       <h3>
                         <a href="#overview" x-bind:class="current == 'overview' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'">
@@ -942,10 +1011,6 @@ ActionGroup::make([
                           <li>
                               <a href="#choosing-a-action-group-button-style" x-bind:class="current == 'choosing-a-action-group-button-style' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
                                 Choosing a action group button style
-                              </a>
-                            </li><li>
-                              <a href="#setting-the-action-group-button-label" x-bind:class="current == 'setting-the-action-group-button-label' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">
-                                Setting the action group button label
                               </a>
                             </li><li>
                               <a href="#setting-the-action-group-button-icon" x-bind:class="current == 'setting-the-action-group-button-icon' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;">

@@ -613,6 +613,11 @@ public function table(Table $table): Table
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/columns.jpg?raw=true" alt="Table with columns" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/columns.jpg?raw=true" alt="Table with columns" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>In this example, there are 3 columns in the table. The first two display <a href="columns/text">text</a> - the title and slug of each row in the table. The third column displays an <a href="columns/icon">icon</a>, either a green check or a red cross depending on if the row is featured or not.</p>
 <h3 id="making-columns-sortable-and-searchable">Making columns sortable and searchable</h3>
 <p>You can easily modify columns by chaining methods onto them. For example, you can make a column <a href="columns/getting-started#searching">searchable</a> using the <code>searchable()</code> method. Now, there will be a search input in the table, and you will be able to filter rows by the value of that column:</p>
@@ -621,6 +626,11 @@ public function table(Table $table): Table
 TextColumn::make(&#39;title&#39;)
     -&gt;searchable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/searchable-columns.jpg?raw=true" alt="Table with searchable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/searchable-columns.jpg?raw=true" alt="Table with searchable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>You can make multiple columns searchable, and Filament will be able to search for matches within any of them, all at once.</p>
 <p>You can also make a column <a href="columns/getting-started#sorting">sortable</a> using the <code>sortable()</code> method. This will add a sort button to the column header, and clicking it will sort the table by that column:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
@@ -628,27 +638,39 @@ TextColumn::make(&#39;title&#39;)
 TextColumn::make(&#39;title&#39;)
     -&gt;sortable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/sortable-columns.jpg?raw=true" alt="Table with sortable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/sortable-columns.jpg?raw=true" alt="Table with sortable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="accessing-related-data-from-columns">Accessing related data from columns</h3>
 <p>You can also display data in a column that belongs to a relationship. For example, if you have a <code>Post</code> model that belongs to a <code>User</code> model (the author of the post), you can display the user’s name in the table:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
 TextColumn::make(&#39;author.name&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/relationship-columns.jpg?raw=true" alt="Table with relationship column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/relationship-columns.jpg?raw=true" alt="Table with relationship column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>In this case, Filament will search for an <code>author</code> relationship on the <code>Post</code> model, and then display the <code>name</code> attribute of that relationship. We call this “dot notation” - you can use it to display any attribute of any relationship, even nested distant relationships. This dot notation is used by Filament to eager-load the results of that relationship for you.</p>
 <h2 id="defining-table-filters">Defining table filters</h2>
 <p>As well as making columns <code>searchable()</code>, you can allow the users to filter rows in the table in other ways. We call these components “filters”, and they are defined in the <code>$table-&gt;filters()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 public function table(Table $table): Table
 {
     return $table
-        -&gt;schema([
+        -&gt;columns([
             // ...
         ])
         -&gt;filters([
-            Filter::make(&#39;is_featured&#39;),
+            Filter::make(&#39;is_featured&#39;)
+                -&gt;query(fn (Builder $query) =&gt; $query-&gt;where(&#39;is_featured&#39;, true)),
             SelectFilter::make(&#39;status&#39;)
                 -&gt;options([
                     &#39;draft&#39; =&gt; &#39;Draft&#39;,
@@ -658,6 +680,11 @@ public function table(Table $table): Table
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/filters.jpg?raw=true" alt="Table with filters" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/filters.jpg?raw=true" alt="Table with filters" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>In this example, we have defined 2 table filters. On the table, there is now a “filter” icon button in the top corner. Clicking it will open a dropdown with the 2 filters we have defined.</p>
 <p>The first filter is rendered as a checkbox. When it’s checked, only featured rows in the table will be displayed. When it’s unchecked, all rows will be displayed.</p>
 <p>The second filter is rendered as a select dropdown. When a user selects an option, only rows with that status will be displayed. When no option is selected, all rows will be displayed.</p>
@@ -672,7 +699,7 @@ use Filament\Tables\Actions\DeleteBulkAction;
 public function table(Table $table): Table
 {
     return $table
-        -&gt;schema([
+        -&gt;columns([
             // ...
         ])
         -&gt;actions([
@@ -681,7 +708,7 @@ public function table(Table $table): Table
                     $record-&gt;is_featured = true;
                     $record-&gt;save();
                 })
-                -&gt;hidden(fn (Post $record): bool =&gt; $record-&gt;is_featured),,
+                -&gt;hidden(fn (Post $record): bool =&gt; $record-&gt;is_featured),
             Action::make(&#39;unfeature&#39;)
                 -&gt;action(function (Post $record) {
                     $record-&gt;is_featured = false;
@@ -696,8 +723,18 @@ public function table(Table $table): Table
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/actions.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/actions.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>In this example, we define 2 actions for table rows. The first action is a “feature” action. When clicked, it will set the <code>is_featured</code> attribute on the record to <code>true</code> - which is written within the <code>action()</code> method. Using the <code>hidden()</code> method, the action will be hidden if the record is already featured. The second action is an “unfeature” action. When clicked, it will set the <code>is_featured</code> attribute on the record to <code>false</code>. Using the <code>visible()</code> method, the action will be hidden if the record is not featured.</p>
 <p>We also define a bulk action. When bulk actions are defined, each row in the table will have a checkbox. This bulk action is <a href="../actions/prebuilt-actions/delete#bulk-delete">built-in to Filament</a>, and it will delete all selected records. However, you can <a href="actions#bulk-actions">write your own custom bulk actions</a> easily too.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/getting-started/actions-modal.jpg?raw=true" alt="Table with action modal open" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/getting-started/actions-modal.jpg?raw=true" alt="Table with action modal open" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Actions can also open modals to request confirmation from the user, as well as render forms inside to collect extra data. It’s a good idea to read the <a href="../actions/overview">actions documentation</a> to learn more about their extensive capabilities throughout Filament.</p>
 <h2 id="next-steps-with-the-tables-package">Next steps with the tables package</h2>
 <p>Now you’ve finished reading this guide, where to next? Here are some suggestions:</p>

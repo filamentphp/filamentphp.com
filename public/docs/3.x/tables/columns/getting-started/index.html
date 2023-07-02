@@ -644,9 +644,14 @@ TextColumn::make(&#39;title&#39;)
 <p>Columns may be sortable, by clicking on the column label. To make a column sortable, you must use the <code>sortable()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make(&#39;title&#39;)
+TextColumn::make(&#39;name&#39;)
     -&gt;sortable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/sortable.jpg?raw=true" alt="Table with sortable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/sortable.jpg?raw=true" alt="Table with sortable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you’re using an accessor column, you may pass <code>sortable()</code> an array of database columns to sort by:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
@@ -694,9 +699,14 @@ public function table(Table $table): Table
 <p>Columns may be searchable, by using the text input in the top right of the table. To make a column searchable, you must use the <code>searchable()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make(&#39;title&#39;)
+TextColumn::make(&#39;name&#39;)
     -&gt;searchable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/searchable.jpg?raw=true" alt="Table with searchable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/searchable.jpg?raw=true" alt="Table with searchable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you’re using an accessor column, you may pass <code>searchable()</code> an array of database columns to search within:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
@@ -718,9 +728,14 @@ TextColumn::make(&#39;full_name&#39;)
 <p>You can choose to enable a per-column search input using the <code>isIndividual</code> parameter:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make(&#39;title&#39;)
+TextColumn::make(&#39;name&#39;)
     -&gt;searchable(isIndividual: true)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/individually-searchable.jpg?raw=true" alt="Table with individually searchable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/individually-searchable.jpg?raw=true" alt="Table with individually searchable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>If you use the <code>isIndividual</code> parameter, you may still search that column using the main “global” search input for the entire table.</p>
 <p>To disable that functionality while still preserving the individual search functionality, you need the <code>isGlobal</code> parameter:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
@@ -813,9 +828,14 @@ TextColumn::make(&#39;role&#39;)
 <p>Users may hide or show columns themselves in the table. To make a column toggleable, use the <code>toggleable()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make(&#39;id&#39;)
+TextColumn::make(&#39;email&#39;)
     -&gt;toggleable()
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/toggleable.jpg?raw=true" alt="Table with toggleable column" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/toggleable.jpg?raw=true" alt="Table with toggleable column" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h4 id="making-toggleable-columns-hidden-by-default">Making toggleable columns hidden by default</h4>
 <p>By default, toggleable columns are visible. To make them hidden instead:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
@@ -856,6 +876,11 @@ public function table(Table $table): Table
 TextColumn::make(&#39;title&#39;)
     -&gt;tooltip(&#39;Title&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/tooltips.jpg?raw=true" alt="Table with column triggering a tooltip" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/tooltips.jpg?raw=true" alt="Table with column triggering a tooltip" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>This method also accepts a closure that can access the current table record:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
@@ -870,6 +895,11 @@ TextColumn::make(&#39;title&#39;)
 TextColumn::make(&#39;name&#39;)
     -&gt;alignment(&#39;end&#39;)
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/alignment.jpg?raw=true" alt="Table with column aligned to the right" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/alignment.jpg?raw=true" alt="Table with column aligned to the right" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>Alternatively, you may use shorthand methods like <code>alignEnd()</code>:</p>
 <pre><code class="language-php">use Filament\Tables\Columns\TextColumn;
 
