@@ -9,7 +9,7 @@
                 delay: Math.random() * 0.1,
                 scrollTrigger: {
                     trigger: $refs.testimonial,
-                    start: 'top bottom-=150px',
+                    start: 'top bottom-=50px',
                 },
             }).fromTo(
                 $refs.testimonial,

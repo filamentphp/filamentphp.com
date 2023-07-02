@@ -1,40 +1,10 @@
 <div
     x-cloak
-    x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5"
+    x-data="{
+        show_more: false,
+    }"
+    class="relative mx-auto w-full max-w-screen-lg px-5"
 >
-    {{-- Dashed Separator --}}
-    <div
-        x-data="{}"
-        x-ref="separator"
-        x-init="
-            () => {
-                if (reducedMotion) return
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: $refs.separator,
-                        start: 'top bottom-=150px',
-                    },
-                }).fromTo(
-                    $refs.separator,
-                    {
-                        clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-                    },
-                    {
-                        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-                        duration: 0.7,
-                        ease: 'circ.out',
-                    },
-                )
-            }
-        "
-        class="bg-red my-8 grid h-24 place-items-center"
-    >
-        <div
-            class="h-full border-r-[1.5px] border-dashed border-r-black/50"
-        ></div>
-    </div>
-
     {{-- Tweets Section --}}
     <div
         x-data="{}"
@@ -139,7 +109,10 @@
         class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-t from-transparent via-[#F1F3FF] to-[#F1F3FF] px-5 pb-5"
     >
         {{-- Title --}}
-        <div class="grid place-items-center pt-14">
+        <div
+            id="tweets"
+            class="grid place-items-center pt-14"
+        >
             {{-- Twitter Icon --}}
             <div
                 x-ref="twitter_icon"
@@ -208,9 +181,13 @@
 
         {{-- Testimonial Tweets --}}
         <div
-            class="tweets-parent grid grid-cols-1 gap-6 px-5 pt-10 sm:grid-cols-2 lg:grid-cols-3 [&_.testimonial-component.not-hovered]:opacity-50"
+            class="tweets-parent relative grid grid-cols-1 gap-8 overflow-hidden px-3 pt-10 transition-all motion-reduce:transition-none sm:grid-cols-2 lg:grid-cols-3 [&_.testimonial-component.not-hovered]:opacity-50"
+            :class="{
+                'h-[45rem]': !show_more,
+            }"
         >
-            <div class="space-y-9">
+            {{-- Column 1 --}}
+            <div class="space-y-10">
                 <x-home.testimonial
                     url="https://twitter.com/shocm/status/1487841457088045059"
                 >
@@ -300,9 +277,41 @@
                         Lars Klopstra
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/snellingio/status/1491103335793164290"
+                >
+                    The more I look at it, the closer it is to being able to
+                    build a
+                    <strong>full SaaS with Filament alone</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/9887585?v=4"
+                        twitter-handle="snellingio"
+                        title="Laravel developer"
+                    >
+                        Sam Snelling
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/roniestein/status/1366526433737068546"
+                >
+                    Release the hounds!!! This project is going to be
+                    <strong>my new go-to</strong>
+                    for all back-end work!!! So Excited!
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/8517475?v=4"
+                        twitter-handle="roniestein"
+                        title="Laravel developer"
+                    >
+                        Roni Estein
+                    </x-slot>
+                </x-home.testimonial>
             </div>
 
-            <div class="space-y-9">
+            {{-- Column 2 --}}
+            <div class="space-y-10">
                 <x-home.testimonial
                     url="https://twitter.com/mrchrxs/status/1491159440250540033"
                 >
@@ -395,9 +404,41 @@
                         Dominik Geimer
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/luilliarcec/status/1485764353802608643"
+                >
+                    Today I tried Filament, and
+                    <strong>
+                        oh my God, that's fantastic! Amazing! Great job.
+                    </strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/27895611?v=4"
+                        twitter-handle="luilliarcec"
+                        title="Laravel Developer"
+                    >
+                        Luis Andrés Arce C.
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/nickciolpan/status/1483564450208747520"
+                >
+                    Filament's admin is, by far,
+                    <strong>my favorite Laravel tool</strong>
+                    at the moment. Found my gateway drug into Livewire
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/8835763?v=4"
+                        twitter-handle="nickciolpan"
+                        title="Laravel Developer"
+                    >
+                        Nick Ciolpan
+                    </x-slot>
+                </x-home.testimonial>
             </div>
 
-            <div class="space-y-9">
+            {{-- Column 3 --}}
+            <div class="space-y-10">
                 <x-home.testimonial url="https://twitter.com/iksaku2">
                     Filament is the
                     <strong>
@@ -484,6 +525,59 @@
                         Matteo Mangoni
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/romaldyminaya/status/1492553584587776004"
+                >
+                    Filament is a
+                    <strong>very fun framework</strong>
+                    to play with so far. The support is
+                    <strong>very accurate and fast</strong>
+                    . 😍
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/2809147?v=4"
+                        twitter-handle="romaldyminaya"
+                        title="Laravel Developer"
+                    >
+                        Romaldy Minaya
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/BotezatuDima/status/1491026512111226881"
+                >
+                    Today I installed and played with Filament. Seems to be an
+                    <strong>amazing tool for productivity</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/3392129?v=4"
+                        twitter-handle="BotezatuDima"
+                        title="Laravel Developer"
+                    >
+                        Dumitru Botezatu
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/nkornel/status/1547530825117360129"
+                >
+                    We chose Filament and
+                    <strong>clients love it</strong>
+                    . It is
+                    <strong>consistent</strong>
+                    and
+                    <strong>clean</strong>
+                    so the
+                    <strong>learning curve is better</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/1298094?v=4"
+                        twitter-handle="nkornel"
+                        title="Laravel Developer"
+                    >
+                        nKornel
+                    </x-slot>
+                </x-home.testimonial>
             </div>
         </div>
         <script>
@@ -512,5 +606,60 @@
                 })
             })
         </script>
+    </div>
+
+    {{-- Floating Show More/Less Button --}}
+    <div
+        class="inset-x-0 bottom-0 z-10 grid w-full select-none"
+        :class="{
+            'absolute bg-gradient-to-t from-cream to-transparent h-60': !show_more,
+            'sticky': show_more,
+        }"
+    >
+        <div
+            x-on:click="
+                () => {
+                    show_more = ! show_more
+                    if (! show_more) document.getElementById('tweets').scrollIntoView()
+                }
+            "
+            class="relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full bg-sky-500 py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-sky-400 motion-reduce:transition-none"
+            :class="{
+                'w-48': !show_more,
+                'xl:translate-x-[34rem] -translate-y-10 w-16 rotate-180': show_more,
+            }"
+        >
+            <div
+                class="transition duration-500 motion-reduce:transition-none"
+                :class="{
+                    'translate-x-7': !show_more,
+                    'translate-x-5': show_more,
+                }"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="m12 20l6-6m-6 6l-6-6m6 6V9.5M12 4v2.5"
+                    />
+                </svg>
+            </div>
+            <div
+                class="absolute left-16 top-1/2 -translate-y-1/2 truncate transition duration-500"
+                :class="{
+                    'opacity-0': show_more,
+                }"
+            >
+                Show more
+            </div>
+        </div>
     </div>
 </div>
