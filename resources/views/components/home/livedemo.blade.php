@@ -63,7 +63,7 @@
             {{-- Links --}}
             <div class="flex flex-wrap items-center gap-5 pt-20">
                 <a
-                    href="#"
+                    href="https://demo.filamentphp.com"
                     class="group/button flex items-center justify-center gap-3 rounded-xl bg-butter px-7 py-3 text-white transition duration-200"
                 >
                     <div class="">Visit The Demo</div>
@@ -87,7 +87,8 @@
                     </div>
                 </a>
                 <a
-                    href="#"
+                    target="_blank"
+                    href="https://github.com/filamentphp/demo"
                     class="flex items-center justify-center gap-3 rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-300 hover:bg-dawn-pink/70"
                 >
                     <div class="">Source Code</div>
@@ -102,7 +103,7 @@
         >
             {{-- Mockup --}}
             <div
-                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-1000 [grid-area:1/-1] [transform-style:preserve-3d] md:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(5deg)_translateZ(0)] group-hover/mockup:[transform:perspective(1500px)_rotateY(0deg)_rotateX(0deg)_translateZ(0)]"
+                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-1000 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(0deg)_rotateX(0deg)_translateZ(0)] md:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(5deg)_translateZ(0)]"
             >
                 {{-- Window Header --}}
                 <div

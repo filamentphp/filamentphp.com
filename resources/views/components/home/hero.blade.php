@@ -360,7 +360,7 @@
             >
                 <a
                     x-ref="getstarted"
-                    href="#"
+                    href="{{ route('docs') }}"
                     class="group relative block"
                 >
                     {{-- Button --}}

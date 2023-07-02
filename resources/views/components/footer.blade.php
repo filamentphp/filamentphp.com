@@ -30,7 +30,9 @@
         "
         class="py-10"
     >
-        <div class="flex flex-wrap justify-between items-start gap-x-40 gap-y-10">
+        <div
+            class="flex flex-wrap items-start justify-between gap-x-40 gap-y-10"
+        >
             <a
                 href="/"
                 class="block p-2 transition duration-300 will-change-transform hover:scale-105"
@@ -69,19 +71,19 @@
                     class="flex flex-col items-start gap-3 text-sm font-medium"
                 >
                     <a
-                        href="#"
+                        href="{{ route('home') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Home
                     </a>
                     <a
-                        href="#"
+                        href="{{ route('docs') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Documentation
                     </a>
                     <a
-                        href="#"
+                        href="{{ route('plugins') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Plugins
@@ -97,19 +99,21 @@
                     class="flex flex-col items-start gap-3 text-sm font-medium"
                 >
                     <a
-                        href="#"
+                        target="_blank"
+                        href="https://github.com/filamentphp/filament/discussions/new"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Help
                     </a>
                     <a
-                        href="#"
+                        target="_blank"
+                        href="https://github.com/sponsors/danharrin"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Sponsor Us
                     </a>
                     <a
-                        href="#"
+                        href="{{ route('consulting') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
                     >
                         Consulting
@@ -125,6 +129,7 @@
             </div>
             <div class="flexx-wrap flex items-center gap-3.5 text-hurricane">
                 <a
+                    target="_blank"
                     href="https://twitter.com/filamentphp"
                     class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
                 >
@@ -142,6 +147,7 @@
                     </svg>
                 </a>
                 <a
+                    target="_blank"
                     href="https://filamentphp.com/discord"
                     class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
                 >
@@ -160,6 +166,7 @@
                     </svg>
                 </a>
                 <a
+                    target="_blank"
                     href="https://github.com/filamentphp/filament"
                     class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
                 >

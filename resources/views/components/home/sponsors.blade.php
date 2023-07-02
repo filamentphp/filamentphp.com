@@ -438,7 +438,7 @@
         >
             <a
                 x-ref="getstarted"
-                href="#"
+                href="https://github.com/sponsors/danharrin"
                 class="group relative z-10 block text-white"
             >
                 {{-- Button --}}

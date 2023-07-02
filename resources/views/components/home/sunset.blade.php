@@ -386,7 +386,7 @@
             class="pt-10"
         >
             <a
-                href="#"
+                href="{{ route('docs') }}"
                 class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40 sm:py-10"
             >
                 <div class="text-2xl font-bold sm:text-3xl">Get Started</div>
