@@ -180,14 +180,13 @@
         </div>
 
         {{-- Testimonial Tweets --}}
-        <div
-            class="tweets-parent relative grid grid-cols-1 gap-8 overflow-hidden px-3 pt-10 transition-all motion-reduce:transition-none sm:grid-cols-2 lg:grid-cols-3 [&_.testimonial-component.not-hovered]:opacity-50"
+        <div class="overflow-hidden"
             :class="{
-                'h-[45rem]': !show_more,
-            }"
-        >
-            {{-- Column 1 --}}
-            <div class="space-y-10">
+                'max-h-[45rem]': !show_more,
+            }">
+            <div
+                class="tweets-parent relative sm:columns-2 lg:columns-3 gap-8  px-3 pt-10 transition-all motion-reduce:transition-none [&_.testimonial-component.not-hovered]:opacity-50"
+            >
                 <x-home.testimonial
                     url="https://twitter.com/shocm/status/1487841457088045059"
                 >
@@ -211,8 +210,8 @@
                 <x-home.testimonial
                     url="https://twitter.com/ChrisHardie/status/1507793007470428167"
                 >
-                    I’ve built a few Laravel admin tools/sites now with Filament
-                    and just have to remark on how
+                    I’ve built a few Laravel admin tools/sites now with Filament and
+                    just have to remark on how
                     <strong>well designed</strong>
                     it is, and how quickly one can create
                     <strong>powerful, friendly</strong>
@@ -231,8 +230,7 @@
                     url="https://twitter.com/heyjordn/status/1494428799584329730"
                 >
                     <strong>Loving the performance</strong>
-                    of Filament's datatable, our team at Orba added an Excel
-                    export,
+                    of Filament's datatable, our team at Orba added an Excel export,
                     <strong>so smooth</strong>
                     🔥
                     <x-slot
@@ -249,8 +247,8 @@
                 >
                     Filament is a
                     <strong>GREAT</strong>
-                    tool for building admin panels in Laravel. It has a great
-                    plugin support and an
+                    tool for building admin panels in Laravel. It has a great plugin
+                    support and an
                     <strong>active community</strong>
                     . 🚀
                     <x-slot
@@ -265,8 +263,8 @@
                 <x-home.testimonial url="https://twitter.com/larsklopstra">
                     Filament is a
                     <strong>great CMS solution</strong>
-                    for both technical and non-technical users, and the fluent
-                    API is a
+                    for both technical and non-technical users, and the fluent API
+                    is a
                     <strong>developer's dream!</strong>
                     <x-slot
                         name="author"
@@ -280,8 +278,7 @@
                 <x-home.testimonial
                     url="https://twitter.com/snellingio/status/1491103335793164290"
                 >
-                    The more I look at it, the closer it is to being able to
-                    build a
+                    The more I look at it, the closer it is to being able to build a
                     <strong>full SaaS with Filament alone</strong>
                     .
                     <x-slot
@@ -337,17 +334,13 @@
                         Alex Justesen
                     </x-slot>
                 </x-home.testimonial>
-            </div>
-
-            {{-- Column 2 --}}
-            <div class="space-y-10">
                 <x-home.testimonial
                     url="https://twitter.com/mrchrxs/status/1491159440250540033"
                 >
                     Started my second
                     <strong>Filament</strong>
-                    project a while ago. It's the first time in my career that I
-                    can sit down and
+                    project a while ago. It's the first time in my career that I can
+                    sit down and
                     <strong>focus</strong>
                     on
                     <strong>productivity</strong>
@@ -370,8 +363,8 @@
                 >
                     6 months ago,
                     @carre
-                    _sam recommended Filament. I was put off because I use Vue
-                    not Livewire. Just spent 30 minutes with it, and
+                    _sam recommended Filament. I was put off because I use Vue not
+                    Livewire. Just spent 30 minutes with it, and
                     <strong>WOW</strong>
                     . Definitely pitching this at work!
                     <x-slot
@@ -390,8 +383,7 @@
                     <strong>Filament rocks</strong>
                     ! This will be my
                     <strong>first choice</strong>
-                    when creating adminpanels for clients from this day and
-                    forward.
+                    when creating adminpanels for clients from this day and forward.
                     <x-slot
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/1666004?v=4"
@@ -404,8 +396,8 @@
                 <x-home.testimonial
                     url="https://twitter.com/adamlee_clx/status/1380910055411748868"
                 >
-                    I absolutely love developing with TALL stack. Filament is
-                    going to
+                    I absolutely love developing with TALL stack. Filament is going
+                    to
                     <strong>save a lot of time</strong>
                     with the overall development process!!
                     <x-slot
@@ -420,8 +412,8 @@
                 <x-home.testimonial
                     url="https://twitter.com/DominikGeimer/status/1416114759179571202"
                 >
-                    I just started using Filament by Dan Harrin, Ryan Chandler
-                    and Ryan Scherler.
+                    I just started using Filament by Dan Harrin, Ryan Chandler and
+                    Ryan Scherler.
                     <strong>I am really impressed</strong>
                     . Thank you for that great tool.
                     <x-slot
@@ -493,15 +485,9 @@
                         Dave Walker
                     </x-slot>
                 </x-home.testimonial>
-            </div>
-
-            {{-- Column 3 --}}
-            <div class="space-y-10">
                 <x-home.testimonial url="https://twitter.com/iksaku2">
                     Filament is the
-                    <strong>
-                        Swiss Army Knife dashboard for TALL stack apps
-                    </strong>
+                    <strong>Swiss Army Knife dashboard for TALL stack apps</strong>
                     . Just sit down, install and you'll have a full CMS in two
                     shakes.
                     <x-slot
