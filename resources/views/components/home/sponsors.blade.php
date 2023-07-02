@@ -9,7 +9,6 @@
         x-init="
             () => {
                 gsap.timeline({
-                    delay: 0.5,
                     scrollTrigger: {
                         trigger: $refs.sponsors_section,
                         start: 'top bottom-=200px',

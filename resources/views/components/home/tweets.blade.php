@@ -9,7 +9,6 @@
         x-init="
             () => {
                 gsap.timeline({
-                    delay: 0.5,
                     scrollTrigger: {
                         trigger: $refs.tweets_section,
                         start: 'top bottom-=200px',

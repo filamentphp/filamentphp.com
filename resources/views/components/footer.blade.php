@@ -9,7 +9,6 @@
         x-init="
             () => {
                 gsap.timeline({
-                    delay: 0.5,
                     scrollTrigger: {
                         trigger: $refs.footer,
                         start: 'top bottom',
