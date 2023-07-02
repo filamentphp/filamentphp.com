@@ -245,9 +245,59 @@
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/311772?v=4"
                         twitter-handle="ChrisHardie"
-                        title="Software developer"
+                        title="Laravel developer"
                     >
                         Chris Hardie
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/heyjordn/status/1494428799584329730"
+                >
+                    <strong>Loving the performance</strong>
+                    of Filament's datatable, our team at Orba added an Excel
+                    export,
+                    <strong>so smooth</strong>
+                    🔥
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/4820517?v=4"
+                        twitter-handle="heyjordn"
+                        title="Laravel developer"
+                    >
+                        Jordan Jones
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/ralphjsmit/status/1502305847749357572"
+                >
+                    Filament is a
+                    <strong>GREAT</strong>
+                    tool for building admin panels in Laravel. It has a great
+                    plugin support and an
+                    <strong>active community</strong>
+                    . 🚀
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/59207045?v=4"
+                        twitter-handle="ralphjsmit"
+                        title="Laravel developer"
+                    >
+                        Ralph J. Smit
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial url="https://twitter.com/larsklopstra">
+                    Filament is a
+                    <strong>great CMS solution</strong>
+                    for both technical and non-technical users, and the fluent
+                    API is a
+                    <strong>developer's dream!</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/25669876?v=4"
+                        twitter-handle="larsklopstra"
+                        title="Laravel developer"
+                    >
+                        Lars Klopstra
                     </x-slot>
                 </x-home.testimonial>
             </div>
@@ -293,6 +343,56 @@
                         title="Laravel Developer"
                     >
                         Chris
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/andreas_kviby/status/1367824016380166144"
+                >
+                    What else can you wish for?
+                    <strong>Filament rocks</strong>
+                    ! This will be my
+                    <strong>first choice</strong>
+                    when creating adminpanels for clients from this day and
+                    forward.
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/1666004?v=4"
+                        twitter-handle="andreas_kviby"
+                        title="Laravel Developer"
+                    >
+                        Andreas Kviby
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/adamlee_clx/status/1380910055411748868"
+                >
+                    I absolutely love developing with TALL stack. Filament is
+                    going to
+                    <strong>save a lot of time</strong>
+                    with the overall development process!!
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/53559175?v=4"
+                        twitter-handle="adamlee_clx"
+                        title="Laravel Developer"
+                    >
+                        Adam Lee
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/DominikGeimer/status/1416114759179571202"
+                >
+                    I just started using Filament by Dan Harrin, Ryan Chandler
+                    and Ryan Scherler.
+                    <strong>I am really impressed</strong>
+                    . Thank you for that great tool.
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/6383607?v=4"
+                        twitter-handle="DominikGeimer"
+                        title="Laravel Developer"
+                    >
+                        Dominik Geimer
                     </x-slot>
                 </x-home.testimonial>
             </div>
@@ -348,6 +448,40 @@
                         title="Laravel Developer"
                     >
                         Jacques van Wyk
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/jimmyaldape/status/1504641233871728640"
+                >
+                    Filament is a
+                    <strong>joy to work with</strong>
+                    . Just about covers most use cases for an admin panel in
+                    Laravel.
+                    <strong>Great job.</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/59585840?v=4"
+                        twitter-handle="jimmyaldape"
+                        title="Laravel Developer"
+                    >
+                        Jimmy Aldape
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/mattmngdev/status/1495358748445057025"
+                >
+                    The
+                    <strong>highlight of the weekend</strong>
+                    : managed to start a new project using Filament and
+                    <strong>I love it</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/373999?v=4"
+                        twitter-handle="mattmngdev"
+                        title="Laravel Developer"
+                    >
+                        Matteo Mangoni
                     </x-slot>
                 </x-home.testimonial>
             </div>
