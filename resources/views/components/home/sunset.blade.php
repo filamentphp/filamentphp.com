@@ -100,10 +100,14 @@
                         {
                             autoAlpha: 0,
                             y: 20,
+                            x: 20,
+                            rotate: -5,
                         },
                         {
                             autoAlpha: 1,
                             y: 0,
+                            x: 0,
+                            rotate: 0,
                             duration: 2,
                             ease: 'back.out',
                         },
@@ -114,10 +118,14 @@
                         {
                             autoAlpha: 0,
                             y: -20,
+                            x: -20,
+                            rotate: 5,
                         },
                         {
                             autoAlpha: 1,
                             y: 0,
+                            x: 0,
+                            rotate: 0,
                             duration: 2,
                             ease: 'back.out',
                         },
