@@ -4,6 +4,7 @@
     x-ref="testimonial"
     x-init="
         () => {
+            if (reducedMotion) return
             gsap.timeline({
                 delay: Math.random() * 0.1,
                 scrollTrigger: {
@@ -30,9 +31,11 @@
     target="_blank"
     class="group/testimonial block"
 >
-    <div class="testimonial-component text-sm transition duration-300">
+    <div
+        class="testimonial-component text-sm transition duration-300 motion-reduce:transition-none"
+    >
         <div
-            class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:-translate-y-2 group-hover/testimonial:translate-x-2 group-hover/testimonial:scale-105"
+            class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:-translate-y-2 group-hover/testimonial:translate-x-2 group-hover/testimonial:scale-105 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
         >
             {{-- Quote --}}
             <blockquote class="">"{{ $slot }}"</blockquote>
@@ -58,7 +61,7 @@
             </div>
         </div>
         <div
-            class="flex items-center gap-4 px-2 pt-5 transition duration-300 will-change-transform group-hover/testimonial:translate-x-1"
+            class="flex items-center gap-4 px-2 pt-5 transition duration-300 will-change-transform group-hover/testimonial:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
         >
             <img
                 src="{{ $author->attributes->get('avatar') }}"
@@ -71,12 +74,12 @@
                 </div>
                 <div class="grid text-xs text-rum/80">
                     <div
-                        class="self-center justify-self-start transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-5 group-hover/testimonial:opacity-0"
+                        class="self-center justify-self-start transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-5 group-hover/testimonial:opacity-0 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
                     >
                         {{ $author->attributes->get('title') }}
                     </div>
                     <div
-                        class="-translate-x-5 self-center justify-self-start text-sky-400 opacity-0 transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-0 group-hover/testimonial:opacity-100"
+                        class="-translate-x-5 self-center justify-self-start text-sky-400 opacity-0 transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-0 group-hover/testimonial:opacity-100 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
                     >
                         @
                         {{ $author->attributes->get('twitter-handle') }}

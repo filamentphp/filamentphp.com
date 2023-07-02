@@ -14,6 +14,7 @@
                 x-data="{}"
                 x-init="
                     () => {
+                        if (reducedMotion) return
                         gsap.timeline()
                             .fromTo(
                                 $refs.supercar,
@@ -147,7 +148,7 @@
                         x-ref="supercar"
                         src="{{ Vite::asset('resources/images/home/supercar.webp') }}"
                         alt=""
-                        class="w-28"
+                        class="w-28 opacity-0"
                     />
                 </div>
             </div>
@@ -158,6 +159,7 @@
                 x-data="{}"
                 x-init="
                     () => {
+                        if (reducedMotion) return
                         gsap.fromTo(
                             $refs.title,
                             {
@@ -227,7 +229,7 @@
 
                             {{-- Heart Shapes --}}
                             <div
-                                class="absolute -right-7 -top-5 -translate-x-1 rotate-12 text-rose-500 opacity-0 transition duration-200 ease-out group-hover/header:translate-x-0 group-hover/header:opacity-100 min-[500px]:-right-5 min-[500px]:-top-7"
+                                class="absolute -right-7 -top-5 -translate-x-1 rotate-12 text-rose-500 opacity-0 duration-200 ease-out group-hover/header:translate-x-0 group-hover/header:opacity-100 motion-reduce:transition-none min-[500px]:-right-5 min-[500px]:-top-7"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +244,7 @@
                                 </svg>
                             </div>
                             <div
-                                class="absolute -right-12 top-2 -translate-x-1 -rotate-12 text-rose-500 opacity-0 transition delay-75 duration-200 ease-out group-hover/header:translate-x-0 group-hover/header:opacity-100 min-[500px]:-right-10 min-[500px]:top-0"
+                                class="absolute -right-12 top-2 -translate-x-1 -rotate-12 text-rose-500 opacity-0 transition delay-75 duration-200 ease-out group-hover/header:translate-x-0 group-hover/header:opacity-100 motion-reduce:transition-none min-[500px]:-right-10 min-[500px]:top-0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -326,6 +328,7 @@
                 x-data="{}"
                 x-init="
                     () => {
+                        if (reducedMotion) return
                         gsap.fromTo(
                             $refs.getstarted,
                             {
@@ -365,11 +368,11 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none"
                     >
                         <div class="">Get Started</div>
                         <div
-                            class="transition duration-300 group-hover:translate-x-1"
+                            class="transition duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
                         >
                             <svg
                                 width="24"
@@ -390,7 +393,7 @@
 
                     {{-- Shadow --}}
                     <div
-                        class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-butter transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-rose-300"
+                        class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-butter transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-rose-300 motion-reduce:transition-none"
                     ></div>
                 </a>
                 <a
@@ -400,11 +403,11 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-br-3xl rounded-tl-3xl bg-butter px-9 py-4 transition duration-200 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5"
+                        class="flex items-center justify-center gap-3 rounded-br-3xl rounded-tl-3xl bg-butter px-9 py-4 transition duration-200 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
                     >
                         <div class="">Join Discord</div>
                         <div
-                            class="transition duration-300 group-hover:scale-105"
+                            class="transition duration-300 group-hover:scale-105 motion-reduce:transition-none"
                         >
                             <svg
                                 class="w-5"
@@ -424,7 +427,7 @@
 
                     {{-- Shadow --}}
                     <div
-                        class="absolute inset-0 -z-10 h-full w-full translate-x-1.5 translate-y-1.5 rounded-br-3xl rounded-tl-3xl bg-[#F1E3E3] transition duration-300 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:bg-stone-200"
+                        class="absolute inset-0 -z-10 h-full w-full translate-x-1.5 translate-y-1.5 rounded-br-3xl rounded-tl-3xl bg-[#F1E3E3] transition duration-300 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:bg-stone-200 motion-reduce:transition-none"
                     ></div>
                 </a>
             </div>
@@ -434,6 +437,7 @@
                 x-data="{}"
                 x-init="
                     () => {
+                        if (reducedMotion) return
                         gsap.fromTo(
                             $refs.arrow,
                             {
@@ -469,6 +473,7 @@
                 x-data="{}"
                 x-init="
                     () => {
+                        if (reducedMotion) return
                         gsap.fromTo(
                             $refs.rocket,
                             {

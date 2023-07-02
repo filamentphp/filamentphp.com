@@ -9,6 +9,7 @@
         x-ref="separator"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.separator,
@@ -40,6 +41,7 @@
         x-ref="tweets_section"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.tweets_section,
@@ -357,6 +359,7 @@
             )
 
             function handleTestimonialHover(event) {
+                if (reducedMotion) return
                 testimonialComponents.forEach((component) => {
                     if (component !== event.currentTarget) {
                         component.classList.add('not-hovered')

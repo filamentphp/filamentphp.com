@@ -7,6 +7,7 @@
         x-data="{}"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     delay: 0.2,
                     scrollTrigger: {
@@ -64,11 +65,11 @@
             <div class="flex flex-wrap items-center gap-5 pt-20">
                 <a
                     href="https://demo.filamentphp.com"
-                    class="group/button flex items-center justify-center gap-3 rounded-xl bg-butter px-7 py-3 text-white transition duration-200"
+                    class="group/button flex items-center justify-center gap-3 rounded-xl bg-butter px-7 py-3 text-white transition duration-200 motion-reduce:transition-none"
                 >
                     <div class="">Visit The Demo</div>
                     <div
-                        class="transition duration-300 group-hover/button:translate-x-1"
+                        class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
                     >
                         <svg
                             width="24"
@@ -89,7 +90,7 @@
                 <a
                     target="_blank"
                     href="https://github.com/filamentphp/demo"
-                    class="flex items-center justify-center gap-3 rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-300 hover:bg-dawn-pink/70"
+                    class="flex items-center justify-center gap-3 rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-300 hover:bg-dawn-pink/70 motion-reduce:transition-none"
                 >
                     <div class="">Source Code</div>
                 </a>
@@ -103,7 +104,7 @@
         >
             {{-- Mockup --}}
             <div
-                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-1000 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(0deg)_rotateX(0deg)_translateZ(0)] md:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(5deg)_translateZ(0)]"
+                class="w-[95%] self-center justify-self-center overflow-hidden rounded-bl-xl rounded-br-xl rounded-tl-lg rounded-tr-lg shadow-lg shadow-black/5 transition-all duration-1000 [grid-area:1/-1] [transform-style:preserve-3d] group-hover/mockup:[transform:perspective(1500px)_rotateY(0deg)_rotateX(0deg)_translateZ(0)] motion-reduce:transition-none motion-reduce:group-hover/mockup:transform-none md:[transform:perspective(1500px)_rotateY(-10deg)_rotateX(5deg)_translateZ(0)]"
             >
                 {{-- Window Header --}}
                 <div

@@ -8,6 +8,7 @@
         x-ref="sponsors_section"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.sponsors_section,
@@ -279,7 +280,7 @@
             class="mx-auto grid w-full max-w-xl grid-cols-1 gap-x-20 gap-y-12 py-14 min-[500px]:grid-cols-2 min-[850px]:grid-cols-3"
         >
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://ploi.io"
                 target="_blank"
                 title="Ploi"
@@ -295,7 +296,7 @@
             </a>
 
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://www.agiledrop.com/laravel?utm_source=filament"
                 target="_blank"
                 title="Agiledrop"
@@ -344,7 +345,7 @@
             </a>
 
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://codecourse.com"
                 target="_blank"
                 title="Codecourse"
@@ -372,7 +373,7 @@
             </a>
 
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://laradir.com"
                 target="_blank"
                 title="Laradir"
@@ -390,7 +391,7 @@
             </a>
 
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://uselocale.com"
                 target="_blank"
                 title="Locale"
@@ -415,7 +416,7 @@
             </a>
 
             <a
-                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110"
+                class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
                 href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web"
                 target="_blank"
                 title="Lucky Media"
@@ -443,7 +444,7 @@
             >
                 {{-- Button --}}
                 <div
-                    class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 >
                     <div class="">Sponsor Filament</div>
                     <div class="">
@@ -463,7 +464,7 @@
 
                 {{-- Shadow --}}
                 <div
-                    class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter"
+                    class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 ></div>
             </a>
         </div>

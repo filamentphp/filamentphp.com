@@ -7,6 +7,7 @@
         x-data="{}"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.content,
@@ -148,7 +149,7 @@
                 >
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -174,7 +175,7 @@
                                     Panel Builder
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +202,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -224,7 +225,7 @@
                                     Table Builder
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +252,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -274,7 +275,7 @@
                                     Form Builder
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -301,7 +302,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -333,7 +334,7 @@
                                     Notifications
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +360,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -389,7 +390,7 @@
                                     New
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -415,7 +416,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -455,7 +456,7 @@
                                     New
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -482,7 +483,7 @@
                     </a>
                     <a
                         href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 min-[450px]:flex-row"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
                             class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
@@ -517,7 +518,7 @@
                                     New
                                 </div>
                                 <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100"
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

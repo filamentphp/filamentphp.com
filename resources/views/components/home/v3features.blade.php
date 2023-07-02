@@ -7,6 +7,7 @@
         x-data="{}"
         x-init="
             $nextTick(() => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.header,

@@ -8,6 +8,7 @@
         x-ref="footer"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.footer,
@@ -35,7 +36,7 @@
         >
             <a
                 href="/"
-                class="block p-2 transition duration-300 will-change-transform hover:scale-105"
+                class="block p-2 transition duration-300 will-change-transform hover:scale-105 motion-reduce:transition-none"
             >
                 <div class="text-black">
                     <svg
@@ -72,25 +73,25 @@
                 >
                     <a
                         href="{{ route('home') }}"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Home
                     </a>
                     <a
                         href="{{ route('docs') }}"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Documentation
                     </a>
                     <a
                         href="{{ route('plugins') }}"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Plugins
                     </a>
                     <a
                         href="#"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Community
                     </a>
@@ -101,20 +102,20 @@
                     <a
                         target="_blank"
                         href="https://github.com/filamentphp/filament/discussions/new"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Help
                     </a>
                     <a
                         target="_blank"
                         href="https://github.com/sponsors/danharrin"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Sponsor Us
                     </a>
                     <a
                         href="{{ route('consulting') }}"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Consulting
                     </a>
@@ -131,7 +132,7 @@
                 <a
                     target="_blank"
                     href="https://twitter.com/filamentphp"
-                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
+                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
                 >
                     <svg
                         width="40"
@@ -149,7 +150,7 @@
                 <a
                     target="_blank"
                     href="https://filamentphp.com/discord"
-                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
+                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
                 >
                     <svg
                         class="w-[1.3rem]"
@@ -168,7 +169,7 @@
                 <a
                     target="_blank"
                     href="https://github.com/filamentphp/filament"
-                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black"
+                    class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
                 >
                     <svg
                         class="w-[1.6rem]"

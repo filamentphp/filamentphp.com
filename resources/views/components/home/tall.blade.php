@@ -1,16 +1,22 @@
 <div
     x-cloak
     x-data="{
-        tall_stack_is_hovering: false,
-        download_counter: { val: 1 },
-        github_stars_counter: { val: 1 },
+        download_counter_target: 1000000,
+        github_stars_counter_target: 7000,
     }"
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div
-        x-data="{}"
+        x-data="{
+            tall_stack_is_hovering: false,
+            download_counter: { val: reducedMotion ? download_counter_target : 1 },
+            github_stars_counter: {
+                val: reducedMotion ? github_stars_counter_target : 1,
+            },
+        }"
         x-init="
             () => {
+                if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: $refs.header,
@@ -202,7 +208,7 @@
                     .to(
                         download_counter,
                         {
-                            val: 1000000,
+                            val: download_counter_target,
                             duration: 1.5,
                             roundProps: 'val',
                         },
@@ -225,7 +231,7 @@
                     .to(
                         github_stars_counter,
                         {
-                            val: 7000,
+                            val: github_stars_counter_target,
                             duration: 1.5,
                             roundProps: 'val',
                         },
@@ -313,7 +319,7 @@
                     <a
                         href="https://tailwindcss.com"
                         target="_blank"
-                        class="flex items-center gap-3 transition duration-300 group-hover/tall-link:translate-x-1"
+                        class="flex items-center gap-3 transition motion-reduce:transition-none duration-300 motion-reduce:group-hover/tall-link:transform-none group-hover/tall-link:translate-x-1"
                     >
                         {{-- Logo --}}
                         <svg
@@ -343,8 +349,8 @@
                         <div class="flex items-end">
                             <span class="text-2xl font-bold">T</span>
                             <span
-                                class="relative -left-0.5 text-lg transition duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
+                                class="relative -left-0.5 text-lg transition motion-reduce:transition-none duration-500"
+                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 ailwind CSS
                             </span>
@@ -358,7 +364,7 @@
                     <a
                         href="https://alpinejs.dev"
                         target="_blank"
-                        class="flex items-center gap-3 transition duration-300 group-hover/tall-link:translate-x-1"
+                        class="flex items-center gap-3 transition motion-reduce:transition-none  duration-300 motion-reduce:group-hover/tall-link:transform-none group-hover/tall-link:translate-x-1"
                     >
                         {{-- Logo --}}
                         <svg
@@ -385,8 +391,8 @@
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">A</span>
                             <span
-                                class="text-lg transition duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
+                                class="text-lg transition motion-reduce:transition-none  duration-500"
+                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 lpine.js
                             </span>
@@ -400,7 +406,7 @@
                     <a
                         href="https://laravel.com"
                         target="_blank"
-                        class="flex items-center gap-3 transition duration-300 group-hover/tall-link:translate-x-1"
+                        class="flex items-center gap-3 transition motion-reduce:transition-none  duration-300 motion-reduce:group-hover/tall-link:transform-none group-hover/tall-link:translate-x-1"
                     >
                         {{-- Logo --}}
                         <svg
@@ -420,8 +426,8 @@
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">L</span>
                             <span
-                                class="text-lg transition duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
+                                class="text-lg transition motion-reduce:transition-none  duration-500"
+                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 aravel
                             </span>
@@ -435,7 +441,7 @@
                     <a
                         href="https://laravel-livewire.com"
                         target="_blank"
-                        class="flex items-center gap-3 transition duration-300 group-hover/tall-link:translate-x-1"
+                        class="flex items-center gap-3 transition motion-reduce:transition-none  duration-300 motion-reduce:group-hover/tall-link:transform-none group-hover/tall-link:translate-x-1"
                     >
                         {{-- Logo --}}
                         <svg
@@ -490,8 +496,8 @@
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">L</span>
                             <span
-                                class="text-lg transition duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering, }"
+                                class="text-lg transition motion-reduce:transition-none  duration-500"
+                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 ivewire
                             </span>
@@ -725,7 +731,7 @@
                     <a
                         href="https://tailwindcss.com"
                         target="_blank"
-                        class="group/tall-link flex items-center gap-3 transition duration-300"
+                        class="group/tall-link flex items-center gap-3 transition motion-reduce:transition-none  duration-300"
                     >
                         {{-- Logo --}}
                         <div class="grid w-8 place-items-center">
@@ -757,7 +763,7 @@
                         <div class="flex items-end">
                             <span class="text-2xl font-bold">T</span>
                             <span
-                                class="relative -left-0.5 text-lg transition duration-500"
+                                class="relative -left-0.5 text-lg transition motion-reduce:transition-none  duration-500"
                             >
                                 ailwind CSS
                             </span>
@@ -767,7 +773,7 @@
                     <a
                         href="https://alpinejs.dev"
                         target="_blank"
-                        class="group/tall-link flex items-center gap-3 transition duration-300"
+                        class="group/tall-link flex items-center gap-3 transition motion-reduce:transition-none  duration-300"
                     >
                         {{-- Logo --}}
                         <div class="grid w-8 place-items-center">
@@ -795,7 +801,7 @@
                         {{-- Title --}}
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">A</span>
-                            <span class="text-lg transition duration-500">
+                            <span class="text-lg transition motion-reduce:transition-none  duration-500">
                                 lpine.js
                             </span>
                         </div>
@@ -804,7 +810,7 @@
                     <a
                         href="https://laravel.com"
                         target="_blank"
-                        class="group/tall-link flex items-center gap-3 transition duration-300"
+                        class="group/tall-link flex items-center gap-3 transition motion-reduce:transition-none  duration-300"
                     >
                         {{-- Logo --}}
                         <div class="grid w-8 place-items-center">
@@ -825,7 +831,7 @@
                         {{-- Title --}}
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">L</span>
-                            <span class="text-lg transition duration-500">
+                            <span class="text-lg transition motion-reduce:transition-none  duration-500">
                                 aravel
                             </span>
                         </div>
@@ -834,7 +840,7 @@
                     <a
                         href="https://laravel-livewire.com"
                         target="_blank"
-                        class="group/tall-link flex items-center gap-3 transition duration-300"
+                        class="group/tall-link flex items-center gap-3 transition motion-reduce:transition-none  duration-300"
                     >
                         {{-- Logo --}}
                         <div class="grid w-8 place-items-center">
@@ -890,7 +896,7 @@
                         {{-- Title --}}
                         <div class="flex items-end gap-px">
                             <span class="text-2xl font-bold">L</span>
-                            <span class="text-lg transition duration-500">
+                            <span class="text-lg transition motion-reduce:transition-none  duration-500">
                                 ivewire
                             </span>
                         </div>
