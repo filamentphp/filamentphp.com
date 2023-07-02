@@ -308,6 +308,35 @@
                         Roni Estein
                     </x-slot>
                 </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/LabsArtisan/status/1368248886725402625"
+                >
+                    👍 been using it today and I’ve got to say
+                    <strong>it's brilliant.</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://pbs.twimg.com/profile_images/1294198577833615360/ifwIsmKp_400x400.jpg"
+                        twitter-handle="LabsArtisan"
+                        title="Laravel developer"
+                    >
+                        Artisan Labs
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/alexjustesen/status/1496554096777695233"
+                >
+                    Hot damn Filament
+                    <strong>saves sooooo much time</strong>
+                    .
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/1144087?v=4"
+                        twitter-handle="alexjustesen"
+                        title="Laravel developer"
+                    >
+                        Alex Justesen
+                    </x-slot>
+                </x-home.testimonial>
             </div>
 
             {{-- Column 2 --}}
@@ -433,6 +462,35 @@
                         title="Laravel Developer"
                     >
                         Nick Ciolpan
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/Tiago_Ferat/status/1367996436567179264"
+                >
+                    An
+                    <strong>awesome</strong>
+                    Open-Source Admin panel with TALL stack. 👏👏
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/11933789?v=4"
+                        twitter-handle="Tiago_Ferat"
+                        title="Laravel Developer"
+                    >
+                        Tiago Rodrigues
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/kiltedup/status/1366526387180482567"
+                >
+                    Just installed and had a play.
+                    <strong>Really great job.</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://pbs.twimg.com/profile_images/1251922928469446664/IxVNvpzG_400x400.jpg"
+                        twitter-handle="kiltedup"
+                        title="Laravel Developer"
+                    >
+                        Dave Walker
                     </x-slot>
                 </x-home.testimonial>
             </div>
@@ -576,6 +634,34 @@
                         title="Laravel Developer"
                     >
                         nKornel
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/theraloss/status/1367975271949864969"
+                >
+                    Filament is
+                    <strong>damn smooth.</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/6277291?v=4"
+                        twitter-handle="theraloss"
+                        title="Laravel Developer"
+                    >
+                        Danilo Polani
+                    </x-slot>
+                </x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/mskhoshnazar/status/1423181010850746371"
+                >
+                    Filament was a
+                    <strong>joy to use.</strong>
+                    <x-slot
+                        name="author"
+                        avatar="https://avatars.githubusercontent.com/u/6499685?v=4"
+                        twitter-handle="mskhoshnazar"
+                        title="Laravel Developer"
+                    >
+                        Mo Khosh
                     </x-slot>
                 </x-home.testimonial>
             </div>
