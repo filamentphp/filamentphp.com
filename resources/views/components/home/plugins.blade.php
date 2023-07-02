@@ -8,7 +8,6 @@
         x-init="
             () => {
                 gsap.timeline({
-                    delay: 0.5,
                     scrollTrigger: {
                         trigger: $refs.content,
                         start: 'top bottom-=200px',
@@ -82,9 +81,9 @@
                         {
                             autoAlpha: 1,
                             x: 0,
-                            duration: 0.5,
+                            duration: 0.4,
                             ease: 'power4.out',
-                            stagger: 0.05,
+                            stagger: 0.04,
                         },
                         '>-0.5',
                     )

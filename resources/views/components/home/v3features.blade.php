@@ -176,7 +176,7 @@
                     },
                 )
                 gsap.to($refs.geometric_shape_1, {
-                    yPercent: -400,
+                    yPercent: -100,
                     rotate: 100,
                     scrollTrigger: {
                         trigger: $refs.feature_1,
@@ -186,7 +186,7 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_2, {
-                    yPercent: -300,
+                    yPercent: -100,
                     xPercent: -50,
                     rotate: 180,
                     scrollTrigger: {
@@ -197,7 +197,7 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_3, {
-                    yPercent: -400,
+                    yPercent: -100,
                     xPercent: -30,
                     rotate: 100,
                     scrollTrigger: {
@@ -208,7 +208,7 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_4, {
-                    yPercent: -400,
+                    yPercent: -100,
                     xPercent: -30,
                     rotate: 100,
                     scrollTrigger: {
@@ -219,7 +219,7 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_5, {
-                    yPercent: -400,
+                    yPercent: -100,
                     xPercent: -50,
                     rotate: 100,
                     scrollTrigger: {
@@ -230,7 +230,7 @@
                     },
                 })
                 gsap.to($refs.geometric_shape_6, {
-                    yPercent: -500,
+                    yPercent: -100,
                     xPercent: -50,
                     rotate: 45,
                     scrollTrigger: {
