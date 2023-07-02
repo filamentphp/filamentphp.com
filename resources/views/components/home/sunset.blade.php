@@ -132,6 +132,18 @@
                         '<',
                     )
                     .fromTo(
+                        $refs.giraffes,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
+                    )
+                    .fromTo(
                         $refs.supercar,
                         {
                             autoAlpha: 0,
@@ -187,7 +199,6 @@
                         },
                         '>-0.3',
                     )
-                    
             }
         "
         class="text-center"
@@ -277,7 +288,7 @@
             {{-- Right Birds --}}
             <div
                 x-ref="right_birds"
-                class="relative -right-44 w-32 z-20 self-start justify-self-center [grid-area:1/-1] sm:top-20"
+                class="relative -right-44 z-20 w-32 self-start justify-self-center [grid-area:1/-1] sm:top-20"
             >
                 <div class="flex justify-center">
                     <img
@@ -291,6 +302,30 @@
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt=""
                         class="w-[2rem]"
+                    />
+                </div>
+            </div>
+
+            {{-- Giraffes --}}
+            <div
+                x-ref="giraffes"
+                class="relative -left-60 top-6 z-20 self-center justify-self-center [grid-area:1/-1]"
+            >
+                <div class="flex items-end">
+                    <img
+                        src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
+                        alt=""
+                        class="w-[2rem] scale-x-[-1] opacity-80"
+                    />
+                    <img
+                        src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
+                        alt=""
+                        class="w-[2.5rem]"
+                    />
+                    <img
+                        src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
+                        alt=""
+                        class="w-[1.5rem] opacity-60"
                     />
                 </div>
             </div>
