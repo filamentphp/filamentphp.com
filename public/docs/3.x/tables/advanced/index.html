@@ -661,6 +661,11 @@ public function table(Table $table): Table
 </code></pre>
 <p>If you’re using mass assignment protection on your model, you will also need to add the <code>sort</code> attribute to the <code>$fillable</code> array there.</p>
 <p>When making the table reorderable, a new button will be available on the table to toggle reordering.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/reordering.jpg?raw=true" alt="Table with reorderable rows" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/reordering.jpg?raw=true" alt="Table with reorderable rows" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <p>The <code>reorderable()</code> method accepts the name of a column to store the record order in. If you use something like <a href="https://github.com/spatie/eloquent-sortable"><code>spatie/eloquent-sortable</code></a> with an order column such as <code>order_column</code>, you may use this instead:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
 
@@ -688,9 +693,6 @@ use Filament\Tables\Table;
 public function table(Table $table): Table
 {
     return $table
-        -&gt;filters([
-            // ...
-        ])
         -&gt;reorderRecordsTriggerAction(
             fn (Action $action, bool $isReordering) =&gt; $action
                 -&gt;button()
@@ -698,6 +700,11 @@ public function table(Table $table): Table
         );
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/reordering/custom-trigger-action.jpg?raw=true" alt="Table with reorderable rows and a custom trigger action" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/reordering/custom-trigger-action.jpg?raw=true" alt="Table with reorderable rows and a custom trigger action" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="polling-table-content">Polling table content</h2>
 <p>You may poll table content so that it refreshes at a set interval, using the <code>$form-&gt;poll()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
@@ -758,6 +765,11 @@ public function table(Table $table): Table
         -&gt;striped();
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/striped.jpg?raw=true" alt="Table with striped rows" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/striped.jpg?raw=true" alt="Table with striped rows" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h3 id="custom-row-classes">Custom row classes</h3>
 <p>You may want to conditionally style rows based on the record data. This can be achieved by specifying a string or array of CSS classes to be applied to the row using the <code>$table-&gt;recordClasses()</code> method:</p>
 <pre><code class="language-php">use Closure;

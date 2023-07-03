@@ -606,15 +606,21 @@ TextColumn::make(&#39;rating&#39;)
 use Filament\Tables\Columns\Summarizers\Range;
 use Filament\Tables\Columns\TextColumn;
 
-Tables\Columns\TextColumn::make(&#39;rating&#39;)
+TextColumn::make(&#39;rating&#39;)
+    -&gt;numeric()
     -&gt;summarize([
-        Tables\Columns\Summarizers\Average::make(),
-        Tables\Columns\Summarizers\Range::make(),
+        Average::make(),
+        Range::make(),
     ])
 </code></pre>
 <blockquote>
 <p>Note: The first column in a table may not use summarizers. That column is used to render the heading and subheading/s of the summary section.</p>
 </blockquote>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/summaries.jpg?raw=true" alt="Table with summaries" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/summaries.jpg?raw=true" alt="Table with summaries" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="available-summarizers">Available summarizers</h2>
 <p>Filament ships with four types of summarizer:</p>
 <ul>

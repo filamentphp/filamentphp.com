@@ -593,6 +593,11 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <h2 id="overview">Overview</h2>
 <p>The table’s “empty state” is rendered when there are no rows in the table.</p>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/empty-state.jpg?raw=true" alt="Table with empty state" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/empty-state.jpg?raw=true" alt="Table with empty state" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-empty-state-heading">Setting the empty state heading</h2>
 <p>To customize the heading of the empty state, use the <code>emptyStateHeading()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
@@ -603,6 +608,11 @@ public function table(Table $table): Table
         -&gt;emptyStateHeading(&#39;No posts yet&#39;);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/empty-state-heading.jpg?raw=true" alt="Table with customized empty state heading" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/empty-state-heading.jpg?raw=true" alt="Table with customized empty state heading" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-empty-state-description">Setting the empty state description</h2>
 <p>To customize the description of the empty state, use the <code>emptyStateDescription()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
@@ -610,9 +620,14 @@ public function table(Table $table): Table
 public function table(Table $table): Table
 {
     return $table
-        -&gt;emptyStateDescription(&#39;No posts yet&#39;);
+        -&gt;emptyStateDescription(&#39;Once you write your first post, it will appear here.&#39;);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/empty-state-description.jpg?raw=true" alt="Table with empty state description" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/empty-state-description.jpg?raw=true" alt="Table with empty state description" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="setting-the-empty-state-icon">Setting the empty state icon</h2>
 <p>To customize the <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> of the empty state, use the <code>emptyStateIcon()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Table;
@@ -623,6 +638,11 @@ public function table(Table $table): Table
         -&gt;emptyStateIcon(&#39;heroicon-o-bookmark&#39;);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/empty-state-icon.jpg?raw=true" alt="Table with customized empty state icon" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/empty-state-icon.jpg?raw=true" alt="Table with customized empty state icon" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="adding-empty-state-actions">Adding empty state actions</h2>
 <p>You can add <a href="actions">actions</a> to the empty state to prompt users to take action. Pass these to the <code>emptyStateActions()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\Action;
@@ -640,6 +660,11 @@ public function table(Table $table): Table
         ]);
 }
 </code></pre>
+<div>
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/empty-state-actions.jpg?raw=true" alt="Table with empty state actions" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/empty-state-actions.jpg?raw=true" alt="Table with empty state actions" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
 <h2 id="using-a-custom-empty-state-view">Using a custom empty state view</h2>
 <p>You may use a completely custom empty state view by passing it to the <code>emptyState()</code> method:</p>
 <pre><code class="language-php">use Filament\Tables\Actions\Action;
