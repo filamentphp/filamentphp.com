@@ -199,7 +199,7 @@
                     <a
                         href="https://tappnetwork.com"
                         target="__blank"
-                        class="block bg-white rounded-xl mx-auto max-w-xs"
+                        class="block bg-white overflow-hidden rounded-xl mx-auto max-w-xs"
                     >
                         <img
                             src="https://github.com/filamentphp/filament/assets/44533235/cd8be68b-59f3-4b93-8b25-f82c6f2d7864"
