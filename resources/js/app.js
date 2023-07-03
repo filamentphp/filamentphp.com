@@ -6,7 +6,21 @@ import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 import Persist from '@alpinejs/persist'
 import docsearch from '@docsearch/js'
 import Splide from '@splidejs/splide'
+import { gsap } from 'gsap'
+import * as ScrollTrigger from 'gsap/ScrollTrigger'
 
+// Asset loading
+import.meta.glob([
+  '../images/**',
+  '../svg/**',
+]);
+
+// GSAP
+gsap.registerPlugin(ScrollTrigger)
+window.gsap = gsap
+window.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+// Alpine
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Clipboard)

@@ -2,10 +2,9 @@ const colors = require('tailwindcss/colors')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './config/markdown.php',
-        './resources/views/**/*.blade.php',
+        './resources/**/*.{js,blade.php}',
         './vendor/filament/**/*.blade.php',
     ],
     theme: {
@@ -15,12 +14,24 @@ module.exports = {
                 primary: colors.amber,
                 success: colors.green,
                 warning: colors.amber,
+                'cream': '#FFF9F5',
+                'butter': '#FDAE4B',
+                'midnight': '#0F033A',
+                'evening': '#251A4D',
+                'merino': '#F2E7DD',
+                'hurricane': '#807575',
+                'rum': '#6C6489',
+                'peach-orange': '#FFC497',
+                'seashell-peach': '#FFF0E8',
+                'dawn-pink': '#F1E5E4',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],
                 heading: ['Lexend', ...fontFamily.sans],
                 mono: ['JetBrains Mono', ...fontFamily.sans],
                 sans: ['DM Sans', ...fontFamily.sans],
+                vietnam: ['Be Vietnam Pro', ...fontFamily.sans],
+                'roboto-mono': ['Roboto Mono', ...fontFamily.sans],
             },
             maxWidth: {
                 '8xl': '88rem',
