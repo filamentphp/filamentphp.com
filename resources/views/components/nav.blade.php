@@ -5,19 +5,45 @@
     x-init="
         () => {
             if (reducedMotion) return
-            gsap.timeline().fromTo(
-                $refs.nav.querySelectorAll('.fadein'),
-                {
-                    autoAlpha: 0,
-                    y: -10,
-                },
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    duration: 0.5,
-                    stagger: 0.05,
-                },
-            )
+            const navTimeline = gsap
+                .timeline({
+                    paused: true,
+                })
+                .fromTo(
+                    $refs.nav.querySelectorAll('.gsap-fadein'),
+                    {
+                        autoAlpha: 0,
+                        y: -10,
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.05,
+                    },
+                )
+
+            if ($refs.nav.querySelectorAll('.gsap-popout').length) {
+                navTimeline
+                    .fromTo(
+                        $refs.nav.querySelectorAll('.gsap-popout'),
+                        {
+                            autoAlpha: 0,
+                            y: -30,
+                            rotate: 500,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            rotate: -45,
+                            duration: .6,
+                            ease: 'back.out(1.5)',
+                        },
+                        '<0.2',
+                    )
+            }
+
+            navTimeline.play()
         }
     "
     class="relative mx-auto flex max-w-8xl items-center justify-between px-8 py-10"
@@ -46,7 +72,7 @@
     {{-- Filament Logo --}}
     <a
         href="/"
-        class="group/filament fadein relative"
+        class="group/filament gsap-fadein relative"
     >
         <div class="text-black">
             <svg
@@ -117,7 +143,7 @@
             <div
                 class="peer hidden text-evening opacity-80 transition delay-75 duration-300 group-hover/packages:opacity-100 motion-reduce:transition-none lg:block"
             >
-                <div class="fadein flex items-center gap-2">
+                <div class="gsap-fadein flex items-center gap-2">
                     <div class="">Packages</div>
                     <div
                         class="transition duration-200 group-hover/packages:rotate-180 motion-reduce:transition-none"
@@ -615,41 +641,64 @@
                 'text-butter' => request()->routeIs('docs*'),
             ])
         >
-            <div class="fadein">Documentation</div>
+            <div class="gsap-fadein">Documentation</div>
         </a>
 
         <a
             href="{{ route('plugins') }}"
             @class([
-                'hidden transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
-                'text-evening opacity-80' => ! request()->routeIs('plugins*'),
-                'text-butter' => request()->routeIs('plugins*'),
+                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'opacity-80' => ! request()->routeIs('plugins*'),
+                'font-bold' => request()->routeIs('plugins*'),
             ])
         >
-            <div class="fadein">Plugins</div>
+            <div class="gsap-fadein">Plugins</div>
+
+            @if (request()->routeIs('plugins*'))
+                <div
+                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                >
+                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                </div>
+            @endif
         </a>
 
         <a
             href="#"
             @class([
-                'hidden transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
-                'text-evening opacity-80' => ! request()->routeIs('community*'),
-                'text-butter' => request()->routeIs('community*'),
+                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'opacity-80' => ! request()->routeIs('community*'),
+                'font-bold' => request()->routeIs('community*'),
             ])
         >
-            <div class="fadein">Community</div>
+            <div class="gsap-fadein">Community</div>
+
+            @if (request()->routeIs('community*'))
+                <div
+                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                >
+                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                </div>
+            @endif
         </a>
 
         <a
             href="{{ route('consulting') }}"
-            target="_blank"
             @class([
-                'hidden transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
-                'text-evening opacity-80' => ! request()->routeIs('consulting*'),
-                'text-butter' => request()->routeIs('consulting*'),
+                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'opacity-80' => ! request()->routeIs('consulting*'),
+                'font-bold' => request()->routeIs('consulting*'),
             ])
         >
-            <div class="fadein">Consulting</div>
+            <div class="gsap-fadein">Consulting</div>
+
+            @if (request()->routeIs('consulting*'))
+                <div
+                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                >
+                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                </div>
+            @endif
         </a>
 
         {{-- Github --}}
@@ -660,7 +709,7 @@
                 target="_blank"
                 class="peer text-evening opacity-80 transition delay-75 duration-300 group-hover/github:opacity-100 motion-reduce:transition-none"
             >
-                <div class="fadein">
+                <div class="gsap-fadein">
                     <svg
                         fill="currentColor"
                         viewBox="0 0 29 29"
