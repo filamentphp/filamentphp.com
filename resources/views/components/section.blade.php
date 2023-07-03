@@ -6,7 +6,7 @@
     {{
         $attributes->class([
             'relative max-w-8xl px-8 py-16 space-y-8 mx-auto',
-            'lg:grid lg:grid-cols-6 gap-x-8' => $sponsors,
+            'lg:grid lg:grid-cols-6 gap-10' => $sponsors,
         ])
     }}
 >
