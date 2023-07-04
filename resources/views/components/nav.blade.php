@@ -30,7 +30,7 @@
                         {
                             autoAlpha: 0,
                             y: -30,
-                            rotate: 500,
+                            rotate: 360,
                         },
                         {
                             autoAlpha: 1,

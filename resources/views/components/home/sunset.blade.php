@@ -10,9 +10,10 @@
             () => {
                 if (reducedMotion) return
                 gsap.timeline({
+                    delay: 0.5,
                     scrollTrigger: {
                         trigger: $refs.sunset_section,
-                        start: 'top bottom-=150px',
+                        start: 'top bottom-=200px',
                     },
                 })
                     .fromTo(
