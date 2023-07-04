@@ -658,7 +658,7 @@
                 <div
                     class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
                 >
-                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 bg-butter transition duration-300 motion-reduce:transition-none"></div>
                 </div>
             @endif
         </a>
@@ -677,7 +677,7 @@
                 <div
                     class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
                 >
-                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 bg-butter transition duration-300 motion-reduce:transition-none"></div>
                 </div>
             @endif
         </a>

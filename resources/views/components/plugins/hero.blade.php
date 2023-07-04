@@ -1,9 +1,11 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-8xl px-5 pt-20 min-[550px]:px-10"
+    class="mx-auto w-full max-w-8xl px-10 pt-20"
 >
-    <div class="flex max-w-screen-lg items-start justify-between gap-20">
+    <div
+        class="relative flex max-w-screen-lg items-start gap-10 md:gap-20 xl:justify-between"
+    >
         {{-- Left Side --}}
         <div
             x-data="{}"
@@ -153,7 +155,7 @@
             {{-- Stats --}}
             <div
                 x-ref="stats"
-                class="flex items-center gap-20 pt-10"
+                class="flex flex-wrap items-center gap-20 pt-10"
             >
                 {{-- Plugins --}}
                 <div class="group/stat gsap-stat will-change-transform">
@@ -205,7 +207,7 @@
                     <div
                         class="flex items-center justify-center gap-3 rounded-full bg-[#7466BC] px-9 py-3 text-white backdrop-blur transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-purple-300/40 motion-reduce:transition-none"
                     >
-                        <div class="">Submit Plugins</div>
+                        <div class="whitespace-nowrap">Submit Plugins</div>
                         <div
                             class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none"
                         >
@@ -259,7 +261,7 @@
                                 />
                             </svg>
                         </div>
-                        <div class="">How To Make Plugins</div>
+                        <div class="whitespace-nowrap">How To Make Plugins</div>
                     </div>
 
                     {{-- Shadow --}}
@@ -362,7 +364,7 @@
                         )
                 }
             "
-            class="relative w-72"
+            class="absolute -right-5 -top-10 -z-10 hidden w-60 min-[660px]:block md:relative md:right-auto md:top-auto md:w-72"
         >
             {{-- Idea Puzzle --}}
             <img
@@ -375,11 +377,11 @@
             {{-- Decoration Circles --}}
             <div
                 x-ref="circle1"
-                class="absolute -bottom-24 -left-14 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3"
+                class="absolute -bottom-24 right-10 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3 lg:-left-14 lg:right-auto"
             ></div>
             <div
                 x-ref="circle2"
-                class="absolute -left-4 bottom-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3"
+                class="absolute bottom-0 right-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3 lg:-left-4 lg:right-auto"
             ></div>
 
             {{-- Decoration Geometric Shapes --}}
@@ -387,19 +389,19 @@
                 x-ref="geometric_shape_1"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
                 alt=""
-                class="absolute -right-16 -top-5 block w-8"
+                class="absolute -left-10 -top-5 hidden w-8 md:block lg:-right-16 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_2"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
                 alt=""
-                class="absolute -right-32 bottom-20 block w-8"
+                class="absolute -left-20 bottom-20 hidden w-8 md:block lg:-right-32 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_3"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
                 alt=""
-                class="absolute -bottom-16 -right-14 block w-8"
+                class="absolute -bottom-16 -left-10 hidden w-8 md:block lg:-right-14 lg:left-auto"
             />
         </div>
     </div>
