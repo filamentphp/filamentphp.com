@@ -5,11 +5,118 @@
 >
     <div class="flex max-w-screen-lg items-start justify-between gap-20">
         {{-- Left Side --}}
-        <div class="">
-            {{-- Title --}}
-            <div class="relative inline text-5xl font-black">
-                Plugins
-                <div class="absolute -right-10 -top-2">
+        <div
+            x-data="{}"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.timeline()
+                        .fromTo(
+                            $refs.plugins,
+                            {
+                                autoAlpha: 0,
+                                x: -30,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                        )
+                        .fromTo(
+                            $refs.plugins_star,
+                            {
+                                autoAlpha: 0,
+                                x: -10,
+                                scale: 0.8,
+                                rotate: -10,
+                            },
+                            {
+                                autoAlpha: 1,
+                                scale: 1,
+                                x: 0,
+                                rotate: 0,
+                                duration: 0.7,
+                                ease: 'back.out',
+                            },
+                            '>-0.4',
+                        )
+                        .fromTo(
+                            $refs.message,
+                            {
+                                autoAlpha: 0,
+                                x: 10,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '<',
+                        )
+                        .fromTo(
+                            $refs.stats.querySelectorAll('.gsap-stat'),
+                            {
+                                autoAlpha: 0,
+                                scale: 0.5,
+                            },
+                            {
+                                autoAlpha: 1,
+                                scale: 1,
+                                duration: 0.6,
+                                ease: 'back.out(2)',
+                                stagger: 0.1,
+                            },
+                            '<',
+                        )
+                        .fromTo(
+                            $refs.submit_plugins,
+                            {
+                                autoAlpha: 0,
+                                x: -10,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '<',
+                        )
+                        .fromTo(
+                            $refs.how_to_make_plugins,
+                            {
+                                autoAlpha: 0,
+                                x: 10,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '>-0.4',
+                        )
+                }
+            "
+        >
+            {{-- Header --}}
+            <div class="flex items-start gap-3">
+                {{-- Title --}}
+                <div
+                    class="text-5xl font-black"
+                    x-ref="plugins"
+                >
+                    Plugins
+                </div>
+
+                {{-- Star --}}
+                <div
+                    x-ref="plugins_star"
+                    class="relative -top-3.5"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="30"
@@ -35,15 +142,21 @@
             </div>
 
             {{-- Message --}}
-            <div class="max-w-sm pt-10 text-lg font-medium text-rum">
+            <div
+                x-ref="message"
+                class="max-w-sm pt-10 text-lg font-medium text-rum"
+            >
                 Community made packages for Filament projects which gives you
                 access to awesome new features.
             </div>
 
             {{-- Stats --}}
-            <div class="flex items-center gap-20 pt-10">
+            <div
+                x-ref="stats"
+                class="flex items-center gap-20 pt-10"
+            >
                 {{-- Plugins --}}
-                <div class="group/stat">
+                <div class="group/stat gsap-stat will-change-transform">
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
@@ -56,7 +169,7 @@
                 </div>
 
                 {{-- Creators --}}
-                <div class="group/stat">
+                <div class="group/stat gsap-stat will-change-transform">
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
@@ -69,7 +182,7 @@
                 </div>
 
                 {{-- Downloads --}}
-                <div class="group/stat">
+                <div class="group/stat gsap-stat will-change-transform">
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
@@ -84,6 +197,7 @@
 
             <div class="flex flex-wrap gap-x-5 gap-y-8 pt-10">
                 <a
+                    x-ref="submit_plugins"
                     href="#"
                     class="group/button relative block"
                 >
@@ -118,6 +232,7 @@
                     ></div>
                 </a>
                 <a
+                    x-ref="how_to_make_plugins"
                     href="#"
                     class="group/button relative block"
                 >
@@ -156,37 +271,135 @@
         </div>
 
         {{-- Right Side --}}
-        <div class="relative w-72">
+        <div
+            x-data="{}"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.timeline()
+                        .fromTo(
+                            $refs.ideapuzzle,
+                            {
+                                autoAlpha: 0,
+                                x: -20,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                        )
+                        .fromTo(
+                            $refs.geometric_shape_1,
+                            {
+                                autoAlpha: 0,
+                                x: 30,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '>-0.4',
+                        )
+                        .fromTo(
+                            $refs.geometric_shape_2,
+                            {
+                                autoAlpha: 0,
+                                x: 30,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '>-0.6',
+                        )
+                        .fromTo(
+                            $refs.geometric_shape_3,
+                            {
+                                autoAlpha: 0,
+                                x: 30,
+                            },
+                            {
+                                autoAlpha: 1,
+                                x: 0,
+                                duration: 0.7,
+                                ease: 'circ.out',
+                            },
+                            '>-0.6',
+                        )
+                        .fromTo(
+                            $refs.circle1,
+                            {
+                                autoAlpha: 0,
+                                scale: 0,
+                            },
+                            {
+                                autoAlpha: 1,
+                                scale: 1,
+                                duration: 0.5,
+                                ease: 'back.out(2)',
+                            },
+                            '>-0.6',
+                        )
+                        .fromTo(
+                            $refs.circle2,
+                            {
+                                autoAlpha: 0,
+                                scale: 0,
+                            },
+                            {
+                                autoAlpha: 1,
+                                scale: 1,
+                                duration: 0.5,
+                                ease: 'back.out(2)',
+                            },
+                            '>-0.6',
+                        )
+                }
+            "
+            class="relative w-72"
+        >
             {{-- Idea Puzzle --}}
             <img
+                x-ref="ideapuzzle"
                 src="{{ Vite::asset('resources/images/plugins/ideapuzzle.webp') }}"
                 alt=""
-                class="w-full"
+                class="block w-full"
             />
 
             {{-- Decoration Circles --}}
             <div
-                class="absolute -left-4 bottom-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3"
+                x-ref="circle1"
+                class="absolute -bottom-24 -left-14 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3"
             ></div>
             <div
-                class="absolute -bottom-24 -left-14 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3"
+                x-ref="circle2"
+                class="absolute -left-4 bottom-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3"
             ></div>
 
             {{-- Decoration Geometric Shapes --}}
             <img
-                src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
+                x-ref="geometric_shape_1"
+                src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
                 alt=""
-                class="absolute -bottom-16 -right-14 block w-8"
+                class="absolute -right-16 -top-5 block w-8"
             />
             <img
+                x-ref="geometric_shape_2"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
                 alt=""
                 class="absolute -right-32 bottom-20 block w-8"
             />
             <img
-                src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
+                x-ref="geometric_shape_3"
+                src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
                 alt=""
-                class="absolute -right-16 -top-5 block w-8"
+                class="absolute -bottom-16 -right-14 block w-8"
             />
         </div>
     </div>
