@@ -368,11 +368,11 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none"
+                        class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 will-change-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none"
                     >
                         <div class="">Get Started</div>
                         <div
-                            class="transition duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
+                            class="transition duration-300 will-change-transform group-hover:translate-x-1 motion-reduce:transition-none"
                         >
                             <svg
                                 width="24"
@@ -393,7 +393,7 @@
 
                     {{-- Shadow --}}
                     <div
-                        class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-butter transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-rose-300 motion-reduce:transition-none"
+                        class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-butter transition duration-300 will-change-transform group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-rose-300 motion-reduce:transition-none"
                     ></div>
                 </a>
                 <a
@@ -403,11 +403,11 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-br-3xl rounded-tl-3xl bg-butter px-9 py-4 transition duration-200 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
+                        class="flex items-center justify-center gap-3 rounded-br-3xl rounded-tl-3xl bg-butter px-9 py-4 transition duration-200 will-change-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
                     >
                         <div class="">Join Discord</div>
                         <div
-                            class="transition duration-300 group-hover:scale-105 motion-reduce:transition-none"
+                            class="transition duration-300 will-change-transform group-hover:scale-105 motion-reduce:transition-none"
                         >
                             <svg
                                 class="w-5"
@@ -427,7 +427,7 @@
 
                     {{-- Shadow --}}
                     <div
-                        class="absolute inset-0 -z-10 h-full w-full translate-x-1.5 translate-y-1.5 rounded-br-3xl rounded-tl-3xl bg-[#F1E3E3] transition duration-300 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:bg-stone-200 motion-reduce:transition-none"
+                        class="absolute inset-0 -z-10 h-full w-full translate-x-1.5 translate-y-1.5 rounded-br-3xl rounded-tl-3xl bg-[#F1E3E3] transition duration-300 will-change-transform group-hover:translate-x-2 group-hover:translate-y-2 group-hover:bg-stone-200 motion-reduce:transition-none"
                     ></div>
                 </a>
             </div>
@@ -474,23 +474,33 @@
                 x-init="
                     () => {
                         if (reducedMotion) return
-                        gsap.fromTo(
-                            $refs.rocket,
-                            {
-                                autoAlpha: 0,
-                                scale: 0.9,
-                                x: -50,
-                                y: 50,
-                            },
-                            {
-                                autoAlpha: 1,
-                                scale: 1,
-                                x: 0,
-                                y: 0,
-                                duration: 0.8,
-                                ease: 'circ.out',
-                            },
-                        )
+                        gsap.timeline()
+                            .fromTo(
+                                $refs.rocket,
+                                {
+                                    autoAlpha: 0,
+                                    scale: 0.9,
+                                    x: -50,
+                                    y: 50,
+                                },
+                                {
+                                    autoAlpha: 1,
+                                    scale: 1,
+                                    x: 0,
+                                    y: 0,
+                                    duration: 0.8,
+                                    ease: 'circ.out',
+                                },
+                            )
+                            .to($refs.rocket, {
+                                keyframes: {
+                                    x: [0, 20],
+                                    y: [0, -20],
+                                },
+                                duration: 5,
+                                repeat: -1,
+                                yoyo: true,
+                            })
                         gsap.timeline()
                             .fromTo(
                                 $refs.circle1,
@@ -524,12 +534,14 @@
                 class="relative"
             >
                 {{-- Rocket --}}
-                <img
-                    x-ref="rocket"
-                    src="{{ Vite::asset('resources/images/home/rocket.webp') }}"
-                    alt=""
-                    class="w-32 min-[550px]:w-40 md:w-60 lg:w-80"
-                />
+                <div class="w-32 min-[550px]:w-40 md:w-60 lg:w-80">
+                    <img
+                        x-ref="rocket"
+                        src="{{ Vite::asset('resources/images/home/rocket.webp') }}"
+                        alt=""
+                        class="w-full"
+                    />
+                </div>
 
                 {{-- Decoration Circles --}}
                 <div

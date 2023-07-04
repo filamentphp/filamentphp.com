@@ -3,7 +3,7 @@
     x-data="{}"
     class="mx-auto w-full max-w-8xl px-5 pt-20 min-[550px]:px-10"
 >
-    <div class="flex max-w-screen-lg items-center justify-between gap-20">
+    <div class="flex max-w-screen-lg items-start justify-between gap-20">
         {{-- Left Side --}}
         <div class="">
             {{-- Title --}}
@@ -156,11 +156,11 @@
         </div>
 
         {{-- Right Side --}}
-        <div class="">
+        <div class="relative w-72">
             <img
                 src="{{ Vite::asset('resources/images/plugins/ideapuzzle.webp') }}"
                 alt=""
-                class="w-72"
+                class="w-full"
             />
         </div>
     </div>
