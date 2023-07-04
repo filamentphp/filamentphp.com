@@ -5,12 +5,15 @@
 <div
     {{
         $attributes->class([
-            'relative max-w-8xl px-8 py-16 space-y-8 mx-auto',
+            'relative max-w-8xl px-8 py-16 mx-auto',
             'lg:grid lg:grid-cols-6 gap-10' => $sponsors,
         ])
     }}
 >
-    <div @class(['lg:col-span-5' => $sponsors])>
+    <div @class([
+        'space-y-8',
+        'lg:col-span-5' => $sponsors,
+    ])>
         {{ $slot }}
     </div>
 
