@@ -157,10 +157,36 @@
 
         {{-- Right Side --}}
         <div class="relative w-72">
+            {{-- Idea Puzzle --}}
             <img
                 src="{{ Vite::asset('resources/images/plugins/ideapuzzle.webp') }}"
                 alt=""
                 class="w-full"
+            />
+
+            {{-- Decoration Circles --}}
+            <div
+                class="absolute -left-4 bottom-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3"
+            ></div>
+            <div
+                class="absolute -bottom-24 -left-14 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3"
+            ></div>
+
+            {{-- Decoration Geometric Shapes --}}
+            <img
+                src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
+                alt=""
+                class="absolute -bottom-16 -right-14 block w-8"
+            />
+            <img
+                src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
+                alt=""
+                class="absolute -right-32 bottom-20 block w-8"
+            />
+            <img
+                src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
+                alt=""
+                class="absolute -right-16 -top-5 block w-8"
             />
         </div>
     </div>
