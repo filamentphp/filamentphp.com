@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div aria-hidden="true" class="border-t"></div>
+        <div aria-hidden="true" class="border-t mt-4 pb-4"></div>
 
         @livewire(\App\Http\Livewire\Plugins\SearchPlugins::class)
     </x-section>
