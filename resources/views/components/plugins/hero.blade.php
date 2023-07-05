@@ -146,7 +146,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="max-w-sm pt-10 text-lg font-medium text-rum"
+                class="max-w-sm pt-10 text-lg font-medium text-dolphin"
             >
                 Community made packages for Filament projects which gives you
                 access to awesome new features.
@@ -167,7 +167,7 @@
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-rum">Plugins</div>
+                    <div class="pt-4 text-sm text-dolphin">Plugins</div>
                 </div>
 
                 {{-- Creators --}}
@@ -180,7 +180,7 @@
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-rum">Creators</div>
+                    <div class="pt-4 text-sm text-dolphin">Creators</div>
                 </div>
 
                 {{-- Downloads --}}
@@ -193,7 +193,7 @@
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-rum">Downloads</div>
+                    <div class="pt-4 text-sm text-dolphin">Downloads</div>
                 </div>
             </div>
 

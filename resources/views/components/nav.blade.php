@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Fully featured, simply intuitive and
                                         insanely attractive.
@@ -285,7 +285,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Craft beautiful, optimized, and
                                         interactive datatables for any
@@ -340,7 +340,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Easily build stunning forms with over 25
                                         components out of the box.
@@ -403,7 +403,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Effortless solution to send
                                         notifications.
@@ -481,7 +481,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Open modals and slide-overs from any
                                         button.
@@ -552,7 +552,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Summarize your data into beautiful lists
                                         and report cards.
@@ -620,7 +620,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="max-w-xs text-sm font-medium text-rum"
+                                        class="max-w-xs text-sm font-medium text-dolphin"
                                     >
                                         Powerful cards in your pages with a
                                         dozen of ready-to-use templates.

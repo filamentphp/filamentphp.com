@@ -928,12 +928,12 @@
                         </div>
                     </div>
                     <div
-                        class="pt-5 text-center text-xs text-rum min-[600px]:text-left min-[700px]:text-right"
+                        class="pt-5 text-center text-xs text-dolphin min-[600px]:text-left min-[700px]:text-right"
                     >
                         /tɔːl stæk/
                     </div>
                     <div
-                        class="pt-5 text-center text-rum min-[600px]:text-left min-[700px]:text-right"
+                        class="pt-5 text-center text-dolphin min-[600px]:text-left min-[700px]:text-right"
                     >
                         A set of frameworks that combine to form
                         <br />

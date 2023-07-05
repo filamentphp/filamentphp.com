@@ -11,7 +11,7 @@
         ></div>
         <div
             x-text="plugin.description"
-            class="text-sm text-rum"
+            class="text-sm text-dolphin"
         ></div>
     </div>
 </div>

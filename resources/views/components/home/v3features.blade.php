@@ -249,7 +249,7 @@
         >
             <div
                 x-ref="header_introducing"
-                class="font-medium text-rum"
+                class="font-medium text-dolphin"
             >
                 Introducing The
             </div>
@@ -325,7 +325,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Open modals and slide-overs from any button on the page.
                         Even nest modals within other modals with full state
                         preservation.
@@ -380,7 +380,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Summarize table builder rows with a suite of aggregate
                         functions to calculate statistics and provide an
                         analytical overview of your data. Group rows together by
@@ -436,7 +436,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Use the app framework (formerly the admin panel) to
                         scaffold multi-tenant applications with subscription
                         billing at record speed.
@@ -491,7 +491,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Embed infolists in your apps with flexible responsive
                         layouts to present a wide range of data types.
                     </div>
@@ -545,7 +545,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Build multiple completely separate Filament-powered apps
                         with their own resources, dashboards, custom pages and
                         configuration. Ship an entire application in a Composer
@@ -601,7 +601,7 @@
                     </div>
 
                     {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-rum">
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
                         Build multiple completely separate Filament-powered apps
                         with their own resources, dashboards, custom pages and
                         configuration. Ship an entire application in a Composer

@@ -20,7 +20,7 @@ module.exports = {
                 'evening': '#251A4D',
                 'merino': '#F2E7DD',
                 'hurricane': '#807575',
-                'rum': '#6C6489',
+                'dolphin': '#6C6489',
                 'peach-orange': '#FFC497',
                 'seashell-peach': '#FFF0E8',
                 'dawn-pink': '#F1E5E4',

@@ -54,7 +54,7 @@
             </div>
 
             {{-- Description --}}
-            <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-rum">
+            <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-dolphin">
                 We’ve put together an extensive demo app that showcase all
                 Filament’s features.
                 <br />

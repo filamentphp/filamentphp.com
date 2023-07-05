@@ -162,7 +162,7 @@
                 {{-- Message --}}
                 <div
                     x-ref="message"
-                    class="truncate bg-gradient-to-r from-rum to-transparent bg-clip-text pt-5 text-center text-lg text-transparent brightness-150"
+                    class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-lg text-transparent brightness-150"
                 >
                     Stop rebuilding the same UI over and over and over and over...
                 </div>
@@ -218,7 +218,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Fully featured, simply intuitive and insanely
                                 attractive.
                             </div>
@@ -268,7 +268,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Craft beautiful, optimized, and interactive
                                 datatables for any situation.
                             </div>
@@ -318,7 +318,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Easily build stunning forms with over 25
                                 components out of the box.
                             </div>
@@ -377,7 +377,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Effortless solution to send notifications.
                             </div>
                         </div>
@@ -433,7 +433,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Open modals and slide-overs from any button.
                             </div>
                         </div>
@@ -499,7 +499,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Summarize your data into beautiful lists and
                                 report cards.
                             </div>
@@ -561,7 +561,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-rum">
+                            <div class="max-w-xs text-sm text-dolphin">
                                 Powerful cards in your pages with a dozen of
                                 ready-to-use templates.
                             </div>

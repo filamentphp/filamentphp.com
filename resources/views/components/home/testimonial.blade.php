@@ -72,7 +72,7 @@
                 <div class="font-bold">
                     {{ $author }}
                 </div>
-                <div class="grid text-xs text-rum/80">
+                <div class="grid text-xs text-dolphin/80">
                     <div
                         class="self-center justify-self-start transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-5 group-hover/testimonial:opacity-0 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
                     >

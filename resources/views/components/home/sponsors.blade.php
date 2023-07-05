@@ -268,7 +268,7 @@
         {{-- Message --}}
         <div
             x-ref="message"
-            class="mx-auto max-w-lg pt-10 text-center text-lg text-rum"
+            class="mx-auto max-w-lg pt-10 text-center text-lg text-dolphin"
         >
             Filament is open source at heart. Our sponsors fund new features,
             bug fixes, and our community support.

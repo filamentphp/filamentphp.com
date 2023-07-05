@@ -376,7 +376,7 @@
         </div>
         <div
             x-ref="take_off_message"
-            class="mx-auto max-w-md pt-2 text-rum"
+            class="mx-auto max-w-md pt-2 text-dolphin"
         >
             Give Filament a try and we’ll promise you’ll be amazed in the first
             few minutes.
