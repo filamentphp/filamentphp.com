@@ -13,7 +13,7 @@ class ListPluginsController extends Controller
     {
         seo()->title('Plugins');
 
-        return view('plugins.list-plugins', [
+        return view('plugins', [
             'famousPlugin' => Plugin::query()
                 ->published()
                 ->with(['author', 'media'])
