@@ -24,6 +24,8 @@ module.exports = {
                 'peach-orange': '#FFC497',
                 'seashell-peach': '#FFF0E8',
                 'dawn-pink': '#F1E5E4',
+                'salmon': '#F89377',
+                'fair-pink': '#FFEAE4',
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

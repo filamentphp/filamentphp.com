@@ -8,17 +8,20 @@ import docsearch from '@docsearch/js'
 import Splide from '@splidejs/splide'
 import { gsap } from 'gsap'
 import * as ScrollTrigger from 'gsap/ScrollTrigger'
+import Tooltip from '@ryangjchandler/alpine-tooltip'
+import 'tippy.js/dist/tippy.css'
+import 'tippy.js/themes/material.css'
+import 'tippy.js/animations/shift-away-subtle.css'
 
 // Asset loading
-import.meta.glob([
-  '../images/**',
-  '../svg/**',
-]);
+import.meta.glob(['../images/**', '../svg/**'])
 
 // GSAP
 gsap.registerPlugin(ScrollTrigger)
 window.gsap = gsap
-window.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+window.reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+).matches
 
 // Alpine
 Alpine.store('sidebar', { isOpen: false })
@@ -28,6 +31,7 @@ Alpine.plugin(Collapse)
 Alpine.plugin(Focus)
 Alpine.plugin(FormsAlpinePlugin)
 Alpine.plugin(Persist)
+Alpine.plugin(Tooltip)
 
 window.Alpine = Alpine
 Alpine.start()
