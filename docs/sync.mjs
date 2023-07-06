@@ -196,11 +196,6 @@ versions.forEach((version) => {
                 versionEntry.href = versionEntry.links[0].links[0].href;
 
                 fs.mkdir(`src/pages/${version}/${packageName}`, {recursive: true}, () => {
-
-
-                    // Remove if http meta redirects end up not being needed
-                    // fs.writeFile(`src/pages/${version}/${packageName}/index.mdx`, `---\nlayout: "@layouts/RedirectLayout.astro"\nredirect_to: "${docStructure[0].href}"\n---`, "utf8", () => {});
-
                     sourceFiles.forEach((file, index) => {
                         const destination = file
                             .split("docs/")
