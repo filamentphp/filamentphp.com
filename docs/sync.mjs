@@ -12,14 +12,20 @@ const getDirContents = (dir, filelist = []) => {
 
 const packageSlugToTitle = (slug) => {
     switch (slug) {
+        case "actions":
+            return "Action Modals";
         case "admin":
             return "Admin Panel";
         case "forms":
             return "Form Builder";
         case "panels":
             return "Panel Builder";
+        case "support":
+            return "Core Concepts";
         case "tables":
             return "Table Builder";
+        case "widgets":
+            return "Dashboard Widgets";
         default:
             return GrafiteHelper(slug.replace("-", " ")).title();
     }
@@ -31,7 +37,7 @@ const packageSlugToIcon = (slug) => {
             return "heroicons:play";
         case "admin":
         case "panels":
-            return "heroicons:chart-bar";
+            return "heroicons:wrench-screwdriver";
         case "app":
             return "heroicons:window";
         case "forms":
@@ -116,14 +122,18 @@ versions.forEach((version) => {
             });
         });
     } else {
-        const packages = fs.readdirSync(`./filament/${version}/packages`);
+        const packagesOrder = ['panels', 'admin', 'forms', 'tables', 'notifications', 'actions', 'infolists', 'widgets', 'support'];
 
-        packages.forEach((pack) => {
-            if (!pack.includes("-plugin") && fs.existsSync(`./filament/${version}/packages/${pack}/docs`)) {
+        const packages = fs.readdirSync(`./filament/${version}/packages`).sort(function(a, b) {
+            return packagesOrder.indexOf(a) - packagesOrder.indexOf(b)
+        })
+
+        packages.forEach((packageName) => {
+            if (!packageName.includes("-plugin") && fs.existsSync(`./filament/${version}/packages/${packageName}/docs`)) {
                 const docStructure = [];
                 const versionEntry = structure.find((item) => item.version === version);
 
-                const dirStructure = getDirContents(`./filament/${version}/packages/${pack}/docs`).map((file) => {
+                const dirStructure = getDirContents(`./filament/${version}/packages/${packageName}/docs`).map((file) => {
                     return file
                         .split("docs/")
                         .pop()
@@ -137,7 +147,7 @@ versions.forEach((version) => {
                         docStructure.push({
                             title: docSlugToTitle(file),
                             slug: filenameToSlug(file),
-                            href: `/docs/${version}/${pack}/${filenameToSlug(file)}`,
+                            href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                             links: [],
                         });
                     } else {
@@ -147,7 +157,7 @@ versions.forEach((version) => {
                             docStructure.push({
                                 title: docSlugToTitle(split[0]),
                                 slug: filenameToSlug(split[0]),
-                                href: `/docs/${version}/${pack}/${filenameToSlug(file)}`,
+                                href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                                 links: [],
                             });
                         }
@@ -156,24 +166,24 @@ versions.forEach((version) => {
                         parent.links.push({
                             title: docSlugToTitle(split[1]),
                             slug: filenameToSlug(split[1]),
-                            href: `/docs/${version}/${pack}/${filenameToSlug(file)}`,
+                            href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                             links: [],
                         });
                     }
                 });
 
                 versionEntry.links.push({
-                    title: packageSlugToTitle(pack),
+                    title: packageSlugToTitle(packageName),
                     href: docStructure[0].href,
-                    slug: pack,
-                    icon: packageSlugToIcon(pack),
+                    slug: packageName,
+                    icon: packageSlugToIcon(packageName),
                     links: docStructure,
                 });
 
                 versionEntry.href = versionEntry.links[0].links[0].href;
 
-                fs.mkdir(`src/pages/${version}/${pack}`, {recursive: true}, () => {
-                    const sourceFiles = getDirContents(`./filament/${version}/packages/${pack}/docs`);
+                fs.mkdir(`src/pages/${version}/${packageName}`, {recursive: true}, () => {
+                    const sourceFiles = getDirContents(`./filament/${version}/packages/${packageName}/docs`);
 
                     sourceFiles.forEach((file, index) => {
                         const destination = file
@@ -182,15 +192,15 @@ versions.forEach((version) => {
                             .replaceAll(/(\d+\-)/g, "")
                             .replace(".md", ".mdx");
 
-                        copy(file, `src/pages/${version}/${pack}/${destination}`).then((res) => {
-                            fs.readFile(`src/pages/${version}/${pack}/${destination}`, "utf8", (err, data) => {
+                        copy(file, `src/pages/${version}/${packageName}/${destination}`).then((res) => {
+                            fs.readFile(`src/pages/${version}/${packageName}/${destination}`, "utf8", (err, data) => {
                                 if (err) {
                                     return console.log(err);
                                 }
 
                                 let result = data.replace("---", `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file.replace("filament/", "")}"`);
 
-                                fs.writeFile(`src/pages/${version}/${pack}/${destination}`, result, "utf8", (err) => {
+                                fs.writeFile(`src/pages/${version}/${packageName}/${destination}`, result, "utf8", (err) => {
                                     if (err) return console.log(err);
                                 });
                             });

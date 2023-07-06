@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home')->name('home');
+if (config('app.env') === 'beta') {
+    Route::redirect('/', '/docs');
+} else {
+    Route::view('/', 'home')->name('home');
+}
 
 Route::view('/consulting', 'consulting')->name('consulting');
 

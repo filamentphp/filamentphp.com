@@ -24,7 +24,7 @@ let isHomePage = Astro.url.pathname === "/docs/";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/2.x/admin/", "2.x", "admin", ""];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/", "3.x", "panels", ""];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
@@ -202,9 +202,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )
           }
         </nav>
-        <div class="w-56">
-          <Sponsors />
-        </div>
+        <!--<div class="w-56">-->
+        <!--  <Sponsors />-->
+        <!--</div>-->
       </div>
     </div>
   </body>

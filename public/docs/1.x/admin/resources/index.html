@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.dae5d1e9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.a5cacacf.css" /><script type="module" src="/docs/hoisted.337734cf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -42,7 +42,7 @@
     <li>
         <a href="/docs/1.x/admin/getting-started" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
@@ -152,7 +152,7 @@
     </button>
 
     <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '1.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '1.x',
             }">
@@ -245,7 +245,7 @@
     <li>
         <a href="/docs/1.x/admin/getting-started" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
@@ -343,28 +343,28 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Resources are static classes that describe how administrators should be able to interact with data from your app. They are associated with Eloquent models from your app.</p>
 <p>To create a resource for the <code>App\Models\Customer</code> model:</p>
-<pre><code class="language-bash">php artisan make:filament-resource Customer
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer
+</textarea></code></pre>
 <p>This will create several files in the <code>app/Filament/Resources</code> directory:</p>
-<pre><code>.
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">.</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource.php</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource</span></div><div class='line'><span style="color: #A6ACCD;">|   +-- Pages</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- CreateCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- EditCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- ListCustomers.php</span></div><textarea data-torchlight-original="true" style="display: none !important;">.
 +-- CustomerResource.php
 +-- CustomerResource
 |   +-- Pages
 |   |   +-- CreateCustomer.php
 |   |   +-- EditCustomer.php
 |   |   +-- ListCustomers.php
-</code></pre>
+</textarea></code></pre>
 <p>Your new resource class lives in <code>CustomerResource.php</code>. Resource classes register <a href="#forms">forms</a>, <a href="#tables">tables</a>, <a href="#authorization">authorization settings</a>, and <a href="#pages">pages</a> associated with that model.</p>
 <p>The classes in the <code>Pages</code> directory are used to customize the pages in the admin panel that interact with your resource.</p>
 <p>By default, the model associated with your resource is guessed based on the class name of the resource. You may set the static <code>$model</code> property to disable this behaviour:</p>
-<pre><code class="language-php">public static $model = Customer::class;
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">model </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Customer</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $model = Customer::class;
+</textarea></code></pre>
 <p>A label for this resource is generated based on the name of the resource’s model. It’s used the navigation menu and to display breadcrumbs. You may customize it using the static <code>$label</code> property:</p>
-<pre><code class="language-php">public static $label = &#39;customer&#39;;
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">label </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">customer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $label = 'customer';
+</textarea></code></pre>
 <h2 id="forms">Forms</h2>
 <p>Resource classes contain a static <code>form()</code> method that is used to customize the forms to create and update resource records.</p>
-<pre><code class="language-php">use Filament\Resources\Forms\Form;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Forms\Form;
 
 public static function form(Form $form)
 {
@@ -373,15 +373,15 @@ public static function form(Form $form)
             // ...
         ]);
 }
-</code></pre>
+</textarea></code></pre>
 <p>The <code>schema()</code> method is used to define the structure of your form. It is an array of components, in the order they should appear in your form.</p>
 <p>For more information, please see the page on <a href="forms">Building Forms</a>.</p>
 <h2 id="relations">Relations</h2>
 <h3 id="managing-single-related-records">Managing Single Related Records</h3>
 <p>The <code>Filament\Resources\Forms\Components\BelongsToSelect</code> field can be used in resource form schemas to create a select element with options to search and select a related record. It has the same methods available as <a href="forms#select"><code>Filament\Resources\Forms\Components\Select</code></a>, and others to define the relationship and column name that should be used:</p>
-<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
-    -&gt;relationship(&#39;category&#39;, &#39;name&#39;);
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
+    -&gt;relationship('category', 'name');
+</textarea></code></pre>
 <p>This example assumes the following:</p>
 <ul>
 <li>A <code>category_id</code> foreign key column exists on your parent model.</li>
@@ -389,25 +389,25 @@ public static function form(Form $form)
 <li>A <code>name</code> column on your category model that can be used to render the list of categories to select from.</li>
 </ul>
 <p>Sometimes, having a lot of related records as options can cause strain on your web browser. By default, options will only load when you start typing a search. To change this, you may <code>preload()</code> a select field with options. Please only do this if you are certain that there are only a few related records to choose from:</p>
-<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
-    -&gt;relationship(&#39;category&#39;, &#39;name&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">preload</span><span style="color: #89DDFF;">();</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
+    -&gt;relationship('category', 'name')
     -&gt;preload();
-</code></pre>
+</textarea></code></pre>
 <p>You may also customize the <a href="https://laravel.com/docs/queries">Query Builder</a> used to get search results by specifying a callback in the third parameter of the <code>relationship()</code> method.</p>
-<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
-    -&gt;relationship(&#39;category&#39;, &#39;name&#39;, function ($query) {
-        return $query-&gt;where(&#39;is_featured&#39;, true);
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">where</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_featured</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
+    -&gt;relationship('category', 'name', function ($query) {
+        return $query-&gt;where('is_featured', true);
     });
-</code></pre>
+</textarea></code></pre>
 <p>This example will only include featured categories in search results.</p>
 <h3 id="managing-multiple-related-records">Managing Multiple Related Records</h3>
 <p>Relation managers are components that allow administrators to list, create, attach, edit, detach and delete related records without leaving the parent record’s edit page. Resource classes contain a static <code>relations()</code> method that is used to register relation managers for your resource.</p>
 <p>To create a relation manager, you can use:</p>
-<pre><code class="language-bash">php artisan make:filament-relation-manager CustomerResource orders
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-relation-manager</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">CustomerResource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">orders</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-relation-manager CustomerResource orders
+</textarea></code></pre>
 <p>This will create a <code>CustomerResource/RelationManagers/OrdersRelationManager.php</code> file. This contains a class where you are able to define a <a href="forms">form</a> and <a href="tables">table</a> for your relation manager. The relation manager will interact with the <code>orders</code> relationship on your parent model.</p>
 <p>You must set the primary column of related records using the static <code>$primaryColumn</code> property on your new relation manager class. The primary column is used to identify related records quickly. This could be a user’s <code>name</code>, or a blog post’s <code>title</code>.</p>
-<pre><code class="language-php">&lt;?php
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">CustomerResource</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">RelationManagers</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RelationManager</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">OrdersRelationManager</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">RelationManager</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">primaryColumn </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">relationship </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">orders</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
 
 namespace App\Filament\Resources\CustomerResource\RelationManagers;
 
@@ -415,27 +415,27 @@ use Filament\Resources\RelationManager;
 
 class OrdersRelationManager extends RelationManager
 {
-    public static $primaryColumn = &#39;name&#39;;
+    public static $primaryColumn = 'name';
 
-    public static $relationship = &#39;orders&#39;;
+    public static $relationship = 'orders';
 }
-</code></pre>
+</textarea></code></pre>
 <p>You must register the new relation manager in your resource’s <code>relations()</code> method:</p>
-<pre><code class="language-php">public static function relations()
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">relations</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        RelationManagers</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">OrdersRelationManager</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function relations()
 {
     return [
         RelationManagers\OrdersRelationManager::class,
     ];
 }
-</code></pre>
+</textarea></code></pre>
 <p>Once a table and form have been defined for the relation manager, visit the edit page of your resource to see it in action.</p>
 <p><code>HasMany</code>, <code>BelongsToMany</code> and <code>MorphMany</code> relationships are currently fully supported by relation managers.</p>
 <p><code>BelongsToMany</code> relation managers require an extra static <code>$inverseRelationship</code> property set on the class if the existing relationships deviate from traditional naming conventions:</p>
-<pre><code class="language-php">public static $inverseRelationship = &#39;products&#39;;
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">inverseRelationship </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">products</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $inverseRelationship = 'products';
+</textarea></code></pre>
 <h2 id="tables">Tables</h2>
 <p>Resource classes contain a static <code>table()</code> method that is used to customize the table to list resource records.</p>
-<pre><code class="language-php">use Filament\Resources\Tables\Table;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">filters</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Tables\Table;
 
 public static function table(Table $table)
 {
@@ -447,7 +447,7 @@ public static function table(Table $table)
             // ...
         ]);
 }
-</code></pre>
+</textarea></code></pre>
 <p>The <code>columns()</code> method is used to define the columns in your table. It is an array of column objects, in the order they should appear in your table.</p>
 <p>Filters are predefined scopes that administrators can use to filter records in your table. The <code>filters()</code> method is used to register these.</p>
 <p>For more information, please see the page on <a href="tables">Building Tables</a>.</p>
@@ -463,26 +463,26 @@ public static function table(Table $table)
 <h3 id="customizing-default-pages">Customizing Default Pages</h3>
 <p>You are able to customize text used in the default pages by overriding properties on the page class. To see the options available, check the static properties defined in the parent class of each default page.</p>
 <p>For further customization opportunities, you can override the static <code>$view</code> property on your page to a custom view in your app:</p>
-<pre><code class="language-php">public static $view = &#39;customers.list-records&#39;;
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">view </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">customers.list-records</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $view = 'customers.list-records';
+</textarea></code></pre>
 <h4 id="customizing-form-redirects">Customizing Form Redirects</h4>
 <p>You may specify a custom redirect URL for the Create and Edit pages by overriding the <code>getRedirectUrl()</code> method.</p>
 <p>For example, the Create form can redirect back to the List page when it is submitted:</p>
-<pre><code class="language-php">protected function getRedirectUrl(Model $record): string
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getRedirectUrl</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Model</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">getResource</span><span style="color: #89DDFF;">()::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getRedirectUrl(Model $record): string
 {
-    return $this-&gt;getResource()::generateUrl(&#39;index&#39;);
+    return $this-&gt;getResource()::generateUrl('index');
 }
-</code></pre>
+</textarea></code></pre>
 <h4 id="hooks">Hooks</h4>
 <p>Hooks may be used to customize the behaviour of a default page. To set up a hook, create a protected method on the page class with the name of the hook:</p>
-<pre><code class="language-php">protected function beforeSave()
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function beforeSave()
 {
     // ...
 }
-</code></pre>
+</textarea></code></pre>
 <p>In this example, the code in the <code>beforeSave()</code> method will be called before the data in the form is saved to the database.</p>
 <p>There are several available hooks for the create and edit pages:</p>
-<pre><code class="language-php">use Filament\Resources\Pages\CreateRecord;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CreateRecord</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateCustomer</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateRecord</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are populated with their default values.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are populated with their default values.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are validated when the form is submitted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are validated when the form is submitted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeCreate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterCreate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Pages\CreateRecord;
 
 class CreateCustomer extends CreateRecord
 {
@@ -518,8 +518,8 @@ class CreateCustomer extends CreateRecord
         // Runs after the form fields are saved to the database.
     }
 }
-</code></pre>
-<pre><code class="language-php">use Filament\Resources\Pages\EditRecord;
+</textarea></code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">EditRecord</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">EditCustomer</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">EditRecord</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are populated from the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are populated from the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are validated when the form is saved.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are validated when the form is saved.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeDelete</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the record is deleted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterDelete</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the record is deleted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Pages\EditRecord;
 
 class EditCustomer extends EditRecord
 {
@@ -565,27 +565,27 @@ class EditCustomer extends EditRecord
         // Runs after the record is deleted.
     }
 }
-</code></pre>
+</textarea></code></pre>
 <h3 id="custom-pages">Custom Pages</h3>
 <p>Filament allows you to create completely custom pages for resources. To create a new page, you can use:</p>
-<pre><code class="language-bash">php artisan make:filament-page SortCustomers --resource=CustomerResource
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-page</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">SortCustomers</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--resource=CustomerResource</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-page SortCustomers --resource=CustomerResource
+</textarea></code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of your resource directory, and a view in the <code>/pages</code> directory of the resource views directory.</p>
 <p>You must register custom pages to a route in the static <code>routes()</code> method of your resource:</p>
-<pre><code class="language-php">public static function routes()
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">routes</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">SortCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">routeTo</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/sort</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sort</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function routes()
 {
     return [
         // ...
-        Pages\SortCustomers::routeTo(&#39;/sort&#39;, &#39;sort&#39;),
+        Pages\SortCustomers::routeTo('/sort', 'sort'),
     ];
 }
-</code></pre>
+</textarea></code></pre>
 <p>The first parameter of the <code>routeTo()</code> method is the path of the route, and the second is its <a href="https://laravel.com/docs/routing#named-routes">name</a>. Any <a href="https://laravel.com/docs/routing#route-parameters">parameters</a> defined in the route’s path will be available to the page class, in an identical way to <a href="https://laravel-livewire.com/docs/rendering-components#route-params">Livewire</a>.</p>
 <p>To generate a URL for a resource route, you may call the static <code>generateUrl()</code> method on the page class:</p>
-<pre><code class="language-php">SortCustomers::generateUrl($parameters = [], $absolute = true);
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">SortCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">parameters </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[],</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">absolute </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><textarea data-torchlight-original="true" style="display: none !important;">SortCustomers::generateUrl($parameters = [], $absolute = true);
+</textarea></code></pre>
 <p>To access a custom page, such as a “show” route, from the table, you can define a new action:</p>
-<pre><code class="language-php">use Filament\Resources\Tables\Table;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RecordActions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Link</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">prependRecordActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">Link</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">view</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">url</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">show</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">record</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">])),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Tables\Table;
 use Filament\Tables\RecordActions\Link;
 
 public static function table(Table $table)
@@ -593,20 +593,20 @@ public static function table(Table $table)
     return $table
         // ...
         -&gt;prependRecordActions([
-            Link::make(&#39;view&#39;)-&gt;url(fn ($record) =&gt; static::generateUrl(&#39;show&#39;, [&#39;record&#39; =&gt; $record])),
+            Link::make('view')-&gt;url(fn ($record) =&gt; static::generateUrl('show', ['record' =&gt; $record])),
         ]);
 }
-</code></pre>
+</textarea></code></pre>
 <p>By passing a callback to the <code>url()</code> method, you can get access to each row’s record.</p>
 <h2 id="authorization">Authorization</h2>
 <p>For authorization, Filament will observe any <a href="https://laravel.com/docs/authorization#creating-policies">model policies</a> that are registered in your app. The <code>viewAny</code> action may be used to completely disable resources and remove them from the navigation menu.</p>
 <p>Filament also includes a powerful role-based authorization system, which is set up out of the box with the default users table. You may also implement roles functionality in a <a href="#users">custom users table</a>.</p>
 <p>You may create roles, such as <code>Manager</code>, using:</p>
-<pre><code class="language-php">php artisan make:filament-role Manager
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">php artisan make</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">filament</span><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;">role Manager</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-role Manager
+</textarea></code></pre>
 <p>Administrators will now be able to assign this role to any Filament user through the admin panel.</p>
 <p>To only allow users with the <code>Manager</code> role to access a resource, declare so in the static <code>authorization()</code> method:</p>
-<pre><code class="language-php">use App\Filament\Roles;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -614,13 +614,13 @@ public static function authorization()
         Roles\Manager::allow(),
     ];
 }
-</code></pre>
+</textarea></code></pre>
 <p>You may authorize as many roles as you wish.</p>
 <blockquote>
 <p>Please note: administrators will always have full access to every resource in your admin panel.</p>
 </blockquote>
 <p>You may want to only deny users with the <code>Manager</code> role from accessing this resource. To do this, you may use the static <code>deny()</code> method instead:</p>
-<pre><code class="language-php">use App\Filament\Roles;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">deny</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -628,27 +628,27 @@ public static function authorization()
         Roles\Manager::deny(),
     ];
 }
-</code></pre>
+</textarea></code></pre>
 <p>You may specify <code>only()</code> certain actions that roles have access to. These follow the same naming conventions as methods in a <a href="https://laravel.com/docs/authorization#policy-methods">policy</a>.</p>
-<pre><code class="language-php">use App\Filament\Roles;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">only</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">viewAny</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
 
 public static function authorization()
 {
     return [
-        Roles\Manager::allow()-&gt;only([&#39;viewAny&#39;, &#39;create&#39;]),
+        Roles\Manager::allow()-&gt;only(['viewAny', 'create']),
     ];
 }
-</code></pre>
+</textarea></code></pre>
 <p>There is also the possibility to allow access to all actions <code>except()</code> those specified:</p>
-<pre><code class="language-php">use App\Filament\Roles;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">except</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
 
 public static function authorization()
 {
     return [
-        Roles\Manager::allow()-&gt;except([&#39;delete&#39;]),
+        Roles\Manager::allow()-&gt;except(['delete']),
     ];
 }
-</code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/02-resources.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/02-resources.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
@@ -739,50 +739,9 @@ public static function authorization()
                     </li>
                 </ol>
         </nav>
-        <div class="w-56">
-          <aside class="space-y-8">
-  <h4 class="text-center font-display text-xl font-bold text-gray-900 dark:text-white xl:text-left">Sponsors</h4>
-
-  <div class="space-y-4 pb-12">
-    <a href="https://ploi.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ploiio.7493f779.png" alt="Ploi" class="block rounded-xl" width="224" height="84" loading="lazy">
-    </a>
-
-    <a href="https://codecourse.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://uselocale.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
-    </a>
-
-    <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
-      <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
-    </a>
-
-    <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ohdear.6bbc8b39.jpg" alt="Oh Dear" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://github.com/sponsors/danharrin" target="__blank" class="group mx-auto flex max-w-xs items-center justify-center gap-2 rounded-xl bg-gray-50 p-4 text-center text-sm font-bold hover:bg-pink-100 dark:bg-gray-800 dark:text-white dark:hover:bg-pink-900">
-      <div>Your logo here?</div>
-      <div class="origin-center transition group-hover:scale-125">💖</div>
-    </a>
-  </div>
-</aside>
-        </div>
+        <!--<div class="w-56">-->
+        <!--  <Sponsors />-->
+        <!--</div>-->
       </div>
     </div>
   </body></html>

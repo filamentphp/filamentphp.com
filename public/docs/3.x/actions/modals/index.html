@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Modals - Actions - Filament</title>
+    <title>Modals - Action Modals - Filament</title>
     <meta name="description" content="">
     
     <link rel="canonical" href="https://filamentphp.com/docs/3.x/actions/modals/">
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.dae5d1e9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.a5cacacf.css" /><script type="module" src="/docs/hoisted.337734cf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -40,10 +40,10 @@
         <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
+        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
-            <span>Actions</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
+            <span>Panel Builder</span>
           </h2>
         </a>
       </li><li>
@@ -54,10 +54,10 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
-            <span>Infolists</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
           </h2>
         </a>
       </li><li>
@@ -68,31 +68,31 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Panel Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Action Modals</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Support</span>
-          </h2>
-        </a>
-      </li><li>
-        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
-          <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Table Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
+            <span>Infolists</span>
           </h2>
         </a>
       </li><li>
         <a href="/docs/3.x/widgets/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Widgets</span>
+            <span>Dashboard Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="flex items-center gap-3">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
           </h2>
         </a>
       </li>
@@ -221,7 +221,7 @@
     </button>
 
     <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '3.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '3.x',
             }">
@@ -312,10 +312,10 @@
           <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
+        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
-            <span>Actions</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
+            <span>Panel Builder</span>
           </h2>
         </a>
       </li><li>
@@ -326,10 +326,10 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
-            <span>Infolists</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
           </h2>
         </a>
       </li><li>
@@ -340,31 +340,31 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Panel Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Action Modals</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Support</span>
-          </h2>
-        </a>
-      </li><li>
-        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
-          <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Table Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
+            <span>Infolists</span>
           </h2>
         </a>
       </li><li>
         <a href="/docs/3.x/widgets/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Widgets</span>
+            <span>Dashboard Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="flex items-center gap-3">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
           </h2>
         </a>
       </li>
@@ -471,7 +471,7 @@
         <article>
           <header class="mb-9 space-y-1">
               <p class="font-display text-sm font-bold text-primary-500">
-                  Actions 
+                  Action Modals 
                       - Modals
                 </p>
               <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -483,10 +483,10 @@
 <p>Actions may require additional confirmation or input from the user before they run. You may open a modal before an action is executed to do this.</p>
 <h2 id="confirmation-modals">Confirmation modals</h2>
 <p>You may require confirmation before an action is run using the <code>requiresConfirmation()</code> method. This is useful for particularly destructive actions, such as those that delete records.</p>
-<pre><code class="language-php">Action::make(&#39;delete&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">delete</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('delete')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;delete())
     -&gt;requiresConfirmation()
-</code></pre>
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/confirmation.jpg?raw=true" alt="Confirmation modal" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -498,21 +498,21 @@
 <h2 id="modal-forms">Modal forms</h2>
 <p>You may also render a form in the modal to collect extra information from the user before the action runs.</p>
 <p>You may use components from the <a href="../forms">Form Builder</a> to create custom action modal forms. The data from the form is available in the <code>$data</code> array of the <code>action()</code> closure:</p>
-<pre><code class="language-php">use App\Models\User;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authorId</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Author</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">pluck</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">author</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">associate</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authorId</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">save</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
 use Filament\Forms\Components\Select;
 
-Action::make(&#39;updateAuthor&#39;)
+Action::make('updateAuthor')
     -&gt;form([
-        Select::make(&#39;authorId&#39;)
-            -&gt;label(&#39;Author&#39;)
-            -&gt;options(User::query()-&gt;pluck(&#39;name&#39;, &#39;id&#39;))
+        Select::make('authorId')
+            -&gt;label('Author')
+            -&gt;options(User::query()-&gt;pluck('name', 'id'))
             -&gt;required(),
     ])
     -&gt;action(function (array $data): void {
-        $this-&gt;record-&gt;author()-&gt;associate($data[&#39;authorId&#39;]);
+        $this-&gt;record-&gt;author()-&gt;associate($data['authorId']);
         $this-&gt;record-&gt;save();
     })
-</code></pre>
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/form.jpg?raw=true" alt="Modal with form" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -520,61 +520,61 @@ Action::make(&#39;updateAuthor&#39;)
 </div>
 <h3 id="filling-the-form-with-existing-data">Filling the form with existing data</h3>
 <p>You may fill the form with existing data, using the <code>fillForm()</code> method:</p>
-<pre><code class="language-php">use App\Models\User;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Select</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authorId</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">author</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">id</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Select</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authorId</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Author</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">options</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">pluck</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">author</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">associate</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authorId</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">save</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 
-Action::make(&#39;updateAuthor&#39;)
+Action::make('updateAuthor')
     -&gt;fillForm([
-        &#39;authorId&#39; =&gt; $this-&gt;record-&gt;author-&gt;id,
+        'authorId' =&gt; $this-&gt;record-&gt;author-&gt;id,
     ])
     -&gt;form([
-        Select::make(&#39;authorId&#39;)
-            -&gt;label(&#39;Author&#39;)
-            -&gt;options(User::query()-&gt;pluck(&#39;name&#39;, &#39;id&#39;))
+        Select::make('authorId')
+            -&gt;label('Author')
+            -&gt;options(User::query()-&gt;pluck('name', 'id'))
             -&gt;required(),
     ])
     -&gt;action(function (array $data): void {
-        $this-&gt;record-&gt;author()-&gt;associate($data[&#39;authorId&#39;]);
+        $this-&gt;record-&gt;author()-&gt;associate($data['authorId']);
         $this-&gt;record-&gt;save();
     })
-</code></pre>
+</textarea></code></pre>
 <h3 id="using-a-wizard-as-a-modal-form">Using a wizard as a modal form</h3>
 <p>You may create a <a href="../forms/layout/wizard">multi-step form wizard</a> inside a modal. Instead of using a <code>form()</code>, define a <code>steps()</code> array and pass your <code>Step</code> objects:</p>
-<pre><code class="language-php">use Filament\Forms\Components\MarkdownEditor;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">MarkdownEditor</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Toggle</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Wizard</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Step</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">steps</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Give the category a unique name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">reactive</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">afterStateUpdated</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">callable</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">set</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">set</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Str</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">slug</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">))),</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabled</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">unique</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Category</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Add some extra details</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">MarkdownEditor</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">description</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Step</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Visibility</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">description</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Control who can view it</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">Toggle</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_visible</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Visible to customers.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">default</span><span style="color: #89DDFF;">(true),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard\Step;
 
-Action::make(&#39;create&#39;)
+Action::make('create')
     -&gt;steps([
-        Step::make(&#39;Name&#39;)
-            -&gt;description(&#39;Give the category a unique name&#39;)
+        Step::make('Name')
+            -&gt;description('Give the category a unique name')
             -&gt;schema([
-                TextInput::make(&#39;name&#39;)
+                TextInput::make('name')
                     -&gt;required()
                     -&gt;reactive()
-                    -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set(&#39;slug&#39;, Str::slug($state))),
-                TextInput::make(&#39;slug&#39;)
+                    -&gt;afterStateUpdated(fn ($state, callable $set) =&gt; $set('slug', Str::slug($state))),
+                TextInput::make('slug')
                     -&gt;disabled()
                     -&gt;required()
-                    -&gt;unique(Category::class, &#39;slug&#39;),
+                    -&gt;unique(Category::class, 'slug'),
             ])
             -&gt;columns(2),
-        Step::make(&#39;Description&#39;)
-            -&gt;description(&#39;Add some extra details&#39;)
+        Step::make('Description')
+            -&gt;description('Add some extra details')
             -&gt;schema([
-                MarkdownEditor::make(&#39;description&#39;),
+                MarkdownEditor::make('description'),
             ]),
-        Step::make(&#39;Visibility&#39;)
-            -&gt;description(&#39;Control who can view it&#39;)
+        Step::make('Visibility')
+            -&gt;description('Control who can view it')
             -&gt;schema([
-                Toggle::make(&#39;is_visible&#39;)
-                    -&gt;label(&#39;Visible to customers.&#39;)
+                Toggle::make('is_visible')
+                    -&gt;label('Visible to customers.')
                     -&gt;default(true),
             ]),
     ])
-</code></pre>
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/wizard.jpg?raw=true" alt="Modal with wizard" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -582,33 +582,33 @@ Action::make(&#39;create&#39;)
 </div>
 <h3 id="disabling-all-form-fields">Disabling all form fields</h3>
 <p>You may wish to disable all form fields in the modal, ensuring the user cannot edit them. You may do so using the <code>disabledForm()</code> method:</p>
-<pre><code class="language-php">use App\Models\User;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Textarea</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">approvePost</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Textarea</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillForm</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">title</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">content</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabledForm</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">approve</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
-Action::make(&#39;approvePost&#39;)
+Action::make('approvePost')
     -&gt;form([
-        TextInput::make(&#39;title&#39;),
-        Textarea::make(&#39;content&#39;),
+        TextInput::make('title'),
+        Textarea::make('content'),
     ])
     -&gt;fillForm([
-        &#39;title&#39; =&gt; $this-&gt;record-&gt;title,
-        &#39;content&#39; =&gt; $this-&gt;record-&gt;content,
+        'title' =&gt; $this-&gt;record-&gt;title,
+        'content' =&gt; $this-&gt;record-&gt;content,
     ])
     -&gt;disabledForm()
     -&gt;action(function (): void {
         $this-&gt;record-&gt;approve();
     })
-</code></pre>
+</textarea></code></pre>
 <h2 id="customizing-the-modals-heading-description-and-submit-action-label">Customizing the modal’s heading, description, and submit action label</h2>
 <p>You may customize the heading, description and label of the submit button in the modal:</p>
-<pre><code class="language-php">Action::make(&#39;delete&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">delete</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalHeading</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Delete post</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalDescription</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Are you sure you</span><span style="color: #A6ACCD;">\&#39;</span><span style="color: #C3E88D;">d like to delete this post? This cannot be undone.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalSubmitActionLabel</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Yes, delete it</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('delete')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;delete())
     -&gt;requiresConfirmation()
-    -&gt;modalHeading(&#39;Delete post&#39;)
-    -&gt;modalDescription(&#39;Are you sure you\&#39;d like to delete this post? This cannot be undone.&#39;)
-    -&gt;modalSubmitActionLabel(&#39;Yes, delete it&#39;)
-</code></pre>
+    -&gt;modalHeading('Delete post')
+    -&gt;modalDescription('Are you sure you\'d like to delete this post? This cannot be undone.')
+    -&gt;modalSubmitActionLabel('Yes, delete it')
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/confirmation-custom-text.jpg?raw=true" alt="Confirmation modal with custom text" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -616,82 +616,82 @@ Action::make(&#39;approvePost&#39;)
 </div>
 <h2 id="adding-an-icon-inside-the-modal">Adding an icon inside the modal</h2>
 <p>You may add an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> inside the modal using the <code>modalIcon()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;delete&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">delete</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalIcon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-trash</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('delete')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;delete())
     -&gt;requiresConfirmation()
-    -&gt;modalIcon(&#39;heroicon-o-trash&#39;)
-</code></pre>
+    -&gt;modalIcon('heroicon-o-trash')
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/icon.jpg?raw=true" alt="Confirmation modal with icon" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/modal/icon.jpg?raw=true" alt="Confirmation modal with icon" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <p>By default, the icon will inherit the color of the action button. You may customize the color of the icon using the <code>modalIconColor()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;delete&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">delete</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">color</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">danger</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalIcon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-trash</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalIconColor</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">warning</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('delete')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;delete())
     -&gt;requiresConfirmation()
-    -&gt;color(&#39;danger&#39;)
-    -&gt;modalIcon(&#39;heroicon-o-trash&#39;)
-    -&gt;modalIconColor(&#39;warning&#39;)
-</code></pre>
+    -&gt;color('danger')
+    -&gt;modalIcon('heroicon-o-trash')
+    -&gt;modalIconColor('warning')
+</textarea></code></pre>
 <h2 id="customizing-the-alignment-of-modal-content">Customizing the alignment of modal content</h2>
 <p>By default, modal content will be aligned to the start, or centered if the modal is <code>xs</code> or <code>sm</code> in <a href="#changing-the-modal-width">width</a>. If you wish to change the alignment of content in a modal, you can use the <code>modalAlignment()</code> method and pass it <code>start</code> or <code>center</code>:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalAlignment</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">center</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
     -&gt;action(function (array $data): void {
         // ...
     })
-    -&gt;modalAlignment(&#39;center&#39;)
-</code></pre>
+    -&gt;modalAlignment('center')
+</textarea></code></pre>
 <h2 id="custom-modal-content">Custom modal content</h2>
 <p>You may define custom content to be rendered inside your modal, which you can specify by passing a Blade view into the <code>modalContent()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;advance&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">advance</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.pages.actions.advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('advance')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;advance())
-    -&gt;modalContent(view(&#39;filament.pages.actions.advance&#39;))
-</code></pre>
+    -&gt;modalContent(view('filament.pages.actions.advance'))
+</textarea></code></pre>
 <h3 id="passing-data-to-the-custom-modal-content">Passing data to the custom modal content</h3>
 <p>You can pass data to the view by returning it from a function. For example, if the <code>$record</code> of an action is set, you can pass that through to the view:</p>
-<pre><code class="language-php">use Illuminate\Contracts\View\View;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Contract</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">advance</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Contract</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.pages.actions.advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">record</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">],</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Contracts\View\View;
 
-Action::make(&#39;advance&#39;)
+Action::make('advance')
     -&gt;action(fn (Contract $record) =&gt; $record-&gt;advance())
     -&gt;modalContent(fn (Contract $record): View =&gt; view(
-        &#39;filament.pages.actions.advance&#39;,
-        [&#39;record&#39; =&gt; $record],
+        'filament.pages.actions.advance',
+        ['record' =&gt; $record],
     ))
-</code></pre>
+</textarea></code></pre>
 <h3 id="adding-custom-modal-content-below-the-form">Adding custom modal content below the form</h3>
 <p>By default, the custom content is displayed above the modal form if there is one, but you can add content below using <code>modalContentFooter()</code> if you wish:</p>
-<pre><code class="language-php">Action::make(&#39;advance&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">advance</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContentFooter</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.pages.actions.advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('advance')
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;advance())
-    -&gt;modalContentFooter(view(&#39;filament.pages.actions.advance&#39;))
-</code></pre>
+    -&gt;modalContentFooter(view('filament.pages.actions.advance'))
+</textarea></code></pre>
 <h3 id="adding-an-action-to-custom-modal-content">Adding an action to custom modal content</h3>
 <p>You can add an action button to your custom modal content, which is useful if you want to add a button that performs an action other than the main action. You can do this by registering an action with the <code>registerModalActions()</code> method, and then passing it to the view:</p>
-<pre><code class="language-php">use Illuminate\Contracts\View\View;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">registerModalActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">report</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiresConfirmation</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">report</span><span style="color: #89DDFF;">()),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">advance</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Action</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.pages.actions.advance</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">reportAction</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">getModalAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">report</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)],</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Illuminate\Contracts\View\View;
 
-Action::make(&#39;advance&#39;)
+Action::make('advance')
     -&gt;registerModalActions([
-        Action::make(&#39;report&#39;)
+        Action::make('report')
             -&gt;requiresConfirmation()
             -&gt;action(fn () =&gt; $this-&gt;record-&gt;report()),
     ])
     -&gt;action(fn () =&gt; $this-&gt;record-&gt;advance())
     -&gt;modalContent(fn (Action $action): View =&gt; view(
-        &#39;filament.pages.actions.advance&#39;,
-        [&#39;reportAction&#39; =&gt; $action-&gt;getModalAction(&#39;report&#39;)],
+        'filament.pages.actions.advance',
+        ['reportAction' =&gt; $action-&gt;getModalAction('report')],
     ))
-</code></pre>
+</textarea></code></pre>
 <p>Now, in the view file, you can render the action button using the name that it was passed into the view as:</p>
-<pre><code class="language-blade">&lt;div&gt;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">reportAction </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
     {{ $reportAction }}
 &lt;/div&gt;
-</code></pre>
+</textarea></code></pre>
 <h2 id="using-a-slide-over-instead-of-a-modal">Using a slide-over instead of a modal</h2>
 <p>You can open a “slide-over” dialog instead of a modal by using the <code>slideOver()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">slideOver</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
@@ -699,7 +699,7 @@ Action::make(&#39;advance&#39;)
         // ...
     })
     -&gt;slideOver()
-</code></pre>
+</textarea></code></pre>
 <div>
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/modal/slide-over.jpg?raw=true" alt="Slide over with form" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -708,7 +708,7 @@ Action::make(&#39;advance&#39;)
 <p>Instead of opening in the center of the screen, the modal content will now slide in from the right and consume the entire height of the browser.</p>
 <h2 id="making-the-modal-footer-sticky">Making the modal footer sticky</h2>
 <p>The footer of a modal is rendered inline after the content by default. Slide-overs, however, have a sticky footer that always shows when scrolling the content. You may enable this for a modal too using <code>stickyModalFooter()</code>:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">stickyModalFooter</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
@@ -716,80 +716,80 @@ Action::make(&#39;advance&#39;)
         // ...
     })
     -&gt;stickyModalFooter()
-</code></pre>
+</textarea></code></pre>
 <h2 id="changing-the-modal-width">Changing the modal width</h2>
 <p>You can change the width of the modal by using the <code>modalWidth()</code> method. Options correspond to <a href="https://tailwindcss.com/docs/max-width">Tailwind’s max-width scale</a>. The options are <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>, <code>3xl</code>, <code>4xl</code>, <code>5xl</code>, <code>6xl</code>, <code>7xl</code>, and <code>screen</code>:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalWidth</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">5xl</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
     -&gt;action(function (array $data): void {
         // ...
     })
-    -&gt;modalWidth(&#39;5xl&#39;)
-</code></pre>
+    -&gt;modalWidth('5xl')
+</textarea></code></pre>
 <h2 id="conditionally-hiding-the-modal">Conditionally hiding the modal</h2>
 <p>You may have a need to conditionally show a modal for confirmation reasons while falling back to the default action. This can be achieved using <code>modalHidden()</code>:</p>
-<pre><code class="language-php">Action::make(&#39;create&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalHidden</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">role </span><span style="color: #89DDFF;">!==</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">admin</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.pages.actions.create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('create')
     -&gt;action(function (array $data): void {
         // ...
     })
-    -&gt;modalHidden(fn (): bool =&gt; $this-&gt;role !== &#39;admin&#39;)
-    -&gt;modalContent(view(&#39;filament.pages.actions.create&#39;))
-</code></pre>
+    -&gt;modalHidden(fn (): bool =&gt; $this-&gt;role !== 'admin')
+    -&gt;modalContent(view('filament.pages.actions.create'))
+</textarea></code></pre>
 <h2 id="executing-code-when-the-modal-opens">Executing code when the modal opens</h2>
 <p>You may execute code within a closure when the modal opens, by passing it to the <code>mountUsing()</code> method:</p>
-<pre><code class="language-php">use Filament\Forms\Form;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">mountUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fill</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Form;
 
-Action::make(&#39;create&#39;)
+Action::make('create')
     -&gt;mountUsing(function (Form $form) {
         $form-&gt;fill();
 
         // ...
     })
-</code></pre>
+</textarea></code></pre>
 <p>Please note that the <code>mountUsing()</code> method, by default, is used by Filament to initialize the <a href="#modal-forms">form</a>. If you override this method, you will need to call <code>$form-&gt;fill()</code> to ensure the form is initialized correctly. If you wish to populate the form with data, you can do so by passing an array to the <code>fill()</code> method, instead of <a href="#filling-the-form-with-existing-data">using <code>fillForm()</code> on the action itself</a>.</p>
 <h2 id="customizing-the-action-buttons-in-the-footer-of-the-modal">Customizing the action buttons in the footer of the modal</h2>
 <p>By default, there are two actions in the footer of a modal. The first is a button to submit, which executes the <code>action()</code>. The second button closes the modal and cancels the action.</p>
 <h3 id="modifying-a-default-modal-footer-action-button">Modifying a default modal footer action button</h3>
 <p>To modify the action instance that is used to render one of the default action buttons, you may pass a closure to the <code>modalSubmitAction()</code> and <code>modalCancelAction()</code> methods:</p>
-<pre><code class="language-php">use Filament\Actions\Modal\Actions\Action as ModalAction;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Modal</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Action</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> ModalAction</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">help</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">actions.help</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalCancelAction</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">ModalAction</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Close</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Actions\Modal\Actions\Action as ModalAction;
 
-Action::make(&#39;help&#39;)
-    -&gt;modalContent(view(&#39;actions.help&#39;))
-    -&gt;modalCancelAction(fn (ModalAction $action) =&gt; $action-&gt;label(&#39;Close&#39;))
-</code></pre>
+Action::make('help')
+    -&gt;modalContent(view('actions.help'))
+    -&gt;modalCancelAction(fn (ModalAction $action) =&gt; $action-&gt;label('Close'))
+</textarea></code></pre>
 <p>The <a href="trigger-button">methods available to customize trigger buttons</a> will work to modify on the <code>$action</code> instance inside the closure.</p>
 <h3 id="removing-a-default-modal-footer-action-button">Removing a default modal footer action button</h3>
 <p>To remove a default action, you may pass <code>false</code> to either <code>modalSubmitAction()</code> or <code>modalCancelAction()</code>:</p>
-<pre><code class="language-php">Action::make(&#39;help&#39;)
-    -&gt;modalContent(view(&#39;actions.help&#39;))
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">help</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalContent</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">actions.help</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalSubmitAction</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('help')
+    -&gt;modalContent(view('actions.help'))
     -&gt;modalSubmitAction(false)
-</code></pre>
+</textarea></code></pre>
 <h3 id="adding-an-extra-modal-action-button-to-the-footer">Adding an extra modal action button to the footer</h3>
 <p>You may pass an array of extra actions to be rendered, between the default actions, in the footer of the modal using the <code>extraModalFooterActions()</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;create&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">extraModalFooterActions</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Action</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">makeModalSubmitAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">createAnother</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">arguments</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">another</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('create')
     -&gt;extraModalFooterActions(fn (Action $action): array =&gt; [
-        $action-&gt;makeModalSubmitAction(&#39;createAnother&#39;, arguments: [&#39;another&#39; =&gt; true]),
+        $action-&gt;makeModalSubmitAction('createAnother', arguments: ['another' =&gt; true]),
     ])
-</code></pre>
+</textarea></code></pre>
 <p><code>$action-&gt;makeModalSubmitAction()</code> returns an action instance that can be customized using the <a href="trigger-button">methods available to customize trigger buttons</a>.</p>
 <p>The second parameter of <code>makeModalSubmitAction()</code> allows you to pass an array of arguments that will be accessible inside the action’s <code>action()</code> closure as <code>$arguments</code>. These could be useful as flags to indicate that the action should behave differently based on the user’s decision:</p>
-<pre><code class="language-php">Action::make(&#39;create&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">extraModalFooterActions</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Action</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">action</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">makeModalSubmitAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">createAnother</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">arguments</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">another</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">arguments</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Create</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">if</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">arguments</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">another</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">??</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">false)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// Reset the form and don&#39;t close the modal</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('create')
     -&gt;extraModalFooterActions(fn (Action $action): array =&gt; [
-        $action-&gt;makeModalSubmitAction(&#39;createAnother&#39;, arguments: [&#39;another&#39; =&gt; true]),
+        $action-&gt;makeModalSubmitAction('createAnother', arguments: ['another' =&gt; true]),
     ])
     -&gt;action(function (array $data, array $arguments): void {
         // Create
 
-        if ($arguments[&#39;another&#39;] ?? false) {
-            // Reset the form and don&#39;t close the modal
+        if ($arguments['another'] ?? false) {
+            // Reset the form and don't close the modal
         }
     })
-</code></pre>
+</textarea></code></pre>
 <h2 id="closing-the-modal-by-clicking-away">Closing the modal by clicking away</h2>
 <p>By default, when you click away from a modal, it will close itself. If you wish to disable this behavior for a specific action, you can use the <code>closeModalByClickingAway(false)</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">closeModalByClickingAway</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
@@ -797,15 +797,15 @@ Action::make(&#39;help&#39;)
         // ...
     })
     -&gt;closeModalByClickingAway(false)
-</code></pre>
+</textarea></code></pre>
 <p>If you’d like to change the behaviour for all modals in the application, you can do so by calling <code>Modal::closedByClickingAway()</code> inside a service provider or middleware:</p>
-<pre><code class="language-php">use Filament\Support\View\Components\Modal;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Modal</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Modal</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">closedByClickingAway</span><span style="color: #89DDFF;">(false);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\View\Components\Modal;
 
 Modal::closedByClickingAway(false);
-</code></pre>
+</textarea></code></pre>
 <h2 id="hiding-the-modal-close-button">Hiding the modal close button</h2>
 <p>By default, modals have a close button in the top right corner. If you wish to hide the close button, you can use the <code>modalCloseButton(false)</code> method:</p>
-<pre><code class="language-php">Action::make(&#39;updateAuthor&#39;)
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">updateAuthor</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">data</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">modalCloseButton</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('updateAuthor')
     -&gt;form([
         // ...
     ])
@@ -813,12 +813,12 @@ Modal::closedByClickingAway(false);
         // ...
     })
     -&gt;modalCloseButton(false)
-</code></pre>
+</textarea></code></pre>
 <p>If you’d like to hide the close button for all modals in the application, you can do so by calling <code>Modal::closeButton(false)</code> inside a service provider or middleware:</p>
-<pre><code class="language-php">use Filament\Support\View\Components\Modal;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Modal</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Modal</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">closeButton</span><span style="color: #89DDFF;">(false);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\View\Components\Modal;
 
 Modal::closeButton(false);
-</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/04-modals.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/04-modals.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
@@ -1001,50 +1001,9 @@ Modal::closeButton(false);
                     </li>
                 </ol>
         </nav>
-        <div class="w-56">
-          <aside class="space-y-8">
-  <h4 class="text-center font-display text-xl font-bold text-gray-900 dark:text-white xl:text-left">Sponsors</h4>
-
-  <div class="space-y-4 pb-12">
-    <a href="https://ploi.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ploiio.7493f779.png" alt="Ploi" class="block rounded-xl" width="224" height="84" loading="lazy">
-    </a>
-
-    <a href="https://codecourse.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://uselocale.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
-    </a>
-
-    <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
-      <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
-    </a>
-
-    <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ohdear.6bbc8b39.jpg" alt="Oh Dear" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://github.com/sponsors/danharrin" target="__blank" class="group mx-auto flex max-w-xs items-center justify-center gap-2 rounded-xl bg-gray-50 p-4 text-center text-sm font-bold hover:bg-pink-100 dark:bg-gray-800 dark:text-white dark:hover:bg-pink-900">
-      <div>Your logo here?</div>
-      <div class="origin-center transition group-hover:scale-125">💖</div>
-    </a>
-  </div>
-</aside>
-        </div>
+        <!--<div class="w-56">-->
+        <!--  <Sponsors />-->
+        <!--</div>-->
       </div>
     </div>
   </body></html>

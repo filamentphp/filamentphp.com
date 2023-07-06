@@ -12,7 +12,7 @@
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.dae5d1e9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.a5cacacf.css" /><script type="module" src="/docs/hoisted.337734cf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -42,7 +42,7 @@
     <li>
         <a href="/docs/1.x/admin/getting-started" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
@@ -152,7 +152,7 @@
     </button>
 
     <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '1.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '1.x',
             }">
@@ -245,7 +245,7 @@
     <li>
         <a href="/docs/1.x/admin/getting-started" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
             <span>Admin Panel</span>
           </h2>
         </a>
@@ -343,8 +343,8 @@
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-primary-400 prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.300))] hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.800))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
   <p>Filament makes it incredibly simple to customise the look and feel of the panel through “themes”.</p>
 <p>To create your first theme, run the following command:</p>
-<pre><code class="language-bash">php artisan make:filament-theme name-of-theme
-</code></pre>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-theme</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">name-of-theme</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-theme name-of-theme
+</textarea></code></pre>
 <p>This command will create a new file in <code>resources/css/filament</code> called <code>name-of-theme.css</code>.</p>
 <p>All of the colors used by Filament can be customised using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. This means you can change a color in a single place and it will be used throughout the entire panel.</p>
 <p>Filament uses 6 different colors:</p>
@@ -357,7 +357,7 @@
 <li><code>white</code></li>
 </ul>
 <p>The default theme stylesheet should look like this:</p>
-<pre><code class="language-css">:root {
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">:</span><span style="color: #C792EA;">root</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">/*</span></div><div class='line'><span style="color: #676E95;">    --f-primary-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-white: #;</span></div><div class='line'><span style="color: #676E95;">    */</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">:root {
     /*
     --f-primary-100: #;
     --f-primary-200: #;
@@ -407,29 +407,29 @@
     --f-white: #;
     */
 }
-</code></pre>
+</textarea></code></pre>
 <blockquote>
 <p>Filament uses <a href="https://tailwindcss.com">Tailwind CSS</a> for styling, therefore each color has 9 different scales.</p>
 </blockquote>
 <p>To customise a color, uncomment the appropriate line in the CSS file and replace the <code>#</code> placeholder with any valid CSS color (hex, RGB, HSL, etc):</p>
-<pre><code class="language-css">:root {
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">:</span><span style="color: #C792EA;">root</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    --f-primary-600</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">#</span><span style="color: #A6ACCD;">339E8B</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">:root {
     --f-primary-600: #339E8B;
 }
-</code></pre>
+</textarea></code></pre>
 <h2 id="registering-a-theme">Registering a Theme</h2>
 <p>Once you’ve created your theme, you should register it using the <code>Filament::serving</code> and <code>Filament::registerStyle</code> methods inside the <code>boot</code> method of a service provider:</p>
-<pre><code class="language-php">use Filament\Filament;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">AppServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">serving</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerStyle</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-custom-theme</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">resource_path</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">css/filament/name-of-theme.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">));</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Filament;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         Filament::serving(function () {
-            Filament::registerStyle(&#39;my-custom-theme&#39;, resource_path(&#39;css/filament/name-of-theme.css&#39;));
+            Filament::registerStyle('my-custom-theme', resource_path('css/filament/name-of-theme.css'));
         });
     }
 }
-</code></pre>
+</textarea></code></pre>
 <blockquote>
 <p>Wrapping your style, script and script data related calls in <code>Filament::serving</code> ensures that they will only be run when Filament is being used.</p>
 </blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/08-theming.md&#34;" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
@@ -475,50 +475,9 @@ class AppServiceProvider extends ServiceProvider
                     </li>
                 </ol>
         </nav>
-        <div class="w-56">
-          <aside class="space-y-8">
-  <h4 class="text-center font-display text-xl font-bold text-gray-900 dark:text-white xl:text-left">Sponsors</h4>
-
-  <div class="space-y-4 pb-12">
-    <a href="https://ploi.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ploiio.7493f779.png" alt="Ploi" class="block rounded-xl" width="224" height="84" loading="lazy">
-    </a>
-
-    <a href="https://codecourse.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://uselocale.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
-    </a>
-
-    <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
-      <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
-    </a>
-
-    <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ohdear.6bbc8b39.jpg" alt="Oh Dear" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://github.com/sponsors/danharrin" target="__blank" class="group mx-auto flex max-w-xs items-center justify-center gap-2 rounded-xl bg-gray-50 p-4 text-center text-sm font-bold hover:bg-pink-100 dark:bg-gray-800 dark:text-white dark:hover:bg-pink-900">
-      <div>Your logo here?</div>
-      <div class="origin-center transition group-hover:scale-125">💖</div>
-    </a>
-  </div>
-</aside>
-        </div>
+        <!--<div class="w-56">-->
+        <!--  <Sponsors />-->
+        <!--</div>-->
       </div>
     </div>
   </body></html>

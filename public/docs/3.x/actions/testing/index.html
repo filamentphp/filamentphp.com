@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Testing - Actions - Filament</title>
+    <title>Testing - Action Modals - Filament</title>
     <meta name="description" content="">
     
     <link rel="canonical" href="https://filamentphp.com/docs/3.x/actions/testing/">
 
     <!-- hack for flash of theme -->
     
-  <link rel="stylesheet" href="/docs/assets/dashboard.dae5d1e9.css" /><script type="module" src="/docs/hoisted.3d039abf.js"></script></head>
+  <link rel="stylesheet" href="/docs/assets/dashboard.a5cacacf.css" /><script type="module" src="/docs/hoisted.337734cf.js"></script></head>
   <body class="bg-white dark:bg-gray-900">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 flex flex-wrap items-center justify-between px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8" x-bind:class="isScrolled ? 'bg-white dark:bg-gray-900/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:[@supports(backdrop-filter:blur(0))]:bg-gray-900/75' : 'bg-white dark:bg-transparent'">
   <div class="mr-6 flex lg:hidden">
@@ -40,10 +40,10 @@
         <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
+        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
-            <span>Actions</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
+            <span>Panel Builder</span>
           </h2>
         </a>
       </li><li>
@@ -54,10 +54,10 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
-            <span>Infolists</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
           </h2>
         </a>
       </li><li>
@@ -68,31 +68,31 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Panel Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Action Modals</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Support</span>
-          </h2>
-        </a>
-      </li><li>
-        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
-          <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Table Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
+            <span>Infolists</span>
           </h2>
         </a>
       </li><li>
         <a href="/docs/3.x/widgets/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Widgets</span>
+            <span>Dashboard Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="flex items-center gap-3">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
           </h2>
         </a>
       </li>
@@ -221,7 +221,7 @@
     </button>
 
     <div x-ref="panel" x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/actions/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '3.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '3.x',
             }">
@@ -312,10 +312,10 @@
           <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
   <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
     <li>
-        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
+        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
-            <span>Actions</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:wrench-screwdriver"><path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 0 0 4.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 0 1-.493.11 3.01 3.01 0 0 1-1.618-1.616.455.455 0 0 1 .11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 0 0-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 1 0 3.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" clip-rule="evenodd"/><path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 0 1-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196a2.28 2.28 0 0 1 .777-.067c.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 0 1-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 0 1-.447-.276l-1.7-3.402a.5.5 0 0 1 .093-.577l.49-.49a.5.5 0 0 1 .577-.094l3.402 1.7A.5.5 0 0 1 6 3.31v1.277z"/></svg>
+            <span>Panel Builder</span>
           </h2>
         </a>
       </li><li>
@@ -326,10 +326,10 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
-            <span>Infolists</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
           </h2>
         </a>
       </li><li>
@@ -340,31 +340,31 @@
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/panels/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/actions/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-primary-500 before:bg-primary-500">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Panel Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Action Modals</span>
           </h2>
         </a>
       </li><li>
-        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+        <a href="/docs/3.x/infolists/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Support</span>
-          </h2>
-        </a>
-      </li><li>
-        <a href="/docs/3.x/tables/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
-          <h2 class="flex items-center gap-3">
-            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
-            <span>Table Builder</span>
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:information-circle"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/></svg>
+            <span>Infolists</span>
           </h2>
         </a>
       </li><li>
         <a href="/docs/3.x/widgets/installation" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
           <h2 class="flex items-center gap-3">
             <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
-            <span>Widgets</span>
+            <span>Dashboard Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900 text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300">
+          <h2 class="flex items-center gap-3">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
           </h2>
         </a>
       </li>
@@ -471,7 +471,7 @@
         <article>
           <header class="mb-9 space-y-1">
               <p class="font-display text-sm font-bold text-primary-500">
-                  Actions 
+                  Action Modals 
                       - Testing
                 </p>
               <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -484,31 +484,31 @@
 <p>Since all actions are mounted to a Livewire component, we’re just using Livewire testing helpers everywhere. If you’ve never tested Livewire components before, please read <a href="https://laravel-livewire.com/docs/testing">this guide</a> from the Livewire docs.</p>
 <h2 id="getting-started">Getting started</h2>
 <p>You can call an action by passing its name or class to <code>callAction()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">callAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">expect</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">refresh</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">isSent</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">toBeTrue</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can send invoices&#39;, function () {
+it('can send invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;callAction(&#39;send&#39;);
+        -&gt;callAction('send');
 
     expect($invoice-&gt;refresh())
         -&gt;isSent()-&gt;toBeTrue();
 });
-</code></pre>
+</textarea></code></pre>
 <p>To pass an array of data into an action, use the <code>data</code> parameter:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">callAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">data</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">email </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fake</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">email</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertHasNoActionErrors</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">expect</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">refresh</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">isSent</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">toBeTrue</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">recipient_email</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">toBe</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">email</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can send invoices&#39;, function () {
+it('can send invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;callAction(&#39;send&#39;, data: [
-            &#39;email&#39; =&gt; $email = fake()-&gt;email(),
+        -&gt;callAction('send', data: [
+            'email' =&gt; $email = fake()-&gt;email(),
         ])
         -&gt;assertHasNoActionErrors();
 
@@ -516,66 +516,66 @@ it(&#39;can send invoices&#39;, function () {
         -&gt;isSent()-&gt;toBeTrue()
         -&gt;recipient_email-&gt;toBe($email);
 });
-</code></pre>
+</textarea></code></pre>
 <p>If you ever need to only set an action’s data without immediately calling it, you can use <code>setActionData()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">mountAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">setActionData</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">data</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">email </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">fake</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">email</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can send invoices&#39;, function () {
+it('can send invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;mountAction(&#39;send&#39;)
-        -&gt;setActionData(&#39;send&#39;, data: [
-            &#39;email&#39; =&gt; $email = fake()-&gt;email(),
+        -&gt;mountAction('send')
+        -&gt;setActionData('send', data: [
+            'email' =&gt; $email = fake()-&gt;email(),
         ])
 });
-</code></pre>
+</textarea></code></pre>
 <h2 id="execution">Execution</h2>
 <p>To check if an action has been halted, you can use <code>assertActionHalted()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">stops sending if invoice has no email address</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">null])-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">callAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHalted</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;stops sending if invoice has no email address&#39;, function () {
-    $invoice = Invoice::factory([&#39;email&#39; =&gt; null])-&gt;create();
+it('stops sending if invoice has no email address', function () {
+    $invoice = Invoice::factory(['email' =&gt; null])-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;callAction(&#39;send&#39;)
-        -&gt;assertActionHalted(&#39;send&#39;);
+        -&gt;callAction('send')
+        -&gt;assertActionHalted('send');
 });
-</code></pre>
+</textarea></code></pre>
 <h2 id="errors">Errors</h2>
 <p><code>assertHasNoActionErrors()</code> is used to assert that no validation errors occurred when submitting the action form.</p>
 <p>To check if a validation error has occurred with the data, use <code>assertHasActionErrors()</code>, similar to <code>assertHasErrors()</code> in Livewire:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can validate invoice recipient email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">callAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">data</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Str</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">random</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertHasActionErrors</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]]);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can validate invoice recipient email&#39;, function () {
+it('can validate invoice recipient email', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;callAction(&#39;send&#39;, data: [
-            &#39;email&#39; =&gt; Str::random(),
+        -&gt;callAction('send', data: [
+            'email' =&gt; Str::random(),
         ])
-        -&gt;assertHasActionErrors([&#39;email&#39; =&gt; [&#39;email&#39;]]);
+        -&gt;assertHasActionErrors(['email' =&gt; ['email']]);
 });
-</code></pre>
+</textarea></code></pre>
 <p>To check if an action is pre-filled with data, you can use the <code>assertActionDataSet()</code> method:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send invoices to the primary contact by default</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipientEmail </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">company</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">primaryContact</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">email</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">mountAction</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDataSet</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recipientEmail</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">callMountedAction</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertHasNoActionErrors</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">        </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">expect</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">refresh</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">isSent</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">toBeTrue</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">recipient_email</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">toBe</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">recipientEmail</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can send invoices to the primary contact by default&#39;, function () {
+it('can send invoices to the primary contact by default', function () {
     $invoice = Invoice::factory()-&gt;create();
     $recipientEmail = $invoice-&gt;company-&gt;primaryContact-&gt;email;
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;mountAction(&#39;send&#39;)
+        -&gt;mountAction('send')
         -&gt;assertActionDataSet([
-            &#39;email&#39; =&gt; $recipientEmail,
+            'email' =&gt; $recipientEmail,
         ])
         -&gt;callMountedAction()
         -&gt;assertHasNoActionErrors();
@@ -584,128 +584,128 @@ it(&#39;can send invoices to the primary contact by default&#39;, function () {
         -&gt;isSent()-&gt;toBeTrue()
         -&gt;recipient_email-&gt;toBe($recipientEmail);
 });
-</code></pre>
+</textarea></code></pre>
 <h2 id="action-state">Action state</h2>
 <p>To ensure that an action exists or doesn’t in a table, you can use the <code>assertActionExists()</code> or  <code>assertActionDoesNotExist()</code> method:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send but not unsend invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotExist</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">unsend</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can send but not unsend invoices&#39;, function () {
+it('can send but not unsend invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionExists(&#39;send&#39;)
-        -&gt;assertActionDoesNotExist(&#39;unsend&#39;);
+        -&gt;assertActionExists('send')
+        -&gt;assertActionDoesNotExist('unsend');
 });
-</code></pre>
+</textarea></code></pre>
 <p>To ensure an action is hidden or visible for a user, you can use the <code>assertActionHidden()</code> or <code>assertActionVisible()</code> methods:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can only print invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHidden</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionVisible</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">print</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can only print invoices&#39;, function () {
+it('can only print invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionHidden(&#39;send&#39;)
-        -&gt;assertActionVisible(&#39;print&#39;);
+        -&gt;assertActionHidden('send')
+        -&gt;assertActionVisible('print');
 });
-</code></pre>
+</textarea></code></pre>
 <p>To ensure an action is enabled or disabled for a user, you can use the <code>assertActionEnabled()</code> or <code>assertActionDisabled()</code> methods:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can only print a sent invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDisabled</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionEnabled</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">print</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can only print a sent invoice&#39;, function () {
+it('can only print a sent invoice', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionDisabled(&#39;send&#39;)
-        -&gt;assertActionEnabled(&#39;print&#39;);
+        -&gt;assertActionDisabled('send')
+        -&gt;assertActionEnabled('print');
 });
-</code></pre>
+</textarea></code></pre>
 <p>To ensure sets of actions exist in the correct order, you can use <code>assertActionsExistInOrder()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can have actions in order</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionsExistInOrder</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">export</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can have actions in order&#39;, function () {
+it('can have actions in order', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionsExistInOrder([&#39;send&#39;, &#39;export&#39;]);
+        -&gt;assertActionsExistInOrder(['send', 'export']);
 });
-</code></pre>
+</textarea></code></pre>
 <p>To check if an action is hidden to a user, you can use the <code>assertActionHidden()</code> method:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can not send invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHidden</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;can not send invoices&#39;, function () {
+it('can not send invoices', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionHidden(&#39;send&#39;);
+        -&gt;assertActionHidden('send');
 });
-</code></pre>
+</textarea></code></pre>
 <h2 id="button-appearance">Button appearance</h2>
 <p>To ensure an action has the correct label, you can use <code>assertActionHasLabel()</code> and <code>assertActionDoesNotHaveLabel()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send action has correct label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHasLabel</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Email Invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotHaveLabel</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;send action has correct label&#39;, function () {
+it('send action has correct label', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionHasLabel(&#39;send&#39;, &#39;Email Invoice&#39;)
-        -&gt;assertActionDoesNotHaveLabel(&#39;send&#39;, &#39;Send&#39;);
+        -&gt;assertActionHasLabel('send', 'Email Invoice')
+        -&gt;assertActionDoesNotHaveLabel('send', 'Send');
 });
-</code></pre>
+</textarea></code></pre>
 <p>To ensure an action’s button is showing the correct icon, you can use <code>assertActionHasIcon()</code> or <code>assertActionDoesNotHaveIcon()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">when enabled the send button has correct icon</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionEnabled</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHasIcon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">envelope-open</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotHaveIcon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">envelope</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;when enabled the send button has correct icon&#39;, function () {
+it('when enabled the send button has correct icon', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionEnabled(&#39;send&#39;)
-        -&gt;assertActionHasIcon(&#39;send&#39;, &#39;envelope-open&#39;)
-        -&gt;assertActionDoesNotHaveIcon(&#39;send&#39;, &#39;envelope&#39;);
+        -&gt;assertActionEnabled('send')
+        -&gt;assertActionHasIcon('send', 'envelope-open')
+        -&gt;assertActionDoesNotHaveIcon('send', 'envelope');
 });
-</code></pre>
+</textarea></code></pre>
 <p>To ensure an action’s button is displaying the right color, you can use <code>assertActionHasColor()</code> or <code>assertActionDoesNotHaveColor()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">actions display proper colors</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHasColor</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">danger</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotHaveColor</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">print</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">danger</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;actions display proper colors&#39;, function () {
+it('actions display proper colors', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionHasColor(&#39;delete&#39;, &#39;danger&#39;)
-        -&gt;assertActionDoesNotHaveColor(&#39;print&#39;, &#39;danger&#39;);
+        -&gt;assertActionHasColor('delete', 'danger')
+        -&gt;assertActionDoesNotHaveColor('print', 'danger');
 });
-</code></pre>
+</textarea></code></pre>
 <h2 id="url">URL</h2>
 <p>To ensure an action has the correct URL, you can use <code>assertActionHasUrl()</code>, <code>assertActionDoesNotHaveUrl()</code>, <code>assertActionShouldOpenUrlInNewTab()</code>, and <code>assertActionShouldNotOpenUrlInNewTab()</code>:</p>
-<pre><code class="language-php">use function Pest\Livewire\livewire;
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">links to the correct Filament sites</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionHasUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">https://filamentphp.com/</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotHaveUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">https://github.com/filamentphp/filament</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionShouldOpenUrlInNewTab</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionShouldNotOpenUrlInNewTab</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">github</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
-it(&#39;links to the correct Filament sites&#39;, function () {
+it('links to the correct Filament sites', function () {
     $invoice = Invoice::factory()-&gt;create();
 
     livewire(EditInvoice::class, [
-        &#39;invoice&#39; =&gt; $invoice,
+        'invoice' =&gt; $invoice,
     ])
-        -&gt;assertActionHasUrl(&#39;filament&#39;, &#39;https://filamentphp.com/&#39;)
-        -&gt;assertActionDoesNotHaveUrl(&#39;filament&#39;, &#39;https://github.com/filamentphp/filament&#39;)
-        -&gt;assertActionShouldOpenUrlInNewTab(&#39;filament&#39;)
-        -&gt;assertActionShouldNotOpenUrlInNewTab(&#39;github&#39;);
+        -&gt;assertActionHasUrl('filament', 'https://filamentphp.com/')
+        -&gt;assertActionDoesNotHaveUrl('filament', 'https://github.com/filamentphp/filament')
+        -&gt;assertActionShouldOpenUrlInNewTab('filament')
+        -&gt;assertActionShouldNotOpenUrlInNewTab('github');
 });
-</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/07-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/07-testing.md" class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a><p class="">
               Still need help? Join our <a href="https://filamentphp.com/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
           </p>
 </div>
@@ -781,50 +781,9 @@ it(&#39;links to the correct Filament sites&#39;, function () {
                     </li>
                 </ol>
         </nav>
-        <div class="w-56">
-          <aside class="space-y-8">
-  <h4 class="text-center font-display text-xl font-bold text-gray-900 dark:text-white xl:text-left">Sponsors</h4>
-
-  <div class="space-y-4 pb-12">
-    <a href="https://ploi.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ploiio.7493f779.png" alt="Ploi" class="block rounded-xl" width="224" height="84" loading="lazy">
-    </a>
-
-    <a href="https://codecourse.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/codecourse.dde1e810.png" alt="Codecourse" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://laradir.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/laradir.ae00ba7d.png" alt="Laradir" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://uselocale.com" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/locale.ec754b21.png" alt="Locale" class="block rounded-xl" width="224" height="75" loading="lazy">
-    </a>
-
-    <a href="https://luckymedia.dev/?utm_campaign=sponsor&utm_source=filament&utm_medium=web" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/lucky-media.f828206e.png" alt="Lucky media" class="block rounded-xl" width="224" height="113" loading="lazy">
-    </a>
-
-    <a href="https://ego-trace.com" target="__blank" class="mx-auto block max-w-xs rounded-xl bg-white p-4">
-      <img src="/docs/assets/egotrace.b88f2ab6.png" alt="EgoTrace" class="block" width="224" height="70" loading="lazy">
-    </a>
-
-    <a href="https://flareapp.io" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/flare.4507dd87.png" alt="Flare" class="block rounded-xl" width="224" height="112" loading="lazy">
-    </a>
-
-    <a href="https://ohdear.app" target="__blank" class="mx-auto block max-w-xs">
-      <img src="/docs/assets/ohdear.6bbc8b39.jpg" alt="Oh Dear" class="block rounded-xl" width="224" height="78" loading="lazy">
-    </a>
-
-    <a href="https://github.com/sponsors/danharrin" target="__blank" class="group mx-auto flex max-w-xs items-center justify-center gap-2 rounded-xl bg-gray-50 p-4 text-center text-sm font-bold hover:bg-pink-100 dark:bg-gray-800 dark:text-white dark:hover:bg-pink-900">
-      <div>Your logo here?</div>
-      <div class="origin-center transition group-hover:scale-125">💖</div>
-    </a>
-  </div>
-</aside>
-        </div>
+        <!--<div class="w-56">-->
+        <!--  <Sponsors />-->
+        <!--</div>-->
       </div>
     </div>
   </body></html>

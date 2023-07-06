@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/2.x/admin/", "2.x", "admin"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/3.x/panels/", "3.x", "panels"];
 
 let currentPackage = segments[2].replaceAll("/", "");
 

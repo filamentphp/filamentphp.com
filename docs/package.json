@@ -12,6 +12,7 @@
     "build": "astro build",
     "generate": "npm run sync && npm run build && npm run torchlight && rm -rf ../public/docs && mv dist ../public/docs",
     "generate-dev": "node sync.mjs && npm run build && rm -rf ../public/docs && mv dist ../public/docs",
+    "generate-dev-highlight": "node sync.mjs && npm run build && npm run torchlight && rm -rf ../public/docs && mv dist ../public/docs",
     "preview": "astro preview",
     "astro": "astro"
   },
