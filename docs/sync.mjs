@@ -168,7 +168,7 @@ versions.forEach((version) => {
 
                         if (!parent) {
                             docStructure.push({
-                                title: title || docSlugToTitle(split[0]),
+                                title: docSlugToTitle(split[0]),
                                 slug: filenameToSlug(split[0]),
                                 href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                                 links: [],

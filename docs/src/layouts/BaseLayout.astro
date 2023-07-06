@@ -102,7 +102,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <header class="mb-9 space-y-1">
               {! isHomePage && (
                 <p class="font-display text-sm font-bold text-primary-500">
-                  {packageNavigation.title} {section && (
+                  {packageNavigation.title} {section && section.links.length !== 0 && (
                     <>
                       - {section.title}
                     </>
