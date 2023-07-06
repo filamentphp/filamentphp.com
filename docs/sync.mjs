@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import GrafiteHelper from "@grafite/helpers";
 import {copy} from "fs-extra";
+import matter from "gray-matter";
 
 const getDirContents = (dir, filelist = []) => {
     fs.readdirSync(dir).forEach((file) => {
@@ -63,7 +64,17 @@ const filenameToSlug = (filename) => {
 };
 
 const docSlugToTitle = (slug) => {
-    return GrafiteHelper(filenameToSlug(slug).replace("-", " ")).title();
+    return GrafiteHelper(filenameToSlug(slug).replaceAll("-", " ")).title();
+};
+
+const getTitleFromMarkdown = (file) => {
+    const fileData = fs.readFileSync(file, "utf8", (err, data) => {
+        if (err) {
+            return console.log(err);
+        }
+    });
+    const {data: frontmatter} = matter(fileData);
+    return frontmatter.title;
 };
 
 console.log("Processing docs...");
@@ -77,6 +88,7 @@ versions.forEach((version) => {
     if (version === "1.x") {
         const versionEntry = structure.find((item) => item.version === version);
         const files = fs.readdirSync(`./filament/${version}/docs`);
+
         const links = files.map((file) => {
             return {
                 title: docSlugToTitle(file),
@@ -132,20 +144,21 @@ versions.forEach((version) => {
             if (!packageName.includes("-plugin") && fs.existsSync(`./filament/${version}/packages/${packageName}/docs`)) {
                 const docStructure = [];
                 const versionEntry = structure.find((item) => item.version === version);
+                const sourceFiles = getDirContents(`./filament/${version}/packages/${packageName}/docs`);
 
-                const dirStructure = getDirContents(`./filament/${version}/packages/${packageName}/docs`).map((file) => {
-                    return file
-                        .split("docs/")
-                        .pop()
-                        .replaceAll(/(\d+\-)/g, "");
+                const dirStructure = sourceFiles.map((file) => {
+                    return {
+                        file: file.split("docs/").pop().replaceAll(/(\d+\-)/g, ""),
+                        title: getTitleFromMarkdown(file),
+                    };
                 });
 
-                dirStructure.map((file) => {
+                dirStructure.map(({file, title}) => {
                     const split = file.split("/");
 
                     if (split.length === 1) {
                         docStructure.push({
-                            title: docSlugToTitle(file),
+                            title: title || docSlugToTitle(file),
                             slug: filenameToSlug(file),
                             href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                             links: [],
@@ -155,7 +168,7 @@ versions.forEach((version) => {
 
                         if (!parent) {
                             docStructure.push({
-                                title: docSlugToTitle(split[0]),
+                                title: title || docSlugToTitle(split[0]),
                                 slug: filenameToSlug(split[0]),
                                 href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                                 links: [],
@@ -164,7 +177,7 @@ versions.forEach((version) => {
 
                         parent = docStructure.find((item) => item.slug === split[0]);
                         parent.links.push({
-                            title: docSlugToTitle(split[1]),
+                            title: title || docSlugToTitle(split[1]),
                             slug: filenameToSlug(split[1]),
                             href: `/docs/${version}/${packageName}/${filenameToSlug(file)}`,
                             links: [],
@@ -183,7 +196,10 @@ versions.forEach((version) => {
                 versionEntry.href = versionEntry.links[0].links[0].href;
 
                 fs.mkdir(`src/pages/${version}/${packageName}`, {recursive: true}, () => {
-                    const sourceFiles = getDirContents(`./filament/${version}/packages/${packageName}/docs`);
+
+
+                    // Remove if http meta redirects end up not being needed
+                    // fs.writeFile(`src/pages/${version}/${packageName}/index.mdx`, `---\nlayout: "@layouts/RedirectLayout.astro"\nredirect_to: "${docStructure[0].href}"\n---`, "utf8", () => {});
 
                     sourceFiles.forEach((file, index) => {
                         const destination = file
