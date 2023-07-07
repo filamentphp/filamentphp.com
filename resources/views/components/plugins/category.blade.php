@@ -13,6 +13,7 @@
             'bg-white': !selectedCategory.has('{{ $category }}'),
         }"
     >
+        {{-- Icon --}}
         <div
             class="grid h-8 w-8 place-items-center rounded-full transition duration-200 ease-out"
             :class="{
@@ -22,8 +23,10 @@
         >
             {{ $icon }}
         </div>
+
+        {{-- Category Name --}}
         <div
-            class="text-sm transition duration-200 ease-out"
+            class="text-sm transition duration-200 ease-out truncate"
             :class="{
             'text-salmon': selectedCategory.has('{{ $category }}'),
             'text-hurricane': !selectedCategory.has('{{ $category }}'),

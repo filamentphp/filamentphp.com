@@ -1,8 +1,10 @@
 <div
     class="mx-auto w-full max-w-8xl px-10"
+    x-cloak
     x-data="{
         search: '',
         selectedCategory: new Set(),
+        selectedVersion: '3',
 
         plugins: [
             {
@@ -42,7 +44,7 @@
                     dark_mode: true,
                     multi_language: true,
                 },
-                supported_versions: ['1', '2', '3'],
+                supported_versions: ['2', '3'],
                 categories: ['Admin Panel', 'Widget'],
                 latest_activity_at: '2022-03-08T07:52:26+00:00',
             },
@@ -63,7 +65,7 @@
                     dark_mode: true,
                     multi_language: false,
                 },
-                supported_versions: ['1', '2', '3'],
+                supported_versions: ['3'],
                 categories: ['Admin Panel', 'Widget'],
                 latest_activity_at: '2022-03-08T07:52:26+00:00',
             },
@@ -76,14 +78,58 @@
                     plugin.name.toLowerCase().includes(this.search.toLowerCase()) &&
                     // only show plugins that are in the selected categories
                     (this.selectedCategory.size === 0 ||
-                        this.selectedCategory.has(plugin.categories[0])),
+                        this.selectedCategory.has(plugin.categories[0])) &&
+                    // only show plugins that are in the selected version
+                    plugin.supported_versions.includes(this.selectedVersion),
             )
         },
     }"
 >
     <div class="flex items-start gap-5 pt-5">
         {{-- Version --}}
-        <div class="w-full max-w-[15rem]">Version</div>
+        <div class="w-full max-w-[15rem]">
+            <div
+                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.02]"
+            >
+                <div
+                    x-on:click="selectedVersion = '1'"
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
+                        'text-salmon': selectedVersion === '1',
+                    }"
+                >
+                    v1.x
+                </div>
+                <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '2'"
+                    :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
+                        'text-salmon': selectedVersion === '2',
+                    }"
+                >
+                    v2.x
+                </div>
+                <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '3'"
+                    :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
+                        'text-salmon': selectedVersion === '3',
+                    }"
+                >
+                    v3.x
+                </div>
+                <div
+                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                    :class="{
+                        'translate-x-[4.1rem]': selectedVersion === '2',
+                        'translate-x-[8.2rem]': selectedVersion === '3',
+                    }"
+                ></div>
+            </div>
+        </div>
 
         {{-- Right Side --}}
         <div class="w-full">
@@ -143,7 +189,7 @@
                 <input
                     type="text"
                     x-model="search"
-                    placeholder="Search for plugins ..."
+                    placeholder="Search ..."
                     class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
             </div>
@@ -152,7 +198,7 @@
 
     <div class="flex items-start gap-5 pt-5">
         {{-- Categories --}}
-        <div class="w-full max-w-[15rem]">
+        <div class="hidden w-full max-w-[15rem] sm:block">
             <div class="font-semibold">Categories</div>
             <div class="pt-5">
                 <x-plugins.category>
