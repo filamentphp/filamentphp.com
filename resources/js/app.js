@@ -12,6 +12,10 @@ import Tooltip from '@ryangjchandler/alpine-tooltip'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/material.css'
 import 'tippy.js/animations/shift-away-subtle.css'
+import autoAnimate from '@formkit/auto-animate'
+
+// AutoAnimate
+window.autoAnimate = autoAnimate
 
 // Asset loading
 import.meta.glob(['../images/**', '../svg/**'])

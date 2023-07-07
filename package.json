@@ -9,6 +9,7 @@
         "@alpinejs/focus": "^3.12.3",
         "@alpinejs/persist": "^3.12.3",
         "@docsearch/js": "^3.5.1",
+        "@formkit/auto-animate": "^0.7.0",
         "@ryangjchandler/alpine-clipboard": "^2.2.0",
         "@ryangjchandler/alpine-tooltip": "^1.2.0",
         "@splidejs/splide": "^4.1.4",
