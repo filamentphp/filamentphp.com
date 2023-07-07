@@ -5,6 +5,11 @@
         search: '',
         selectedCategory: new Set(),
         selectedVersion: '3',
+        selectedPrice: 'All',
+        features: {
+            dark_mode: false,
+            multi_language: false,
+        },
 
         plugins: [
             {
@@ -49,7 +54,7 @@
                 latest_activity_at: '2022-03-08T07:52:26+00:00',
             },
             {
-                price: '$199',
+                price: 'Free',
                 github_stars: 145,
                 view_count: 54001,
                 thumbnail: '',
@@ -80,7 +85,14 @@
                     (this.selectedCategory.size === 0 ||
                         this.selectedCategory.has(plugin.categories[0])) &&
                     // only show plugins that are in the selected version
-                    plugin.supported_versions.includes(this.selectedVersion),
+                    plugin.supported_versions.includes(this.selectedVersion) &&
+                    // only show plugins that are in the selected features
+                    (this.features.dark_mode ? plugin.features.dark_mode : true) &&
+                    (this.features.multi_language
+                        ? plugin.features.multi_language
+                        : true)
+                    // If the selectedPrice is 'All', show all plugins, if the selectedPrice is 'Free', only show plugins that have a price of 'Free', if the selectedPrice is 'Paid', only show plugins that have a price that is not 'Free'
+                    && (this.selectedPrice === 'All' || (this.selectedPrice === 'Free' && plugin.price === 'Free') || (this.selectedPrice === 'Paid' && plugin.price !== 'Free'))
             )
         },
     }"
@@ -132,7 +144,7 @@
         </div>
 
         {{-- Right Side --}}
-        <div class="w-full">
+        <div class="flex w-full flex-wrap items-center justify-between gap-5">
             {{-- Search Bar --}}
             <div
                 class="group/search-bar relative w-full max-w-xs overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.02] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.03]"
@@ -192,6 +204,132 @@
                     placeholder="Search ..."
                     class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
+            </div>
+
+            {{-- Features --}}
+            <div class="flex flex-wrap items-center gap-3">
+                {{-- Price Toggle --}}
+                <div
+                    class="relative z-10 inline-flex h-11 select-none items-center gap-2.5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.02]"
+                >
+                    <div
+                        x-on:click="selectedPrice = 'All'"
+                        class="relative z-20 w-14 text-center transition duration-300"
+                        :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'All',
+                        'text-salmon': selectedPrice === 'All',
+                    }"
+                    >
+                        All
+                    </div>
+                    <div
+                        x-on:click="selectedPrice = 'Free'"
+                        class="relative z-20 w-14 text-center transition duration-300"
+                        :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Free',
+                        'text-salmon': selectedPrice === 'Free',
+                    }"
+                    >
+                        Free
+                    </div>
+                    <div
+                        x-on:click="selectedPrice = 'Paid'"
+                        class="relative z-20 w-14 text-center transition duration-300"
+                        :class="{
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Paid',
+                        'text-salmon': selectedPrice === 'Paid',
+                    }"
+                    >
+                        Paid
+                    </div>
+                    <div
+                        class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                        :class="{
+                        'translate-x-[4.1rem]': selectedPrice === 'Free',
+                        'translate-x-[8.2rem]': selectedPrice === 'Paid',
+                    }"
+                    ></div>
+                </div>
+
+                {{-- Vertical Divider --}}
+                <div class="h-5 w-px rounded-full bg-hurricane/10"></div>
+
+                {{-- Dark Mode Toggle --}}
+                <div
+                    x-on:click="features.dark_mode = ! features.dark_mode"
+                    class="flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.02]"
+                    :class="{
+                        'bg-fair-pink text-salmon': features.dark_mode,
+                        'bg-white text-dolphin': ! features.dark_mode,
+                    }"
+                >
+                    <div class="text-salmon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="19"
+                            height="19"
+                            viewBox="0 0 24 24"
+                        >
+                            <g fill="currentColor">
+                                <path
+                                    d="M19.9 2.307a.483.483 0 0 0-.9 0l-.43 1.095a.484.484 0 0 1-.272.274l-1.091.432a.486.486 0 0 0 0 .903l1.091.432a.48.48 0 0 1 .272.273L19 6.81c.162.41.74.41.9 0l.43-1.095a.484.484 0 0 1 .273-.273l1.091-.432a.486.486 0 0 0 0-.903l-1.091-.432a.484.484 0 0 1-.273-.274l-.43-1.095ZM16.033 8.13a.483.483 0 0 0-.9 0l-.157.399a.484.484 0 0 1-.272.273l-.398.158a.486.486 0 0 0 0 .903l.398.157c.125.05.223.148.272.274l.157.399c.161.41.739.41.9 0l.157-.4a.484.484 0 0 1 .272-.273l.398-.157a.486.486 0 0 0 0-.903l-.398-.158a.484.484 0 0 1-.272-.273l-.157-.4Z"
+                                />
+                                <path
+                                    d="M12 22c5.523 0 10-4.477 10-10c0-.463-.694-.54-.933-.143a6.5 6.5 0 1 1-8.924-8.924C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10Z"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                    <div
+                        class="text-sm"
+                        :class="{
+                            'opacity-70': ! features.dark_mode,
+                        }"
+                    >
+                        Dark mode
+                    </div>
+                </div>
+
+                {{-- Vertical Divider --}}
+                <div class="h-5 w-px rounded-full bg-hurricane/10"></div>
+
+                {{-- Multi Language Toggle --}}
+                <div
+                    x-on:click="features.multi_language = ! features.multi_language"
+                    class="flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.02]"
+                    :class="{
+                        'bg-fair-pink text-salmon': features.multi_language,
+                        'bg-white text-dolphin': ! features.multi_language,
+                    }"
+                >
+                    <div class="text-salmon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="19"
+                            height="19"
+                            viewBox="0 0 20 20"
+                        >
+                            <g fill="currentColor">
+                                <path
+                                    d="M7.75 2.75a.75.75 0 0 0-1.5 0v1.258a32.987 32.987 0 0 0-3.599.278a.75.75 0 1 0 .198 1.487A31.545 31.545 0 0 1 8.7 5.545A19.381 19.381 0 0 1 7 9.56a19.418 19.418 0 0 1-1.002-2.05a.75.75 0 0 0-1.384.577a20.935 20.935 0 0 0 1.492 2.91a19.613 19.613 0 0 1-3.828 4.154a.75.75 0 1 0 .945 1.164A21.116 21.116 0 0 0 7 12.331c.095.132.192.262.29.391a.75.75 0 0 0 1.194-.91a18.97 18.97 0 0 1-.59-.815a20.888 20.888 0 0 0 2.333-5.332c.31.031.618.068.924.108a.75.75 0 0 0 .198-1.487a32.832 32.832 0 0 0-3.599-.278V2.75Z"
+                                />
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M13 8a.75.75 0 0 1 .671.415l4.25 8.5a.75.75 0 1 1-1.342.67L15.787 16h-5.573l-.793 1.585a.75.75 0 1 1-1.342-.67l4.25-8.5A.75.75 0 0 1 13 8Zm2.037 6.5L13 10.427L10.964 14.5h4.073Z"
+                                    clip-rule="evenodd"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                    <div
+                        class="text-sm"
+                        :class="{
+                            'opacity-70': ! features.multi_language,
+                        }"
+                    >
+                        Multi language
+                    </div>
+                </div>
             </div>
         </div>
     </div>
