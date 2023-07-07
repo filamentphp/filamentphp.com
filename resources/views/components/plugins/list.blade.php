@@ -149,7 +149,7 @@
         {{-- Search Bar --}}
         <div class="w-full sm:w-auto min-[1170px]:flex-1">
             <div
-                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.03] sm:max-w-xs"
+                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs"
             >
                 {{-- Magnify Icon --}}
                 <div
@@ -215,9 +215,9 @@
                 x-on:click="selectedPrice = 'All'"
                 class="relative z-20 w-14 text-center transition duration-300"
                 :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'All',
-                        'text-salmon': selectedPrice === 'All',
-                    }"
+                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'All',
+                    'text-salmon': selectedPrice === 'All',
+                }"
             >
                 All
             </div>
@@ -225,9 +225,9 @@
                 x-on:click="selectedPrice = 'Free'"
                 class="relative z-20 w-14 text-center transition duration-300"
                 :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Free',
-                        'text-salmon': selectedPrice === 'Free',
-                    }"
+                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Free',
+                    'text-salmon': selectedPrice === 'Free',
+                }"
             >
                 Free
             </div>
@@ -235,18 +235,18 @@
                 x-on:click="selectedPrice = 'Paid'"
                 class="relative z-20 w-14 text-center transition duration-300"
                 :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Paid',
-                        'text-salmon': selectedPrice === 'Paid',
-                    }"
+                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Paid',
+                    'text-salmon': selectedPrice === 'Paid',
+                }"
             >
                 Paid
             </div>
             <div
                 class="absolute left-[.35rem] top-[.35rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
                 :class="{
-                        'translate-x-[4rem]': selectedPrice === 'Free',
-                        'translate-x-[8.2rem]': selectedPrice === 'Paid',
-                    }"
+                    'translate-x-[4rem]': selectedPrice === 'Free',
+                    'translate-x-[8.2rem]': selectedPrice === 'Paid',
+                }"
             ></div>
         </div>
 
@@ -258,11 +258,11 @@
         {{-- Dark Mode Toggle --}}
         <div
             x-on:click="features.dark_mode = ! features.dark_mode"
-            class="flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
-                        'bg-fair-pink text-salmon': features.dark_mode,
-                        'bg-white text-dolphin': ! features.dark_mode,
-                    }"
+                'bg-fair-pink text-salmon': features.dark_mode,
+                'bg-white text-dolphin': ! features.dark_mode,
+            }"
         >
             <div class="text-salmon">
                 <svg
@@ -282,10 +282,10 @@
                 </svg>
             </div>
             <div
-                class="text-sm"
+                class="text-sm transition duration-200"
                 :class="{
-                            'opacity-70': ! features.dark_mode,
-                        }"
+                    'opacity-70 group-hover/dark-mode-toggle:opacity-100': ! features.dark_mode,
+                }"
             >
                 Dark mode
             </div>
@@ -299,7 +299,7 @@
         {{-- Multi Language Toggle --}}
         <div
             x-on:click="features.multi_language = ! features.multi_language"
-            class="flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
                 'bg-fair-pink text-salmon': features.multi_language,
                 'bg-white text-dolphin': ! features.multi_language,
@@ -325,9 +325,9 @@
                 </svg>
             </div>
             <div
-                class="text-sm"
+                class="text-sm transition duration-200"
                 :class="{
-                    'opacity-70': ! features.multi_language,
+                    'opacity-70 group-hover/multi-language-toggle:opacity-100': ! features.multi_language,
                 }"
             >
                 Multi language
