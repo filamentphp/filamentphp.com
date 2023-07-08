@@ -9,26 +9,29 @@ use Illuminate\Support\Facades\RateLimiter;
 
 class ViewPluginController extends Controller
 {
-    public function __invoke(Plugin $plugin)
+    public function __invoke()
     {
-        $plugin->load(['author']);
-
-        seo()
-            ->title("{$plugin->name} by {$plugin->author->name} - Plugins")
-            ->description($plugin->description ?? '')
-            ->image($plugin->getThumbnailUrl());
-
-        $viewingKey = "plugins.{$plugin->getKey()}.views." . request()->ip();
-
-        if (! cache()->has($viewingKey)) {
-            cache()->put($viewingKey, now());
-
-            $plugin->views++;
-            $plugin->save();
-        }
-
         return view('plugins.view-plugin', [
-            'plugin' => $plugin,
+            'plugin' => [
+                'id' => 1,
+                'name' => 'Access and Menu Management',
+                'price' => 'Free',
+                'github_stars' => 54,
+                'view_count' => 3719,
+                'thumbnail' => '',
+                'description' => 'Modular support based on nwidart/laravel-modules.',
+                'author' => [
+                    'name' => 'Alan Lam',
+                    'avatar' => null,
+                ],
+                'features' => [
+                    'dark_mode' => false,
+                    'multi_language' => false,
+                ],
+                'supported_versions' => ['1', '2'],
+                'categories' => ['Editor', 'Authentication'],
+                'latest_activity_at' => '2023-04-07T00:21:45.148Z',
+            ],
         ]);
     }
 }

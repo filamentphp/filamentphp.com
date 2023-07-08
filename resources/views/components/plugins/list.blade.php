@@ -15,11 +15,11 @@
             {
                 id: 1,
                 name: 'Access and Menu Management',
+                slug: 'access-and-menu-management',
                 price: 'Free',
                 github_stars: 54,
                 view_count: 3719,
                 thumbnail: '',
-                link: 'https://filament.app.test/plugins/access-and-menu-management',
                 description: 'Modular support based on nwidart/laravel-modules.',
                 author: {
                     name: 'Alan Lam',
@@ -36,11 +36,11 @@
             {
                 id: 2,
                 name: 'Overlook',
+                slug: 'overlook',
                 price: '$199',
                 github_stars: 145,
                 view_count: 54001,
                 thumbnail: '',
-                link: 'https://filament.app.test/plugins/overlook',
                 description:
                     'Widget to show an overview of resources on the dashboard.',
                 author: {
@@ -58,11 +58,11 @@
             {
                 id: 3,
                 name: 'Access and Menu Management',
+                slug: 'access-and-menu-management',
                 price: 'Free',
                 github_stars: 9,
                 view_count: 8901,
                 thumbnail: '',
-                link: 'https://filament.app.test/plugins/overlook',
                 description:
                     'This is an authentication plugin provides a way to manage users, roles, permissions, and Menu in a Filament Admin application.',
                 author: {
@@ -85,11 +85,11 @@
             {
                 id: 4,
                 name: 'User & Role Resource Management',
+                slug: 'user-role-resource-management',
                 price: 'Free',
                 github_stars: 71,
                 view_count: 33461,
                 thumbnail: '',
-                link: 'https://filament.app.test/plugins/overlook',
                 description: 'Widget for Dashboard to show recent registrations',
                 author: {
                     name: 'Craig Smith',
@@ -106,11 +106,11 @@
             {
                 id: 5,
                 name: 'Toggle Icon Column',
+                slug: 'toggle-icon-column',
                 price: '$99',
                 github_stars: 2,
                 view_count: 8792,
                 thumbnail: '',
-                link: 'https://filament.app.test/plugins/overlook',
                 description:
                     'Toggle Icon Column combines Filaments interactive Toggle Column with its Icon Column to give developers another way to interact with their tables.',
                 author: {
