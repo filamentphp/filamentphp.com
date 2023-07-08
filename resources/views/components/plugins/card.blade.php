@@ -8,10 +8,11 @@
         class="aspect-[3/2] w-full rounded-xl ring-1 ring-dawn-pink"
     />
     <div class="px-1.5 pb-1 pt-2.5">
-        <div class="flex flex-wrap justify-between gap-5">
+        <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Stats --}}
-            <div class="flex flex-wrap items-center justify-start gap-5">
-                <div class="flex items-center gap-2">
+            <div class="flex flex-wrap items-center justify-start gap-4">
+                {{-- Github Stars --}}
+                <div class="flex items-center gap-1.5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="text-peach-orange"
@@ -25,11 +26,13 @@
                         />
                     </svg>
                     <div
-                        class="text-rum text-xs"
+                        class="pt-0.5 text-xs font-medium text-dolphin"
                         x-text="plugin.github_stars"
                     ></div>
                 </div>
-                <div class="flex items-center gap-2">
+
+                {{-- View Count --}}
+                <div class="flex items-center gap-1.5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="text-hurricane/60"
@@ -49,7 +52,7 @@
                         </g>
                     </svg>
                     <div
-                        class="text-rum text-xs"
+                        class="pt-0.5 text-xs font-medium text-dolphin"
                         x-text="plugin.view_count"
                     ></div>
                 </div>
@@ -124,13 +127,13 @@
         {{-- Name --}}
         <div
             x-text="plugin.name"
-            class="line-clamp-1 pt-2 font-semibold"
+            class="line-clamp-1 pt-1.5 text-[.95rem] font-semibold"
         ></div>
 
         {{-- Description --}}
         <div
             x-text="plugin.description"
-            class="line-clamp-2 pt-1 text-sm text-dolphin"
+            class="line-clamp-2 pt-1 text-[.8rem] text-dolphin"
         ></div>
 
         {{-- Author and Price --}}
@@ -172,7 +175,7 @@
                 <div class="space-y-0.5 text-xs">
                     <div class="text-dolphin">Creator</div>
                     <div
-                        class="font-semibold"
+                        class="font-semibold capitalize"
                         x-text="plugin.author.name"
                     ></div>
                 </div>

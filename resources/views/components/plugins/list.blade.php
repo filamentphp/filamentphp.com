@@ -14,11 +14,11 @@
         plugins: [
             {
                 id: 1,
+                name: 'Access and Menu Management',
                 price: 'Free',
                 github_stars: 54,
                 view_count: 3719,
                 thumbnail: '',
-                name: 'Access and Menu Management',
                 link: 'https://filament.app.test/plugins/access-and-menu-management',
                 description: 'Modular support based on nwidart/laravel-modules.',
                 author: {
@@ -35,11 +35,11 @@
             },
             {
                 id: 2,
+                name: 'Overlook',
                 price: '$199',
                 github_stars: 145,
                 view_count: 54001,
                 thumbnail: '',
-                name: 'Overlook',
                 link: 'https://filament.app.test/plugins/overlook',
                 description:
                     'Widget to show an overview of resources on the dashboard.',
@@ -57,25 +57,73 @@
             },
             {
                 id: 3,
+                name: 'Access and Menu Management',
                 price: 'Free',
-                github_stars: 145,
-                view_count: 54001,
+                github_stars: 9,
+                view_count: 8901,
                 thumbnail: '',
-                name: 'Foobar',
                 link: 'https://filament.app.test/plugins/overlook',
                 description:
-                    'Widget to show an overview of resources on the dashboard.',
+                    'This is an authentication plugin provides a way to manage users, roles, permissions, and Menu in a Filament Admin application.',
                 author: {
-                    name: 'Adam Weston',
-                    avatar: 'https://avatars.githubusercontent.com/u/3596800?v=4',
+                    name: 'alan lam',
+                    avatar: '',
                 },
                 features: {
                     dark_mode: true,
                     multi_language: false,
                 },
-                supported_versions: ['3'],
-                categories: ['Admin Panel', 'Widget'],
+                supported_versions: ['2'],
+                categories: [
+                    'Admin Panel',
+                    'Authentication',
+                    'Authorization',
+                    'Spatie',
+                ],
                 latest_activity_at: '2022-03-08T07:52:26+00:00',
+            },
+            {
+                id: 4,
+                name: 'User & Role Resource Management',
+                price: 'Free',
+                github_stars: 71,
+                view_count: 33461,
+                thumbnail: '',
+                link: 'https://filament.app.test/plugins/overlook',
+                description: 'Widget for Dashboard to show recent registrations',
+                author: {
+                    name: 'Craig Smith',
+                    avatar: 'https://avatars.githubusercontent.com/u/952595?v=4',
+                },
+                features: {
+                    dark_mode: false,
+                    multi_language: true,
+                },
+                supported_versions: ['2', '3'],
+                categories: ['Admin Panel', 'Spatie', 'Widget', 'Authentication'],
+                latest_activity_at: '2022-03-05T07:52:26+00:00',
+            },
+            {
+                id: 5,
+                name: 'Toggle Icon Column',
+                price: '$99',
+                github_stars: 2,
+                view_count: 8792,
+                thumbnail: '',
+                link: 'https://filament.app.test/plugins/overlook',
+                description:
+                    'Toggle Icon Column combines Filaments interactive Toggle Column with its Icon Column to give developers another way to interact with their tables.',
+                author: {
+                    name: 'Kenneth Sese',
+                    avatar: 'https://avatars.githubusercontent.com/u/952595?v=4',
+                },
+                features: {
+                    dark_mode: true,
+                    multi_language: true,
+                },
+                supported_versions: ['1', '2', '3'],
+                categories: ['Admin Panel', 'Column', 'Table Builder'],
+                latest_activity_at: '2022-03-05T07:52:26+00:00',
             },
         ],
 
