@@ -16,9 +16,12 @@ class ViewPluginController extends Controller
                 'id' => 1,
                 'name' => 'Access and Menu Management',
                 'price' => 'Free',
+                'buy_link' => 'https://checkout.anystack.sh/filament-media-library-pro?via=arf178',
                 'github_stars' => 54,
                 'view_count' => 3719,
                 'thumbnail' => '',
+                'discord_link' => 'https://discord.com/channels/883083792112300104/1105810468884463718',
+                'github_link' => 'https://github.com/solutionforest/filament-access-management',
                 'description' => 'Modular support based on nwidart/laravel-modules.',
                 'author' => [
                     'name' => 'Alan Lam',
