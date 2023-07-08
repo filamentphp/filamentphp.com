@@ -13,6 +13,7 @@
 
         plugins: [
             {
+                id: 1,
                 price: 'Free',
                 github_stars: 54,
                 view_count: 3719,
@@ -33,6 +34,7 @@
                 latest_activity_at: '2023-04-07T00:21:45.148Z',
             },
             {
+                id: 2,
                 price: '$199',
                 github_stars: 145,
                 view_count: 54001,
@@ -54,6 +56,7 @@
                 latest_activity_at: '2022-03-08T07:52:26+00:00',
             },
             {
+                id: 3,
                 price: 'Free',
                 github_stars: 145,
                 view_count: 54001,
@@ -81,12 +84,12 @@
                 // search in the names
                 (plugin) =>
                     plugin.name.toLowerCase().includes(this.search.toLowerCase()) &&
-                    // only show plugins that are in the selected categories
+                    // Show plugins that are in the selected categories
                     (this.selectedCategory.size === 0 ||
                         this.selectedCategory.has(plugin.categories[0])) &&
-                    // only show plugins that are in the selected version
+                    // Show plugins that are in the selected version
                     plugin.supported_versions.includes(this.selectedVersion) &&
-                    // only show plugins that are in the selected features
+                    // Show plugins that are in the selected features
                     (this.features.dark_mode ? plugin.features.dark_mode : true) &&
                     (this.features.multi_language
                         ? plugin.features.multi_language
@@ -172,23 +175,24 @@
                         />
                     </svg>
                 </div>
+
                 <!-- X icon -->
                 <div
-                    class="absolute right-0 top-0 grid h-full w-12 place-items-center bg-transparent"
+                    class="absolute right-0 top-0 grid h-full w-14 place-items-center bg-transparent"
                 >
                     <svg
-                        class="cursor-pointer text-hurricane transition delay-75 duration-200 will-change-transform hover:text-salmon"
+                        class="cursor-pointer text-hurricane transition duration-200 will-change-transform hover:scale-125 hover:text-salmon"
                         x-show="search"
                         x-on:click="search = ''"
-                        x-transition:enter="ease-out"
+                        x-transition:enter="delay-75 ease-out"
                         x-transition:enter-start="translate-x-1 rotate-45 opacity-0"
                         x-transition:enter-end="translate-x-0 rotate-0 opacity-100"
-                        x-transition:leave="ease-in"
+                        x-transition:leave="delay-75 ease-in"
                         x-transition:leave-start="translate-x-0 rotate-0 opacity-100"
                         x-transition:leave-end="translate-x-1 rotate-45 opacity-0"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="19"
-                        height="19"
+                        width="17"
+                        height="17"
                         viewBox="0 0 256 256"
                     >
                         <path
@@ -619,23 +623,55 @@
             </div>
         </div>
 
-        {{-- Plugins --}}
-        <div
-            x-ref="plugin_cards_wrapper"
-            x-init="
-                () => {
-                    autoAnimate($refs.plugin_cards_wrapper)
-                }
-            "
-            class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
-        >
-            <template
-                x-for="plugin in filteredPlugins"
-                :key="plugin.name"
-                class=""
+        <div class="relative min-h-[16rem] w-full">
+            {{-- Plugins --}}
+            <div
+                x-ref="plugin_cards_wrapper"
+                x-init="
+                    () => {
+                        autoAnimate($refs.plugin_cards_wrapper)
+                    }
+                "
+                class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
             >
-                <x-plugins.card />
-            </template>
+                <template
+                    x-for="plugin in filteredPlugins"
+                    :key="plugin.id"
+                    class=""
+                >
+                    <x-plugins.card />
+                </template>
+            </div>
+            {{-- No Results Message --}}
+            <div
+                x-show="! filteredPlugins.length"
+                x-transition:enter="ease-out"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="absolute right-1/2 top-0 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
+            >
+                <svg
+                    class="text-evening/40"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 256 256"
+                >
+                    <path
+                        fill="currentColor"
+                        d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z"
+                    />
+                </svg>
+                <div class="pt-2 font-semibold text-evening/70">
+                    No Results Found
+                </div>
+                <div class="pt-0.5 text-sm text-evening/50">
+                    Sorry we couldn't find any plugins matching your search.
+                </div>
+            </div>
         </div>
     </div>
 </div>
