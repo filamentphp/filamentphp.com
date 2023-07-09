@@ -17,7 +17,7 @@ class ViewPluginController extends Controller
                 'name' => 'Media Library Manager',
                 'price' => '€49,00',
                 'buy_link' => 'https://checkout.anystack.sh/filament-media-library-pro?via=arf178',
-                'github_stars' => null,
+                'github_stars' => 483,
                 'view_count' => 20303,
                 'thumbnail' => '',
                 'discord_link' => 'https://discord.com/channels/883083792112300104/961393209639067698',
