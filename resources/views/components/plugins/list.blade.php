@@ -329,10 +329,10 @@
         {{-- Dark Mode Toggle --}}
         <div
             x-on:click="features.dark_mode = ! features.dark_mode"
-            class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
-                'bg-fair-pink text-salmon': features.dark_mode,
-                'bg-white text-dolphin': ! features.dark_mode,
+                'bg-fair-pink': features.dark_mode,
+                'bg-white': ! features.dark_mode,
             }"
         >
             <div class="text-salmon">
@@ -353,9 +353,10 @@
                 </svg>
             </div>
             <div
-                class="text-sm transition duration-200"
+                class="text-sm transition duration-300"
                 :class="{
-                    'opacity-70 group-hover/dark-mode-toggle:opacity-100': ! features.dark_mode,
+                    'text-salmon': features.dark_mode,
+                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.dark_mode,
                 }"
             >
                 Dark mode
@@ -370,10 +371,10 @@
         {{-- Multi Language Toggle --}}
         <div
             x-on:click="features.multi_language = ! features.multi_language"
-            class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-200 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
-                'bg-fair-pink text-salmon': features.multi_language,
-                'bg-white text-dolphin': ! features.multi_language,
+                'bg-fair-pink': features.multi_language,
+                'bg-white': ! features.multi_language,
             }"
         >
             <div class="text-salmon">
@@ -396,9 +397,10 @@
                 </svg>
             </div>
             <div
-                class="text-sm transition duration-200"
+                class="text-sm transition duration-300"
                 :class="{
-                    'opacity-70 group-hover/multi-language-toggle:opacity-100': ! features.multi_language,
+                    'text-salmon': features.multi_language,
+                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.multi_language,
                 }"
             >
                 Multi language
