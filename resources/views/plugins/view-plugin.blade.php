@@ -117,8 +117,56 @@
                     <div class="text-3xl font-extrabold">
                         {{ $plugin['name'] }}
                     </div>
-                    <div class="pt-2 font-medium text-dolphin/80">
+                    <div class="pt-4 font-medium text-dolphin/80">
                         {{ $plugin['description'] }}
+                    </div>
+                </div>
+
+                {{-- Screenshots --}}
+                <div class="pt-10">
+                    <img
+                        src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
+                        alt="{{ $plugin['name'] }}"
+                        class="aspect-video w-full rounded-2xl ring-1 ring-dawn-pink/70"
+                    />
+                </div>
+
+                {{-- Documentation --}}
+                <div class="pt-10">
+                    <div class="text-3xl font-extrabold">Documentation</div>
+                    <div class="pt-5">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Porro animi voluptatibus totam delectus nihil
+                        maxime minus incidunt aliquam non deleniti. Temporibus
+                        obcaecati repudiandae hic veritatis eos maxime iusto
+                        repellat dolores!
+                        <br />
+                        <br />
+                        Et odio sapiente fugiat dolor, voluptatibus porro
+                        ducimus inventore facilis, similique, temporibus
+                        aliquid? Error voluptatibus laudantium dolor excepturi
+                        enim accusamus fugiat. Inventore, animi autem saepe
+                        dolorem unde doloribus earum nisi.
+                        <br />
+                        <br />
+                        Dignissimos recusandae, autem sapiente libero in
+                        voluptatem dicta impedit, quas enim ullam deleniti.
+                        Corrupti itaque voluptate dolor sit quidem architecto
+                        aliquam necessitatibus, ea quam in? Recusandae nihil quo
+                        saepe corporis!
+                        <br />
+                        <br />
+                        Possimus accusantium magni recusandae debitis atque
+                        quidem consequuntur facilis facere doloribus molestias?
+                        Dolorum inventore perferendis iusto hic maxime,
+                        laudantium laborum illo reprehenderit, quibusdam dolores
+                        harum asperiores consectetur tempore quia ducimus.
+                        <br />
+                        <br />
+                        Aliquid provident eveniet sint ipsa in. Ipsum eaque,
+                        repellat culpa quo eum tempore velit beatae eos. Maiores
+                        repudiandae maxime provident corporis facere fugiat
+                        reiciendis possimus hic, nesciunt, sint adipisci velit.
                     </div>
                 </div>
             </div>
@@ -136,7 +184,7 @@
                             @if ($plugin['author']['avatar'])
                                 <img
                                     src="{{ $plugin['author']['avatar'] }}"
-                                    alt="plugin.author.name"
+                                    alt="{{ $plugin['author']['name'] }}"
                                     class="aspect-square h-full w-full"
                                 />
                             @else
@@ -171,7 +219,7 @@
 
                         {{-- Social Links --}}
                         @if ($plugin['author']['twitter'] || $plugin['author']['github'])
-                            <div class="flex items-center gap-3.5 pt-2">
+                            <div class="flex items-center gap-4 pt-3">
                                 {{-- Twitter --}}
                                 @if ($plugin['author']['twitter'])
                                     <a
@@ -230,7 +278,7 @@
 
                         {{-- Stats --}}
                         <div
-                            class="mt-3 grid grid-cols-3 gap-10 rounded-2xl bg-white px-6 pb-3.5 pt-3 text-center shadow-lg shadow-black/[0.01]"
+                            class="mt-4 grid grid-cols-3 gap-10 rounded-2xl bg-white px-6 pb-3.5 pt-3 text-center shadow-lg shadow-black/[0.01]"
                         >
                             {{-- Plugins --}}
                             <div class="space-y-0.5">
