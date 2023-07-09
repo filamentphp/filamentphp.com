@@ -12,7 +12,10 @@
             {{-- Stats --}}
             <div class="flex flex-wrap items-center justify-start gap-4">
                 {{-- Github Stars --}}
-                <div class="flex items-center gap-1.5">
+                <div
+                    x-show="plugin.github_stars"
+                    class="flex items-center gap-1.5"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="text-peach-orange"

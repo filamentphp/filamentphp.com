@@ -108,7 +108,7 @@
                 name: 'Toggle Icon Column',
                 slug: 'toggle-icon-column',
                 price: '$99',
-                github_stars: 2,
+                github_stars: null,
                 view_count: 8792,
                 thumbnail: '',
                 description:
