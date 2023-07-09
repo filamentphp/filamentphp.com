@@ -38,7 +38,7 @@
                 <div class="flex items-center gap-1.5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="text-hurricane/60"
+                        class="text-dolphin/70"
                         width="18"
                         height="18"
                         viewBox="0 0 24 24"
