@@ -125,7 +125,7 @@
                 </div>
 
                 {{-- Categories --}}
-                <div class="flex flex-wrap items-center gap-3.5 pt-7">
+                <div class="flex flex-wrap items-center gap-3.5 pt-10">
                     @foreach ($plugin['categories'] as $category)
                         <div
                             class="flex select-none items-center gap-4 rounded-full bg-white py-1.5 pl-1.5 pr-6"
@@ -224,7 +224,7 @@
                 </div>
 
                 {{-- Screenshots --}}
-                <div class="pt-4">
+                <div class="pt-5">
                     <img
                         src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
                         alt="{{ $plugin['name'] }}"
@@ -607,13 +607,13 @@
                 {{-- More From This Creator --}}
                 <div class="">
                     <div class="text-lg font-extrabold">
-                        More From This Creator
+                        More from this creator
                     </div>
                     <div class="space-y-5 pt-7">
                         @foreach ($more_from_this_creator as $creator_plugin)
                             <a
                                 href="#"
-                                class="flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                                class="group/creator-plugin-link relative flex items-center gap-5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
                             >
                                 {{-- Thumbnail --}}
                                 <img
@@ -690,6 +690,28 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                {{-- Arrow --}}
+                                <div
+                                    class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-gradient-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/creator-plugin-link:-translate-x-3 group-hover/creator-plugin-link:opacity-100"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="text-salmon"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.5"
+                                            d="M4 12h2.5M20 12l-6-6m6 6l-6 6m6-6H9.5"
+                                        />
+                                    </svg>
                                 </div>
                             </a>
                         @endforeach
