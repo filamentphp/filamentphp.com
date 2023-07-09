@@ -173,7 +173,9 @@
                 </div>
 
                 {{-- Stats --}}
-                <div class="flex flex-wrap items-center justify-end gap-10 pt-7">
+                <div
+                    class="flex flex-wrap items-center justify-end gap-10 pt-7"
+                >
                     {{-- Github Stars --}}
                     <div class="flex items-center gap-2">
                         <svg
@@ -198,7 +200,7 @@
                     <div class="flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="text-hurricane/60"
+                            class="text-dolphin/70"
                             width="20"
                             height="20"
                             viewBox="0 0 24 24"
@@ -454,11 +456,12 @@
             </div>
 
             {{-- Right Side --}}
-            <div class="w-full lg:max-w-sm xl:max-w-md">
-                {{-- Creator --}}
-                <div class="pt-10 text-evening">
-                    <div class="text-lg font-extrabold">Creator</div>
-                    <div class="grid w-full place-items-center pt-2">
+            <div
+                class="flex w-full flex-wrap items-center gap-12 lg:max-w-sm xl:max-w-md"
+            >
+                {{-- Author --}}
+                <div class="w-full pt-10 text-evening">
+                    <div class="grid w-full place-items-center">
                         {{-- Avatar --}}
                         <div
                             class="h-24 w-24 shrink-0 overflow-hidden rounded-full"
@@ -598,6 +601,98 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {{-- More From This Creator --}}
+                <div class="">
+                    <div class="text-lg font-extrabold">
+                        More From This Creator
+                    </div>
+                    <div class="space-y-5 pt-7">
+                        @foreach ($more_from_this_creator as $creator_plugin)
+                            <a
+                                href="#"
+                                class="flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-1"
+                            >
+                                {{-- Thumbnail --}}
+                                <img
+                                    src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
+                                    class="aspect-[3/2] w-36 min-w-[9rem] shrink-0 rounded-xl ring-1 ring-dawn-pink"
+                                />
+                                {{-- Detail --}}
+                                <div class="">
+                                    {{-- Name --}}
+                                    <div class="line-clamp-1 font-semibold">
+                                        {{ $creator_plugin['name'] }}
+                                    </div>
+
+                                    {{-- Description --}}
+                                    <div
+                                        class="line-clamp-2 pt-1 text-sm text-dolphin"
+                                    >
+                                        {{ $creator_plugin['description'] }}
+                                    </div>
+
+                                    {{-- Stats --}}
+                                    <div
+                                        class="flex flex-wrap items-center justify-start gap-4 pt-1"
+                                    >
+                                        @if ($creator_plugin['github_stars'])
+                                            {{-- Github Stars --}}
+                                            <div
+                                                class="flex items-center gap-1.5"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="text-butter"
+                                                    width="18"
+                                                    height="18"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        fill="currentColor"
+                                                        d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
+                                                    />
+                                                </svg>
+                                                <div
+                                                    class="pt-0.5 text-xs font-medium text-dolphin"
+                                                >
+                                                    {{ $creator_plugin['github_stars'] }}
+                                                </div>
+                                            </div>
+                                        @endif
+
+                                        {{-- View Count --}}
+                                        <div class="flex items-center gap-1.5">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="text-dolphin/70"
+                                                width="18"
+                                                height="18"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <g fill="currentColor">
+                                                    <path
+                                                        d="M9.75 12a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0Z"
+                                                    />
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20c4.182 0 7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4C7.818 4 4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12Zm10-3.75a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </g>
+                                            </svg>
+                                            <div
+                                                class="pt-0.5 text-xs font-medium text-dolphin"
+                                            >
+                                                {{ $creator_plugin['view_count'] }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </div>

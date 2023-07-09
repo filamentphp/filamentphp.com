@@ -44,6 +44,29 @@ class ViewPluginController extends Controller
                 'latest_activity' => '2 days ago',
                 'is_actively_maintained' => true,
             ],
+            'more_from_this_creator' => [
+                [
+                    'name' => 'Onboarding Manager Pro',
+                    'thumbnail' => '',
+                    'description' => 'Beautiful onboarding experiences for Filament Admin.',
+                    'github_stars' => 513,
+                    'view_count' => 10053,
+                ],
+                [
+                    'name' => 'Notifications Pro',
+                    'thumbnail' => '',
+                    'description' => 'Seamlessly integrate Laravel database notifications with Filament.',
+                    'github_stars' => 791,
+                    'view_count' => 7512,
+                ],
+                [
+                    'name' => 'TALL Interactive',
+                    'thumbnail' => '',
+                    'description' => 'This package allows you to create beautiful forms, modals and slide-overs with ease.',
+                    'github_stars' => 111,
+                    'view_count' => 7772,
+                ],
+            ]
         ]);
     }
 }
