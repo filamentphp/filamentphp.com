@@ -11,6 +11,21 @@
         x-data="{
             back_button_is_hovering: false,
         }"
+        x-ref="section"
+        x-init="
+            () => {
+                if (reducedMotion) return
+                gsap.fromTo($refs.section,{
+                    autoAlpha: 0,
+                    y: 50,
+                }, {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.7,
+                    ease: 'circ.out',
+                })
+            }
+        "
         class="mx-auto w-full max-w-8xl px-5 sm:px-10"
     >
         <div class="flex flex-wrap items-center justify-between gap-5 pt-20">

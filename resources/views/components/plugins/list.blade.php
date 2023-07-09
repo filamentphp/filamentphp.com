@@ -1,6 +1,25 @@
-<div
+<section
     class="mx-auto w-full max-w-8xl px-5 sm:px-10"
     x-cloak
+    x-ref="section"
+    x-init="
+        () => {
+            if (reducedMotion) return
+            gsap.fromTo(
+                $refs.section,
+                {
+                    autoAlpha: 0,
+                    y: 50,
+                },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.7,
+                    ease: 'circ.out',
+                },
+            )
+        }
+    "
     x-data="{
         search: '',
         selectedCategory: new Set(),
@@ -536,4 +555,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>
