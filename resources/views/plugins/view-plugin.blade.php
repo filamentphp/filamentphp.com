@@ -6,10 +6,17 @@
 @endphp
 
 <x-layouts.app>
-    <section class="mx-auto w-full max-w-8xl px-5 sm:px-10">
+    <section
+        x-data="{
+            back_button_is_hovering: false,
+        }"
+        class="mx-auto w-full max-w-8xl px-5 sm:px-10"
+    >
         <div class="flex flex-wrap items-center justify-between gap-5 pt-20">
             {{-- Back Button --}}
             <a
+                x-on:mouseenter="back_button_is_hovering = true"
+                x-on:mouseleave="back_button_is_hovering = false"
                 href="/plugins"
                 class="flex items-center gap-3 text-dolphin transition duration-300 hover:-translate-x-1 hover:text-evening"
             >
@@ -26,7 +33,12 @@
                 </svg>
                 <div class="text-xl font-medium">Plugins</div>
             </a>
-            <div class="flex flex-wrap items-center gap-3">
+            <div
+                class="flex flex-wrap items-center gap-3 transition duration-300 will-change-transform"
+                :class="{
+                'opacity-60 translate-x-2': back_button_is_hovering,
+            }"
+            >
                 {{-- Discord --}}
                 <a
                     href="{{ $plugin['discord_link'] }}"
@@ -74,7 +86,7 @@
                     <a
                         href="{{ $plugin['github_link'] }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-salmon/80"
+                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
                         Visit Github
                     </a>
@@ -83,7 +95,7 @@
                     <a
                         href="{{ $plugin['buy_link'] }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-salmon/80"
+                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
                         Buy for
                         {{ $plugin['price'] }}
@@ -92,7 +104,13 @@
             </div>
         </div>
 
-        <div class="flex flex-col items-start gap-20 pt-7 xl:flex-row">
+        {{-- Main Content --}}
+        <div
+            class="flex flex-col items-start gap-20 pt-7 transition duration-300 will-change-transform xl:flex-row"
+            :class="{
+                'opacity-60 translate-x-2': back_button_is_hovering,
+            }"
+        >
             {{-- Left Side --}}
             <div class="w-full">
                 <div class="">
