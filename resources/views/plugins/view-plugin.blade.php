@@ -7,6 +7,7 @@
 
 <x-layouts.app>
     <section
+        x-cloak
         x-data="{
             back_button_is_hovering: false,
         }"
@@ -123,10 +124,56 @@
                     </div>
                 </div>
 
+                {{-- Categories --}}
+                <div class="flex flex-wrap items-center gap-3.5 pt-7">
+                    @foreach ($plugin['categories'] as $category)
+                        <div
+                            class="flex select-none items-center gap-4 rounded-full bg-white py-1.5 pl-1.5 pr-6"
+                        >
+                            <div
+                                class="grid h-8 w-8 place-items-center rounded-full bg-dawn-pink text-hurricane"
+                            >
+                                @if ($category === 'Action')
+                                    <x-plugins.categories.action />
+                                @elseif ($category === 'Admin Panel')
+                                    <x-plugins.categories.admin-panel />
+                                @elseif ($category === 'Analytics')
+                                    <x-plugins.categories.analytics />
+                                @elseif ($category === 'Authentication')
+                                    <x-plugins.categories.authentication />
+                                @elseif ($category === 'Authorization')
+                                    <x-plugins.categories.authorization />
+                                @elseif ($category === 'Column')
+                                    <x-plugins.categories.column />
+                                @elseif ($category === 'Developer Tool')
+                                    <x-plugins.categories.developer-tool />
+                                @elseif ($category === 'Editor')
+                                    <x-plugins.categories.editor />
+                                @elseif ($category === 'Field')
+                                    <x-plugins.categories.field />
+                                @elseif ($category === 'Form Builder')
+                                    <x-plugins.categories.form-builder />
+                                @elseif ($category === 'Kit')
+                                    <x-plugins.categories.kit />
+                                @elseif ($category === 'Layout')
+                                    <x-plugins.categories.layout />
+                                @elseif ($category === 'Spatie')
+                                    <x-plugins.categories.spatie />
+                                @elseif ($category === 'Table Builder')
+                                    <x-plugins.categories.table-builder />
+                                @elseif ($category === 'Widget')
+                                    <x-plugins.categories.widget />
+                                @endif
+                            </div>
+                            <div class="text-sm text-hurricane">
+                                {{ $category }}
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
                 {{-- Stats --}}
-                <div
-                    class="flex flex-wrap items-center justify-start justify-end gap-5 pt-3"
-                >
+                <div class="flex flex-wrap items-center justify-end gap-10 pt-7">
                     {{-- Github Stars --}}
                     <div class="flex items-center gap-2">
                         <svg
@@ -175,7 +222,7 @@
                 </div>
 
                 {{-- Screenshots --}}
-                <div class="pt-3.5">
+                <div class="pt-4">
                     <img
                         src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
                         alt="{{ $plugin['name'] }}"
