@@ -123,18 +123,9 @@
                     </div>
                 </div>
 
-                {{-- Screenshots --}}
-                <div class="pt-10">
-                    <img
-                        src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
-                        alt="{{ $plugin['name'] }}"
-                        class="aspect-video w-full rounded-2xl ring-1 ring-dawn-pink/70"
-                    />
-                </div>
-
                 {{-- Stats --}}
                 <div
-                    class="flex flex-wrap items-center justify-start gap-5 pt-3"
+                    class="flex flex-wrap items-center justify-start justify-end gap-5 pt-3"
                 >
                     {{-- Github Stars --}}
                     <div class="flex items-center gap-2">
@@ -152,7 +143,7 @@
                         </svg>
                         <div class="pt-0.5 text-sm font-medium text-dolphin">
                             {{ $plugin['github_stars'] }}
-                            Github stars
+                            Github Stars
                         </div>
                     </div>
 
@@ -183,6 +174,15 @@
                     </div>
                 </div>
 
+                {{-- Screenshots --}}
+                <div class="pt-3.5">
+                    <img
+                        src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
+                        alt="{{ $plugin['name'] }}"
+                        class="aspect-video w-full rounded-2xl ring-1 ring-dawn-pink/70"
+                    />
+                </div>
+
                 {{-- Features and Health Checks --}}
                 <div
                     class="grid grid-cols-[repeat(auto-fill,minmax(315px,1fr))] gap-x-16 gap-y-10 pt-7"
@@ -191,14 +191,14 @@
                     <div class="flex items-center gap-3">
                         <div
                             @class([
-                                'grid h-8 w-8 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
+                                'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
                                 'grayscale' => $plugin['features']['dark_mode'] === false,
                             ])
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
+                                width="20"
+                                height="20"
                                 viewBox="0 0 24 24"
                             >
                                 <g fill="currentColor">
@@ -227,14 +227,14 @@
                     <div class="flex items-center gap-3">
                         <div
                             @class([
-                                'grid h-8 w-8 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
+                                'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
                                 'grayscale' => $plugin['features']['multi_language'] === false,
                             ])
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
+                                width="20"
+                                height="20"
                                 viewBox="0 0 20 20"
                             >
                                 <g fill="currentColor">
@@ -265,7 +265,7 @@
                     <div class="flex items-center gap-3">
                         @if ($plugin['is_compatible_with_latest_version'] === true)
                             <div
-                                class="grid h-8 w-8 place-items-center rounded-full bg-lime-200/50 text-lime-600"
+                                class="grid h-9 w-9 place-items-center rounded-full bg-lime-200/50 text-lime-600"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +281,7 @@
                             </div>
                         @else
                             <div
-                                class="grid h-8 w-8 place-items-center rounded-full bg-rose-200/50 text-rose-600"
+                                class="grid h-9 w-9 place-items-center rounded-full bg-rose-200/50 text-rose-600"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
