@@ -38,9 +38,11 @@ class ViewPluginController extends Controller
                     'dark_mode' => true,
                     'multi_language' => true,
                 ],
-                'supported_versions' => ['2', '3'],
                 'categories' => ['Admin Panel', 'Field', 'Kit', 'Spatie', 'Form Builder'],
-                'latest_activity_at' => '2023-04-07T00:21:45.148Z',
+                'supported_versions' => ['2', '3'],
+                'is_compatible_with_latest_version' => true,
+                'latest_activity' => '2 days ago',
+                'is_actively_maintained' => true,
             ],
         ]);
     }

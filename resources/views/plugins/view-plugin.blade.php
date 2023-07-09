@@ -18,7 +18,7 @@
                 x-on:mouseenter="back_button_is_hovering = true"
                 x-on:mouseleave="back_button_is_hovering = false"
                 href="/plugins"
-                class="flex items-center gap-3 text-dolphin transition duration-300 hover:-translate-x-1 hover:text-evening"
+                class="flex items-center gap-3 text-dolphin transition duration-300 hover:-translate-x-2 hover:text-evening"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,13 +106,14 @@
 
         {{-- Main Content --}}
         <div
-            class="flex flex-col items-start gap-20 pt-7 transition duration-300 will-change-transform xl:flex-row"
+            class="flex flex-col items-start gap-20 pt-7 transition duration-300 will-change-transform lg:flex-row"
             :class="{
                 'opacity-60 translate-x-2': back_button_is_hovering,
             }"
         >
             {{-- Left Side --}}
             <div class="w-full">
+                {{-- Name & Description --}}
                 <div class="">
                     <div class="text-3xl font-extrabold">
                         {{ $plugin['name'] }}
@@ -129,6 +130,115 @@
                         alt="{{ $plugin['name'] }}"
                         class="aspect-video w-full rounded-2xl ring-1 ring-dawn-pink/70"
                     />
+                </div>
+
+                {{-- Checks --}}
+                <div
+                    class="flex flex-wrap items-center gap-x-20 gap-y-10 pt-10"
+                >
+                    {{-- Latest Version Compatibility --}}
+                    <div class="flex items-center gap-3">
+                        @if ($plugin['is_compatible_with_latest_version'] === true)
+                            <div
+                                class="grid h-8 w-8 place-items-center rounded-full bg-lime-200/50 text-lime-600"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
+                                    />
+                                </svg>
+                            </div>
+                        @else
+                            <div
+                                class="grid h-8 w-8 place-items-center rounded-full bg-rose-200/50 text-rose-600"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v8m.05 4v.1h-.1V18h.1Z"
+                                    />
+                                </svg>
+                            </div>
+                        @endif
+
+                        <div class="">
+                            <div class="font-medium">
+                                {{ $plugin['is_compatible_with_latest_version'] ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
+                            </div>
+
+                            <div class="text-xs text-dolphin/80">
+                                Supported versions:
+                                {{ implode(' - ', array_map(fn ($version) => $version . '.x', $plugin['supported_versions'])) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Actively Maintained --}}
+                    <div class="flex items-center gap-3">
+                        @if ($plugin['is_actively_maintained'] === true)
+                            <div
+                                class="grid h-8 w-8 place-items-center rounded-full bg-lime-200/50 text-lime-600"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
+                                    />
+                                </svg>
+                            </div>
+                        @else
+                            <div
+                                class="grid h-8 w-8 place-items-center rounded-full bg-rose-200/50 text-rose-600"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v8m.05 4v.1h-.1V18h.1Z"
+                                    />
+                                </svg>
+                            </div>
+                        @endif
+
+                        <div class="">
+                            <div class="font-medium">
+                                {{ $plugin['is_actively_maintained'] === true ? 'Is actively maintained' : 'Is not actively maintained' }}
+                            </div>
+
+                            <div class="text-xs text-dolphin/80">
+                                Latest activity:
+                                {{ $plugin['latest_activity'] }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {{-- Documentation --}}
@@ -172,7 +282,7 @@
             </div>
 
             {{-- Right Side --}}
-            <div class="w-full max-w-md">
+            <div class="w-full lg:max-w-sm xl:max-w-md">
                 {{-- Creator --}}
                 <div class="pt-10 text-evening">
                     <div class="text-lg font-extrabold">Creator</div>
