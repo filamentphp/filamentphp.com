@@ -13,6 +13,7 @@ import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/material.css'
 import 'tippy.js/animations/shift-away-subtle.css'
 import autoAnimate from '@formkit/auto-animate'
+import MiniSearch from 'minisearch'
 
 // AutoAnimate
 window.autoAnimate = autoAnimate
@@ -27,6 +28,9 @@ window.reducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)',
 ).matches
 
+// Minisearch
+window.MiniSearch = MiniSearch
+
 // Alpine
 Alpine.store('sidebar', { isOpen: false })
 
@@ -40,10 +44,12 @@ Alpine.plugin(Tooltip)
 window.Alpine = Alpine
 Alpine.start()
 
+// Splide
 if (document.querySelector('.splide')) {
     new Splide('.splide').mount()
 }
 
+// DocSearch
 docsearch({
     appId: 'LMIKXMDI4P',
     apiKey: '1e3d12b0b9c3a4db16cd896e83b9efa0',

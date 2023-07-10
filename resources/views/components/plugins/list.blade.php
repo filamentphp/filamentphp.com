@@ -4,6 +4,24 @@
     x-ref="section"
     x-init="
         () => {
+            // Initialize the minisearch instance
+            searchEngine = new MiniSearch({
+                fields: ['name', 'description', 'author.name'],
+                searchOptions: {
+                    fuzzy: 0.1,
+                    prefix: true,
+                },
+                extractField: (document, fieldName) => {
+                    // Enabled access to nested fields
+                    return fieldName
+                        .split('.')
+                        .reduce((doc, key) => doc && doc[key], document)
+                },
+            })
+
+            // Index the plugins
+            searchEngine.addAll(plugins)
+
             if (reducedMotion) return
             gsap.fromTo(
                 $refs.section,
@@ -21,6 +39,7 @@
         }
     "
     x-data="{
+        searchEngine: null,
         search: '',
         selectedCategory: new Set(),
         selectedVersion: '3',
@@ -147,26 +166,54 @@
         ],
 
         get filteredPlugins() {
-            return this.plugins.filter(
-                // search in the names
+            let filterResult = this.plugins
+
+            // Show plugins that are in the selected categories
+            filterResult = filterResult.filter(
                 (plugin) =>
-                    plugin.name.toLowerCase().includes(this.search.toLowerCase()) &&
-                    // Show plugins that are in the selected categories
-                    (this.selectedCategory.size === 0 ||
-                        this.selectedCategory.has(plugin.categories[0])) &&
-                    // Show plugins that are in the selected version
-                    plugin.supported_versions.includes(this.selectedVersion) &&
-                    // Show plugins that are in the selected features
+                    this.selectedCategory.size === 0 ||
+                    this.selectedCategory.has(plugin.categories[0]),
+            )
+
+            // Show plugins that are in the selected categories
+            filterResult = filterResult.filter(
+                (plugin) =>
+                    this.selectedCategory.size === 0 ||
+                    this.selectedCategory.has(plugin.categories[0]),
+            )
+
+            // Show plugins that are in the selected version
+            filterResult = filterResult.filter((plugin) =>
+                plugin.supported_versions.includes(this.selectedVersion),
+            )
+
+            // Show plugins that are in the selected features
+            filterResult = filterResult.filter(
+                (plugin) =>
                     (this.features.dark_mode ? plugin.features.dark_mode : true) &&
                     (this.features.multi_language
                         ? plugin.features.multi_language
-                        : true) &&
-                    // If the selectedPrice is 'All', show all plugins, if the selectedPrice is 'Free', only show plugins that have a price of 'Free', if the selectedPrice is 'Paid', only show plugins that have a price that is not 'Free'
-                    (this.selectedPrice === 'All' ||
-                        (this.selectedPrice === 'Free' &&
-                            plugin.price === 'Free') ||
-                        (this.selectedPrice === 'Paid' && plugin.price !== 'Free')),
+                        : true),
             )
+
+            // If the selectedPrice is 'All', show all plugins, if the selectedPrice is 'Free', only show plugins that have a price of 'Free', if the selectedPrice is 'Paid', only show plugins that have a price that is not 'Free'
+            filterResult = filterResult.filter(
+                (plugin) =>
+                    this.selectedPrice === 'All' ||
+                    (this.selectedPrice === 'Free' && plugin.price === 'Free') ||
+                    (this.selectedPrice === 'Paid' && plugin.price !== 'Free'),
+            )
+
+            // If the search is not empty, show plugins that match the search
+            if (this.search) {
+                const searchResult = this.searchEngine.search(this.search)
+
+                filterResult = filterResult.filter((plugin) =>
+                    searchResult.some((result) => result.id === plugin.id),
+                )
+            }
+
+            return filterResult
         },
     }"
 >
