@@ -70,25 +70,27 @@
             else this.currentPage = this.currentPage - 3
         },
     }"
-    x-init="() => {
-        $watch('currentPage', () => {
-            moveAnimation = true
-            setTimeout(() => {
-                moveAnimation = false
-            }, 300)
-        }) 
-    }"
+    x-init="
+        () => {
+            $watch('currentPage', () => {
+                moveAnimation = true
+                setTimeout(() => {
+                    moveAnimation = false
+                }, 300)
+            })
+        }
+    "
     class="relative flex"
 >
     {{-- Left Arrow --}}
     <div
-        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-zinc-700 transition duration-300"
+        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
         :class="{
-                                'bg-zinc-100' : ! whiteBackground,
-                                'bg-white shadow-lg shadow-black/5' : whiteBackground,
-                                'cursor-pointer hover:bg-zinc-200' : currentPage != 1,
-                                'cursor-not-allowed' : currentPage == 1,
-                            }"
+            'bg-neutral-200/60' : ! whiteBackground,
+            'bg-white shadow-lg shadow-black/5' : whiteBackground,
+            'cursor-pointer hover:bg-neutral-200' : currentPage != 1,
+            'cursor-not-allowed' : currentPage == 1,
+        }"
         x-on:click="currentPage = currentPage > 1 ? currentPage - 1 : currentPage"
     >
         <svg
@@ -97,8 +99,8 @@
             height="22"
             viewBox="0 0 24 24"
             :class="{
-                                    'opacity-30' : currentPage == 1,
-                                }"
+                'opacity-30' : currentPage == 1,
+            }"
         >
             <path
                 fill="none"
@@ -114,12 +116,12 @@
     <div
         class="absolute left-1/2 top-0 z-10 mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:hidden"
         :class="{
-                                'scale-110' : moveAnimation,
+            'scale-110' : moveAnimation,
 
-                                '!left-[40px]' : currentPage == 1,
-                                '!left-[80px]' : (currentPage > 1 && currentPage <= totalPages),
-                                '!left-[120px]' : currentPage == totalPages && totalPages > 2,
-                            }"
+            '!left-[40px]' : currentPage == 1,
+            '!left-[80px]' : (currentPage > 1 && currentPage <= totalPages),
+            '!left-[120px]' : currentPage == totalPages && totalPages > 2,
+        }"
         x-text="currentPage"
     ></div>
 
@@ -127,16 +129,16 @@
         <div
             class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:flex"
             :class="{
-                                        'scale-110' : moveAnimation,
-                                        '!left-[40px]' : currentPage == 1,
-                                        '!left-[80px]' : currentPage == 2,
-                                        '!left-[120px]' : currentPage == 3,
-                                        '!left-[160px]' : currentPage == 4,
-                                        '!left-[200px]' : currentPage == 5,
-                                        '!left-[240px]' : currentPage == 6,
-                                        '!left-[280px]' : currentPage == 7,
-                                        '!left-[320px]' : currentPage == 8,
-                                    }"
+                'scale-110' : moveAnimation,
+                '!left-[40px]' : currentPage == 1,
+                '!left-[80px]' : currentPage == 2,
+                '!left-[120px]' : currentPage == 3,
+                '!left-[160px]' : currentPage == 4,
+                '!left-[200px]' : currentPage == 5,
+                '!left-[240px]' : currentPage == 6,
+                '!left-[280px]' : currentPage == 7,
+                '!left-[320px]' : currentPage == 8,
+            }"
             x-text="currentPage"
         ></div>
     </template>
@@ -145,15 +147,15 @@
         <div
             class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:flex"
             :class="{
-                                        'scale-110' : moveAnimation,
-                                        '!left-[40px]' : currentPage == 1,
-                                        '!left-[80px]' : currentPage == 2,
-                                        '!left-[120px]' : currentPage == 3,
-                                        '!left-[200px]' : currentPage > 3 && currentPage < (totalPages - 2),
-                                        '!left-[280px]' : currentPage == (totalPages - 2),
-                                        '!left-[320px]' : currentPage == (totalPages - 1),
-                                        '!left-[360px]' : currentPage == totalPages,
-                                    }"
+                'scale-110' : moveAnimation,
+                '!left-[40px]' : currentPage == 1,
+                '!left-[80px]' : currentPage == 2,
+                '!left-[120px]' : currentPage == 3,
+                '!left-[200px]' : currentPage > 3 && currentPage < (totalPages - 2),
+                '!left-[280px]' : currentPage == (totalPages - 2),
+                '!left-[320px]' : currentPage == (totalPages - 1),
+                '!left-[360px]' : currentPage == totalPages,
+            }"
             x-text="currentPage"
         ></div>
     </template>
@@ -257,9 +259,9 @@
                         viewBox="0 0 24 24"
                         class="absolute top-2 opacity-0 transition-all duration-200 group-hover:opacity-100"
                         :class="{
-                                                'right-0 group-hover:!right-2' : currentPage > 4,
-                                                'left-0 group-hover:!left-2 rotate-180' : currentPage < 4,
-                                            }"
+                            'right-0 group-hover:!right-2' : currentPage > 4,
+                            'left-0 group-hover:!left-2 rotate-180' : currentPage < 4,
+                        }"
                     >
                         <path
                             fill="none"
@@ -346,13 +348,13 @@
     </template>
 
     <div
-        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-zinc-700 transition duration-300"
+        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
         :class="{
-                                'bg-zinc-100' : ! whiteBackground,
-                                'bg-white shadow-lg shadow-black/5' : whiteBackground,
-                                'cursor-pointer hover:bg-zinc-200' : currentPage != totalPages,
-                                'cursor-not-allowed' : currentPage == totalPages,
-                            }"
+            'bg-neutral-200/60' : ! whiteBackground,
+            'bg-white shadow-lg shadow-black/5' : whiteBackground,
+            'cursor-pointer hover:bg-neutral-200' : currentPage != totalPages,
+            'cursor-not-allowed' : currentPage == totalPages,
+        }"
         x-on:click="currentPage = currentPage < totalPages ? currentPage + 1 : currentPage"
     >
         <svg
@@ -361,8 +363,8 @@
             height="22"
             viewBox="0 0 24 24"
             :class="{
-                                    'opacity-30' : currentPage == totalPages,
-                                }"
+                'opacity-30' : currentPage == totalPages,
+            }"
         >
             <path
                 fill="none"
