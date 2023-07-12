@@ -70,6 +70,14 @@
             else this.currentPage = this.currentPage - 3
         },
     }"
+    x-init="() => {
+        $watch('currentPage', () => {
+            moveAnimation = true
+            setTimeout(() => {
+                moveAnimation = false
+            }, 300)
+        }) 
+    }"
     class="relative flex"
 >
     {{-- Left Arrow --}}
