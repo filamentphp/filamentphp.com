@@ -165,6 +165,13 @@
             },
         ],
 
+        currentPage: 1,
+        perPage: 10,
+        totalItems: 0,
+        get totalPages() {
+            return Math.ceil(this.totalItems / this.perPage)
+        },
+
         get filteredPlugins() {
             let filterResult = this.plugins
 
@@ -212,6 +219,15 @@
                     searchResult.some((result) => result.id === plugin.id),
                 )
             }
+
+            // Update the total items
+            this.totalItems = filterResult.length
+
+            // Paginate the results
+            filterResult = filterResult.slice(
+                (this.currentPage - 1) * this.perPage,
+                this.currentPage * this.perPage,
+            )
 
             return filterResult
         },
@@ -553,53 +569,89 @@
             </div>
         </div>
 
-        <div class="relative min-h-[16rem] w-full">
-            {{-- Plugins --}}
-            <div
-                x-ref="plugin_cards_wrapper"
-                x-init="
-                    () => {
-                        autoAnimate($refs.plugin_cards_wrapper)
-                    }
-                "
-                class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
-            >
-                <template
-                    x-for="plugin in filteredPlugins"
-                    :key="plugin.id"
-                    class=""
-                >
-                    <x-plugins.card />
-                </template>
-            </div>
-            {{-- No Results Message --}}
-            <div
-                x-show="! filteredPlugins.length"
-                x-transition:enter="ease-out"
-                x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100"
-                x-transition:leave="ease-in"
-                x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0"
-                class="absolute right-1/2 top-0 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
-            >
-                <svg
-                    class="text-evening/40"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    viewBox="0 0 256 256"
-                >
-                    <path
-                        fill="currentColor"
-                        d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z"
-                    />
-                </svg>
-                <div class="pt-2 font-semibold text-evening/70">
-                    No Results Found
+        <div class="w-full">
+            {{-- Pagination --}}
+            <div class="flex items-center justify-between px-1 py-3">
+                <div class="flex flex-1 items-center justify-between">
+                    <div
+                        x-show="filteredPlugins.length"
+                        class="text-sm text-gray-700"
+                    >
+                        Showing
+                        <span
+                            class="font-extrabold"
+                            x-text="(currentPage - 1) * perPage + 1"
+                        ></span>
+                        to
+                        <span
+                            class="font-extrabold"
+                            x-text="Math.min(currentPage * perPage, totalItems)"
+                        ></span>
+                        of
+                        <span
+                            class="font-extrabold"
+                            x-text="totalItems"
+                        ></span>
+                        results
+                    </div>
+                    <div x-show="!filteredPlugins.length">
+                        <div class="text-sm text-gray-700">
+                            No results found
+                        </div>
+                    </div>
+                    <x-ui.pagination />
                 </div>
-                <div class="pt-0.5 text-sm text-evening/50">
-                    Sorry we couldn't find any plugins matching your search.
+            </div>
+
+            <div class="relative min-h-[16rem]">
+                {{-- Plugins --}}
+                <div
+                    x-ref="plugin_cards_wrapper"
+                    x-init="
+                        () => {
+                            autoAnimate($refs.plugin_cards_wrapper)
+                        }
+                    "
+                    class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
+                >
+                    <template
+                        x-for="plugin in filteredPlugins"
+                        :key="plugin.id"
+                        class=""
+                    >
+                        <x-plugins.card />
+                    </template>
+                </div>
+                {{-- No Results Message --}}
+
+                <div
+                    x-show="! filteredPlugins.length"
+                    x-transition:enter="ease-out"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="ease-in"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="absolute right-1/2 top-0 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
+                >
+                    <svg
+                        class="text-evening/40"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 256 256"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z"
+                        />
+                    </svg>
+                    <div class="pt-2 font-semibold text-evening/70">
+                        No Results Found
+                    </div>
+                    <div class="pt-0.5 text-sm text-evening/50">
+                        Sorry we couldn't find any plugins matching your search.
+                    </div>
                 </div>
             </div>
         </div>
