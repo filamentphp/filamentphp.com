@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\PluginLicense;
 use App\Enums\PluginStatus;
+use App\Models\Contracts\Starrable;
 use Carbon\CarbonInterface;
 use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Builder;
@@ -18,7 +19,7 @@ use Orbit\Drivers\Markdown;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Plugin extends Model
+class Plugin extends Model implements Starrable
 {
     use Orbital;
 
@@ -41,6 +42,7 @@ class Plugin extends Model
         $table->string('author_slug');
         $table->json('categories')->nullable();
         $table->text('description')->nullable();
+        $table->string('docs_url')->nullable();
         $table->string('github_repository');
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
@@ -63,7 +65,23 @@ class Plugin extends Model
 
     public function getDocs(): ?string
     {
-        return $this->content;
+        if (filled($this->content)) {
+            return $this->content;
+        }
+
+        if (blank($this->docs_url)) {
+            return null;
+        }
+
+        try {
+            return cache()->remember(
+                "plugin:{$this->slug}:docs",
+                now()->addHour(),
+                fn (): string => file_get_contents($this->docs_url),
+            );
+        } catch (\Throwable) {
+            return null;
+        }
     }
 
     public function isFree(): bool
@@ -71,39 +89,32 @@ class Plugin extends Model
         return blank($this->anystack_id);
     }
 
-    public function getPurchaseUrl(): ?string
+    public function getCheckoutUrl(): ?string
     {
-        // TODO: Implement purchase url
-        return null;
+        return cache()->get($this->getCheckoutUrlCacheKey());
     }
 
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
-        // TODO: Implement price fetching
-        return $this->isFree() ? 'Free' : '$199';
+        if ($this->isFree()) {
+            return 'Free';
+        }
+
+        return cache()->get($this->getPriceCacheKey()) ?: 'Fetching...';
     }
 
     public function getStarsCount(): int
     {
-        // TODO: Implement stars count with cache
-        return 199;
+        return cache()->remember(
+            $this->getStarsCountCacheKey(),
+            now()->addDay(),
+            fn (): int => $this->stars()->count(),
+        );
     }
 
     public function getImageUrl(): string
     {
         return asset("images/content/plugins/{$this->image}");
-    }
-
-    public function getLatestActivityAt(): CarbonInterface
-    {
-        // TODO: Implement latest activity at
-        return now();
-    }
-
-    public function isActivelyMaintained(): bool
-    {
-        // TODO: implement
-        return true;
     }
 
     public function getCategories(): Collection
@@ -114,5 +125,37 @@ class Plugin extends Model
     public function isCompatibleWithLatestVersion(): bool
     {
         return in_array(3, $this->versions);
+    }
+
+    public function getAuthor(): Author
+    {
+        return $this->author;
+    }
+
+    public function cacheStarsCount(): void
+    {
+        cache()->forget($this->getStarsCountCacheKey());
+
+        $this->getStarsCount();
+    }
+
+    public function getStarsCountCacheKey(): string
+    {
+        return "plugin:{$this->slug}:stars_count";
+    }
+
+    public function getPriceCacheKey(): string
+    {
+        return "plugin:{$this->slug}:price";
+    }
+
+    public function getCheckoutUrlCacheKey(): string
+    {
+        return "plugin:{$this->slug}:checkout_url";
+    }
+
+    public function getDocsCacheKey(): string
+    {
+        return "plugin:{$this->slug}:docs";
     }
 }

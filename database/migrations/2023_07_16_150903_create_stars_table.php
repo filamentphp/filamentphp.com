@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('stars', function (Blueprint $table) {
             $table->id();
-            $table->morphs('starrable');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('ip');
+            $table->string('starrable_type');
+            $table->string('starrable_id');
             $table->timestamps();
+
+            $table->index(['starrable_type', 'starrable_id']);
         });
     }
 

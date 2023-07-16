@@ -11,6 +11,8 @@ class Star extends Model
 {
     use HasFactory;
 
+    protected $connection = 'mysql';
+
     public function starrable(): MorphTo
     {
         return $this->morphTo();

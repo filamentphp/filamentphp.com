@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -47,7 +48,24 @@ class Author extends Model
 
     public function getStarsCount(): int
     {
-        // TODO: Implement stars count with cache
-        return 199;
+        return cache()->remember(
+            $this->getStarsCountCacheKey(),
+            now()->addDay(),
+            fn (): int => Star::query()
+                ->where(fn (Builder $query) => $query->where('starrable_type', 'plugin')->whereIn('starrable_id', $this->plugins()->pluck('slug')))
+                ->count(),
+        );
+    }
+
+    public function cacheStarsCount(): void
+    {
+        cache()->forget($this->getStarsCountCacheKey());
+
+        $this->getStarsCount();
+    }
+
+    public function getStarsCountCacheKey(): string
+    {
+        return "author:{$this->slug}:stars_count";
     }
 }

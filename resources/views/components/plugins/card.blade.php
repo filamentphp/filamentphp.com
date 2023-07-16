@@ -3,7 +3,7 @@
     class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
 >
     <div
-        x-bind:style="'background-image: url(' + plugin.image + ')'"
+        x-bind:style="'background-image: url(' + plugin.image_url + ')'"
         class="aspect-[16/9] w-full bg-no-repeat bg-center bg-cover rounded-xl ring-1 ring-dawn-pink"
     ></div>
 
@@ -11,11 +11,8 @@
         <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Stats --}}
             <div class="flex flex-wrap items-center justify-start gap-4">
-                {{-- Github Stars --}}
-                <div
-                    x-show="plugin.stars_count"
-                    class="flex items-center gap-1.5"
-                >
+                {{-- Stars --}}
+                <div class="flex items-center gap-1.5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="text-peach-orange"
