@@ -164,7 +164,7 @@
                     >
                         <span>{{ number_format($pluginsCount) }}</span>
                         <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
                     <div class="pt-4 text-sm text-dolphin">Plugins</div>
@@ -190,7 +190,7 @@
                     >
                         <span>{{ number_format($starsCount) }}</span>
                         <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
                     <div class="pt-4 text-sm text-dolphin">Stars</div>
