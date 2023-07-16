@@ -46,12 +46,6 @@ Route::prefix('/docs')->group(function () {
     })->where('slug', '.*')->name('docs');
 });
 
-Route::name('packages.')->prefix('/packages')->group(function () {
-    Route::view('/app', 'packages.app')->name('app');
-    Route::view('/forms', 'packages.forms')->name('forms');
-    Route::view('/tables', 'packages.tables')->name('tables');
-});
-
 Route::feeds();
 
 Route::prefix('/plugins')->group(function () {
