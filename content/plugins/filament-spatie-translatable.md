@@ -1,6 +1,6 @@
 ---
 name: Spatie Translatable
-slug: spatie-translatable
+slug: filament-spatie-translatable
 author_slug: filament
 categories: [panel-builder, spatie]
 description: Filament support for `spatie/laravel-translatable`.

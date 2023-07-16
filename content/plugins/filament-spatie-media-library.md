@@ -1,6 +1,6 @@
 ---
 name: Spatie Media Library
-slug: spatie-media-library
+slug: filament-spatie-media-library
 author_slug: filament
 categories: [form-builder, form-field, spatie, table-builder, table-column]
 description: Filament support for `spatie/laravel-medialibrary`.

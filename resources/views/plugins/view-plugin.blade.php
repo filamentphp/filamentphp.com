@@ -76,6 +76,17 @@
 
                 <livewire:plugins.star-plugin :plugin="$plugin" />
 
+                @if (filled($plugin->url))
+                    {{-- Link --}}
+                    <a
+                        href="{{ $plugin->url }}"
+                        target="_blank"
+                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                    >
+                        Visit website
+                    </a>
+                @endif
+
                 @if ($plugin->isFree())
                     {{-- GitHub Link --}}
                     <a

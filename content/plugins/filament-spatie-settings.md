@@ -1,6 +1,6 @@
 ---
 name: Spatie Settings
-slug: spatie-settings
+slug: filament-spatie-settings
 author_slug: filament
 categories: [panel-builder, spatie]
 description: Filament support for `spatie/laravel-settings`.

@@ -1,6 +1,6 @@
 ---
 name: Spatie Tags
-slug: spatie-tags
+slug: filament-spatie-tags
 author_slug: filament
 categories: [form-builder, form-field, spatie, table-builder, table-column]
 description: Filament support for `spatie/laravel-tags`.
