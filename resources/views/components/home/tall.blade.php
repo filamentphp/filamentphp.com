@@ -1,17 +1,16 @@
 <div
     x-cloak
     x-data="{
-        download_counter_target: 1000000,
-        github_stars_counter_target: 7000,
+        downloadCounterTarget: 1000000,
+        githubStarsCounterTarget: 7000,
     }"
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div
         x-data="{
-            tall_stack_is_hovering: false,
-            download_counter: { val: reducedMotion ? download_counter_target : 1 },
-            github_stars_counter: {
-                val: reducedMotion ? github_stars_counter_target : 1,
+            downloadCounter: { val: reducedMotion ? downloadCounterTarget : 1 },
+            githubStarsCounter: {
+                val: reducedMotion ? githubStarsCounterTarget : 1,
             },
         }"
         x-init="
@@ -19,55 +18,10 @@
                 if (reducedMotion) return
                 gsap.timeline({
                     scrollTrigger: {
-                        trigger: $refs.header,
+                        trigger: $refs.speedometer,
                         start: 'top bottom-=200px',
                     },
                 })
-                    .fromTo(
-                        $refs.maximum,
-                        {
-                            autoAlpha: 0,
-                            y: -30,
-                            x: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            x: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                    )
-                    .fromTo(
-                        $refs.productivity,
-                        {
-                            autoAlpha: 0,
-                            y: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '>-0.6',
-                    )
-                    .fromTo(
-                        $refs.speed,
-                        {
-                            autoAlpha: 0,
-                            y: -30,
-                            x: 30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            x: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '>-0.6',
-                    )
                     .fromTo(
                         $refs.inner_circle,
                         {
@@ -206,9 +160,9 @@
                         '<0.3',
                     )
                     .to(
-                        download_counter,
+                        downloadCounter,
                         {
-                            val: download_counter_target,
+                            val: downloadCounterTarget,
                             duration: 1.5,
                             roundProps: 'val',
                         },
@@ -229,9 +183,9 @@
                         '<0.2',
                     )
                     .to(
-                        github_stars_counter,
+                        githubStarsCounter,
                         {
-                            val: github_stars_counter_target,
+                            val: githubStarsCounterTarget,
                             duration: 1.5,
                             roundProps: 'val',
                         },
@@ -268,30 +222,7 @@
             }
         "
     >
-        <div
-            x-ref="header"
-            class="text-center text-2xl sm:text-3xl"
-        >
-            <span
-                x-ref="maximum"
-                class="inline-block font-bold"
-            >
-                Maximum
-            </span>
-            <span
-                x-ref="productivity"
-                class="inline-block"
-            >
-                Productivity
-            </span>
-            <span
-                x-ref="speed"
-                class="inline-block"
-            >
-                Speed
-            </span>
-        </div>
-        <div class="relative pt-5 min-[630px]:grid">
+        <div x-ref="speedometer" class="relative min-[630px]:grid">
             {{-- Outer Circle --}}
             <div
                 x-ref="outer_circle"
@@ -350,7 +281,6 @@
                             <span class="text-2xl font-bold">T</span>
                             <span
                                 class="relative -left-0.5 text-lg transition motion-reduce:transition-none duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 ailwind CSS
                             </span>
@@ -392,7 +322,6 @@
                             <span class="text-2xl font-bold">A</span>
                             <span
                                 class="text-lg transition motion-reduce:transition-none  duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 lpine.js
                             </span>
@@ -427,7 +356,6 @@
                             <span class="text-2xl font-bold">L</span>
                             <span
                                 class="text-lg transition motion-reduce:transition-none  duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 aravel
                             </span>
@@ -497,7 +425,6 @@
                             <span class="text-2xl font-bold">L</span>
                             <span
                                 class="text-lg transition motion-reduce:transition-none  duration-500"
-                                :class="{ 'opacity-30 translate-x-1': tall_stack_is_hovering && !reducedMotion, }"
                             >
                                 ivewire
                             </span>
@@ -904,14 +831,12 @@
                 </div>
                 <div
                     x-ref="tall_stack_description"
-                    x-on:mouseenter="tall_stack_is_hovering = true"
-                    x-on:mouseleave="tall_stack_is_hovering = false"
                     class="relative z-30 w-full min-[600px]:w-auto min-[630px]:top-40 min-[630px]:pl-5 min-[630px]:pt-10 min-[700px]:top-0 min-[700px]:pl-0 min-[700px]:pr-36"
                 >
                     <div
                         class="flex justify-center min-[600px]:justify-start min-[700px]:justify-end"
                     >
-                        <div class="">
+                        <div>
                             <div class="text-2xl tracking-widest">
                                 Built with the
                             </div>
@@ -935,7 +860,7 @@
                     <div
                         class="pt-5 text-center text-dolphin min-[600px]:text-left min-[700px]:text-right"
                     >
-                        A set of frameworks that combine to form
+                        A set of frameworks that combine into
                         <br />
                         dynamic, maintainable, full-stack
                         <br />
@@ -1009,7 +934,7 @@
                     class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
                 >
                     <div
-                        x-text="'+' + download_counter.val"
+                        x-text="downloadCounter.val.toLocaleString('en-US') + '+'"
                         class="text-center font-roboto-mono text-2xl font-medium"
                     ></div>
                     <div
@@ -1047,7 +972,7 @@
                     class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
                 >
                     <div
-                        x-text="'+' + github_stars_counter.val"
+                        x-text="githubStarsCounter.val.toLocaleString('en-US') + '+'"
                         class="text-center font-roboto-mono text-2xl font-medium"
                     ></div>
                     <div

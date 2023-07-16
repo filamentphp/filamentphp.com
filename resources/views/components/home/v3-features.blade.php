@@ -251,7 +251,7 @@
                 x-ref="header_introducing"
                 class="font-medium text-dolphin"
             >
-                Introducing The
+                Introducing some
             </div>
             <div class="pt-2 text-2xl sm:text-3xl">
                 <span
@@ -308,7 +308,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/handpoint.webp') }}"
@@ -321,7 +321,7 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Actions, everywhere.
+                        Action modals, everywhere.
                     </div>
 
                     {{-- Description --}}
@@ -363,7 +363,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/report.webp') }}"
@@ -376,7 +376,7 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Powerful reporting.
+                        Powerful table reporting.
                     </div>
 
                     {{-- Description --}}
@@ -419,7 +419,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/cloud.webp') }}"
@@ -432,14 +432,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Tools to build SaaS applications.
+                        Multi-tenancy built for SaaS.
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Use the app framework (formerly the admin panel) to
-                        scaffold multi-tenant applications with subscription
-                        billing at record speed.
+                        Use the panel builder to build multi-tenant applications,
+                        with subscription billing, at record speed. Switch
+                        between tenants without leaving the panel.
                     </div>
                 </div>
             </div>
@@ -474,7 +474,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/featherpaper.webp') }}"
@@ -487,13 +487,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Beautiful read-only pages to review data.
+                        Beautiful read-only "View" pages.
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Embed infolists in your apps with flexible responsive
-                        layouts to present a wide range of data types.
+                        Embed infolists in your apps for flexible responsive
+                        layouts to render read-only data. Completely
+                        customizable with your own components.
                     </div>
                 </div>
             </div>
@@ -528,7 +529,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/infinity.webp') }}"
@@ -541,14 +542,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Unlimited app contexts.
+                        Unlimited panels in one app.
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Build multiple completely separate Filament-powered apps
+                        Build multiple completely separate Filament-powered panels
                         with their own resources, dashboards, custom pages and
-                        configuration. Ship an entire application in a Composer
+                        configuration. Ship an entire panel in a Composer
                         package with ease.
                     </div>
                 </div>
@@ -584,7 +585,7 @@
                 </div>
 
                 {{-- Feature Notes --}}
-                <div class="">
+                <div>
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/colorpalette.webp') }}"
@@ -597,15 +598,15 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Unlimited app contexts.
+                        Improved theme customization.
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Build multiple completely separate Filament-powered apps
-                        with their own resources, dashboards, custom pages and
-                        configuration. Ship an entire application in a Composer
-                        package with ease.
+                        Customize the color palette and typography of your
+                        panel without having to compile any Tailwind. Easily
+                        hook in to our suite of CSS classes to characterize
+                        a panel with your own branding - it's all yours.
                     </div>
                 </div>
             </div>

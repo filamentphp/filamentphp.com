@@ -144,7 +144,7 @@
                 class="peer hidden text-evening opacity-80 transition delay-75 duration-300 group-hover/packages:opacity-100 motion-reduce:transition-none lg:block"
             >
                 <div class="gsap-fadein flex items-center gap-2">
-                    <div class="">Packages</div>
+                    <div>Packages</div>
                     <div
                         class="transition duration-200 group-hover/packages:rotate-180 motion-reduce:transition-none"
                     >

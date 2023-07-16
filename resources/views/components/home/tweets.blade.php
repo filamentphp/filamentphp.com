@@ -114,10 +114,7 @@
             class="grid place-items-center pt-14"
         >
             {{-- Twitter Icon --}}
-            <div
-                x-ref="twitter_icon"
-                class=""
-            >
+            <div x-ref="twitter_icon">
                 <svg
                     width="40"
                     height="40"
@@ -334,9 +331,7 @@
                         Alex Justesen
                     </x-slot>
                 </x-home.testimonial>
-                <x-home.testimonial
-                    url="https://twitter.com/mrchrxs/status/1491159440250540033"
-                >
+                <x-home.testimonial>
                     Started my second
                     <strong>Filament</strong>
                     project a while ago. It's the first time in my career that I can

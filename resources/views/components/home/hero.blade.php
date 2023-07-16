@@ -295,11 +295,11 @@
                         x-ref="description"
                         class="text-xl font-medium leading-normal opacity-90 lg:text-2xl"
                     >
-                        Build web apps that are beautiful,
+                        A collection of beautiful full-stack
                         <br />
-                        powerful and intuitive, using the
+                        components. The perfect starting
                         <br />
-                        TALL stack.
+                        point for your next app.
                     </div>
 
                     {{-- Star --}}
@@ -370,7 +370,7 @@
                     <div
                         class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 will-change-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none"
                     >
-                        <div class="">Get Started</div>
+                        <div>Get Started</div>
                         <div
                             class="transition duration-300 will-change-transform group-hover:translate-x-1 motion-reduce:transition-none"
                         >
@@ -405,7 +405,7 @@
                     <div
                         class="flex items-center justify-center gap-3 rounded-br-3xl rounded-tl-3xl bg-butter px-9 py-4 transition duration-200 will-change-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
                     >
-                        <div class="">Join Discord</div>
+                        <div>Join Discord</div>
                         <div
                             class="transition duration-300 will-change-transform group-hover:scale-105 motion-reduce:transition-none"
                         >

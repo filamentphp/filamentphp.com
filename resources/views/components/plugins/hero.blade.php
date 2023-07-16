@@ -162,7 +162,7 @@
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span class="">315</span>
+                        <span>315</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
@@ -175,7 +175,7 @@
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span class="">46</span>
+                        <span>46</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
@@ -188,7 +188,7 @@
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span class="">2M</span>
+                        <span>2M</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>

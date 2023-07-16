@@ -155,16 +155,16 @@
                     {{-- Batteries Included --}}
                     <div class="text-2xl md:text-3xl">
                         <span class="font-bold">Batteries</span>
-                        <span class="">Included</span>
+                        <span>Included</span>
                     </div>
                 </div>
 
                 {{-- Message --}}
                 <div
                     x-ref="message"
-                    class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-lg text-transparent brightness-150"
+                    class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-transparent brightness-150 sm:text-lg"
                 >
-                    Stop rebuilding the same UI over and over and over and over...
+                    Stop rebuilding the same UI over and over and over and over and over
                 </div>
 
                 {{-- Plugins List --}}
@@ -219,8 +219,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Fully featured, simply intuitive and insanely
-                                attractive.
+                                Build a Laravel admin panel, customer-facing app, SaaS, or anything you can imagine!
                             </div>
                         </div>
                     </a>
@@ -269,8 +268,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Craft beautiful, optimized, and interactive
-                                datatables for any situation.
+                                Craft beautiful, optimized, and interactive Livewire-powered datatables for any situation.
                             </div>
                         </div>
                     </a>
@@ -319,8 +317,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Easily build stunning forms with over 25
-                                components out of the box.
+                                Easily build stunning Livewire-powered forms with over 25 components out of the box.
                             </div>
                         </div>
                     </a>
@@ -378,7 +375,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Effortless solution to send notifications.
+                                Notify your users of important events by delivering real-time messages using Livewire.
                             </div>
                         </div>
                     </a>
@@ -407,7 +404,7 @@
                         </div>
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
-                                <div class="text-base font-medium">Actions</div>
+                                <div class="text-base font-medium">Action Modals</div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
                                 >
@@ -434,7 +431,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Open modals and slide-overs from any button.
+                                Open interactive modals and slide-overs - a great way to keep the user in the flow of the application.
                             </div>
                         </div>
                     </a>
@@ -472,7 +469,7 @@
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
-                                    Info Lists
+                                    Infolists
                                 </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
@@ -500,8 +497,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Summarize your data into beautiful lists and
-                                report cards.
+                                Display read-only information to users about a particular record, with a fully flexible layout.
                             </div>
                         </div>
                     </a>
@@ -535,7 +531,7 @@
                         </div>
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
-                                <div class="text-base font-medium">Widgets</div>
+                                <div class="text-base font-medium">Dashboard Widgets</div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
                                 >
@@ -562,8 +558,7 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Powerful cards in your pages with a dozen of
-                                ready-to-use templates.
+                                Build a dashboard for your application, complete with real-time charts and stats.
                             </div>
                         </div>
                     </a>

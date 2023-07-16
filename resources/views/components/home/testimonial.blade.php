@@ -1,5 +1,5 @@
 <a
-    href="{{ $url }}"
+    @if ($url ?? null) href="{{ $url }}" @endif
     x-data="{}"
     x-ref="testimonial"
     x-init="
@@ -38,7 +38,7 @@
             class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:-translate-y-2 group-hover/testimonial:translate-x-2 group-hover/testimonial:scale-105 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
         >
             {{-- Quote --}}
-            <blockquote class="">"{{ $slot }}"</blockquote>
+            <blockquote>"{{ $slot }}"</blockquote>
             {{-- Blue Quote Icon --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/blue-quote.svg') }}"

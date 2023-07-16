@@ -372,14 +372,13 @@
             x-ref="take_off"
             class="pt-3 text-3xl font-extrabold"
         >
-            Ready To Take Off?
+            Ready to take off?
         </div>
         <div
             x-ref="take_off_message"
             class="mx-auto max-w-md pt-2 text-dolphin"
         >
-            Give Filament a try and we’ll promise you’ll be amazed in the first
-            few minutes.
+            Give Filament a try, and we bet that you’ll be amazed in the first few minutes.
         </div>
 
         {{-- Get Started Link --}}

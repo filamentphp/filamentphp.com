@@ -617,7 +617,6 @@
                     <template
                         x-for="plugin in filteredPlugins"
                         :key="plugin.id"
-                        class=""
                     >
                         <x-plugins.card />
                     </template>

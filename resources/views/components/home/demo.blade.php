@@ -49,16 +49,15 @@
         <div x-ref="header">
             {{-- Live Demo --}}
             <div class="text-3xl">
-                <span class="">Live</span>
-                <span class="font-bold">Demo</span>
+                <span>Try our</span>
+                <span class="font-bold">Live Demo</span>
             </div>
 
             {{-- Description --}}
             <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-dolphin">
-                We’ve put together an extensive demo app that showcase all
-                Filament’s features.
+                We’ve put together a feature-rich demo application to showcase many features.
                 <br />
-                It’s also open-source!
+                It’s completely open-source!
             </div>
 
             {{-- Links --}}
@@ -67,7 +66,7 @@
                     href="https://demo.filamentphp.com"
                     class="group/button flex items-center justify-center gap-3 rounded-xl bg-butter px-7 py-3 text-white transition duration-200 motion-reduce:transition-none"
                 >
-                    <div class="">Visit The Demo</div>
+                    <div>Visit the Demo</div>
                     <div
                         class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
                     >
@@ -92,7 +91,7 @@
                     href="https://github.com/filamentphp/demo"
                     class="flex items-center justify-center gap-3 rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-300 hover:bg-dawn-pink/70 motion-reduce:transition-none"
                 >
-                    <div class="">Source Code</div>
+                    <div>Source Code</div>
                 </a>
             </div>
         </div>

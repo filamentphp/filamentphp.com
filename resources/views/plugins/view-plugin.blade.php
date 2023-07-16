@@ -73,7 +73,7 @@
                             />
                         </g>
                     </svg>
-                    <div class="">Support</div>
+                    <div>Support</div>
                 </a>
 
                 {{-- Share --}}
@@ -94,7 +94,7 @@
                             d="m2 8l6 2M6 4l2 3m3-.437l3.7-3.625c1.46-1.43 4.063-1.199 5.815.517M18.135 12l2.908-2.848c.59-.578.902-1.338.95-2.152M15 15.587L10.965 20c-1.392 1.524-3.876 1.277-5.548-.552c-1.67-1.828-1.897-4.546-.504-6.07L6.173 12"
                         />
                     </svg>
-                    <div class="">Share</div>
+                    <div>Share</div>
                 </div>
 
                 @if ($plugin['price'] === 'Free')
@@ -130,7 +130,7 @@
             {{-- Left Side --}}
             <div class="w-full">
                 {{-- Name & Description --}}
-                <div class="">
+                <div>
                     <div class="text-3xl font-extrabold">
                         {{ $plugin['name'] }}
                     </div>
@@ -280,7 +280,7 @@
                             </svg>
                         </div>
 
-                        <div class="">
+                        <div>
                             <div class="text-xs text-dolphin/80">
                                 Dark theme support
                             </div>
@@ -318,7 +318,7 @@
                             </svg>
                         </div>
 
-                        <div class="">
+                        <div>
                             <div class="text-xs text-dolphin/80">
                                 Multi language support
                             </div>
@@ -369,7 +369,7 @@
                             </div>
                         @endif
 
-                        <div class="">
+                        <div>
                             <div class="font-medium">
                                 {{ $plugin['is_compatible_with_latest_version'] ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
                             </div>
@@ -421,7 +421,7 @@
                             </div>
                         @endif
 
-                        <div class="">
+                        <div>
                             <div class="font-medium">
                                 {{ $plugin['is_actively_maintained'] === true ? 'Is actively maintained' : 'Is not actively maintained' }}
                             </div>
@@ -624,7 +624,7 @@
                 </div>
 
                 {{-- More From This Creator --}}
-                <div class="">
+                <div>
                     <div class="text-lg font-extrabold">
                         More from this creator
                     </div>
@@ -640,7 +640,7 @@
                                     class="aspect-[3/2] w-36 min-w-[9rem] shrink-0 rounded-xl ring-1 ring-dawn-pink"
                                 />
                                 {{-- Detail --}}
-                                <div class="">
+                                <div>
                                     {{-- Name --}}
                                     <div class="line-clamp-1 font-semibold">
                                         {{ $creator_plugin['name'] }}

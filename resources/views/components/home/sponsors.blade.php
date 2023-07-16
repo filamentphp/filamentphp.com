@@ -446,8 +446,8 @@
                 <div
                     class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 >
-                    <div class="">Sponsor Filament</div>
-                    <div class="">
+                    <div>Sponsor Filament</div>
+                    <div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
