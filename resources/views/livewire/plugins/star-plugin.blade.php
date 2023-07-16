@@ -15,6 +15,9 @@
             />
         </svg>
 
-        <div>{{ $this->isStarred() ? 'Unstar' : 'Star' }} {{ $plugin->getStarsCount() }}</div>
+        <div>
+            {{ $this->isStarred() ? 'Unstar' : 'Star' }}
+            {{ $plugin->getStarsCount() }}
+        </div>
     </button>
 </div>

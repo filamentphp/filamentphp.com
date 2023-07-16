@@ -2,9 +2,7 @@
     'heading' => null,
 ])
 
-<x-layouts.base
-    {{ $attributes }}
->
+<x-layouts.base {{ $attributes }}>
     <x-nav />
 
     <button

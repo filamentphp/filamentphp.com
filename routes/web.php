@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +32,7 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/navigation', '/docs/app/navigation');
     Route::redirect('/plugin-development', '/docs/app/plugin-development');
 
-    Route::get('/{slug?}', function (?string $slug = null): string {
+    Route::get('/{slug?}', function (string $slug = null): string {
         $slug = trim($slug, '/');
 
         $filePath = public_path("docs/{$slug}/index.html");

@@ -54,8 +54,11 @@
             </div>
 
             {{-- Description --}}
-            <div class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-dolphin">
-                We’ve put together a feature-rich demo application to showcase many features.
+            <div
+                class="min-w-[18rem] max-w-[22rem] pt-7 font-medium text-dolphin"
+            >
+                We’ve put together a feature-rich demo application to showcase
+                many features.
                 <br />
                 It’s completely open-source!
             </div>

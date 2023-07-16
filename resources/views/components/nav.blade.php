@@ -24,23 +24,22 @@
                 )
 
             if ($refs.nav.querySelectorAll('.gsap-popout').length) {
-                navTimeline
-                    .fromTo(
-                        $refs.nav.querySelectorAll('.gsap-popout'),
-                        {
-                            autoAlpha: 0,
-                            y: -30,
-                            rotate: 360,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            rotate: -45,
-                            duration: .6,
-                            ease: 'back.out(1.5)',
-                        },
-                        '<0.2',
-                    )
+                navTimeline.fromTo(
+                    $refs.nav.querySelectorAll('.gsap-popout'),
+                    {
+                        autoAlpha: 0,
+                        y: -30,
+                        rotate: 360,
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        rotate: -45,
+                        duration: 0.6,
+                        ease: 'back.out(1.5)',
+                    },
+                    '<0.2',
+                )
             }
 
             navTimeline.play()
@@ -64,7 +63,7 @@
         x-on:click.away="$store.sidebar.isOpen = false"
         class="lg:hidden"
     >
-        <x-heroicon-o-menu class="h-6 w-6" />
+        <x-heroicon-o-bars-3 class="h-6 w-6" />
 
         <span class="sr-only">Toggle Menu</span>
     </button>
@@ -647,7 +646,7 @@
         <a
             href="{{ route('plugins') }}"
             @class([
-                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('plugins*'),
                 'font-bold' => request()->routeIs('plugins*'),
             ])
@@ -656,9 +655,11 @@
 
             @if (request()->routeIs('plugins*'))
                 <div
-                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
                 >
-                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                    <div
+                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
+                    ></div>
                 </div>
             @endif
         </a>
@@ -666,7 +667,7 @@
         <a
             href="#"
             @class([
-                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('community*'),
                 'font-bold' => request()->routeIs('community*'),
             ])
@@ -675,9 +676,11 @@
 
             @if (request()->routeIs('community*'))
                 <div
-                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
                 >
-                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                    <div
+                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
+                    ></div>
                 </div>
             @endif
         </a>
@@ -685,7 +688,7 @@
         <a
             href="{{ route('consulting') }}"
             @class([
-                'relative hidden group/nav-link text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('consulting*'),
                 'font-bold' => request()->routeIs('consulting*'),
             ])
@@ -694,9 +697,11 @@
 
             @if (request()->routeIs('consulting*'))
                 <div
-                    class="absolute -bottom-4 right-1/2 translate-x-1/2 gsap-popout"
+                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
                 >
-                    <div class="h-2 w-2 group-hover/nav-link:rotate-90 bg-butter transition duration-300 motion-reduce:transition-none"></div>
+                    <div
+                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 motion-reduce:transition-none"
+                    ></div>
                 </div>
             @endif
         </a>

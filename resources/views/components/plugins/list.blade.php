@@ -63,8 +63,10 @@
 
             // Show plugins that are in the selected categories
             if (this.selectedCategories.size > 0) {
-                filterResult = filterResult.filter(
-                    (plugin) => plugin.categories.some((pluginCategory) => this.selectedCategories.has(pluginCategory)),
+                filterResult = filterResult.filter((plugin) =>
+                    plugin.categories.some((pluginCategory) =>
+                        this.selectedCategories.has(pluginCategory),
+                    ),
                 )
             }
 
@@ -76,7 +78,9 @@
             // Show plugins that are in the selected features
             filterResult = filterResult.filter(
                 (plugin) =>
-                    (this.features.dark_theme ? plugin.features.dark_theme : true) &&
+                    (this.features.dark_theme
+                        ? plugin.features.dark_theme
+                        : true) &&
                     (this.features.translations
                         ? plugin.features.translations
                         : true),

@@ -26,7 +26,7 @@
 
         {{-- Category Name --}}
         <div
-            class="text-sm transition duration-200 ease-out truncate"
+            class="truncate text-sm transition duration-200 ease-out"
             :class="{
             'text-salmon': selectedCategories.has('{{ $slug }}'),
             'text-hurricane': !selectedCategories.has('{{ $slug }}'),

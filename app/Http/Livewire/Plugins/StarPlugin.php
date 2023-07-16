@@ -4,9 +4,7 @@ namespace App\Http\Livewire\Plugins;
 
 use App\Actions\Star;
 use App\Actions\Unstar;
-use App\Models\Contracts\Starrable;
 use App\Models\Plugin;
-use Filament\Facades\Filament;
 use Livewire\Component;
 
 class StarPlugin extends Component

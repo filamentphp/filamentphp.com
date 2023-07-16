@@ -29,7 +29,7 @@ class FeedController extends Controller
                     'name' => $plugin->getAuthorName(),
                 ],
                 'created_at' => $plugin->created_at->toDateTimeString(),
-                'updated_at' => $plugin->updated_at->toDateTimeString()
+                'updated_at' => $plugin->updated_at->toDateTimeString(),
             ])
             ->all();
 

@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "prettier": "npx prettier --write ."
     },
     "devDependencies": {
         "@formkit/auto-animate": "^0.7.0",

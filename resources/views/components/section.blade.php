@@ -2,7 +2,9 @@
     'doodles' => null,
 ])
 
-<div {{ $attributes->class(['relative max-w-8xl px-8 py-16 space-y-8 mx-auto']) }}>
+<div
+    {{ $attributes->class(['relative mx-auto max-w-8xl space-y-8 px-8 py-16']) }}
+>
     {{ $slot }}
 
     {{ $doodles }}

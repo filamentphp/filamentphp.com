@@ -4,7 +4,7 @@
 >
     <div
         x-bind:style="'background-image: url(' + plugin.image_url + ')'"
-        class="aspect-[16/9] w-full bg-no-repeat bg-center bg-cover rounded-xl ring-1 ring-dawn-pink"
+        class="aspect-[16/9] w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
     ></div>
 
     <div class="px-1.5 pb-1 pt-2.5">
@@ -118,7 +118,7 @@
                     <template x-if="plugin.author.avatar">
                         <div
                             x-bind:style="'background-image: url(' + plugin.author.avatar + ')'"
-                            class="aspect-square bg-no-repeat bg-center bg-cover h-full w-full"
+                            class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
                         ></div>
                     </template>
                     <template x-if="! plugin.author.avatar">

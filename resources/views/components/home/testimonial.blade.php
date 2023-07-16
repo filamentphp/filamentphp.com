@@ -29,7 +29,7 @@
         }
     "
     target="_blank"
-    class="group/testimonial inline-block mt-8 w-full"
+    class="group/testimonial mt-8 inline-block w-full"
 >
     <div
         class="testimonial-component text-sm transition duration-300 motion-reduce:transition-none"

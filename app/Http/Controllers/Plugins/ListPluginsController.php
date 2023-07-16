@@ -7,8 +7,6 @@ use App\Models\Author;
 use App\Models\Plugin;
 use App\Models\PluginCategory;
 use App\Models\Star;
-use App\Models\Trick;
-use App\Models\User;
 
 class ListPluginsController extends Controller
 {

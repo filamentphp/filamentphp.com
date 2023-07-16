@@ -2,11 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Actions\FetchLinkThumbnails;
-use App\Actions\FetchPluginDataFromGitHub;
-use App\Actions\FetchPluginDataFromPackagist;
 use App\Actions\FetchPluginDataFromAnystack;
-use App\Actions\FetchPluginThumbnails;
 use Illuminate\Console\Command;
 
 class FetchRemoteData extends Command
@@ -17,8 +13,7 @@ class FetchRemoteData extends Command
 
     public function handle(
         FetchPluginDataFromAnystack $fetchPluginDataFromAnystack,
-    ): int
-    {
+    ): int {
         $fetchPluginDataFromAnystack();
 
         return 0;

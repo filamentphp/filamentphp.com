@@ -4,14 +4,14 @@
     'url',
 ])
 
-<div class="grid gap-y-4 justify-items-center">
+<div class="grid justify-items-center gap-y-4">
     <img
         src="{{ $avatar }}"
         alt="{{ $name }}"
-        class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+        class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
     />
 
-    <h3 class="font-medium text-white text-2xl">
+    <h3 class="text-2xl font-medium text-white">
         {{ $name }}
     </h3>
 
