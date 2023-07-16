@@ -12,20 +12,6 @@ class FetchPluginDataFromAnystack
 {
     public function __invoke(): void
     {
-        /**
-         * Please do not judge this code. There's no error handling, retries,
-         * knowledge of rate limiting, or anything else. It's a non-critical
-         * service to fetch optional data for website content. If something
-         * bad happens, it *doesn't really matter*. This code gets run
-         * every 15 minutes, and we randomise the order of the query
-         * results to ensure that all records get a fair chance at
-         * getting successfully updated.
-         *
-         * That being said, if you're looking for something to do, you
-         * can clean this all up and handle the errors properly. But
-         * it really isn't vital to this app servicing its users :)
-         */
-
         $anystack = Http::withToken(config('services.anystack.token'));
 
         try {
@@ -44,14 +30,9 @@ class FetchPluginDataFromAnystack
 
             Plugin::query()
                 ->inRandomOrder()
-                ->where('is_paid', true)
                 ->whereNotNull('anystack_id')
                 ->get()
                 ->each(function (Plugin $plugin) use ($advertisedProducts): void {
-                    if (blank($plugin->anystack_id)) {
-                        return;
-                    }
-
                     if (! $advertisedProducts->has($plugin->anystack_id)) {
                         cache()->forget($plugin->getCheckoutUrlCacheKey());
                         cache()->forget($plugin->getPriceCacheKey());

@@ -162,7 +162,7 @@
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span>315</span>
+                        <span>{{ number_format($pluginsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
@@ -170,30 +170,30 @@
                     <div class="pt-4 text-sm text-dolphin">Plugins</div>
                 </div>
 
-                {{-- Creators --}}
+                {{-- Authors --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span>46</span>
+                        <span>{{ number_format($authorsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Creators</div>
+                    <div class="pt-4 text-sm text-dolphin">Authors</div>
                 </div>
 
-                {{-- Downloads --}}
+                {{-- Stars --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
                         class="relative inline text-3xl font-black text-evening"
                     >
-                        <span>2M</span>
+                        <span>{{ number_format($starsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Downloads</div>
+                    <div class="pt-4 text-sm text-dolphin">Stars</div>
                 </div>
             </div>
 

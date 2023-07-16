@@ -41,129 +41,15 @@
     x-data="{
         searchEngine: null,
         search: '',
-        selectedCategory: new Set(),
+        selectedCategories: new Set(),
         selectedVersion: '3',
         selectedPrice: 'All',
         features: {
-            dark_mode: false,
-            multi_language: false,
+            dark_theme: false,
+            translations: false,
         },
 
-        plugins: [
-            {
-                id: 1,
-                name: 'Access and Menu Management',
-                slug: 'access-and-menu-management',
-                price: 'Free',
-                github_stars: 54,
-                view_count: 3719,
-                thumbnail: '',
-                description: 'Modular support based on nwidart/laravel-modules.',
-                author: {
-                    name: 'Alan Lam',
-                    avatar: null,
-                },
-                features: {
-                    dark_mode: false,
-                    multi_language: false,
-                },
-                supported_versions: ['1', '2'],
-                categories: ['Editor', 'Authentication'],
-                latest_activity_at: '2023-04-07T00:21:45.148Z',
-            },
-            {
-                id: 2,
-                name: 'Overlook',
-                slug: 'overlook',
-                price: '$199',
-                github_stars: 145,
-                view_count: 54001,
-                thumbnail: '',
-                description:
-                    'Widget to show an overview of resources on the dashboard.',
-                author: {
-                    name: 'Adam Weston',
-                    avatar: 'https://avatars.githubusercontent.com/u/3596800?v=4',
-                },
-                features: {
-                    dark_mode: true,
-                    multi_language: true,
-                },
-                supported_versions: ['2', '3'],
-                categories: ['Admin Panel', 'Widget'],
-                latest_activity_at: '2022-03-08T07:52:26+00:00',
-            },
-            {
-                id: 3,
-                name: 'Access and Menu Management',
-                slug: 'access-and-menu-management',
-                price: 'Free',
-                github_stars: 9,
-                view_count: 8901,
-                thumbnail: '',
-                description:
-                    'This is an authentication plugin provides a way to manage users, roles, permissions, and Menu in a Filament Admin application.',
-                author: {
-                    name: 'alan lam',
-                    avatar: '',
-                },
-                features: {
-                    dark_mode: true,
-                    multi_language: false,
-                },
-                supported_versions: ['2'],
-                categories: [
-                    'Admin Panel',
-                    'Authentication',
-                    'Authorization',
-                    'Spatie',
-                ],
-                latest_activity_at: '2022-03-08T07:52:26+00:00',
-            },
-            {
-                id: 4,
-                name: 'User & Role Resource Management',
-                slug: 'user-role-resource-management',
-                price: 'Free',
-                github_stars: 71,
-                view_count: 33461,
-                thumbnail: '',
-                description: 'Widget for Dashboard to show recent registrations',
-                author: {
-                    name: 'Craig Smith',
-                    avatar: 'https://avatars.githubusercontent.com/u/952595?v=4',
-                },
-                features: {
-                    dark_mode: false,
-                    multi_language: true,
-                },
-                supported_versions: ['2', '3'],
-                categories: ['Admin Panel', 'Spatie', 'Widget', 'Authentication'],
-                latest_activity_at: '2022-03-05T07:52:26+00:00',
-            },
-            {
-                id: 5,
-                name: 'Toggle Icon Column',
-                slug: 'toggle-icon-column',
-                price: '$99',
-                github_stars: null,
-                view_count: 8792,
-                thumbnail: '',
-                description:
-                    'Toggle Icon Column combines Filaments interactive Toggle Column with its Icon Column to give developers another way to interact with their tables.',
-                author: {
-                    name: 'Kenneth Sese',
-                    avatar: 'https://avatars.githubusercontent.com/u/952595?v=4',
-                },
-                features: {
-                    dark_mode: true,
-                    multi_language: true,
-                },
-                supported_versions: ['1', '2', '3'],
-                categories: ['Admin Panel', 'Column', 'Table Builder'],
-                latest_activity_at: '2022-03-05T07:52:26+00:00',
-            },
-        ],
+        plugins: @js($plugins),
 
         currentPage: 1,
         perPage: 10,
@@ -176,30 +62,23 @@
             let filterResult = this.plugins
 
             // Show plugins that are in the selected categories
-            filterResult = filterResult.filter(
-                (plugin) =>
-                    this.selectedCategory.size === 0 ||
-                    this.selectedCategory.has(plugin.categories[0]),
-            )
-
-            // Show plugins that are in the selected categories
-            filterResult = filterResult.filter(
-                (plugin) =>
-                    this.selectedCategory.size === 0 ||
-                    this.selectedCategory.has(plugin.categories[0]),
-            )
+            if (this.selectedCategories.size > 0) {
+                filterResult = filterResult.filter(
+                    (plugin) => plugin.categories.some((pluginCategory) => this.selectedCategories.has(pluginCategory)),
+                )
+            }
 
             // Show plugins that are in the selected version
             filterResult = filterResult.filter((plugin) =>
-                plugin.supported_versions.includes(this.selectedVersion),
+                plugin.versions.includes(+this.selectedVersion),
             )
 
             // Show plugins that are in the selected features
             filterResult = filterResult.filter(
                 (plugin) =>
-                    (this.features.dark_mode ? plugin.features.dark_mode : true) &&
-                    (this.features.multi_language
-                        ? plugin.features.multi_language
+                    (this.features.dark_theme ? plugin.features.dark_theme : true) &&
+                    (this.features.translations
+                        ? plugin.features.translations
                         : true),
             )
 
@@ -391,11 +270,11 @@
 
         {{-- Dark Mode Toggle --}}
         <div
-            x-on:click="features.dark_mode = ! features.dark_mode"
+            x-on:click="features.dark_theme = ! features.dark_theme"
             class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
-                'bg-fair-pink': features.dark_mode,
-                'bg-white': ! features.dark_mode,
+                'bg-fair-pink': features.dark_theme,
+                'bg-white': ! features.dark_theme,
             }"
         >
             <div class="text-salmon">
@@ -418,8 +297,8 @@
             <div
                 class="text-sm transition duration-300"
                 :class="{
-                    'text-salmon': features.dark_mode,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.dark_mode,
+                    'text-salmon': features.dark_theme,
+                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.dark_theme,
                 }"
             >
                 Dark mode
@@ -433,11 +312,11 @@
 
         {{-- Multi Language Toggle --}}
         <div
-            x-on:click="features.multi_language = ! features.multi_language"
+            x-on:click="features.translations = ! features.translations"
             class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
-                'bg-fair-pink': features.multi_language,
-                'bg-white': ! features.multi_language,
+                'bg-fair-pink': features.translations,
+                'bg-white': ! features.translations,
             }"
         >
             <div class="text-salmon">
@@ -462,8 +341,8 @@
             <div
                 class="text-sm transition duration-300"
                 :class="{
-                    'text-salmon': features.multi_language,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.multi_language,
+                    'text-salmon': features.translations,
+                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.translations,
                 }"
             >
                 Multi language
@@ -476,96 +355,16 @@
         <div class="hidden w-full max-w-[15rem] sm:block">
             <div class="font-semibold">Categories</div>
             <div class="pt-5">
-                <x-plugins.category>
-                    <x-slot name="category">Action</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.action />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Admin Panel</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.admin-panel />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Analytics</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.analytics />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Authentication</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.authentication />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Authorization</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.authorization />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Column</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.column />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Developer Tool</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.developer-tool />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Editor</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.editor />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Field</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.field />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Form Builder</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.form-builder />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Kit</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.kit />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Layout</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.layout />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Spatie</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.spatie />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Table Builder</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.table-builder />
-                    </x-slot>
-                </x-plugins.category>
-                <x-plugins.category>
-                    <x-slot name="category">Widget</x-slot>
-                    <x-slot name="icon">
-                        <x-plugins.categories.widget />
-                    </x-slot>
-                </x-plugins.category>
+                @foreach ($categories as $category)
+                    <x-plugins.category
+                        :name="$category->name"
+                        :slug="$category->slug"
+                    >
+                        <x-slot name="icon">
+                            {!! $category->getIcon() !!}
+                        </x-slot>
+                    </x-plugins.category>
+                @endforeach
             </div>
         </div>
 
@@ -621,8 +420,8 @@
                         <x-plugins.card />
                     </template>
                 </div>
-                {{-- No Results Message --}}
 
+                {{-- No Results Message --}}
                 <div
                     x-show="! filteredPlugins.length"
                     x-transition:enter="ease-out"

@@ -2,20 +2,17 @@
     x-bind:href="'/plugins/' + plugin.slug"
     class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
 >
-    <img
-        src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-        x-bind:alt="plugin.name"
-        class="aspect-[3/2] w-full rounded-xl ring-1 ring-dawn-pink"
-    />
+    <div
+        x-bind:style="'background-image: url(' + plugin.image_url + ')'"
+        class="aspect-[16/9] w-full bg-no-repeat bg-center bg-cover rounded-xl ring-1 ring-dawn-pink"
+    ></div>
+
     <div class="px-1.5 pb-1 pt-2.5">
         <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Stats --}}
             <div class="flex flex-wrap items-center justify-start gap-4">
-                {{-- Github Stars --}}
-                <div
-                    x-show="plugin.github_stars"
-                    class="flex items-center gap-1.5"
-                >
+                {{-- Stars --}}
+                <div class="flex items-center gap-1.5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="text-peach-orange"
@@ -30,33 +27,7 @@
                     </svg>
                     <div
                         class="pt-0.5 text-xs font-medium text-dolphin"
-                        x-text="plugin.github_stars"
-                    ></div>
-                </div>
-
-                {{-- View Count --}}
-                <div class="flex items-center gap-1.5">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="text-dolphin/70"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                    >
-                        <g fill="currentColor">
-                            <path
-                                d="M9.75 12a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0Z"
-                            />
-                            <path
-                                fill-rule="evenodd"
-                                d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20c4.182 0 7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4C7.818 4 4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12Zm10-3.75a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Z"
-                                clip-rule="evenodd"
-                            />
-                        </g>
-                    </svg>
-                    <div
-                        class="pt-0.5 text-xs font-medium text-dolphin"
-                        x-text="plugin.view_count"
+                        x-text="plugin.stars_count"
                     ></div>
                 </div>
             </div>
@@ -66,14 +37,14 @@
                 {{-- Dark Mode --}}
                 <div
                     x-data="{
-                        tooltip: plugin.features.dark_mode
+                        tooltip: plugin.features.dark_theme
                             ? 'Supports dark mode'
                             : 'Does not support dark mode',
                     }"
                     x-tooltip.animation.shift-away-subtle.theme.material="tooltip"
                     class="grid h-6 w-6 place-items-center rounded-full bg-fair-pink text-salmon"
                     :class="{
-                        'opacity-50 grayscale': ! plugin.features.dark_mode,
+                        'opacity-50 grayscale': ! plugin.features.dark_theme,
                     }"
                 >
                     <svg
@@ -96,14 +67,14 @@
                 {{-- Multi Language --}}
                 <div
                     x-data="{
-                        tooltip: plugin.features.multi_language
+                        tooltip: plugin.features.translations
                             ? 'Supports multi language'
                             : 'Does not support multi language',
                     }"
                     x-tooltip.animation.shift-away-subtle.theme.material="tooltip"
                     class="grid h-6 w-6 place-items-center rounded-full bg-fair-pink text-salmon"
                     :class="{
-                        'opacity-50 grayscale': ! plugin.features.multi_language,
+                        'opacity-50 grayscale': ! plugin.features.translations,
                     }"
                 >
                     <svg
@@ -145,11 +116,10 @@
             <div class="flex items-center gap-3">
                 <div class="h-9 w-9 shrink-0 overflow-hidden rounded-full">
                     <template x-if="plugin.author.avatar">
-                        <img
-                            x-bind:src="plugin.author.avatar"
-                            alt="plugin.author.name"
-                            class="aspect-square h-full w-full"
-                        />
+                        <div
+                            x-bind:style="'background-image: url(' + plugin.author.avatar + ')'"
+                            class="aspect-square bg-no-repeat bg-center bg-cover h-full w-full"
+                        ></div>
                     </template>
                     <template x-if="! plugin.author.avatar">
                         <div
@@ -176,7 +146,7 @@
                     </template>
                 </div>
                 <div class="space-y-0.5 text-xs">
-                    <div class="text-dolphin">Creator</div>
+                    <div class="text-dolphin">Author</div>
                     <div
                         class="font-semibold capitalize"
                         x-text="plugin.author.name"

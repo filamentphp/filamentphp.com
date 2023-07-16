@@ -16,16 +16,10 @@ class FetchRemoteData extends Command
     protected $description = 'Fetch optional data from APIs';
 
     public function handle(
-        FetchLinkThumbnails $fetchLinkThumbnails,
-        FetchPluginDataFromGitHub $fetchPluginDataFromGitHub,
         FetchPluginDataFromAnystack $fetchPluginDataFromAnystack,
-        FetchPluginThumbnails $fetchPluginThumbnails,
     ): int
     {
-        $fetchLinkThumbnails();
-        $fetchPluginDataFromGitHub();
         $fetchPluginDataFromAnystack();
-        $fetchPluginThumbnails();
 
         return 0;
     }
