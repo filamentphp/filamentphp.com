@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 if (config('app.env') === 'beta') {
-    Route::redirect('/', '/docs');
+    Route::redirect('/', '/docs')->name('home');
 } else {
     Route::view('/', 'home')->name('home');
 }
