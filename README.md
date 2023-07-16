@@ -1,4 +1,4 @@
-The source code for the `filamentphp.com` website.
+The source code for the [Filament](https://filamentphp.com) website.
 
 ## Contributing
 
