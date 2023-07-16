@@ -1,10 +1,3 @@
-@php
-    $formatter = new \NumberFormatter(
-        app()->getLocale(),
-        \NumberFormatter::PADDING_POSITION,
-    );
-@endphp
-
 <x-layouts.app>
     <section
         x-cloak
@@ -57,7 +50,8 @@
             >
                 {{-- Discord --}}
                 <a
-                    href="{{ $plugin['discord_link'] }}"
+                    href="{{ $plugin->discord_url }}"
+                    target="_blank"
                     class="flex select-none items-center gap-2.5 rounded-lg bg-fair-pink bg-white py-2.5 pl-5 pr-6 text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
                 >
                     <svg
@@ -76,45 +70,23 @@
                     <div>Support</div>
                 </a>
 
-                {{-- Share --}}
-                <div
-                    class="flex cursor-pointer select-none items-center gap-2.5 rounded-lg bg-fair-pink bg-white py-2.5 pl-5 pr-6 text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="19"
-                        height="19"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-width="1.8"
-                            d="m2 8l6 2M6 4l2 3m3-.437l3.7-3.625c1.46-1.43 4.063-1.199 5.815.517M18.135 12l2.908-2.848c.59-.578.902-1.338.95-2.152M15 15.587L10.965 20c-1.392 1.524-3.876 1.277-5.548-.552c-1.67-1.828-1.897-4.546-.504-6.07L6.173 12"
-                        />
-                    </svg>
-                    <div>Share</div>
-                </div>
-
-                @if ($plugin['price'] === 'Free')
-                    {{-- Github Link --}}
+                @if ($plugin->isFree())
+                    {{-- GitHub Link --}}
                     <a
-                        href="{{ $plugin['github_link'] }}"
+                        href="https://github.com/{{ $plugin->github_repository }}"
                         target="_blank"
                         class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
-                        Visit Github
+                        Visit GitHub
                     </a>
                 @else
                     {{-- Price --}}
                     <a
-                        href="{{ $plugin['buy_link'] }}"
+                        href="{{ $plugin->getPurchaseUrl() }}"
                         target="_blank"
                         class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
-                        Buy for
-                        {{ $plugin['price'] }}
+                        Buy for {{ $plugin->getPrice() }}
                     </a>
                 @endif
             </div>
@@ -132,56 +104,26 @@
                 {{-- Name & Description --}}
                 <div>
                     <div class="text-3xl font-extrabold">
-                        {{ $plugin['name'] }}
+                        {{ $plugin->name }}
                     </div>
                     <div class="pt-4 font-medium text-dolphin/80">
-                        {{ $plugin['description'] }}
+                        {!! str($plugin->description)->inlineMarkdown()->sanitizeHtml() !!}
                     </div>
                 </div>
 
                 {{-- Categories --}}
                 <div class="flex flex-wrap items-center gap-3.5 pt-10">
-                    @foreach ($plugin['categories'] as $category)
+                    @foreach ($plugin->getCategories() as $category)
                         <div
                             class="flex select-none items-center gap-4 rounded-full bg-white py-1.5 pl-1.5 pr-6"
                         >
                             <div
                                 class="grid h-8 w-8 place-items-center rounded-full bg-dawn-pink text-hurricane"
                             >
-                                @if ($category === 'Action')
-                                    <x-plugins.categories.action />
-                                @elseif ($category === 'Admin Panel')
-                                    <x-plugins.categories.admin-panel />
-                                @elseif ($category === 'Analytics')
-                                    <x-plugins.categories.analytics />
-                                @elseif ($category === 'Authentication')
-                                    <x-plugins.categories.authentication />
-                                @elseif ($category === 'Authorization')
-                                    <x-plugins.categories.authorization />
-                                @elseif ($category === 'Column')
-                                    <x-plugins.categories.column />
-                                @elseif ($category === 'Developer Tool')
-                                    <x-plugins.categories.developer-tool />
-                                @elseif ($category === 'Editor')
-                                    <x-plugins.categories.editor />
-                                @elseif ($category === 'Field')
-                                    <x-plugins.categories.field />
-                                @elseif ($category === 'Form Builder')
-                                    <x-plugins.categories.form-builder />
-                                @elseif ($category === 'Kit')
-                                    <x-plugins.categories.kit />
-                                @elseif ($category === 'Layout')
-                                    <x-plugins.categories.layout />
-                                @elseif ($category === 'Spatie')
-                                    <x-plugins.categories.spatie />
-                                @elseif ($category === 'Table Builder')
-                                    <x-plugins.categories.table-builder />
-                                @elseif ($category === 'Widget')
-                                    <x-plugins.categories.widget />
-                                @endif
+                                {!! $category->getIcon() !!}
                             </div>
                             <div class="text-sm text-hurricane">
-                                {{ $category }}
+                                {{ $category->name }}
                             </div>
                         </div>
                     @endforeach
@@ -191,7 +133,7 @@
                 <div
                     class="flex flex-wrap items-center justify-end gap-10 pt-7"
                 >
-                    @if ($plugin['github_stars'])
+                    @if ($plugin->getStarsCount())
                         {{-- Github Stars --}}
                         <div class="flex items-center gap-2">
                             <svg
@@ -209,46 +151,19 @@
                             <div
                                 class="pt-0.5 text-sm font-medium text-dolphin"
                             >
-                                {{ $plugin['github_stars'] }}
-                                Github Stars
+                                {{ $plugin->getStarsCount() }}
+                                Stars
                             </div>
                         </div>
                     @endif
-
-                    {{-- View Count --}}
-                    <div class="flex items-center gap-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="text-dolphin/70"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                        >
-                            <g fill="currentColor">
-                                <path
-                                    d="M9.75 12a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0Z"
-                                />
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20c4.182 0 7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4C7.818 4 4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12Zm10-3.75a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Z"
-                                    clip-rule="evenodd"
-                                />
-                            </g>
-                        </svg>
-                        <div class="pt-0.5 text-sm font-medium text-dolphin">
-                            {{ $plugin['view_count'] }}
-                            Views
-                        </div>
-                    </div>
                 </div>
 
                 {{-- Screenshots --}}
                 <div class="pt-5">
-                    <img
-                        src="https://filament.ams3.digitaloceanspaces.com/551/2EEhazY5fRgzIluAPz31qi7ydMa22c-metaRmlsYW1lbnQgQmFubmVyLmpwZw%3D%3D-.jpg"
-                        alt="{{ $plugin['name'] }}"
-                        class="aspect-video w-full rounded-2xl ring-1 ring-dawn-pink/70"
-                    />
+                    <div
+                        style="background-image: url({{ $plugin->getImageUrl() }})"
+                        class="aspect-[16/9] w-full h-full bg-no-repeat bg-center bg-cover rounded-2xl ring-1 ring-dawn-pink/70"
+                    ></div>
                 </div>
 
                 {{-- Features and Health Checks --}}
@@ -260,7 +175,7 @@
                         <div
                             @class([
                                 'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
-                                'grayscale' => $plugin['features']['dark_mode'] === false,
+                                'grayscale' => ! $plugin->has_dark_theme,
                             ])
                         >
                             <svg
@@ -286,7 +201,7 @@
                             </div>
 
                             <div class="font-medium">
-                                {{ $plugin['features']['dark_mode'] === true ? 'Yes' : 'No' }}
+                                {{ $plugin->has_dark_theme ? 'Yes' : 'No' }}
                             </div>
                         </div>
                     </div>
@@ -296,7 +211,7 @@
                         <div
                             @class([
                                 'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
-                                'grayscale' => $plugin['features']['multi_language'] === false,
+                                'grayscale' => ! $plugin->has_translations,
                             ])
                         >
                             <svg
@@ -324,14 +239,14 @@
                             </div>
 
                             <div class="font-medium">
-                                {{ $plugin['features']['multi_language'] === true ? 'Yes' : 'No' }}
+                                {{ $plugin->has_translations ? 'Yes' : 'No' }}
                             </div>
                         </div>
                     </div>
 
                     {{-- Latest Version Compatibility --}}
                     <div class="flex items-center gap-3">
-                        @if ($plugin['is_compatible_with_latest_version'] === true)
+                        @if ($plugin->isCompatibleWithLatestVersion())
                             <div
                                 class="grid h-9 w-9 place-items-center rounded-full bg-lime-200/50 text-lime-600"
                             >
@@ -371,19 +286,19 @@
 
                         <div>
                             <div class="font-medium">
-                                {{ $plugin['is_compatible_with_latest_version'] ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
+                                {{ $plugin->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
                             </div>
 
                             <div class="text-xs text-dolphin/80">
                                 Supported versions:
-                                {{ implode(' - ', array_map(fn ($version) => $version . '.x', $plugin['supported_versions'])) }}
+                                {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $plugin->versions)) }}
                             </div>
                         </div>
                     </div>
 
                     {{-- Actively Maintained --}}
                     <div class="flex items-center gap-3">
-                        @if ($plugin['is_actively_maintained'] === true)
+                        @if ($plugin->isActivelyMaintained())
                             <div
                                 class="grid h-8 w-8 place-items-center rounded-full bg-lime-200/50 text-lime-600"
                             >
@@ -423,55 +338,24 @@
 
                         <div>
                             <div class="font-medium">
-                                {{ $plugin['is_actively_maintained'] === true ? 'Is actively maintained' : 'Is not actively maintained' }}
+                                {{ $plugin->isActivelyMaintained() === true ? 'Is actively maintained' : 'Is not actively maintained' }}
                             </div>
 
                             <div class="text-xs text-dolphin/80">
                                 Latest activity:
-                                {{ $plugin['latest_activity'] }}
+                                {{ $plugin->getLatestActivityAt()->diffForHumans() }}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Documentation --}}
-                <div class="pt-10">
-                    <div class="text-3xl font-extrabold">Documentation</div>
-                    <div class="pt-7">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Porro animi voluptatibus totam delectus nihil
-                        maxime minus incidunt aliquam non deleniti. Temporibus
-                        obcaecati repudiandae hic veritatis eos maxime iusto
-                        repellat dolores!
-                        <br />
-                        <br />
-                        Et odio sapiente fugiat dolor, voluptatibus porro
-                        ducimus inventore facilis, similique, temporibus
-                        aliquid? Error voluptatibus laudantium dolor excepturi
-                        enim accusamus fugiat. Inventore, animi autem saepe
-                        dolorem unde doloribus earum nisi.
-                        <br />
-                        <br />
-                        Dignissimos recusandae, autem sapiente libero in
-                        voluptatem dicta impedit, quas enim ullam deleniti.
-                        Corrupti itaque voluptate dolor sit quidem architecto
-                        aliquam necessitatibus, ea quam in? Recusandae nihil quo
-                        saepe corporis!
-                        <br />
-                        <br />
-                        Possimus accusantium magni recusandae debitis atque
-                        quidem consequuntur facilis facere doloribus molestias?
-                        Dolorum inventore perferendis iusto hic maxime,
-                        laudantium laborum illo reprehenderit, quibusdam dolores
-                        harum asperiores consectetur tempore quia ducimus.
-                        <br />
-                        <br />
-                        Aliquid provident eveniet sint ipsa in. Ipsum eaque,
-                        repellat culpa quo eum tempore velit beatae eos. Maiores
-                        repudiandae maxime provident corporis facere fugiat
-                        reiciendis possimus hic, nesciunt, sint adipisci velit.
+                @if (filled($docs = $plugin->getDocs()))
+                    {{-- Documentation --}}
+                    <div class="pt-10">
+                        <div class="text-3xl font-extrabold">Documentation</div>
+                        {!! str($docs)->markdown()->sanitizeHtml() !!}
                     </div>
-                </div>
+                @endif
             </div>
 
             {{-- Right Side --}}
@@ -485,109 +369,80 @@
                         <div
                             class="h-24 w-24 shrink-0 overflow-hidden rounded-full"
                         >
-                            @if ($plugin['author']['avatar'])
-                                <img
-                                    src="{{ $plugin['author']['avatar'] }}"
-                                    alt="{{ $plugin['author']['name'] }}"
-                                    class="aspect-square h-full w-full"
-                                />
-                            @else
-                                <div
-                                    class="grid h-full w-full place-items-center bg-fair-pink text-salmon/50"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        height="22"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <g fill="currentColor">
-                                            <circle
-                                                cx="12"
-                                                cy="6"
-                                                r="4"
-                                            />
-                                            <path
-                                                d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-                            @endif
+                            <div
+                                style="background-image: url({{ $plugin->author->getAvatarUrl() }})"
+                                class="aspect-square bg-no-repeat bg-center bg-cover h-full w-full"
+                            ></div>
                         </div>
 
                         {{-- Name --}}
                         <div class="pt-3.5 text-lg font-bold">
-                            {{ $plugin['author']['name'] }}
+                            {{ $plugin->author->name }}
                         </div>
 
                         {{-- Social Links --}}
-                        @if ($plugin['author']['twitter'] || $plugin['author']['github'])
-                            <div class="flex items-center gap-4 pt-3">
-                                {{-- Twitter --}}
-                                @if ($plugin['author']['twitter'])
-                                    <a
-                                        target="_blank"
-                                        href="{{ $plugin['author']['twitter'] }}"
-                                        class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                        <div class="flex items-center gap-4 pt-3">
+                            {{-- Twitter --}}
+                            @if (filled($plugin->author->twitter_url))
+                                <a
+                                    target="_blank"
+                                    href="{{ $plugin->author->twitter_url }}"
+                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                fill="currentColor"
-                                                fill-rule="evenodd"
-                                                d="M15.021 3.343c.509-.087 1.078-.116 1.614-.025a4.85 4.85 0 0 1 2.54 1.273c.456.01.905-.08 1.302-.208a5.36 5.36 0 0 0 1.098-.501l.009-.006a.75.75 0 0 1 1.042 1.037c-.207.315-.496.877-.819 1.507l-.155.301c-.185.36-.375.724-.552 1.036c-.111.196-.23.395-.35.567v.274A12.34 12.34 0 0 1 8.287 21.03a12.32 12.32 0 0 1-6.694-1.97a.75.75 0 0 1 .5-1.374a7.471 7.471 0 0 0 4.033-.642a4.858 4.858 0 0 1-2.61-2.922a.75.75 0 0 1 .147-.722l.01-.01A4.848 4.848 0 0 1 2.05 9.793v-.052a.75.75 0 0 1 .553-.724A4.84 4.84 0 0 1 2.09 6.84a4.9 4.9 0 0 1 .65-2.442a.75.75 0 0 1 1.232-.1a10.89 10.89 0 0 0 7.006 3.93a4.85 4.85 0 0 1 2.562-4.406c.402-.214.934-.385 1.482-.479ZM3.743 10.891a3.35 3.35 0 0 0 2.503 2.164a.75.75 0 0 1 .072 1.453c-.272.083-.551.14-.834.173a3.358 3.358 0 0 0 2.59 1.3a.75.75 0 0 1 .45 1.339a8.97 8.97 0 0 1-3.548 1.695a10.82 10.82 0 0 0 3.313.515h.009A10.838 10.838 0 0 0 19.25 8.607v-.535a.75.75 0 0 1 .186-.495c.07-.079.19-.261.36-.56c.16-.282.338-.622.523-.981l.033-.066a4.992 4.992 0 0 1-1.593.097a.75.75 0 0 1-.47-.237a3.35 3.35 0 0 0-1.904-1.032a3.42 3.42 0 0 0-1.11.025a3.605 3.605 0 0 0-1.028.323a3.35 3.35 0 0 0-1.678 3.74a.75.75 0 0 1-.767.925a12.39 12.39 0 0 1-8.149-3.627a3.41 3.41 0 0 0-.063.657v.002a3.34 3.34 0 0 0 1.486 2.785A.75.75 0 0 1 4.64 11a4.798 4.798 0 0 1-.897-.11Z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </a>
-                                @endif
+                                        <path
+                                            fill="currentColor"
+                                            fill-rule="evenodd"
+                                            d="M15.021 3.343c.509-.087 1.078-.116 1.614-.025a4.85 4.85 0 0 1 2.54 1.273c.456.01.905-.08 1.302-.208a5.36 5.36 0 0 0 1.098-.501l.009-.006a.75.75 0 0 1 1.042 1.037c-.207.315-.496.877-.819 1.507l-.155.301c-.185.36-.375.724-.552 1.036c-.111.196-.23.395-.35.567v.274A12.34 12.34 0 0 1 8.287 21.03a12.32 12.32 0 0 1-6.694-1.97a.75.75 0 0 1 .5-1.374a7.471 7.471 0 0 0 4.033-.642a4.858 4.858 0 0 1-2.61-2.922a.75.75 0 0 1 .147-.722l.01-.01A4.848 4.848 0 0 1 2.05 9.793v-.052a.75.75 0 0 1 .553-.724A4.84 4.84 0 0 1 2.09 6.84a4.9 4.9 0 0 1 .65-2.442a.75.75 0 0 1 1.232-.1a10.89 10.89 0 0 0 7.006 3.93a4.85 4.85 0 0 1 2.562-4.406c.402-.214.934-.385 1.482-.479ZM3.743 10.891a3.35 3.35 0 0 0 2.503 2.164a.75.75 0 0 1 .072 1.453c-.272.083-.551.14-.834.173a3.358 3.358 0 0 0 2.59 1.3a.75.75 0 0 1 .45 1.339a8.97 8.97 0 0 1-3.548 1.695a10.82 10.82 0 0 0 3.313.515h.009A10.838 10.838 0 0 0 19.25 8.607v-.535a.75.75 0 0 1 .186-.495c.07-.079.19-.261.36-.56c.16-.282.338-.622.523-.981l.033-.066a4.992 4.992 0 0 1-1.593.097a.75.75 0 0 1-.47-.237a3.35 3.35 0 0 0-1.904-1.032a3.42 3.42 0 0 0-1.11.025a3.605 3.605 0 0 0-1.028.323a3.35 3.35 0 0 0-1.678 3.74a.75.75 0 0 1-.767.925a12.39 12.39 0 0 1-8.149-3.627a3.41 3.41 0 0 0-.063.657v.002a3.34 3.34 0 0 0 1.486 2.785A.75.75 0 0 1 4.64 11a4.798 4.798 0 0 1-.897-.11Z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </a>
+                            @endif
 
-                                {{-- Github --}}
-                                @if ($plugin['author']['github'])
-                                    <a
-                                        target="_blank"
-                                        href="{{ $plugin['author']['github'] }}"
-                                        class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                            {{-- Github --}}
+                            <a
+                                target="_blank"
+                                href="{{ $plugin->author->github_url }}"
+                                class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22"
-                                            height="22"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <g
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.5"
-                                            >
-                                                <path
-                                                    d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"
-                                                />
-                                                <path
-                                                    d="M9 20.027c-3 .973-5.5 0-7-3"
-                                                />
-                                            </g>
-                                        </svg>
-                                    </a>
-                                @endif
-                            </div>
-                        @endif
+                                        <path
+                                            d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"
+                                        />
+                                        <path
+                                            d="M9 20.027c-3 .973-5.5 0-7-3"
+                                        />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
 
                         {{-- Stats --}}
                         <div
-                            class="mt-4 grid grid-cols-3 gap-10 rounded-2xl bg-white px-6 pb-3.5 pt-3 text-center shadow-lg shadow-black/[0.01]"
+                            class="mt-4 grid grid-cols-2 gap-10 rounded-2xl bg-white px-6 pb-3.5 pt-3 text-center shadow-lg shadow-black/[0.01]"
                         >
                             {{-- Plugins --}}
                             <div class="space-y-0.5">
                                 <div class="font-extrabold">
-                                    {{ $formatter->format($plugin['author']['stats']['plugins']) }}
+                                    {{ number_format($plugin->author->plugins()->count()) }}
                                 </div>
                                 <div
                                     class="text-sm font-medium text-dolphin/80"
@@ -596,22 +451,10 @@
                                 </div>
                             </div>
 
-                            {{-- Views --}}
-                            <div class="space-y-0.5">
-                                <div class="font-extrabold">
-                                    {{ $formatter->format($plugin['author']['stats']['views']) }}
-                                </div>
-                                <div
-                                    class="text-sm font-medium text-dolphin/80"
-                                >
-                                    Views
-                                </div>
-                            </div>
-
                             {{-- Stars --}}
                             <div class="space-y-0.5">
                                 <div class="font-extrabold">
-                                    {{ $formatter->format($plugin['author']['stats']['stars']) }}
+                                    {{ number_format($plugin->author->getStarsCount()) }}
                                 </div>
                                 <div
                                     class="text-sm font-medium text-dolphin/80"
@@ -623,42 +466,43 @@
                     </div>
                 </div>
 
-                {{-- More From This Creator --}}
-                <div>
-                    <div class="text-lg font-extrabold">
-                        More from this creator
-                    </div>
-                    <div class="space-y-5 pt-7">
-                        @foreach ($more_from_this_creator as $creator_plugin)
-                            <a
-                                href="#"
-                                class="group/creator-plugin-link relative flex items-center gap-5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
-                            >
-                                {{-- Thumbnail --}}
-                                <img
-                                    src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                                    class="aspect-[3/2] w-36 min-w-[9rem] shrink-0 rounded-xl ring-1 ring-dawn-pink"
-                                />
-                                {{-- Detail --}}
-                                <div>
-                                    {{-- Name --}}
-                                    <div class="line-clamp-1 font-semibold">
-                                        {{ $creator_plugin['name'] }}
-                                    </div>
-
-                                    {{-- Description --}}
+                @if (count($otherPlugins = $plugin->author->plugins()->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
+                    {{-- More From This Author --}}
+                    <div>
+                        <div class="text-lg font-extrabold">
+                            More from this author
+                        </div>
+                        <div class="space-y-5 pt-7">
+                            @foreach ($otherPlugins as $otherPlugin)
+                                <a
+                                    href="#"
+                                    class="group/author-plugin-link relative flex items-center gap-5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
+                                >
+                                    {{-- Thumbnail --}}
                                     <div
-                                        class="line-clamp-2 pt-1 text-sm text-dolphin"
-                                    >
-                                        {{ $creator_plugin['description'] }}
-                                    </div>
+                                        style="background-image: url({{ $otherPlugin->getImageUrl() }})"
+                                        class="aspect-[16/9] bg-no-repeat bg-center bg-cover w-36 min-w-[9rem] shrink-0 rounded-xl ring-1 ring-dawn-pink"
+                                    ></div>
 
-                                    {{-- Stats --}}
-                                    <div
-                                        class="flex flex-wrap items-center justify-start gap-4 pt-1"
-                                    >
-                                        @if ($creator_plugin['github_stars'])
-                                            {{-- Github Stars --}}
+                                    {{-- Detail --}}
+                                    <div>
+                                        {{-- Name --}}
+                                        <div class="line-clamp-1 font-semibold">
+                                            {{ $otherPlugin->name }}
+                                        </div>
+
+                                        {{-- Description --}}
+                                        <div
+                                            class="line-clamp-2 pt-1 text-sm text-dolphin"
+                                        >
+                                            {!! str($otherPlugin->description)->inlineMarkdown()->sanitizeHtml() !!}
+                                        </div>
+
+                                        {{-- Stats --}}
+                                        <div
+                                            class="flex flex-wrap items-center justify-start gap-4 pt-1"
+                                        >
+                                            {{-- Stars --}}
                                             <div
                                                 class="flex items-center gap-1.5"
                                             >
@@ -677,65 +521,38 @@
                                                 <div
                                                     class="pt-0.5 text-xs font-medium text-dolphin"
                                                 >
-                                                    {{ $creator_plugin['github_stars'] }}
+                                                    {{ $otherPlugin->getStarsCount() }}
                                                 </div>
-                                            </div>
-                                        @endif
-
-                                        {{-- View Count --}}
-                                        <div class="flex items-center gap-1.5">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                class="text-dolphin/70"
-                                                width="18"
-                                                height="18"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <g fill="currentColor">
-                                                    <path
-                                                        d="M9.75 12a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0Z"
-                                                    />
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20c4.182 0 7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4C7.818 4 4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12Zm10-3.75a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Z"
-                                                        clip-rule="evenodd"
-                                                    />
-                                                </g>
-                                            </svg>
-                                            <div
-                                                class="pt-0.5 text-xs font-medium text-dolphin"
-                                            >
-                                                {{ $creator_plugin['view_count'] }}
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {{-- Arrow --}}
-                                <div
-                                    class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-gradient-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/creator-plugin-link:-translate-x-3 group-hover/creator-plugin-link:opacity-100"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="text-salmon"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
+                                    {{-- Arrow --}}
+                                    <div
+                                        class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-gradient-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/author-plugin-link:-translate-x-3 group-hover/author-plugin-link:opacity-100"
                                     >
-                                        <path
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.5"
-                                            d="M4 12h2.5M20 12l-6-6m6 6l-6 6m6-6H9.5"
-                                        />
-                                    </svg>
-                                </div>
-                            </a>
-                        @endforeach
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-salmon"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="1.5"
+                                                d="M4 12h2.5M20 12l-6-6m6 6l-6 6m6-6H9.5"
+                                            />
+                                        </svg>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

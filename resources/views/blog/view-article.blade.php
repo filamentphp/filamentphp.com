@@ -118,12 +118,6 @@
                         @endforeach
                     </div>
                 </div>
-
-                <div aria-hidden="true" class="mt-8 border-t"></div>
-
-                <div class="mt-8">
-                    @livewire('comments', ['model' => $article])
-                </div>
             </div>
         </div>
     </x-section>

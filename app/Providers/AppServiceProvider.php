@@ -2,7 +2,13 @@
 
 namespace App\Providers;
 
+use App\Models\Article;
+use App\Models\Blog\Post;
+use App\Models\Link;
+use App\Models\Plugin;
+use App\Models\Trick;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Stripe\Stripe;
@@ -38,6 +44,13 @@ class AppServiceProvider extends ServiceProvider
 
         Model::preventLazyLoading(! app()->isProduction());
         Model::unguard();
+
+        Relation::enforceMorphMap([
+            'article' => Article::class,
+            'link' => Link::class,
+            'plugin' => Plugin::class,
+            'trick' => Trick::class,
+        ]);
 
         URL::forceScheme('https');
     }

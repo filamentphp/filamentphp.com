@@ -1,24 +1,24 @@
 <div
     x-on:click="
-        selectedCategory.has('{{ $category }}')
-            ? selectedCategory.delete('{{ $category }}')
-            : selectedCategory.add('{{ $category }}')
+        selectedCategories.has('{{ $slug }}')
+            ? selectedCategories.delete('{{ $slug }}')
+            : selectedCategories.add('{{ $slug }}')
     "
     class="select-none py-1 transition duration-300 ease-out will-change-transform hover:translate-x-1.5"
 >
     <div
         class="inline-flex cursor-pointer items-center gap-4 rounded-full py-1.5 pl-1.5 pr-6 shadow-lg shadow-black/[0.02] transition duration-200 ease-out"
         :class="{
-            'bg-fair-pink': selectedCategory.has('{{ $category }}'),
-            'bg-white': !selectedCategory.has('{{ $category }}'),
+            'bg-fair-pink': selectedCategories.has('{{ $slug }}'),
+            'bg-white': !selectedCategories.has('{{ $slug }}'),
         }"
     >
         {{-- Icon --}}
         <div
             class="grid h-8 w-8 place-items-center rounded-full transition duration-200 ease-out"
             :class="{
-            'bg-salmon text-white': selectedCategory.has('{{ $category }}'),
-            'bg-dawn-pink text-hurricane': !selectedCategory.has('{{ $category }}'),
+            'bg-salmon text-white': selectedCategories.has('{{ $slug }}'),
+            'bg-dawn-pink text-hurricane': !selectedCategories.has('{{ $slug }}'),
         }"
         >
             {{ $icon }}
@@ -28,11 +28,11 @@
         <div
             class="text-sm transition duration-200 ease-out truncate"
             :class="{
-            'text-salmon': selectedCategory.has('{{ $category }}'),
-            'text-hurricane': !selectedCategory.has('{{ $category }}'),
+            'text-salmon': selectedCategories.has('{{ $slug }}'),
+            'text-hurricane': !selectedCategories.has('{{ $slug }}'),
         }"
         >
-            {{ $category }}
+            {{ $name }}
         </div>
     </div>
 </div>

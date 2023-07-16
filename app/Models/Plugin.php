@@ -4,132 +4,115 @@ namespace App\Models;
 
 use App\Enums\PluginLicense;
 use App\Enums\PluginStatus;
+use Carbon\CarbonInterface;
 use Flowframe\Previewify\Previewify;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Schema\Blueprint;
+use Orbit\Concerns\Orbital;
+use Orbit\Drivers\Markdown;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Plugin extends Model implements HasMedia
+class Plugin extends Model
 {
-    use HasFactory;
-    use InteractsWithMedia;
+    use Orbital;
+
+    protected $primaryKey = 'slug';
+
+    protected $keyType = 'string';
+
+    public $incrementing = false;
 
     protected $casts = [
         'categories' => 'array',
-        'is_featured' => 'boolean',
-        'is_paid' => 'boolean',
-        'license' => PluginLicense::class,
-        'status' => PluginStatus::class,
-        'views' => 'integer',
+        'has_dark_theme' => 'boolean',
+        'has_translations' => 'boolean',
+        'versions' => 'array',
     ];
+
+    public static function schema(Blueprint $table)
+    {
+        $table->string('anystack_id')->nullable();
+        $table->string('author_slug');
+        $table->json('categories')->nullable();
+        $table->text('description')->nullable();
+        $table->string('github_repository');
+        $table->boolean('has_dark_theme')->default(false);
+        $table->boolean('has_translations')->default(false);
+        $table->string('image');
+        $table->string('name');
+        $table->string('slug');
+        $table->string('url')->nullable();
+        $table->json('versions')->nullable();
+    }
 
     public function author(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'author_id');
+        return $this->belongsTo(Author::class);
     }
 
-    public function scopeDraft(Builder $query): Builder
+    public function stars(): MorphMany
     {
-        return $query->where('status', PluginStatus::Draft);
+        return $this->morphMany(Star::class, 'starrable');
     }
 
-    public function scopePending(Builder $query): Builder
+    public function getDocs(): ?string
     {
-        return $query->where('status', PluginStatus::Pending);
+        return $this->content;
     }
 
-    public function scopePublished(Builder $query): Builder
+    public function isFree(): bool
     {
-        return $query->where('status', PluginStatus::Published);
+        return blank($this->anystack_id);
     }
 
-    public function getThumbnailUrl(): string
+    public function getPurchaseUrl(): ?string
     {
-        if ($thumbnailUrl = $this->media->first()?->getUrl()) {
-            return $thumbnailUrl;
-        }
-
-        if ($thumbnailUrl = cache()->get($this->getThumbnailUrlCacheKey())) {
-            return $thumbnailUrl;
-        }
-
-        return app(Previewify::class)->signedImageUrl(
-            templateId: 850,
-            fields: [
-                'previewify:code' => $this->github_repository,
-                'previewify:image' => asset('/images/icon.png'),
-                'previewify:subtitle' => $this->description,
-                'previewify:title' => $this->name,
-            ],
-        );
-    }
-
-    public function getCheckoutUrl(): ?string
-    {
-        if (! $this->is_paid) {
-            return null;
-        }
-
-        return cache()->get($this->getCheckoutUrlCacheKey());
-    }
-
-    public function getPrice(): ?string
-    {
-        return cache()->get($this->getPriceCacheKey());
-    }
-
-    public function hasGitHubStars(): bool
-    {
-        return cache()->has($this->getGitHubStarsCacheKey());
-    }
-
-    public function getGitHubStars(): ?int
-    {
-        return cache()->get($this->getGitHubStarsCacheKey());
-    }
-
-    public function getThumbnailUrlCacheKey(): string
-    {
-        return "plugins.{$this->getKey()}.thumbnail_url";
-    }
-
-    public function getGitHubStarsCacheKey(): string
-    {
-        return "plugins.{$this->getKey()}.github_stars";
-    }
-
-    public function getCheckoutUrlCacheKey(): string
-    {
-        return "plugins.{$this->getKey()}.checkout_url";
-    }
-
-    public function getPriceCacheKey(): string
-    {
-        return "plugins.{$this->getKey()}.price";
-    }
-
-    public function getUrl(): ?string
-    {
-        if (filled($this->url)) {
-            return $this->url;
-        }
-
-        if ((! $this->is_paid) && filled($this->github_repository)) {
-            return "https://github.com/{$this->github_repository}";
-        }
-
+        // TODO: Implement purchase url
         return null;
     }
 
-    public function getAuthorName(): string
+    public function getPrice(): string
     {
-        if (filled($this->author_name)) {
-            return $this->author_name;
-        }
+        // TODO: Implement price fetching
+        return $this->isFree() ? 'Free' : '$199';
+    }
 
-        return $this->author->name;
+    public function getStarsCount(): int
+    {
+        // TODO: Implement stars count with cache
+        return 199;
+    }
+
+    public function getImageUrl(): string
+    {
+        return asset("images/content/plugins/{$this->image}");
+    }
+
+    public function getLatestActivityAt(): CarbonInterface
+    {
+        // TODO: Implement latest activity at
+        return now();
+    }
+
+    public function isActivelyMaintained(): bool
+    {
+        // TODO: implement
+        return true;
+    }
+
+    public function getCategories(): Collection
+    {
+        return PluginCategory::find($this->categories);
+    }
+
+    public function isCompatibleWithLatestVersion(): bool
+    {
+        return in_array(3, $this->versions);
     }
 }

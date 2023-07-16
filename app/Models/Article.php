@@ -12,13 +12,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Spatie\Comments\Models\Concerns\HasComments;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
 
 class Article extends Model implements Feedable
 {
-    use HasComments;
     use HasFactory;
 
     protected $casts = [
@@ -58,16 +56,6 @@ class Article extends Model implements Feedable
         $options = collect(ArticleCategory::cases())->mapWithKeys(fn (ArticleCategory $category): array => [$category->value => $category->getLabel()]);
 
         return collect($this->categories)->map(fn ($item) => $options[$item]);
-    }
-
-    public function commentableName(): string
-    {
-        return "{$this->title} by {$this->author->name}";
-    }
-
-    public function commentUrl(): string
-    {
-        return $this->getUrl();
     }
 
     public function getUrl(): string

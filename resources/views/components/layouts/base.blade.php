@@ -64,12 +64,10 @@
             }
         </style>
         @livewireStyles
-        <x-comments::styles />
         @vite('resources/css/app.css')
 
         <!-- Scripts -->
         @livewireScripts
-        <x-comments::scripts />
         @vite('resources/js/app.js')
         @stack('scripts')
     </head>
