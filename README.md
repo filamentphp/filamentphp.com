@@ -19,7 +19,7 @@ github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin
 ---
 
-Your bio should be written here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself.
+Your bio should be written in Markdown here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be in full sentences.
 ```
 
 - The `slug` should match the current filename.
@@ -51,14 +51,26 @@ versions: [2, 3]
 - The `slug` should match the current filename.
 - The `author_slug` should match the `slug` of the author profile you created earlier.
 - The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory. 
-- The `description` should be a short description of your plugin.
+- The `description` should be a short description of your plugin. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be one full sentence.
 - The `discord_url` should be a link to the Discord channel where people can discuss your plugin. If this doesn't exist yet, you can leave this empty until the Filament team creates it in the official server.
 - The `docs_url` should be a URL to a public, raw Markdown file of your plugin. You can leave this blank if your documentation does not live in a raw Markdown file, but please ensure that you have filled in a `url` instead, where we can redirect users who are looking for the documentation.
 - The `github_repository` should be the name of the GitHub repository where your plugin is hosted.
 - The `has_dark_theme` should be `true` if your plugin supports Tailwind's dark mode, or `false` if not.
 - The `has_translations` should be `true` if your plugin supports multiple languages, or `false` if not.
-- The `image` should be the name of a file in the `public/images/content/plugins` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. 
+- The `image` should be the name of a file in the `public/images/content/plugins` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
 - The `versions` should be an array of Filament major versions that your plugin supports.
+
+#### Quality guidelines
+
+In Filament v2, we introduced the plugins section of the website. We did not enforce many rules on the plugins that were submitted, and as a result, some plugins were not consistent in quality with others. In Filament v3, we are introducing some quality guidelines to ensure that plugins are consistent with each other, and that they are of a high quality. You are more than welcome to create a plugin, distribute it on GitHub and Packagist, and not submit it to the Filament website, if you do not wish to meet these guidelines. However, if you do wish to submit your plugin to the website, please ensure:
+
+- Your plugin's code is hosted on GitHub.
+- Your plugin must be available to install from Packagist or [Anystack.sh](https://anystack.sh).
+- Documentation should always be public, even if the plugin is paid.
+- Documentation should be written clearly, thorough, and well-structured. Users should not be put off from using your plugin because of poor documentation.
+- If your plugin contains any UI element, screenshots of any UI should be available in your documentation.
+
+In return for following these guidelines, your plugin will receive free promotion on our website, and a dedicated support channel on our Discord server.
 
 #### Selling a plugin
 
