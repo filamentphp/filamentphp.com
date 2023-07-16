@@ -1,7 +1,5 @@
 @props([
     'darkMode' => false,
-    'previewify' => null,
-    'previewifyData' => [],
     'docSearch' => true,
 ])
 
@@ -25,28 +23,6 @@
         />
 
         <x-seo::meta />
-
-        <!-- Previewify -->
-        @if ($previewify)
-            <meta
-                property="og:image"
-                content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}"
-            />
-            <meta
-                name="twitter:image"
-                content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}"
-            />
-            <meta
-                name="previewify:image"
-                content="{{ asset('/images/icon.png') }}"
-            />
-            @foreach ($previewifyData as $key => $value)
-                <meta
-                    name="previewify:{{ $key }}"
-                    content="{{ $value }}"
-                />
-            @endforeach
-        @endif
 
         <link
             rel="icon"

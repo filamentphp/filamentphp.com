@@ -46,16 +46,6 @@ Route::prefix('/docs')->group(function () {
     })->where('slug', '.*')->name('docs');
 });
 
-Route::prefix('/links')->group(function () {
-    Route::get('/', Controllers\Links\ListLinksController::class)->name('links');
-
-    Route::name('links.')->group(function () {
-        Route::prefix('/{link}')->group(function () {
-            Route::get('/', Controllers\Links\ViewLinkController::class)->name('view');
-        });
-    });
-});
-
 Route::name('packages.')->prefix('/packages')->group(function () {
     Route::view('/app', 'packages.app')->name('app');
     Route::view('/forms', 'packages.forms')->name('forms');

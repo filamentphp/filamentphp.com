@@ -1,8 +1,4 @@
-<x-layouts.app previewify="757" :previewify-data="[
-    'title' => 'Filament - Table Builder for Laravel',
-    'subtitle' => 'Build beautiful tables using the TALL stack.',
-    'code' => 'composer require filament/tables',
-]">
+<x-layouts.app>
     <header class="max-w-7xl mx-auto text-center py-12 px-8 md:py-24">
         <h4 class="font-cursive md:text-2xl">
             Introducing...

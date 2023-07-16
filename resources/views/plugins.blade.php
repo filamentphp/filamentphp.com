@@ -1,10 +1,4 @@
-<x-layouts.app
-    previewify="858"
-    :previewify-data="[
-        'title' => 'Filament Plugins',
-        'subtitle' => 'Composer packages made by our community, giving you access to awesome new features.',
-    ]"
->
+<x-layouts.app>
     <x-plugins.hero :$authorsCount :$pluginsCount :$starsCount />
 
     <div

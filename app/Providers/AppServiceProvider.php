@@ -47,7 +47,6 @@ class AppServiceProvider extends ServiceProvider
 
         Relation::enforceMorphMap([
             'article' => Article::class,
-            'link' => Link::class,
             'plugin' => Plugin::class,
             'trick' => Trick::class,
         ]);

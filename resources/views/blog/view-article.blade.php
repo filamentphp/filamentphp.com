@@ -1,9 +1,4 @@
-<x-layouts.app previewify="900" :previewify-data="[
-    'title' => $article->title,
-    'author' => $article->author->name,
-    'categories' => $articleCategories = collect($article->categories)->map(fn (string $category): string => \App\Enums\ArticleCategory::tryFrom($category)?->getLabel())->implode(', '),
-    'date' => $articleDate = $article->created_at->toFormattedDateString(),
-]">
+<x-layouts.app>
     <x-section>
         <div class="max-w-4xl mx-auto">
             <div class="mt-6">

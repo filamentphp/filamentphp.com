@@ -14,7 +14,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Stripe\Account;
 use Stripe\AccountLink;
 
-class User extends Authenticatable implements FilamentUser, MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory;
     use Notifiable;
@@ -26,11 +26,5 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
 
     protected $casts = [
         'email_verified_at' => 'immutable_datetime',
-        'is_admin' => 'boolean',
     ];
-
-    public function canAccessFilament(): bool
-    {
-        return true;
-    }
 }

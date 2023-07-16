@@ -31,7 +31,7 @@ return [
     ],
 
     'anystack' => [
-        'token' => env('UNLOCK_TOKEN'),
+        'token' => env('ANYSTACK_TOKEN'),
     ],
 
 ];

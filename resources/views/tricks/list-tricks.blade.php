@@ -1,7 +1,4 @@
-<x-layouts.app previewify="858" :previewify-data="[
-    'title' => 'Filament Tricks',
-    'subtitle' => 'Tricks discovered by Filament users',
-]">
+<x-layouts.app>
     <x-header>
         Tricks
 

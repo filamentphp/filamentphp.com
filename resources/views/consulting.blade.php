@@ -4,10 +4,7 @@
         ->description('Looking for expert help with your Filament project? Schedule a consulting call with a Filament team member.')
 @endphp
 
-<x-layouts.app previewify="858" :previewify-data="[
-    'title' => 'Filament Consulting',
-    'subtitle' => 'Expert help from the Filament team',
-]">
+<x-layouts.app>
     <header class="relative overflow-hidden max-w-8xl mx-auto py-20 md:pb-32 px-8">
         <div class="space-y-12 max-w-screen-sm">
             <div class="space-y-4">
