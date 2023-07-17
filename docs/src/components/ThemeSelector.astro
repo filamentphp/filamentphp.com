@@ -12,14 +12,14 @@ const themes = [
   <p class="sr-only">Theme</p>
   <button
     type="button"
-    class="flex h-6 w-6 items-center justify-center rounded-md shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5"
+    class="flex h-10 w-10 items-center justify-center rounded-full ring-1 ring-black/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5"
     aria-label="Open navigation"
     x-on:click="$refs.panel.toggle"
   >
-    <Icon name="heroicons:sun" class="hidden h-5 w-5 fill-primary-500 [[data-theme=light]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-4 w-4 fill-primary-500 [[data-theme=dark]_&]:block" />
-    <Icon name="heroicons:sun" class="hidden h-5 w-5 fill-gray-400 [:not(.dark)[data-theme=system]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-4 w-4 fill-gray-400 [.dark[data-theme=system]_&]:block" />
+    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-primary-500 [[data-theme=light]_&]:block" />
+    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-primary-500 [[data-theme=dark]_&]:block" />
+    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-gray-400 [:not(.dark)[data-theme=system]_&]:block" />
+    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-gray-400 [.dark[data-theme=system]_&]:block" />
   </button>
   <div
     x-ref="panel"
