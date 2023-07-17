@@ -92,7 +92,7 @@ class Plugin extends Model implements Starrable
             return 'Free';
         }
 
-        return cache()->get($this->getPriceCacheKey()) ?: 'Fetching...';
+        return cache()->get($this->getPriceCacheKey()) ?: '$0.00';
     }
 
     public function getStarsCount(): int
