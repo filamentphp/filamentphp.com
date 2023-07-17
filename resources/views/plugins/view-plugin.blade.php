@@ -377,10 +377,11 @@
                         </div>
 
                         <div
-                            class="mt-4 space-y-4 rounded-2xl bg-white p-6 text-center shadow-lg shadow-black/[0.01]"
+                            class="mt-4 space-y-4 rounded-2xl bg-merino/50 p-6 text-center shadow-lg shadow-black/[0.01]"
                         >
+                            {{-- Bio --}}
                             @if ($plugin->author->getBio())
-                                <div class="prose prose-sm">
+                                <div class="prose">
                                     {!! str($plugin->author->getBio())->markdown()->sanitizeHtml() !!}
                                 </div>
                             @endif
@@ -390,11 +391,11 @@
                                 <div class="grid grid-cols-2 gap-10">
                                     {{-- Plugins --}}
                                     <div class="space-y-0.5">
-                                        <div class="font-extrabold">
+                                        <div class="text-lg font-extrabold">
                                             {{ number_format($plugin->author->plugins()->count()) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-dolphin/80"
+                                            class="text-sm font-medium text-hurricane/80"
                                         >
                                             Plugins
                                         </div>
@@ -402,11 +403,11 @@
 
                                     {{-- Stars --}}
                                     <div class="space-y-0.5">
-                                        <div class="font-extrabold">
+                                        <div class="text-lg font-extrabold">
                                             {{ number_format($plugin->author->getStarsCount()) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-dolphin/80"
+                                            class="text-sm font-medium text-hurricane/80"
                                         >
                                             Stars
                                         </div>
