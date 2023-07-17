@@ -106,7 +106,7 @@ By default Filament comes with it's own CSS, which integrates neatly into the ad
 
 <br><br>
 
-# Installation guide: A Convenient Media Library for Filament Admin
+## Installation guide: A Convenient Media Library for Filament Admin
 
 Thank you for purchasing the ultimate Media Library plugin for Filament Admin!
 
