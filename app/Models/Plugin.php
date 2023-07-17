@@ -37,9 +37,10 @@ class Plugin extends Model implements Starrable
         $table->string('github_repository');
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
-        $table->string('image');
+        $table->string('image')->nullable();
         $table->string('name');
         $table->string('slug');
+        $table->string('thumbnail')->nullable();
         $table->string('url')->nullable();
         $table->json('versions')->nullable();
     }
@@ -103,9 +104,22 @@ class Plugin extends Model implements Starrable
         );
     }
 
-    public function getImageUrl(): string
+    public function getImageUrl(): ?string
     {
-        return asset("images/content/plugins/{$this->image}");
+        if (blank($this->image)) {
+            return null;
+        }
+
+        return asset("images/content/plugins/images/{$this->image}");
+    }
+
+    public function getThumbnailUrl(): ?string
+    {
+        if (blank($this->thumbnail)) {
+            return $this->getImageUrl();
+        }
+
+        return asset("images/content/plugins/thumbnails/{$this->thumbnail}");
     }
 
     public function getCategories(): Collection

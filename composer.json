@@ -17,6 +17,7 @@
         "flowframe/laravel-drift": "^0.1.0",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.0",
+        "intervention/image": "^2.7",
         "laravel/framework": "^9.19",
         "laravel/horizon": "^5.9",
         "laravel/pint": "^1.10",
@@ -31,6 +32,7 @@
         "spatie/laravel-feed": "^4.1",
         "spatie/laravel-google-fonts": "^1.0",
         "spatie/laravel-ignition": "^1.0",
+        "spatie/laravel-image-optimizer": "^1.7",
         "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {

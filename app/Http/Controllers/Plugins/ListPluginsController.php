@@ -30,7 +30,7 @@ class ListPluginsController extends Controller
                         'slug' => $plugin->slug,
                         'price' => $plugin->getPrice(),
                         'stars_count' => $plugin->getStarsCount(),
-                        'image_url' => $plugin->getImageUrl(),
+                        'thumbnail_url' => $plugin->getThumbnailUrl(),
                         'description' => $plugin->description,
                         'author' => [
                             'name' => $plugin->author->name,

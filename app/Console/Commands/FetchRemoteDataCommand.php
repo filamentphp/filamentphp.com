@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Actions\FetchPluginDataFromAnystack;
 use Illuminate\Console\Command;
 
-class FetchRemoteData extends Command
+class FetchRemoteDataCommand extends Command
 {
     protected $signature = 'fetch-remote-data';
 

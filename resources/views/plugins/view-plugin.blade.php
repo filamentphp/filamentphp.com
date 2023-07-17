@@ -146,15 +146,17 @@
                     @endforeach
                 </div>
 
-                {{-- Screenshots --}}
-                <div class="pt-5">
-                    <div
-                        style="
-                            background-image: url({{ $plugin->getImageUrl() }});
-                        "
-                        class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
-                    ></div>
-                </div>
+                @if ($imageUrl = $plugin->getImageUrl())
+                    {{-- Image --}}
+                    <div class="pt-5">
+                        <div
+                            style="
+                                background-image: url({{ $plugin->getImageUrl() }});
+                            "
+                            class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
+                        ></div>
+                    </div>
+                @endif
 
                 {{-- Features and Health Checks --}}
                 <div
@@ -420,7 +422,7 @@
                                     {{-- Thumbnail --}}
                                     <div
                                         style="
-                                            background-image: url({{ $otherPlugin->getImageUrl() }});
+                                            background-image: url({{ $otherPlugin->getThumbnailUrl() }});
                                         "
                                         class="aspect-[16/9] w-36 min-w-[9rem] shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
                                     ></div>
