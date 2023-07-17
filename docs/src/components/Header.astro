@@ -12,7 +12,7 @@ let { navigation = null } = Astro.props
   x-data="{ isScrolled: false }"
   x-on:scroll.window="isScrolled = window.scrollY > 0"
   x-init="isScrolled = window.scrollY > 0"
-  class="sticky top-0 z-50 px-4 py-3 border-b dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171529]"
+  class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171529]"
 >
   <div
     class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between"
@@ -42,7 +42,7 @@ let { navigation = null } = Astro.props
         </a>
       </div>
     </div>
-    <div class="relative flex justify-end gap-4 items-center">
+    <div class="relative flex justify-end gap-3.5 items-center">
       <VersionSelector class="relative z-10" />
       <ThemeSelector class="relative z-10" />
       <div id="docsearch"></div>
@@ -55,7 +55,7 @@ let { navigation = null } = Astro.props
       >
         <Icon
           name="github"
-          class="h-6 w-6 fill-gray-900 group-hover:fill-primary-600 dark:fill-gray-300 dark:group-hover:fill-primary-500"
+          class="h-7 w-7 fill-gray-900 group-hover:fill-primary-600 dark:fill-gray-300 dark:group-hover:fill-primary-500"
         />
       </a>
     </div>
