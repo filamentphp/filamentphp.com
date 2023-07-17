@@ -114,8 +114,6 @@ We tried to make the library as **easy-to-install** and **versatile** as possibl
 
 In this guide I'll show you **how to install the library**, so you **can start using it right away**.
 
-## Installation
-
 ### Prerequisites
 
 For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
