@@ -15,7 +15,7 @@ class FetchPluginDataFromAnystack
         try {
             $advertismentChannels = $anystack
                 ->get('https://api.anystack.sh/v1/affiliate-beta')
-                ->json()['data'];
+                ->json()['data'] ?? [];
 
             $advertisementChannel = collect($advertismentChannels)->keyBy('id')['da7855a9-36a1-44a4-87b9-8e5852ae08d2'] ?? null;
 
@@ -69,7 +69,7 @@ class FetchPluginDataFromAnystack
                     echo "Caching price for plugin {$plugin->getKey()} - {$price}. \n";
                 });
         } catch (Throwable $exception) {
-            echo "Failed to fetch any data from Anystack. \n";
+            echo "Failed to fetch any data from Anystack: {$exception->getMessage()}";
 
             // 👹
         }
