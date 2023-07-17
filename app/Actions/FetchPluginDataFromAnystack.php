@@ -3,9 +3,9 @@
 namespace App\Actions;
 
 use App\Models\Plugin;
+use function Filament\Support\format_money;
 use Illuminate\Support\Facades\Http;
 use Throwable;
-use function Filament\Support\format_money;
 
 class FetchPluginDataFromAnystack
 {
