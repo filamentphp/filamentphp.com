@@ -22,6 +22,7 @@ class ListPluginsController extends Controller
                 'plugins',
                 now()->addMinutes(15),
                 fn (): array => Plugin::query()
+                    ->orderBy('name')
                     ->with(['author'])
                     ->get()
                     ->map(fn (Plugin $plugin): array => [
