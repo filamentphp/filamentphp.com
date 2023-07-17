@@ -27,6 +27,7 @@
     "devDependencies": {
         "@alpinejs/focus": "^3.10.5",
         "@awcodes/alpine-floating-ui": "^3.4.0",
+        "@fontsource/be-vietnam-pro": "^5.0.5",
         "@grafite/helpers": "^1.0.2",
         "@tailwindcss/typography": "^0.5.8",
         "@torchlight-api/torchlight-cli": "^0.1.7",

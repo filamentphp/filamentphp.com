@@ -67,6 +67,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         document.documentElement.classList.remove("dark");
       }
     </script>
+
+  <!-- Styles -->
+  <style>
+      [x-cloak=''],
+      [x-cloak='x-cloak'],
+      [x-cloak='1'] {
+          display: none !important;
+      }
+  </style>
   </head>
   <body class="bg-cream dark:bg-gray-900">
     <Header navigation={navigation} />
