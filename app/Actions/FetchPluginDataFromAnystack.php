@@ -2,8 +2,6 @@
 
 namespace App\Actions;
 
-use Akaunting\Money\Currency;
-use Akaunting\Money\Money;
 use App\Models\Plugin;
 use Illuminate\Support\Facades\Http;
 use Throwable;
@@ -17,8 +15,7 @@ class FetchPluginDataFromAnystack
         try {
             $advertismentChannels = $anystack
                 ->get('https://api.anystack.sh/v1/affiliate-beta')
-                ->json()
-                ['data'];
+                ->json()['data'];
 
             $advertisementChannel = collect($advertismentChannels)->keyBy('id')['da7855a9-36a1-44a4-87b9-8e5852ae08d2'] ?? null;
 

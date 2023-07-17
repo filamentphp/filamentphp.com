@@ -437,9 +437,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Use the panel builder to build multi-tenant applications,
-                        with subscription billing, at record speed. Switch
-                        between tenants without leaving the panel.
+                        Use the panel builder to build multi-tenant
+                        applications, with subscription billing, at record
+                        speed. Switch between tenants without leaving the panel.
                     </div>
                 </div>
             </div>
@@ -547,10 +547,10 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Build multiple completely separate Filament-powered panels
-                        with their own resources, dashboards, custom pages and
-                        configuration. Ship an entire panel in a Composer
-                        package with ease.
+                        Build multiple completely separate Filament-powered
+                        panels with their own resources, dashboards, custom
+                        pages and configuration. Ship an entire panel in a
+                        Composer package with ease.
                     </div>
                 </div>
             </div>
@@ -603,10 +603,10 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Customize the color palette and typography of your
-                        panel without having to compile any Tailwind. Easily
-                        hook in to our suite of CSS classes to characterize
-                        a panel with your own branding - it's all yours.
+                        Customize the color palette and typography of your panel
+                        without having to compile any Tailwind. Easily hook in
+                        to our suite of CSS classes to characterize a panel with
+                        your own branding - it's all yours.
                     </div>
                 </div>
             </div>

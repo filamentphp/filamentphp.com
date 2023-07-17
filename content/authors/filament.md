@@ -1,7 +1,7 @@
 ---
 name: Filament
 slug: filament
-avatar: filament.png
+avatar: filament.jpg
 github_url: https://github.com/filamentphp
 twitter_url: https://twitter.com/filamentphp
 ---

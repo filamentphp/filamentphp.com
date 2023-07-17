@@ -3,8 +3,8 @@
     class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
 >
     <div
-        x-bind:style="'background-image: url(' + plugin.image_url + ')'"
-        class="aspect-[16/9] w-full bg-no-repeat bg-center bg-cover rounded-xl ring-1 ring-dawn-pink"
+        x-bind:style="'background-image: url(' + plugin.thumbnail_url + ')'"
+        class="aspect-[16/9] w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
     ></div>
 
     <div class="px-1.5 pb-1 pt-2.5">
@@ -118,7 +118,7 @@
                     <template x-if="plugin.author.avatar">
                         <div
                             x-bind:style="'background-image: url(' + plugin.author.avatar + ')'"
-                            class="aspect-square bg-no-repeat bg-center bg-cover h-full w-full"
+                            class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
                         ></div>
                     </template>
                     <template x-if="! plugin.author.avatar">

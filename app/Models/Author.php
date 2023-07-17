@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Schema\Blueprint;
 use Orbit\Concerns\Orbital;
-use Orbit\Drivers\Markdown;
 
 class Author extends Model
 {
@@ -43,7 +41,7 @@ class Author extends Model
 
     public function getAvatarUrl(): string
     {
-        return asset("images/content/authors/{$this->avatar}");
+        return asset("images/content/authors/avatars/{$this->avatar}");
     }
 
     public function getStarsCount(): int

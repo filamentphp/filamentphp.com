@@ -8,15 +8,19 @@
         x-init="
             () => {
                 if (reducedMotion) return
-                gsap.fromTo($refs.section,{
-                    autoAlpha: 0,
-                    y: 50,
-                }, {
-                    autoAlpha: 1,
-                    y: 0,
-                    duration: 0.7,
-                    ease: 'circ.out',
-                })
+                gsap.fromTo(
+                    $refs.section,
+                    {
+                        autoAlpha: 0,
+                        y: 50,
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                )
             }
         "
         class="mx-auto w-full max-w-8xl px-5 sm:px-10"
@@ -72,6 +76,17 @@
 
                 <livewire:plugins.star-plugin :plugin="$plugin" />
 
+                @if (filled($plugin->url))
+                    {{-- Link --}}
+                    <a
+                        href="{{ $plugin->url }}"
+                        target="_blank"
+                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                    >
+                        Visit website
+                    </a>
+                @endif
+
                 @if ($plugin->isFree())
                     {{-- GitHub Link --}}
                     <a
@@ -109,7 +124,7 @@
                         {{ $plugin->name }}
                     </div>
                     <div class="pt-4 font-medium text-dolphin/80">
-                        {!! str($plugin->description)->inlineMarkdown()->sanitizeHtml() !!}
+                        {{ $plugin->description }}
                     </div>
                 </div>
 
@@ -131,13 +146,17 @@
                     @endforeach
                 </div>
 
-                {{-- Screenshots --}}
-                <div class="pt-5">
-                    <div
-                        style="background-image: url({{ $plugin->getImageUrl() }})"
-                        class="aspect-[16/9] w-full h-full bg-no-repeat bg-center bg-cover rounded-2xl ring-1 ring-dawn-pink/70"
-                    ></div>
-                </div>
+                @if ($imageUrl = $plugin->getImageUrl())
+                    {{-- Image --}}
+                    <div class="pt-5">
+                        <div
+                            style="
+                                background-image: url({{ $plugin->getImageUrl() }});
+                            "
+                            class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
+                        ></div>
+                    </div>
+                @endif
 
                 {{-- Features and Health Checks --}}
                 <div
@@ -274,7 +293,7 @@
                     {{-- Documentation --}}
                     <div class="pt-10">
                         <div class="prose max-w-none">
-                            {!! preg_replace("/\<h1(.*)\>(.*)\<\/h1\>/",'', str($docs)->markdown()->sanitizeHtml()) !!}
+                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str($docs)->markdown()->sanitizeHtml(),) !!}
                         </div>
                     </div>
                 @endif
@@ -292,8 +311,10 @@
                             class="h-24 w-24 shrink-0 overflow-hidden rounded-full"
                         >
                             <div
-                                style="background-image: url({{ $plugin->author->getAvatarUrl() }})"
-                                class="aspect-square bg-no-repeat bg-center bg-cover h-full w-full"
+                                style="
+                                    background-image: url({{ $plugin->author->getAvatarUrl() }});
+                                "
+                                class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
                             ></div>
                         </div>
 
@@ -349,9 +370,7 @@
                                         <path
                                             d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"
                                         />
-                                        <path
-                                            d="M9 20.027c-3 .973-5.5 0-7-3"
-                                        />
+                                        <path d="M9 20.027c-3 .973-5.5 0-7-3" />
                                     </g>
                                 </svg>
                             </a>
@@ -402,8 +421,10 @@
                                 >
                                     {{-- Thumbnail --}}
                                     <div
-                                        style="background-image: url({{ $otherPlugin->getImageUrl() }})"
-                                        class="aspect-[16/9] bg-no-repeat bg-center bg-cover w-36 min-w-[9rem] shrink-0 rounded-xl ring-1 ring-dawn-pink"
+                                        style="
+                                            background-image: url({{ $otherPlugin->getThumbnailUrl() }});
+                                        "
+                                        class="aspect-[16/9] w-36 min-w-[9rem] shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
                                     ></div>
 
                                     {{-- Detail --}}
@@ -417,7 +438,7 @@
                                         <div
                                             class="line-clamp-2 pt-1 text-sm text-dolphin"
                                         >
-                                            {!! str($otherPlugin->description)->inlineMarkdown()->sanitizeHtml() !!}
+                                            {{ $otherPlugin->description }}
                                         </div>
 
                                         {{-- Stats --}}

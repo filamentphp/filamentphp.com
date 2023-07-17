@@ -7,8 +7,6 @@ use App\Models\Author;
 use App\Models\Plugin;
 use App\Models\PluginCategory;
 use App\Models\Star;
-use App\Models\Trick;
-use App\Models\User;
 
 class ListPluginsController extends Controller
 {
@@ -32,7 +30,7 @@ class ListPluginsController extends Controller
                         'slug' => $plugin->slug,
                         'price' => $plugin->getPrice(),
                         'stars_count' => $plugin->getStarsCount(),
-                        'image_url' => $plugin->getImageUrl(),
+                        'thumbnail_url' => $plugin->getThumbnailUrl(),
                         'description' => $plugin->description,
                         'author' => [
                             'name' => $plugin->author->name,

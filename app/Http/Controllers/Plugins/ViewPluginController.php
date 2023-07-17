@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Plugins;
 
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
-use App\Models\User;
-use Illuminate\Support\Facades\RateLimiter;
 
 class ViewPluginController extends Controller
 {

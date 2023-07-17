@@ -1,11 +1,4 @@
-<x-layouts.app
-    previewify="757"
-    :previewify-data="[
-        'title' => 'Filament',
-        'subtitle' => 'Accelerated Laravel development',
-        'code' => 'composer require filament/filament',
-    ],
-">
+<x-layouts.app>
     <x-home.hero />
     <x-home.demo />
     <x-home.packages />

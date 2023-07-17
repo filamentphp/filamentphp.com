@@ -311,7 +311,7 @@
             {{-- Giraffes --}}
             <div
                 x-ref="giraffes"
-                class="relative -left-[25vw] sm:-left-60 top-12 sm:top-6 z-20 self-center justify-self-center [grid-area:1/-1]"
+                class="relative -left-[25vw] top-12 z-20 self-center justify-self-center [grid-area:1/-1] sm:-left-60 sm:top-6"
             >
                 <div class="flex items-end">
                     <img
@@ -378,7 +378,8 @@
             x-ref="take_off_message"
             class="mx-auto max-w-md pt-2 text-dolphin"
         >
-            Give Filament a try, and we bet that you’ll be amazed in the first few minutes.
+            Give Filament a try, and we bet that you’ll be amazed in the first
+            few minutes.
         </div>
 
         {{-- Get Started Link --}}
@@ -388,14 +389,14 @@
         >
             <a
                 href="{{ route('docs') }}"
-                class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition motion-reduce:transition-none  duration-300 hover:ring-peach-orange/40 sm:py-10"
+                class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40 motion-reduce:transition-none sm:py-10"
             >
                 <div class="text-2xl font-bold sm:text-3xl">Get Started</div>
                 <div class="pr-4">
                     <svg
                         width="24"
                         height="24"
-                        class="scale-[2] transition motion-reduce:transition-none  duration-300 will-change-transform group-hover/getstarted:translate-x-3 sm:scale-[2.5]"
+                        class="scale-[2] transition duration-300 will-change-transform group-hover/getstarted:translate-x-3 motion-reduce:transition-none sm:scale-[2.5]"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
@@ -410,7 +411,7 @@
                 </div>
 
                 <div
-                    class="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-[#FFEDE3] to-[#FFEBCC] transition motion-reduce:transition-none  duration-300 group-hover/getstarted:opacity-70"
+                    class="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-[#FFEDE3] to-[#FFEBCC] transition duration-300 group-hover/getstarted:opacity-70 motion-reduce:transition-none"
                 ></div>
             </a>
         </div>

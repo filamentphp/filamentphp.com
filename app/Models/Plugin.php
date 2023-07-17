@@ -2,22 +2,13 @@
 
 namespace App\Models;
 
-use App\Enums\PluginLicense;
-use App\Enums\PluginStatus;
 use App\Models\Contracts\Starrable;
-use Carbon\CarbonInterface;
-use Flowframe\Previewify\Previewify;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Schema\Blueprint;
 use Orbit\Concerns\Orbital;
-use Orbit\Drivers\Markdown;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Plugin extends Model implements Starrable
 {
@@ -46,9 +37,10 @@ class Plugin extends Model implements Starrable
         $table->string('github_repository');
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
-        $table->string('image');
+        $table->string('image')->nullable();
         $table->string('name');
         $table->string('slug');
+        $table->string('thumbnail')->nullable();
         $table->string('url')->nullable();
         $table->json('versions')->nullable();
     }
@@ -112,9 +104,22 @@ class Plugin extends Model implements Starrable
         );
     }
 
-    public function getImageUrl(): string
+    public function getImageUrl(): ?string
     {
-        return asset("images/content/plugins/{$this->image}");
+        if (blank($this->image)) {
+            return null;
+        }
+
+        return asset("images/content/plugins/images/{$this->image}");
+    }
+
+    public function getThumbnailUrl(): ?string
+    {
+        if (blank($this->thumbnail)) {
+            return $this->getImageUrl();
+        }
+
+        return asset("images/content/plugins/thumbnails/{$this->thumbnail}");
     }
 
     public function getCategories(): Collection

@@ -1,7 +1,5 @@
 @props([
     'darkMode' => false,
-    'previewify' => null,
-    'previewifyData' => [],
     'docSearch' => true,
 ])
 
@@ -9,7 +7,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="upgrade-insecure-requests"
+        />
 
         <meta
             name="application-name"
@@ -25,28 +26,6 @@
         />
 
         <x-seo::meta />
-
-        <!-- Previewify -->
-        @if ($previewify)
-            <meta
-                property="og:image"
-                content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}"
-            />
-            <meta
-                name="twitter:image"
-                content="https://previewify.app/generate/templates/{{ $previewify }}/meta?url={{ url()->current() }}"
-            />
-            <meta
-                name="previewify:image"
-                content="{{ asset('/images/icon.png') }}"
-            />
-            @foreach ($previewifyData as $key => $value)
-                <meta
-                    name="previewify:{{ $key }}"
-                    content="{{ $value }}"
-                />
-            @endforeach
-        @endif
 
         <link
             rel="icon"

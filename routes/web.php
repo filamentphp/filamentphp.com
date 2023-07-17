@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 if (config('app.env') === 'beta') {
-    Route::redirect('/', '/docs');
+    Route::redirect('/', '/docs')->name('home');
 } else {
     Route::view('/', 'home')->name('home');
 }
@@ -33,7 +32,7 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/navigation', '/docs/app/navigation');
     Route::redirect('/plugin-development', '/docs/app/plugin-development');
 
-    Route::get('/{slug?}', function (?string $slug = null): string {
+    Route::get('/{slug?}', function (string $slug = null): string {
         $slug = trim($slug, '/');
 
         $filePath = public_path("docs/{$slug}/index.html");
@@ -44,22 +43,6 @@ Route::prefix('/docs')->group(function () {
 
         return file_get_contents($filePath);
     })->where('slug', '.*')->name('docs');
-});
-
-Route::prefix('/links')->group(function () {
-    Route::get('/', Controllers\Links\ListLinksController::class)->name('links');
-
-    Route::name('links.')->group(function () {
-        Route::prefix('/{link}')->group(function () {
-            Route::get('/', Controllers\Links\ViewLinkController::class)->name('view');
-        });
-    });
-});
-
-Route::name('packages.')->prefix('/packages')->group(function () {
-    Route::view('/app', 'packages.app')->name('app');
-    Route::view('/forms', 'packages.forms')->name('forms');
-    Route::view('/tables', 'packages.tables')->name('tables');
 });
 
 Route::feeds();

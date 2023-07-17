@@ -1,14 +1,8 @@
 @props([
     'heading' => null,
-    'previewify' => null,
-    'previewifyData' => [],
 ])
 
-<x-layouts.base
-    {{ $attributes }}
-    :previewify="$previewify"
-    :previewify-data="$previewifyData"
->
+<x-layouts.base {{ $attributes }}>
     <x-nav />
 
     <button
@@ -35,7 +29,6 @@
                 route('plugins') => 'Plugins',
                 route('tricks') => 'Tricks',
                 route('blog') => 'Blog',
-                route('links') => 'Links',
                 route('consulting') => 'Consulting'
             ] as $url => $label)
                 <li>

@@ -21,6 +21,6 @@
 
     details summary p {
         display: inline-block;
-        margin-block: .75em !important;
+        margin-block: 0.75em !important;
     }
 }

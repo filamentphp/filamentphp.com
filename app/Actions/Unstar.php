@@ -3,7 +3,6 @@
 namespace App\Actions;
 
 use App\Models\Contracts\Starrable;
-use Illuminate\Database\Eloquent\Model;
 
 class Unstar
 {

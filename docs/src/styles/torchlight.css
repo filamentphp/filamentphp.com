@@ -1,5 +1,5 @@
 pre {
-  @apply overflow-x-auto rounded p-0;
+    @apply overflow-x-auto rounded p-0;
 }
 
 pre.astro-code {
@@ -11,66 +11,66 @@ pre.astro-code {
 }
 
 .hero pre.torchlight {
-  @apply !bg-transparent w-full !py-0 min-w-0;
+    @apply w-full min-w-0 !bg-transparent !py-0;
 }
 
 pre.torchlight {
-  @apply block min-w-full;
+    @apply block min-w-full;
 }
 
 pre.torchlight .line-number,
 pre.torchlight .summary-caret {
-  @apply mr-4 select-none;
+    @apply mr-4 select-none;
 }
 
 .torchlight.has-focus-lines .line:not(.line-focus) {
-  transition: filter 0.35s, opacity 0.35s;
-  filter: blur(0.095rem);
-  opacity: 0.65;
+    transition: filter 0.35s, opacity 0.35s;
+    filter: blur(0.095rem);
+    opacity: 0.65;
 }
 
 .torchlight.has-focus-lines:hover .line:not(.line-focus) {
-  filter: blur(0px);
-  opacity: 1;
+    filter: blur(0px);
+    opacity: 1;
 }
 
 .torchlight summary:focus {
-  outline: none;
+    outline: none;
 }
 
 /* Hide the default markers, as we provide our own */
 .torchlight details > summary::marker,
 .torchlight details > summary::-webkit-details-marker {
-  display: none;
+    display: none;
 }
 
 .torchlight details .summary-caret::after {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 /* Add spaces to keep everything aligned */
 .torchlight .summary-caret-empty::after,
 .torchlight details .summary-caret-middle::after,
 .torchlight details .summary-caret-end::after {
-  content: ' ';
+    content: ' ';
 }
 
 /* Show a minus sign when the block is open. */
 .torchlight details[open] .summary-caret-start::after {
-  content: '-';
+    content: '-';
 }
 
 /* And a plus sign when the block is closed. */
 .torchlight details:not([open]) .summary-caret-start::after {
-  content: '+';
+    content: '+';
 }
 
 /* Hide the [...] indicator when open. */
 .torchlight details[open] .summary-hide-when-open {
-  display: none;
+    display: none;
 }
 
 /* Show the [...] indicator when closed. */
 .torchlight details:not([open]) .summary-hide-when-open {
-  display: initial;
+    display: initial;
 }

@@ -164,7 +164,8 @@
                     x-ref="message"
                     class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-transparent brightness-150 sm:text-lg"
                 >
-                    Stop rebuilding the same UI over and over and over and over and over
+                    Stop rebuilding the same UI over and over and over and over
+                    and over
                 </div>
 
                 {{-- Plugins List --}}
@@ -219,7 +220,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Build a Laravel admin panel, customer-facing app, SaaS, or anything you can imagine!
+                                Build a Laravel admin panel, customer-facing
+                                app, SaaS, or anything you can imagine!
                             </div>
                         </div>
                     </a>
@@ -268,7 +270,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Craft beautiful, optimized, and interactive Livewire-powered datatables for any situation.
+                                Craft beautiful, optimized, and interactive
+                                Livewire-powered datatables for any situation.
                             </div>
                         </div>
                     </a>
@@ -317,7 +320,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Easily build stunning Livewire-powered forms with over 25 components out of the box.
+                                Easily build stunning Livewire-powered forms
+                                with over 25 components out of the box.
                             </div>
                         </div>
                     </a>
@@ -375,7 +379,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Notify your users of important events by delivering real-time messages using Livewire.
+                                Notify your users of important events by
+                                delivering real-time messages using Livewire.
                             </div>
                         </div>
                     </a>
@@ -404,7 +409,9 @@
                         </div>
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
-                                <div class="text-base font-medium">Action Modals</div>
+                                <div class="text-base font-medium">
+                                    Action Modals
+                                </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
                                 >
@@ -431,7 +438,9 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Open interactive modals and slide-overs - a great way to keep the user in the flow of the application.
+                                Open interactive modals and slide-overs - a
+                                great way to keep the user in the flow of the
+                                application.
                             </div>
                         </div>
                     </a>
@@ -497,7 +506,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Display read-only information to users about a particular record, with a fully flexible layout.
+                                Display read-only information to users about a
+                                particular record, with a fully flexible layout.
                             </div>
                         </div>
                     </a>
@@ -531,7 +541,9 @@
                         </div>
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
-                                <div class="text-base font-medium">Dashboard Widgets</div>
+                                <div class="text-base font-medium">
+                                    Dashboard Widgets
+                                </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
                                 >
@@ -558,7 +570,8 @@
                                 </div>
                             </div>
                             <div class="max-w-xs text-sm text-dolphin">
-                                Build a dashboard for your application, complete with real-time charts and stats.
+                                Build a dashboard for your application, complete
+                                with real-time charts and stats.
                             </div>
                         </div>
                     </a>
