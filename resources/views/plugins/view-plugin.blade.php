@@ -376,7 +376,9 @@
                             </a>
                         </div>
 
-                        <div class="mt-4 space-y-4 rounded-2xl bg-white p-6 text-center shadow-lg shadow-black/[0.01]">
+                        <div
+                            class="mt-4 space-y-4 rounded-2xl bg-white p-6 text-center shadow-lg shadow-black/[0.01]"
+                        >
                             @if ($plugin->author->getBio())
                                 <div class="prose prose-sm">
                                     {!! str($plugin->author->getBio())->markdown()->sanitizeHtml() !!}
@@ -385,9 +387,7 @@
 
                             {{-- Stats --}}
                             <div class="flex justify-center">
-                                <div
-                                    class="grid grid-cols-2 gap-10"
-                                >
+                                <div class="grid grid-cols-2 gap-10">
                                     {{-- Plugins --}}
                                     <div class="space-y-0.5">
                                         <div class="font-extrabold">
