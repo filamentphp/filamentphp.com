@@ -106,7 +106,7 @@ By default Filament comes with it's own CSS, which integrates neatly into the ad
 
 <br><br>
 
-## Installation
+## Installation guide: A Convenient Media Library for Filament Admin
 
 Thank you for purchasing the ultimate Media Library plugin for Filament Admin!
 
@@ -126,7 +126,7 @@ We'll need to publish the required migration first by running the following Arti
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
 ```
 
-The package is supported on both Laravel 8 and 9. Please be aware though that support for security fixes for Laravel 8 ends within a few months.
+The package is supported on Laravel 8, Laravel 9 and Laravel 10. Please be aware though that support for security fixes for Laravel 8 has ended.
 
 You'll also need to have the [ImageMagick PHP-extension](https://imagemagick.org) installed on your system for the image conversions to happen. This is a relatively common extension and required by the underlying Spatie media library plugin. If you are using Laravel Sail, check out the section below.
 
