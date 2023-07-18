@@ -6,55 +6,58 @@ import { Icon } from 'astro-icon'
 const { navigation } = Astro.props
 ---
 
-<div x-data class="flex items-center">
-  <button
-    type="button"
-    class="relative"
-    aria-label="Open navigation"
-    x-on:click="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
-  >
-    <Icon
-      name="menu-icon"
-      class="h-6 w-6 stroke-gray-500"
-    />
-  </button>
-  <div
-    x-ref="panel"
-    class="fixed !inset-0 z-[100] flex items-start overflow-y-auto pr-10 lg:hidden"
-    x-float.flip.teleport
-    aria-label="Navigation"
-  >
-    <div
-      class="bg-gray-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"
+<div
+    x-data
+    class="flex items-center"
+>
+    <button
+        type="button"
+        class="relative"
+        aria-label="Open navigation"
+        x-on:click="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
     >
-    </div>
-    <div
-      class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-gray-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black"
-    >
-      <div class="flex items-center">
-        <button
-          type="button"
-          aria-label="Close navigation"
-        >
-          <Icon
-            name="close-icon"
+        <Icon
+            name="menu-icon"
             class="h-6 w-6 stroke-gray-500"
-          />
-        </button>
-        <a
-          href="/docs/"
-          class="ml-6"
-          aria-label="Home page"
+        />
+    </button>
+    <div
+        x-ref="panel"
+        class="fixed !inset-0 z-[100] flex items-start overflow-y-auto pr-10 lg:hidden"
+        x-float.flip.teleport
+        aria-label="Navigation"
+    >
+        <div
+            class="bg-gray-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"
         >
-          <Logo class="fill-gray-700 dark:fill-primary-500" />
-        </a>
-      </div>
-      <div
-        class="mt-5 px-1"
-        x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
-      >
-        <Navigation navigation={navigation} />
-      </div>
+        </div>
+        <div
+            class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-gray-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black"
+        >
+            <div class="flex items-center">
+                <button
+                    type="button"
+                    aria-label="Close navigation"
+                >
+                    <Icon
+                        name="close-icon"
+                        class="h-6 w-6 stroke-gray-500"
+                    />
+                </button>
+                <a
+                    href="/docs/"
+                    class="ml-6"
+                    aria-label="Home page"
+                >
+                    <Logo class="fill-gray-700 dark:fill-primary-500" />
+                </a>
+            </div>
+            <div
+                class="mt-5 px-1"
+                x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
+            >
+                <Navigation navigation={navigation} />
+            </div>
+        </div>
     </div>
-  </div>
 </div>
