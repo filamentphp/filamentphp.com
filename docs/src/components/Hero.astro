@@ -1,5 +1,7 @@
 ---
-import book from '@assets/book-and-light-bulb.webp'
+import book from '@assets/hero/book.webp'
+import bulbLight from '@assets/hero/bulb-light.webp'
+import bulbDark from '@assets/hero/bulb-dark.webp'
 
 const { getStartedLink } = Astro.props
 ---
@@ -18,18 +20,34 @@ const { getStartedLink } = Astro.props
   <div class="grid place-items-center pt-4">
     <a
       href={getStartedLink}
-      class="px-7 py-3 rounded-full text-white bg-[#ffbc74] dark:text-midnight"
+      class="px-7 py-3 rounded-full transition duration-300 text-white bg-[#ffbc74] hover:bg-[#ffbc74]/80 dark:text-midnight dark:hover:bg-[#ffbc74]/90"
     >
       Get Started
     </a>
   </div>
   <div class="pt-5 relative w-full max-w-7xl mx-auto min-h-[270px]">
-    <!-- Book Image -->
-    <img
-      src={book}
-      alt=""
-      class="w-72 mx-auto"
-    />
+    <div class="grid place-items-center">
+      <div class="grid relative w-80 h-56">
+        <!-- Bulb Light -->
+        <img
+          src={bulbLight}
+          alt=""
+          class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden"
+        />
+        <!-- Bulb Dark -->
+        <img
+          src={bulbDark}
+          alt=""
+          class="[grid-area:1/-1] self-start mix-blend-lighten relative -left-1 -top-10 justify-self-center w-40 -z-10 hidden dark:block"
+        />
+        <!-- Book -->
+        <img
+          src={book}
+          alt=""
+          class="[grid-area:1/-1] self-end justify-self-center w-64"
+        />
+      </div>
+    </div>
     <!-- Stars -->
     <div class="absolute -top-52 left-10 hidden dark:block">
       <svg
