@@ -5,6 +5,5 @@ avatar: ralphjsmit.jpg
 github_url: https://github.com/ralphjsmit
 twitter_url: https://twitter.com/ralphjsmit
 ---
-
-I'm a Laravel-developer. Usually I spend my time doing freelance work and my university study (Business Economics).
-In the meantime I also write about PHP, Laravel, Tailwind & more on my personal blog, [**ralphjsmit.com**](https://ralphjsmit.com). (If you're interested, subscribe to my newsletter to occasionally receive an email with some updates.)
+    
+Ralph is a full-stack Laravel software engineer (freelance). He has been involved with the Filament community since the original release of Filament V1. He's also the author of the nr. 1 Filament plugin, [Media Library Pro](https://filamentphp.com/plugins/ralphjsmit-media-library-manager), and he sells and maintains multiple other premium packages for Filament.   

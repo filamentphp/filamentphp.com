@@ -3,6 +3,7 @@
 namespace App\Actions;
 
 use App\Models\Plugin;
+use function Filament\Support\format_money;
 use Illuminate\Support\Facades\Http;
 use Throwable;
 
@@ -62,7 +63,7 @@ class FetchPluginDataFromAnystack
                         return;
                     }
 
-                    $price = money($priceAmount, $priceCurrency);
+                    $price = format_money($priceAmount, $priceCurrency, divideBy: 100);
 
                     cache()->put($plugin->getPriceCacheKey(), $price);
 

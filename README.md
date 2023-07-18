@@ -48,6 +48,8 @@ versions: [2, 3]
 ---
 ```
 
+Please note: Do not include the word "Filament" in the name of your plugin. This is redundant, as all plugins on the website are for Filament. Please do not include it in the slug or filename either - unless its part of your author name.
+
 - The `slug` should match the current filename.
 - The `author_slug` should match the `slug` of the author profile you created earlier.
 - The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory. 
