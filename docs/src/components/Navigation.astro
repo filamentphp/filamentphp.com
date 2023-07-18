@@ -15,15 +15,15 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
 <nav
   class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16"
 >
-  <ul role="list" class="mb-9 space-y-2 rounded-md bg-gray-200 p-2 dark:bg-gray-800">
+  <ul role="list" class="mb-9 space-y-1">
     {navigation?.links.map((section) => (
       <li>
         <a
           href={section.href}
           class:list={[
-            "block rounded-md bg-gray-100 px-4 py-2 font-display font-bold dark:bg-gray-900",
-            { "text-primary-500 before:bg-primary-500": pathName.includes(`/${section.slug}/`) },
-            { "text-gray-600 before:hidden before:bg-gray-300 hover:text-primary-500 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": ! pathName.includes(`/${section.slug}/`) },
+            "block rounded-md px-4 py-2 font-display font-bold bg-merino dark:bg-dolphin/20",
+            { "text-primary-500": pathName.includes(`/${section.slug}/`) },
+            { "text-hurricane dark:text-cream hover:text-primary-500": ! pathName.includes(`/${section.slug}/`) },
           ]}
         >
           <h2 class="flex items-center gap-3">
