@@ -45,7 +45,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="hidden">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -66,6 +66,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       } else if (theme === "light" || (theme === "system" && !isDarkMode.matches)) {
         document.documentElement.classList.remove("dark");
       }
+      document.documentElement.classList.remove("hidden");
     </script>
 
   <!-- Styles -->

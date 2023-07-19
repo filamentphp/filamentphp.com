@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="astro-EVE5U6AI">
+<html lang="en" class="hidden astro-QN73T4GQ">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +15,9 @@
 
   <!-- Styles -->
   
-  <link rel="stylesheet" href="/docs/assets/dashboard.48f9fd08.css" />
-<link rel="stylesheet" href="/docs/assets/index.d926dd18.css" /><script type="module" src="/docs/hoisted.4b1d9601.js"></script></head>
-  <body class="bg-cream dark:bg-[#171529] astro-EVE5U6AI">
+  <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
+<link rel="stylesheet" href="/docs/assets/dashboard.f3556936.css" /><script type="module" src="/docs/hoisted.ac264982.js"></script></head>
+  <body class="bg-cream dark:bg-[#171529] astro-QN73T4GQ">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171529]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center">
@@ -260,7 +260,7 @@
       <span class="font-bold">2.x</span>
     </button>
 
-    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
+    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
         <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '2.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '2.x',
@@ -285,7 +285,64 @@
           </a>
     </div>
 </div>
-            <div x-data="themeSelector">
+            <div x-data="{
+    theme: 'system',
+    isDarkMode: window.matchMedia('(prefers-color-scheme: dark)'),
+    selected: 'system',
+    init() {
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.updateTheme(),
+        )
+
+        new MutationObserver(([{ oldValue }]) => {
+            let newValue =
+                document.documentElement.getAttribute('data-theme')
+            if (newValue !== oldValue) {
+                try {
+                    window.localStorage.setItem('theme', newValue)
+                } catch {}
+                this.updateThemeWithoutTransitions(newValue)
+            }
+        }).observe(document.documentElement, {
+            attributeFilter: ['data-theme'],
+            attributeOldValue: true,
+        })
+
+        this.isDarkMode.addEventListener('change', () =>
+            this.updateThemeWithoutTransitions(),
+        )
+    },
+    updateTheme(theme) {
+        this.theme = theme ?? window.localStorage.theme ?? 'system'
+
+        if (
+            this.theme === 'dark' ||
+            (this.theme === 'system' && this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.add('dark')
+        } else if (
+            this.theme === 'light' ||
+            (this.theme === 'system' && !this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.remove('dark')
+        }
+
+        this.selected = this.theme
+        window.localStorage.theme = this.theme
+        document.documentElement.setAttribute('data-theme', this.theme)
+        return this.theme
+    },
+    updateThemeWithoutTransitions(theme) {
+        this.updateTheme(theme)
+        document.documentElement.classList.add('[&_*]:!transition-none')
+        window.setTimeout(() => {
+            document.documentElement.classList.remove(
+                '[&_*]:!transition-none',
+            )
+        }, 0)
+    },
+}">
   <p class="sr-only">Theme</p>
   <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full ring-1 ring-black/5 dark:bg-dolphin/10 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-primary-500 [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
@@ -293,7 +350,7 @@
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-gray-400 [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-gray-400 [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
   </button>
-  <div x-ref="panel" x-cloak class="absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
+  <div x-ref="panel" class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
       <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === 'light',
               'text-gray-700 dark:text-gray-300': selected !== 'light',
@@ -331,12 +388,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-EVE5U6AI">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-EVE5U6AI">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-EVE5U6AI"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-EVE5U6AI"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-EVE5U6AI"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 astro-EVE5U6AI" x-data="{
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-QN73T4GQ">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-QN73T4GQ">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-QN73T4GQ"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-QN73T4GQ"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-QN73T4GQ"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 astro-QN73T4GQ" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -549,13 +606,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-EVE5U6AI">
-        <article class="astro-EVE5U6AI">
-          <header class="mb-9 space-y-1 astro-EVE5U6AI">
-              <p class="font-display text-sm font-bold text-primary-500 astro-EVE5U6AI">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-QN73T4GQ">
+        <article class="astro-QN73T4GQ">
+          <header class="mb-9 space-y-1 astro-QN73T4GQ">
+              <p class="font-display text-sm font-bold text-primary-500 astro-QN73T4GQ">
                   Admin Panel 
                 </p>
-              <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white astro-EVE5U6AI">
+              <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white astro-QN73T4GQ">
                   Users
                 </h1>
             </header>
@@ -622,56 +679,56 @@ class User extends Authenticatable implements FilamentUser, HasName
     }
 }
 </textarea></code></pre>
-<p>The <code>getFilamentName()</code> method is used to retrieve the name of the current user.</p><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/06-users.md" class="text-sm astro-EVE5U6AI" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-EVE5U6AI">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-EVE5U6AI">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-EVE5U6AI">GitHub discussion</a>
+<p>The <code>getFilamentName()</code> method is used to retrieve the name of the current user.</p><a href="https://github.com/filamentphp/filament/edit/2.x/packages/admin/docs/06-users.md" class="text-sm astro-QN73T4GQ" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-QN73T4GQ">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-QN73T4GQ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-QN73T4GQ">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-EVE5U6AI">
-          <div class="astro-EVE5U6AI">
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-QN73T4GQ">
+          <div class="astro-QN73T4GQ">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-EVE5U6AI">
-                  <a href="/docs/2.x/admin/navigation" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EVE5U6AI">
-                    <span aria-hidden="true" class="astro-EVE5U6AI">&larr;</span> Navigation
+                <dd class="mt-1 astro-QN73T4GQ">
+                  <a href="/docs/2.x/admin/navigation" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-QN73T4GQ">
+                    <span aria-hidden="true" class="astro-QN73T4GQ">&larr;</span> Navigation
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-EVE5U6AI">
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+            <div class="ml-auto text-right astro-QN73T4GQ">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   Next
                 </dt>
-                <dd class="mt-1 astro-EVE5U6AI">
-                  <a href="/docs/2.x/admin/notifications" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EVE5U6AI">
-                    Notifications <span aria-hidden="true" class="astro-EVE5U6AI">&rarr;</span>
+                <dd class="mt-1 astro-QN73T4GQ">
+                  <a href="/docs/2.x/admin/notifications" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-QN73T4GQ">
+                    Notifications <span aria-hidden="true" class="astro-QN73T4GQ">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 astro-EVE5U6AI">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-EVE5U6AI">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 astro-QN73T4GQ">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-QN73T4GQ">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-EVE5U6AI" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorizing-access-to-the-admin-panel&#34;,&#34;text&#34;:&#34;Authorizing access to the admin panel&#34;,&#34;title&#34;:&#34;Authorizing access to the admin panel&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-avatars&#34;,&#34;text&#34;:&#34;Setting up avatars&#34;,&#34;title&#34;:&#34;Setting up avatars&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;configuring-the-name-attribute&#34;,&#34;text&#34;:&#34;Configuring the name attribute&#34;,&#34;title&#34;:&#34;Configuring the name attribute&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#authorizing-access-to-the-admin-panel" x-bind:class="current == 'authorizing-access-to-the-admin-panel' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-QN73T4GQ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorizing-access-to-the-admin-panel&#34;,&#34;text&#34;:&#34;Authorizing access to the admin panel&#34;,&#34;title&#34;:&#34;Authorizing access to the admin panel&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-avatars&#34;,&#34;text&#34;:&#34;Setting up avatars&#34;,&#34;title&#34;:&#34;Setting up avatars&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;configuring-the-name-attribute&#34;,&#34;text&#34;:&#34;Configuring the name attribute&#34;,&#34;title&#34;:&#34;Configuring the name attribute&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#authorizing-access-to-the-admin-panel" x-bind:class="current == 'authorizing-access-to-the-admin-panel' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Authorizing access to the admin panel
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#setting-up-avatars" x-bind:class="current == 'setting-up-avatars' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#setting-up-avatars" x-bind:class="current == 'setting-up-avatars' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Setting up avatars
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#configuring-the-name-attribute" x-bind:class="current == 'configuring-the-name-attribute' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#configuring-the-name-attribute" x-bind:class="current == 'configuring-the-name-attribute' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Configuring the name attribute
                         </a>
                       </h3>

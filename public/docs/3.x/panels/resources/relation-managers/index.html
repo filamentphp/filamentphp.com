@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="astro-EVE5U6AI">
+<html lang="en" class="hidden astro-QN73T4GQ">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +15,9 @@
 
   <!-- Styles -->
   
-  <link rel="stylesheet" href="/docs/assets/dashboard.48f9fd08.css" />
-<link rel="stylesheet" href="/docs/assets/index.d926dd18.css" /><script type="module" src="/docs/hoisted.4b1d9601.js"></script></head>
-  <body class="bg-cream dark:bg-[#171529] astro-EVE5U6AI">
+  <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
+<link rel="stylesheet" href="/docs/assets/dashboard.f3556936.css" /><script type="module" src="/docs/hoisted.ac264982.js"></script></head>
+  <body class="bg-cream dark:bg-[#171529] astro-QN73T4GQ">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171529]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center">
@@ -284,7 +284,7 @@
       <span class="font-bold">3.x</span>
     </button>
 
-    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
+    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-gray-800 dark:ring-white/5" aria-label="Version options">
         <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '3.x',
               'text-gray-700 dark:text-gray-300': '3.x' !== '3.x',
@@ -309,7 +309,64 @@
           </a>
     </div>
 </div>
-            <div x-data="themeSelector">
+            <div x-data="{
+    theme: 'system',
+    isDarkMode: window.matchMedia('(prefers-color-scheme: dark)'),
+    selected: 'system',
+    init() {
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.updateTheme(),
+        )
+
+        new MutationObserver(([{ oldValue }]) => {
+            let newValue =
+                document.documentElement.getAttribute('data-theme')
+            if (newValue !== oldValue) {
+                try {
+                    window.localStorage.setItem('theme', newValue)
+                } catch {}
+                this.updateThemeWithoutTransitions(newValue)
+            }
+        }).observe(document.documentElement, {
+            attributeFilter: ['data-theme'],
+            attributeOldValue: true,
+        })
+
+        this.isDarkMode.addEventListener('change', () =>
+            this.updateThemeWithoutTransitions(),
+        )
+    },
+    updateTheme(theme) {
+        this.theme = theme ?? window.localStorage.theme ?? 'system'
+
+        if (
+            this.theme === 'dark' ||
+            (this.theme === 'system' && this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.add('dark')
+        } else if (
+            this.theme === 'light' ||
+            (this.theme === 'system' && !this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.remove('dark')
+        }
+
+        this.selected = this.theme
+        window.localStorage.theme = this.theme
+        document.documentElement.setAttribute('data-theme', this.theme)
+        return this.theme
+    },
+    updateThemeWithoutTransitions(theme) {
+        this.updateTheme(theme)
+        document.documentElement.classList.add('[&_*]:!transition-none')
+        window.setTimeout(() => {
+            document.documentElement.classList.remove(
+                '[&_*]:!transition-none',
+            )
+        }, 0)
+    },
+}">
   <p class="sr-only">Theme</p>
   <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full ring-1 ring-black/5 dark:bg-dolphin/10 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-primary-500 [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
@@ -317,7 +374,7 @@
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-gray-400 [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
     <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-gray-400 [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
   </button>
-  <div x-ref="panel" x-cloak class="absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
+  <div x-ref="panel" class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
       <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white" x-bind:class="{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === 'light',
               'text-gray-700 dark:text-gray-300': selected !== 'light',
@@ -355,12 +412,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-EVE5U6AI">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-EVE5U6AI">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-EVE5U6AI"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-EVE5U6AI"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-EVE5U6AI"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 astro-EVE5U6AI" x-data="{
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-QN73T4GQ">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-QN73T4GQ">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-QN73T4GQ"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-QN73T4GQ"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-QN73T4GQ"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 astro-QN73T4GQ" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -597,14 +654,14 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-EVE5U6AI">
-        <article class="astro-EVE5U6AI">
-          <header class="mb-9 space-y-1 astro-EVE5U6AI">
-              <p class="font-display text-sm font-bold text-primary-500 astro-EVE5U6AI">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-QN73T4GQ">
+        <article class="astro-QN73T4GQ">
+          <header class="mb-9 space-y-1 astro-QN73T4GQ">
+              <p class="font-display text-sm font-bold text-primary-500 astro-QN73T4GQ">
                   Panel Builder 
                       - Resources
                 </p>
-              <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white astro-EVE5U6AI">
+              <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white astro-QN73T4GQ">
                   Managing relationships
                 </h1>
             </header>
@@ -1071,246 +1128,246 @@ public function table(Table $table): Table
             // ...
         ]);
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/07-relation-managers.md" class="text-sm astro-EVE5U6AI" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-EVE5U6AI">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-EVE5U6AI">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-EVE5U6AI">GitHub discussion</a>
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/07-relation-managers.md" class="text-sm astro-QN73T4GQ" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-QN73T4GQ">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-QN73T4GQ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-QN73T4GQ">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-EVE5U6AI">
-          <div class="astro-EVE5U6AI">
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-QN73T4GQ">
+          <div class="astro-QN73T4GQ">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-EVE5U6AI">
-                  <a href="/docs/3.x/panels/resources/deleting-records" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EVE5U6AI">
-                    <span aria-hidden="true" class="astro-EVE5U6AI">&larr;</span> Deleting records
+                <dd class="mt-1 astro-QN73T4GQ">
+                  <a href="/docs/3.x/panels/resources/deleting-records" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-QN73T4GQ">
+                    <span aria-hidden="true" class="astro-QN73T4GQ">&larr;</span> Deleting records
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-EVE5U6AI">
-                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+            <div class="ml-auto text-right astro-QN73T4GQ">
+                <dt class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   Next
                 </dt>
-                <dd class="mt-1 astro-EVE5U6AI">
-                  <a href="/docs/3.x/panels/resources/global-search" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EVE5U6AI">
-                    Global search <span aria-hidden="true" class="astro-EVE5U6AI">&rarr;</span>
+                <dd class="mt-1 astro-QN73T4GQ">
+                  <a href="/docs/3.x/panels/resources/global-search" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-QN73T4GQ">
+                    Global search <span aria-hidden="true" class="astro-QN73T4GQ">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 astro-EVE5U6AI">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-EVE5U6AI">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white astro-EVE5U6AI">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 astro-QN73T4GQ">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-QN73T4GQ">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-gray-900 dark:text-white astro-QN73T4GQ">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-EVE5U6AI" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;choosing-the-right-tool-for-the-job&#34;,&#34;text&#34;:&#34;Choosing the right tool for the job&#34;,&#34;title&#34;:&#34;Choosing the right tool for the job&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;relation-managers---interactive-tables-underneath-your-resource-forms&#34;,&#34;text&#34;:&#34;Relation managers - interactive tables underneath your resource forms&#34;,&#34;title&#34;:&#34;Relation managers - interactive tables underneath your resource forms&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;select--checkbox-list---choose-from-existing-records-or-create-a-new-one&#34;,&#34;text&#34;:&#34;Select &#38; checkbox list - choose from existing records or create a new one&#34;,&#34;title&#34;:&#34;Select &#38; checkbox list - choose from existing records or create a new one&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;repeaters---crud-multiple-related-records-inside-the-owners-form&#34;,&#34;text&#34;:&#34;Repeaters - CRUD multiple related records inside the owner’s form&#34;,&#34;title&#34;:&#34;Repeaters - CRUD multiple related records inside the owner’s form&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;layout-form-components---saving-form-fields-to-a-single-relationship&#34;,&#34;text&#34;:&#34;Layout form components - saving form fields to a single relationship&#34;,&#34;title&#34;:&#34;Layout form components - saving form fields to a single relationship&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-a-relation-manager&#34;,&#34;text&#34;:&#34;Creating a relation manager&#34;,&#34;title&#34;:&#34;Creating a relation manager&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;unconventional-inverse-relationship-names&#34;,&#34;text&#34;:&#34;Unconventional inverse relationship names&#34;,&#34;title&#34;:&#34;Unconventional inverse relationship names&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-soft-deletes&#34;,&#34;text&#34;:&#34;Handling soft deletes&#34;,&#34;title&#34;:&#34;Handling soft deletes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;listing-related-records&#34;,&#34;text&#34;:&#34;Listing related records&#34;,&#34;title&#34;:&#34;Listing related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;listing-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Listing with pivot attributes&#34;,&#34;title&#34;:&#34;Listing with pivot attributes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-related-records&#34;,&#34;text&#34;:&#34;Creating related records&#34;,&#34;title&#34;:&#34;Creating related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;creating-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Creating with pivot attributes&#34;,&#34;title&#34;:&#34;Creating with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-createaction&#34;,&#34;text&#34;:&#34;Customizing the CreateAction&#34;,&#34;title&#34;:&#34;Customizing the CreateAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;editing-related-records&#34;,&#34;text&#34;:&#34;Editing related records&#34;,&#34;title&#34;:&#34;Editing related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;editing-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Editing with pivot attributes&#34;,&#34;title&#34;:&#34;Editing with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-editaction&#34;,&#34;text&#34;:&#34;Customizing the EditAction&#34;,&#34;title&#34;:&#34;Customizing the EditAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;attaching-and-detaching-records&#34;,&#34;text&#34;:&#34;Attaching and detaching records&#34;,&#34;title&#34;:&#34;Attaching and detaching records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;preloading-the-attachment-modal-select-options&#34;,&#34;text&#34;:&#34;Preloading the attachment modal select options&#34;,&#34;title&#34;:&#34;Preloading the attachment modal select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;attaching-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Attaching with pivot attributes&#34;,&#34;title&#34;:&#34;Attaching with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scoping-the-options&#34;,&#34;text&#34;:&#34;Scoping the options&#34;,&#34;title&#34;:&#34;Scoping the options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-duplicates&#34;,&#34;text&#34;:&#34;Handling duplicates&#34;,&#34;title&#34;:&#34;Handling duplicates&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;associating-and-dissociating-records&#34;,&#34;text&#34;:&#34;Associating and dissociating records&#34;,&#34;title&#34;:&#34;Associating and dissociating records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;preloading-the-associate-modal-select-options&#34;,&#34;text&#34;:&#34;Preloading the associate modal select options&#34;,&#34;title&#34;:&#34;Preloading the associate modal select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scoping-the-options-1&#34;,&#34;text&#34;:&#34;Scoping the options&#34;,&#34;title&#34;:&#34;Scoping the options&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;viewing-related-records&#34;,&#34;text&#34;:&#34;Viewing related records&#34;,&#34;title&#34;:&#34;Viewing related records&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;deleting-related-records&#34;,&#34;text&#34;:&#34;Deleting related records&#34;,&#34;title&#34;:&#34;Deleting related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-deleteaction&#34;,&#34;text&#34;:&#34;Customizing the DeleteAction&#34;,&#34;title&#34;:&#34;Customizing the DeleteAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-relationships-owner-record&#34;,&#34;text&#34;:&#34;Accessing the relationship’s owner record&#34;,&#34;title&#34;:&#34;Accessing the relationship’s owner record&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grouping-relation-managers&#34;,&#34;text&#34;:&#34;Grouping relation managers&#34;,&#34;title&#34;:&#34;Grouping relation managers&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;conditionally-showing-relation-managers&#34;,&#34;text&#34;:&#34;Conditionally showing relation managers&#34;,&#34;title&#34;:&#34;Conditionally showing relation managers&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;combining-the-relation-manager-tabs-with-the-form&#34;,&#34;text&#34;:&#34;Combining the relation manager tabs with the form&#34;,&#34;title&#34;:&#34;Combining the relation manager tabs with the form&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;sharing-a-resources-form-and-table-with-a-relation-manager&#34;,&#34;text&#34;:&#34;Sharing a resource’s form and table with a relation manager&#34;,&#34;title&#34;:&#34;Sharing a resource’s form and table with a relation manager&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-form-component-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared form component on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared form component on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-table-column-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared table column on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared table column on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-table-filter-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared table filter on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared table filter on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;overriding-shared-configuration-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Overriding shared configuration on the relation manager&#34;,&#34;title&#34;:&#34;Overriding shared configuration on the relation manager&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-relation-manager-eloquent-query&#34;,&#34;text&#34;:&#34;Customizing the relation manager Eloquent query&#34;,&#34;title&#34;:&#34;Customizing the relation manager Eloquent query&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#choosing-the-right-tool-for-the-job" x-bind:class="current == 'choosing-the-right-tool-for-the-job' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-QN73T4GQ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;choosing-the-right-tool-for-the-job&#34;,&#34;text&#34;:&#34;Choosing the right tool for the job&#34;,&#34;title&#34;:&#34;Choosing the right tool for the job&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;relation-managers---interactive-tables-underneath-your-resource-forms&#34;,&#34;text&#34;:&#34;Relation managers - interactive tables underneath your resource forms&#34;,&#34;title&#34;:&#34;Relation managers - interactive tables underneath your resource forms&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;select--checkbox-list---choose-from-existing-records-or-create-a-new-one&#34;,&#34;text&#34;:&#34;Select &#38; checkbox list - choose from existing records or create a new one&#34;,&#34;title&#34;:&#34;Select &#38; checkbox list - choose from existing records or create a new one&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;repeaters---crud-multiple-related-records-inside-the-owners-form&#34;,&#34;text&#34;:&#34;Repeaters - CRUD multiple related records inside the owner’s form&#34;,&#34;title&#34;:&#34;Repeaters - CRUD multiple related records inside the owner’s form&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;layout-form-components---saving-form-fields-to-a-single-relationship&#34;,&#34;text&#34;:&#34;Layout form components - saving form fields to a single relationship&#34;,&#34;title&#34;:&#34;Layout form components - saving form fields to a single relationship&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-a-relation-manager&#34;,&#34;text&#34;:&#34;Creating a relation manager&#34;,&#34;title&#34;:&#34;Creating a relation manager&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;unconventional-inverse-relationship-names&#34;,&#34;text&#34;:&#34;Unconventional inverse relationship names&#34;,&#34;title&#34;:&#34;Unconventional inverse relationship names&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-soft-deletes&#34;,&#34;text&#34;:&#34;Handling soft deletes&#34;,&#34;title&#34;:&#34;Handling soft deletes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;listing-related-records&#34;,&#34;text&#34;:&#34;Listing related records&#34;,&#34;title&#34;:&#34;Listing related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;listing-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Listing with pivot attributes&#34;,&#34;title&#34;:&#34;Listing with pivot attributes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-related-records&#34;,&#34;text&#34;:&#34;Creating related records&#34;,&#34;title&#34;:&#34;Creating related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;creating-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Creating with pivot attributes&#34;,&#34;title&#34;:&#34;Creating with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-createaction&#34;,&#34;text&#34;:&#34;Customizing the CreateAction&#34;,&#34;title&#34;:&#34;Customizing the CreateAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;editing-related-records&#34;,&#34;text&#34;:&#34;Editing related records&#34;,&#34;title&#34;:&#34;Editing related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;editing-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Editing with pivot attributes&#34;,&#34;title&#34;:&#34;Editing with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-editaction&#34;,&#34;text&#34;:&#34;Customizing the EditAction&#34;,&#34;title&#34;:&#34;Customizing the EditAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;attaching-and-detaching-records&#34;,&#34;text&#34;:&#34;Attaching and detaching records&#34;,&#34;title&#34;:&#34;Attaching and detaching records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;preloading-the-attachment-modal-select-options&#34;,&#34;text&#34;:&#34;Preloading the attachment modal select options&#34;,&#34;title&#34;:&#34;Preloading the attachment modal select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;attaching-with-pivot-attributes&#34;,&#34;text&#34;:&#34;Attaching with pivot attributes&#34;,&#34;title&#34;:&#34;Attaching with pivot attributes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scoping-the-options&#34;,&#34;text&#34;:&#34;Scoping the options&#34;,&#34;title&#34;:&#34;Scoping the options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-duplicates&#34;,&#34;text&#34;:&#34;Handling duplicates&#34;,&#34;title&#34;:&#34;Handling duplicates&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;associating-and-dissociating-records&#34;,&#34;text&#34;:&#34;Associating and dissociating records&#34;,&#34;title&#34;:&#34;Associating and dissociating records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;preloading-the-associate-modal-select-options&#34;,&#34;text&#34;:&#34;Preloading the associate modal select options&#34;,&#34;title&#34;:&#34;Preloading the associate modal select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scoping-the-options-1&#34;,&#34;text&#34;:&#34;Scoping the options&#34;,&#34;title&#34;:&#34;Scoping the options&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;viewing-related-records&#34;,&#34;text&#34;:&#34;Viewing related records&#34;,&#34;title&#34;:&#34;Viewing related records&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;deleting-related-records&#34;,&#34;text&#34;:&#34;Deleting related records&#34;,&#34;title&#34;:&#34;Deleting related records&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-deleteaction&#34;,&#34;text&#34;:&#34;Customizing the DeleteAction&#34;,&#34;title&#34;:&#34;Customizing the DeleteAction&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-relationships-owner-record&#34;,&#34;text&#34;:&#34;Accessing the relationship’s owner record&#34;,&#34;title&#34;:&#34;Accessing the relationship’s owner record&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grouping-relation-managers&#34;,&#34;text&#34;:&#34;Grouping relation managers&#34;,&#34;title&#34;:&#34;Grouping relation managers&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;conditionally-showing-relation-managers&#34;,&#34;text&#34;:&#34;Conditionally showing relation managers&#34;,&#34;title&#34;:&#34;Conditionally showing relation managers&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;combining-the-relation-manager-tabs-with-the-form&#34;,&#34;text&#34;:&#34;Combining the relation manager tabs with the form&#34;,&#34;title&#34;:&#34;Combining the relation manager tabs with the form&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;sharing-a-resources-form-and-table-with-a-relation-manager&#34;,&#34;text&#34;:&#34;Sharing a resource’s form and table with a relation manager&#34;,&#34;title&#34;:&#34;Sharing a resource’s form and table with a relation manager&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-form-component-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared form component on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared form component on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-table-column-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared table column on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared table column on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-a-shared-table-filter-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Hiding a shared table filter on the relation manager&#34;,&#34;title&#34;:&#34;Hiding a shared table filter on the relation manager&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;overriding-shared-configuration-on-the-relation-manager&#34;,&#34;text&#34;:&#34;Overriding shared configuration on the relation manager&#34;,&#34;title&#34;:&#34;Overriding shared configuration on the relation manager&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-relation-manager-eloquent-query&#34;,&#34;text&#34;:&#34;Customizing the relation manager Eloquent query&#34;,&#34;title&#34;:&#34;Customizing the relation manager Eloquent query&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#choosing-the-right-tool-for-the-job" x-bind:class="current == 'choosing-the-right-tool-for-the-job' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Choosing the right tool for the job
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#relation-managers---interactive-tables-underneath-your-resource-forms" x-bind:class="current == 'relation-managers---interactive-tables-underneath-your-resource-forms' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#relation-managers---interactive-tables-underneath-your-resource-forms" x-bind:class="current == 'relation-managers---interactive-tables-underneath-your-resource-forms' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Relation managers - interactive tables underneath your resource forms
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#select--checkbox-list---choose-from-existing-records-or-create-a-new-one" x-bind:class="current == 'select--checkbox-list---choose-from-existing-records-or-create-a-new-one' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#select--checkbox-list---choose-from-existing-records-or-create-a-new-one" x-bind:class="current == 'select--checkbox-list---choose-from-existing-records-or-create-a-new-one' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Select &amp; checkbox list - choose from existing records or create a new one
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#repeaters---crud-multiple-related-records-inside-the-owners-form" x-bind:class="current == 'repeaters---crud-multiple-related-records-inside-the-owners-form' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#repeaters---crud-multiple-related-records-inside-the-owners-form" x-bind:class="current == 'repeaters---crud-multiple-related-records-inside-the-owners-form' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Repeaters - CRUD multiple related records inside the owner’s form
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#layout-form-components---saving-form-fields-to-a-single-relationship" x-bind:class="current == 'layout-form-components---saving-form-fields-to-a-single-relationship' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#layout-form-components---saving-form-fields-to-a-single-relationship" x-bind:class="current == 'layout-form-components---saving-form-fields-to-a-single-relationship' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Layout form components - saving form fields to a single relationship
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#creating-a-relation-manager" x-bind:class="current == 'creating-a-relation-manager' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#creating-a-relation-manager" x-bind:class="current == 'creating-a-relation-manager' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Creating a relation manager
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#unconventional-inverse-relationship-names" x-bind:class="current == 'unconventional-inverse-relationship-names' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#unconventional-inverse-relationship-names" x-bind:class="current == 'unconventional-inverse-relationship-names' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Unconventional inverse relationship names
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#handling-soft-deletes" x-bind:class="current == 'handling-soft-deletes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#handling-soft-deletes" x-bind:class="current == 'handling-soft-deletes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Handling soft deletes
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#listing-related-records" x-bind:class="current == 'listing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#listing-related-records" x-bind:class="current == 'listing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Listing related records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#listing-with-pivot-attributes" x-bind:class="current == 'listing-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#listing-with-pivot-attributes" x-bind:class="current == 'listing-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Listing with pivot attributes
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#creating-related-records" x-bind:class="current == 'creating-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#creating-related-records" x-bind:class="current == 'creating-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Creating related records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#creating-with-pivot-attributes" x-bind:class="current == 'creating-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#creating-with-pivot-attributes" x-bind:class="current == 'creating-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Creating with pivot attributes
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#customizing-the-createaction" x-bind:class="current == 'customizing-the-createaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#customizing-the-createaction" x-bind:class="current == 'customizing-the-createaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Customizing the CreateAction
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#editing-related-records" x-bind:class="current == 'editing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#editing-related-records" x-bind:class="current == 'editing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Editing related records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#editing-with-pivot-attributes" x-bind:class="current == 'editing-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#editing-with-pivot-attributes" x-bind:class="current == 'editing-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Editing with pivot attributes
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#customizing-the-editaction" x-bind:class="current == 'customizing-the-editaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#customizing-the-editaction" x-bind:class="current == 'customizing-the-editaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Customizing the EditAction
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#attaching-and-detaching-records" x-bind:class="current == 'attaching-and-detaching-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#attaching-and-detaching-records" x-bind:class="current == 'attaching-and-detaching-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Attaching and detaching records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#preloading-the-attachment-modal-select-options" x-bind:class="current == 'preloading-the-attachment-modal-select-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#preloading-the-attachment-modal-select-options" x-bind:class="current == 'preloading-the-attachment-modal-select-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Preloading the attachment modal select options
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#attaching-with-pivot-attributes" x-bind:class="current == 'attaching-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#attaching-with-pivot-attributes" x-bind:class="current == 'attaching-with-pivot-attributes' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Attaching with pivot attributes
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#scoping-the-options" x-bind:class="current == 'scoping-the-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#scoping-the-options" x-bind:class="current == 'scoping-the-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Scoping the options
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#handling-duplicates" x-bind:class="current == 'handling-duplicates' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#handling-duplicates" x-bind:class="current == 'handling-duplicates' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Handling duplicates
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#associating-and-dissociating-records" x-bind:class="current == 'associating-and-dissociating-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#associating-and-dissociating-records" x-bind:class="current == 'associating-and-dissociating-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Associating and dissociating records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#preloading-the-associate-modal-select-options" x-bind:class="current == 'preloading-the-associate-modal-select-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#preloading-the-associate-modal-select-options" x-bind:class="current == 'preloading-the-associate-modal-select-options' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Preloading the associate modal select options
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#scoping-the-options-1" x-bind:class="current == 'scoping-the-options-1' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#scoping-the-options-1" x-bind:class="current == 'scoping-the-options-1' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Scoping the options
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#viewing-related-records" x-bind:class="current == 'viewing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#viewing-related-records" x-bind:class="current == 'viewing-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Viewing related records
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#deleting-related-records" x-bind:class="current == 'deleting-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#deleting-related-records" x-bind:class="current == 'deleting-related-records' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Deleting related records
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#customizing-the-deleteaction" x-bind:class="current == 'customizing-the-deleteaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#customizing-the-deleteaction" x-bind:class="current == 'customizing-the-deleteaction' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Customizing the DeleteAction
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#accessing-the-relationships-owner-record" x-bind:class="current == 'accessing-the-relationships-owner-record' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#accessing-the-relationships-owner-record" x-bind:class="current == 'accessing-the-relationships-owner-record' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Accessing the relationship’s owner record
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#grouping-relation-managers" x-bind:class="current == 'grouping-relation-managers' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#grouping-relation-managers" x-bind:class="current == 'grouping-relation-managers' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Grouping relation managers
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#conditionally-showing-relation-managers" x-bind:class="current == 'conditionally-showing-relation-managers' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#conditionally-showing-relation-managers" x-bind:class="current == 'conditionally-showing-relation-managers' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Conditionally showing relation managers
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#combining-the-relation-manager-tabs-with-the-form" x-bind:class="current == 'combining-the-relation-manager-tabs-with-the-form' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#combining-the-relation-manager-tabs-with-the-form" x-bind:class="current == 'combining-the-relation-manager-tabs-with-the-form' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Combining the relation manager tabs with the form
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#sharing-a-resources-form-and-table-with-a-relation-manager" x-bind:class="current == 'sharing-a-resources-form-and-table-with-a-relation-manager' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#sharing-a-resources-form-and-table-with-a-relation-manager" x-bind:class="current == 'sharing-a-resources-form-and-table-with-a-relation-manager' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Sharing a resource’s form and table with a relation manager
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EVE5U6AI">
-                          <li class="astro-EVE5U6AI">
-                              <a href="#hiding-a-shared-form-component-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-form-component-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-QN73T4GQ">
+                          <li class="astro-QN73T4GQ">
+                              <a href="#hiding-a-shared-form-component-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-form-component-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Hiding a shared form component on the relation manager
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#hiding-a-shared-table-column-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-table-column-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#hiding-a-shared-table-column-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-table-column-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Hiding a shared table column on the relation manager
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#hiding-a-shared-table-filter-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-table-filter-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#hiding-a-shared-table-filter-on-the-relation-manager" x-bind:class="current == 'hiding-a-shared-table-filter-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Hiding a shared table filter on the relation manager
                               </a>
-                            </li><li class="astro-EVE5U6AI">
-                              <a href="#overriding-shared-configuration-on-the-relation-manager" x-bind:class="current == 'overriding-shared-configuration-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-EVE5U6AI">
+                            </li><li class="astro-QN73T4GQ">
+                              <a href="#overriding-shared-configuration-on-the-relation-manager" x-bind:class="current == 'overriding-shared-configuration-on-the-relation-manager' ? &#34;text-primary-500&#34; : &#34;hover:text-gray-600 dark:hover:text-gray-300&#34;" class="astro-QN73T4GQ">
                                 Overriding shared configuration on the relation manager
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EVE5U6AI">
-                      <h3 class="astro-EVE5U6AI">
-                        <a href="#customizing-the-relation-manager-eloquent-query" x-bind:class="current == 'customizing-the-relation-manager-eloquent-query' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-EVE5U6AI">
+                    </li><li class="astro-QN73T4GQ">
+                      <h3 class="astro-QN73T4GQ">
+                        <a href="#customizing-the-relation-manager-eloquent-query" x-bind:class="current == 'customizing-the-relation-manager-eloquent-query' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'" class="astro-QN73T4GQ">
                           Customizing the relation manager Eloquent query
                         </a>
                       </h3>
