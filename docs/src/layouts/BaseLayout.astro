@@ -111,7 +111,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           {(title || section) && (
             <header class="mb-9 space-y-1">
               {! isHomePage && (
-                <p class="font-display text-sm font-bold text-primary-500">
+                <p class="font-display text-sm font-bold text-butter">
                   {packageNavigation.title} {section && section.links.length !== 0 && (
                     <>
                       - {section.title}
@@ -169,7 +169,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )}
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar">
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           {
             tableOfContents.length > 0 && (
@@ -186,7 +186,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                       <h3>
                         <a
                           href={`#${section.slug}`}
-                          x-bind:class={`current == '${section.slug}' ? 'text-primary-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'`}
+                          x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'`}
                         >
                           {section.title}
                         </a>
@@ -197,7 +197,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                             <li>
                               <a
                                 href={`#${subSection.slug}`}
-                                x-bind:class={`current == '${subSection.slug}' ? "text-primary-500" : "hover:text-gray-600 dark:hover:text-gray-300"`}
+                                x-bind:class={`current == '${subSection.slug}' ? "text-butter" : "hover:text-gray-600 dark:hover:text-gray-300"`}
                               >
                                 {subSection.title}
                               </a>
