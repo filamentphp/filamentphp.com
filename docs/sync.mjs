@@ -15,20 +15,18 @@ const getDirContents = (dir, filelist = []) => {
 
 const packageSlugToTitle = (slug) => {
     switch (slug) {
-        case 'actions':
-            return 'Action Modals'
         case 'admin':
             return 'Admin Panel'
         case 'forms':
             return 'Form Builder'
+        case 'infolists':
+            return 'Infolist Builder'
         case 'panels':
             return 'Panel Builder'
         case 'support':
             return 'Core Concepts'
         case 'tables':
             return 'Table Builder'
-        case 'widgets':
-            return 'Dashboard Widgets'
         default:
             return GrafiteHelper(slug.replace('-', ' ')).title()
     }
@@ -40,13 +38,11 @@ const packageSlugToIcon = (slug) => {
             return 'heroicons:play'
         case 'admin':
         case 'panels':
-            return 'heroicons:wrench-screwdriver'
-        case 'app':
             return 'heroicons:window'
         case 'forms':
             return 'heroicons:document-text'
         case 'infolists':
-            return 'heroicons:information-circle'
+            return 'heroicons:queue-list'
         case 'tables':
             return 'heroicons:table-cells'
         case 'notifications':

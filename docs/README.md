@@ -32,23 +32,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium aut! 
 </Callout>
 ```
 
-### QuickLinks
-
-```mdx
----
-title: Some title
----
-import QuickLinks from "@components/QuickLinks.astro"
-import QuickLink from "@components/QuickLink.astro"
-
-<QuickLinks>
-<QuickLink title="Admin Panel" icon="heroicons:chart-bar" href="/docs/2.x/admin/installation" description="A fully-featured Laravel admin panel." />
-<QuickLink title="Forms Builder" icon="heroicons:document-text" href="/docs/2.x/forms/installation" description="An intuitive Laravel form builder." />
-<QuickLink title="Tables Builder" icon="heroicons:table-cells" href="/docs/2.x/tables/installation" description="An interactive Laravel table builder." />
-<QuickLink title="Notifications" icon="heroicons:bell" href="/docs/2.x/notifications/installation" description="Powerful Laravel notifications." />
-</QuickLinks>
-```
-
 ## Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
