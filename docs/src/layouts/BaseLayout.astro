@@ -78,7 +78,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
   </style>
   </head>
-  <body class="bg-cream dark:bg-[#171529]">
+  <body class="bg-cream dark:bg-[#171529] selection:bg-stone-500/10">
     <Header navigation={navigation} />
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
@@ -88,7 +88,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden"></div>
         <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
         <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5" x-data={`{
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar" x-data={`{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;

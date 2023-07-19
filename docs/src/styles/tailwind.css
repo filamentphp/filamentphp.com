@@ -24,3 +24,24 @@
         margin-block: 0.75em !important;
     }
 }
+
+.navigation-custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f1e5e4b0 transparent;
+}
+
+.navigation-custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.navigation-custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.navigation-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #f1e5e4b0;
+  border-radius: 100vh;
+  border: 3px solid transparent;
+}
+.navigation-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d4c6c5;
+}
