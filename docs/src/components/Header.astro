@@ -50,14 +50,14 @@ let { navigation = null } = Astro.props
             <div id="docsearch"></div>
             <a
                 href="https://github.com/filamentphp/filament"
-                class="group hidden sm:block"
+                class="group/github-link hidden sm:block"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <Icon
                     name="github"
-                    class="h-7 w-7 fill-gray-900 group-hover:fill-primary-600 dark:fill-gray-300 dark:group-hover:fill-primary-500"
+                    class="h-7 w-7 transition duration-200 fill-stone-800 group-hover/github-link:fill-black dark:fill-gray-300 dark:group-hover/github-link:fill-white"
                 />
             </a>
         </div>
