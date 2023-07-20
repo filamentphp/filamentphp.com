@@ -22,12 +22,22 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
           href={section.href}
           class:list={[
             "group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20",
-            { "text-black dark:text-peach-orange bg-peach-orange/80 font-bold": pathName.includes(`/${section.slug}/`) },
+            { "text-black dark:text-butter bg-peach-orange/80 font-bold": pathName.includes(`/${section.slug}/`) },
             { "font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30": ! pathName.includes(`/${section.slug}/`) },
           ]}
         >
-          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
-            <Icon name={section.icon} class="h-5 w-5" />
+          <h2
+            class:list={[
+            "flex items-center gap-4 transition duration-300",
+            { "group-hover/navigation-section-link:translate-x-1": ! pathName.includes(`/${section.slug}/`) },
+          ]}
+          >
+            <Icon name={section.icon} class=""
+              class:list={[
+            "h-5 w-5 transition duration-300",
+            { "dark:group-hover/navigation-section-link:text-purple-400": ! pathName.includes(`/${section.slug}/`) },
+          ]}
+          />
             <span>{section.title}</span>
           </h2>
         </a>
