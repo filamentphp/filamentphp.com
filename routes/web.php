@@ -49,6 +49,22 @@ Route::prefix('/docs')->group(function () {
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+        $packageSlug = (string) str($slug)
+            ->after('.x')
+            ->after('/')
+            ->before('/');
+
+        if (blank($packageSlug)) {
+            return redirect($versionNavigation['href']);
+        }
+
+        foreach ($versionNavigation['links'] as $packageNavigation) {
+            if ($packageNavigation['slug'] !== $packageSlug) {
+                continue;
+            }
+
+            return redirect($packageNavigation['href']);
+        }
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
