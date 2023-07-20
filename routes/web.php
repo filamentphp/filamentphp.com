@@ -47,7 +47,10 @@ Route::prefix('/docs')->group(function () {
             return file_get_contents($filePath);
         }
 
-        abort(404);
+        $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
+        $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+
+        return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 
