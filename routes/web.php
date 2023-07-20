@@ -34,6 +34,16 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/navigation', '/docs/panels/navigation');
     Route::redirect('/plugin-development', '/docs/panels/plugins');
 
+    Route::redirect('/admin', '/docs/panels/installation');
+    Route::redirect('/panels', '/docs/panels/installation');
+    Route::redirect('/forms', '/docs/forms/installation');
+    Route::redirect('/tables', '/docs/tables/installation');
+    Route::redirect('/notifications', '/docs/notifications/installation');
+    Route::redirect('/actions', '/docs/actions/installation');
+    Route::redirect('/infolists', '/docs/infolists/installation');
+    Route::redirect('/widgets', '/docs/widgets/installation');
+    Route::redirect('/support', '/docs/support/overview');
+
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $slug = trim($slug, '/');
 
