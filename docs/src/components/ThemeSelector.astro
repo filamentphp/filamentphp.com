@@ -73,14 +73,14 @@ const themes = [
     aria-label="Open navigation"
     x-on:click="$refs.panel.toggle"
   >
-    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-primary-500 [[data-theme=light]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-primary-500 [[data-theme=dark]_&]:block" />
-    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-gray-400 [:not(.dark)[data-theme=system]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-gray-400 [.dark[data-theme=system]_&]:block" />
+    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-butter [[data-theme=light]_&]:block" />
+    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-butter [[data-theme=dark]_&]:block" />
+    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-hurricane [:not(.dark)[data-theme=system]_&]:block" />
+    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-hurricane [.dark[data-theme=system]_&]:block" />
   </button>
   <div
     x-ref="panel"
-    class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5"
+    class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-[#1f1c36] dark:ring-white/5"
     x-float.shift.offset.trap="{shift: {padding: 12}}"
     aria-label="Theme options"
   >
@@ -88,14 +88,14 @@ const themes = [
         <button
           x-bind:key={theme.value}
           x-on:click={`updateTheme('${theme.value}'); $refs.panel.close();`}
-          class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white"
+          class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200"
           x-bind:class={`{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': selected === '${theme.value}',
-              'text-gray-700 dark:text-gray-300': selected !== '${theme.value}',
+              'text-butter hover:text-butter hover:dark:text-butter': selected === '${theme.value}',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== '${theme.value}',
             }`}
         >
-          <div class="rounded-md bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5">
-            <Icon name={theme.icon} class="h-4 w-4" x-bind:class={`selected == '${theme.value}' ? 'fill-primary-500 dark:fill-primary-500' : 'fill-gray-400'`} />
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <Icon name={theme.icon} class="h-4 w-4" x-bind:class={`selected == '${theme.value}' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'`} />
           </div>
           <div class="ml-3">{theme.name}</div>
         </button>
