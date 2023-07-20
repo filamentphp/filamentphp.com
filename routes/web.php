@@ -41,7 +41,7 @@ Route::prefix('/docs')->group(function () {
             return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        $filePath = public_path(str_replace('//', '/', "docs/{$slug}/index.html"));
+        $filePath = public_path("docs/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
@@ -49,22 +49,22 @@ Route::prefix('/docs')->group(function () {
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
-        $packageSlug = (string) str($slug)
-            ->after('.x')
-            ->after('/')
-            ->before('/');
-
-        if (blank($packageSlug)) {
-            return redirect($versionNavigation['href']);
-        }
-
-        foreach ($versionNavigation['links'] as $packageNavigation) {
-            if ($packageNavigation['slug'] !== $packageSlug) {
-                continue;
-            }
-
-            return redirect($packageNavigation['href']);
-        }
+//        $packageSlug = (string) str($slug)
+//            ->after('.x')
+//            ->after('/')
+//            ->before('/');
+//
+//        if (blank($packageSlug)) {
+//            return redirect($versionNavigation['href']);
+//        }
+//
+//        foreach ($versionNavigation['links'] as $packageNavigation) {
+//            if ($packageNavigation['slug'] !== $packageSlug) {
+//                continue;
+//            }
+//
+//            return redirect($packageNavigation['href']);
+//        }
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
