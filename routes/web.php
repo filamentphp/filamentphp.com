@@ -55,12 +55,6 @@ Route::prefix('/docs')->group(function () {
             ->before('/');
 
         if (blank($packageSlug)) {
-            if (session()->get('previousRedirect') === $versionNavigation['href']) {
-                throw new Exception("Infinite redirect detected for slug [{$slug}] with a blank package slug.");
-            }
-
-            session()->put('previousRedirect', $versionNavigation['href']);
-
             return redirect($versionNavigation['href']);
         }
 
@@ -69,20 +63,8 @@ Route::prefix('/docs')->group(function () {
                 continue;
             }
 
-            if (session()->get('previousRedirect') === $packageNavigation['href']) {
-                throw new Exception("Infinite redirect detected for slug [{$slug}] with a blank page slug.");
-            }
-
-            session()->put('previousRedirect', $packageNavigation['href']);
-
             return redirect($packageNavigation['href']);
         }
-
-        if (session()->get('previousRedirect') === $versionNavigation['href']) {
-            throw new Exception("Infinite redirect detected for slug [{$slug}] with a non-existent page.");
-        }
-
-        session()->put('previousRedirect', $versionNavigation['href']);
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
