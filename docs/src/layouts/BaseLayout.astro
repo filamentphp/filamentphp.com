@@ -186,7 +186,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                       <h3>
                         <a
                           href={`#${section.slug}`}
-                          x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300'`}
+                          class="inline-block transition duration-300 ease-out"
+                          x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'`}
                         >
                           {section.title}
                         </a>
@@ -197,7 +198,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                             <li>
                               <a
                                 href={`#${subSection.slug}`}
-                                x-bind:class={`current == '${subSection.slug}' ? "text-butter" : "hover:text-gray-600 dark:hover:text-gray-300"`}
+                                class="inline-block transition duration-300 ease-out"
+                                x-bind:class={`current == '${subSection.slug}' ? "text-butter translate-x-1" : "hover:text-gray-600 dark:hover:text-white hover:translate-x-1"`}
                               >
                                 {subSection.title}
                               </a>

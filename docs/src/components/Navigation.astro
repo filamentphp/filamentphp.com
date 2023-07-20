@@ -40,7 +40,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
         <a
           href={section.href}
           class:list={[
-            "block font-display font-bold transition duration-300 ease-out hover:translate-x-1",
+            "block font-display font-bold transition duration-300 ease-out hover:translate-x-1 text-base",
             { "text-butter before:bg-butter": section.href === pathName },
             { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": section.href !== pathName },
           ]}
@@ -48,15 +48,15 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
           <h2 class="">{section.title}</h2>
         </a>
 
-        <ul role="list" class="mt-2 space-y-2 border-l-2 border-gray-100 dark:border-gray-800 lg:mt-4 lg:space-y-4 lg:border-gray-200">
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
           {section.links.map((link) => (
             <li class="relative">
               <a
                 href={link.href}
                 class:list={[
-                  "group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full before:transition before:duration-200",
+                  "group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200",
                   { "font-semibold text-butter before:bg-butter": link.href === pathName },
-                  { "text-gray-500 before:opacity-0 before:scale-0 before:bg-gray-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": link.href !== pathName },
+                  { "text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-gray-300": link.href !== pathName },
                 ]}
               >
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">{link.title}</div>
