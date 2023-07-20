@@ -40,9 +40,9 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
         <a
           href={section.href}
           class:list={[
-            "block font-display font-bold transition duration-300 ease-out hover:translate-x-1 text-base",
+            "block font-display font-bold transition duration-300 ease-out text-base",
             { "text-butter before:bg-butter": section.href === pathName },
-            { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-gray-300": section.href !== pathName },
+            { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1": section.href !== pathName },
           ]}
         >
           <h2 class="">{section.title}</h2>
@@ -56,10 +56,13 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
                 class:list={[
                   "group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200",
                   { "font-semibold text-butter before:bg-butter": link.href === pathName },
-                  { "text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-gray-300": link.href !== pathName },
+                  { "text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white": link.href !== pathName },
                 ]}
               >
-                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">{link.title}</div>
+                <div class:list={[
+                  "transition duration-300 ease-out",
+                  { "group-hover/navigation-mini-link:translate-x-1": link.href !== pathName },
+                  ]}>{link.title}</div>
               </a>
             </li>
           ))}
