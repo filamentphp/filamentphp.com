@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.7822c254.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -659,7 +659,7 @@
 
 TextColumn::make('title')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/simple.jpg?raw=true" alt="Text column" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/simple.jpg?raw=true" alt="Text column" loading="lazy" class="rounded-xl hidden dark:block">
@@ -677,7 +677,7 @@ TextColumn::make('status')
         'rejected' =&gt; 'danger',
     })
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/badge.jpg?raw=true" alt="Text column as badge" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/badge.jpg?raw=true" alt="Text column as badge" loading="lazy" class="rounded-xl hidden dark:block">
@@ -691,7 +691,7 @@ TextColumn::make('status')
 TextColumn::make('title')
     -&gt;description(fn (Post $record): string =&gt; $record-&gt;description)
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/description.jpg?raw=true" alt="Text column with description" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/description.jpg?raw=true" alt="Text column with description" loading="lazy" class="rounded-xl hidden dark:block">
@@ -702,7 +702,7 @@ TextColumn::make('title')
 TextColumn::make('title')
     -&gt;description(fn (Post $record): string =&gt; $record-&gt;description, position: 'above')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/description-above.jpg?raw=true" alt="Text column with description above the content" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/description-above.jpg?raw=true" alt="Text column with description above the content" loading="lazy" class="rounded-xl hidden dark:block">
@@ -841,7 +841,7 @@ TextColumn::make('updated_at')
 TextColumn::make('status')
     -&gt;color('primary')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/color.jpg?raw=true" alt="Text column in the primary color" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/color.jpg?raw=true" alt="Text column in the primary color" loading="lazy" class="rounded-xl hidden dark:block">
@@ -853,7 +853,7 @@ TextColumn::make('status')
 TextColumn::make('email')
     -&gt;icon('heroicon-m-envelope')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/icon.jpg?raw=true" alt="Text column with icon" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/icon.jpg?raw=true" alt="Text column with icon" loading="lazy" class="rounded-xl hidden dark:block">
@@ -865,7 +865,7 @@ TextColumn::make('email')
     -&gt;icon('heroicon-m-envelope')
     -&gt;iconPosition('after') // `before` or `after`
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/icon-after.jpg?raw=true" alt="Text column with icon after" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/icon-after.jpg?raw=true" alt="Text column with icon after" loading="lazy" class="rounded-xl hidden dark:block">
@@ -877,7 +877,7 @@ TextColumn::make('email')
 TextColumn::make('title')
     -&gt;size('lg')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/large.jpg?raw=true" alt="Text column in a large font size" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/large.jpg?raw=true" alt="Text column in a large font size" loading="lazy" class="rounded-xl hidden dark:block">
@@ -890,7 +890,7 @@ TextColumn::make('title')
 TextColumn::make('title')
     -&gt;weight('bold')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/bold.jpg?raw=true" alt="Text column in a bold font" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/bold.jpg?raw=true" alt="Text column in a bold font" loading="lazy" class="rounded-xl hidden dark:block">
@@ -903,7 +903,7 @@ TextColumn::make('title')
 TextColumn::make('email')
     -&gt;fontFamily('mono')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/mono.jpg?raw=true" alt="Text column in a monospaced font" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/mono.jpg?raw=true" alt="Text column in a monospaced font" loading="lazy" class="rounded-xl hidden dark:block">
@@ -917,7 +917,7 @@ TextColumn::make('email')
     -&gt;copyMessage('Email address copied')
     -&gt;copyMessageDuration(1500)
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/columns/text/copyable.jpg?raw=true" alt="Text column with a button to copy it" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/columns/text/copyable.jpg?raw=true" alt="Text column with a button to copy it" loading="lazy" class="rounded-xl hidden dark:block">

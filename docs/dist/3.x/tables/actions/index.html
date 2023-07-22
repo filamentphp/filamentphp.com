@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.7822c254.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -681,7 +681,7 @@ Action::make('delete')
     -&gt;action(fn (Post $record) =&gt; $record-&gt;delete())
 </textarea></code></pre>
 <p>All methods on the action accept callback functions, where you can access the current table <code>$record</code> that was clicked.</p>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/simple.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/simple.jpg?raw=true" alt="Table with actions" loading="lazy" class="rounded-xl hidden dark:block">
@@ -699,7 +699,7 @@ public function table(Table $table): Table
         ], position: Position::BeforeColumns);
 }
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/before-columns.jpg?raw=true" alt="Table with actions before columns" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/before-columns.jpg?raw=true" alt="Table with actions before columns" loading="lazy" class="rounded-xl hidden dark:block">
@@ -717,7 +717,7 @@ public function table(Table $table): Table
         ], position: Position::BeforeCells);
 }
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/before-cells.jpg?raw=true" alt="Table with actions before cells" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/before-cells.jpg?raw=true" alt="Table with actions before cells" loading="lazy" class="rounded-xl hidden dark:block">
@@ -743,7 +743,7 @@ BulkAction::make('delete')
     -&gt;action(fn (Collection $records) =&gt; $records-&gt;each-&gt;delete())
 </textarea></code></pre>
 <p>The function allows you to access the current table <code>$records</code> that are selected. It is an Eloquent collection of models.</p>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/bulk.jpg?raw=true" alt="Table with bulk action" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/bulk.jpg?raw=true" alt="Table with bulk action" loading="lazy" class="rounded-xl hidden dark:block">
@@ -826,7 +826,7 @@ public function table(Table $table): Table
 }
 </textarea></code></pre>
 <p>This is useful for things like “create” actions, which are not related to any specific table row, or bulk actions that need to be more visible.</p>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/header.jpg?raw=true" alt="Table with header actions" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/header.jpg?raw=true" alt="Table with header actions" loading="lazy" class="rounded-xl hidden dark:block">
@@ -865,7 +865,7 @@ public function table(Table $table): Table
         ]);
 }
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group.jpg?raw=true" alt="Table with action group" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group.jpg?raw=true" alt="Table with action group" loading="lazy" class="rounded-xl hidden dark:block">
@@ -879,7 +879,7 @@ ActionGroup::make([
     // ...
 ])-&gt;iconButton()
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-icon-button.jpg?raw=true" alt="Table with icon button action group" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-icon-button.jpg?raw=true" alt="Table with icon button action group" loading="lazy" class="rounded-xl hidden dark:block">
@@ -893,7 +893,7 @@ ActionGroup::make([
     -&gt;button()
     -&gt;label('Actions')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-button.jpg?raw=true" alt="Table with button action group" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-button.jpg?raw=true" alt="Table with button action group" loading="lazy" class="rounded-xl hidden dark:block">
@@ -907,7 +907,7 @@ ActionGroup::make([
     -&gt;link()
     -&gt;label('Actions')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-link.jpg?raw=true" alt="Table with link action group" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-link.jpg?raw=true" alt="Table with link action group" loading="lazy" class="rounded-xl hidden dark:block">
@@ -920,7 +920,7 @@ ActionGroup::make([
     // ...
 ])-&gt;icon('heroicon-m-ellipsis-horizontal');
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-icon.jpg?raw=true" alt="Table with customized action group icon" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-icon.jpg?raw=true" alt="Table with customized action group icon" loading="lazy" class="rounded-xl hidden dark:block">
@@ -933,7 +933,7 @@ ActionGroup::make([
     // ...
 ])-&gt;color('info');
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-color.jpg?raw=true" alt="Table with customized action group color" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-color.jpg?raw=true" alt="Table with customized action group color" loading="lazy" class="rounded-xl hidden dark:block">
@@ -946,7 +946,7 @@ ActionGroup::make([
     // ...
 ])-&gt;size('sm');
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-small.jpg?raw=true" alt="Table with small action group" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-small.jpg?raw=true" alt="Table with small action group" loading="lazy" class="rounded-xl hidden dark:block">
@@ -959,7 +959,7 @@ ActionGroup::make([
     // ...
 ])-&gt;tooltip('Actions');
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/tables/actions/group-tooltip.jpg?raw=true" alt="Table with action group tooltip" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/tables/actions/group-tooltip.jpg?raw=true" alt="Table with action group tooltip" loading="lazy" class="rounded-xl hidden dark:block">

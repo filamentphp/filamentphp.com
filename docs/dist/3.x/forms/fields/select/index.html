@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.7822c254.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -752,7 +752,7 @@ Select::make('status')
         'published' =&gt; 'Published',
     ])
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/simple.jpg?raw=true" alt="Select" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/simple.jpg?raw=true" alt="Select" loading="lazy" class="rounded-xl hidden dark:block">
@@ -766,7 +766,7 @@ Select::make('author_id')
     -&gt;options(User::all()-&gt;pluck('name', 'id'))
     -&gt;searchable()
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/searchable.jpg?raw=true" alt="Searchable select" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/searchable.jpg?raw=true" alt="Searchable select" loading="lazy" class="rounded-xl hidden dark:block">
@@ -794,7 +794,7 @@ Select::make('technologies')
         'livewire' =&gt; 'Laravel Livewire',
     ])
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/multiple.jpg?raw=true" alt="Multi-select" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/multiple.jpg?raw=true" alt="Multi-select" loading="lazy" class="rounded-xl hidden dark:block">
@@ -901,13 +901,13 @@ Select::make('author_id')
             -&gt;email(),
     ]),
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/create-option.jpg?raw=true" alt="Select with create option button" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/create-option.jpg?raw=true" alt="Select with create option button" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <p>The form opens in a modal, where the user can fill it with data. Upon form submission, the new record is selected by the field.</p>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/create-option-modal.jpg?raw=true" alt="Select with create option modal" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/create-option-modal.jpg?raw=true" alt="Select with create option modal" loading="lazy" class="rounded-xl hidden dark:block">
@@ -927,13 +927,13 @@ Select::make('author_id')
             -&gt;email(),
     ]),
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/edit-option.jpg?raw=true" alt="Select with edit option button" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/edit-option.jpg?raw=true" alt="Select with edit option button" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <p>The form opens in a modal, where the user can fill it with data. Upon form submission, the data from the form is saved back to the record.</p>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/edit-option-modal.jpg?raw=true" alt="Select with edit option modal" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/edit-option-modal.jpg?raw=true" alt="Select with edit option modal" loading="lazy" class="rounded-xl hidden dark:block">
@@ -1043,7 +1043,7 @@ Select::make('domain')
     -&gt;prefix('https://')
     -&gt;suffix('.com')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/affix.jpg?raw=true" alt="Select with affixes" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/affix.jpg?raw=true" alt="Select with affixes" loading="lazy" class="rounded-xl hidden dark:block">
@@ -1055,7 +1055,7 @@ Select::make('domain')
 Select::make('domain')
     -&gt;suffixIcon('heroicon-m-globe-alt')
 </textarea></code></pre>
-<div>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/select/suffix-icon.jpg?raw=true" alt="Select with suffix icon" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/select/suffix-icon.jpg?raw=true" alt="Select with suffix icon" loading="lazy" class="rounded-xl hidden dark:block">
