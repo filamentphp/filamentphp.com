@@ -34,6 +34,16 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/navigation', '/docs/panels/navigation');
     Route::redirect('/plugin-development', '/docs/panels/plugins');
 
+    Route::redirect('/admin', '/docs/panels/installation');
+    Route::redirect('/panels', '/docs/panels/installation');
+    Route::redirect('/forms', '/docs/forms/installation');
+    Route::redirect('/tables', '/docs/tables/installation');
+    Route::redirect('/notifications', '/docs/notifications/installation');
+    Route::redirect('/actions', '/docs/actions/installation');
+    Route::redirect('/infolists', '/docs/infolists/installation');
+    Route::redirect('/widgets', '/docs/widgets/installation');
+    Route::redirect('/support', '/docs/support/overview');
+
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $slug = trim($slug, '/');
 
@@ -49,22 +59,6 @@ Route::prefix('/docs')->group(function () {
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
-        $packageSlug = (string) str($slug)
-            ->after('.x')
-            ->after('/')
-            ->before('/');
-
-        if (blank($packageSlug)) {
-            return redirect($versionNavigation['href']);
-        }
-
-        foreach ($versionNavigation['links'] as $packageNavigation) {
-            if ($packageNavigation['slug'] !== $packageSlug) {
-                continue;
-            }
-
-            return redirect($packageNavigation['href']);
-        }
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');

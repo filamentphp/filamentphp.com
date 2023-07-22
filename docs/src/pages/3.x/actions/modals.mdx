@@ -27,7 +27,7 @@ Action::make('delete')
 
 You may also render a form in the modal to collect extra information from the user before the action runs.
 
-You may use components from the [Form Builder](../forms) to create custom action modal forms. The data from the form is available in the `$data` array of the `action()` closure:
+You may use components from the [Form Builder](./../forms) to create custom action modal forms. The data from the form is available in the `$data` array of the `action()` closure:
 
 ```php
 use App\Models\User;
@@ -75,7 +75,7 @@ Action::make('updateAuthor')
 
 ### Using a wizard as a modal form
 
-You may create a [multi-step form wizard](../forms/layout/wizard) inside a modal. Instead of using a `form()`, define a `steps()` array and pass your `Step` objects:
+You may create a [multi-step form wizard](./../forms/layout/wizard) inside a modal. Instead of using a `form()`, define a `steps()` array and pass your `Step` objects:
 
 ```php
 use Filament\Forms\Components\MarkdownEditor;
@@ -352,7 +352,7 @@ Action::make('help')
     ->modalCancelAction(fn (ModalAction $action) => $action->label('Close'))
 ```
 
-The [methods available to customize trigger buttons](trigger-button) will work to modify on the `$action` instance inside the closure.
+The [methods available to customize trigger buttons](./trigger-button) will work to modify on the `$action` instance inside the closure.
 
 ### Removing a default modal footer action button
 
@@ -375,7 +375,7 @@ Action::make('create')
     ])
 ```
 
-`$action->makeModalSubmitAction()` returns an action instance that can be customized using the [methods available to customize trigger buttons](trigger-button).
+`$action->makeModalSubmitAction()` returns an action instance that can be customized using the [methods available to customize trigger buttons](./trigger-button).
 
 The second parameter of `makeModalSubmitAction()` allows you to pass an array of arguments that will be accessible inside the action's `action()` closure as `$arguments`. These could be useful as flags to indicate that the action should behave differently based on the user's decision:
 

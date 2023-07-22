@@ -54,7 +54,7 @@ In this example, `500` is the number of milliseconds to wait before sending a ne
 
 ## Form component utility injection
 
-The vast majority of methods used to configure [fields](fields) and [layout components](layout) accept closures as parameters instead of hardcoded values:
+The vast majority of methods used to configure [fields](./fields) and [layout components](./layout) accept closures as parameters instead of hardcoded values:
 
 ```php
 use App\Models\User;
@@ -273,7 +273,7 @@ TextInput::make('password_confirmation')
     ->dehydrated(false)
 ```
 
-If your form auto-saves data to the database, like in a [resource](../panels/resources) or [table action](../tables/actions), this is useful to prevent a field from being saved to the database if it is purely used for presentational purposes.
+If your form auto-saves data to the database, like in a [resource](./../panels/resources) or [table action](./../tables/actions), this is useful to prevent a field from being saved to the database if it is purely used for presentational purposes.
 
 ## Reactive forms cookbook
 
@@ -328,7 +328,7 @@ TextInput::make('vat_number')
 
 In this example, the `company_name` field is [`live(onBlur: true)`](#reactive-fields-on-blur). This allows the form to rerender after the value of the `company_name` field changes and the user clicks away. You can access the value of that field from within the `required()` function using the [`$get()` utility](#injecting-the-current-state-of-a-field). The value of the field is checked using `filled()` so that the `vat_number` field is required when the `company_name` field is not `null` or an empty string. The result is that the `vat_number` field is only required when the `company_name` field is filled in.
 
-Using a function is able to make any other [validation rule](validation) dynamic in a similar way.
+Using a function is able to make any other [validation rule](./validation) dynamic in a similar way.
 
 ### Generating a slug from a title
 
@@ -348,11 +348,30 @@ TextInput::make('slug')
 
 In this example, the `title` field is [`live()`](#the-basics-of-reactivity). This allows the form to rerender when the value of the `title` field changes. The `afterStateUpdated()` method is used to run a function after the state of the `title` field is updated. The function injects the [`$set()` utility](#injecting-a-function-to-set-the-state-of-another-field) and the new state of the `title` field. The `Str::slug()` utility method is part of Laravel and is used to generate a slug from a string. The `slug` field is then updated using the `$set()` function.
 
-One thing to note is that the user may customize the slug manually, and we don't want to overwrite their changes if the title changes. To prevent this, we can 
+One thing to note is that the user may customize the slug manually, and we don't want to overwrite their changes if the title changes. To prevent this, we can use the old version of the title to work out if the user has modified it themselves. To access the old version of the title, you can inject `$old`, and to get the current value of the slug before it gets changed, we can use the [`$get()` utility](#injecting-the-state-of-another-field):
+
+```php
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
+
+TextInput::make('title')
+    ->live()
+    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+        if (($get('slug') ?? '') !== Str::slug($old)) {
+            return;
+        }
+    
+        $set('slug', Str::slug($state));
+    })
+    
+TextInput::make('slug')
+```
 
 ### Dependant select options
 
-To dynamically update the options of a [select field](fields/select) based on the value of another field, you can pass a function to the `options()` method of the select field. The function can [inject utilities](#form-component-utility-injection) as parameters, so you can do things like check the value of another field using the [`$get()` utility](#injecting-the-current-state-of-a-field):
+To dynamically update the options of a [select field](./fields/select) based on the value of another field, you can pass a function to the `options()` method of the select field. The function can [inject utilities](#form-component-utility-injection) as parameters, so you can do things like check the value of another field using the [`$get()` utility](#injecting-the-current-state-of-a-field):
 
 ```php
 use Filament\Forms\Get;
@@ -405,7 +424,7 @@ Select::make('sub_category')
 
 ### Dynamic fields based on a select option
 
-You may wish to render a different set of fields based on the value of a field, like a select. To do this, you can pass a function to the `schema()` method of any [layout component](layout), which checks the value of the field and returns a different schema based on that value. Also, you will need a way to initialise the new fields in the dynamic schema when they are first loaded.
+You may wish to render a different set of fields based on the value of a field, like a select. To do this, you can pass a function to the `schema()` method of any [layout component](./layout), which checks the value of the field and returns a different schema based on that value. Also, you will need a way to initialise the new fields in the dynamic schema when they are first loaded.
 
 ```php
 use Filament\Forms\Components\FileUpload;
@@ -507,9 +526,9 @@ TextInput::make('password')
 
 ## Saving data to relationships
 
-> If you're building a form inside your Livewire component, make sure you have set up the [form's model](adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
+> If you're building a form inside your Livewire component, make sure you have set up the [form's model](./adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
 
-As well as being able to give structure to fields, [layout components](layout/getting-started) are also able to "teleport" their nested fields into a relationship. Filament will handle loading data from a `HasOne`, `BelongsTo` or `MorphOne` Eloquent relationship, and then it will save the data back to the same relationship. To set this behaviour up, you can use the `relationship()` method on any layout component:
+As well as being able to give structure to fields, [layout components](./layout/getting-started) are also able to "teleport" their nested fields into a relationship. Filament will handle loading data from a `HasOne`, `BelongsTo` or `MorphOne` Eloquent relationship, and then it will save the data back to the same relationship. To set this behaviour up, you can use the `relationship()` method on any layout component:
 
 ```php
 use Filament\Forms\Components\Fieldset;
