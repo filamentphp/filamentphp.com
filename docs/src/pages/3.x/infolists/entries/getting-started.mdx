@@ -35,12 +35,12 @@ TextEntry::make('author.name')
 
 ## Available entries
 
-- [Text entry](text)
-- [Icon entry](icon)
-- [Image entry](image)
-- [Color entry](color)
+- [Text entry](./text)
+- [Icon entry](./icon)
+- [Image entry](./image)
+- [Color entry](./color)
 
-You may also [create your own custom entries](custom) to display data however you wish.
+You may also [create your own custom entries](./custom) to display data however you wish.
 
 ## Setting a label
 
@@ -131,7 +131,7 @@ TextEntry::make('name')
 
 ## Adding a hint next to the label
 
-As well as [helper text](#adding-helper-text-below-the-entry) below the entry, you may also add a "hint" next to the label of the entry. This is useful for displaying additional information about the entry, such as a link to a help page.
+As well as [helper text](./#adding-helper-text-below-the-entry) below the entry, you may also add a "hint" next to the label of the entry. This is useful for displaying additional information about the entry, such as a link to a help page.
 
 The `hint()` method is used to add a hint:
 
@@ -258,7 +258,7 @@ These get merged onto the outer `<div>` element of each entry in that entry.
 
 ## Global settings
 
-If you wish to change the default behaviour of all entries globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the entries using. For example, if you wish to make all `TextEntry` components [`words(10)`](text#limiting-word-count), you can do it like so:
+If you wish to change the default behaviour of all entries globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the entries using. For example, if you wish to make all `TextEntry` components [`words(10)`](./text#limiting-word-count), you can do it like so:
 
 ```php
 use Filament\Infolists\Components\TextEntry;

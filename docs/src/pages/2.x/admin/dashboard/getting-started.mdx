@@ -8,17 +8,17 @@ Filament allows you to build dynamic dashboards, comprised of "widget" cards, ve
 
 Widgets are pure [Livewire](https://laravel-livewire.com) components, so may use any features of that package.
 
-Widgets may also be used on [resource pages](../resources/widgets) or other [custom pages](../pages/widgets).
+Widgets may also be used on [resource pages](./../resources/widgets) or other [custom pages](./../pages/widgets).
 
 ## Available widgets
 
-Filament ships with a few pre-built widgets, as well as the ability to create [custom widgets](#custom-widgets):
+Filament ships with a few pre-built widgets, as well as the ability to create [custom widgets](./#custom-widgets):
 
-- [Stats](stats) widgets display any data, often numeric data, within cards in a row.
-- [Chart](charts) widgets display numeric data in a visual chart.
-- [Table](tables) widgets render data in a table, which supports sorting, searching, filtering, actions, and everything else included within the [table builder](../../tables).
+- [Stats](./stats) widgets display any data, often numeric data, within cards in a row.
+- [Chart](./charts) widgets display numeric data in a visual chart.
+- [Table](./tables) widgets render data in a table, which supports sorting, searching, filtering, actions, and everything else included within the [table builder](./../../tables).
 
-You may also [create your own custom widgets](#custom-widgets).
+You may also [create your own custom widgets](./#custom-widgets).
 
 ## Sorting widgets
 
@@ -47,13 +47,13 @@ protected int | string | array $columnSpan = [
 ];
 ```
 
-This is especially useful when using a [responsive widgets grid](#responsive-widgets-grid).
+This is especially useful when using a [responsive widgets grid](./#responsive-widgets-grid).
 
 ## Customizing the widgets grid
 
 You may change how many grid columns are used to display widgets.
 
-Firstly, you must [replace the original Dashboard page](#customizing-the-dashboard-page).
+Firstly, you must [replace the original Dashboard page](./#customizing-the-dashboard-page).
 
 Now, in your new `app/Filament/Pages/Dashboard.php` file, you may override the `getColumns()` method to return a number of grid columns to use:
 
@@ -78,7 +78,7 @@ protected function getColumns(): int | array
 }
 ```
 
-This pairs well with [responsive widget widths](#responsive-widget-widths).
+This pairs well with [responsive widget widths](./#responsive-widget-widths).
 
 ## Conditionally hiding widgets
 
@@ -93,7 +93,7 @@ public static function canView(): bool
 
 ## Disabling the default widgets
 
-By default, two widgets are displayed on the dashboard. These widgets can be disabled by updating the `widgets.register` property of the [configuration](installation#publishing-configuration) file:
+By default, two widgets are displayed on the dashboard. These widgets can be disabled by updating the `widgets.register` property of the [configuration](./installation#publishing-configuration) file:
 
 ```php
 'widgets' => [
@@ -114,7 +114,7 @@ This command will create two files - a widget class in the `/Widgets` directory 
 
 ## Customizing the dashboard page
 
-If you want to customize the dashboard class, for example to [change the number of widget columns](#customizing-widget-width), create a new file at `app/Filament/Pages/Dashboard.php`:
+If you want to customize the dashboard class, for example to [change the number of widget columns](./#customizing-widget-width), create a new file at `app/Filament/Pages/Dashboard.php`:
 
 ```php
 <?php
@@ -129,7 +129,7 @@ class Dashboard extends BasePage
 }
 ```
 
-Finally, remove the original `Dashboard` class from the [configuration file](installation#publishing-configuration):
+Finally, remove the original `Dashboard` class from the [configuration file](./installation#publishing-configuration):
 
 ```php
 'pages' => [

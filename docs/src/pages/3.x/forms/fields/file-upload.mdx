@@ -21,7 +21,7 @@ FileUpload::make('attachment')
 
 ## Configuring the storage disk and directory
 
-By default, files will be uploaded publicly to your storage disk defined in the [configuration file](../installation#publishing-configuration). You can also set the `FILAMENT_FILESYSTEM_DISK` environment variable to change this.
+By default, files will be uploaded publicly to your storage disk defined in the [configuration file](./../installation#publishing-configuration). You can also set the `FILAMENT_FILESYSTEM_DISK` environment variable to change this.
 
 > Please note, to correctly preview images and other files, FilePond requires files to be served from the same domain as the app, or the appropriate CORS headers need to be present. Ensure that the `APP_URL` environment variable is correct, or modify the [filesystem](https://laravel.com/docs/10.x/filesystem) driver to set the correct URL. If you're hosting files on a separate domain like S3, ensure that CORS headers are set up.
 
@@ -235,7 +235,7 @@ FileUpload::make('attachment')
 
 ## File upload validation
 
-As well as all rules listed on the [validation](../validation) page, there are additional rules that are specific to file uploads.
+As well as all rules listed on the [validation](./../validation) page, there are additional rules that are specific to file uploads.
 
 Since Filament is powered by Livewire and uses its file upload system, you will want to refer to the default [Livewire file upload validation rules](https://laravel-livewire.com/docs/file-uploads#global-validation) as well. This also controls the 12MB file size maximum.
 

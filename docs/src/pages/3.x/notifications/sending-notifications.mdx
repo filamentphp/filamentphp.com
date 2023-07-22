@@ -7,7 +7,7 @@ import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 ## Overview
 
-> To start, make sure the package is [installed](installation) - `@livewire('notifications')` should be in your Blade layout somewhere.
+> To start, make sure the package is [installed](./installation) - `@livewire('notifications')` should be in your Blade layout somewhere.
 
 Notifications are sent using a `Notification` object that's constructed through a fluent API. Calling the `send()` method on the `Notification` object will dispatch the notification and display it in your application. As the session is used to flash notifications, they can be sent from anywhere in your code, including JavaScript, not just Livewire components.
 
@@ -223,7 +223,7 @@ new FilamentNotification()
 
 ## Adding actions to notifications
 
-Notifications support [actions](../actions/trigger-button), which are buttons that render below the content of the notification. They can open a URL or dispatch a Livewire event. Actions can be defined as follows:
+Notifications support [actions](./../actions/trigger-button), which are buttons that render below the content of the notification. They can open a URL or dispatch a Livewire event. Actions can be defined as follows:
 
 ```php
 use Filament\Notifications\Actions\Action;
@@ -260,7 +260,7 @@ new FilamentNotification()
 
 <AutoScreenshot name="notifications/actions" alt="Notification with actions" version="3.x" />
 
-You can learn more about how to style action buttons [here](../actions/trigger-button).
+You can learn more about how to style action buttons [here](./../actions/trigger-button).
 
 ### Opening URLs from notification actions
 

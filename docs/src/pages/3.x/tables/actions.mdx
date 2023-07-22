@@ -7,9 +7,9 @@ import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 ## Overview
 
-Filament's tables can use [actions](../actions). They are buttons that can be added to the [end of any table row](#row-actions), or even in the [header](#header-actions) of a table. For instance, you may want an action to "create" a new record in the header, and then "edit" and "delete" actions on each row. [Bulk actions](#bulk-actions) can be used to execute code when records in the table are selected. Additionally, actions can be added to any [table column](#column-actions), such that each cell in that column is a trigger for your action.
+Filament's tables can use [actions](./../actions). They are buttons that can be added to the [end of any table row](./#row-actions), or even in the [header](./#header-actions) of a table. For instance, you may want an action to "create" a new record in the header, and then "edit" and "delete" actions on each row. [Bulk actions](./#bulk-actions) can be used to execute code when records in the table are selected. Additionally, actions can be added to any [table column](./#column-actions), such that each cell in that column is a trigger for your action.
 
-It's highly advised that you read the documentation about [customizing action trigger buttons](../actions/trigger-button) and [action modals](../actions/modals) to that you are aware of the full capabilities of actions.
+It's highly advised that you read the documentation about [customizing action trigger buttons](./../actions/trigger-button) and [action modals](./../actions/modals) to that you are aware of the full capabilities of actions.
 
 ## Row actions
 
@@ -119,7 +119,7 @@ The function allows you to access the current table `$records` that are selected
 
 ### Grouping bulk actions
 
-You may use a `BulkActionGroup` object to [group multiple bulk actions together](../actions/grouping-actions) in a dropdown. Any bulk actions that remain outside of the `BulkActionGroup` will be rendered next to the dropdown's trigger button:
+You may use a `BulkActionGroup` object to [group multiple bulk actions together](./../actions/grouping-actions) in a dropdown. Any bulk actions that remain outside of the `BulkActionGroup` will be rendered next to the dropdown's trigger button:
 
 ```php
 use Filament\Tables\Actions\BulkAction;
@@ -199,7 +199,7 @@ public function table(Table $table): Table
 
 ## Header actions
 
-Both [row actions](#row-actions) and [bulk actions](#bulk-actions) can be rendered in the header of the table. You can put them in the `$table->headerActions()` method:
+Both [row actions](./#row-actions) and [bulk actions](./#bulk-actions) can be rendered in the header of the table. You can put them in the `$table->headerActions()` method:
 
 ```php
 use Filament\Tables\Table;
@@ -219,19 +219,19 @@ This is useful for things like "create" actions, which are not related to any sp
 
 ## Column actions
 
-Actions can be added to columns, such that when a cell in that column is clicked, it acts as the trigger for an action. You can learn more about [column actions](columns/getting-started#running-actions) in the documentation.
+Actions can be added to columns, such that when a cell in that column is clicked, it acts as the trigger for an action. You can learn more about [column actions](./columns/getting-started#running-actions) in the documentation.
 
 ## Prebuilt table actions
 
 Filament includes several prebuilt actions and bulk actions that you can add to a table. Their aim is to simplify the most common Eloquent-related actions:
 
-- [Create](../actions/prebuilt-actions/create)
-- [Edit](../actions/prebuilt-actions/edit)
-- [View](../actions/prebuilt-actions/view)
-- [Delete](../actions/prebuilt-actions/delete)
-- [Replicate](../actions/prebuilt-actions/replicate)
-- [Force-delete](../actions/prebuilt-actions/force-delete)
-- [Restore](../actions/prebuilt-actions/restore)
+- [Create](./../actions/prebuilt-actions/create)
+- [Edit](./../actions/prebuilt-actions/edit)
+- [View](./../actions/prebuilt-actions/view)
+- [Delete](./../actions/prebuilt-actions/delete)
+- [Replicate](./../actions/prebuilt-actions/replicate)
+- [Force-delete](./../actions/prebuilt-actions/force-delete)
+- [Restore](./../actions/prebuilt-actions/restore)
 
 ## Grouping actions
 
@@ -264,7 +264,7 @@ public function table(Table $table): Table
 
 Out of the box, action group triggers have 3 styles - "button", "link", and "icon button".
 
-"Icon button" triggers are circular buttons with an [icon](#setting-the-action-group-button-icon) and no label. Usually, this is the default button style, but you can use it manually with the `iconButton()` method:
+"Icon button" triggers are circular buttons with an [icon](./#setting-the-action-group-button-icon) and no label. Usually, this is the default button style, but you can use it manually with the `iconButton()` method:
 
 ```php
 use Filament\Tables\Actions\ActionGroup;
@@ -276,7 +276,7 @@ ActionGroup::make([
 
 <AutoScreenshot name="tables/actions/group-icon-button" alt="Table with icon button action group" version="3.x" />
 
-"Button" triggers have a background color, label, and optionally an [icon](#setting-the-action-group-button-icon). You can switch to that style with the `button()` method:
+"Button" triggers have a background color, label, and optionally an [icon](./#setting-the-action-group-button-icon). You can switch to that style with the `button()` method:
 
 ```php
 use Filament\Tables\Actions\ActionGroup;
@@ -290,7 +290,7 @@ ActionGroup::make([
 
 <AutoScreenshot name="tables/actions/group-button" alt="Table with button action group" version="3.x" />
 
-"Link" triggers have no background color. They must have a label and optionally an [icon](#setting-the-action-group-button-icon). They look like a link that you might find embedded within text. You can switch to that style with the `link()` method:
+"Link" triggers have no background color. They must have a label and optionally an [icon](./#setting-the-action-group-button-icon). They look like a link that you might find embedded within text. You can switch to that style with the `link()` method:
 
 ```php
 use Filament\Tables\Actions\ActionGroup;

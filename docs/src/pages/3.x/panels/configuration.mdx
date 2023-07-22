@@ -6,11 +6,11 @@ title: Configuration
 
 ## Overview
 
-By default, the configuration file is located at `app/Providers/Filament/AdminPanelProvider.php`. Keep reading to learn more about [panels](#introducing-panels) and how each has [its own configuration file](#creating-a-new-panel).
+By default, the configuration file is located at `app/Providers/Filament/AdminPanelProvider.php`. Keep reading to learn more about [panels](./#introducing-panels) and how each has [its own configuration file](./#creating-a-new-panel).
 
 ## Introducing panels
 
-By default, when you install the package, there is one panel that has been set up for you - and it lives on `/admin`. All the [resources](resources), [pages](pages), and [dashboard widgets](dashboard) you create get registered to this panel.
+By default, when you install the package, there is one panel that has been set up for you - and it lives on `/admin`. All the [resources](./resources), [pages](./pages), and [dashboard widgets](./dashboard) you create get registered to this panel.
 
 However, you can create as many panels as you want, and each can have its own set of resources, pages and widgets.
 
@@ -30,7 +30,7 @@ To create a new panel, you can use the `make:filament-panel` command, passing in
 php artisan make:filament-panel app
 ```
 
-This command will create a new panel called "app". A configuration file will be created at `app/Providers/Filament/AppPanelProvider.php`. You can access this panel at `/app`, but you can [customize the path](#changing-the-path) if you don't want that.
+This command will create a new panel called "app". A configuration file will be created at `app/Providers/Filament/AppPanelProvider.php`. You can access this panel at `/app`, but you can [customize the path](./#changing-the-path) if you don't want that.
 
 Since this configuration file is also a [Laravel service provider](https://laravel.com/docs/providers), it needs to be registered in `config/app.php`. Filament will attempt to do this for you, but if you get a 404 when trying to access your panel then this process has probably failed. You can manually register the service provider by adding it to the `providers` array.
 
@@ -103,15 +103,15 @@ The available hooks are as follows:
 - `footer` - footer content (centered)
 - `footer.before` - before footer
 - `footer.after` - after footer
-- `sidebar.start` - before [sidebar](navigation) content
-- `sidebar.end` - after [sidebar](navigation) content
+- `sidebar.start` - before [sidebar](./navigation) content
+- `sidebar.end` - after [sidebar](./navigation) content
 - `sidebar.footer` - pinned to the bottom of the sidebar, below the content
 - `scripts.start` - before scripts are defined
 - `scripts.end` - after scripts are defined
 - `styles.start` - before styles are defined
 - `styles.end` - after styles are defined
-- `global-search.start` - before [global search](resources/global-search) field
-- `global-search.end` - after [global search](resources/global-search) field
+- `global-search.start` - before [global search](./resources/global-search) field
+- `global-search.end` - after [global search](./resources/global-search) field
 - `page.header-widgets.start` - before page header widgets
 - `page.header-widgets.end` - after page header widgets
 - `page.footer-widgets.start` - before page footer widgets
@@ -124,10 +124,10 @@ The available hooks are as follows:
 - `resource.relation-manager.end` - after the relation manager table
 - `tenant-menu.start` - before tenant menu
 - `tenant-menu.end` - after tenant menu
-- `user-menu.start` - before [user menu](navigation#customizing-the-user-menu)
-- `user-menu.end` - after [user menu](navigation#customizing-the-user-menu)
-- `user-menu.profile.before` - before the profile item in the [user menu](navigation#customizing-the-user-menu)
-- `user-menu.profile.after` - after the profile item in the [user menu](navigation#customizing-the-user-menu)
+- `user-menu.start` - before [user menu](./navigation#customizing-the-user-menu)
+- `user-menu.end` - after [user menu](./navigation#customizing-the-user-menu)
+- `user-menu.profile.before` - before the profile item in the [user menu](./navigation#customizing-the-user-menu)
+- `user-menu.profile.after` - after the profile item in the [user menu](./navigation#customizing-the-user-menu)
 
 ## Setting a domain
 

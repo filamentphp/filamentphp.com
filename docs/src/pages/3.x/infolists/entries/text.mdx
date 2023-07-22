@@ -19,7 +19,7 @@ TextEntry::make('title')
 
 ## Displaying as a "badge"
 
-By default, text is quite plain and has no background color. You can make it appear as a "badge" instead using the `badge()` method. A great use case for this is with statuses, where may want to display a badge with a [color](#customizing-the-color) that matches the status:
+By default, text is quite plain and has no background color. You can make it appear as a "badge" instead using the `badge()` method. A great use case for this is with statuses, where may want to display a badge with a [color](./#customizing-the-color) that matches the status:
 
 ```php
 use Filament\Infolists\Components\TextEntry;
@@ -36,7 +36,7 @@ TextEntry::make('status')
 
 <AutoScreenshot name="infolists/entries/text/badge" alt="Text entry as badge" version="3.x" />
 
-You may add other things to the badge, like an [icon](#adding-an-icon).
+You may add other things to the badge, like an [icon](./#adding-an-icon).
 
 ## Date formatting
 
@@ -166,7 +166,7 @@ TextEntry::make('authors.name')
 
 ### Using a list separator
 
-If you want to "explode" a text string from your model into multiple list items, you can do so with the `separator()` method. This is useful for displaying comma-separated tags [as badges](#displaying-as-a-badge), for example:
+If you want to "explode" a text string from your model into multiple list items, you can do so with the `separator()` method. This is useful for displaying comma-separated tags [as badges](./#displaying-as-a-badge), for example:
 
 ```php
 use Filament\Infolists\Components\TextEntry;

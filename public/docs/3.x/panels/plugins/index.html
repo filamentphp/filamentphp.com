@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-EWBB4F7F">
+<html lang="en" class="hidden astro-3C7CDRLL">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,8 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.830fbc6c.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
+<link rel="stylesheet" href="/docs/assets/dashboard.8b1e1fb3.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-3C7CDRLL">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center">
@@ -412,12 +412,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-EWBB4F7F">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-EWBB4F7F">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-EWBB4F7F"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-EWBB4F7F" x-data="{
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-3C7CDRLL">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-3C7CDRLL">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-3C7CDRLL"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-3C7CDRLL" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -654,13 +654,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-EWBB4F7F">
-        <article class="astro-EWBB4F7F">
-          <header class="mb-9 space-y-1 astro-EWBB4F7F">
-              <p class="font-display font-bold text-butter astro-EWBB4F7F">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-3C7CDRLL">
+        <article class="astro-3C7CDRLL">
+          <header class="mb-9 space-y-1 astro-3C7CDRLL">
+              <p class="font-display font-bold text-butter astro-3C7CDRLL">
                   Panel Builder 
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-EWBB4F7F">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-3C7CDRLL">
                   Plugin development
                 </h1>
             </header>
@@ -674,10 +674,10 @@
 </ul>
 <p>Filament plugins build on top of the concepts of Laravel packages and allow you to ship and consume reusable features for any Filament panel. They can be added to each panel one at a time, and are also configurable differently per-panel.</p>
 <h2 id="configuring-the-panel-with-a-plugin-class">Configuring the panel with a plugin class</h2>
-<p>A plugin class is used to allow your package to interact with a panel <a href="configuration">configuration</a> file. It’s a simple PHP class that implements the <code>Plugin</code> interface. 3 methods are required:</p>
+<p>A plugin class is used to allow your package to interact with a panel <a href="./configuration">configuration</a> file. It’s a simple PHP class that implements the <code>Plugin</code> interface. 3 methods are required:</p>
 <ul>
 <li>The <code>getId()</code> method returns the unique identifier of the plugin amongst other plugins. Please ensure that it is specific enough to not clash with other plugins that might be used in the same project.</li>
-<li>The <code>register()</code> method allows you to use any <a href="configuration">configuration</a> option that is available to the panel. This includes registering <a href="resources">resources</a>, <a href="pages">pages</a>, <a href="themes">themes</a>, <a href="configuration#render-hooks">render hooks</a> and more.</li>
+<li>The <code>register()</code> method allows you to use any <a href="./configuration">configuration</a> option that is available to the panel. This includes registering <a href="./resources">resources</a>, <a href="./pages">pages</a>, <a href="./themes">themes</a>, <a href="./configuration#render-hooks">render hooks</a> and more.</li>
 <li>The <code>boot()</code> method is run only when the panel that the plugin is being registered to is actually in-use. It is executed by a middleware class.</li>
 </ul>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">FilamentBlog</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentBlog</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Settings</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentBlog</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CategoryResource</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentBlog</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">PostResource</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Plugin</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BlogPlugin</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">implements</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Plugin</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getId</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">blog</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">register</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">resources</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">PostResource</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">CategoryResource</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">pages</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #FFCB6B;">Settings</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">//</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
@@ -715,7 +715,7 @@ class BlogPlugin implements Plugin
     }
 }
 </textarea></code></pre>
-<p>The users of your plugin can add it to a panel by instantiating the plugin class and passing it to the <code>plugin()</code> method of the <a href="configuration">configuration</a>:</p>
+<p>The users of your plugin can add it to a panel by instantiating the plugin class and passing it to the <code>plugin()</code> method of the <a href="./configuration">configuration</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentBlog</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">BlogPlugin</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">plugin</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BlogPlugin</span><span style="color: #89DDFF;">());</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use DanHarrin\FilamentBlog\BlogPlugin;
 
 public function panel(Panel $panel): Panel
@@ -816,7 +816,7 @@ class BlogPlugin implements Plugin
 </textarea></code></pre>
 <h2 id="distributing-a-panel-in-a-plugin">Distributing a panel in a plugin</h2>
 <p>It’s very easy to distribute an entire panel in a Laravel package. This way, a user can simply install your plugin and have an entirely new part of their app pre-built.</p>
-<p>When <a href="configuration">configuring</a> a panel, the configuration class extends the <code>PanelProvider</code> class, and that is a standard Laravel service provider. You can use it as a service provider in your package:</p>
+<p>When <a href="./configuration">configuring</a> a panel, the configuration class extends the <code>PanelProvider</code> class, and that is a standard Laravel service provider. You can use it as a service provider in your package:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">DanHarrin</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">FilamentBlog</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">PanelProvider</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BlogPanelProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PanelProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">id</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">blog</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">path</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">blog</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">resources</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">pages</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">widgets</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">middleware</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">authMiddleware</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">                </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
 
 namespace DanHarrin\FilamentBlog;
@@ -857,66 +857,66 @@ class BlogPanelProvider extends PanelProvider
         ]
     }
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/12-plugins.md" class="text-sm astro-EWBB4F7F" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-EWBB4F7F">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">GitHub discussion</a>
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/12-plugins.md" class="text-sm astro-3C7CDRLL" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-3C7CDRLL">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-EWBB4F7F">
-          <div class="astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-3C7CDRLL">
+          <div class="astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/panels/themes" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    <span aria-hidden="true" class="astro-EWBB4F7F">&larr;</span> Themes
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/panels/themes" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    <span aria-hidden="true" class="astro-3C7CDRLL">&larr;</span> Themes
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+            <div class="ml-auto text-right astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Next
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/panels/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    Testing <span aria-hidden="true" class="astro-EWBB4F7F">&rarr;</span>
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/panels/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    Testing <span aria-hidden="true" class="astro-3C7CDRLL">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-EWBB4F7F">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-EWBB4F7F">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-3C7CDRLL">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-3C7CDRLL">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-EWBB4F7F" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;configuring-the-panel-with-a-plugin-class&#34;,&#34;text&#34;:&#34;Configuring the panel with a plugin class&#34;,&#34;title&#34;:&#34;Configuring the panel with a plugin class&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;fluently-instantiating-the-plugin-class&#34;,&#34;text&#34;:&#34;Fluently instantiating the plugin class&#34;,&#34;title&#34;:&#34;Fluently instantiating the plugin class&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;configuring-plugins-per-panel&#34;,&#34;text&#34;:&#34;Configuring plugins per-panel&#34;,&#34;title&#34;:&#34;Configuring plugins per-panel&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;distributing-a-panel-in-a-plugin&#34;,&#34;text&#34;:&#34;Distributing a panel in a plugin&#34;,&#34;title&#34;:&#34;Distributing a panel in a plugin&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-3C7CDRLL" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;configuring-the-panel-with-a-plugin-class&#34;,&#34;text&#34;:&#34;Configuring the panel with a plugin class&#34;,&#34;title&#34;:&#34;Configuring the panel with a plugin class&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;fluently-instantiating-the-plugin-class&#34;,&#34;text&#34;:&#34;Fluently instantiating the plugin class&#34;,&#34;title&#34;:&#34;Fluently instantiating the plugin class&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;configuring-plugins-per-panel&#34;,&#34;text&#34;:&#34;Configuring plugins per-panel&#34;,&#34;title&#34;:&#34;Configuring plugins per-panel&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;distributing-a-panel-in-a-plugin&#34;,&#34;text&#34;:&#34;Distributing a panel in a plugin&#34;,&#34;title&#34;:&#34;Distributing a panel in a plugin&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#configuring-the-panel-with-a-plugin-class" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'configuring-the-panel-with-a-plugin-class' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#configuring-the-panel-with-a-plugin-class" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'configuring-the-panel-with-a-plugin-class' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Configuring the panel with a plugin class
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#fluently-instantiating-the-plugin-class" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'fluently-instantiating-the-plugin-class' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#fluently-instantiating-the-plugin-class" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'fluently-instantiating-the-plugin-class' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Fluently instantiating the plugin class
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#configuring-plugins-per-panel" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'configuring-plugins-per-panel' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#configuring-plugins-per-panel" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'configuring-plugins-per-panel' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Configuring plugins per-panel
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#distributing-a-panel-in-a-plugin" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'distributing-a-panel-in-a-plugin' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#distributing-a-panel-in-a-plugin" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'distributing-a-panel-in-a-plugin' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Distributing a panel in a plugin
                         </a>
                       </h3>

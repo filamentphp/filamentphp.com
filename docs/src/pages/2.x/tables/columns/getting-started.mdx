@@ -45,21 +45,21 @@ Filament ships with two main types of columns - static and editable.
 
 Static columns display data to the user:
 
-- [Text column](text)
-- [Icon column](icon)
-- [Image column](image)
-- [Badge column](badge)
-- [Tags column](tags)
-- [Color column](color)
+- [Text column](./text)
+- [Icon column](./icon)
+- [Image column](./image)
+- [Badge column](./badge)
+- [Tags column](./tags)
+- [Color column](./color)
 
 Editable columns allow the user to update data in the database without leaving the table:
 
-- [Select column](select)
-- [Toggle column](toggle)
-- [Text input column](text-input)
-- [Checkbox column](checkbox)
+- [Select column](./select)
+- [Toggle column](./toggle)
+- [Text input column](./text-input)
+- [Checkbox column](./checkbox)
 
-You may also [create your own custom columns](custom) to display data however you wish.
+You may also [create your own custom columns](./custom) to display data however you wish.
 
 ## Setting a label
 
@@ -234,7 +234,7 @@ TextColumn::make('title')
 
 #### Action modals
 
-You may open [action modals](../actions#modals) by passing in an `Action` object to the `action()` method:
+You may open [action modals](./../actions#modals) by passing in an `Action` object to the `action()` method:
 
 ```php
 use Filament\Tables\Actions\Action;
@@ -365,7 +365,7 @@ These get merged onto the outer `<div>` element of each cell in that column.
 
 ## Global settings
 
-If you wish to change the default behaviour of all columns globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the columns using. For example, if you wish to make all columns [`sortable()`](#sorting) and [`toggleable()`](#toggling-column-visibility), you can do it like so:
+If you wish to change the default behaviour of all columns globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the columns using. For example, if you wish to make all columns [`sortable()`](./#sorting) and [`toggleable()`](./#toggling-column-visibility), you can do it like so:
 
 ```php
 use Filament\Tables\Columns\Column;

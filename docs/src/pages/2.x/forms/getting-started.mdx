@@ -42,7 +42,7 @@ In your Livewire component's view, render the form:
 </form>
 ```
 
-Finally, add any [fields](fields) and [layout components](layout) to the Livewire component's `getFormSchema()` method:
+Finally, add any [fields](./fields) and [layout components](./layout) to the Livewire component's `getFormSchema()` method:
 
 ```php
 <?php
@@ -140,7 +140,7 @@ class CreatePost extends Component implements Forms\Contracts\HasForms
 }
 ```
 
-You may customize what happens after fields are filled [using the `afterStateHydrated()` method](advanced#hydration).
+You may customize what happens after fields are filled [using the `afterStateHydrated()` method](./advanced#hydration).
 
 ## Filling forms with data
 
@@ -236,11 +236,11 @@ class CreatePost extends Component implements Forms\Contracts\HasForms
 
 When `getState()` is run:
  
-1) [Validation](validation) rules are checked, and if errors are present, the form is not submitted.
+1) [Validation](./validation) rules are checked, and if errors are present, the form is not submitted.
 2) Any pending file uploads are stored permanently in the filesystem.
-3) [Field relationships](#field-relationships), if they are defined, are saved.
+3) [Field relationships](./#field-relationships), if they are defined, are saved.
 
-> You may transform the value that is dehydrated from a field [using the `dehydrateStateUsing()` method](advanced#dehydration).
+> You may transform the value that is dehydrated from a field [using the `dehydrateStateUsing()` method](./advanced#dehydration).
 
 ## Registering a model
 
@@ -345,7 +345,7 @@ class EditPost extends Component implements Forms\Contracts\HasForms
 }
 ```
 
-You may now use [field relationships](#field-relationships);
+You may now use [field relationships](./#field-relationships);
 
 ### Registering a model class
 
@@ -400,13 +400,13 @@ class CreatePost extends Component implements Forms\Contracts\HasForms
 }
 ```
 
-You may now use [field relationships](#field-relationships).
+You may now use [field relationships](./#field-relationships).
 
 ## Field relationships
 
 Some fields, such as the `Select`, `Repeater`, `SpatieMediaLibraryFileUpload`, or `SpatieTagsInput` are able to interact with model relationships.
 
-For example, `Select` can be used to attach multiple records to a `BelongstoMany` relationship. When [registering a model](#registering-a-model) to the form or component, these relationships will be automatically saved to the pivot table [when `getState()` is called](#getting-data-from-forms):
+For example, `Select` can be used to attach multiple records to a `BelongstoMany` relationship. When [registering a model](./#registering-a-model) to the form or component, these relationships will be automatically saved to the pivot table [when `getState()` is called](./#getting-data-from-forms):
 
 ```php
 <?php
@@ -469,7 +469,7 @@ class EditPost extends Component implements Forms\Contracts\HasForms
 
 ### Saving field relationships manually
 
-In some cases, the model instance is not available until the form has been submitted. For example, in a form that creates a post, the post model instance cannot be passed to the form before it has been submitted. In this case, you will [pass the model class](#registering-a-model-class) instead, but any field relationships will need to be saved manually after.
+In some cases, the model instance is not available until the form has been submitted. For example, in a form that creates a post, the post model instance cannot be passed to the form before it has been submitted. In this case, you will [pass the model class](./#registering-a-model-class) instead, but any field relationships will need to be saved manually after.
 
 In this situation, you may call the `model()` and `saveRelationships()` methods on the form after the instance has been created:
 

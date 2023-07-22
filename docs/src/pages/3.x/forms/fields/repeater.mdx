@@ -45,7 +45,7 @@ Repeater::make('members')
     ])
 ```
 
-If you wish to define a repeater with multiple schema blocks that can be repeated in any order, please use the [builder](builder).
+If you wish to define a repeater with multiple schema blocks that can be repeated in any order, please use the [builder](./builder).
 
 ## Setting empty default items
 
@@ -61,7 +61,7 @@ Repeater::make('members')
     ->defaultItems(3)
 ```
 
-Note that these default items are only created when the form is loaded without existing data. Inside [panel resources](../../panels/resources#resource-forms) this only works on Create Pages, as Edit Pages will always fill the data from the model.
+Note that these default items are only created when the form is loaded without existing data. Inside [panel resources](./../../panels/resources#resource-forms) this only works on Create Pages, as Edit Pages will always fill the data from the model.
 
 ## Adding items
 
@@ -207,7 +207,7 @@ Repeater::make('qualifications')
 
 ## Integrating with an Eloquent relationship
 
-> If you're building a form inside your Livewire component, make sure you have set up the [form's model](../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
+> If you're building a form inside your Livewire component, make sure you have set up the [form's model](./../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
 
 You may employ the `relationship()` method of the `Repeater` to configure a `HasMany` relationship. Filament will load the item data from the relationship, and save it back to the relationship when the form is submitted. If a custom relationship name is not passed to `relationship()`, Filament will use the field name as the relationship name:
 
@@ -223,7 +223,7 @@ Repeater::make('qualifications')
 
 ### Reordering items in a relationship
 
-By default, [reordering](#reordering-items) relationship repeater items is disabled. This is because your related model needs an `sort` column to store the order of related records. To enable reordering, you may use the `orderColumn()` method, passing in a name of the column on your related model to store the order in:
+By default, [reordering](./#reordering-items) relationship repeater items is disabled. This is because your related model needs an `sort` column to store the order of related records. To enable reordering, you may use the `orderColumn()` method, passing in a name of the column on your related model to store the order in:
 
 ```php
 use Filament\Forms\Components\Repeater;
@@ -322,7 +322,7 @@ Repeater::make('qualifications')
 
 <AutoScreenshot name="forms/fields/repeater/grid" alt="Repeater with a 2 column grid of items" version="3.x" />
 
-This method accepts the same options as the `columns()` method of the [grid](../layout/grid). This allows you to responsively customize the number of grid columns at various breakpoints.
+This method accepts the same options as the `columns()` method of the [grid](./../layout/grid). This allows you to responsively customize the number of grid columns at various breakpoints.
 
 ## Adding a label to repeater items based on their content
 
@@ -356,7 +356,7 @@ Any fields that you use from `$state` should be `live()` if you wish to see the 
 
 ## Using `$get()` to access parent field values
 
-All form components are able to [use `$get()` and `$set()`](../advanced) to access another field's value. However, you might experience unexpected behaviour when using this inside the repeater's schema.
+All form components are able to [use `$get()` and `$set()`](./../advanced) to access another field's value. However, you might experience unexpected behaviour when using this inside the repeater's schema.
 
 This is because `$get()` and `$set()`, by default, are scoped to the current repeater item. This means that you are able to interact with another field inside that repeater item easily without knowing which repeater item the current form component belongs to.
 
@@ -385,7 +385,7 @@ You can use `../` to go up a level in the data structure, so `$get('../client_id
 
 ## Repeater validation
 
-As well as all rules listed on the [validation](../validation) page, there are additional rules that are specific to repeaters.
+As well as all rules listed on the [validation](./../validation) page, there are additional rules that are specific to repeaters.
 
 ### Number of items validation
 

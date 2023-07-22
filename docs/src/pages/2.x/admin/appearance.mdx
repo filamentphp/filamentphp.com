@@ -16,7 +16,7 @@ You may create a `resources/views/vendor/filament/components/brand.blade.php` fi
 
 ## Dark mode
 
-By default, Filament only includes a light theme. However, you may allow the user to switch to dark mode if they wish, using the `dark_mode` setting of the [configuration file](installation#publishing-configuration):
+By default, Filament only includes a light theme. However, you may allow the user to switch to dark mode if they wish, using the `dark_mode` setting of the [configuration file](./installation#publishing-configuration):
 
 ```php
 'dark_mode' => true,
@@ -24,7 +24,7 @@ By default, Filament only includes a light theme. However, you may allow the use
 
 When dark mode is enabled, the admin panel will automatically obey your system's dark / light mode preference. You may switch to dark / light mode permanently through the button in the user dropdown menu.
 
-If you're using a [custom theme](#building-themes), make sure that you have the `darkMode: 'class'` setting in your `tailwind.config.js` file.
+If you're using a [custom theme](./#building-themes), make sure that you have the `darkMode: 'class'` setting in your `tailwind.config.js` file.
 
 > Please note: before enabling dark mode in production, please thoroughly test your admin panel - especially third party plugins, which may not be properly tested with dark mode.
 
@@ -49,7 +49,7 @@ When the user toggles between dark or light mode, a browser event called **dark-
 
 By default, the sidebar is only collapsible on mobile. You may make it collapsible on desktop as well.
 
-You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
 
 In `config/filament.php`, set the `layouts.sidebar.is_collapsible_on_desktop` to `true`:
 
@@ -65,7 +65,7 @@ In `config/filament.php`, set the `layouts.sidebar.is_collapsible_on_desktop` to
 
 By default, the topbar sticks to the top of the page.
 
-You may make the topbar scroll out of view instead by adding the following styles to your [theme](#building-themes) or by [registering a new stylesheet](#including-frontend-assets):
+You may make the topbar scroll out of view instead by adding the following styles to your [theme](./#building-themes) or by [registering a new stylesheet](./#including-frontend-assets):
 
 ```css
 .filament-main-topbar {
@@ -88,9 +88,11 @@ To finish installing Tailwind, you must create a new `tailwind.config.js` file i
 In `tailwind.config.js`, register the plugins you installed, and add custom colors used by the form builder:
 
 ```js
-const colors = require('tailwindcss/colors') // [tl! focus]
+import colors from 'tailwindcss/colors' // [tl! focus:start]
+import forms from '@tailwindcss/forms'
+import typography from '@tailwindcss/typography' // [tl! focus:end]
 
-module.exports = {
+export default {
     content: [
         './resources/**/*.blade.php',
         './vendor/filament/**/*.blade.php', // [tl! focus]
@@ -107,8 +109,8 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'), // [tl! focus:start]
-        require('@tailwindcss/typography'), // [tl! focus:end]
+        forms, // [tl! focus:start]
+        typography, // [tl! focus:end]
     ],
 }
 ```
@@ -137,7 +139,7 @@ export default defineConfig({
 And add Tailwind to the `postcss.config.js` file:
 
 ```js
-module.exports = {
+export default {
     plugins: {
         tailwindcss: {},
         autoprefixer: {},
@@ -181,7 +183,7 @@ Filament::serving(function () {
 
 If you specify a custom font family in your `tailwind.config.js`, you may wish to import it via Google Fonts.
 
-You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
 
 Set the `google_fonts` config option to a new Google Fonts URL to load:
 
@@ -193,7 +195,7 @@ Set the `google_fonts` config option to a new Google Fonts URL to load:
 
 Filament exposes a configuration option that allows you to change the maximum content width of all pages.
 
-You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
 
 In `config/filament.php`, set the `layouts.max_content_width` to any value between `xl` and `7xl`, or `full` for no max width:
 
@@ -304,18 +306,18 @@ The available hooks are as follows:
 - `footer.start` - start of footer content (centered)
 - `footer.end` - end of footer content (centered)
 - `footer.after` - after footer
-- `sidebar.start` - before [sidebar](navigation) content
-- `sidebar.end` - after [sidebar](navigation) content
+- `sidebar.start` - before [sidebar](./navigation) content
+- `sidebar.end` - after [sidebar](./navigation) content
 - `scripts.start` - before scripts are defined
 - `scripts.end` - after scripts are defined
 - `styles.start` - before styles are defined
 - `styles.end` - after styles are defined
-- `global-search.start` - before [global search](resources/global-search) input
-- `global-search.end` - after [global search](resources/global-search) input
-- `user-menu.start` - before [user menu](navigation#customizing-the-user-menu) input
-- `user-menu.end` - after [user menu](navigation#customizing-the-user-menu) input
-- `user-menu.account.before` - before the account item in the [user menu](navigation#customizing-the-user-menu)
-- `user-menu.account.after` - after the account item in the [user menu](navigation#customizing-the-user-menu)
+- `global-search.start` - before [global search](./resources/global-search) input
+- `global-search.end` - after [global search](./resources/global-search) input
+- `user-menu.start` - before [user menu](./navigation#customizing-the-user-menu) input
+- `user-menu.end` - after [user menu](./navigation#customizing-the-user-menu) input
+- `user-menu.account.before` - before the account item in the [user menu](./navigation#customizing-the-user-menu)
+- `user-menu.account.after` - after the account item in the [user menu](./navigation#customizing-the-user-menu)
 - `page.header-widgets.start` - before page header widgets
 - `page.header-widgets.end` - after page header widgets
 - `page.footer-widgets.start` - before page footer widgets

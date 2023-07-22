@@ -6,7 +6,7 @@ title: Custom fields
 
 ## View fields
 
-Aside from [building custom fields](custom), you may create "view" fields which allow you to create custom fields without extra PHP classes.
+Aside from [building custom fields](./custom), you may create "view" fields which allow you to create custom fields without extra PHP classes.
 
 ```php
 use Filament\Forms\Components\ViewField;
@@ -20,7 +20,7 @@ This assumes that you have a `resources/views/filament/forms/components/range-sl
 
 You may create your own custom field classes and views, which you can reuse across your project, and even release as a plugin to the community.
 
-> If you're just creating a simple custom field to use once, you could instead use a [view field](#view) to render any custom Blade file.
+> If you're just creating a simple custom field to use once, you could instead use a [view field](./#view) to render any custom Blade file.
 
 To create a custom field class and view, you may use the following command:
 
@@ -71,7 +71,7 @@ This is the basis of how fields work in Filament. Each field is assigned to a pu
 </div>
 ```
 
-If your component heavily relies on third party libraries, we advise that you asynchronously load the Alpine.js component using the Filament asset system. This ensures that the Alpine.js component is only loaded when it's needed, and not on every page load. To find out how to do this, check out our [Assets documentation](../common/assets#asynchronous-alpinejs-components).
+If your component heavily relies on third party libraries, we advise that you asynchronously load the Alpine.js component using the Filament asset system. This ensures that the Alpine.js component is only loaded when it's needed, and not on every page load. To find out how to do this, check out our [Assets documentation](./../common/assets#asynchronous-alpinejs-components).
 
 ## Rendering the field wrapper
 
@@ -102,7 +102,7 @@ Inside your view, you may access the Eloquent record using the `$getRecord()` fu
 
 When you bind a field to a state path, you may use the `defer` modifier to ensure that the state is only sent to the server when the user submits the form, or whenever the next Livewire request is made. This is the default behaviour.
 
-However, you may use the [`live()`](../advanced#the-basics-of-reactivity) on a field to ensure that the state is sent to the server immediately when the user interacts with the field. This allows for lots of advanced use cases as explained in the [advanced](../advanced) section of the documentation.
+However, you may use the [`live()`](./../advanced#the-basics-of-reactivity) on a field to ensure that the state is sent to the server immediately when the user interacts with the field. This allows for lots of advanced use cases as explained in the [advanced](./../advanced) section of the documentation.
 
 Filament provides a `$applyStateBindingModifiers()` function that you may use in your view to apply any state binding modifiers to a `wire:model` or `$wire.entangle()` binding:
 

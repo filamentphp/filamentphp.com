@@ -83,11 +83,11 @@ For authorization, Filament will observe any [model policies](https://laravel.co
 
 Users may access the List page if the `viewAny()` method of the model policy returns `true`.
 
-The `reorder()` method is used to control [reordering a record](#reordering-records).
+The `reorder()` method is used to control [reordering a record](./#reordering-records).
 
 ## Customizing the table Eloquent query
 
-Although you can [customize the Eloquent query for the entire resource](getting-started#customizing-the-resource-eloquent-query), you may also make specific modifications for the List page table. To do this, use the `modifyQueryUsing()` method on the List page class:
+Although you can [customize the Eloquent query for the entire resource](./getting-started#customizing-the-resource-eloquent-query), you may also make specific modifications for the List page table. To do this, use the `modifyQueryUsing()` method on the List page class:
 
 ```php
 use Filament\Tables\Table;
