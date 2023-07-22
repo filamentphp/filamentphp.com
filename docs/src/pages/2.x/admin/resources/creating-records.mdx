@@ -57,11 +57,11 @@ CreateAction::make()
 
 ## Customizing form redirects
 
-By default, after saving the form, the user will be redirected to the [Edit page](editing-records) of the resource, or the [View page](viewing-records) if it is present.
+By default, after saving the form, the user will be redirected to the [Edit page](./editing-records) of the resource, or the [View page](./viewing-records) if it is present.
 
 You may set up a custom redirect when the form is saved by overriding the `getRedirectUrl()` method on the Create page class.
 
-For example, the form can redirect back to the [List page](listing-records):
+For example, the form can redirect back to the [List page](./listing-records):
 
 ```php
 protected function getRedirectUrl(): string
@@ -322,7 +322,7 @@ class CreateCategory extends CreateRecord
 }
 ```
 
-Inside the `getSteps()` array, return your [wizard steps](../../forms/layout#wizard):
+Inside the `getSteps()` array, return your [wizard steps](./../../forms/layout#wizard):
 
 ```php
 use Filament\Forms\Components\MarkdownEditor;

@@ -75,6 +75,11 @@ const getTitleFromMarkdown = (file) => {
     return frontmatter.title
 }
 
+const sanitizeRelativeLinks = (content) => {
+    const regex = /]\((?!http|\/|#)/g
+    return content.replaceAll(regex, '](./')
+}
+
 console.log('Processing docs...')
 
 let structure = []
@@ -274,6 +279,8 @@ versions.forEach((version) => {
                                                 '',
                                             )}"`,
                                         )
+
+                                        result = sanitizeRelativeLinks(result)
 
                                         fs.writeFile(
                                             `src/pages/${version}/${packageName}/${destination}`,

@@ -9,7 +9,7 @@ import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 Field classes can be found in the `Filament\Form\Components` namespace.
 
-Fields reside within the schema of your form, alongside any [layout components](layout).
+Fields reside within the schema of your form, alongside any [layout components](./layout).
 
 Fields may be created using the static `make()` method, passing its unique name. The name of the field should correspond to a property on your Livewire component. You may use [Livewire's "dot notation"](https://laravel-livewire.com/docs/properties#binding-nested-data) to bind fields to arrays.
 
@@ -25,25 +25,25 @@ TextInput::make('name')
 
 Filament ships with many types of field, suitable for editing different types of data:
 
-- [Text input](text-input)
-- [Select](select)
-- [Checkbox](checkbox)
-- [Toggle](toggle)
-- [Checkbox list](checkbox-list)
-- [Radio](radio)
-- [Date-time picker](date-time-picker)
-- [File upload](file-upload)
-- [Rich editor](rich-editor)
-- [Markdown editor](markdown-editor)
-- [Repeater](repeater)
-- [Builder](builder)
-- [Tags input](tags-input)
-- [Textarea](textarea)
-- [Key-value](key-value)
-- [Color picker](color-picker)
-- [Hidden](hidden)
+- [Text input](./text-input)
+- [Select](./select)
+- [Checkbox](./checkbox)
+- [Toggle](./toggle)
+- [Checkbox list](./checkbox-list)
+- [Radio](./radio)
+- [Date-time picker](./date-time-picker)
+- [File upload](./file-upload)
+- [Rich editor](./rich-editor)
+- [Markdown editor](./markdown-editor)
+- [Repeater](./repeater)
+- [Builder](./builder)
+- [Tags input](./tags-input)
+- [Textarea](./textarea)
+- [Key-value](./key-value)
+- [Color picker](./color-picker)
+- [Hidden](./hidden)
 
-You may also [create your own custom fields](custom) to edit data however you wish.
+You may also [create your own custom fields](./custom) to edit data however you wish.
 
 ## Setting a label
 
@@ -78,7 +78,7 @@ TextInput::make('name')
 
 ## Setting a default value
 
-Fields may have a default value. This will be filled if the [form's `fill()` method](getting-started#default-data) is called without any arguments. To define a default value, use the `default()` method:
+Fields may have a default value. This will be filled if the [form's `fill()` method](./getting-started#default-data) is called without any arguments. To define a default value, use the `default()` method:
 
 ```php
 use Filament\Forms\Components\TextInput;
@@ -87,7 +87,7 @@ TextInput::make('name')
     ->default('John')
 ```
 
-Note that these defaults are only used when the form is loaded without existing data. Inside [panel resources](../../panels/resources#resource-forms) this only works on Create Pages, as Edit Pages will always fill the data from the model.
+Note that these defaults are only used when the form is loaded without existing data. Inside [panel resources](./../../panels/resources#resource-forms) this only works on Create Pages, as Edit Pages will always fill the data from the model.
 
 ## Adding helper text below the field
 
@@ -277,7 +277,7 @@ TextInput::make('name')
 
 ## Marking a field as required
 
-By default, [required fields](validation#required) will show an asterisk `*` next to their label. You may want to hide the asterisk on forms where all fields are required, or where it makes sense to add a [hint](#adding-a-hint-next-to-the-label) to optional fields instead:
+By default, [required fields](./validation#required) will show an asterisk `*` next to their label. You may want to hide the asterisk on forms where all fields are required, or where it makes sense to add a [hint](#adding-a-hint-next-to-the-label) to optional fields instead:
 
 ```php
 use Filament\Forms\Components\TextInput;
@@ -289,7 +289,7 @@ TextInput::make('name')
 
 ## Global settings
 
-If you wish to change the default behaviour of a field globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method or a middleware. Pass a closure which is able to modify the component. For example, if you wish to make all [checkboxes `inline(false)`](checkbox#positioning-the-label-above), you can do it like so:
+If you wish to change the default behaviour of a field globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method or a middleware. Pass a closure which is able to modify the component. For example, if you wish to make all [checkboxes `inline(false)`](./checkbox#positioning-the-label-above), you can do it like so:
 
 ```php
 use Filament\Forms\Components\Checkbox;

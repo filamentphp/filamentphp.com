@@ -8,7 +8,7 @@ title: Fields
 
 Field classes can be found in the `Filament\Form\Components` namespace.
 
-Fields reside within the schema of your form, alongside any [layout components](layout).
+Fields reside within the schema of your form, alongside any [layout components](./layout).
 
 If you're using the fields in a Livewire component, you can put them in the `getFormSchema()` method:
 
@@ -71,7 +71,7 @@ TextInput::make('name')->id('name-field')
 
 ### Setting a default value
 
-Fields may have a default value. This will be filled if the [form's `fill()` method](getting-started#default-data) is called without any arguments. To define a default value, use the `default()` method:
+Fields may have a default value. This will be filled if the [form's `fill()` method](./getting-started#default-data) is called without any arguments. To define a default value, use the `default()` method:
 
 ```php
 use Filament\Forms\Components\TextInput;
@@ -98,7 +98,7 @@ Hints can be used to display text adjacent to its label:
 ```php
 use Filament\Forms\Components\TextInput;
 
-TextInput::make('password')->hint('[Forgotten your password?](forgotten-password)')
+TextInput::make('password')->hint('[Forgotten your password?](./forgotten-password)')
 ```
 
 Hints may also have an icon rendered next to them:
@@ -606,7 +606,7 @@ Commonly, you may desire "dependant" select inputs, which populate their options
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W_eNyimRi3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Some of the techniques described in the [advanced forms](advanced) section are required to create dependant selects. These techniques can be applied across all form components for many dynamic customization possibilities.
+Some of the techniques described in the [advanced forms](./advanced) section are required to create dependant selects. These techniques can be applied across all form components for many dynamic customization possibilities.
 
 ### Populating automatically from a relationship
 
@@ -629,7 +629,7 @@ Select::make('technologies')
     ->relationship('technologies', 'name')
 ```
 
-> To set this functionality up, **you must also follow the instructions set out in the [field relationships](getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
+> To set this functionality up, **you must also follow the instructions set out in the [field relationships](./getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
 
 If you'd like to populate the options from the database when the page is loaded, instead of when the user searches, you can use the `preload()` method:
 
@@ -928,7 +928,7 @@ CheckboxList::make('technologies')
 
 ![](https://user-images.githubusercontent.com/41773797/147761438-558a9dcc-b81a-4fbe-a922-a6771407d928.png)
 
-This method accepts the same options as the `columns()` method of the [grid](layout#grid). This allows you to responsively customize the number of columns at various breakpoints.
+This method accepts the same options as the `columns()` method of the [grid](./layout#grid). This allows you to responsively customize the number of columns at various breakpoints.
 
 You may also allow users to toggle all checkboxes at once using the `bulkToggleable()` method:
 
@@ -956,7 +956,7 @@ CheckboxList::make('technologies')
     ->relationship('technologies', 'name')
 ```
 
-> To set this functionality up, **you must also follow the instructions set out in the [field relationships](getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
+> To set this functionality up, **you must also follow the instructions set out in the [field relationships](./getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
 
 You may customize the database query that retrieves options using the third parameter of the `relationship()` method:
 
@@ -1148,6 +1148,24 @@ DateTimePicker::make('date')
     ->minDate(now())
     ->maxDate(Carbon::now()->addDays(30))
     ->disabledDates(['2022-10-02', '2022-10-05', '2022-10-15'])
+```
+
+You may change the calendar icon using the `icon()` method:
+
+```php
+use Filament\Forms\Components\DateTimePicker;
+
+DateTimePicker::make('date')
+    ->icon('heroicon-o-calendar')
+```
+
+Alternatively, you may remove the icon altogether by passing `false`:
+
+```php
+use Filament\Forms\Components\DateTimePicker;
+
+DateTimePicker::make('date')
+    ->icon(false)
 ```
 
 ### Timezones
@@ -1370,6 +1388,7 @@ RichEditor::make('content')
         'orderedList',
         'redo',
         'strike',
+        'underline',
         'undo',
     ])
 RichEditor::make('content')
@@ -1615,7 +1634,7 @@ Repeater::make('qualifications')
     ])
 ```
 
-> To set this functionality up, **you must also follow the instructions set out in the [field relationships](getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
+> To set this functionality up, **you must also follow the instructions set out in the [field relationships](./getting-started#field-relationships) section**. If you're using the [admin panel](/docs/admin), you can skip this step.
 
 #### Ordering items
 
@@ -1661,7 +1680,7 @@ Repeater::make('members')
     ->grid(2)
 ```
 
-This method accepts the same options as the `columns()` method of the [grid](layout#grid). This allows you to responsively customize the number of grid columns at various breakpoints.
+This method accepts the same options as the `columns()` method of the [grid](./layout#grid). This allows you to responsively customize the number of grid columns at various breakpoints.
 
 ### Item labels
 
@@ -1683,7 +1702,7 @@ Any fields that you use from `$state` should be `reactive()` or `lazy()` if you 
 
 ### Using `$get()` to access parent field values
 
-All form components are able to [use `$get()` and `$set()`](advanced) to access another field's value. However, you might experience unexpected behaviour when using this inside the repeater's schema.
+All form components are able to [use `$get()` and `$set()`](./advanced) to access another field's value. However, you might experience unexpected behaviour when using this inside the repeater's schema.
 
 This is because `$get()` and `$set()`, by default, are scoped to the current repeater item. This means that you are able to interact with another field inside that repeater item easily without knowing which repeater item the current form component belongs to.
 

@@ -4,7 +4,7 @@ githubUrl: "https://github.com/filamentphp/filament/edit/2.x/packages/notificati
 title: Database notifications
 ---
 
-> To start, make sure the package is [installed](installation) - `@livewire('notifications')` should be in your Blade layout somewhere.
+> To start, make sure the package is [installed](./installation) - `@livewire('notifications')` should be in your Blade layout somewhere.
 
 Before we start, make sure that the [Laravel notifications table](https://laravel.com/docs/notifications#database-prerequisites) is added to your database:
 
@@ -16,7 +16,7 @@ php artisan notifications:table
 
 > If you're using UUIDs for your `User` model, make sure that your `notifiable` column is using `uuidMorphs()`: `$table->uuidMorphs('notifiable')`.
 
-First, you must [publish the configuration file](installation#publishing-configuration) for the package.
+First, you must [publish the configuration file](./installation#publishing-configuration) for the package.
 
 Inside the configuration file, there is a `database` key. To enable database notifications:
 

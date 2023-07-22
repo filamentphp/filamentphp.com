@@ -42,7 +42,7 @@ php artisan make:filament-resource Customer --simple
 
 Your resource will have a "Manage" page, which is a List page with modals added.
 
-Additionally, your simple resource will have no `getRelations()` method, as [relation managers](relation-managers) are only displayed on the Edit and View pages, which are not present in simple resources. Everything else is the same.
+Additionally, your simple resource will have no `getRelations()` method, as [relation managers](./relation-managers) are only displayed on the Edit and View pages, which are not present in simple resources. Everything else is the same.
 
 ### Automatically generating forms and tables
 
@@ -70,11 +70,11 @@ By default, you will not be able to interact with deleted records in the admin p
 php artisan make:filament-resource Customer --soft-deletes
 ```
 
-You can find out more about soft deleting [here](deleting-records#handling-soft-deletes).
+You can find out more about soft deleting [here](./deleting-records#handling-soft-deletes).
 
 ### Generating a View page
 
-By default, only List, Create and Edit pages are generated for your resource. If you'd also like a [View page](viewing-records), use the `--view` flag:
+By default, only List, Create and Edit pages are generated for your resource. If you'd also like a [View page](./viewing-records), use the `--view` flag:
 
 ```bash
 php artisan make:filament-resource Customer --view
@@ -90,7 +90,7 @@ For example, this could be a blog post's `title` or a customer's `name`:
 protected static ?string $recordTitleAttribute = 'name';
 ```
 
-This is required for features like [global search](global-search) to work.
+This is required for features like [global search](./global-search) to work.
 
 > You may specify the name of an [Eloquent accessor](https://laravel.com/docs/eloquent-mutators#defining-an-accessor) if just one column is inadequate at identifying a record.
 
@@ -115,35 +115,35 @@ public static function form(Form $form): Form
 
 ### Fields
 
-The `schema()` method is used to define the structure of your form. It is an array of [fields](../../forms/fields), in the order they should appear in your form.
+The `schema()` method is used to define the structure of your form. It is an array of [fields](./../../forms/fields), in the order they should appear in your form.
 
 We have many fields available for your forms, including:
 
-- [Text input](../../forms/fields#text-input)
-- [Select](../../forms/fields#select)
-- [Multi-select](../../forms/fields#multi-select)
-- [Checkbox](../../forms/fields#checkbox)
-- [Date-time picker](../../forms/fields#date-time-picker)
-- [File upload](../../forms/fields#file-upload)
-- [Rich editor](../../forms/fields#rich-editor)
-- [Markdown editor](../../forms/fields#markdown-editor)
-- [Repeater](../../forms/fields#repeater)
+- [Text input](./../../forms/fields#text-input)
+- [Select](./../../forms/fields#select)
+- [Multi-select](./../../forms/fields#multi-select)
+- [Checkbox](./../../forms/fields#checkbox)
+- [Date-time picker](./../../forms/fields#date-time-picker)
+- [File upload](./../../forms/fields#file-upload)
+- [Rich editor](./../../forms/fields#rich-editor)
+- [Markdown editor](./../../forms/fields#markdown-editor)
+- [Repeater](./../../forms/fields#repeater)
 
-To view a full list of available form [fields](../../forms/fields), see the [Form Builder documentation](../../forms/fields).
+To view a full list of available form [fields](./../../forms/fields), see the [Form Builder documentation](./../../forms/fields).
 
-You may also build your own completely [custom form fields](../../forms/fields#building-custom-fields).
+You may also build your own completely [custom form fields](./../../forms/fields#building-custom-fields).
 
 ### Layout
 
 Form layouts are completely customizable. We have many layout components available, which can be used in any combination:
 
-- [Grid](../../forms/layout#grid)
-- [Card](../../forms/layout#card)
-- [Tabs](../../forms/layout#tabs)
+- [Grid](./../../forms/layout#grid)
+- [Card](./../../forms/layout#card)
+- [Tabs](./../../forms/layout#tabs)
 
-To view a full list of available [layout components](../../forms/layout), see the [Form Builder documentation](../../forms/layout).
+To view a full list of available [layout components](./../../forms/layout), see the [Form Builder documentation](./../../forms/layout).
 
-You may also build your own completely [custom layout components](../../forms/layout#building-custom-layout-components).
+You may also build your own completely [custom layout components](./../../forms/layout#building-custom-layout-components).
 
 ### Hiding components contextually
 
@@ -173,7 +173,7 @@ Forms\Components\TextInput::make('password')
 
 ## Tables
 
-Resource classes contain a static `table()` method that is used to build the table on the [List page](listing-records):
+Resource classes contain a static `table()` method that is used to build the table on the [List page](./listing-records):
 
 ```php
 use Filament\Resources\Table;
@@ -202,7 +202,7 @@ public static function table(Table $table): Table
 }
 ```
 
-Check out the [listing records](listing-records) docs to find out how to add table [columns](listing-records#columns), [filters](listing-records#filters), [actions](listing-records#actions), [bulk actions](listing-records#bulk-actions) and more.
+Check out the [listing records](./listing-records) docs to find out how to add table [columns](./listing-records#columns), [filters](./listing-records#filters), [actions](./listing-records#actions), [bulk actions](./listing-records#bulk-actions) and more.
 
 ## Relations
 
@@ -221,11 +221,11 @@ Select::make('author_id')
     ->relationship('author', 'name')
 ```
 
-More information is available in the [Form docs](../../forms/fields#populating-automatically-from-a-relationship).
+More information is available in the [Form docs](./../../forms/fields#populating-automatically-from-a-relationship).
 
 #### Layout component
 
-Layout form components are able to [save child data to relationships](../../forms/layout#saving-data-to-relationships), such as `BelongsTo`:
+Layout form components are able to [save child data to relationships](./../../forms/layout#saving-data-to-relationships), such as `BelongsTo`:
 
 ```php
 use Filament\Forms\Components\Fieldset;
@@ -241,13 +241,13 @@ Fieldset::make('Author')
     ])
 ```
 
-For more information, see the [Form docs](../../forms/layout#saving-data-to-relationships).
+For more information, see the [Form docs](./../../forms/layout#saving-data-to-relationships).
 
 ### `HasOne`
 
 #### Layout component
 
-Layout form components are able to [save child data to relationships](../../forms/layout#saving-data-to-relationships), such as `HasOne`:
+Layout form components are able to [save child data to relationships](./../../forms/layout#saving-data-to-relationships), such as `HasOne`:
 
 ```php
 use Filament\Forms\Components\Fieldset;
@@ -264,7 +264,7 @@ Fieldset::make('Metadata')
     ])
 ```
 
-For more information, see the [Form docs](../../forms/layout#saving-data-to-relationships).
+For more information, see the [Form docs](./../../forms/layout#saving-data-to-relationships).
 
 ### `HasMany`
 
@@ -274,11 +274,11 @@ For more information, see the [Form docs](../../forms/layout#saving-data-to-rela
 
 The related records are listed in a table, which has buttons to open a modal for each action.
 
-For more information on relation managers, see the [full documentation](relation-managers).
+For more information on relation managers, see the [full documentation](./relation-managers).
 
 #### Repeater
 
-Alternatively, if you're looking to edit the relationship from the main form, you could use a [repeater](../../forms/fields#populating-automatically-from-a-relationship):
+Alternatively, if you're looking to edit the relationship from the main form, you could use a [repeater](./../../forms/fields#populating-automatically-from-a-relationship):
 
 ```php
 use Filament\Forms\Components\Repeater;
@@ -296,11 +296,11 @@ From a UX perspective, this solution is only suitable if your related model only
 
 #### Relation manager
 
-"Relation managers" in Filament allow admins to list, create, associate, edit, dissociate and delete related records without leaving the resource's Edit page.
+"Relation managers" in Filament allow admins to list, create, edit, and delete related records without leaving the resource's Edit page.
 
 The related records are listed in a table, which has buttons to open a modal for each action.
 
-For more information on relation managers, see the [full documentation](relation-managers).
+For more information on relation managers, see the [full documentation](./relation-managers).
 
 ### `BelongsToMany`
 
@@ -316,7 +316,7 @@ Select::make('technologies')
     ->relationship('technologies', 'name')
 ```
 
-More information is available in the [Form docs](../../forms/fields#populating-automatically-from-a-belongstomany-relationship).
+More information is available in the [Form docs](./../../forms/fields#populating-automatically-from-a-belongstomany-relationship).
 
 #### Checkbox list field
 
@@ -329,7 +329,7 @@ CheckboxList::make('technologies')
     ->relationship('technologies', 'name')
 ```
 
-More information about `CheckboxList` is available in the [Form docs](../../forms/fields#populating-automatically-from-a-relationship-1).
+More information about `CheckboxList` is available in the [Form docs](./../../forms/fields#populating-automatically-from-a-relationship-1).
 
 #### Relation manager
 
@@ -337,7 +337,7 @@ More information about `CheckboxList` is available in the [Form docs](../../form
 
 The related records are listed in a table, which has buttons to open a modal for each action.
 
-For more information on relation managers, see the [full documentation](relation-managers).
+For more information on relation managers, see the [full documentation](./relation-managers).
 
 ### `MorphTo`
 
@@ -355,13 +355,13 @@ MorphToSelect::make('commentable')
     ])
 ```
 
-More information is available in the [Form docs](../../forms/fields#handling-morphto-relationships).
+More information is available in the [Form docs](./../../forms/fields#handling-morphto-relationships).
 
 ### `MorphOne`
 
 #### Layout component
 
-Layout form components are able to [save child data to relationships](../../forms/layout#saving-data-to-relationships), such as `MorphOne`:
+Layout form components are able to [save child data to relationships](./../../forms/layout#saving-data-to-relationships), such as `MorphOne`:
 
 ```php
 use Filament\Forms\Components\Fieldset;
@@ -378,7 +378,7 @@ Fieldset::make('Metadata')
     ])
 ```
 
-For more information, see the [Form docs](../../forms/layout#saving-data-to-relationships).
+For more information, see the [Form docs](./../../forms/layout#saving-data-to-relationships).
 
 ### `MorphMany`
 
@@ -388,11 +388,11 @@ For more information, see the [Form docs](../../forms/layout#saving-data-to-rela
 
 The related records are listed in a table, which has buttons to open a modal for each action.
 
-For more information on relation managers, see the [full documentation](relation-managers).
+For more information on relation managers, see the [full documentation](./relation-managers).
 
 #### Repeater
 
-Alternatively, if you're looking to edit the relationship from the main form, you could use a [repeater](../../forms/fields#populating-automatically-from-a-relationship):
+Alternatively, if you're looking to edit the relationship from the main form, you could use a [repeater](./../../forms/fields#populating-automatically-from-a-relationship):
 
 ```php
 use Filament\Forms\Components\Repeater;
@@ -413,20 +413,20 @@ From a UX perspective, this solution is only suitable if your related model only
 
 The related records are listed in a table, which has buttons to open a modal for each action.
 
-For more information on relation managers, see the [full documentation](relation-managers).
+For more information on relation managers, see the [full documentation](./relation-managers).
 
 ## Authorization
 
 For authorization, Filament will observe any [model policies](https://laravel.com/docs/authorization#creating-policies) that are registered in your app. The following methods are used:
 
 - `viewAny()` is used to completely hide resources from the navigation menu, and prevents the user from accessing any pages.
-- `create()` is used to control [creating new records](creating-records).
-- `update()` is used to control [editing a record](editing-records).
-- `view()` is used to control [viewing a record](viewing-records).
+- `create()` is used to control [creating new records](./creating-records).
+- `update()` is used to control [editing a record](./editing-records).
+- `view()` is used to control [viewing a record](./viewing-records).
 - `delete()` is used to prevent a single record from being deleted. `deleteAny()` is used to prevent records from being bulk deleted. Filament uses the `deleteAny()` method because iterating through multiple records and checking the `delete()` policy is not very performant.
 - `forceDelete()` is used to prevent a single soft-deleted record from being force-deleted. `forceDeleteAny()` is used to prevent records from being bulk force-deleted. Filament uses the `forceDeleteAny()` method because iterating through multiple records and checking the `forceDelete()` policy is not very performant.
 - `restore()` is used to prevent a single soft-deleted record from being restored. `restoreAny()` is used to prevent records from being bulk restored. Filament uses the `restoreAny()` method because iterating through multiple records and checking the `restore()` policy is not very performant.
-- `reorder()` is used to control [reordering a record](listing-records#reordering-records).
+- `reorder()` is used to control [reordering a record](./listing-records#reordering-records).
 
 ## Model labels
 
@@ -602,7 +602,7 @@ public function creating(Post $post): void
 }
 ```
 
-Additionally, you may want to scope the options available in the [relation manager](relation-managers) `AttachAction` or `AssociateAction`:
+Additionally, you may want to scope the options available in the [relation manager](./relation-managers) `AttachAction` or `AssociateAction`:
 
 ```php
 use Filament\Tables\Actions\AttachAction;
@@ -614,7 +614,7 @@ AttachAction::make()
 
 ### `stancl/tenancy`
 
-To set up [`stancl/tenancy`](https://tenancyforlaravel.com/docs) to work with Filament, you just need to add the `InitializeTenancyByDomain::class` middleware to [Livewire](https://tenancyforlaravel.com/docs/v3/integrations/livewire) and the [Filament config file](../installation#publishing-configuration):
+To set up [`stancl/tenancy`](https://tenancyforlaravel.com/docs) to work with Filament, you just need to add the `InitializeTenancyByDomain::class` middleware to [Livewire](https://tenancyforlaravel.com/docs/v3/integrations/livewire) and the [Filament config file](./../installation#publishing-configuration):
 
 ```php
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;

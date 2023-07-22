@@ -6,7 +6,7 @@ title: Validation
 
 ## Getting started
 
-Validation rules may be added to any [field](fields).
+Validation rules may be added to any [field](./fields).
 
 Filament includes several [dedicated validation methods](#available-rules), but you can also use any [other Laravel validation rules](#other-rules), including [custom validation rules](#custom-rules).
 
@@ -171,7 +171,7 @@ The field value must exist in the database. [See the Laravel documentation.](htt
 Field::make('invitation')->exists()
 ```
 
-By default, the form's model will be searched, [if it is registered](getting-started#registering-a-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](./getting-started#registering-a-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\Invitation;
@@ -185,7 +185,7 @@ By default, the field name will be used as the column to search. You may specify
 Field::make('invitation')->exists(column: 'id')
 ```
 
-You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Exists;
@@ -317,6 +317,22 @@ The field value must not be empty. [See the Laravel documentation.](https://lara
 Field::make('name')->required()
 ```
 
+### Required If
+
+The field value must not be empty _only if_ the other specified field has any of the given values. [See the Laravel documentation.](https://laravel.com/docs/validation#rule-required-if)
+
+```php
+Field::make('name')->requiredIf('field', 'value')
+```
+
+### Required Unless
+
+The field value must not be empty _unless_ the other specified field has any of the given values. [See the Laravel documentation.](https://laravel.com/docs/validation#rule-required-unless)
+
+```php
+Field::make('name')->requiredUnless('field', 'value')
+```
+
 ### Required With
 
 The field value must not be empty _only if_ any of the other specified fields are not empty. [See the Laravel documentation.](https://laravel.com/docs/validation#rule-required-with)
@@ -388,7 +404,7 @@ The field value must not exist in the database. [See the Laravel documentation.]
 Field::make('email')->unique()
 ```
 
-By default, the form's model will be searched, [if it is registered](getting-started#registering-a-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](./getting-started#registering-a-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\User;
@@ -414,7 +430,7 @@ If you're using the [admin panel](/docs/admin), you can easily ignore the curren
 Field::make('email')->unique(ignoreRecord: true)
 ```
 
-You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Unique;

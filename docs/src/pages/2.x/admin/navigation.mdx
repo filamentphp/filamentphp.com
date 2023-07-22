@@ -6,7 +6,7 @@ title: Navigation
 
 ## Getting started
 
-By default, Filament will register navigation items for each of your [resources](resources) and [custom pages](pages). These classes contain static properties and methods that you can override, to configure that navigation item and its order:
+By default, Filament will register navigation items for each of your [resources](./resources) and [custom pages](./pages). These classes contain static properties and methods that you can override, to configure that navigation item and its order:
 
 ```php
 protected static ?string $navigationIcon = 'heroicon-o-document-text';
@@ -40,7 +40,7 @@ protected static function getNavigationBadgeColor(): ?string
 
 ## Grouping navigation items
 
-You may group navigation items by specifying a `$navigationGroup` property on a [resource](resources) and [custom page](pages):
+You may group navigation items by specifying a `$navigationGroup` property on a [resource](./resources) and [custom page](./pages):
 
 ```php
 protected static ?string $navigationGroup = 'Settings';
@@ -130,6 +130,19 @@ Filament::serving(function () {
             ->sort(3),
     ]);
 });
+```
+
+## Conditionally hiding navigation items
+
+You can also conditionally hide a navigation item by using the `visible()` or `hidden()` methods, passing in a condition to check:
+
+```php
+use Filament\Navigation\NavigationItem;
+
+NavigationItem::make('Analytics')
+    ->visible(auth()->user()->can('view-analytics'))
+    // or
+    ->hidden(! auth()->user()->can('view-analytics')),
 ```
 
 ## Disabling resource or page navigation items

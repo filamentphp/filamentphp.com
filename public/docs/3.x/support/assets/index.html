@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-EWBB4F7F">
+<html lang="en" class="hidden astro-3C7CDRLL">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,8 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.830fbc6c.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
+<link rel="stylesheet" href="/docs/assets/dashboard.8b1e1fb3.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-3C7CDRLL">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center">
@@ -296,12 +296,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-EWBB4F7F">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-EWBB4F7F">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-EWBB4F7F"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-EWBB4F7F" x-data="{
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-3C7CDRLL">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-3C7CDRLL">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-3C7CDRLL"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-3C7CDRLL" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -422,13 +422,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-EWBB4F7F">
-        <article class="astro-EWBB4F7F">
-          <header class="mb-9 space-y-1 astro-EWBB4F7F">
-              <p class="font-display font-bold text-butter astro-EWBB4F7F">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-3C7CDRLL">
+        <article class="astro-3C7CDRLL">
+          <header class="mb-9 space-y-1 astro-3C7CDRLL">
+              <p class="font-display font-bold text-butter astro-3C7CDRLL">
                   Core Concepts 
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-EWBB4F7F">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-3C7CDRLL">
                   Assets
                 </h1>
             </header>
@@ -487,7 +487,7 @@ FilamentAsset::register([
 }
 </textarea></code></pre>
 <p>This means that when they build their Tailwind CSS file, it will include all the utility classes that are used in your plugin’s views, as well as the utility classes that are used in their application and the Filament core.</p>
-<p>However, with this technique, there might be extra complications for users who use your plugin with the <a href="../panels">Panel Builder</a>. If they have a <a href="../panels/theming">custom theme</a>, they will be fine, since they are building their own CSS file anyway using Tailwind CSS. However, if they are using the default stylesheet which is shipped with the panel builder, you might have to be careful about the utility classes that you use in your plugin’s views. For instance, if you use a utility class that is not included in the default stylesheet, the user is not compiling it themselves, and it will not be included in the final CSS file. This means that your plugin’s views might not look as expected. This is one of the few situations where I would recommend compiling and <a href="#registering-css-files">registering</a> a Tailwind CSS-compiled stylesheet in your plugin.</p>
+<p>However, with this technique, there might be extra complications for users who use your plugin with the <a href="./../panels">Panel Builder</a>. If they have a <a href="./../panels/theming">custom theme</a>, they will be fine, since they are building their own CSS file anyway using Tailwind CSS. However, if they are using the default stylesheet which is shipped with the panel builder, you might have to be careful about the utility classes that you use in your plugin’s views. For instance, if you use a utility class that is not included in the default stylesheet, the user is not compiling it themselves, and it will not be included in the final CSS file. This means that your plugin’s views might not look as expected. This is one of the few situations where I would recommend compiling and <a href="#registering-css-files">registering</a> a Tailwind CSS-compiled stylesheet in your plugin.</p>
 <h3 id="lazy-loading-css">Lazy loading CSS</h3>
 <p>By default, all CSS files registered with the asset system are loaded in the <code>&lt;head&gt;</code> of every Filament page. This is the simplest way to load CSS files, but sometimes they may be quite heavy and not required on every page. In this case, you can leverage the <a href="https://github.com/tanthammar/alpine-lazy-load-assets">Alpine.js Lazy Load Assets</a> package that comes bundled with Filament. It allows you to easily load CSS files on-demand using Alpine.js. The premise is very simple, you use the <code>x-load-css</code> directive on an element, and when that element is loaded onto the page, the specified CSS files are loaded into the <code>&lt;head&gt;</code> of the page. This is perfect for both small UI elements and entire pages that require a CSS file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{}</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-load-css</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">[</span><span style="color: #82AAFF;">@js</span><span style="color: #C3E88D;">(\Filament\Support\Facades\</span><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getStyleHref</span><span style="color: #89DDFF;">(&#39;</span><span style="color: #C3E88D;">custom-stylesheet</span><span style="color: #89DDFF;">&#39;)</span><span style="color: #C3E88D;">)]</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">&lt;!-- ... --&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div
@@ -667,7 +667,7 @@ FilamentAsset::register([
     &lt;input x-model="state" /&gt;
 &lt;/div&gt;
 </textarea></code></pre>
-<p>This example is for a <a href="../forms/fields/custom">custom form field</a>. It passes the <code>state</code> in as a parameter to the <code>testComponent()</code> function, which is entangled with a Livewire component property. You can pass in any parameters you want, and access them in the <code>testComponent()</code> function. If you’re not using a custom form field, you can ignore the <code>state</code> parameter in this example.</p>
+<p>This example is for a <a href="./../forms/fields/custom">custom form field</a>. It passes the <code>state</code> in as a parameter to the <code>testComponent()</code> function, which is entangled with a Livewire component property. You can pass in any parameters you want, and access them in the <code>testComponent()</code> function. If you’re not using a custom form field, you can ignore the <code>state</code> parameter in this example.</p>
 <p>The <code>ax-load</code> attributes come from the <a href="https://async-alpine.dev/docs/strategies">Async Alpine</a> package, and any features of that package can be used here.</p>
 <h3 id="registering-script-data">Registering script data</h3>
 <p>Sometimes, you may wish to make data from the backend available to JavaScript files. To do this, you can use the <code>FilamentAsset::registerScriptData()</code> method in the <code>boot()</code> method of a service provider:</p>
@@ -690,97 +690,97 @@ FilamentAsset::register([
     Js::make('example-external-script', 'https://example.com/external.js'),
     Js::make('example-local-script', asset('js/local.js')),
 ]);
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/02-assets.md" class="text-sm astro-EWBB4F7F" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-EWBB4F7F">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">GitHub discussion</a>
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/02-assets.md" class="text-sm astro-3C7CDRLL" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-3C7CDRLL">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-EWBB4F7F">
-          <div class="astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-3C7CDRLL">
+          <div class="astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/support/overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    <span aria-hidden="true" class="astro-EWBB4F7F">&larr;</span> Overview
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/support/overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    <span aria-hidden="true" class="astro-3C7CDRLL">&larr;</span> Overview
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+            <div class="ml-auto text-right astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Next
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/support/icons" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    Icons <span aria-hidden="true" class="astro-EWBB4F7F">&rarr;</span>
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/support/icons" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    Icons <span aria-hidden="true" class="astro-3C7CDRLL">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-EWBB4F7F">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-EWBB4F7F">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-3C7CDRLL">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-3C7CDRLL">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-EWBB4F7F" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-filamentasset-facade&#34;,&#34;text&#34;:&#34;The FilamentAsset facade&#34;,&#34;title&#34;:&#34;The FilamentAsset facade&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-assets-for-a-plugin&#34;,&#34;text&#34;:&#34;Registering assets for a plugin&#34;,&#34;title&#34;:&#34;Registering assets for a plugin&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-css-files&#34;,&#34;text&#34;:&#34;Registering CSS files&#34;,&#34;title&#34;:&#34;Registering CSS files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-tailwind-css-in-plugins&#34;,&#34;text&#34;:&#34;Using Tailwind CSS in plugins&#34;,&#34;title&#34;:&#34;Using Tailwind CSS in plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-css&#34;,&#34;text&#34;:&#34;Lazy loading CSS&#34;,&#34;title&#34;:&#34;Lazy loading CSS&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-css-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering CSS files from a URL&#34;,&#34;title&#34;:&#34;Registering CSS files from a URL&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-javascript-files&#34;,&#34;text&#34;:&#34;Registering JavaScript files&#34;,&#34;title&#34;:&#34;Registering JavaScript files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-javascript&#34;,&#34;text&#34;:&#34;Lazy loading JavaScript&#34;,&#34;title&#34;:&#34;Lazy loading JavaScript&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-script-data&#34;,&#34;text&#34;:&#34;Registering script data&#34;,&#34;title&#34;:&#34;Registering script data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-javascript-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering JavaScript files from a URL&#34;,&#34;title&#34;:&#34;Registering JavaScript files from a URL&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-3C7CDRLL" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-filamentasset-facade&#34;,&#34;text&#34;:&#34;The FilamentAsset facade&#34;,&#34;title&#34;:&#34;The FilamentAsset facade&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-assets-for-a-plugin&#34;,&#34;text&#34;:&#34;Registering assets for a plugin&#34;,&#34;title&#34;:&#34;Registering assets for a plugin&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-css-files&#34;,&#34;text&#34;:&#34;Registering CSS files&#34;,&#34;title&#34;:&#34;Registering CSS files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-tailwind-css-in-plugins&#34;,&#34;text&#34;:&#34;Using Tailwind CSS in plugins&#34;,&#34;title&#34;:&#34;Using Tailwind CSS in plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-css&#34;,&#34;text&#34;:&#34;Lazy loading CSS&#34;,&#34;title&#34;:&#34;Lazy loading CSS&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-css-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering CSS files from a URL&#34;,&#34;title&#34;:&#34;Registering CSS files from a URL&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-javascript-files&#34;,&#34;text&#34;:&#34;Registering JavaScript files&#34;,&#34;title&#34;:&#34;Registering JavaScript files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-javascript&#34;,&#34;text&#34;:&#34;Lazy loading JavaScript&#34;,&#34;title&#34;:&#34;Lazy loading JavaScript&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-script-data&#34;,&#34;text&#34;:&#34;Registering script data&#34;,&#34;title&#34;:&#34;Registering script data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-javascript-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering JavaScript files from a URL&#34;,&#34;title&#34;:&#34;Registering JavaScript files from a URL&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#the-filamentasset-facade" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'the-filamentasset-facade' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#the-filamentasset-facade" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'the-filamentasset-facade' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           The FilamentAsset facade
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#registering-assets-for-a-plugin" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-assets-for-a-plugin' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#registering-assets-for-a-plugin" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-assets-for-a-plugin' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering assets for a plugin
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#registering-css-files" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-css-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#registering-css-files" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-css-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering CSS files
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#using-tailwind-css-in-plugins" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'using-tailwind-css-in-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#using-tailwind-css-in-plugins" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'using-tailwind-css-in-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Using Tailwind CSS in plugins
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#lazy-loading-css" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'lazy-loading-css' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#lazy-loading-css" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'lazy-loading-css' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Lazy loading CSS
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#registering-css-files-from-a-url" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-css-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#registering-css-files-from-a-url" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-css-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering CSS files from a URL
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#registering-javascript-files" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-javascript-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#registering-javascript-files" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-javascript-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering JavaScript files
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#lazy-loading-javascript" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'lazy-loading-javascript' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#lazy-loading-javascript" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'lazy-loading-javascript' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Lazy loading JavaScript
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#registering-script-data" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-script-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#registering-script-data" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-script-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering script data
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#registering-javascript-files-from-a-url" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'registering-javascript-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#registering-javascript-files-from-a-url" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'registering-javascript-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering JavaScript files from a URL
                               </a>
                             </li>

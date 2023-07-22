@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-EWBB4F7F">
+<html lang="en" class="hidden astro-3C7CDRLL">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,8 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.830fbc6c.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
+<link rel="stylesheet" href="/docs/assets/dashboard.8b1e1fb3.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-3C7CDRLL">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center">
@@ -448,12 +448,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-EWBB4F7F">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-EWBB4F7F">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-EWBB4F7F"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-EWBB4F7F"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-EWBB4F7F" x-data="{
+    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-3C7CDRLL">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-3C7CDRLL">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-3C7CDRLL"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-3C7CDRLL"></div>
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar astro-3C7CDRLL" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -726,13 +726,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-EWBB4F7F">
-        <article class="astro-EWBB4F7F">
-          <header class="mb-9 space-y-1 astro-EWBB4F7F">
-              <p class="font-display font-bold text-butter astro-EWBB4F7F">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-3C7CDRLL">
+        <article class="astro-3C7CDRLL">
+          <header class="mb-9 space-y-1 astro-3C7CDRLL">
+              <p class="font-display font-bold text-butter astro-3C7CDRLL">
                   Form Builder 
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-EWBB4F7F">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-3C7CDRLL">
                   Adding a form to a Livewire component
                 </h1>
             </header>
@@ -755,7 +755,7 @@ Route::get('posts/create', CreatePost::class);
 <ol>
 <li>Implement the <code>HasForms</code> interface and use the <code>InteractsWithForms</code> trait.</li>
 <li>Define a public Livewire property to store your form’s data. In our example, we’ll call this <code>$data</code>, but you can call it whatever you want.</li>
-<li>Add a <code>form()</code> method, which is where you configure the form. <a href="getting-started#form-schemas">Add the form’s schema</a>, and tell Filament to store the form data in the <code>$data</code> property (using <code>statePath(&#39;data&#39;)</code>).</li>
+<li>Add a <code>form()</code> method, which is where you configure the form. <a href="./getting-started#form-schemas">Add the form’s schema</a>, and tell Filament to store the form data in the <code>$data</code> property (using <code>statePath(&#39;data&#39;)</code>).</li>
 <li>Initialize the form with <code>$this-&gt;form-&gt;fill()</code> in <code>mount()</code>. This is imperative for every form that you build, even if it doesn’t have any initial data.</li>
 <li>Define a method to handle the form submission. In our example, we’ll call this <code>create()</code>, but you can call it whatever you want. Inside that method, you can validate and get the form’s data using <code>$this-&gt;form-&gt;getState()</code>. It’s important that you use this method instead of accessing the <code>$this-&gt;data</code> property directly, because the form’s data needs to be validated and transformed into a useful format before being returned.</li>
 </ol>
@@ -820,7 +820,7 @@ class CreatePost extends Component implements HasForms
 &lt;/div&gt;
 </textarea></code></pre>
 <blockquote>
-<p>Note: <code>&lt;x-filament-actions::modals /&gt;</code> is used to render form component <a href="actions">action modals</a>. The code can be put anywhere outside of the <code>&lt;form&gt;</code> element, as long as it’s within the Livewire component.</p>
+<p>Note: <code>&lt;x-filament-actions::modals /&gt;</code> is used to render form component <a href="./actions">action modals</a>. The code can be put anywhere outside of the <code>&lt;form&gt;</code> element, as long as it’s within the Livewire component.</p>
 </blockquote>
 <p>Visit your Livewire component in the browser, and you should see the form components from <code>schema()</code>:</p>
 <p>Submit the form with data, and you’ll see the form’s data dumped to the screen. You can save the data to a model instead of dumping it:</p>
@@ -844,8 +844,8 @@ public function mount(Post $post): void
 <h2 id="setting-a-form-model">Setting a form model</h2>
 <p>Giving the <code>$form</code> access to a model is useful for a few reasons:</p>
 <ul>
-<li>It allows fields within that form to load information from that model. For example, select fields can <a href="fields/select#integrating-with-an-eloquent-relationship">load their options from the database</a> automatically.</li>
-<li>The form can load and save the model’s relationship data automatically. For example, you have an Edit Post form, with a <a href="fields/repeater#integrating-with-an-eloquent-relationship">Repeater</a> which manages comments associated with that post. Filament will automatically load the comments for that post when you call <code>$this-&gt;form-&gt;fill([...])</code>, and save them back to the relationship when you call <code>$this-&gt;form-&gt;getState()</code>.</li>
+<li>It allows fields within that form to load information from that model. For example, select fields can <a href="./fields/select#integrating-with-an-eloquent-relationship">load their options from the database</a> automatically.</li>
+<li>The form can load and save the model’s relationship data automatically. For example, you have an Edit Post form, with a <a href="./fields/repeater#integrating-with-an-eloquent-relationship">Repeater</a> which manages comments associated with that post. Filament will automatically load the comments for that post when you call <code>$this-&gt;form-&gt;fill([...])</code>, and save them back to the relationship when you call <code>$this-&gt;form-&gt;getState()</code>.</li>
 <li>Validation rules like <code>exists()</code> and <code>unique()</code> can automatically retrieve the database table name from the model.</li>
 </ul>
 <p>It is advised to always pass the model to the form when there is one. As explained, it unlocks many new powers of the Filament form builder.</p>
@@ -997,107 +997,107 @@ public function createComment(): void
 </textarea></code></pre>
 <blockquote>
 <p>Note: If your table contains ENUM columns, <code>doctrine/dbal</code> is unable to scan your table and will crash. Hence Filament is unable to generate the schema for your table if it contains an ENUM column. Read more about this issue <a href="https://github.com/doctrine/dbal/issues/3819#issuecomment-573419808">here</a>.</p>
-</blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/08-adding-a-form-to-a-livewire-component.md" class="text-sm astro-EWBB4F7F" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-EWBB4F7F">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-EWBB4F7F">GitHub discussion</a>
+</blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/08-adding-a-form-to-a-livewire-component.md" class="text-sm astro-3C7CDRLL" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-3C7CDRLL">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-3C7CDRLL">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-EWBB4F7F">
-          <div class="astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-3C7CDRLL">
+          <div class="astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/forms/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    <span aria-hidden="true" class="astro-EWBB4F7F">&larr;</span> Advanced forms
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/forms/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    <span aria-hidden="true" class="astro-3C7CDRLL">&larr;</span> Advanced forms
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-EWBB4F7F">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+            <div class="ml-auto text-right astro-3C7CDRLL">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   Next
                 </dt>
-                <dd class="mt-1 astro-EWBB4F7F">
-                  <a href="/docs/3.x/forms/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-EWBB4F7F">
-                    Testing <span aria-hidden="true" class="astro-EWBB4F7F">&rarr;</span>
+                <dd class="mt-1 astro-3C7CDRLL">
+                  <a href="/docs/3.x/forms/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-3C7CDRLL">
+                    Testing <span aria-hidden="true" class="astro-3C7CDRLL">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-EWBB4F7F">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-EWBB4F7F">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-EWBB4F7F">
+      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar astro-3C7CDRLL">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-3C7CDRLL">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-3C7CDRLL">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-EWBB4F7F" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-the-livewire-component&#34;,&#34;text&#34;:&#34;Setting up the Livewire component&#34;,&#34;title&#34;:&#34;Setting up the Livewire component&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-the-form&#34;,&#34;text&#34;:&#34;Adding the form&#34;,&#34;title&#34;:&#34;Adding the form&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;initializing-the-form-with-data&#34;,&#34;text&#34;:&#34;Initializing the form with data&#34;,&#34;title&#34;:&#34;Initializing the form with data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-form-model&#34;,&#34;text&#34;:&#34;Setting a form model&#34;,&#34;title&#34;:&#34;Setting a form model&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;passing-the-form-model-after-the-form-has-been-submitted&#34;,&#34;text&#34;:&#34;Passing the form model after the form has been submitted&#34;,&#34;title&#34;:&#34;Passing the form model after the form has been submitted&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;saving-form-data-to-individual-properties&#34;,&#34;text&#34;:&#34;Saving form data to individual properties&#34;,&#34;title&#34;:&#34;Saving form data to individual properties&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-multiple-forms&#34;,&#34;text&#34;:&#34;Using multiple forms&#34;,&#34;title&#34;:&#34;Using multiple forms&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resetting-a-forms-data&#34;,&#34;text&#34;:&#34;Resetting a form’s data&#34;,&#34;title&#34;:&#34;Resetting a form’s data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-form-livewire-components-with-the-cli&#34;,&#34;text&#34;:&#34;Generating form Livewire components with the CLI&#34;,&#34;title&#34;:&#34;Generating form Livewire components with the CLI&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;generating-a-form-for-an-eloquent-model&#34;,&#34;text&#34;:&#34;Generating a form for an Eloquent model&#34;,&#34;title&#34;:&#34;Generating a form for an Eloquent model&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-form-schemas&#34;,&#34;text&#34;:&#34;Automatically generating form schemas&#34;,&#34;title&#34;:&#34;Automatically generating form schemas&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#setting-up-the-livewire-component" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'setting-up-the-livewire-component' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-3C7CDRLL" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-the-livewire-component&#34;,&#34;text&#34;:&#34;Setting up the Livewire component&#34;,&#34;title&#34;:&#34;Setting up the Livewire component&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-the-form&#34;,&#34;text&#34;:&#34;Adding the form&#34;,&#34;title&#34;:&#34;Adding the form&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;initializing-the-form-with-data&#34;,&#34;text&#34;:&#34;Initializing the form with data&#34;,&#34;title&#34;:&#34;Initializing the form with data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-form-model&#34;,&#34;text&#34;:&#34;Setting a form model&#34;,&#34;title&#34;:&#34;Setting a form model&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;passing-the-form-model-after-the-form-has-been-submitted&#34;,&#34;text&#34;:&#34;Passing the form model after the form has been submitted&#34;,&#34;title&#34;:&#34;Passing the form model after the form has been submitted&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;saving-form-data-to-individual-properties&#34;,&#34;text&#34;:&#34;Saving form data to individual properties&#34;,&#34;title&#34;:&#34;Saving form data to individual properties&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-multiple-forms&#34;,&#34;text&#34;:&#34;Using multiple forms&#34;,&#34;title&#34;:&#34;Using multiple forms&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resetting-a-forms-data&#34;,&#34;text&#34;:&#34;Resetting a form’s data&#34;,&#34;title&#34;:&#34;Resetting a form’s data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-form-livewire-components-with-the-cli&#34;,&#34;text&#34;:&#34;Generating form Livewire components with the CLI&#34;,&#34;title&#34;:&#34;Generating form Livewire components with the CLI&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;generating-a-form-for-an-eloquent-model&#34;,&#34;text&#34;:&#34;Generating a form for an Eloquent model&#34;,&#34;title&#34;:&#34;Generating a form for an Eloquent model&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-form-schemas&#34;,&#34;text&#34;:&#34;Automatically generating form schemas&#34;,&#34;title&#34;:&#34;Automatically generating form schemas&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#setting-up-the-livewire-component" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'setting-up-the-livewire-component' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Setting up the Livewire component
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#adding-the-form" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'adding-the-form' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#adding-the-form" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'adding-the-form' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Adding the form
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#initializing-the-form-with-data" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'initializing-the-form-with-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#initializing-the-form-with-data" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'initializing-the-form-with-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Initializing the form with data
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#setting-a-form-model" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'setting-a-form-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#setting-a-form-model" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'setting-a-form-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Setting a form model
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#passing-the-form-model-after-the-form-has-been-submitted" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'passing-the-form-model-after-the-form-has-been-submitted' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#passing-the-form-model-after-the-form-has-been-submitted" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'passing-the-form-model-after-the-form-has-been-submitted' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Passing the form model after the form has been submitted
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#saving-form-data-to-individual-properties" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'saving-form-data-to-individual-properties' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#saving-form-data-to-individual-properties" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'saving-form-data-to-individual-properties' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Saving form data to individual properties
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#using-multiple-forms" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'using-multiple-forms' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#using-multiple-forms" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'using-multiple-forms' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Using multiple forms
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#resetting-a-forms-data" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'resetting-a-forms-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#resetting-a-forms-data" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'resetting-a-forms-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Resetting a form’s data
                         </a>
                       </h3>
                       
-                    </li><li class="astro-EWBB4F7F">
-                      <h3 class="astro-EWBB4F7F">
-                        <a href="#generating-form-livewire-components-with-the-cli" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'generating-form-livewire-components-with-the-cli' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-3C7CDRLL">
+                      <h3 class="astro-3C7CDRLL">
+                        <a href="#generating-form-livewire-components-with-the-cli" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'generating-form-livewire-components-with-the-cli' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Generating form Livewire components with the CLI
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-EWBB4F7F">
-                          <li class="astro-EWBB4F7F">
-                              <a href="#generating-a-form-for-an-eloquent-model" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'generating-a-form-for-an-eloquent-model' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-3C7CDRLL">
+                          <li class="astro-3C7CDRLL">
+                              <a href="#generating-a-form-for-an-eloquent-model" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'generating-a-form-for-an-eloquent-model' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Generating a form for an Eloquent model
                               </a>
-                            </li><li class="astro-EWBB4F7F">
-                              <a href="#automatically-generating-form-schemas" class="inline-block transition duration-300 ease-out astro-EWBB4F7F" x-bind:class="current == 'automatically-generating-form-schemas' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-3C7CDRLL">
+                              <a href="#automatically-generating-form-schemas" class="inline-block transition duration-300 ease-out astro-3C7CDRLL" x-bind:class="current == 'automatically-generating-form-schemas' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Automatically generating form schemas
                               </a>
                             </li>
