@@ -76,7 +76,7 @@ const getTitleFromMarkdown = (file) => {
 }
 
 const sanitizeRelativeLinks = (content) => {
-    const regex = /]\((?!http|\/)/g
+    const regex = /]\((?!http|\/|#)/g
     return content.replaceAll(regex, '](./')
 }
 
