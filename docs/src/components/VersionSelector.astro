@@ -20,8 +20,7 @@ let currentVersion = segments[1].replaceAll("/", "");
         class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm text-gray-600 ring-1 ring-merino dark:bg-dolphin/10 dark:text-gray-300 dark:ring-inset dark:ring-white/5"
         aria-label="Open version options"
     >
-      <span class="inline xl:hidden">v&nbsp;</span>
-      <span class="hidden xl:inline">Version&nbsp;</span>
+      <span>Version&nbsp;</span>
       <span class="font-bold">{currentVersion}</span>
     </button>
 
@@ -41,8 +40,7 @@ let currentVersion = segments[1].replaceAll("/", "");
               'text-gray-700 dark:text-gray-300 hover:dark:text-white': '${version.version}' !== '${currentVersion}',
             }`}
           >
-            <span class="inline xl:hidden">v&nbsp;</span>
-            <span class="hidden xl:inline">Version&nbsp;</span>
+            <span>Version&nbsp;</span>
             <span>{version.version}</span>
           </a>
         ))}
