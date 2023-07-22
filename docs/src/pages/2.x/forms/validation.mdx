@@ -6,7 +6,7 @@ title: Validation
 
 ## Getting started
 
-Validation rules may be added to any [field](./fields).
+Validation rules may be added to any [field](fields).
 
 Filament includes several [dedicated validation methods](#available-rules), but you can also use any [other Laravel validation rules](#other-rules), including [custom validation rules](#custom-rules).
 
@@ -171,7 +171,7 @@ The field value must exist in the database. [See the Laravel documentation.](htt
 Field::make('invitation')->exists()
 ```
 
-By default, the form's model will be searched, [if it is registered](./getting-started#registering-a-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](getting-started#registering-a-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\Invitation;
@@ -185,7 +185,7 @@ By default, the field name will be used as the column to search. You may specify
 Field::make('invitation')->exists(column: 'id')
 ```
 
-You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Exists;
@@ -388,7 +388,7 @@ The field value must not exist in the database. [See the Laravel documentation.]
 Field::make('email')->unique()
 ```
 
-By default, the form's model will be searched, [if it is registered](./getting-started#registering-a-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](getting-started#registering-a-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\User;
@@ -414,7 +414,7 @@ If you're using the [admin panel](/docs/admin), you can easily ignore the curren
 Field::make('email')->unique(ignoreRecord: true)
 ```
 
-You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Unique;

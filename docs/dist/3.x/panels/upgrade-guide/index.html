@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.b2971173.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -690,12 +690,12 @@ vendor/bin/filament-v3
 <h2 id="upgrading-manually">Upgrading manually</h2>
 <h3 id="high-impact-changes">High impact changes</h3>
 <h4 id="panel-provider-instead-of-the-config-file">Panel provider instead of the config file</h4>
-<p>The Filament v2 config file grew pretty big, and now it is incredibly small. Most of the configuration is now done in a service provider, which provides a cleaner API, more type safety, IDE autocomplete support, and <a href="./configuration#introducing-panels">the ability to create multiple panels in your app</a>. We call these special configuration service providers <strong>“panel providers”</strong>.</p>
+<p>The Filament v2 config file grew pretty big, and now it is incredibly small. Most of the configuration is now done in a service provider, which provides a cleaner API, more type safety, IDE autocomplete support, and <a href="configuration#introducing-panels">the ability to create multiple panels in your app</a>. We call these special configuration service providers <strong>“panel providers”</strong>.</p>
 <p>Before you can create the new panel provider, make sure that you’ve got Filament v3 installed with Composer. Then, run the following command:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--panels</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan filament:install --panels
 </textarea></code></pre>
 <p>A new <code>app/Providers/Filament/AdminPanelProvider.php</code> file will be created, ready for you to transfer over your old configuration from the <code>config/filament.php</code> file.</p>
-<p>Most configuration transfer is very self-explanatory, but if you get stuck please refer to the <a href="./configuration">configuration documentation</a>.</p>
+<p>Most configuration transfer is very self-explanatory, but if you get stuck please refer to the <a href="configuration">configuration documentation</a>.</p>
 <p>Finally, you can run the following command to replace the old config file with the shiny new one:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-config</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--force</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-config --force
 </textarea></code></pre>
@@ -797,7 +797,7 @@ DateTimePicker::make('published_at')
 <h4 id="logo-customization">Logo customization</h4>
 <p>In v2, you can customize the logo of the admin panel using a <code>brand.blade.php</code> file. In v3, this has been renamed to <code>logo.blade.php</code>.</p>
 <h4 id="plugins">Plugins</h4>
-<p>Filament v3 has a new universal plugin system that breaches the constraints of the admin panel. Learn how to build v3 plugins <a href="./plugins">here</a>.</p>
+<p>Filament v3 has a new universal plugin system that breaches the constraints of the admin panel. Learn how to build v3 plugins <a href="plugins">here</a>.</p>
 <h3 id="low-impact-changes">Low impact changes</h3>
 <h4 id="default-actions-and-type-specific-relation-manager-classes">Default actions and type-specific relation manager classes</h4>
 <blockquote>

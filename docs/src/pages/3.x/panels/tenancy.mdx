@@ -12,7 +12,7 @@ Multi-tenancy is a very sensitive topic. It's important to understand the securi
 
 ## Setting up tenancy
 
-To set up tenancy, you'll need to specify the "tenant" (like team or organization) model in the [configuration](./configuration):
+To set up tenancy, you'll need to specify the "tenant" (like team or organization) model in the [configuration](configuration):
 
 ```php
 use App\Models\Team;
@@ -103,9 +103,9 @@ class RegisterTeam extends RegisterTenant
 }
 ```
 
-You may add any [form components](./../forms/getting-started) to the `form()` method, and create the team inside the `handleRegistration()` method.
+You may add any [form components](../forms/getting-started) to the `form()` method, and create the team inside the `handleRegistration()` method.
 
-Now, we need to tell Filament to use this page. We can do this in the [configuration](./configuration):
+Now, we need to tell Filament to use this page. We can do this in the [configuration](configuration):
 
 ```php
 use App\Filament\Pages\Tenancy\RegisterTeam;
@@ -155,9 +155,9 @@ class EditTeamProfile extends EditTenantProfile
 }
 ```
 
-You may add any [form components](./../forms/getting-started) to the `form()` method. They will get saved directly to the tenant model.
+You may add any [form components](../forms/getting-started) to the `form()` method. They will get saved directly to the tenant model.
 
-Now, we need to tell Filament to use this page. We can do this in the [configuration](./configuration):
+Now, we need to tell Filament to use this page. We can do this in the [configuration](configuration):
 
 ```php
 use App\Filament\Pages\Tenancy\RegisterTeam;
@@ -197,7 +197,7 @@ Now, you can install the Filament billing provider for Spark using Composer:
 composer require filament/spark-billing-provider
 ```
 
-In the [configuration](./configuration), set Spark as the `tenantBillingProvider()`:
+In the [configuration](configuration), set Spark as the `tenantBillingProvider()`:
 
 ```php
 use Filament\Billing\Providers\SparkBillingProvider;
@@ -232,7 +232,7 @@ Now, users will be redirected to the billing page if they don't have an active s
 
 #### Requiring a subscription for specific resources and pages
 
-Sometimes, you may wish to only require a subscription for certain [resources](./resources) and [pages](./pages) in your app. You can do this by returning `true` from the `isTenantSubscriptionRequired()` method on the resource or page class:
+Sometimes, you may wish to only require a subscription for certain [resources](resources) and [pages](pages) in your app. You can do this by returning `true` from the `isTenantSubscriptionRequired()` method on the resource or page class:
 
 ```php
 public static function isTenantSubscriptionRequired(Panel $panel): bool
@@ -278,7 +278,7 @@ class ExampleBillingProvider implements Provider
 
 The tenant-switching menu is featured in the sidebar of the admin layout. It's fully customizable.
 
-To register new items to the tenant menu, you can use the [configuration](./configuration):
+To register new items to the tenant menu, you can use the [configuration](configuration):
 
 ```php
 use Filament\Navigation\MenuItem;
@@ -362,7 +362,7 @@ class Team extends Model implements HasAvatar
 
 The `getFilamentAvatarUrl()` method is used to retrieve the avatar of the current user. If `null` is returned from this method, Filament will fall back to [ui-avatars.com](https://ui-avatars.com).
 
-You can easily swap out [ui-avatars.com](https://ui-avatars.com) for a different service, by creating a new avatar provider. [You can learn how to do this here.](./users#using-a-different-avatar-provider)
+You can easily swap out [ui-avatars.com](https://ui-avatars.com) for a different service, by creating a new avatar provider. [You can learn how to do this here.](users#using-a-different-avatar-provider)
 
 ## Configuring the tenant relationships
 
@@ -511,7 +511,7 @@ class User extends Model implements FilamentUser, HasDefaultTenant, HasTenants
 
 ## Applying middleware to tenant-aware routes
 
-You can apply extra middleware to all tenant-aware routes by passing an array of middleware classes to the `tenantMiddleware()` method in the [panel configuration file](./configuration):
+You can apply extra middleware to all tenant-aware routes by passing an array of middleware classes to the `tenantMiddleware()` method in the [panel configuration file](configuration):
 
 ```php
 use Filament\Panel;
@@ -553,7 +553,7 @@ Below is a list of features that Filament provides to help you implement multi-t
 
 And here are the things that Filament does not currently provide:
 
-- Scoping of relation manager records to the current tenant. When using the relation manager, in the vast majority of cases the query will not need to be scoped to the current tenant, since it is already scoped to the parent record, which is itself scoped to the current tenant. For example, if a `Team` tenant model had an `Author` resource, and that resource had a `posts` relationship and relation manager set up, and posts only belong to one author, there is no need to scope the query. This is because the user will only be able to see authors that belong to the current team anyway, and thus will only be able to see posts that belong to those authors. You can [scope the Eloquent query](./resources/relation-managers#customizing-the-relation-manager-eloquent-query) if you wish.
+- Scoping of relation manager records to the current tenant. When using the relation manager, in the vast majority of cases the query will not need to be scoped to the current tenant, since it is already scoped to the parent record, which is itself scoped to the current tenant. For example, if a `Team` tenant model had an `Author` resource, and that resource had a `posts` relationship and relation manager set up, and posts only belong to one author, there is no need to scope the query. This is because the user will only be able to see authors that belong to the current team anyway, and thus will only be able to see posts that belong to those authors. You can [scope the Eloquent query](resources/relation-managers#customizing-the-relation-manager-eloquent-query) if you wish.
 
 - Form component and filter scoping. When using the `Select`, `CheckboxList` or `Repeater` form components, the `SelectFilter`, or any other similar Filament component which is able to automatically fetch "options" or other data from the database (usually using a `relationship()` method), this data is not scoped. The main reason for this is that these features often don't belong to the Filament panel builder package, and have no knowledge that they are being used within that context, and that a tenant even exists. And even if they did have access to the tenant, there is nowhere for the tenant relationship configuration to live. To scope these components, you need to pass in a query function that scopes the query to the current tenant. For example, if you were using the `Select` form component to select an `author` from a relationship, you could do this:
 

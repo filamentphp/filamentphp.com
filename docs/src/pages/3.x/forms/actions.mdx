@@ -7,11 +7,11 @@ import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 ## Overview
 
-Filament's forms can use [actions](./../actions). They are buttons that can be added to any form component. For instance, you may want an action to call an API endpoint to generate content with AI, or to create a new option for a select dropdown. Also, you can [render anonymous sets of actions](#adding-anonymous-actions-to-a-form-without-attaching-them-to-a-component) on their own, that are not attached to a particular form component.
+Filament's forms can use [actions](../actions). They are buttons that can be added to any form component. For instance, you may want an action to call an API endpoint to generate content with AI, or to create a new option for a select dropdown. Also, you can [render anonymous sets of actions](#adding-anonymous-actions-to-a-form-without-attaching-them-to-a-component) on their own, that are not attached to a particular form component.
 
 ## Defining a form component action
 
-Action objects inside a form component are instances of `Filament/Forms/Components/Actions/Action`. You must pass a unique name to the action's `make()` method, which is used to identify it amongst others internally within Filament. You can [customize the trigger button](./../actions/trigger-button) of an action, and even [open a modal](./../actions/modals) with little effort:
+Action objects inside a form component are instances of `Filament/Forms/Components/Actions/Action`. You must pass a unique name to the action's `make()` method, which is used to identify it amongst others internally within Filament. You can [customize the trigger button](../actions/trigger-button) of an action, and even [open a modal](../actions/modals) with little effort:
 
 ```php
 use App\Actions\ResetStars;
@@ -30,10 +30,10 @@ Action::make('resetStars')
 
 Certain fields support "affix actions", which are buttons that can be placed before or after its input area. The following fields support affix actions:
 
-- [Text input](./fields/text-input)
-- [Select](./fields/select)
-- [Date-time picker](./fields/date-time-picker)
-- [Color picker](./fields/color-picker)
+- [Text input](fields/text-input)
+- [Select](fields/select)
+- [Date-time picker](fields/date-time-picker)
+- [Color picker](fields/color-picker)
 
 To define an affix action, you can pass it to either `prefixAction()` or `suffixAction()`:
 
@@ -81,7 +81,7 @@ TextInput::make('cost')
 
 ### Adding a hint action to a field
 
-All fields support "hint actions", which are rendered aside the field's [hint](./fields/getting-started#adding-a-hint-next-to-the-label). To add a hint action to a field, you may pass it to `hintAction()`:
+All fields support "hint actions", which are rendered aside the field's [hint](fields/getting-started#adding-a-hint-next-to-the-label). To add a hint action to a field, you may pass it to `hintAction()`:
 
 ```php
 use Filament\Forms\Components\Actions\Action;
@@ -226,7 +226,7 @@ Actions::make([
 
 ## Form component action utility injection
 
-If an action is attached to a form component, the `action()` function is able to [inject utilities](./advanced#form-component-utility-injection) directly from that form component. For instance, you can inject [`$set`](./advanced#injecting-a-function-to-set-the-state-of-another-field) and [`$state`](./advanced#injecting-the-current-state-of-a-field):
+If an action is attached to a form component, the `action()` function is able to [inject utilities](advanced#form-component-utility-injection) directly from that form component. For instance, you can inject [`$set`](advanced#injecting-a-function-to-set-the-state-of-another-field) and [`$state`](advanced#injecting-the-current-state-of-a-field):
 
 ```php
 use Filament\Forms\Components\Actions\Action;

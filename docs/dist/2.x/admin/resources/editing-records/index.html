@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.b2971173.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -684,13 +684,13 @@ EditAction::make()
 <h2 id="customizing-form-redirects">Customizing form redirects</h2>
 <p>By default, saving the form will not redirect the user to another page.</p>
 <p>You may set up a custom redirect when the form is saved by overriding the <code>getRedirectUrl()</code> method on the Edit page class.</p>
-<p>For example, the form can redirect back to the <a href="./listing-records">List page</a> of the resource:</p>
+<p>For example, the form can redirect back to the <a href="listing-records">List page</a> of the resource:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getRedirectUrl</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">getResource</span><span style="color: #89DDFF;">()::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getRedirectUrl(): string
 {
     return $this-&gt;getResource()::getUrl('index');
 }
 </textarea></code></pre>
-<p>Or the <a href="./viewing-records">View page</a>:</p>
+<p>Or the <a href="viewing-records">View page</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getRedirectUrl</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">getResource</span><span style="color: #89DDFF;">()::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">view</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">record</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getRedirectUrl(): string
 {
     return $this-&gt;getResource()::getUrl('view', ['record' =&gt; $this-&gt;record]);
@@ -923,7 +923,7 @@ class EditUser extends EditRecord
     }
 }
 </textarea></code></pre>
-<p>To view the entire actions API, please visit the <a href="./../pages/actions">pages section</a>.</p>
+<p>To view the entire actions API, please visit the <a href="../pages/actions">pages section</a>.</p>
 <h2 id="custom-views">Custom views</h2>
 <p>For further customization opportunities, you can override the static <code>$view</code> property on the page class to a custom view in your app:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">view </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.resources.users.pages.edit-user</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static string $view = 'filament.resources.users.pages.edit-user';

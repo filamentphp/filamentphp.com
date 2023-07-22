@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.b2971173.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -674,9 +674,9 @@
 <h2 id="available-widgets">Available widgets</h2>
 <p>Filament ships with these widgets:</p>
 <ul>
-<li><a href="./../widgets/stats-overview">Stats overview</a> widgets display any data, often numeric data, within cards in a row.</li>
-<li><a href="./../widgets/charts">Chart</a> widgets display numeric data in a visual chart.</li>
-<li><a href="#table-widgets">Table</a> widgets which display a <a href="./../tables/getting-started">table</a> on your dashboard.</li>
+<li><a href="../widgets/stats-overview">Stats overview</a> widgets display any data, often numeric data, within cards in a row.</li>
+<li><a href="../widgets/charts">Chart</a> widgets display numeric data in a visual chart.</li>
+<li><a href="#table-widgets">Table</a> widgets which display a <a href="../tables/getting-started">table</a> on your dashboard.</li>
 </ul>
 <p>You may also <a href="#custom-widgets">create your own custom widgets</a> which can then have a consistent design with Filament’s prebuilt widgets.</p>
 <h2 id="sorting-widgets">Sorting widgets</h2>
@@ -726,14 +726,14 @@
 <p>You may easily add tables to your dashboard. Start by creating a widget with the command:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-widget</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">LatestOrders</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--table</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-widget LatestOrders --table
 </textarea></code></pre>
-<p>You may now <a href="./../tables/getting-started">customize the table</a> by editing the widget file.</p>
+<p>You may now <a href="../tables/getting-started">customize the table</a> by editing the widget file.</p>
 <h2 id="custom-widgets">Custom widgets</h2>
 <p>To get started building a <code>BlogPostsOverview</code> widget:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-widget</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">BlogPostsOverview</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-widget BlogPostsOverview
 </textarea></code></pre>
 <p>This command will create two files - a widget class in the <code>/Widgets</code> directory of the Filament directory, and a view in the <code>/widgets</code> directory of the Filament views directory.</p>
 <h2 id="disabling-the-default-widgets">Disabling the default widgets</h2>
-<p>By default, two widgets are displayed on the dashboard. These widgets can be disabled by updating the <code>widgets()</code> array of the <a href="./configuration">configuration</a>:</p>
+<p>By default, two widgets are displayed on the dashboard. These widgets can be disabled by updating the <code>widgets()</code> array of the <a href="configuration">configuration</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">widgets</span><span style="color: #89DDFF;">([]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Panel;
 
 public function panel(Panel $panel): Panel
@@ -756,7 +756,7 @@ class Dashboard extends BasePage
     // ...
 }
 </textarea></code></pre>
-<p>Finally, remove the original <code>Dashboard</code> class from <a href="./configuration">configuration file</a>:</p>
+<p>Finally, remove the original <code>Dashboard</code> class from <a href="configuration">configuration file</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">pages</span><span style="color: #89DDFF;">([]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Panel;
 
 public function panel(Panel $panel): Panel

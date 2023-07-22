@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.b2971173.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.411acfb0.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-EWBB4F7F">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-7xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -671,7 +671,7 @@
   <h2 id="overview">Overview</h2>
 <p>By default, the configuration file is located at <code>app/Providers/Filament/AdminPanelProvider.php</code>. Keep reading to learn more about <a href="#introducing-panels">panels</a> and how each has <a href="#creating-a-new-panel">its own configuration file</a>.</p>
 <h2 id="introducing-panels">Introducing panels</h2>
-<p>By default, when you install the package, there is one panel that has been set up for you - and it lives on <code>/admin</code>. All the <a href="./resources">resources</a>, <a href="./pages">pages</a>, and <a href="./dashboard">dashboard widgets</a> you create get registered to this panel.</p>
+<p>By default, when you install the package, there is one panel that has been set up for you - and it lives on <code>/admin</code>. All the <a href="resources">resources</a>, <a href="pages">pages</a>, and <a href="dashboard">dashboard widgets</a> you create get registered to this panel.</p>
 <p>However, you can create as many panels as you want, and each can have its own set of resources, pages and widgets.</p>
 <p>For example, you could build a panel where users can log in at <code>/app</code> and access their dashboard, and admins can log in at <code>/admin</code> and manage the app. The <code>/app</code> panel and the <code>/admin</code> panel have their own resources, since each group of users has different requirements. Filament allows you to do that by providing you with the ability to create multiple panels.</p>
 <h3 id="the-default-admin-panel">The default admin panel</h3>
@@ -737,15 +737,15 @@ public function panel(Panel $panel): Panel
 <li><code>footer</code> - footer content (centered)</li>
 <li><code>footer.before</code> - before footer</li>
 <li><code>footer.after</code> - after footer</li>
-<li><code>sidebar.start</code> - before <a href="./navigation">sidebar</a> content</li>
-<li><code>sidebar.end</code> - after <a href="./navigation">sidebar</a> content</li>
+<li><code>sidebar.start</code> - before <a href="navigation">sidebar</a> content</li>
+<li><code>sidebar.end</code> - after <a href="navigation">sidebar</a> content</li>
 <li><code>sidebar.footer</code> - pinned to the bottom of the sidebar, below the content</li>
 <li><code>scripts.start</code> - before scripts are defined</li>
 <li><code>scripts.end</code> - after scripts are defined</li>
 <li><code>styles.start</code> - before styles are defined</li>
 <li><code>styles.end</code> - after styles are defined</li>
-<li><code>global-search.start</code> - before <a href="./resources/global-search">global search</a> field</li>
-<li><code>global-search.end</code> - after <a href="./resources/global-search">global search</a> field</li>
+<li><code>global-search.start</code> - before <a href="resources/global-search">global search</a> field</li>
+<li><code>global-search.end</code> - after <a href="resources/global-search">global search</a> field</li>
 <li><code>page.header-widgets.start</code> - before page header widgets</li>
 <li><code>page.header-widgets.end</code> - after page header widgets</li>
 <li><code>page.footer-widgets.start</code> - before page footer widgets</li>
@@ -758,10 +758,10 @@ public function panel(Panel $panel): Panel
 <li><code>resource.relation-manager.end</code> - after the relation manager table</li>
 <li><code>tenant-menu.start</code> - before tenant menu</li>
 <li><code>tenant-menu.end</code> - after tenant menu</li>
-<li><code>user-menu.start</code> - before <a href="./navigation#customizing-the-user-menu">user menu</a></li>
-<li><code>user-menu.end</code> - after <a href="./navigation#customizing-the-user-menu">user menu</a></li>
-<li><code>user-menu.profile.before</code> - before the profile item in the <a href="./navigation#customizing-the-user-menu">user menu</a></li>
-<li><code>user-menu.profile.after</code> - after the profile item in the <a href="./navigation#customizing-the-user-menu">user menu</a></li>
+<li><code>user-menu.start</code> - before <a href="navigation#customizing-the-user-menu">user menu</a></li>
+<li><code>user-menu.end</code> - after <a href="navigation#customizing-the-user-menu">user menu</a></li>
+<li><code>user-menu.profile.before</code> - before the profile item in the <a href="navigation#customizing-the-user-menu">user menu</a></li>
+<li><code>user-menu.profile.after</code> - after the profile item in the <a href="navigation#customizing-the-user-menu">user menu</a></li>
 </ul>
 <h2 id="setting-a-domain">Setting a domain</h2>
 <p>By default, Filament will respond to requests from all domains. If you’d like to scope it to a specific domain, you can use the <code>domain()</code> method, similar to <a href="https://laravel.com/docs/routing#route-group-subdomain-routing"><code>Route::domain()</code> in Laravel</a>:</p>

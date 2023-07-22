@@ -6,18 +6,18 @@ title: Listing records
 
 ## Columns
 
-The `$table->columns()` method is used to define the [columns](./../../tables/columns) in your table. It is an array of column objects, in the order they should appear in your table.
+The `$table->columns()` method is used to define the [columns](../../tables/columns) in your table. It is an array of column objects, in the order they should appear in your table.
 
 We have many columns available for your tables, including:
 
-- [Text column](./../../tables/columns/text)
-- [Image column](./../../tables/columns/image)
-- [Icon column](./../../tables/columns/icon)
-- [Badge column](./../../tables/columns/badge)
+- [Text column](../../tables/columns/text)
+- [Image column](../../tables/columns/image)
+- [Icon column](../../tables/columns/icon)
+- [Badge column](../../tables/columns/badge)
 
-To view a full list of available table [columns](./../../tables/columns), see the [Table Builder documentation](./../../tables/columns).
+To view a full list of available table [columns](../../tables/columns), see the [Table Builder documentation](../../tables/columns).
 
-You may also build your own completely [custom table columns](./../../tables/columns/custom).
+You may also build your own completely [custom table columns](../../tables/columns/custom).
 
 ### Sorting a column by default
 
@@ -40,7 +40,7 @@ public static function table(Table $table): Table
 
 ## Filters
 
-[Filters](./../../tables/filters) are predefined scopes that administrators can use to filter records in your table. The `$table->filters()` method is used to register these.
+[Filters](../../tables/filters) are predefined scopes that administrators can use to filter records in your table. The `$table->filters()` method is used to register these.
 
 ### Displaying filters above or below the table content
 
@@ -88,7 +88,7 @@ public static function table(Table $table): Table
 
 ## Actions
 
-[Actions](./../../tables/actions#single-actions) are buttons that are rendered at the end of table rows. They allow the user to perform a task on a record in the table. To learn how to build actions, see the [full actions documentation](./../../tables/actions#single-actions).
+[Actions](../../tables/actions#single-actions) are buttons that are rendered at the end of table rows. They allow the user to perform a task on a record in the table. To learn how to build actions, see the [full actions documentation](../../tables/actions#single-actions).
 
 To add actions to a table, use the `$table->actions()` method:
 
@@ -138,7 +138,7 @@ public static function table(Table $table): Table
 
 ## Bulk actions
 
-[Bulk actions](./../../tables/actions#bulk-actions) are buttons that are rendered in a dropdown in the header of the table. They appear when you select records using the checkboxes at the start of each table row. They allow the user to perform a task on multiple records at once in the table. To learn how to build bulk actions, see the [full actions documentation](./../../tables/actions#bulk-actions).
+[Bulk actions](../../tables/actions#bulk-actions) are buttons that are rendered in a dropdown in the header of the table. They appear when you select records using the checkboxes at the start of each table row. They allow the user to perform a task on multiple records at once in the table. To learn how to build bulk actions, see the [full actions documentation](../../tables/actions#bulk-actions).
 
 To add bulk actions, use the `$table->bulkActions()` method:
 
@@ -242,7 +242,7 @@ The `reorder()` method is used to control [reordering a record](#reordering-reco
 
 ## Customizing the Eloquent query
 
-Although you can [customize the Eloquent query for the entire resource](./getting-started#customizing-the-eloquent-query), you may also make specific modifications for the List page table. To do this, override the `getTableQuery()` method on the page class:
+Although you can [customize the Eloquent query for the entire resource](getting-started#customizing-the-eloquent-query), you may also make specific modifications for the List page table. To do this, override the `getTableQuery()` method on the page class:
 
 ```php
 protected function getTableQuery(): Builder

@@ -17,7 +17,7 @@ protected function mutateFormDataBeforeFill(array $data): array
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#customizing-data-before-filling-the-form).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#customizing-data-before-filling-the-form).
 
 ## Customizing data before saving
 
@@ -32,7 +32,7 @@ protected function mutateFormDataBeforeSave(array $data): array
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#customizing-data-before-saving).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#customizing-data-before-saving).
 
 ## Customizing the saving process
 
@@ -49,7 +49,7 @@ protected function handleRecordUpdate(Model $record, array $data): Model
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#customizing-the-saving-process).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#customizing-the-saving-process).
 
 ## Customizing redirects
 
@@ -57,7 +57,7 @@ By default, saving the form will not redirect the user to another page.
 
 You may set up a custom redirect when the form is saved by overriding the `getRedirectUrl()` method on the Edit page class.
 
-For example, the form can redirect back to the [List page](./listing-records) of the resource:
+For example, the form can redirect back to the [List page](listing-records) of the resource:
 
 ```php
 protected function getRedirectUrl(): string
@@ -66,7 +66,7 @@ protected function getRedirectUrl(): string
 }
 ```
 
-Or the [View page](./viewing-records):
+Or the [View page](viewing-records):
 
 ```php
 protected function getRedirectUrl(): string
@@ -97,7 +97,7 @@ protected function getSavedNotificationTitle(): ?string
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#customizing-the-save-notification).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#customizing-the-save-notification).
 
 You may customize the entire notification by overriding the `getSavedNotification()` method on the edit page class:
 
@@ -178,7 +178,7 @@ class EditUser extends EditRecord
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#lifecycle-hooks).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#lifecycle-hooks).
 
 ## Halting the saving process
 
@@ -208,7 +208,7 @@ protected function beforeSave(): void
 }
 ```
 
-Alternatively, if you're editing records in a modal action, check out the [actions documentation](./../../actions/prebuilt-actions/edit#halting-the-saving-process).
+Alternatively, if you're editing records in a modal action, check out the [actions documentation](../../actions/prebuilt-actions/edit#halting-the-saving-process).
 
 ## Authorization
 
@@ -272,7 +272,7 @@ class EditUser extends EditRecord
 }
 ```
 
-To view the entire actions API, please visit the [pages section](./../pages#adding-actions-to-pages).
+To view the entire actions API, please visit the [pages section](../pages#adding-actions-to-pages).
 
 ## Custom views
 

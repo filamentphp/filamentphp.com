@@ -55,13 +55,13 @@ Filter::make('is_featured')
 
 ## Customizing the filter form
 
-By default, creating a filter with the `Filter` class will render a [checkbox form component](./../forms/fields/checkbox). When the checkbox is checked, the `query()` function will be applied to the table's query, scoping the records in the table. When the checkbox is unchecked, the `query()` function will be removed from the table's query.
+By default, creating a filter with the `Filter` class will render a [checkbox form component](../forms/fields/checkbox). When the checkbox is checked, the `query()` function will be applied to the table's query, scoping the records in the table. When the checkbox is unchecked, the `query()` function will be removed from the table's query.
 
 Filters are built entirely on Filament's form fields. They can render any combination of form fields, which users can then interact with to filter the table.
 
 ### Using a toggle button instead of a checkbox
 
-The simplest example of managing the form field that is used for a filter is to replace the [checkbox](./../forms/fields/checkbox) with a [toggle button](./../forms/fields/toggle), using the `toggle()` method:
+The simplest example of managing the form field that is used for a filter is to replace the [checkbox](../forms/fields/checkbox) with a [toggle button](../forms/fields/toggle), using the `toggle()` method:
 
 ```php
 use Filament\Tables\Filters\Filter;
@@ -85,7 +85,7 @@ Filter::make('is_featured')
 
 ### Select filters
 
-Often, you will want to use a [select field](./../forms/fields/select) instead of a checkbox. This is especially true when you want to filter a column based on a set of pre-defined options that the user can choose from. To do this, you can create a filter using the `SelectFilter` class:
+Often, you will want to use a [select field](../forms/fields/select) instead of a checkbox. This is especially true when you want to filter a column based on a set of pre-defined options that the user can choose from. To do this, you can create a filter using the `SelectFilter` class:
 
 ```php
 use Filament\Tables\Filters\SelectFilter;
@@ -98,7 +98,7 @@ SelectFilter::make('status')
     ])
 ```
 
-The `options()` that are passed to the filter are the same as those that are passed to the [select field](./../forms/fields/select).
+The `options()` that are passed to the filter are the same as those that are passed to the [select field](../forms/fields/select).
 
 #### Customizing the column used by a select filter
 
@@ -225,7 +225,7 @@ TernaryFilter::make('trashed')
 
 ### Custom filter forms
 
-You may use components from the [form builder](./../forms/fields) to create custom filter forms. The data from the custom filter form is available in the `$data` array of the `query()` callback:
+You may use components from the [form builder](../forms/fields) to create custom filter forms. The data from the custom filter form is available in the `$data` array of the `query()` callback:
 
 ```php
 use Filament\Forms\Components\DatePicker;
@@ -496,7 +496,7 @@ TernaryFilter::make('trashed')
 
 ## Customizing the filters dropdown trigger action
 
-To customize the filters dropdown trigger button, you may use the `filtersTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](./../actions/trigger-button) can be used:
+To customize the filters dropdown trigger button, you may use the `filtersTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](../actions/trigger-button) can be used:
 
 ```php
 use Filament\Tables\Actions\Action;
