@@ -16,9 +16,9 @@ Filament ships with these widgets:
 
 - [Stats overview](./../widgets/stats-overview) widgets display any data, often numeric data, within cards in a row.
 - [Chart](./../widgets/charts) widgets display numeric data in a visual chart.
-- [Table](./#table-widgets) widgets which display a [table](./../tables/getting-started) on your dashboard.
+- [Table](#table-widgets) widgets which display a [table](./../tables/getting-started) on your dashboard.
 
-You may also [create your own custom widgets](./#custom-widgets) which can then have a consistent design with Filament's prebuilt widgets.
+You may also [create your own custom widgets](#custom-widgets) which can then have a consistent design with Filament's prebuilt widgets.
 
 ## Sorting widgets
 
@@ -47,13 +47,13 @@ protected int | string | array $columnSpan = [
 ];
 ```
 
-This is especially useful when using a [responsive widgets grid](./#responsive-widgets-grid).
+This is especially useful when using a [responsive widgets grid](#responsive-widgets-grid).
 
 ## Customizing the widgets grid
 
 You may change how many grid columns are used to display widgets.
 
-Firstly, you must [replace the original Dashboard page](./#customizing-the-dashboard-page).
+Firstly, you must [replace the original Dashboard page](#customizing-the-dashboard-page).
 
 Now, in your new `app/Filament/Pages/Dashboard.php` file, you may override the `getColumns()` method to return a number of grid columns to use:
 
@@ -78,7 +78,7 @@ protected function getColumns(): int | array
 }
 ```
 
-This pairs well with [responsive widget widths](./#responsive-widget-widths).
+This pairs well with [responsive widget widths](#responsive-widget-widths).
 
 ## Conditionally hiding widgets
 
@@ -128,7 +128,7 @@ public function panel(Panel $panel): Panel
 
 ## Customizing the dashboard page
 
-If you want to customize the dashboard class, for example to [change the number of widget columns](./#customizing-widget-width), create a new file at `app/Filament/Pages/Dashboard.php`:
+If you want to customize the dashboard class, for example to [change the number of widget columns](#customizing-widget-width), create a new file at `app/Filament/Pages/Dashboard.php`:
 
 ```php
 <?php

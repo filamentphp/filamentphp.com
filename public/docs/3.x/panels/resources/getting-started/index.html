@@ -684,7 +684,7 @@
 <p>Your new resource class lives in <code>CustomerResource.php</code>.</p>
 <p>The classes in the <code>Pages</code> directory are used to customize the pages in the app that interact with your resource. They’re all full-page <a href="https://laravel-livewire.com">Livewire</a> components that you can customize in any way you wish.</p>
 <blockquote>
-<p>Have you created a resource, but it’s not appearing in the navigation menu? If you have a <a href="./#authorization">model policy</a>, make sure you return <code>true</code> from the <code>viewAny()</code> method.</p>
+<p>Have you created a resource, but it’s not appearing in the navigation menu? If you have a <a href="#authorization">model policy</a>, make sure you return <code>true</code> from the <code>viewAny()</code> method.</p>
 </blockquote>
 <h3 id="simple-modal-resources">Simple (modal) resources</h3>
 <p>Sometimes, your models are simple enough that you only want to manage records on one page, using modals to create, edit and delete records. To generate a simple resource with modals:</p>
@@ -693,7 +693,7 @@
 <p>Your resource will have a “Manage” page, which is a List page with modals added.</p>
 <p>Additionally, your simple resource will have no <code>getRelations()</code> method, as <a href="./relation-managers">relation managers</a> are only displayed on the Edit and View pages, which are not present in simple resources. Everything else is the same.</p>
 <h3 id="automatically-generating-forms-and-tables">Automatically generating forms and tables</h3>
-<p>If you’d like to save time, Filament can automatically generate the <a href="./#resource-forms">form</a> and <a href="./#resource-tables">table</a> for you, based on your model’s database columns.</p>
+<p>If you’d like to save time, Filament can automatically generate the <a href="#resource-forms">form</a> and <a href="#resource-tables">table</a> for you, based on your model’s database columns.</p>
 <p>The <code>doctrine/dbal</code> package is required to use this functionality:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">doctrine/dbal</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require doctrine/dbal --dev
 </textarea></code></pre>
@@ -825,7 +825,7 @@ public static function table(Table $table): Table
 }
 </textarea></code></pre>
 <h2 id="resource-navigation-items">Resource navigation items</h2>
-<p>Filament will automatically generate a navigation menu item for your resource using the <a href="./#plural-label">plural label</a>.</p>
+<p>Filament will automatically generate a navigation menu item for your resource using the <a href="#plural-label">plural label</a>.</p>
 <p>If you’d like to customize the navigation item label, you may use the <code>$navigationLabel</code> property:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Mis Clientes</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationLabel = 'Mis Clientes';
 </textarea></code></pre>

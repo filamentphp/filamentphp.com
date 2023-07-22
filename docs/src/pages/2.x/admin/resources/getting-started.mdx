@@ -30,7 +30,7 @@ Your new resource class lives in `CustomerResource.php`.
 
 The classes in the `Pages` directory are used to customize the pages in the admin panel that interact with your resource. They're all full-page [Livewire](https://laravel-livewire.com) components that you can customize in any way you wish.
 
-> Have you created a resource, but it's not appearing in the navigation menu? If you have a [model policy](./#authorization), make sure you return `true` from the `viewAny()` method.
+> Have you created a resource, but it's not appearing in the navigation menu? If you have a [model policy](#authorization), make sure you return `true` from the `viewAny()` method.
 
 ### Simple (modal) resources
 
@@ -46,7 +46,7 @@ Additionally, your simple resource will have no `getRelations()` method, as [rel
 
 ### Automatically generating forms and tables
 
-If you'd like to save time, Filament can automatically generate the [form](./#forms) and [table](./#tables) for you, based on your model's database columns.
+If you'd like to save time, Filament can automatically generate the [form](#forms) and [table](#tables) for you, based on your model's database columns.
 
 The `doctrine/dbal` package is required to use this functionality:
 
@@ -468,7 +468,7 @@ public static function getPluralModelLabel(): string
 
 ## Navigation
 
-Filament will automatically generate a navigation menu item for your resource using the [plural label](./#plural-label).
+Filament will automatically generate a navigation menu item for your resource using the [plural label](#plural-label).
 
 If you'd like to customize the navigation item label, you may use the `$navigationLabel` property:
 
@@ -540,7 +540,7 @@ protected static function getNavigationGroup(): ?string
 
 Within Filament, every query to your resource model will start with the `getEloquentQuery()` method.
 
-Because of this, it's very easy to apply your own [model scopes](https://laravel.com/docs/eloquent#query-scopes) that affect the entire resource. You can use this to implement [multi-tenancy](./#multi-tenancy) easily within the admin panel.
+Because of this, it's very easy to apply your own [model scopes](https://laravel.com/docs/eloquent#query-scopes) that affect the entire resource. You can use this to implement [multi-tenancy](#multi-tenancy) easily within the admin panel.
 
 ### Disabling global scopes
 
@@ -582,7 +582,7 @@ Multi-tenancy, simply, is the concept of users "owning" records, and only being 
 
 Simple multi-tenancy is easy to set up with Filament.
 
-First, scope the [base Eloquent query](./#customizing-the-eloquent-query) for every "owned" resource by defining the `getEloquentQuery()` method:
+First, scope the [base Eloquent query](#customizing-the-eloquent-query) for every "owned" resource by defining the `getEloquentQuery()` method:
 
 ```php
 public static function getEloquentQuery(): Builder

@@ -627,7 +627,7 @@
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">dark_mode</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true,</span></div><textarea data-torchlight-original="true" style="display: none !important;">'dark_mode' =&gt; true,
 </textarea></code></pre>
 <p>When dark mode is enabled, the admin panel will automatically obey your system’s dark / light mode preference. You may switch to dark / light mode permanently through the button in the user dropdown menu.</p>
-<p>If you’re using a <a href="./#building-themes">custom theme</a>, make sure that you have the <code>darkMode: &#39;class&#39;</code> setting in your <code>tailwind.config.js</code> file.</p>
+<p>If you’re using a <a href="#building-themes">custom theme</a>, make sure that you have the <code>darkMode: &#39;class&#39;</code> setting in your <code>tailwind.config.js</code> file.</p>
 <blockquote>
 <p>Please note: before enabling dark mode in production, please thoroughly test your admin panel - especially third party plugins, which may not be properly tested with dark mode.</p>
 </blockquote>
@@ -657,7 +657,7 @@
 </textarea></code></pre>
 <h2 id="non-sticky-topbar">Non-sticky topbar</h2>
 <p>By default, the topbar sticks to the top of the page.</p>
-<p>You may make the topbar scroll out of view instead by adding the following styles to your <a href="./#building-themes">theme</a> or by <a href="./#including-frontend-assets">registering a new stylesheet</a>:</p>
+<p>You may make the topbar scroll out of view instead by adding the following styles to your <a href="#building-themes">theme</a> or by <a href="#including-frontend-assets">registering a new stylesheet</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">.</span><span style="color: #FFCB6B;">filament-main-topbar</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #B2CCD6;">position</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> relative</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">.filament-main-topbar {
     position: relative;
 }

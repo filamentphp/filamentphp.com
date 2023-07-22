@@ -176,7 +176,7 @@ public function getTitle(): string | Htmlable
 
 ## Customizing the page navigation label
 
-By default, Filament will use the page's [title](./#customizing-the-page-title) as its [navigation](./navigation) item label. You may override this by defining a `$navigationLabel` property on your page class:
+By default, Filament will use the page's [title](#customizing-the-page-title) as its [navigation](./navigation) item label. You may override this by defining a `$navigationLabel` property on your page class:
 
 ```php
 protected static ?string $navigationLabel = 'Custom Navigation Label';
@@ -201,7 +201,7 @@ protected static ?string $slug = 'custom-url-slug';
 
 ## Customizing the page heading
 
-By default, Filament will use the page's [title](./#customizing-the-page-title) as its heading. You may override this by defining a `$heading` property on your page class:
+By default, Filament will use the page's [title](#customizing-the-page-title) as its heading. You may override this by defining a `$heading` property on your page class:
 
 ```php
 protected ?string $heading = 'Custom Page Heading';
@@ -235,7 +235,7 @@ public function getSubheading(): ?string
 
 ## Replacing the page header with a custom view
 
-You may replace the default [heading](./#customizing-the-page-heading), [subheading](./#adding-a-page-subheading) and [actions](./#header-actions) with a custom header view for any page. You may return it from the `getHeader()` method:
+You may replace the default [heading](#customizing-the-page-heading), [subheading](#adding-a-page-subheading) and [actions](#header-actions) with a custom header view for any page. You may return it from the `getHeader()` method:
 
 ```php
 use Illuminate\Contracts\View\View;

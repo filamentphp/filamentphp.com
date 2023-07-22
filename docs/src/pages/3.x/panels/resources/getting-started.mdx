@@ -32,7 +32,7 @@ Your new resource class lives in `CustomerResource.php`.
 
 The classes in the `Pages` directory are used to customize the pages in the app that interact with your resource. They're all full-page [Livewire](https://laravel-livewire.com) components that you can customize in any way you wish.
 
-> Have you created a resource, but it's not appearing in the navigation menu? If you have a [model policy](./#authorization), make sure you return `true` from the `viewAny()` method.
+> Have you created a resource, but it's not appearing in the navigation menu? If you have a [model policy](#authorization), make sure you return `true` from the `viewAny()` method.
 
 ### Simple (modal) resources
 
@@ -48,7 +48,7 @@ Additionally, your simple resource will have no `getRelations()` method, as [rel
 
 ### Automatically generating forms and tables
 
-If you'd like to save time, Filament can automatically generate the [form](./#resource-forms) and [table](./#resource-tables) for you, based on your model's database columns.
+If you'd like to save time, Filament can automatically generate the [form](#resource-forms) and [table](#resource-tables) for you, based on your model's database columns.
 
 The `doctrine/dbal` package is required to use this functionality:
 
@@ -241,7 +241,7 @@ public static function getPluralModelLabel(): string
 
 ## Resource navigation items
 
-Filament will automatically generate a navigation menu item for your resource using the [plural label](./#plural-label).
+Filament will automatically generate a navigation menu item for your resource using the [plural label](#plural-label).
 
 If you'd like to customize the navigation item label, you may use the `$navigationLabel` property:
 

@@ -54,7 +54,7 @@ use Filament\Forms\Components\Card;
 Card::make()->columns(2)
 ```
 
-> For more information about creating advanced, responsive column layouts, please see the [grid section](./#grid). All column options in that section are also available in other layout components.
+> For more information about creating advanced, responsive column layouts, please see the [grid section](#grid). All column options in that section are also available in other layout components.
 
 #### Controlling field column span
 
@@ -133,7 +133,7 @@ Card::make()->extraAttributes(['class' => 'bg-gray-50'])
 
 ### Global settings
 
-If you wish to change the default behaviour of a component globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the component using. For example, if you wish to make all card components have [2 columns](./#columns) by default, you can do it like so:
+If you wish to change the default behaviour of a component globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the component using. For example, if you wish to make all card components have [2 columns](#columns) by default, you can do it like so:
 
 ```php
 use Filament\Forms\Components\Card;
@@ -245,7 +245,7 @@ Fieldset::make('Label')
     ])
 ```
 
-You may use the `columns()` method to customize the [grid](./#grid) within the fieldset:
+You may use the `columns()` method to customize the [grid](#grid) within the fieldset:
 
 ```php
 use Filament\Forms\Components\Fieldset;
@@ -341,7 +341,7 @@ Tabs::make('Heading')
 
 ## Wizard
 
-Similar to [tabs](./#tabs), you may want to use a multistep form wizard to reduce the number of components that are visible at once. These are especially useful if your form has a definite chronological order, in which you want each step to be validated as the user progresses.
+Similar to [tabs](#tabs), you may want to use a multistep form wizard to reduce the number of components that are visible at once. These are especially useful if your form has a definite chronological order, in which you want each step to be validated as the user progresses.
 
 ```php
 use Filament\Forms\Components\Wizard;
@@ -437,7 +437,7 @@ Section::make('Heading')
     ])
 ```
 
-You may use the `columns()` method to easily create a [grid](./#grid) within the section:
+You may use the `columns()` method to easily create a [grid](#grid) within the section:
 
 ```php
 use Filament\Forms\Components\Section;
@@ -534,7 +534,7 @@ Card::make()
     ])
 ```
 
-You may use the `columns()` method to easily create a [grid](./#grid) within the card:
+You may use the `columns()` method to easily create a [grid](#grid) within the card:
 
 ```php
 use Filament\Forms\Components\Card;
@@ -562,7 +562,7 @@ Card::make()
 
 ## View
 
-Aside from [building custom layout components](./#building-custom-layout-components), you may create "view" components which allow you to create custom layouts without extra PHP classes.
+Aside from [building custom layout components](#building-custom-layout-components), you may create "view" components which allow you to create custom layouts without extra PHP classes.
 
 ```php
 use Filament\Forms\Components\View;
@@ -582,7 +582,7 @@ Inside your view, you may render the component's `schema()` using the `$getChild
 
 You may create your own custom component classes and views, which you can reuse across your project, and even release as a plugin to the community.
 
-> If you're just creating a simple custom component to use once, you could instead use a [view component](./#view) to render any custom Blade file.
+> If you're just creating a simple custom component to use once, you could instead use a [view component](#view) to render any custom Blade file.
 
 To create a custom column class and view, you may use the following command:
 

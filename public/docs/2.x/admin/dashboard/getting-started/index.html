@@ -622,13 +622,13 @@
 <p>Widgets are pure <a href="https://laravel-livewire.com">Livewire</a> components, so may use any features of that package.</p>
 <p>Widgets may also be used on <a href="./../resources/widgets">resource pages</a> or other <a href="./../pages/widgets">custom pages</a>.</p>
 <h2 id="available-widgets">Available widgets</h2>
-<p>Filament ships with a few pre-built widgets, as well as the ability to create <a href="./#custom-widgets">custom widgets</a>:</p>
+<p>Filament ships with a few pre-built widgets, as well as the ability to create <a href="#custom-widgets">custom widgets</a>:</p>
 <ul>
 <li><a href="./stats">Stats</a> widgets display any data, often numeric data, within cards in a row.</li>
 <li><a href="./charts">Chart</a> widgets display numeric data in a visual chart.</li>
 <li><a href="./tables">Table</a> widgets render data in a table, which supports sorting, searching, filtering, actions, and everything else included within the <a href="./../../tables">table builder</a>.</li>
 </ul>
-<p>You may also <a href="./#custom-widgets">create your own custom widgets</a>.</p>
+<p>You may also <a href="#custom-widgets">create your own custom widgets</a>.</p>
 <h2 id="sorting-widgets">Sorting widgets</h2>
 <p>Each widget class contains a <code>$sort</code> property that may be used to change its order on the page, relative to other widgets:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">sort </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?int $sort = 2;
@@ -644,10 +644,10 @@
     'xl' =&gt; 3,
 ];
 </textarea></code></pre>
-<p>This is especially useful when using a <a href="./#responsive-widgets-grid">responsive widgets grid</a>.</p>
+<p>This is especially useful when using a <a href="#responsive-widgets-grid">responsive widgets grid</a>.</p>
 <h2 id="customizing-the-widgets-grid">Customizing the widgets grid</h2>
 <p>You may change how many grid columns are used to display widgets.</p>
-<p>Firstly, you must <a href="./#customizing-the-dashboard-page">replace the original Dashboard page</a>.</p>
+<p>Firstly, you must <a href="#customizing-the-dashboard-page">replace the original Dashboard page</a>.</p>
 <p>Now, in your new <code>app/Filament/Pages/Dashboard.php</code> file, you may override the <code>getColumns()</code> method to return a number of grid columns to use:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getColumns</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">|</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">3</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getColumns(): int | array
 {
@@ -664,7 +664,7 @@
     ];
 }
 </textarea></code></pre>
-<p>This pairs well with <a href="./#responsive-widget-widths">responsive widget widths</a>.</p>
+<p>This pairs well with <a href="#responsive-widget-widths">responsive widget widths</a>.</p>
 <h2 id="conditionally-hiding-widgets">Conditionally hiding widgets</h2>
 <p>You may override the static <code>canView()</code> method on widgets to conditionally hide them:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">canView</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">isAdmin</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function canView(): bool
@@ -685,7 +685,7 @@
 </textarea></code></pre>
 <p>This command will create two files - a widget class in the <code>/Widgets</code> directory of the Filament directory, and a view in the <code>/widgets</code> directory of the Filament views directory.</p>
 <h2 id="customizing-the-dashboard-page">Customizing the dashboard page</h2>
-<p>If you want to customize the dashboard class, for example to <a href="./#customizing-widget-width">change the number of widget columns</a>, create a new file at <code>app/Filament/Pages/Dashboard.php</code>:</p>
+<p>If you want to customize the dashboard class, for example to <a href="#customizing-widget-width">change the number of widget columns</a>, create a new file at <code>app/Filament/Pages/Dashboard.php</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Pages</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Dashboard</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> BasePage</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Dashboard</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BasePage</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
 
 namespace App\Filament\Pages;

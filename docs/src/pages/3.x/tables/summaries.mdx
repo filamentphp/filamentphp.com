@@ -9,7 +9,7 @@ import AutoScreenshot from "@components/AutoScreenshot.astro"
 
 You may render a "summary" section below your table content. This is great for displaying the results of calculations such as averages, sums, counts, and ranges of the data in your table.
 
-By default, there will be a single summary line for the current page of data, and an additional summary line for the totals for all data if more than one page is available. You may also add summaries for [groups](./grouping) of records, see ["Summarising groups of rows"](./#summarising-groups-of-rows).
+By default, there will be a single summary line for the current page of data, and an additional summary line for the totals for all data if more than one page is available. You may also add summaries for [groups](./grouping) of records, see ["Summarising groups of rows"](#summarising-groups-of-rows).
 
 "Summarizer" objects can be added to any [table column](./columns) using the `summarize()` method:
 
@@ -44,10 +44,10 @@ TextColumn::make('rating')
 
 Filament ships with four types of summarizer:
 
-- [Average](./#average)
-- [Count](./#count)
-- [Range](./#range)
-- [Sum](./#sum)
+- [Average](#average)
+- [Count](#count)
+- [Range](#range)
+- [Sum](#sum)
 
 You may also [create your own custom summarizers](./custom) to display data however you wish.
 
@@ -67,7 +67,7 @@ In this example, all ratings in the table will be added together and divided by 
 
 ## Count
 
-Count can be used to find the total number of values in the dataset. Unless you just want to calculate the number of rows, you will probably want to [scope the dataset](./#scoping-the-dataset) as well:
+Count can be used to find the total number of values in the dataset. Unless you just want to calculate the number of rows, you will probably want to [scope the dataset](#scoping-the-dataset) as well:
 
 ```php
 use Filament\Tables\Columns\IconColumn;
@@ -203,7 +203,7 @@ TextColumn::make('rating')
 
 In this example, now only rows where `is_published` is set to `true` will be used to calculate the average.
 
-This feature is especially useful with the [count](./#count) summarizer, as it can count how many records in the dataset pass a test:
+This feature is especially useful with the [count](#count) summarizer, as it can count how many records in the dataset pass a test:
 
 ```php
 use Filament\Tables\Columns\IconColumn;

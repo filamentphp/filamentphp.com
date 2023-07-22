@@ -180,7 +180,7 @@ Action::make('delete')
 
 ## Customizing the alignment of modal content
 
-By default, modal content will be aligned to the start, or centered if the modal is `xs` or `sm` in [width](./#changing-the-modal-width). If you wish to change the alignment of content in a modal, you can use the `modalAlignment()` method and pass it `start` or `center`:
+By default, modal content will be aligned to the start, or centered if the modal is `xs` or `sm` in [width](#changing-the-modal-width). If you wish to change the alignment of content in a modal, you can use the `modalAlignment()` method and pass it `start` or `center`:
 
 ```php
 Action::make('updateAuthor')
@@ -334,7 +334,7 @@ Action::make('create')
     })
 ```
 
-Please note that the `mountUsing()` method, by default, is used by Filament to initialize the [form](./#modal-forms). If you override this method, you will need to call `$form->fill()` to ensure the form is initialized correctly. If you wish to populate the form with data, you can do so by passing an array to the `fill()` method, instead of [using `fillForm()` on the action itself](./#filling-the-form-with-existing-data).
+Please note that the `mountUsing()` method, by default, is used by Filament to initialize the [form](#modal-forms). If you override this method, you will need to call `$form->fill()` to ensure the form is initialized correctly. If you wish to populate the form with data, you can do so by passing an array to the `fill()` method, instead of [using `fillForm()` on the action itself](#filling-the-form-with-existing-data).
 
 ## Customizing the action buttons in the footer of the modal
 

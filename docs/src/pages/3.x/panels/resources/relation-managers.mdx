@@ -12,7 +12,7 @@ Filament provides many ways to manage relationships in the app. Which feature yo
 
 > These are compatible with `HasMany`, `HasManyThrough`, `BelongsToMany`, `MorphMany` and `MorphToMany` relationships.
 
-[Relation managers](./#creating-a-relation-manager) are interactive tables that allow administrators to list, create, attach, associate, edit, detach, dissociate and delete related records without leaving the resource's Edit or View page.
+[Relation managers](#creating-a-relation-manager) are interactive tables that allow administrators to list, create, attach, associate, edit, detach, dissociate and delete related records without leaving the resource's Edit or View page.
 
 ### Select & checkbox list - choose from existing records or create a new one
 
@@ -132,11 +132,11 @@ By default, you will not be able to interact with deleted records in the relatio
 php artisan make:filament-relation-manager CategoryResource posts title --soft-deletes
 ```
 
-You can find out more about soft deleting [here](./#deleting-records).
+You can find out more about soft deleting [here](#deleting-records).
 
 ## Listing related records
 
-Related records will be listed in a table. The entire relation manager is based around this table, which contains actions to [create](./#creating-records), [edit](./#editing-records), [attach / detach](./#attaching-and-detaching-records), [associate / dissociate](./#associating-and-dissociating-records), and delete records.
+Related records will be listed in a table. The entire relation manager is based around this table, which contains actions to [create](#creating-records), [edit](#editing-records), [attach / detach](#attaching-and-detaching-records), [associate / dissociate](#associating-and-dissociating-records), and delete records.
 
 You may may use any of the features of the [table builder](./../../tables) to customize relation managers.
 
@@ -594,7 +594,7 @@ public function table(Table $table): Table
 }
 ```
 
-It is probably also useful to provide extra configuration on the relation manager if you wanted to add a header action to [create](./#creating-related-records), [attach](./#attaching-and-detaching-records), or [associate](./#associating-and-dissociating-records) records in the relation manager:
+It is probably also useful to provide extra configuration on the relation manager if you wanted to add a header action to [create](#creating-related-records), [attach](#attaching-and-detaching-records), or [associate](#associating-and-dissociating-records) records in the relation manager:
 
 ```php
 use App\Filament\Resources\Blog\PostResource;

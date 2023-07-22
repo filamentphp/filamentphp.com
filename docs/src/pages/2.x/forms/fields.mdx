@@ -225,7 +225,7 @@ TextInput::make('name')->placeholder('John Doe')
 
 ### Global settings
 
-If you wish to change the default behaviour of a field globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the component using. For example, if you wish to make all checkboxes [`inline(false)`](./#checkbox), you can do it like so:
+If you wish to change the default behaviour of a field globally, then you can call the static `configureUsing()` method inside a service provider's `boot()` method, to which you pass a Closure to modify the component using. For example, if you wish to make all checkboxes [`inline(false)`](#checkbox), you can do it like so:
 
 ```php
 use Filament\Forms\Components\Checkbox;
@@ -325,7 +325,7 @@ TextInput::make('password')
     ->disableAutocomplete()
 ```
 
-For more complex autocomplete options, text inputs also support [datalists](./#datalists).
+For more complex autocomplete options, text inputs also support [datalists](#datalists).
 
 #### Phone number validation
 
@@ -502,7 +502,7 @@ TextInput::make('manufacturer')
 
 ![](https://user-images.githubusercontent.com/41773797/147612844-f46e113f-82b3-4675-9097-4d64a4315082.png)
 
-Datalists provide autocomplete options to users when they use a text input. However, these are purely recommendations, and the user is still able to type any value into the input. If you're looking for strictly predefined options, check out [select fields](./#select).
+Datalists provide autocomplete options to users when they use a text input. However, these are purely recommendations, and the user is still able to type any value into the input. If you're looking for strictly predefined options, check out [select fields](#select).
 
 ## Select
 
@@ -760,7 +760,7 @@ Since HTML does not support nested `<form>` elements, you must also render the m
 
 ## Checkbox
 
-The checkbox component, similar to a [toggle](./#toggle), allows you to interact a boolean value.
+The checkbox component, similar to a [toggle](#toggle), allows you to interact a boolean value.
 
 ```php
 use Filament\Forms\Components\Checkbox;
@@ -809,7 +809,7 @@ class User extends Model
 
 ## Toggle
 
-The toggle component, similar to a [checkbox](./#checkbox), allows you to interact a boolean value.
+The toggle component, similar to a [checkbox](#checkbox), allows you to interact a boolean value.
 
 ```php
 use Filament\Forms\Components\Toggle;
@@ -1525,7 +1525,7 @@ Repeater::make('members')
     ])
 ```
 
-If you wish to define a repeater with multiple schema blocks that can be repeated in any order, please use the [builder](./#builder).
+If you wish to define a repeater with multiple schema blocks that can be repeated in any order, please use the [builder](#builder).
 
 Repeaters may have a certain number of empty items created by default, using the `defaultItems()` method:
 
@@ -1730,7 +1730,7 @@ You can use `../` to go up a level in the data structure, so `$get('../client_id
 
 ## Builder
 
-Similar to a [repeater](./#repeater), the builder component allows you to output a JSON array of repeated form components. Unlike the repeater, which only defines one form schema to repeat, the builder allows you to define different schema "blocks", which you can repeat in any order. This makes it useful for building more advanced array structures.
+Similar to a [repeater](#repeater), the builder component allows you to output a JSON array of repeated form components. Unlike the repeater, which only defines one form schema to repeat, the builder allows you to define different schema "blocks", which you can repeat in any order. This makes it useful for building more advanced array structures.
 
 The primary use of the builder component is to build web page content using predefined blocks. The example below defines multiple blocks for different elements in the page content. On the frontend of your website, you could loop through each block in the JSON and format it how you wish.
 
@@ -2026,7 +2026,7 @@ ColorPicker::make('rgba_color')->rgba()
 
 ## View
 
-Aside from [building custom fields](./#building-custom-fields), you may create "view" fields which allow you to create custom fields without extra PHP classes.
+Aside from [building custom fields](#building-custom-fields), you may create "view" fields which allow you to create custom fields without extra PHP classes.
 
 ```php
 use Filament\Forms\Components\ViewField;
@@ -2084,7 +2084,7 @@ Or, you may bind the value to a Livewire property using [`wire:model`](https://l
 
 You may create your own custom field classes and views, which you can reuse across your project, and even release as a plugin to the community.
 
-> If you're just creating a simple custom field to use once, you could instead use a [view field](./#view) to render any custom Blade file.
+> If you're just creating a simple custom field to use once, you could instead use a [view field](#view) to render any custom Blade file.
 
 To create a custom field class and view, you may use the following command:
 

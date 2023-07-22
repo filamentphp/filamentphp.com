@@ -88,7 +88,7 @@ class App extends Model
 }
 ```
 
-If you're [returning custom search results](./#returning-custom-search-results), you should define `getOptionLabelsUsing()` instead of `getOptionLabelUsing()`. `$values` will be passed into the callback instead of `$value`, and you should return a `$key => $value` array of labels and their corresponding values:
+If you're [returning custom search results](#returning-custom-search-results), you should define `getOptionLabelsUsing()` instead of `getOptionLabelUsing()`. `$values` will be passed into the callback instead of `$value`, and you should return a `$key => $value` array of labels and their corresponding values:
 
 ```php
 Select::make('technologies')
@@ -483,7 +483,7 @@ As well as all rules listed on the [validation](./../validation) page, there are
 
 ### Selected items validation
 
-You can validate the minimum and maximum number of items that you can select in a [multi-select](./#multi-select) by setting the `minItems()` and `maxItems()` methods:
+You can validate the minimum and maximum number of items that you can select in a [multi-select](#multi-select) by setting the `minItems()` and `maxItems()` methods:
 
 ```php
 use Filament\Forms\Components\Select;
