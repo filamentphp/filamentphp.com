@@ -36,7 +36,7 @@ const { getStartedLink } = Astro.props
                 <img
                     src={bulbLight}
                     alt=""
-                    class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden"
+                    class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden z-10"
                 />
                 <!-- Bulb Dark -->
                 <img
@@ -189,7 +189,7 @@ const { getStartedLink } = Astro.props
         </div>
         <!-- Right Cloud -->
         <div
-            class="absolute top-20 right-20 lg:right-40 hidden min-[450px]:block"
+            class="absolute top-20 right-0 min-[640px]:right-20 lg:right-40 hidden min-[450px]:block"
         >
             <svg
                 width="122"

@@ -1,6 +1,3 @@
-# build output
-dist/
-
 # dependencies
 node_modules/
 
@@ -10,7 +7,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
@@ -18,7 +14,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# filament files
+# Filament source files
 /filament
 
 # torchlight cache

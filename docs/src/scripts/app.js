@@ -5,13 +5,13 @@ import Focus from '@alpinejs/focus'
 import docsearch from '@docsearch/js'
 import './fonts'
 
-docsearch({
-    container: '#docsearch',
-    appId: 'LMIKXMDI4P',
-    apiKey: '1e3d12b0b9c3a4db16cd896e83b9efa0',
-    indexName: 'filamentadmin',
-    placeholder: 'Search docs',
-})
+// docsearch({
+//     container: '#docsearch',
+//     appId: 'LMIKXMDI4P',
+//     apiKey: '1e3d12b0b9c3a4db16cd896e83b9efa0',
+//     indexName: 'filamentadmin',
+//     placeholder: 'Search docs',
+// })
 
 Alpine.plugin(Focus)
 Alpine.plugin(FloatingUi)
