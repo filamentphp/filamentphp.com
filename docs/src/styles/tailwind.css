@@ -31,7 +31,7 @@
     }
 
     .prose .heading-anchor {
-        @apply mr-2 inline-block align-baseline text-butter shadow-none;
+        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
         @apply lg:absolute lg:top-0 lg:-left-7;
     }
 }
