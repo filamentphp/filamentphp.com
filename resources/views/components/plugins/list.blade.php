@@ -52,7 +52,7 @@
         plugins: @js($plugins),
 
         currentPage: 1,
-        perPage: 10,
+        perPage: 24,
         totalItems: 0,
         get totalPages() {
             return Math.ceil(this.totalItems / this.perPage)
