@@ -24,8 +24,15 @@
         margin-block: 0.75em !important;
     }
 
+    .prose h2,
+    .prose h3,
+    .prose h4 {
+        @apply lg:relative;
+    }
+
     .prose .heading-anchor {
-        @apply ml-2 inline-block align-middle shadow-none;
+        @apply mr-2 inline-block align-baseline text-butter shadow-none;
+        @apply lg:absolute lg:top-0 lg:-left-7;
     }
 }
 
