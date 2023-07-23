@@ -13,7 +13,7 @@
         "blade-ui-kit/blade-heroicons": "^2.1",
         "doctrine/dbal": "^3.3",
         "embed/embed": "^4.4",
-        "filament/support": "^3.0",
+        "filament/support": "^3.0@beta",
         "flowframe/laravel-drift": "^0.1.0",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.0",
@@ -24,7 +24,6 @@
         "laravel/tinker": "^2.5",
         "league/commonmark": "^2.2",
         "league/flysystem-aws-s3-v3": "^3.0",
-        "livewire/livewire": "^2.8",
         "lorisleiva/lody": "^0.3.0",
         "pirsch-analytics/laravel-pirsch": "^0.4.1",
         "ryangjchandler/blade-capture-directive": "^0.2.0",
@@ -92,11 +91,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://satis.spatie.be"
-        }
-    ]
+    "prefer-stable": true
 }
