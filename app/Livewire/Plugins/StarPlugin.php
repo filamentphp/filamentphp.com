@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Plugins;
+namespace App\Livewire\Plugins;
 
 use App\Actions\Star;
 use App\Actions\Unstar;
