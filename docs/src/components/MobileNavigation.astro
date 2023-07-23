@@ -1,43 +1,78 @@
 ---
 import Logo from '@components/Logo.astro'
 import Navigation from '@components/Navigation.astro'
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon'
 
-const { navigation } = Astro.props;
+const { navigation } = Astro.props
 ---
 
-<div x-data class="flex items-center">
-  <button
-    type="button"
-    class="relative"
-    aria-label="Open navigation"
-    x-on:click="$refs.panel.toggle"
-  >
-    <Icon name="menu-icon" class="h-6 w-6 stroke-gray-500" />
-  </button>
-  <div
-    x-ref="panel"
-    class="fixed !inset-0 z-50 flex items-start overflow-y-auto pr-10 lg:hidden"
-    x-float.flip.teleport
-    aria-label="Navigation"
-    x-on:scroll="document.querySelector('body').classList.add('overflow-hidden')"
-  >
-    <div class="bg-gray-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"></div>
-    <div class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-gray-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black">
-      <div class="flex items-center">
-        <button
-          type="button"
-          aria-label="Close navigation"
+<div
+    x-data
+    class="flex items-center"
+>
+    <button
+        type="button"
+        class="relative"
+        aria-label="Open navigation"
+        x-on:click="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
+    >
+        <Icon
+            name="menu-icon"
+            class="h-7 w-7 stroke-gray-500"
+        />
+    </button>
+    <div
+        x-ref="panel"
+        class="fixed !inset-0 z-[100] flex items-start overflow-y-auto pr-10 lg:hidden"
+        x-float.flip.teleport
+        aria-label="Navigation"
+    >
+        <div
+            class="bg-[#171527]/50 pr-10 backdrop-blur-lg fixed inset-0 z-0 pointer-events-none"
         >
-          <Icon name="close-icon" class="h-6 w-6 stroke-gray-500" />
-        </button>
-        <a href="/docs/" class="ml-6" aria-label="Home page">
-          <Logo class="h-6 w-auto fill-gray-700 dark:fill-primary-500 md:h-7" />
-        </a>
-      </div>
-      <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle">
-        <Navigation navigation={navigation} />
-      </div>
+        </div>
+        <div
+            class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-[#171527] sm:px-6 relative z-10 shadow-lg dark:shadow-black/50"
+        >
+            <div class="flex items-center gap-5">
+                <button
+                    type="button"
+                    aria-label="Close navigation"
+                >
+                    <Icon
+                        name="close-icon"
+                        class="h-6 w-6 stroke-gray-500"
+                    />
+                </button>
+                <div class="flex gap-3 items-center">
+                    <a
+                        href="/"
+                        aria-label="Homepage"
+                        class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out motion-reduce:transition-none hover:-translate-y-1"
+                    >
+                        <Logo
+                            className="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434] md:block"
+                        />
+                    </a>
+                    <a
+                        href="/docs/"
+                        aria-label="Docs homepage"
+                        class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1"
+                    >
+                        <div
+                            class="font-black text-butter dark:text-white text-xl pt-1"
+                        >
+                            DOCS
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mt-5 px-1"
+                x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');"
+            >
+                <Navigation navigation={navigation} />
+            </div>
+        </div>
     </div>
-  </div>
 </div>

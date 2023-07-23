@@ -146,15 +146,17 @@
                     @endforeach
                 </div>
 
-                {{-- Screenshots --}}
-                <div class="pt-5">
-                    <div
-                        style="
-                            background-image: url({{ $plugin->getImageUrl() }});
-                        "
-                        class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
-                    ></div>
-                </div>
+                @if ($imageUrl = $plugin->getImageUrl())
+                    {{-- Image --}}
+                    <div class="pt-5">
+                        <div
+                            style="
+                                background-image: url({{ $plugin->getImageUrl() }});
+                            "
+                            class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
+                        ></div>
+                    </div>
+                @endif
 
                 {{-- Features and Health Checks --}}
                 <div
@@ -290,8 +292,8 @@
                 @if (filled($docs = $plugin->getDocs()))
                     {{-- Documentation --}}
                     <div class="pt-10">
-                        <div class="prose max-w-none">
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str($docs)->markdown()->sanitizeHtml(),) !!}
+                        <div class="prose">
+                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str($docs)->markdown()->sanitizeHtml()) !!}
                         </div>
                     </div>
                 @endif
@@ -374,31 +376,42 @@
                             </a>
                         </div>
 
-                        {{-- Stats --}}
                         <div
-                            class="mt-4 grid grid-cols-2 gap-10 rounded-2xl bg-white px-6 pb-3.5 pt-3 text-center shadow-lg shadow-black/[0.01]"
+                            class="mt-4 space-y-4 rounded-2xl bg-merino/50 p-6 text-center shadow-lg shadow-black/[0.01]"
                         >
-                            {{-- Plugins --}}
-                            <div class="space-y-0.5">
-                                <div class="font-extrabold">
-                                    {{ number_format($plugin->author->plugins()->count()) }}
+                            {{-- Bio --}}
+                            @if ($plugin->author->getBio())
+                                <div class="prose">
+                                    {!! str($plugin->author->getBio())->markdown()->sanitizeHtml() !!}
                                 </div>
-                                <div
-                                    class="text-sm font-medium text-dolphin/80"
-                                >
-                                    Plugins
-                                </div>
-                            </div>
+                            @endif
 
-                            {{-- Stars --}}
-                            <div class="space-y-0.5">
-                                <div class="font-extrabold">
-                                    {{ number_format($plugin->author->getStarsCount()) }}
-                                </div>
-                                <div
-                                    class="text-sm font-medium text-dolphin/80"
-                                >
-                                    Stars
+                            {{-- Stats --}}
+                            <div class="flex justify-center">
+                                <div class="grid grid-cols-2 gap-10">
+                                    {{-- Plugins --}}
+                                    <div class="space-y-0.5">
+                                        <div class="text-lg font-extrabold">
+                                            {{ number_format($plugin->author->plugins()->count()) }}
+                                        </div>
+                                        <div
+                                            class="text-sm font-medium text-hurricane/80"
+                                        >
+                                            Plugins
+                                        </div>
+                                    </div>
+
+                                    {{-- Stars --}}
+                                    <div class="space-y-0.5">
+                                        <div class="text-lg font-extrabold">
+                                            {{ number_format($plugin->author->getStarsCount()) }}
+                                        </div>
+                                        <div
+                                            class="text-sm font-medium text-hurricane/80"
+                                        >
+                                            Stars
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -414,13 +427,13 @@
                         <div class="space-y-5 pt-7">
                             @foreach ($otherPlugins as $otherPlugin)
                                 <a
-                                    href="#"
+                                    href="{{ route('plugins.view', ['plugin' => $otherPlugin]) }}"
                                     class="group/author-plugin-link relative flex items-center gap-5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
                                 >
                                     {{-- Thumbnail --}}
                                     <div
                                         style="
-                                            background-image: url({{ $otherPlugin->getImageUrl() }});
+                                            background-image: url({{ $otherPlugin->getThumbnailUrl() }});
                                         "
                                         class="aspect-[16/9] w-36 min-w-[9rem] shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
                                     ></div>

@@ -22,6 +22,7 @@ class ListPluginsController extends Controller
                 'plugins',
                 now()->addMinutes(15),
                 fn (): array => Plugin::query()
+                    ->orderBy('name')
                     ->with(['author'])
                     ->get()
                     ->map(fn (Plugin $plugin): array => [
@@ -30,7 +31,7 @@ class ListPluginsController extends Controller
                         'slug' => $plugin->slug,
                         'price' => $plugin->getPrice(),
                         'stars_count' => $plugin->getStarsCount(),
-                        'image_url' => $plugin->getImageUrl(),
+                        'thumbnail_url' => $plugin->getThumbnailUrl(),
                         'description' => $plugin->description,
                         'author' => [
                             'name' => $plugin->author->name,

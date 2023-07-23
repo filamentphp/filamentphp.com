@@ -17,31 +17,30 @@ let currentVersion = segments[1].replaceAll("/", "");
     <button
         x-on:click="$refs.panel.toggle"
         type="button"
-        class="flex h-6 items-center justify-center whitespace-nowrap rounded-md px-3 text-sm text-gray-600 shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-700 dark:text-gray-300 dark:ring-inset dark:ring-white/5"
+        class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm text-gray-600 ring-1 ring-merino dark:bg-dolphin/10 dark:text-gray-300 dark:ring-inset dark:ring-white/5"
         aria-label="Open version options"
     >
-      <span class="inline xl:hidden">v&nbsp;</span>
-      <span class="hidden xl:inline">Version&nbsp;</span>
-      <span>{currentVersion}</span>
+      <span>Version&nbsp;</span>
+      <span class="font-bold">{currentVersion}</span>
     </button>
 
     <div
         x-ref="panel"
+        x-cloak
         x-float.shift.offset.trap="{shift: {padding: 12}}"
-        class="absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-gray-800 dark:ring-white/5"
+        class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5"
         aria-label="Version options"
     >
         {versions.map((version) => (
           <a
             href={version.href}
-            class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 hover:dark:text-white"
+            class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200"
             x-bind:class={`{
               'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '${version.version}' === '${currentVersion}',
-              'text-gray-700 dark:text-gray-300': '${version.version}' !== '${currentVersion}',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '${version.version}' !== '${currentVersion}',
             }`}
           >
-            <span class="inline xl:hidden">v&nbsp;</span>
-            <span class="hidden xl:inline">Version&nbsp;</span>
+            <span>Version&nbsp;</span>
             <span>{version.version}</span>
           </a>
         ))}

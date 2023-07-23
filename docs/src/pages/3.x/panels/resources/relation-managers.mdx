@@ -499,12 +499,12 @@ public static function getRelations(): array
 
 By default, relation managers will be visible if the `viewAny()` method for the related model policy returns `true`.
 
-You may use the `canView()` method to determine if the relation manager should be visible for a specific owner record and page:
+You may use the `canViewForRecord()` method to determine if the relation manager should be visible for a specific owner record and page:
 
 ```php
 use Illuminate\Database\Eloquent\Model;
 
-public static function canView(Model $ownerRecord, string $pageClass): bool
+public static function canViewForRecord(Model $ownerRecord, string $pageClass): bool
 {
     return $ownerRecord->status === Status::Draft;
 }
@@ -607,6 +607,24 @@ public function table(Table $table): Table
         ->headerActions([
             Tables\Actions\CreateAction::make(),
             Tables\Actions\AttachAction::make(),
+        ]);
+}
+```
+
+## Customizing the relation manager Eloquent query
+
+You can apply your own query constraints or [model scopes](https://laravel.com/docs/eloquent#query-scopes) that affect the entire relation manager. To do this, you can pass a function to the `modifyQueryUsing()` method of the table, inside which you can customize the query:
+
+```php
+use Filament\Tables;
+use Illuminate\Database\Eloquent\Builder;
+
+public function table(Table $table): Table
+{
+    return $table
+        ->modifyQueryUsing(fn (Builder $query) => $query->where('is_active', true))
+        ->columns([
+            // ...
         ]);
 }
 ```

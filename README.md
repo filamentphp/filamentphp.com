@@ -23,7 +23,7 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 ```
 
 - The `slug` should match the current filename.
-- The `avatar` should be the name of a file in the `public/images/content/authors` directory. Your avatar must be square, at least 1000x1000 pixels in size, and preferably a JPEG.
+- The `avatar` should be the name of a file in the `content/authors/avatars` directory. Your avatar must be square, at least 1000x1000 pixels in size, and preferably a JPEG.
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
 
@@ -43,10 +43,12 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-media-lib
 github_repository: filamentphp/spatie-laravel-media-library-plugin
 has_dark_theme: true
 has_translations: true
-image: spatie-media-library.png
+image: filament-spatie-media-library.jpg
 versions: [2, 3]
 ---
 ```
+
+Please note: Do not include the word "Filament" in the name of your plugin. This is redundant, as all plugins on the website are for Filament. Please do not include it in the slug or filename either - unless its part of your author name.
 
 - The `slug` should match the current filename.
 - The `author_slug` should match the `slug` of the author profile you created earlier.
@@ -57,7 +59,8 @@ versions: [2, 3]
 - The `github_repository` should be the name of the GitHub repository where your plugin is hosted.
 - The `has_dark_theme` should be `true` if your plugin supports Tailwind's dark mode, or `false` if not.
 - The `has_translations` should be `true` if your plugin supports multiple languages, or `false` if not.
-- The `image` should be the name of a file in the `public/images/content/plugins` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
+- The `image` should be the name of a file in the `content/plugins/images` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
+- The `thumbnail` is optional, and is the name of a file in the `content/plugins/thumbnails directory` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. It will be used as a replacement for the `image` any time that the plugin is listed alongside others, and the size is smaller. If you do not provide a `thumbnail`, the `image` will be used instead.
 - The `versions` should be an array of Filament major versions that your plugin supports.
 
 #### Quality guidelines
@@ -81,3 +84,12 @@ To set up your plugin for sale, you must add an `anystack_id` field to your plug
 Please also make sure that `@danharrin` is invited to the private GitHub repository where you are hosting the code, with read-only access. This is to allow us to review your plugin's code.
 
 If you'd like to host your documentation on the Filament website instead of your own, please let us know during the review process, and we can help you get that set up.
+
+## Forge deployment
+
+By default, Forge's NGINX configuration does not route requests to the `docs` directory to Laravel. To fix the side effects of this, you can add a catch for `403` above the one for `404` so Laravel handles the request instead:
+
+```nginx
+error_page 403 /index.php;
+error_page 404 /index.php;
+```

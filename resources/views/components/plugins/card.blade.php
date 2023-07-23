@@ -3,7 +3,7 @@
     class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
 >
     <div
-        x-bind:style="'background-image: url(' + plugin.image_url + ')'"
+        x-bind:style="'background-image: url(' + plugin.thumbnail_url + ')'"
         class="aspect-[16/9] w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
     ></div>
 

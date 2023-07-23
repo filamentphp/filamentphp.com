@@ -5,14 +5,15 @@
     "private": true,
     "scripts": {
         "checkout": "bin/checkout-latest-filament",
-        "sync": "npm run checkout && node sync.mjs",
+        "sync": "node sync.mjs",
         "torchlight": "npx torchlight --config torchlight.config.cjs",
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro build",
-        "generate": "npm run sync && npm run build && npm run torchlight && rm -rf ../public/docs && mv dist ../public/docs",
-        "generate-dev": "node sync.mjs && npm run build && rm -rf ../public/docs && mv dist ../public/docs",
-        "generate-dev-highlight": "node sync.mjs && npm run build && npm run torchlight && rm -rf ../public/docs && mv dist ../public/docs",
+        "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x",
+        "generate": "npm run checkout && npm run sync && npm run build && npm run torchlight && npm run publicize-assets",
+        "generate-dev": "npm run sync && npm run build && npm run publicize-assets",
+        "generate-dev-highlight": "npm run sync && npm run build && npm run torchlight && npm run publicize-assets",
         "preview": "astro preview",
         "astro": "astro"
     },
@@ -27,6 +28,7 @@
     "devDependencies": {
         "@alpinejs/focus": "^3.10.5",
         "@awcodes/alpine-floating-ui": "^3.4.0",
+        "@fontsource/be-vietnam-pro": "^5.0.5",
         "@grafite/helpers": "^1.0.2",
         "@tailwindcss/typography": "^0.5.8",
         "@torchlight-api/torchlight-cli": "^0.1.7",
@@ -37,6 +39,9 @@
         "heroicons": "^2.0.13",
         "postcss-focus-visible": "^7.1.0",
         "postcss-import": "^15.1.0",
+        "prettier": "^3.0.0",
+        "prettier-plugin-astro": "^0.11.0",
+        "prettier-plugin-tailwindcss": "^0.4.1",
         "tailwindcss": "^3.2.4"
     }
 }

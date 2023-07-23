@@ -41,7 +41,7 @@ class Author extends Model
 
     public function getAvatarUrl(): string
     {
-        return asset("images/content/authors/{$this->avatar}");
+        return asset("images/content/authors/avatars/{$this->avatar}");
     }
 
     public function getStarsCount(): int

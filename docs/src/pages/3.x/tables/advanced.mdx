@@ -157,7 +157,7 @@ public function table(Table $table): Table
 
 ## Polling table content
 
-You may poll table content so that it refreshes at a set interval, using the `$form->poll()` method:
+You may poll table content so that it refreshes at a set interval, using the `$table->poll()` method:
 
 ```php
 use Filament\Tables\Table;
@@ -214,14 +214,34 @@ With Filament, this allows you to store your table's filters, sort, search and p
 To store the filters, sorting, and search state of your table in the query string:
 
 ```php
-protected $queryString = [
-    'isTableReordering' => ['except' => false],
-    'tableFilters',
-    'tableSortColumn' => ['except' => ''],
-    'tableSortDirection' => ['except' => ''],
-    'tableSearch' => ['except' => ''],
-    'tableColumnSearches',
-];
+use Livewire\Attributes\Url;
+
+#[Url]
+public bool $isTableReordering = false;
+
+/**
+ * @var array<string, mixed> | null
+ */
+#[Url]
+public ?array $tableFilters = null;
+
+#[Url]
+public ?string $tableGrouping = null;
+
+#[Url]
+public ?string $tableGroupingDirection = null;
+
+/**
+ * @var ?string
+ */
+#[Url]
+public $tableSearch = '';
+
+#[Url]
+public ?string $tableSortColumn = null;
+
+#[Url]
+public ?string $tableSortDirection = null;
 ```
 
 ## Styling table rows
