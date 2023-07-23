@@ -100,7 +100,7 @@ Select::make('technologies')
 
 ## Integrating with an Eloquent relationship
 
-> If you're building a form inside your Livewire component, make sure you have set up the [form's model](./../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
+> If you're building a form inside your Livewire component, make sure you have set up the [form's model](../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
 
 You may employ the `relationship()` method of the `Select` to configure a `BelongsTo` relationship to automatically retrieve options from. The `titleAttribute` is the name of a column that will be used to generate a label for each option:
 
@@ -228,7 +228,7 @@ use Illuminate\Database\Eloquent\Model;
 
 Select::make('author_id')
     ->relationship(name: 'author', titleAttribute: 'name')
-    ->editOptionAction([
+    ->editOptionForm([
         Forms\Components\TextInput::make('name')
             ->required(),
         Forms\Components\TextInput::make('email')
@@ -479,7 +479,7 @@ Ensure that you are not raising the limit too high, as this may cause the select
 
 ## Select validation
 
-As well as all rules listed on the [validation](./../validation) page, there are additional rules that are specific to selects.
+As well as all rules listed on the [validation](../validation) page, there are additional rules that are specific to selects.
 
 ### Selected items validation
 
@@ -498,4 +498,25 @@ Select::make('technologies')
     ])
     ->minItems(1)
     ->maxItems(3)
+```
+
+## Customizing the select action objects
+
+This field uses action objects for easy customization of buttons within it. You can customize these buttons by passing a function to an action registration method. The function has access to the `$action` object, which you can use to [customize it](../../actions/trigger-button) or [customize its modal](../../actions/modals). The following methods are available to customize the actions:
+
+- `createOptionAction()`
+- `editOptionAction()`
+- `manageOptionActions()` (for customizing both the create and edit option actions at once)
+
+Here is an example of how you might customize an action:
+
+```php
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\Select;
+
+Select::make('author_id')
+    ->relationship(name: 'author', titleAttribute: 'name')
+    ->createOptionAction(
+        fn (Action $action) => $action->modalWidth('3xl'),
+    )
 ```

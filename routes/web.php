@@ -51,7 +51,7 @@ Route::prefix('/docs')->group(function () {
             return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        $filePath = public_path("docs/{$slug}/index.html");
+        $filePath = base_path("docs/dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);

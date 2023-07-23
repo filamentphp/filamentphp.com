@@ -18,7 +18,7 @@ const { navigation } = Astro.props
     >
         <Icon
             name="menu-icon"
-            class="h-6 w-6 stroke-gray-500"
+            class="h-7 w-7 stroke-gray-500"
         />
     </button>
     <div
@@ -28,13 +28,13 @@ const { navigation } = Astro.props
         aria-label="Navigation"
     >
         <div
-            class="bg-gray-900/50 pr-10 backdrop-blur fixed inset-0 z-0 pointer-events-none"
+            class="bg-[#171527]/50 pr-10 backdrop-blur-lg fixed inset-0 z-0 pointer-events-none"
         >
         </div>
         <div
-            class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-gray-900 sm:px-6 relative z-10 shadow-lg dark:shadow-black"
+            class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-[#171527] sm:px-6 relative z-10 shadow-lg dark:shadow-black/50"
         >
-            <div class="flex items-center">
+            <div class="flex items-center gap-5">
                 <button
                     type="button"
                     aria-label="Close navigation"
@@ -44,13 +44,28 @@ const { navigation } = Astro.props
                         class="h-6 w-6 stroke-gray-500"
                     />
                 </button>
-                <a
-                    href="/docs/"
-                    class="ml-6"
-                    aria-label="Home page"
-                >
-                    <Logo class="fill-gray-700 dark:fill-primary-500" />
-                </a>
+                <div class="flex gap-3 items-center">
+                    <a
+                        href="/"
+                        aria-label="Homepage"
+                        class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out motion-reduce:transition-none hover:-translate-y-1"
+                    >
+                        <Logo
+                            className="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434] md:block"
+                        />
+                    </a>
+                    <a
+                        href="/docs/"
+                        aria-label="Docs homepage"
+                        class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1"
+                    >
+                        <div
+                            class="font-black text-butter dark:text-white text-xl pt-1"
+                        >
+                            DOCS
+                        </div>
+                    </a>
+                </div>
             </div>
             <div
                 class="mt-5 px-1"

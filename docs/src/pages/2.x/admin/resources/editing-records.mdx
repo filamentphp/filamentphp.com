@@ -91,7 +91,7 @@ By default, saving the form will not redirect the user to another page.
 
 You may set up a custom redirect when the form is saved by overriding the `getRedirectUrl()` method on the Edit page class.
 
-For example, the form can redirect back to the [List page](./listing-records) of the resource:
+For example, the form can redirect back to the [List page](listing-records) of the resource:
 
 ```php
 protected function getRedirectUrl(): string
@@ -100,7 +100,7 @@ protected function getRedirectUrl(): string
 }
 ```
 
-Or the [View page](./viewing-records):
+Or the [View page](viewing-records):
 
 ```php
 protected function getRedirectUrl(): string
@@ -393,7 +393,7 @@ class EditUser extends EditRecord
 }
 ```
 
-To view the entire actions API, please visit the [pages section](./../pages/actions).
+To view the entire actions API, please visit the [pages section](../pages/actions).
 
 ## Custom views
 

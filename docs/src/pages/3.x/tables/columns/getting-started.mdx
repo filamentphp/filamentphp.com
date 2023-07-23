@@ -37,19 +37,19 @@ Filament ships with two main types of columns - static and editable.
 
 Static columns display data to the user:
 
-- [Text column](./text)
-- [Icon column](./icon)
-- [Image column](./image)
-- [Color column](./color)
+- [Text column](text)
+- [Icon column](icon)
+- [Image column](image)
+- [Color column](color)
 
 Editable columns allow the user to update data in the database without leaving the table:
 
-- [Select column](./select)
-- [Toggle column](./toggle)
-- [Text input column](./text-input)
-- [Checkbox column](./checkbox)
+- [Select column](select)
+- [Toggle column](toggle)
+- [Text input column](text-input)
+- [Checkbox column](checkbox)
 
-You may also [create your own custom columns](./custom) to display data however you wish.
+You may also [create your own custom columns](custom) to display data however you wish.
 
 ## Setting a label
 
@@ -250,7 +250,7 @@ TextColumn::make('title')
 
 #### Action modals
 
-You may open [action modals](./../actions#modals) by passing in an `Action` object to the `action()` method:
+You may open [action modals](../actions#modals) by passing in an `Action` object to the `action()` method:
 
 ```php
 use Filament\Tables\Actions\Action;
@@ -340,7 +340,7 @@ TextColumn::make('id')
 
 #### Customizing the toggle columns dropdown trigger action
 
-To customize the toggle dropdown trigger button, you may use the `toggleColumnsTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](./../actions/trigger-button) can be used:
+To customize the toggle dropdown trigger button, you may use the `toggleColumnsTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](../actions/trigger-button) can be used:
 
 ```php
 use Filament\Tables\Actions\Action;
