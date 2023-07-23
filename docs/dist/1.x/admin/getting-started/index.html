@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.c1631f83.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.29aefdbf.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -416,15 +416,15 @@ php artisan migrate
 <p>and answering the input prompts. Administrators have access to all areas of Filament, and are able to manage other users.</p>
 <p>Once you have a user account, you can sign in to the admin panel by visiting <code>/admin</code> in your browser.</p>
 <p>To start building your admin panel, <a href="resources">create a resource</a>.</p>
-<h2 id="configuration">Configuration</h2>
-<p>If you’d like to expose advanced configuration options for Filament, you may publish its configuration file:</p>
+<h2 id="configuration"><a class="heading-anchor" href="#configuration"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Configuration</h2>
+<p>If you&#39;d like to expose advanced configuration options for Filament, you may publish its configuration file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-config</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-config
 </textarea></code></pre>
 <blockquote>
 <p>If you have published the configuration file for Filament, please ensure that you republish it when you upgrade.</p>
 </blockquote>
-<h2 id="users">Users</h2>
-<p>By default, Filament includes its own authentication guard and users table that is completely separate from your app’s users table. This enables you to get up and running with Filament at record speed.</p>
+<h2 id="users"><a class="heading-anchor" href="#users"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Users</h2>
+<p>By default, Filament includes its own authentication guard and users table that is completely separate from your app&#39;s users table. This enables you to get up and running with Filament at record speed.</p>
 <p>Some projects may choose to allow their app users access to Filament. In this case, they may customize the auth guard that Filament uses by <a href="#configuration">configuring</a> <code>auth.guard</code> to the name of your default guard, typically <code>web</code>.</p>
 <p>The next step is to prepare your <code>User</code> model for use with Filament. Implement the <code>Filament\Models\Contracts\FilamentUser</code> interface, and apply the <code>Filament\Models\Concerns\IsFilamentUser</code> trait. These provide Filament with an API that it can use to interact with your existing user data:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Models</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Concerns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">IsFilamentUser</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentUser</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Foundation</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Auth</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #FFCB6B;"> </span><span style="color: #F78C6C;">as</span><span style="color: #FFCB6B;"> Authenticatable</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">User</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Authenticatable</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">implements</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">FilamentUser</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">IsFilamentUser</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
@@ -482,21 +482,21 @@ class User extends Authenticatable implements FilamentUser
     // ...
 }
 </textarea></code></pre>
-<h3 id="disabling-the-default-migrations">Disabling the Default Migrations</h3>
+<h3 id="disabling-the-default-migrations"><a class="heading-anchor" href="#disabling-the-default-migrations"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Disabling the Default Migrations</h3>
 <p>You may wish to prevent the migration for the default users table from being registered. You may do this by calling:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">ignoreMigrations</span><span style="color: #89DDFF;">();</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Filament;
 
 Filament::ignoreMigrations();
 </textarea></code></pre>
 <p>from the <code>register()</code> method of your <code>AppServiceProvider</code>.</p>
-<h2 id="stubs">Stubs</h2>
+<h2 id="stubs"><a class="heading-anchor" href="#stubs"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Stubs</h2>
 <p>Filament commands use stubs as templates when creating new files in your project. You may customize these stubs by publishing them to your app:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-stubs</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-stubs
 </textarea></code></pre>
 <blockquote>
 <p>If you have published the stubs for Filament, please ensure that you republish them when you upgrade.</p>
 </blockquote>
-<h2 id="upgrade-guide">Upgrade Guide</h2>
+<h2 id="upgrade-guide"><a class="heading-anchor" href="#upgrade-guide"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrade Guide</h2>
 <p>To upgrade Filament to the latest version, you may run:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:upgrade</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan filament:upgrade
 </textarea></code></pre>

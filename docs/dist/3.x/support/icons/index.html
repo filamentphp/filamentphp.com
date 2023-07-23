@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.c1631f83.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.29aefdbf.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -436,17 +436,17 @@
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
-  <h2 id="overview">Overview</h2>
+  <h2 id="overview"><a class="heading-anchor" href="#overview"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Overview</h2>
 <p>Icons are used throughout the entire Filament UI to visually communicate core parts of the user experience. To render icons, we use the <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a> package from Blade UI Kit.</p>
 <p>They have a website where you can <a href="https://blade-ui-kit.com/blade-icons?set=1#search">search all the available icons</a> from various Blade Icons packages. Each package contains a different icon set that you can choose from.</p>
-<h2 id="using-custom-svgs-as-icons">Using custom SVGs as icons</h2>
+<h2 id="using-custom-svgs-as-icons"><a class="heading-anchor" href="#using-custom-svgs-as-icons"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using custom SVGs as icons</h2>
 <p>The [Blade Icons] package allows you to register custom SVGs as icons. This is useful if you want to use your own custom icons in Filament.</p>
 <p>To start with, publish the Blade Icons configuration file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=blade-icons</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=blade-icons
 </textarea></code></pre>
 <p>Now, open the <code>config/blade-icons.php</code> file, and uncomment the <code>default</code> set in the <code>sets</code> array.</p>
 <p>Now that the default set exists in the config file, you can simply put any icons you want inside the <code>resources/svg</code> directory of your application. For example, if you put an SVG file named <code>star.svg</code> inside the <code>resources/svg</code> directory, you can reference it anywhere in Filament as <code>icon-star</code>. The <code>icon-</code> prefix is configurable in the <code>config/blade-icons.php</code> file too. You can also render the custom icon in a Blade view using the <a href="https://github.com/blade-ui-kit/blade-icons#directive"><code>@svg(&#39;icon-star&#39;)</code> directive</a>.</p>
-<h2 id="replacing-the-default-icons">Replacing the default icons</h2>
+<h2 id="replacing-the-default-icons"><a class="heading-anchor" href="#replacing-the-default-icons"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Replacing the default icons</h2>
 <p>Filament includes an icon management system that allows you to replace any icons are used by default in the UI with your own. This happens in the <code>boot()</code> method of any service provider, like <code>AppServiceProvider</code>, or even a dedicated service provider for icons. If you wanted to build a plugin to replace Heroicons with a different set, you could absolutely do that by creating a Laravel package with a similar service provider.</p>
 <p>To replace an icon, you can use the <code>FilamentIcon</code> facade. It has a <code>register()</code> method, which accepts an array of icons to replace. The key of the array is the unique <a href="#available-icon-aliases">icon alias</a> that identifies the icon in the Filament UI, and the value is name of a Blade icon to replace it instead:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentIcon</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">FilamentIcon</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">register</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">panels::topbar.global-search.field</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">fas-magnifying-glass</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">panels::sidebar.group.collapse-button</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">fas-chevron-up</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\Facades\FilamentIcon;
@@ -456,7 +456,7 @@ FilamentIcon::register([
     'panels::sidebar.group.collapse-button' =&gt; 'fas-chevron-up',
 ]);
 </textarea></code></pre>
-<h3 id="allowing-users-to-customize-icons-from-your-plugin">Allowing users to customize icons from your plugin</h3>
+<h3 id="allowing-users-to-customize-icons-from-your-plugin"><a class="heading-anchor" href="#allowing-users-to-customize-icons-from-your-plugin"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Allowing users to customize icons from your plugin</h3>
 <p>If you have built a Filament plugin, your users may want to be able to customize icons in the same way that they can with any core Filament package. This is possible if you replace any manual <code>@svg()</code> usages with the <code>&lt;x-filament::icon&gt;</code> Blade component. This component allows you to pass in an icon alias, the name of the SVG icon that should be used by default, and any classes or HTML attributes:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::icon</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">alias</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">panels::topbar.global-search.field</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">icon</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">heroicon-m-magnifying-glass</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">wire:target</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">search</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">h-5 w-5 text-gray-500 dark:text-gray-400</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">/&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::icon
     alias="panels::topbar.global-search.field"
@@ -465,7 +465,7 @@ FilamentIcon::register([
     class="h-5 w-5 text-gray-500 dark:text-gray-400"
 /&gt;
 </textarea></code></pre>
-<p>Alternatively, you may pass an SVG element into the component’s slot instead of defining a default icon name:</p>
+<p>Alternatively, you may pass an SVG element into the component&#39;s slot instead of defining a default icon name:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::icon</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">alias</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">panels::topbar.global-search.field</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">wire:target</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">search</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">h-5 w-5 text-gray-500 dark:text-gray-400</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">svg</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #676E95;">&lt;!-- ... --&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">svg</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::icon</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::icon
     alias="panels::topbar.global-search.field"
     wire:target="search"
@@ -476,8 +476,8 @@ FilamentIcon::register([
     &lt;/svg&gt;
 &lt;/x-filament::icon&gt;
 </textarea></code></pre>
-<h2 id="available-icon-aliases">Available icon aliases</h2>
-<h3 id="panel-builder-icon-aliases">Panel Builder icon aliases</h3>
+<h2 id="available-icon-aliases"><a class="heading-anchor" href="#available-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Available icon aliases</h2>
+<h3 id="panel-builder-icon-aliases"><a class="heading-anchor" href="#panel-builder-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Panel Builder icon aliases</h3>
 <ul>
 <li><code>panels::pages.dashboard.navigation-item</code> - Dashboard navigation item</li>
 <li><code>panels::pages.tenancy.register-tenant.open-tenant-button</code> - Button to open a tenant from the tenant registration page</li>
@@ -497,13 +497,13 @@ FilamentIcon::register([
 <li><code>panels::widgets.filament-info.documentation-link</code> - Link to visit the documentation from the Filament info widget</li>
 <li><code>panels::widgets.filament-info.github-link</code> - Link to visit GitHub from the Filament info widget</li>
 </ul>
-<h3 id="form-builder-icon-aliases">Form Builder icon aliases</h3>
+<h3 id="form-builder-icon-aliases"><a class="heading-anchor" href="#form-builder-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Form Builder icon aliases</h3>
 <ul>
 <li><code>forms:components.checkbox-list.search-field</code> - Search input in a checkbox list</li>
 <li><code>forms::components.tags-input.delete-button</code> - Button to delete a tag in a tags input</li>
 <li><code>forms::components.wizard.completed-step</code> - Completed step in a wizard</li>
 </ul>
-<h3 id="table-builder-icon-aliases">Table Builder icon aliases</h3>
+<h3 id="table-builder-icon-aliases"><a class="heading-anchor" href="#table-builder-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Table Builder icon aliases</h3>
 <ul>
 <li><code>tables::columns.collapse-button</code></li>
 <li><code>tables::filters.remove-button</code> - Button to remove a filter</li>
@@ -511,19 +511,19 @@ FilamentIcon::register([
 <li><code>tables::grouping.collapse-button</code> - Button to collapse a group of records</li>
 <li><code>tables::header-cell.sort-asc</code> - Sort button of a column sorted in ascending order</li>
 <li><code>tables::header-cell.sort-desc</code> - Sort button of a column sorted in descending order</li>
-<li><code>tables::pagination.previous-button</code> - Button to go to the previous page, used on mobile and by “simple pagination”</li>
-<li><code>tables::pagination.next-button</code> - Button to go to the next page, used on mobile and by “simple pagination”</li>
+<li><code>tables::pagination.previous-button</code> - Button to go to the previous page, used on mobile and by &quot;simple pagination&quot;</li>
+<li><code>tables::pagination.next-button</code> - Button to go to the next page, used on mobile and by &quot;simple pagination&quot;</li>
 <li><code>tables::reorder.handle</code> - Handle to grab in order to reorder a record with drag and drop</li>
 <li><code>tables::search-field</code> - Search input</li>
 </ul>
-<h3 id="notifications-icon-aliases">Notifications icon aliases</h3>
+<h3 id="notifications-icon-aliases"><a class="heading-anchor" href="#notifications-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Notifications icon aliases</h3>
 <ul>
 <li><code>notifications::database.modal.empty-state</code> - Empty state of the database notifications modal</li>
 <li><code>notifications::database.modal.pagination.previous-button</code> - Button to go to the previous page of the database notifications modal</li>
 <li><code>notifications::database.modal.pagination.next-button</code> - Button to go to the next page of the database notifications modal</li>
 <li><code>notifications::notification.close-button</code> - Button to close a notification</li>
 </ul>
-<h3 id="ui-components-icon-aliases">UI components icon aliases</h3>
+<h3 id="ui-components-icon-aliases"><a class="heading-anchor" href="#ui-components-icon-aliases"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>UI components icon aliases</h3>
 <ul>
 <li><code>badge.delete-button</code> - Button to delete a badge</li>
 <li><code>breadcrumbs.separator</code> - Separator between breadcrumbs</li>

@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.c1631f83.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.29aefdbf.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -408,7 +408,7 @@
 </textarea></code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of the Filament directory, and a view in the <code>/pages</code> directory of the Filament views directory.</p>
 <p>Page classes are essentially <a href="https://laravel-livewire.com">Laravel Livewire</a> components with custom integration utilities for use with Filament.</p>
-<h2 id="authorization">Authorization</h2>
+<h2 id="authorization"><a class="heading-anchor" href="#authorization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Authorization</h2>
 <p>You may create roles for users of Filament that allow them to access specific pages. You may create a <code>Manager</code> role using:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">php artisan make</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">filament</span><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;">role Manager</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-role Manager
 </textarea></code></pre>
@@ -437,7 +437,7 @@ public static function authorization()
     ];
 }
 </textarea></code></pre>
-<h2 id="customization">Customization</h2>
+<h2 id="customization"><a class="heading-anchor" href="#customization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customization</h2>
 <p>Filament will automatically generate a title, navigation label and URL (slug) for your page based on its name. You may override it using static properties of your page class:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">label </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Navigation Label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-url-slug</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Custom Page Title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $label = 'Custom Navigation Label';
 

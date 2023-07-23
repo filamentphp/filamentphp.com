@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.c1631f83.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.29aefdbf.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -573,17 +573,17 @@
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal dark:prose-hr:border-gray-800">
-  <h2 id="view-components">View components</h2>
-<p>Aside from <a href="custom">building custom layout components</a>, you may create “view” components which allow you to create custom layouts without extra PHP classes.</p>
+  <h2 id="view-components"><a class="heading-anchor" href="#view-components"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>View components</h2>
+<p>Aside from <a href="custom">building custom layout components</a>, you may create &quot;view&quot; components which allow you to create custom layouts without extra PHP classes.</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">View</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament.infolists.components.box</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\View;
 
 View::make('filament.infolists.components.box')
 </textarea></code></pre>
 <p>This assumes that you have a <code>resources/views/filament/infolists/components/box.blade.php</code> file.</p>
-<h2 id="custom-layout-classes">Custom layout classes</h2>
+<h2 id="custom-layout-classes"><a class="heading-anchor" href="#custom-layout-classes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Custom layout classes</h2>
 <p>You may create your own custom component classes and views, which you can reuse across your project, and even release as a plugin to the community.</p>
 <blockquote>
-<p>If you’re just creating a simple custom component to use once, you could instead use a <a href="#view">view component</a> to render any custom Blade file.</p>
+<p>If you&#39;re just creating a simple custom component to use once, you could instead use a <a href="#view">view component</a> to render any custom Blade file.</p>
 </blockquote>
 <p>To create a custom column class and view, you may use the following command:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:infolist-layout</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Box</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:infolist-layout Box
@@ -602,13 +602,13 @@ class Box extends Component
 }
 </textarea></code></pre>
 <p>It will also create a view file at <code>resources/views/filament/infolists/components/box.blade.php</code>.</p>
-<h2 id="rendering-the-components-schema">Rendering the component’s schema</h2>
-<p>Inside your view, you may render the component’s <code>schema()</code> using the <code>$getChildComponentContainer()</code> function:</p>
+<h2 id="rendering-the-components-schema"><a class="heading-anchor" href="#rendering-the-components-schema"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Rendering the component&#39;s schema</h2>
+<p>Inside your view, you may render the component&#39;s <code>schema()</code> using the <code>$getChildComponentContainer()</code> function:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getChildComponentContainer</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
     {{ $getChildComponentContainer() }}
 &lt;/div&gt;
 </textarea></code></pre>
-<h2 id="accessing-the-eloquent-record">Accessing the Eloquent record</h2>
+<h2 id="accessing-the-eloquent-record"><a class="heading-anchor" href="#accessing-the-eloquent-record"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Accessing the Eloquent record</h2>
 <p>Inside your view, you may access the Eloquent record using the <code>$getRecord()</code> function:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">getRecord</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #A6ACCD;">name </span><span style="color: #82AAFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div&gt;
     {{ $getRecord()-&gt;name }}
@@ -645,7 +645,7 @@ class Box extends Component
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-DY2G2CGF">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-DY2G2CGF" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;view-components&#34;,&#34;text&#34;:&#34;View components&#34;,&#34;title&#34;:&#34;View components&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-layout-classes&#34;,&#34;text&#34;:&#34;Custom layout classes&#34;,&#34;title&#34;:&#34;Custom layout classes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;rendering-the-components-schema&#34;,&#34;text&#34;:&#34;Rendering the component’s schema&#34;,&#34;title&#34;:&#34;Rendering the component’s schema&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-eloquent-record&#34;,&#34;text&#34;:&#34;Accessing the Eloquent record&#34;,&#34;title&#34;:&#34;Accessing the Eloquent record&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-DY2G2CGF" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;view-components&#34;,&#34;text&#34;:&#34;View components&#34;,&#34;title&#34;:&#34;View components&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;custom-layout-classes&#34;,&#34;text&#34;:&#34;Custom layout classes&#34;,&#34;title&#34;:&#34;Custom layout classes&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;rendering-the-components-schema&#34;,&#34;text&#34;:&#34;Rendering the component's schema&#34;,&#34;title&#34;:&#34;Rendering the component's schema&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;accessing-the-eloquent-record&#34;,&#34;text&#34;:&#34;Accessing the Eloquent record&#34;,&#34;title&#34;:&#34;Accessing the Eloquent record&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-DY2G2CGF">
                       <h3 class="astro-DY2G2CGF">
                         <a href="#view-components" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'view-components' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -663,7 +663,7 @@ class Box extends Component
                     </li><li class="astro-DY2G2CGF">
                       <h3 class="astro-DY2G2CGF">
                         <a href="#rendering-the-components-schema" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'rendering-the-components-schema' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
-                          Rendering the component’s schema
+                          Rendering the component&#39;s schema
                         </a>
                       </h3>
                       
