@@ -23,6 +23,10 @@
         display: inline-block;
         margin-block: 0.75em !important;
     }
+
+    .prose .heading-anchor {
+        @apply ml-2 inline-block align-middle shadow-none;
+    }
 }
 
 .navigation-custom-scrollbar::-webkit-scrollbar {
