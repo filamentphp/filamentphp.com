@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import react from '@astrojs/react'
 import mdx from '@astrojs/mdx'
-import { h } from 'hastscript';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { h } from 'hastscript'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,9 +32,13 @@ export default defineConfig({
                     behavior: 'prepend',
                     properties: { class: 'heading-anchor' },
                     content: (heading) => [
-                        h(`span.heading-anchor-icon`, { ariaHidden: 'true' }, '#'),
+                        h(
+                            `span.heading-anchor-icon`,
+                            { ariaHidden: 'true' },
+                            '#',
+                        ),
                     ],
-                }
+                },
             ],
         ],
     },
