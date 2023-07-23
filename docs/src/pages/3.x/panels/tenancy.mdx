@@ -26,7 +26,7 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-You'll also need to tell Filament which tenants a user belongs to. You can do this by implementing the `HasTenants` interface on the `App\Models\User` model:
+You'll also need to tell Filament which tenants a user belongs to as well as to check if a user belongs to a specific tenant. You can do this by implementing the `HasTenants` interface on the `App\Models\User` model:
 
 ```php
 <?php
@@ -44,6 +44,11 @@ class User extends Authenticatable implements FilamentUser, HasTenants
 {
     // ...
 
+    public function canAccessTenant(Model $tenant): bool
+    {
+        return $this->teams->contains($tenant);
+    }
+
     public function getTenants(Panel $panel): Collection
     {
         return $this->teams;
@@ -56,7 +61,7 @@ class User extends Authenticatable implements FilamentUser, HasTenants
 }
 ```
 
-In this example, users belong to many teams, so there is a `teams()` relationship. The `getTenants()` method returns the teams that the user belongs to. Filament uses this to list the tenants that the user has access to.
+In this example, users belong to many teams, so there is a `teams()` relationship. The `getTenants()` method returns the teams that the user belongs to. Filament uses this to list the tenants that the user has access to. Additionally this trait also includes a method `canAccessTenant($tenant)` which should indicate whether the user can access the tenant that is passed in as a parameter, usually by checking if the relationship exists between the two models.
 
 You'll also want users to be able to [register new teams](#adding-a-tenant-registration-page).
 
