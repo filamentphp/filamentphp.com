@@ -24,3 +24,38 @@
         margin-block: 0.75em !important;
     }
 }
+
+.navigation-custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.navigation-custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.navigation-custom-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+}
+
+/* Light Theme */
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #f1e5e4b0;
+}
+
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+    background: #d4c6c5;
+}
+
+/* Dark Theme */
+.dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #2f2b49;
+}
+
+.dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+    background: #373355;
+}

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,23 +27,40 @@ Route::view('/consulting', 'consulting')->name('consulting');
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/app/getting-started');
-    Route::redirect('/resources', '/docs/app/resources');
-    Route::redirect('/pages', '/docs/app/pages');
-    Route::redirect('/dashboard', '/docs/app/dashboard');
-    Route::redirect('/navigation', '/docs/app/navigation');
-    Route::redirect('/plugin-development', '/docs/app/plugin-development');
+    Route::redirect('/getting-started', '/docs/panels/getting-started');
+    Route::redirect('/resources', '/docs/panels/resources/getting-started');
+    Route::redirect('/pages', '/docs/panels/pages');
+    Route::redirect('/dashboard', '/docs/panels/dashboard');
+    Route::redirect('/navigation', '/docs/panels/navigation');
+    Route::redirect('/plugin-development', '/docs/panels/plugins');
 
-    Route::get('/{slug?}', function (string $slug = null): string {
+    Route::redirect('/admin', '/docs/panels/installation');
+    Route::redirect('/panels', '/docs/panels/installation');
+    Route::redirect('/forms', '/docs/forms/installation');
+    Route::redirect('/tables', '/docs/tables/installation');
+    Route::redirect('/notifications', '/docs/notifications/installation');
+    Route::redirect('/actions', '/docs/actions/installation');
+    Route::redirect('/infolists', '/docs/infolists/installation');
+    Route::redirect('/widgets', '/docs/widgets/installation');
+    Route::redirect('/support', '/docs/support/overview');
+
+    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $slug = trim($slug, '/');
 
-        $filePath = public_path("docs/{$slug}/index.html");
-
-        if (! file_exists($filePath)) {
-            abort(404);
+        if (filled($slug) && (! str_contains($slug, '.x'))) {
+            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        return file_get_contents($filePath);
+        $filePath = base_path("docs/dist/{$slug}/index.html");
+
+        if (file_exists($filePath)) {
+            return file_get_contents($filePath);
+        }
+
+        $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
+        $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+
+        return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 

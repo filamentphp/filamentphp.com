@@ -131,9 +131,9 @@ Repeater::make('members')
     ->reorderable(false)
 ```
 
-### Reordering items with buttons instead of drag and drop
+### Reordering items with buttons
 
-You may use the `reorderableWithButtons()` method to enable reordering items with buttons instead of drag and drop:
+You may use the `reorderableWithButtons()` method to enable reordering items with buttons to move the item up and down:
 
 ```php
 use Filament\Forms\Components\Repeater;
@@ -146,6 +146,20 @@ Repeater::make('members')
 ```
 
 <AutoScreenshot name="forms/fields/repeater/reorderable-with-buttons" alt="Repeater that is reorderable with buttons" version="3.x" />
+
+### Preventing reordering with drag and drop
+
+You may use the `reorderableWithDragAndDrop(false)` method to prevent items from being ordered with drag and drop:
+
+```php
+use Filament\Forms\Components\Repeater;
+
+Repeater::make('members')
+    ->schema([
+        // ...
+    ])
+    ->reorderableWithDragAndDrop(false)
+```
 
 ## Collapsing items
 
@@ -323,7 +337,7 @@ Repeater::make('members')
     ->schema([
         TextInput::make('name')
             ->required()
-            ->lazy(),
+            ->blur(),
         Select::make('role')
             ->options([
                 'member' => 'Member',
@@ -336,9 +350,9 @@ Repeater::make('members')
     ->itemLabel(fn (array $state): ?string => $state['name'] ?? null),
 ```
 
-<AutoScreenshot name="forms/fields/repeater/labelled" alt="Repeater with item labels" version="3.x" />
+Any fields that you use from `$state` should be `live()` if you wish to see the item label update live as you use the form.
 
-Any fields that you use from `$state` should be `reactive()` or `lazy()` if you wish to see the item label update live as you use the form.
+<AutoScreenshot name="forms/fields/repeater/labelled" alt="Repeater with item labels" version="3.x" />
 
 ## Using `$get()` to access parent field values
 
@@ -368,21 +382,6 @@ You are trying to retrieve the value of `client_id` from inside the repeater ite
 
 You can use `../` to go up a level in the data structure, so `$get('../client_id')` is `$get('repeater.client_id')` and `$get('../../client_id')` is `$get('client_id')`.
 
-## Enabling the "inset" design
-
-As part of Filament's design system, you can enable "inset" mode for a repeater with the `inset()`. This will give the repeater extra padding around the outside of the items, with a background color:
-
-```php
-use Filament\Forms\Components\Repeater;
-
-Repeater::make('members')
-    ->schema([
-        // ...
-    ])
-    ->inset()
-```
-
-<AutoScreenshot name="forms/fields/repeater/inset" alt="Repeater with inset design" version="3.x" />
 
 ## Repeater validation
 
@@ -402,3 +401,52 @@ Repeater::make('members')
     ->minItems(2)
     ->maxItems(5)
 ```
+
+## Customizing the repeater action objects
+
+This field uses action objects for easy customization of buttons within it. You can customize these buttons by passing a function to an action registration method. The function has access to the `$action` object, which you can use to [customize it](../../actions/trigger-button). The following methods are available to customize the actions:
+
+- `addAction()`
+- `cloneAction()`
+- `collapseAction()`
+- `collapseAllAction()`
+- `deleteAction()`
+- `expandAction()`
+- `expandAllAction()`
+- `moveDownAction()`
+- `moveUpAction()`
+- `reorderAction()`
+
+Here is an example of how you might customize an action:
+
+```php
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\Repeater;
+
+Repeater::make('members')
+    ->schema([
+        // ...
+    ])
+    ->collapseAllAction(
+        fn (Action $action) => $action->label('Collapse all members'),
+    )
+```
+
+### Confirming repeater actions with a modal
+
+You can confirm actions with a modal by using the `requiresConfirmation()` method on the action object. You may use any [modal customization method](../../actions/modals) to change its content and behaviour:
+
+```php
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\Repeater;
+
+Repeater::make('members')
+    ->schema([
+        // ...
+    ])
+    ->deleteAction(
+        fn (Action $action) => $action->requiresConfirmation(),
+    )
+```
+
+Please note that the `collapseAction()`, `collapseAllAction()`, `expandAction()`, `expandAllAction()` and `reorderAction()` methods do not support confirmation modals, as clicking their buttons does not make the network request that is required to show the modal.

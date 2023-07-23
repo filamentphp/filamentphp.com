@@ -84,3 +84,12 @@ To set up your plugin for sale, you must add an `anystack_id` field to your plug
 Please also make sure that `@danharrin` is invited to the private GitHub repository where you are hosting the code, with read-only access. This is to allow us to review your plugin's code.
 
 If you'd like to host your documentation on the Filament website instead of your own, please let us know during the review process, and we can help you get that set up.
+
+## Forge deployment
+
+By default, Forge's NGINX configuration does not route requests to the `docs` directory to Laravel. To fix the side effects of this, you can add a catch for `403` above the one for `404` so Laravel handles the request instead:
+
+```nginx
+error_page 403 /index.php;
+error_page 404 /index.php;
+```

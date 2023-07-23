@@ -173,7 +173,7 @@
                     class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center min-[900px]:grid-cols-2 lg:px-16"
                 >
                     <a
-                        href="#"
+                        href="/docs/panels"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -181,8 +181,8 @@
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="40"
-                                height="40"
+                                width="37"
+                                height="37"
                                 viewBox="0 0 21 21"
                             >
                                 <path
@@ -226,57 +226,7 @@
                         </div>
                     </a>
                     <a
-                        href="#"
-                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
-                    >
-                        <div
-                            class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="37"
-                                height="37"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.514 2.514 0 0 0 2.5-2.5V5.56a2.514 2.514 0 0 0-2.5-2.5ZM8.71 19.94H5.56a1.5 1.5 0 0 1-1.5-1.5v-3.11h4.65Zm0-5.61H4.06V9.67h4.65Zm0-5.66H4.06V5.56a1.5 1.5 0 0 1 1.5-1.5h3.15Zm11.23 9.77a1.511 1.511 0 0 1-1.5 1.5H9.71v-4.61h10.23Zm0-4.11H9.71V9.67h10.23Zm0-5.66H9.71V4.06h8.73a1.511 1.511 0 0 1 1.5 1.5Z"
-                                />
-                            </svg>
-                        </div>
-                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
-                            <div class="flex items-center gap-2">
-                                <div class="text-base font-medium">
-                                    Table Builder
-                                </div>
-                                <div
-                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        height="22"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="max-w-xs text-sm text-dolphin">
-                                Craft beautiful, optimized, and interactive
-                                Livewire-powered datatables for any situation.
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
+                        href="/docs/forms"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -326,7 +276,57 @@
                         </div>
                     </a>
                     <a
-                        href="#"
+                        href="/docs/tables"
+                        class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
+                    >
+                        <div
+                            class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-[#464762]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="37"
+                                height="37"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.514 2.514 0 0 0 2.5-2.5V5.56a2.514 2.514 0 0 0-2.5-2.5ZM8.71 19.94H5.56a1.5 1.5 0 0 1-1.5-1.5v-3.11h4.65Zm0-5.61H4.06V9.67h4.65Zm0-5.66H4.06V5.56a1.5 1.5 0 0 1 1.5-1.5h3.15Zm11.23 9.77a1.511 1.511 0 0 1-1.5 1.5H9.71v-4.61h10.23Zm0-4.11H9.71V9.67h10.23Zm0-5.66H9.71V4.06h8.73a1.511 1.511 0 0 1 1.5 1.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="space-y-1 md:w-80 min-[900px]:w-auto">
+                            <div class="flex items-center gap-2">
+                                <div class="text-base font-medium">
+                                    Table Builder
+                                </div>
+                                <div
+                                    class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="max-w-xs text-sm text-dolphin">
+                                Craft beautiful, optimized, and interactive
+                                Livewire-powered datatables for any situation.
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="/docs/notifications"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -385,7 +385,7 @@
                         </div>
                     </a>
                     <a
-                        href="#"
+                        href="/docs/actions"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -410,7 +410,7 @@
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
-                                    Action Modals
+                                    Actions
                                 </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
@@ -445,7 +445,7 @@
                         </div>
                     </a>
                     <a
-                        href="#"
+                        href="/docs/infolists"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -478,7 +478,7 @@
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
-                                    Infolists
+                                    Infolist Builder
                                 </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
@@ -512,7 +512,7 @@
                         </div>
                     </a>
                     <a
-                        href="#"
+                        href="/docs/widgets"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
@@ -524,25 +524,13 @@
                                 height="32"
                                 viewBox="0 0 24 24"
                             >
-                                <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        d="M14.5 6.5h3m0 0h3m-3 0v3m0-3v-3"
-                                    />
-                                    <path
-                                        d="M2.5 6.5c0-1.886 0-2.828.586-3.414C3.672 2.5 4.614 2.5 6.5 2.5c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 9.328 2.5 8.386 2.5 6.5Zm11 11c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586c-.586-.586-.586-1.528-.586-3.414Zm-11 0c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 20.328 2.5 19.386 2.5 17.5Z"
-                                    />
-                                </g>
+                                <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18"/><path d="M3 11c0-.943 0-1.414.293-1.707C3.586 9 4.057 9 5 9c.943 0 1.414 0 1.707.293C7 9.586 7 10.057 7 11v6c0 .943 0 1.414-.293 1.707C6.414 19 5.943 19 5 19c-.943 0-1.414 0-1.707-.293C3 18.414 3 17.943 3 17v-6Zm7-4c0-.943 0-1.414.293-1.707C10.586 5 11.057 5 12 5c.943 0 1.414 0 1.707.293C14 5.586 14 6.057 14 7v10c0 .943 0 1.414-.293 1.707C13.414 19 12.943 19 12 19c-.943 0-1.414 0-1.707-.293C10 18.414 10 17.943 10 17V7Zm7-3c0-.943 0-1.414.293-1.707C17.586 2 18.057 2 19 2c.943 0 1.414 0 1.707.293C21 2.586 21 3.057 21 4v13c0 .943 0 1.414-.293 1.707C20.414 19 19.943 19 19 19c-.943 0-1.414 0-1.707-.293C17 18.414 17 17.943 17 17V4Z"/></g>
                             </svg>
                         </div>
                         <div class="space-y-0.5">
                             <div class="flex items-center gap-2">
                                 <div class="text-base font-medium">
-                                    Dashboard Widgets
+                                    Widgets
                                 </div>
                                 <div
                                     class="rounded-full bg-[#C8A3F7] px-3 py-0.5 text-xs font-medium text-black"
