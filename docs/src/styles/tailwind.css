@@ -38,6 +38,10 @@
     .prose code *::selection {
         @apply !bg-cream/20;
     }
+
+    .prose *::selection {
+        @apply !bg-primary-500/20;
+    }
 }
 
 .navigation-custom-scrollbar::-webkit-scrollbar {
