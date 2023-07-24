@@ -284,6 +284,18 @@
                     </a>
 
                     <a
+                        href="https://spectate.net/?utm_campaign=sponsor&utm_source=filament&utm_medium=web"
+                        target="__blank"
+                        class="block mx-auto max-w-xs"
+                    >
+                        <img
+                            src="https://github.com/filamentphp/filament/assets/41773797/04247ff0-f405-4de8-ac6f-16e7f7c0920b"
+                            alt="Spectate"
+                            class="block rounded-xl"
+                        />
+                    </a>
+
+                    <a
                         href="https://zimplerapps.com"
                         target="__blank"
                         class="block bg-white rounded-xl p-4 mx-auto max-w-xs"
