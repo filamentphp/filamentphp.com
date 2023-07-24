@@ -35,8 +35,8 @@
         @apply lg:absolute lg:top-0 lg:-left-7;
     }
 
-    .prose code::selection {
-        @apply bg-cream/20;
+    .prose code *::selection {
+        @apply !bg-cream/20;
     }
 }
 
