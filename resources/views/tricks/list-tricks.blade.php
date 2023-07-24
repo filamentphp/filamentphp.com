@@ -28,7 +28,7 @@
         </x-slot>
     </x-header>
 
-    <x-section>
+    <x-section :sponsors="true">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div class="space-y-2">
                 <h2 class="font-heading text-lg text-gray-900">
