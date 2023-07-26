@@ -45,6 +45,17 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/support', '/docs/support/overview');
 
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+        $requestUri = request()->getRequestUri();
+
+        if (
+            str($requestUri)->endsWith('/') &&
+            (session()->get('trailingSlashRedirectFrom') !== $requestUri)
+        ) {
+            session()->flash('trailingSlashRedirectFrom', $requestUri);
+
+            return redirect(str($requestUri)->beforeLast('/'));
+        }
+
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
