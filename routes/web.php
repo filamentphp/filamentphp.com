@@ -111,4 +111,59 @@ Route::prefix('/blog')->group(function () {
 
 Route::redirect('/login', '/admin/login')->name('login');
 
-Route::view('/community', 'community')->name('community');
+Route::view('/community', 'community', [
+    'tricksCount' => 315,
+    'articlesCount' => 517,
+    'authorsCount' => 23,
+    'records' => [
+        [
+            'id' => 1,
+            'type' => 'trick',
+            'slug' => 'password-form-fields',
+            'title' => 'Hashing password fields and handling password updates',
+            'stars_count' => 54,
+            'author' => [
+                'name' => 'Dan Harrin',
+                'avatar' => 'https://avatars.githubusercontent.com/u/41773797?v=4',
+            ],
+            'tags' => [
+                'Form Builder',
+                'Admin Panel'
+            ],
+            'versions' => [2, 3],
+            'created_at' => '1 year ago',
+        ],
+        [
+            'id' => 2,
+            'type' => 'article',
+            'slug' => 'how-to-refresh-widgets-when-table-actions-are-fired',
+            'title' => 'How to Refresh Widgets When Table Actions Are Fired',
+            'stars_count' => 23,
+            'author' => [
+                'name' => 'Leandro C. Ferreira',
+                'avatar' => 'https://leandroferreira.dev.br/images/profile.jpg',
+            ],
+            'tags' => [
+                'Laravel',
+                'Table Builder',
+                'Livewire',
+                'Admin Panel'
+            ],
+            'versions' => [2, 3],
+            'created_at' => '4 months ago',
+        ],
+    ],
+    'tags' => collect([
+        'Laravel',
+        'Admin Panel',
+        'Livewire',
+        'Table Builder',
+        'FAQ',
+        'Form Builder',
+        'Integration',
+        'Alpine.js',
+        'Tailwind CSS',
+        'Admin Panel',
+        'News',
+    ])->sort()->toArray(),
+])->name('community');

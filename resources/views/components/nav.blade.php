@@ -678,7 +678,7 @@
                     class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
                 >
                     <div
-                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 motion-reduce:transition-none"
+                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
                     ></div>
                 </div>
             @endif
