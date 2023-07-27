@@ -294,7 +294,7 @@
                     x-text="tag"
                     :class="{
                         'bg-salmon text-white': selectedTags.has(tag),
-                        'bg-zinc-100 hover:bg-zinc-200/70': ! selectedTags.has(tag),
+                        'bg-stone-100 hover:bg-stone-200/70': ! selectedTags.has(tag),
                     }"
                     x-on:click="selectedTags.has(tag) ? selectedTags.delete(tag) : selectedTags.add(tag)"
                 ></div>

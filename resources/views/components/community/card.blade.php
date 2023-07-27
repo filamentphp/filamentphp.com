@@ -6,7 +6,7 @@
         <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Type --}}
             <div
-                class="flex items-center justify-center gap-2 rounded-full py-2 pl-4 pr-5 text-sm"
+                class="flex items-center justify-center gap-2 rounded-full py-1.5 pl-3.5 pr-[1.1rem] text-sm"
                 x-bind:class="{
                     'bg-violet-100/80 text-violet-700': record.type === 'Trick',
                     'bg-[#D4FFF0] text-[#4BA284]': record.type === 'Article',
