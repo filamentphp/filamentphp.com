@@ -6,7 +6,7 @@
         () => {
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
-                fields: ['name', 'description', 'author.name'],
+                fields: ['title', 'author.name'],
                 searchOptions: {
                     fuzzy: 0.1,
                     prefix: true,
@@ -19,8 +19,8 @@
                 },
             })
 
-            // Index the plugins
-            searchEngine.addAll(plugins)
+            // Index the records
+            searchEngine.addAll(records)
 
             if (reducedMotion) return
             gsap.fromTo(
@@ -49,7 +49,7 @@
             translations: false,
         },
 
-        plugins: @js($records),
+        records: @js($records),
 
         currentPage: 1,
         perPage: 24,
@@ -58,48 +58,48 @@
             return Math.ceil(this.totalItems / this.perPage)
         },
 
-        get filteredPlugins() {
-            let filterResult = this.plugins
+        get filteredRecords() {
+            let filterResult = this.records
 
-            // Show plugins that are in the selected categories
+            // Show records that are in the selected categories
             if (this.selectedCategories.size > 0) {
-                filterResult = filterResult.filter((plugin) =>
-                    plugin.categories.some((pluginCategory) =>
-                        this.selectedCategories.has(pluginCategory),
+                filterResult = filterResult.filter((record) =>
+                    record.categories.some((recordCategory) =>
+                        this.selectedCategories.has(recordCategory),
                     ),
                 )
             }
 
-            // Show plugins that are in the selected version
-            filterResult = filterResult.filter((plugin) =>
-                plugin.versions.includes(+this.selectedVersion),
+            // Show records that are in the selected version
+            filterResult = filterResult.filter((record) =>
+                record.versions.includes(+this.selectedVersion),
             )
 
-            // Show plugins that are in the selected features
+            // Show records that are in the selected features
             filterResult = filterResult.filter(
-                (plugin) =>
+                (record) =>
                     (this.features.dark_theme
-                        ? plugin.features.dark_theme
+                        ? record.features.dark_theme
                         : true) &&
                     (this.features.translations
-                        ? plugin.features.translations
+                        ? record.features.translations
                         : true),
             )
 
-            // If the selectedPrice is 'All', show all plugins, if the selectedPrice is 'Free', only show plugins that have a price of 'Free', if the selectedPrice is 'Paid', only show plugins that have a price that is not 'Free'
+            // If the selectedPrice is 'All', show all records, if the selectedPrice is 'Free', only show records that have a price of 'Free', if the selectedPrice is 'Paid', only show records that have a price that is not 'Free'
             filterResult = filterResult.filter(
-                (plugin) =>
+                (record) =>
                     this.selectedPrice === 'All' ||
-                    (this.selectedPrice === 'Free' && plugin.price === 'Free') ||
-                    (this.selectedPrice === 'Paid' && plugin.price !== 'Free'),
+                    (this.selectedPrice === 'Free' && record.price === 'Free') ||
+                    (this.selectedPrice === 'Paid' && record.price !== 'Free'),
             )
 
-            // If the search is not empty, show plugins that match the search
+            // If the search is not empty, show records that match the search
             if (this.search) {
                 const searchResult = this.searchEngine.search(this.search)
 
-                filterResult = filterResult.filter((plugin) =>
-                    searchResult.some((result) => result.id === plugin.id),
+                filterResult = filterResult.filter((record) =>
+                    searchResult.some((result) => result.id === record.id),
                 )
             }
 
@@ -360,7 +360,7 @@
             <div class="flex items-center justify-between px-1 py-3">
                 <div class="flex flex-1 items-center justify-between">
                     <div
-                        x-show="filteredPlugins.length"
+                        x-show="filteredRecords.length"
                         class="text-sm text-gray-700"
                     >
                         Showing
@@ -380,7 +380,7 @@
                         ></span>
                         results
                     </div>
-                    <div x-show="!filteredPlugins.length">
+                    <div x-show="!filteredRecords.length">
                         <div class="text-sm text-gray-700">
                             No results found
                         </div>
@@ -390,27 +390,27 @@
             </div>
 
             <div class="relative min-h-[16rem]">
-                {{-- Plugins --}}
+                {{-- Records --}}
                 <div
-                    x-ref="plugin_cards_wrapper"
+                    x-ref="record_cards_wrapper"
                     x-init="
                         () => {
-                            autoAnimate($refs.plugin_cards_wrapper)
+                            autoAnimate($refs.record_cards_wrapper)
                         }
                     "
                     class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
                 >
                     <template
-                        x-for="plugin in filteredPlugins"
-                        :key="plugin.id"
+                        x-for="record in filteredRecords"
+                        :key="record.id"
                     >
-                        <x-plugins.card />
+                        <x-community.card />
                     </template>
                 </div>
 
                 {{-- No Results Message --}}
                 <div
-                    x-show="! filteredPlugins.length"
+                    x-show="! filteredRecords.length"
                     x-transition:enter="ease-out"
                     x-transition:enter-start="opacity-0"
                     x-transition:enter-end="opacity-100"
@@ -435,7 +435,7 @@
                         No Results Found
                     </div>
                     <div class="pt-0.5 text-sm text-evening/50">
-                        Sorry we couldn't find any plugins matching your search.
+                        Sorry we couldn't find any records matching your search.
                     </div>
                 </div>
             </div>

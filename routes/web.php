@@ -152,6 +152,23 @@ Route::view('/community', 'community', [
             'versions' => [2, 3],
             'created_at' => '4 months ago',
         ],
+        [
+            'id' => 3,
+            'type' => 'article',
+            'slug' => 'how-to-consume-an-external-api-with-filament-tables',
+            'title' => 'How to consume an external API with Filament Tables',
+            'stars_count' => 61,
+            'author' => [
+                'name' => 'Leandro C. Ferreira',
+                'avatar' => 'https://leandroferreira.dev.br/images/profile.jpg',
+            ],
+            'tags' => [
+                'Laravel',
+                'Table Builder',
+            ],
+            'versions' => [2, 3],
+            'created_at' => '11 months ago',
+        ],
     ],
     'tags' => collect([
         'Laravel',
