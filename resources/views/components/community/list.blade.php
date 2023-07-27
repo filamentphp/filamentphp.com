@@ -116,114 +116,9 @@
         },
     }"
 >
-    <div class="flex flex-wrap items-center gap-3 pt-5">
-        {{-- Version Switch --}}
-        <div class="min-[1170px]:min-w-[15rem]">
-            <div
-                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
-            >
-                <div
-                    x-on:click="selectedVersion = '1'"
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    :class="{
-                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
-                            'text-violet-600': selectedVersion === '1',
-                        }"
-                >
-                    v1.x
-                </div>
-                <div
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    x-on:click="selectedVersion = '2'"
-                    :class="{
-                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
-                            'text-violet-600': selectedVersion === '2',
-                        }"
-                >
-                    v2.x
-                </div>
-                <div
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    x-on:click="selectedVersion = '3'"
-                    :class="{
-                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
-                            'text-violet-600': selectedVersion === '3',
-                        }"
-                >
-                    v3.x
-                </div>
-                <div
-                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-violet-100/60 transition duration-300 ease-out will-change-transform"
-                    :class="{
-                            'translate-x-[4.1rem]': selectedVersion === '2',
-                            'translate-x-[8.2rem]': selectedVersion === '3',
-                        }"
-                ></div>
-            </div>
-        </div>
-
-        {{-- Search Bar --}}
-        <div class="w-full sm:w-auto min-[1170px]:flex-1">
-            <div
-                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs"
-            >
-                {{-- Magnify Icon --}}
-                <div
-                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-violet-100/60 text-violet-600"
-                >
-                    <svg
-                        class="transition duration-200 will-change-transform"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m20 20l-4.05-4.05m0 0a7 7 0 1 0-9.9-9.9a7 7 0 0 0 9.9 9.9z"
-                        />
-                    </svg>
-                </div>
-
-                <!-- X icon -->
-                <div
-                    class="absolute right-0 top-0 grid h-full w-14 place-items-center bg-transparent"
-                >
-                    <svg
-                        class="cursor-pointer text-hurricane transition duration-200 will-change-transform hover:scale-125 hover:text-salmon"
-                        x-show="search"
-                        x-on:click="search = ''"
-                        x-transition:enter="delay-75 ease-out"
-                        x-transition:enter-start="translate-x-1 rotate-45 opacity-0"
-                        x-transition:enter-end="translate-x-0 rotate-0 opacity-100"
-                        x-transition:leave="delay-75 ease-in"
-                        x-transition:leave-start="translate-x-0 rotate-0 opacity-100"
-                        x-transition:leave-end="translate-x-1 rotate-45 opacity-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17"
-                        height="17"
-                        viewBox="0 0 256 256"
-                    >
-                        <path
-                            fill="currentColor"
-                            d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"
-                        />
-                    </svg>
-                </div>
-                {{-- Search Input --}}
-                <input
-                    type="text"
-                    x-model="search"
-                    placeholder="Search ..."
-                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
-                />
-            </div>
-        </div>
-
+    <div
+        class="flex flex-col gap-3 pt-5 min-[900px]:flex-row min-[900px]:items-center"
+    >
         {{-- Type Toggle --}}
         <div
             class="relative z-10 flex h-11 w-[275px] select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
@@ -290,6 +185,111 @@
                     'translate-x-[10rem] bg-[#D4FFF0] w-[6.5rem]': selectedType === 'Article',
                 }"
             ></div>
+        </div>
+
+        <div
+            class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
+        >
+            {{-- Version Switch --}}
+            <div
+                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
+            >
+                <div
+                    x-on:click="selectedVersion = '1'"
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    :class="{
+                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
+                                'text-salmon': selectedVersion === '1',
+                            }"
+                >
+                    v1.x
+                </div>
+                <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '2'"
+                    :class="{
+                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
+                                'text-salmon': selectedVersion === '2',
+                            }"
+                >
+                    v2.x
+                </div>
+                <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '3'"
+                    :class="{
+                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
+                                'text-salmon': selectedVersion === '3',
+                            }"
+                >
+                    v3.x
+                </div>
+                <div
+                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                    :class="{
+                                'translate-x-[4.1rem]': selectedVersion === '2',
+                                'translate-x-[8.2rem]': selectedVersion === '3',
+                            }"
+                ></div>
+            </div>
+            {{-- Search Bar --}}
+            <div
+                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs"
+            >
+                {{-- Magnify Icon --}}
+                <div
+                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-fair-pink text-salmon"
+                >
+                    <svg
+                        class="transition duration-200 will-change-transform"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m20 20l-4.05-4.05m0 0a7 7 0 1 0-9.9-9.9a7 7 0 0 0 9.9 9.9z"
+                        />
+                    </svg>
+                </div>
+                <!-- X icon -->
+                <div
+                    class="absolute right-0 top-0 grid h-full w-14 place-items-center bg-transparent"
+                >
+                    <svg
+                        class="cursor-pointer text-hurricane transition duration-200 will-change-transform hover:scale-125 hover:text-salmon"
+                        x-show="search"
+                        x-on:click="search = ''"
+                        x-transition:enter="delay-75 ease-out"
+                        x-transition:enter-start="translate-x-1 rotate-45 opacity-0"
+                        x-transition:enter-end="translate-x-0 rotate-0 opacity-100"
+                        x-transition:leave="delay-75 ease-in"
+                        x-transition:leave-start="translate-x-0 rotate-0 opacity-100"
+                        x-transition:leave-end="translate-x-1 rotate-45 opacity-0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="17"
+                        viewBox="0 0 256 256"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"
+                        />
+                    </svg>
+                </div>
+                {{-- Search Input --}}
+                <input
+                    type="text"
+                    x-model="search"
+                    placeholder="Search ..."
+                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
+                />
+            </div>
         </div>
     </div>
 
