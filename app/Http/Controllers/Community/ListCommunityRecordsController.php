@@ -3,10 +3,6 @@
 namespace App\Http\Controllers\Community;
 
 use App\Http\Controllers\Controller;
-use App\Models\Author;
-use App\Models\Plugin;
-use App\Models\PluginCategory;
-use App\Models\Star;
 
 class ListCommunityRecordsController extends Controller
 {

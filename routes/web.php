@@ -113,4 +113,10 @@ Route::redirect('/login', '/admin/login')->name('login');
 
 Route::prefix('/community')->group(function () {
     Route::get('/', Controllers\Community\ListCommunityRecordsController::class)->name('community');
+
+    Route::name('community.')->group(function () {
+        Route::prefix('/{record}')->group(function () {
+            Route::get('/', Controllers\Community\ViewCommunityRecordController::class)->name('view');
+        });
+    });
 });
