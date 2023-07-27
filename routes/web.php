@@ -69,7 +69,13 @@ Route::prefix('/docs')->group(function () {
         }
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
-        $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+        $version = Str::before($slug, '.x');
+
+        if (! is_numeric($version)) {
+            abort(404);
+        }
+
+        $versionNavigation = $navigation[$version - 1];
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
