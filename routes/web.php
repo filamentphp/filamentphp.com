@@ -197,7 +197,6 @@ Route::view('/community', 'community', [
         'Integration',
         'Alpine.js',
         'Tailwind CSS',
-        'Admin Panel',
         'News',
     ])->sort()->toArray(),
 ])->name('community');

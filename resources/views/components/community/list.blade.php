@@ -41,14 +41,11 @@
     x-data="{
         searchEngine: null,
         search: '',
-        selectedCategories: new Set(),
+        selectedTags: new Set(),
         selectedVersion: '3',
         selectedType: 'All',
-        features: {
-            dark_theme: false,
-            translations: false,
-        },
 
+        tags: @js($tags),
         records: @js($records),
 
         currentPage: 1,
@@ -61,11 +58,11 @@
         get filteredRecords() {
             let filterResult = this.records
 
-            // Show records that are in the selected categories
-            if (this.selectedCategories.size > 0) {
+            // Show records that are in the selected tags
+            if (this.selectedTags.size > 0) {
                 filterResult = filterResult.filter((record) =>
-                    record.categories.some((recordCategory) =>
-                        this.selectedCategories.has(recordCategory),
+                    record.tags.some((recordTag) =>
+                        this.selectedTags.has(recordTag),
                     ),
                 )
             }
@@ -73,17 +70,6 @@
             // Show records that are in the selected version
             filterResult = filterResult.filter((record) =>
                 record.versions.includes(+this.selectedVersion),
-            )
-
-            // Show records that are in the selected features
-            filterResult = filterResult.filter(
-                (record) =>
-                    (this.features.dark_theme
-                        ? record.features.dark_theme
-                        : true) &&
-                    (this.features.translations
-                        ? record.features.translations
-                        : true),
             )
 
             // If the selectedType is 'All', show all records, if the selectedType is 'Trick', only show records that have a type of 'Trick', if the selectedType is 'Article', only show records that have a type that is 'Article'
@@ -121,14 +107,14 @@
     >
         {{-- Type Toggle --}}
         <div
-            class="relative z-10 flex h-11 w-[275px] select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
+            class="relative z-10 flex h-11 w-[276px] select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
         >
             <div
                 x-on:click="selectedType = 'All'"
                 class="relative z-20 w-14 text-center transition duration-300"
                 :class="{
                     'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'All',
-                    'text-slate-800': selectedType === 'All',
+                    'text-salmon': selectedType === 'All',
                 }"
             >
                 All
@@ -180,9 +166,9 @@
             <div
                 class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
-                    'bg-slate-100/80 w-16': selectedType === 'All',
-                    'translate-x-[4.1rem] bg-violet-100/60 w-24': selectedType === 'Trick',
-                    'translate-x-[10rem] bg-[#D4FFF0] w-[6.5rem]': selectedType === 'Article',
+                    'bg-fair-pink w-16': selectedType === 'All',
+                    'translate-x-[4.15rem] bg-violet-100/60 w-24': selectedType === 'Trick',
+                    'translate-x-[10rem] bg-[#D4FFF0] w-[6.65rem]': selectedType === 'Article',
                 }"
             ></div>
         </div>
@@ -290,6 +276,29 @@
                     class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
             </div>
+        </div>
+    </div>
+
+    {{-- Tags --}}
+    <div class="pt-5">
+        <div class="font-semibold">Tags</div>
+
+        {{-- List Of Tags --}}
+        <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-5">
+            <template
+                x-for="(tag, index) in tags"
+                :key="index"
+            >
+                <div
+                    class="rounded-full px-5 py-2.5 text-sm cursor-pointer transition duration-200 select-none"
+                    x-text="tag"
+                    :class="{
+                        'bg-salmon text-white': selectedTags.has(tag),
+                        'bg-zinc-100 hover:bg-zinc-200/70': ! selectedTags.has(tag),
+                    }"
+                    x-on:click="selectedTags.has(tag) ? selectedTags.delete(tag) : selectedTags.add(tag)"
+                ></div>
+            </template>
         </div>
     </div>
 
