@@ -34,6 +34,23 @@ class ViewCommunityRecordController extends Controller
                 'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed imperdiet enim. Proin tellus neque, viverra eu auctor eu, convallis eget augue. Donec nisl libero, elementum in euismod non, tincidunt sed elit. Curabitur in vulputate elit, commodo tristique quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque feugiat, risus sollicitudin euismod condimentum, orci metus efficitur velit, a mollis mi ipsum ut diam. Vivamus id velit arcu.  Nulla tincidunt consectetur risus. Sed eleifend, mauris a vestibulum venenatis, nisi orci volutpat mi, at tristique nunc leo ut erat. Sed metus magna, tristique eu orci nec, convallis accumsan nunc. Sed vel cursus justo. Aenean eleifend nibh venenatis magna placerat consequat. Nullam risus erat, ornare at tortor eget, vehicula malesuada orci. Ut quam est, pellentesque vel lacus in, suscipit pellentesque sem. Nunc laoreet leo eu efficitur convallis. Etiam aliquam imperdiet urna, et suscipit massa suscipit eget. Integer venenatis sapien ut magna fringilla imperdiet. Quisque sed leo a diam volutpat vehicula eu eget ante. Duis aliquet mauris nisi, at tristique arcu sodales at. Aenean ultricies maximus leo, sit amet ultrices risus porta nec. Sed rutrum at sapien vel ullamcorper. Morbi pellentesque, nulla eget ultricies eleifend, ipsum diam imperdiet magna, ut consectetur dui purus quis magna. Donec fringilla tristique massa eu vestibulum. Cras lacinia ornare sapien, ac elementum leo dapibus vitae. Nulla tristique efficitur lectus, nec ultrices dolor dictum eget. Vivamus venenatis odio tellus, in bibendum lorem fermentum ut. Aenean porttitor sollicitudin diam, tristique sagittis nulla bibendum a. Proin condimentum suscipit volutpat. Vestibulum rutrum turpis ligula, vitae consequat diam bibendum sit amet. Ut et nulla at libero luctus bibendum ut id leo. Ut eros odio, iaculis ut ante vel, feugiat aliquet arcu.',
                 'isCompatibleWithLatestVersion' => true,
             ],
+
+            'more_from_author' => [
+                [
+                    'id' => 1,
+                    'type' => 'Trick',
+                    'slug' => 'file-upload-previews-not-loading',
+                    'title' => 'File upload previews not loading',
+                    'stars_count' => 58,
+                ],
+                [
+                    'id' => 2,
+                    'type' => 'Article',
+                    'slug' => 'changes-to-admin-panel-resources-in-v2-13-0',
+                    'title' => 'Changes to Admin Panel resources in v2.13.0',
+                    'stars_count' => 33,
+                ],
+            ]
         ]);
     }
 }
