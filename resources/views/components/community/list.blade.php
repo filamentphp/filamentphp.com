@@ -43,7 +43,7 @@
         search: '',
         selectedCategories: new Set(),
         selectedVersion: '3',
-        selectedPrice: 'All',
+        selectedType: 'All',
         features: {
             dark_theme: false,
             translations: false,
@@ -86,12 +86,12 @@
                         : true),
             )
 
-            // If the selectedPrice is 'All', show all records, if the selectedPrice is 'Free', only show records that have a price of 'Free', if the selectedPrice is 'Paid', only show records that have a price that is not 'Free'
+            // If the selectedType is 'All', show all records, if the selectedType is 'Trick', only show records that have a type of 'Trick', if the selectedType is 'Article', only show records that have a type that is 'Article'
             filterResult = filterResult.filter(
                 (record) =>
-                    this.selectedPrice === 'All' ||
-                    (this.selectedPrice === 'Free' && record.price === 'Free') ||
-                    (this.selectedPrice === 'Paid' && record.price !== 'Free'),
+                    this.selectedType === 'All' ||
+                    (this.selectedType === 'Trick' && record.type === 'Trick') ||
+                    (this.selectedType === 'Article' && record.type === 'Article'),
             )
 
             // If the search is not empty, show records that match the search
@@ -127,7 +127,7 @@
                     class="relative z-20 w-14 text-center transition duration-300"
                     :class="{
                             'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
-                            'text-salmon': selectedVersion === '1',
+                            'text-violet-600': selectedVersion === '1',
                         }"
                 >
                     v1.x
@@ -137,7 +137,7 @@
                     x-on:click="selectedVersion = '2'"
                     :class="{
                             'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
-                            'text-salmon': selectedVersion === '2',
+                            'text-violet-600': selectedVersion === '2',
                         }"
                 >
                     v2.x
@@ -147,13 +147,13 @@
                     x-on:click="selectedVersion = '3'"
                     :class="{
                             'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
-                            'text-salmon': selectedVersion === '3',
+                            'text-violet-600': selectedVersion === '3',
                         }"
                 >
                     v3.x
                 </div>
                 <div
-                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-violet-100/60 transition duration-300 ease-out will-change-transform"
                     :class="{
                             'translate-x-[4.1rem]': selectedVersion === '2',
                             'translate-x-[8.2rem]': selectedVersion === '3',
@@ -169,7 +169,7 @@
             >
                 {{-- Magnify Icon --}}
                 <div
-                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-fair-pink text-salmon"
+                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-violet-100/60 text-violet-600"
                 >
                     <svg
                         class="transition duration-200 will-change-transform"
@@ -224,133 +224,72 @@
             </div>
         </div>
 
-        {{-- Price Toggle --}}
+        {{-- Type Toggle --}}
         <div
-            class="relative z-10 flex h-11 w-[205px] select-none items-center justify-between gap-1 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
+            class="relative z-10 flex h-11 w-[275px] select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
         >
             <div
-                x-on:click="selectedPrice = 'All'"
+                x-on:click="selectedType = 'All'"
                 class="relative z-20 w-14 text-center transition duration-300"
                 :class="{
-                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'All',
-                    'text-salmon': selectedPrice === 'All',
+                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'All',
+                    'text-slate-800': selectedType === 'All',
                 }"
             >
                 All
             </div>
             <div
-                x-on:click="selectedPrice = 'Free'"
-                class="relative z-20 w-14 text-center transition duration-300"
+                x-on:click="selectedType = 'Trick'"
+                class="relative z-20 flex w-[4.5rem] items-center gap-2 text-center transition duration-300"
                 :class="{
-                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Free',
-                    'text-salmon': selectedPrice === 'Free',
+                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'Trick',
+                    'text-violet-600': selectedType === 'Trick',
                 }"
             >
-                Free
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    class="shrink-0"
+                >
+                    <path
+                        fill="currentColor"
+                        d="m9 4l2.5 5.5L17 12l-5.5 2.5L9 20l-2.5-5.5L1 12l5.5-2.5L9 4m0 4.83L8 11l-2.17 1L8 13l1 2.17L10 13l2.17-1L10 11L9 8.83M19 9l-1.26-2.74L15 5l2.74-1.25L19 1l1.25 2.75L23 5l-2.75 1.26L19 9m0 14l-1.26-2.74L15 19l2.74-1.25L19 15l1.25 2.75L23 19l-2.75 1.26L19 23Z"
+                    />
+                </svg>
+                <div>Tricks</div>
             </div>
             <div
-                x-on:click="selectedPrice = 'Paid'"
-                class="relative z-20 w-14 text-center transition duration-300"
+                x-on:click="selectedType = 'Article'"
+                class="relative z-20 flex w-[4.5rem] items-center gap-2 text-center transition duration-300"
                 :class="{
-                    'cursor-pointer opacity-50 hover:opacity-100': selectedPrice !== 'Paid',
-                    'text-salmon': selectedPrice === 'Paid',
+                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'Article',
+                    'text-[#4BA284]': selectedType === 'Article',
                 }"
             >
-                Paid
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 28 28"
+                    class="shrink-0"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M8 10.25a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm.75 3.75a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5ZM14 2a.75.75 0 0 1 .75.75V4h3.75V2.75a.75.75 0 0 1 1.5 0V4h.75A2.25 2.25 0 0 1 23 6.25v12.996a.75.75 0 0 1-.22.53l-5.504 5.504a.75.75 0 0 1-.53.22H6.75a2.25 2.25 0 0 1-2.25-2.25v-17A2.25 2.25 0 0 1 6.75 4H8V2.75a.75.75 0 0 1 1.5 0V4h3.75V2.75A.75.75 0 0 1 14 2ZM6 6.25v17c0 .414.336.75.75.75h9.246v-3.254a2.25 2.25 0 0 1 2.25-2.25H21.5V6.25a.75.75 0 0 0-.75-.75h-14a.75.75 0 0 0-.75.75Zm12.246 13.746a.75.75 0 0 0-.75.75v2.193l2.943-2.943h-2.193Z"
+                    />
+                </svg>
+                <div>Articles</div>
             </div>
             <div
-                class="absolute left-[.35rem] top-[.35rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
-                    'translate-x-[4rem]': selectedPrice === 'Free',
-                    'translate-x-[8.2rem]': selectedPrice === 'Paid',
+                    'bg-slate-100/80 w-16': selectedType === 'All',
+                    'translate-x-[4.1rem] bg-violet-100/60 w-24': selectedType === 'Trick',
+                    'translate-x-[10rem] bg-[#D4FFF0] w-[6.5rem]': selectedType === 'Article',
                 }"
             ></div>
-        </div>
-
-        {{-- Vertical Divider --}}
-        <div
-            class="hidden h-5 w-px rounded-full bg-hurricane/10 min-[1170px]:block"
-        ></div>
-
-        {{-- Dark Mode Toggle --}}
-        <div
-            x-on:click="features.dark_theme = ! features.dark_theme"
-            class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
-            :class="{
-                'bg-fair-pink': features.dark_theme,
-                'bg-white': ! features.dark_theme,
-            }"
-        >
-            <div class="text-salmon">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="19"
-                    viewBox="0 0 24 24"
-                >
-                    <g fill="currentColor">
-                        <path
-                            d="M19.9 2.307a.483.483 0 0 0-.9 0l-.43 1.095a.484.484 0 0 1-.272.274l-1.091.432a.486.486 0 0 0 0 .903l1.091.432a.48.48 0 0 1 .272.273L19 6.81c.162.41.74.41.9 0l.43-1.095a.484.484 0 0 1 .273-.273l1.091-.432a.486.486 0 0 0 0-.903l-1.091-.432a.484.484 0 0 1-.273-.274l-.43-1.095ZM16.033 8.13a.483.483 0 0 0-.9 0l-.157.399a.484.484 0 0 1-.272.273l-.398.158a.486.486 0 0 0 0 .903l.398.157c.125.05.223.148.272.274l.157.399c.161.41.739.41.9 0l.157-.4a.484.484 0 0 1 .272-.273l.398-.157a.486.486 0 0 0 0-.903l-.398-.158a.484.484 0 0 1-.272-.273l-.157-.4Z"
-                        />
-                        <path
-                            d="M12 22c5.523 0 10-4.477 10-10c0-.463-.694-.54-.933-.143a6.5 6.5 0 1 1-8.924-8.924C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10Z"
-                        />
-                    </g>
-                </svg>
-            </div>
-            <div
-                class="text-sm transition duration-300"
-                :class="{
-                    'text-salmon': features.dark_theme,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.dark_theme,
-                }"
-            >
-                Dark mode
-            </div>
-        </div>
-
-        {{-- Vertical Divider --}}
-        <div
-            class="hidden h-5 w-px rounded-full bg-hurricane/10 min-[1170px]:block"
-        ></div>
-
-        {{-- Multi Language Toggle --}}
-        <div
-            x-on:click="features.translations = ! features.translations"
-            class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
-            :class="{
-                'bg-fair-pink': features.translations,
-                'bg-white': ! features.translations,
-            }"
-        >
-            <div class="text-salmon">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="19"
-                    viewBox="0 0 20 20"
-                >
-                    <g fill="currentColor">
-                        <path
-                            d="M7.75 2.75a.75.75 0 0 0-1.5 0v1.258a32.987 32.987 0 0 0-3.599.278a.75.75 0 1 0 .198 1.487A31.545 31.545 0 0 1 8.7 5.545A19.381 19.381 0 0 1 7 9.56a19.418 19.418 0 0 1-1.002-2.05a.75.75 0 0 0-1.384.577a20.935 20.935 0 0 0 1.492 2.91a19.613 19.613 0 0 1-3.828 4.154a.75.75 0 1 0 .945 1.164A21.116 21.116 0 0 0 7 12.331c.095.132.192.262.29.391a.75.75 0 0 0 1.194-.91a18.97 18.97 0 0 1-.59-.815a20.888 20.888 0 0 0 2.333-5.332c.31.031.618.068.924.108a.75.75 0 0 0 .198-1.487a32.832 32.832 0 0 0-3.599-.278V2.75Z"
-                        />
-                        <path
-                            fill-rule="evenodd"
-                            d="M13 8a.75.75 0 0 1 .671.415l4.25 8.5a.75.75 0 1 1-1.342.67L15.787 16h-5.573l-.793 1.585a.75.75 0 1 1-1.342-.67l4.25-8.5A.75.75 0 0 1 13 8Zm2.037 6.5L13 10.427L10.964 14.5h4.073Z"
-                            clip-rule="evenodd"
-                        />
-                    </g>
-                </svg>
-            </div>
-            <div
-                class="text-sm transition duration-300"
-                :class="{
-                    'text-salmon': features.translations,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.translations,
-                }"
-            >
-                Multi language
-            </div>
         </div>
     </div>
 
@@ -398,7 +337,7 @@
                             autoAnimate($refs.record_cards_wrapper)
                         }
                     "
-                    class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
+                    class="grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
                 >
                     <template
                         x-for="record in filteredRecords"

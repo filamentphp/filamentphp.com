@@ -108,7 +108,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="max-w-sm pt-10 text-lg font-medium text-dolphin"
+                class="w-[23rem] pt-10 text-lg font-medium text-dolphin"
             >
                 A collection of articles and tricks written by the Filament team
                 and our community.
@@ -210,7 +210,7 @@
                         )
                 }
             "
-            class="absolute -bottom-[3.2rem] -right-5 -z-10 hidden w-60 md:relative md:right-auto md:top-auto md:w-72 min-[840px]:block"
+            class="shrink-0 absolute -bottom-[1.65rem] -right-5 -z-10 hidden w-72 md:relative md:right-auto md:top-auto md:w-80 min-[840px]:block"
         >
             {{-- Illustration --}}
             <img

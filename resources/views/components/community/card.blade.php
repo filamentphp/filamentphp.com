@@ -6,15 +6,15 @@
         <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Type --}}
             <div
-                class="flex items-center justify-center gap-2 rounded-full py-2 pl-4 pr-5 text-sm capitalize"
+                class="flex items-center justify-center gap-2 rounded-full py-2 pl-4 pr-5 text-sm"
                 x-bind:class="{
-                    'bg-violet-100/80 text-violet-700': record.type === 'trick',
-                    'bg-[#D4FFF0] text-[#4BA284]': record.type === 'article',
+                    'bg-violet-100/80 text-violet-700': record.type === 'Trick',
+                    'bg-[#D4FFF0] text-[#4BA284]': record.type === 'Article',
                 }"
             >
                 {{-- Stars --}}
                 <svg
-                    x-show="record.type === 'trick'"
+                    x-show="record.type === 'Trick'"
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -29,7 +29,7 @@
 
                 {{-- Article --}}
                 <svg
-                    x-show="record.type === 'article'"
+                    x-show="record.type === 'Article'"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"

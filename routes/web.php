@@ -118,7 +118,7 @@ Route::view('/community', 'community', [
     'records' => [
         [
             'id' => 1,
-            'type' => 'trick',
+            'type' => 'Trick',
             'slug' => 'password-form-fields',
             'title' => 'Hashing password fields and handling password updates',
             'stars_count' => 54,
@@ -135,7 +135,7 @@ Route::view('/community', 'community', [
         ],
         [
             'id' => 2,
-            'type' => 'article',
+            'type' => 'Article',
             'slug' => 'how-to-refresh-widgets-when-table-actions-are-fired',
             'title' => 'How to Refresh Widgets When Table Actions Are Fired',
             'stars_count' => 23,
@@ -154,7 +154,7 @@ Route::view('/community', 'community', [
         ],
         [
             'id' => 3,
-            'type' => 'article',
+            'type' => 'Article',
             'slug' => 'how-to-consume-an-external-api-with-filament-tables',
             'title' => 'How to consume an external API with Filament Tables',
             'stars_count' => 61,
@@ -168,6 +168,23 @@ Route::view('/community', 'community', [
             ],
             'versions' => [2, 3],
             'created_at' => '11 months ago',
+        ],
+        [
+            'id' => 4,
+            'type' => 'Trick',
+            'slug' => 'geocoding-field-using-select-component',
+            'title' => 'Geocoding field using Select component',
+            'stars_count' => 37,
+            'author' => [
+                'name' => 'Dennis Koch',
+                'avatar' => 'https://avatars.githubusercontent.com/u/22632550?v=4',
+            ],
+            'tags' => [
+                'Integration',
+                'Form Builder',
+            ],
+            'versions' => [1, 2, 3],
+            'created_at' => '6 months ago',
         ],
     ],
     'tags' => collect([
