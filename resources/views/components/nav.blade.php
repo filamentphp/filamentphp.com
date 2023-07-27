@@ -643,7 +643,7 @@
         </a>
 
         <a
-            href="#"
+            href="{{ route('community') }}"
             @class([
                 'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('community*'),

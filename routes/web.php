@@ -110,3 +110,5 @@ Route::prefix('/blog')->group(function () {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
+
+Route::view('/community', 'community')->name('community');
