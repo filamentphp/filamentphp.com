@@ -16,7 +16,7 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.879506b3.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.dd3e8cc6.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
@@ -740,15 +740,15 @@
                   Getting started
                 </h1>
             </header>
-          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-bold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
+          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <h2 id="overview"><a class="heading-anchor" href="#overview"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Overview</h2>
 <p>Field classes can be found in the <code>Filament\Form\Components</code> namespace.</p>
 <p>Fields reside within the schema of your form, alongside any <a href="layout">layout components</a>.</p>
-<p>Fields may be created using the static <code>make()</code> method, passing its unique name. The name of the field should correspond to a property on your Livewire component. You may use <a href="https://laravel-livewire.com/docs/properties#binding-nested-data">Livewire&#39;s &quot;dot notation&quot;</a> to bind fields to arrays.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<p>Fields may be created using the static <code>make()</code> method, passing its unique name. The name of the field should correspond to a property on your Livewire component. You may use &quot;dot notation&quot; to bind fields to keys in arrays.</p>
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/simple.jpg?raw=true" alt="Form field" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -778,53 +778,53 @@ TextInput::make('name')
 <p>You may also <a href="custom">create your own custom fields</a> to edit data however you wish.</p>
 <h2 id="setting-a-label"><a class="heading-anchor" href="#setting-a-label"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a label</h2>
 <p>By default, the label of the field will be automatically determined based on its name. To override the field&#39;s label, you may use the <code>label()</code> method. Customizing the label in this way is useful if you wish to use a <a href="https://laravel.com/docs/localization#retrieving-translation-strings">translation string for localization</a>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">fields.name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;label(__('fields.name'))
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;label(__(&#39;fields.name&#39;))
+</code></pre>
 <p>Optionally, you can have the label automatically translated <a href="https://laravel.com/docs/localization">using Laravel&#39;s localization features</a> with the <code>translateLabel()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">translateLabel</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Equivalent to `label(__(&#39;Name&#39;))`</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;translateLabel() // Equivalent to `label(__('Name'))`
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;translateLabel() // Equivalent to `label(__(&#39;Name&#39;))`
+</code></pre>
 <h2 id="setting-an-id"><a class="heading-anchor" href="#setting-an-id"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting an ID</h2>
 <p>In the same way as labels, field IDs are also automatically determined based on their names. To override a field ID, use the <code>id()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">id</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name-field</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;id('name-field')
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;id(&#39;name-field&#39;)
+</code></pre>
 <h2 id="setting-a-default-value"><a class="heading-anchor" href="#setting-a-default-value"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a default value</h2>
 <p>Fields may have a default value. This will be filled if the <a href="getting-started#default-data">form&#39;s <code>fill()</code> method</a> is called without any arguments. To define a default value, use the <code>default()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">default</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">John</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;default('John')
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;default(&#39;John&#39;)
+</code></pre>
 <p>Note that these defaults are only used when the form is loaded without existing data. Inside <a href="../../panels/resources#resource-forms">panel resources</a> this only works on Create Pages, as Edit Pages will always fill the data from the model.</p>
 <h2 id="adding-helper-text-below-the-field"><a class="heading-anchor" href="#adding-helper-text-below-the-field"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Adding helper text below the field</h2>
 <p>Sometimes, you may wish to provide extra information for the user of the form. For this purpose, you may add helper text below the field.</p>
 <p>The <code>helperText()</code> method is used to add helper text:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">helperText</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Your full name here, including any middle names.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;helperText('Your full name here, including any middle names.')
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;helperText(&#39;Your full name here, including any middle names.&#39;)
+</code></pre>
 <p>This method accepts a plain text string, or an instance of <code>Illuminate\Support\HtmlString</code> or <code>Illuminate\Contracts\Support\Htmlable</code>. This allows you to render HTML, or even markdown, in the helper text:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HtmlString</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">helperText</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HtmlString</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Your &lt;strong&gt;full name&lt;/strong&gt; here, including any middle names.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">helperText</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">str</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Your **full name** here, including any middle names.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">markdown</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">toHtmlString</span><span style="color: #89DDFF;">())</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">helperText</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name-helper-text</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 use Illuminate\Support\HtmlString;
 
-TextInput::make('name')
-    -&gt;helperText(new HtmlString('Your &lt;strong&gt;full name&lt;/strong&gt; here, including any middle names.'))
+TextInput::make(&#39;name&#39;)
+    -&gt;helperText(new HtmlString(&#39;Your &lt;strong&gt;full name&lt;/strong&gt; here, including any middle names.&#39;))
 
-TextInput::make('name')
-    -&gt;helperText(str('Your **full name** here, including any middle names.')-&gt;markdown()-&gt;toHtmlString())
+TextInput::make(&#39;name&#39;)
+    -&gt;helperText(str(&#39;Your **full name** here, including any middle names.&#39;)-&gt;markdown()-&gt;toHtmlString())
 
-TextInput::make('name')
-    -&gt;helperText(view('name-helper-text'))
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;helperText(view(&#39;name-helper-text&#39;))
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/helper-text.jpg?raw=true" alt="Form field with helper text" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -833,24 +833,24 @@ TextInput::make('name')
 <h2 id="adding-a-hint-next-to-the-label"><a class="heading-anchor" href="#adding-a-hint-next-to-the-label"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Adding a hint next to the label</h2>
 <p>As well as <a href="#adding-helper-text-below-the-field">helper text</a> below the field, you may also add a &quot;hint&quot; next to the label of the field. This is useful for displaying additional information about the field, such as a link to a help page.</p>
 <p>The <code>hint()</code> method is used to add a hint:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Forgotten your password? Bad luck.</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('password')
-    -&gt;hint('Forgotten your password? Bad luck.')
-</textarea></code></pre>
+TextInput::make(&#39;password&#39;)
+    -&gt;hint(&#39;Forgotten your password? Bad luck.&#39;)
+</code></pre>
 <p>This method accepts a plain text string, or an instance of <code>Illuminate\Support\HtmlString</code> or <code>Illuminate\Contracts\Support\Htmlable</code>. This allows you to render HTML, or even markdown, in the helper text:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HtmlString</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">str</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HtmlString</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">&lt;a href=&quot;/forgotten-password&quot;&gt;Forgotten your password?&lt;/a&gt;</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">str</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">[Forgotten your password?](/forgotten-password)</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">markdown</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">toHtmlString</span><span style="color: #89DDFF;">())</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">forgotten-password-hint</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">))</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 use Illuminate\Support\HtmlString;
 
-TextInput::make('password')
-    -&gt;hint(str(new HtmlString('&lt;a href="/forgotten-password"&gt;Forgotten your password?&lt;/a&gt;'))
+TextInput::make(&#39;password&#39;)
+    -&gt;hint(str(new HtmlString(&#39;&lt;a href=&quot;/forgotten-password&quot;&gt;Forgotten your password?&lt;/a&gt;&#39;))
 
-TextInput::make('password')
-    -&gt;hint(str('[Forgotten your password?](/forgotten-password)')-&gt;markdown()-&gt;toHtmlString())
+TextInput::make(&#39;password&#39;)
+    -&gt;hint(str(&#39;[Forgotten your password?](/forgotten-password)&#39;)-&gt;markdown()-&gt;toHtmlString())
 
-TextInput::make('password')
-    -&gt;hint(view('forgotten-password-hint'))
-</textarea></code></pre>
+TextInput::make(&#39;password&#39;)
+    -&gt;hint(view(&#39;forgotten-password-hint&#39;))
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint.jpg?raw=true" alt="Form field with hint" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -858,12 +858,12 @@ TextInput::make('password')
 </div>
 <h3 id="changing-the-text-color-of-the-hint"><a class="heading-anchor" href="#changing-the-text-color-of-the-hint"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Changing the text color of the hint</h3>
 <p>You can change the text color of the hint. By default, it&#39;s gray, but you may use <code>danger</code>, <code>info</code>, <code>primary</code>, <code>success</code> and <code>warning</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RichEditor</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">RichEditor</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Translatable</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hintColor</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">primary</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\RichEditor;
+<pre><code class="language-php">use Filament\Forms\Components\RichEditor;
 
-RichEditor::make('content')
-    -&gt;hint('Translatable')
-    -&gt;hintColor('primary')
-</textarea></code></pre>
+RichEditor::make(&#39;content&#39;)
+    -&gt;hint(&#39;Translatable&#39;)
+    -&gt;hintColor(&#39;primary&#39;)
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint-color.jpg?raw=true" alt="Form field with hint color" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -871,12 +871,12 @@ RichEditor::make('content')
 </div>
 <h3 id="adding-an-icon-aside-the-hint"><a class="heading-anchor" href="#adding-an-icon-aside-the-hint"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Adding an icon aside the hint</h3>
 <p>Hints may also have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a> rendered next to them:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RichEditor</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">RichEditor</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hint</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Translatable</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hintIcon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-language</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\RichEditor;
+<pre><code class="language-php">use Filament\Forms\Components\RichEditor;
 
-RichEditor::make('content')
-    -&gt;hint('Translatable')
-    -&gt;hintIcon('heroicon-m-language')
-</textarea></code></pre>
+RichEditor::make(&#39;content&#39;)
+    -&gt;hint(&#39;Translatable&#39;)
+    -&gt;hintIcon(&#39;heroicon-m-language&#39;)
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/hint-icon.jpg?raw=true" alt="Form field with hint icon" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -884,68 +884,70 @@ RichEditor::make('content')
 </div>
 <h2 id="adding-extra-html-attributes"><a class="heading-anchor" href="#adding-extra-html-attributes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Adding extra HTML attributes</h2>
 <p>You can pass extra HTML attributes to the field, which will be merged onto the outer DOM element. Pass an array of attributes to the <code>extraAttributes()</code> method, where the key is the attribute name and the value is the attribute value:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">extraAttributes</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">title</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Text input</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;extraAttributes(['title' =&gt; 'Text input'])
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;extraAttributes([&#39;title&#39; =&gt; &#39;Text input&#39;])
+</code></pre>
 <p>Some fields use an underlying <code>&lt;input&gt;</code> or <code>&lt;select&gt;</code> DOM element, but this is often not the outer element in the field, so the <code>extraAttributes()</code> method may not work as you wish. In this case, you may use the <code>extraInputAttributes()</code> method, which will merge the attributes onto the <code>&lt;input&gt;</code> or <code>&lt;select&gt;</code> element:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">categories</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">extraInputAttributes</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">width</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">200</span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('categories')
-    -&gt;extraInputAttributes(['width' =&gt; 200])
-</textarea></code></pre>
+TextInput::make(&#39;categories&#39;)
+    -&gt;extraInputAttributes([&#39;width&#39; =&gt; 200])
+</code></pre>
 <h2 id="disabling-a-field"><a class="heading-anchor" href="#disabling-a-field"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Disabling a field</h2>
 <p>You may disable a field to prevent it from being edited by the user:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabled</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
+TextInput::make(&#39;name&#39;)
     -&gt;disabled()
-</textarea></code></pre>
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/disabled.jpg?raw=true" alt="Disabled form field" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/forms/fields/disabled.jpg?raw=true" alt="Disabled form field" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <p>Optionally, you may pass a boolean value to control if the field should be disabled or not:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Toggle</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Toggle</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_admin</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabled</span><span style="color: #89DDFF;">(!</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">isAdmin</span><span style="color: #89DDFF;">())</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Toggle;
+<pre><code class="language-php">use Filament\Forms\Components\Toggle;
 
-Toggle::make('is_admin')
+Toggle::make(&#39;is_admin&#39;)
     -&gt;disabled(! auth()-&gt;user()-&gt;isAdmin())
-</textarea></code></pre>
+</code></pre>
 <p>Disabling a field will prevent it from being saved. If you&#39;d like it to be saved, but still not editable, use the <code>dehydrated()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Toggle</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_admin</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disabled</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">dehydrated</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Toggle::make('is_admin')
+<pre><code class="language-php">Toggle::make(&#39;is_admin&#39;)
     -&gt;disabled()
     -&gt;dehydrated()
-</textarea></code></pre>
-<p>Please note that if you choose to dehydrate the field, a skilled user could still edit the field&#39;s value by manipulating Livewire&#39;s JavaScript.</p>
+</code></pre>
+<blockquote>
+<p>If you choose to dehydrate the field, a skilled user could still edit the field&#39;s value by manipulating Livewire&#39;s JavaScript.</p>
+</blockquote>
 <h3 id="hiding-a-field"><a class="heading-anchor" href="#hiding-a-field"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Hiding a field</h3>
 <p>You may hide a field:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">   </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hidden</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
+TextInput::make(&#39;name&#39;)
    -&gt;hidden()
-</textarea></code></pre>
+</code></pre>
 <p>Optionally, you may pass a boolean value to control if the field should be hidden or not:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">   </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hidden</span><span style="color: #89DDFF;">(!</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">auth</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">isAdmin</span><span style="color: #89DDFF;">())</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
+TextInput::make(&#39;name&#39;)
    -&gt;hidden(! auth()-&gt;user()-&gt;isAdmin())
-</textarea></code></pre>
+</code></pre>
 <h2 id="autofocusing-a-field-when-the-form-is-loaded"><a class="heading-anchor" href="#autofocusing-a-field-when-the-form-is-loaded"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Autofocusing a field when the form is loaded</h2>
 <p>Most fields are autofocusable. Typically, you should aim for the first significant field in your form to be autofocused for the best user experience. You can nominate a field to be autofocused using the <code>autofocus()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">autofocus</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
+TextInput::make(&#39;name&#39;)
     -&gt;autofocus()
-</textarea></code></pre>
+</code></pre>
 <h2 id="setting-a-placeholder"><a class="heading-anchor" href="#setting-a-placeholder"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a placeholder</h2>
 <p>Many fields will also include a placeholder value for when it has no value. This is displayed in the UI but not saved if the field is submitted with no value. You may customize this placeholder using the <code>placeholder()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">placeholder</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">John Doe</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
-    -&gt;placeholder('John Doe')
-</textarea></code></pre>
+TextInput::make(&#39;name&#39;)
+    -&gt;placeholder(&#39;John Doe&#39;)
+</code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/forms/fields/placeholder.jpg?raw=true" alt="Form field with placeholder" loading="lazy" class="rounded-xl dark:hidden">
 
@@ -953,26 +955,26 @@ TextInput::make('name')
 </div>
 <h2 id="marking-a-field-as-required"><a class="heading-anchor" href="#marking-a-field-as-required"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Marking a field as required</h2>
 <p>By default, <a href="validation#required">required fields</a> will show an asterisk <code>*</code> next to their label. You may want to hide the asterisk on forms where all fields are required, or where it makes sense to add a <a href="#adding-a-hint-next-to-the-label">hint</a> to optional fields instead:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Adds validation to ensure the field is required</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">markAsRequired</span><span style="color: #89DDFF;">(false)</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Removes the asterisk</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<pre><code class="language-php">use Filament\Forms\Components\TextInput;
 
-TextInput::make('name')
+TextInput::make(&#39;name&#39;)
     -&gt;required() // Adds validation to ensure the field is required
     -&gt;markAsRequired(false) // Removes the asterisk
-</textarea></code></pre>
+</code></pre>
 <h2 id="global-settings"><a class="heading-anchor" href="#global-settings"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Global settings</h2>
 <p>If you wish to change the default behaviour of a field globally, then you can call the static <code>configureUsing()</code> method inside a service provider&#39;s <code>boot()</code> method or a middleware. Pass a closure which is able to modify the component. For example, if you wish to make all <a href="checkbox#positioning-the-label-above">checkboxes <code>inline(false)</code></a>, you can do it like so:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Checkbox</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Checkbox</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">configureUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Checkbox</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">checkbox</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">checkbox</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">inline</span><span style="color: #89DDFF;">(false);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Checkbox;
+<pre><code class="language-php">use Filament\Forms\Components\Checkbox;
 
 Checkbox::configureUsing(function (Checkbox $checkbox): void {
     $checkbox-&gt;inline(false);
 });
-</textarea></code></pre>
+</code></pre>
 <p>Of course, you are still able to overwrite this behaviour on each field individually:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Checkbox</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Checkbox</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_admin</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">inline</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Checkbox;
+<pre><code class="language-php">use Filament\Forms\Components\Checkbox;
 
-Checkbox::make('is_admin')
+Checkbox::make(&#39;is_admin&#39;)
     -&gt;inline()
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/01-getting-started.md" class="text-sm astro-DY2G2CGF" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-DY2G2CGF">
+</code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/03-fields/01-getting-started.md" class="text-sm astro-DY2G2CGF" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-DY2G2CGF">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">GitHub discussion</a>
           </p>
 </div>
