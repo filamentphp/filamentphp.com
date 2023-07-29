@@ -153,7 +153,7 @@
                 x-bind:style="
                     @foreach ($types as $type)
                         if (selectedType === @js($type['slug'])) {
-                            return 'transform: translateX({{ $loop->iteration * 6.25 }}rem)'
+                            return 'transform: translateX({{ $loop->iteration * 6 }}rem)'
                         }
                     @endforeach
                 "
