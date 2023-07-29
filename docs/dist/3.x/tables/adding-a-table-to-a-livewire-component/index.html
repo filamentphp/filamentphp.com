@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-DY2G2CGF">
+<html lang="en" class="hidden astro-XWOXDUXN">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,8 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.dd3e8cc6.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
+<link rel="stylesheet" href="/docs/assets/dashboard.c6da8188.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-XWOXDUXN">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -411,12 +411,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-DY2G2CGF">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-DY2G2CGF">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-DY2G2CGF"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-DY2G2CGF"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-DY2G2CGF"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-DY2G2CGF" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-XWOXDUXN">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-XWOXDUXN">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-XWOXDUXN"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-XWOXDUXN" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -649,13 +649,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-DY2G2CGF">
-        <article class="astro-DY2G2CGF">
-          <header class="mb-9 space-y-1 astro-DY2G2CGF">
-              <p class="font-display font-bold text-butter astro-DY2G2CGF">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-XWOXDUXN">
+        <article class="astro-XWOXDUXN">
+          <header class="mb-9 space-y-1 astro-XWOXDUXN">
+              <p class="font-display font-bold text-butter astro-XWOXDUXN">
                   Table Builder 
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-DY2G2CGF">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-XWOXDUXN">
                   Adding a table to a Livewire component
                 </h1>
             </header>
@@ -730,6 +730,28 @@ class ListProducts extends Component implements HasForms, HasTable
 &lt;/div&gt;
 </textarea></code></pre>
 <p>Visit your Livewire component in the browser, and you should see the table.</p>
+<h2 id="building-a-table-for-an-eloquent-relationship"><a class="heading-anchor" href="#building-a-table-for-an-eloquent-relationship"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Building a table for an Eloquent relationship</h2>
+<p>If you want to build a table for an Eloquent relationship, you can use the <code>relationship()</code> and <code>inverseRelationship()</code> methods on the <code>$table</code> instead of passing a <code>query()</code>. <code>HasMany</code>, <code>HasManyThrough</code>, <code>BelongsToMany</code>, <code>MorphMany</code> and <code>MorphToMany</code> relationships are compatible:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Category</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Relations</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">BelongsToMany</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Category</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">category</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">BelongsToMany</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">category</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">products</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">inverseRelationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">categories</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\Category;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+public Category $category;
+
+public function table(Table $table): Table
+{
+    return $table
+        -&gt;relationship(fn (): BelongsToMany =&gt; $this-&gt;category-&gt;products())
+        -&gt;inverseRelationship('categories')
+        -&gt;columns([
+            TextColumn::make('name'),
+        ]);
+}
+</textarea></code></pre>
+<p>In this example, we have a <code>$category</code> property which holds a <code>Category</code> model instance. The category has a relationship named <code>products</code>. We use a function to return the relationship instance. This is a many-to-many relationship, so the inverse relationship is called <code>categories</code>, and is defined on the <code>Product</code> model. We just need to pass the name of this relationship to the <code>inverseRelationship()</code> method, not the whole instance.</p>
+<p>Now that the table is using a relationship instead of a plain Eloquent query, all actions will be performed on the relationship instead of the query. For example, if you use a <a href="../actions/prebuilt-actions/create"><code>CreateAction</code></a>, the new product will be automatically attached to the category.</p>
+<p>If your relationship uses a pivot table, you can use all pivot columns as if they were normal columns on your table, as long as they are listed in the <code>withPivot()</code> method of the relationship <em>and</em> inverse relationship definition.</p>
+<p>Relationship tables are used in the panel builder as <a href="../panels/resources/relation-managers#creating-a-relation-manager">&quot;relation managers&quot;</a>. Most of the documented features for relation managers are also available for relationship tables. For instance, the <a href="../panels/resources/relation-managers#attaching-and-detaching-records">attach and detach</a> and <a href="../panels/resources/relation-managers#associating-and-dissociating-records">associate and dissociate</a> actions.</p>
 <h2 id="generating-table-livewire-components-with-the-cli"><a class="heading-anchor" href="#generating-table-livewire-components-with-the-cli"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Generating table Livewire components with the CLI</h2>
 <p>It&#39;s advised that you learn how to set up a Livewire component with the table builder manually, but once you are confident, you can use the CLI to generate a table for you.</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:livewire-table</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Products/ListProducts</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:livewire-table Products/ListProducts
@@ -744,62 +766,69 @@ class ListProducts extends Component implements HasForms, HasTable
 </textarea></code></pre>
 <blockquote>
 <p>If your table contains ENUM columns, <code>doctrine/dbal</code> is unable to scan your table and will crash. Hence Filament is unable to generate the schema for your table if it contains an ENUM column. Read more about this issue <a href="https://github.com/doctrine/dbal/issues/3819#issuecomment-573419808">here</a>.</p>
-</blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/11-adding-a-table-to-a-livewire-component.md" class="text-sm astro-DY2G2CGF" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-DY2G2CGF">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">GitHub discussion</a>
+</blockquote><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/11-adding-a-table-to-a-livewire-component.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-DY2G2CGF">
-          <div class="astro-DY2G2CGF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-XWOXDUXN">
+          <div class="astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-DY2G2CGF">
-                  <a href="/docs/3.x/tables/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DY2G2CGF">
-                    <span aria-hidden="true" class="astro-DY2G2CGF">&larr;</span> Advanced
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/tables/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    <span aria-hidden="true" class="astro-XWOXDUXN">&larr;</span> Advanced
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-DY2G2CGF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+            <div class="ml-auto text-right astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   Next
                 </dt>
-                <dd class="mt-1 astro-DY2G2CGF">
-                  <a href="/docs/3.x/tables/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DY2G2CGF">
-                    Testing <span aria-hidden="true" class="astro-DY2G2CGF">&rarr;</span>
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/tables/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    Testing <span aria-hidden="true" class="astro-XWOXDUXN">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-DY2G2CGF">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-DY2G2CGF">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-XWOXDUXN">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-XWOXDUXN">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-DY2G2CGF" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-the-livewire-component&#34;,&#34;text&#34;:&#34;Setting up the Livewire component&#34;,&#34;title&#34;:&#34;Setting up the Livewire component&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-the-table&#34;,&#34;text&#34;:&#34;Adding the table&#34;,&#34;title&#34;:&#34;Adding the table&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-table-livewire-components-with-the-cli&#34;,&#34;text&#34;:&#34;Generating table Livewire components with the CLI&#34;,&#34;title&#34;:&#34;Generating table Livewire components with the CLI&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-table-columns&#34;,&#34;text&#34;:&#34;Automatically generating table columns&#34;,&#34;title&#34;:&#34;Automatically generating table columns&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#setting-up-the-livewire-component" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'setting-up-the-livewire-component' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-up-the-livewire-component&#34;,&#34;text&#34;:&#34;Setting up the Livewire component&#34;,&#34;title&#34;:&#34;Setting up the Livewire component&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-the-table&#34;,&#34;text&#34;:&#34;Adding the table&#34;,&#34;title&#34;:&#34;Adding the table&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;building-a-table-for-an-eloquent-relationship&#34;,&#34;text&#34;:&#34;Building a table for an Eloquent relationship&#34;,&#34;title&#34;:&#34;Building a table for an Eloquent relationship&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-table-livewire-components-with-the-cli&#34;,&#34;text&#34;:&#34;Generating table Livewire components with the CLI&#34;,&#34;title&#34;:&#34;Generating table Livewire components with the CLI&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-table-columns&#34;,&#34;text&#34;:&#34;Automatically generating table columns&#34;,&#34;title&#34;:&#34;Automatically generating table columns&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#setting-up-the-livewire-component" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-up-the-livewire-component' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Setting up the Livewire component
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#adding-the-table" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'adding-the-table' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#adding-the-table" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'adding-the-table' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Adding the table
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#generating-table-livewire-components-with-the-cli" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'generating-table-livewire-components-with-the-cli' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#building-a-table-for-an-eloquent-relationship" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'building-a-table-for-an-eloquent-relationship' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Building a table for an Eloquent relationship
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#generating-table-livewire-components-with-the-cli" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'generating-table-livewire-components-with-the-cli' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Generating table Livewire components with the CLI
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-DY2G2CGF">
-                          <li class="astro-DY2G2CGF">
-                              <a href="#automatically-generating-table-columns" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'automatically-generating-table-columns' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#automatically-generating-table-columns" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'automatically-generating-table-columns' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Automatically generating table columns
                               </a>
                             </li>
@@ -807,9 +836,7 @@ class ListProducts extends Component implements HasForms, HasTable
                     </li>
                 </ol>
         </nav>
-        <!--<div class="w-56">-->
-        <!--  <Sponsors />-->
-        <!--</div>-->
       </div>
     </div>
-  </body></html>
+  </body>
+</html>

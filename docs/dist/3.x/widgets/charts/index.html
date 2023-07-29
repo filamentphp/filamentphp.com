@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-DY2G2CGF">
+<html lang="en" class="hidden astro-XWOXDUXN">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,8 @@
   <!-- Styles -->
   
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.dd3e8cc6.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-DY2G2CGF">
+<link rel="stylesheet" href="/docs/assets/dashboard.c6da8188.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-XWOXDUXN">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
         <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -291,12 +291,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-DY2G2CGF">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-DY2G2CGF">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-DY2G2CGF"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-DY2G2CGF"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-DY2G2CGF"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-DY2G2CGF" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-XWOXDUXN">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-XWOXDUXN">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-XWOXDUXN"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-XWOXDUXN" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -409,13 +409,13 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-DY2G2CGF">
-        <article class="astro-DY2G2CGF">
-          <header class="mb-9 space-y-1 astro-DY2G2CGF">
-              <p class="font-display font-bold text-butter astro-DY2G2CGF">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-XWOXDUXN">
+        <article class="astro-XWOXDUXN">
+          <header class="mb-9 space-y-1 astro-XWOXDUXN">
+              <p class="font-display font-bold text-butter astro-XWOXDUXN">
                   Widgets 
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-DY2G2CGF">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-XWOXDUXN">
                   Chart widgets
                 </h1>
             </header>
@@ -597,108 +597,118 @@ protected function getOptions(): RawJs
 {
     return 'The number of blog posts published per month.';
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/widgets/docs/03-charts.md" class="text-sm astro-DY2G2CGF" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-DY2G2CGF">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-DY2G2CGF">GitHub discussion</a>
+</textarea></code></pre>
+<h2 id="disabling-lazy-loading"><a class="heading-anchor" href="#disabling-lazy-loading"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Disabling lazy loading</h2>
+<p>By default, widgets are lazy loaded. This means that they will only be loaded when they are visible on the page.</p>
+<p>To disable this behaviour, you may override the <code>$isLazy</code> property on the widget class:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">isLazy </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static bool $isLazy = true;
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/widgets/docs/03-charts.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-DY2G2CGF">
-          <div class="astro-DY2G2CGF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-XWOXDUXN">
+          <div class="astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-DY2G2CGF">
-                  <a href="/docs/3.x/widgets/stats-overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DY2G2CGF">
-                    <span aria-hidden="true" class="astro-DY2G2CGF">&larr;</span> Stats overview widgets
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/widgets/stats-overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    <span aria-hidden="true" class="astro-XWOXDUXN">&larr;</span> Stats overview widgets
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-DY2G2CGF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+            <div class="ml-auto text-right astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   Next
                 </dt>
-                <dd class="mt-1 astro-DY2G2CGF">
-                  <a href="/docs/3.x/widgets/adding-a-widget-to-a-blade-view" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DY2G2CGF">
-                    Adding a widget to a Blade view <span aria-hidden="true" class="astro-DY2G2CGF">&rarr;</span>
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/widgets/adding-a-widget-to-a-blade-view" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    Adding a widget to a Blade view <span aria-hidden="true" class="astro-XWOXDUXN">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-DY2G2CGF">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-DY2G2CGF">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DY2G2CGF">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-XWOXDUXN">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-XWOXDUXN">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-DY2G2CGF" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-chart-types&#34;,&#34;text&#34;:&#34;Available chart types&#34;,&#34;title&#34;:&#34;Available chart types&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-chart-color&#34;,&#34;text&#34;:&#34;Customizing the chart color&#34;,&#34;title&#34;:&#34;Customizing the chart color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-chart-data-from-an-eloquent-model&#34;,&#34;text&#34;:&#34;Generating chart data from an Eloquent model&#34;,&#34;title&#34;:&#34;Generating chart data from an Eloquent model&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;filtering-chart-data&#34;,&#34;text&#34;:&#34;Filtering chart data&#34;,&#34;title&#34;:&#34;Filtering chart data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;live-updating-chart-data-polling&#34;,&#34;text&#34;:&#34;Live updating chart data (polling)&#34;,&#34;title&#34;:&#34;Live updating chart data (polling)&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-maximum-chart-height&#34;,&#34;text&#34;:&#34;Setting a maximum chart height&#34;,&#34;title&#34;:&#34;Setting a maximum chart height&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-chart-configuration-options&#34;,&#34;text&#34;:&#34;Setting chart configuration options&#34;,&#34;title&#34;:&#34;Setting chart configuration options&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-a-description&#34;,&#34;text&#34;:&#34;Adding a description&#34;,&#34;title&#34;:&#34;Adding a description&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;available-chart-types&#34;,&#34;text&#34;:&#34;Available chart types&#34;,&#34;title&#34;:&#34;Available chart types&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-chart-color&#34;,&#34;text&#34;:&#34;Customizing the chart color&#34;,&#34;title&#34;:&#34;Customizing the chart color&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-chart-data-from-an-eloquent-model&#34;,&#34;text&#34;:&#34;Generating chart data from an Eloquent model&#34;,&#34;title&#34;:&#34;Generating chart data from an Eloquent model&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;filtering-chart-data&#34;,&#34;text&#34;:&#34;Filtering chart data&#34;,&#34;title&#34;:&#34;Filtering chart data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;live-updating-chart-data-polling&#34;,&#34;text&#34;:&#34;Live updating chart data (polling)&#34;,&#34;title&#34;:&#34;Live updating chart data (polling)&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-maximum-chart-height&#34;,&#34;text&#34;:&#34;Setting a maximum chart height&#34;,&#34;title&#34;:&#34;Setting a maximum chart height&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-chart-configuration-options&#34;,&#34;text&#34;:&#34;Setting chart configuration options&#34;,&#34;title&#34;:&#34;Setting chart configuration options&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-a-description&#34;,&#34;text&#34;:&#34;Adding a description&#34;,&#34;title&#34;:&#34;Adding a description&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;disabling-lazy-loading&#34;,&#34;text&#34;:&#34;Disabling lazy loading&#34;,&#34;title&#34;:&#34;Disabling lazy loading&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#available-chart-types" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'available-chart-types' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#available-chart-types" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'available-chart-types' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Available chart types
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#customizing-the-chart-color" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'customizing-the-chart-color' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#customizing-the-chart-color" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'customizing-the-chart-color' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Customizing the chart color
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#generating-chart-data-from-an-eloquent-model" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'generating-chart-data-from-an-eloquent-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#generating-chart-data-from-an-eloquent-model" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'generating-chart-data-from-an-eloquent-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Generating chart data from an Eloquent model
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#filtering-chart-data" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'filtering-chart-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#filtering-chart-data" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'filtering-chart-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Filtering chart data
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#live-updating-chart-data-polling" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'live-updating-chart-data-polling' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#live-updating-chart-data-polling" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'live-updating-chart-data-polling' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Live updating chart data (polling)
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#setting-a-maximum-chart-height" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'setting-a-maximum-chart-height' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#setting-a-maximum-chart-height" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-a-maximum-chart-height' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Setting a maximum chart height
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#setting-chart-configuration-options" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'setting-chart-configuration-options' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#setting-chart-configuration-options" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-chart-configuration-options' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Setting chart configuration options
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DY2G2CGF">
-                      <h3 class="astro-DY2G2CGF">
-                        <a href="#adding-a-description" class="inline-block transition duration-300 ease-out astro-DY2G2CGF" x-bind:class="current == 'adding-a-description' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#adding-a-description" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'adding-a-description' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Adding a description
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#disabling-lazy-loading" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'disabling-lazy-loading' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Disabling lazy loading
                         </a>
                       </h3>
                       
                     </li>
                 </ol>
         </nav>
-        <!--<div class="w-56">-->
-        <!--  <Sponsors />-->
-        <!--</div>-->
       </div>
     </div>
-  </body></html>
+  </body>
+</html>
