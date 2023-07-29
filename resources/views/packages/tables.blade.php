@@ -163,6 +163,4 @@
             </h3>
         </div>
     </section>
-
-    <x-sponsor-banner class="mt-16" />
 </x-layouts.app>
