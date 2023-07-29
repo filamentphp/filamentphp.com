@@ -84,7 +84,7 @@ Route::prefix('/docs')->group(function () {
 Route::prefix('/community')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
 
-    Route::name('community.')->group(function () {
+    Route::name('articles.')->group(function () {
         Route::prefix('/{article:slug}')->group(function () {
             Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
         });
