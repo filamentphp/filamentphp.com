@@ -72,6 +72,12 @@
                     </div>
                 </div>
 
+                <div class="pt-2">
+                    <div class="text-base text-dolphin">
+                        {{ $article->publish_date->toFormattedDateString() }}
+                    </div>
+                </div>
+
                 @if ($article->isCompatibleWithLatestVersion() !== null)
                     {{-- Features and Health Checks --}}
                     <div
