@@ -17,7 +17,7 @@
 
         <div>
             {{ $this->isStarred() ? 'Unstar' : 'Star' }}
-            {{ $plugin->getStarsCount() }}
+            {{ $record->getStarsCount() }}
         </div>
     </button>
 </div>

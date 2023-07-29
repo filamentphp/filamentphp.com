@@ -87,8 +87,6 @@ Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
 
     Route::name('plugins.')->group(function () {
-        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
-
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
         });

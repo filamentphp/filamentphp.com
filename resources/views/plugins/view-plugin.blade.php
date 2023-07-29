@@ -74,7 +74,7 @@
                     <div>Support</div>
                 </a>
 
-                <livewire:plugins.star-plugin :plugin="$plugin" />
+                <livewire:star-record :record="$plugin" />
 
                 @if (filled($plugin->url))
                     {{-- Link --}}
