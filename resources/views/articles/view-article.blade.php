@@ -139,6 +139,8 @@
 
                 {{-- Categories --}}
                 <div class="flex flex-wrap items-center gap-3.5 pt-6">
+                    <x-articles.type-badge :type="$article->type" />
+
                     @foreach ($article->getCategories() as $category)
                         <div
                             class="select-none rounded-full bg-stone-200/50 px-5 py-2.5 text-sm"
@@ -288,6 +290,7 @@
                         <div class="text-lg font-extrabold">
                             More from this author
                         </div>
+
                         <div class="w-full space-y-5 pt-7">
                             @foreach ($otherArticles as $otherArticle)
                                 <a
@@ -327,6 +330,8 @@
                                     </div>
 
                                     <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-3">
+                                        <x-articles.type-badge :type="$article->type" size="sm" />
+
                                         @foreach ($otherArticle->getCategories() as $category)
                                             <div class="rounded-full bg-slate-100 px-5 py-2.5 text-xs">
                                                 {{ $category->name }}

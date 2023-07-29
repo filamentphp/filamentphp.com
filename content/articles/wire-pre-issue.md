@@ -3,7 +3,8 @@ title: "The Filament Wire: Pre-Issue"
 slug: wire-pre-issue
 author_slug: blackpig
 publish_date: 2022-06-02
-categories: [news]
+categories: [general]
+type_slug: news
 ---
 
 **Hi and welcome to the pre-issue of The Filament Wire.**

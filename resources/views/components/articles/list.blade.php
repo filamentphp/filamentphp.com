@@ -42,10 +42,12 @@
         searchEngine: null,
         search: '',
         selectedCategories: new Set(),
+        selectedType: 'all',
         selectedVersion: '3',
 
         articles: @js($articles),
         categories: @js($categories),
+        types: @js($types),
 
         currentPage: 1,
         perPage: 24,
@@ -69,6 +71,11 @@
             // Show articles that are in the selected version, or no version at all
             filterResult = filterResult.filter((article) =>
                 article.versions?.includes(+this.selectedVersion) || (! article.versions?.length),
+            )
+
+            // If the selectedType is 'all', show all records, else show only the records that match the selected type
+            filterResult = filterResult.filter(
+                (record) => this.selectedType === 'all' || this.selectedType === record.type,
             )
 
             // If the search is not empty, show articles that match the search
@@ -96,7 +103,66 @@
     <div
         class="flex flex-col gap-3 pt-5 min-[900px]:flex-row min-[900px]:items-center"
     >
-        <div>
+        {{-- Type Toggle --}}
+        <div
+            class="relative z-10 flex h-11 select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
+        >
+            <div
+                x-on:click="selectedType = 'all'"
+                class="relative z-20 w-20 text-center transition duration-300"
+                :class="{
+                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'all',
+                    'text-salmon': selectedType === 'all',
+                }"
+            >
+                All
+            </div>
+            @foreach ($types as $type)
+                <div
+                    x-on:click="selectedType = @js($type['slug'])"
+                    class="relative z-20 flex w-20 items-center gap-2 text-center transition duration-300"
+                    :class="{
+                        'cursor-pointer text-evening/70 hover:text-evening': selectedType !== @js($type['slug']),
+                        @js(match ($type['color']) {
+                            'amber' => 'text-amber-600',
+                            'blue' => 'text-blue-600',
+                            'violet' => 'text-violet-600',
+                        }): selectedType === @js($type['slug']),
+                    }"
+                >
+                    {!! $type['icon'] !!}
+
+                    <div>
+                        {{ $type['name'] }}
+                    </div>
+                </div>
+            @endforeach
+
+            <div
+                class="absolute w-24 left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
+                :class="{
+                    'bg-fair-pink': selectedType === 'all',
+                    @foreach ($types as $type)
+                        @js(match($type['color']) {
+                            'amber' => 'bg-amber-100/60',
+                            'blue' => 'bg-blue-100/60',
+                            'violet' => 'bg-violet-100/60',
+                        }): selectedType === @js($type['slug']),
+                    @endforeach
+                }"
+                x-bind:style="
+                    @foreach ($types as $type)
+                        if (selectedType === @js($type['slug'])) {
+                            return 'transform: translateX({{ $loop->iteration * 6.25 }}rem)'
+                        }
+                    @endforeach
+                "
+            ></div>
+        </div>
+
+        <div
+            class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
+        >
             {{-- Version Switch --}}
             <div
                 class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
@@ -142,7 +208,7 @@
         </div>
 
         <div
-            class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
+            class="flex w-full flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
         >
             {{-- Search Bar --}}
             <div

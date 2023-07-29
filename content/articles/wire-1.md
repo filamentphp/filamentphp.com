@@ -3,7 +3,8 @@ title: "The Filament Wire: Issue 1"
 slug: wire-1
 author_slug: blackpig
 publish_date: 2022-06-20
-categories: [news]
+categories: [general]
+type_slug: news
 ---
 
 **Hello and welcome to issue one of The Filament Wire.**

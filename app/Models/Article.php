@@ -33,12 +33,18 @@ class Article extends Model implements Starrable
         $table->date('publish_date');
         $table->string('slug');
         $table->string('title');
+        $table->string('type_slug');
         $table->json('versions')->nullable();
     }
 
     public function author(): BelongsTo
     {
         return $this->belongsTo(Author::class);
+    }
+
+    public function type(): BelongsTo
+    {
+        return $this->belongsTo(ArticleType::class, 'type_slug');
     }
 
     public function stars(): MorphMany

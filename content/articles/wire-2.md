@@ -3,7 +3,8 @@ title: "The Filament Wire: Issue 2"
 slug: wire-2
 author_slug: blackpig
 publish_date: 2022-07-22
-categories: [news]
+categories: [general]
+type_slug: news
 ---
 
 **Salut Wire Walkers. Welcome to issue 2 of the Filament Wire.**

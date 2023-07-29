@@ -12,5 +12,6 @@
     <x-articles.list
         :$articles
         :$categories
+        :$types
     />
 </x-layouts.app>
