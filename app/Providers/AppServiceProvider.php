@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Models\Article;
 use App\Models\Plugin;
 use App\Models\Trick;
+use App\Services\PackageDownloadStats;
+use App\Services\PackageGitHubStarsStats;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\URL;
@@ -12,22 +14,20 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
-        //
+        $this->app->bind(
+            'package-github-stars-stats',
+            fn () => new PackageGitHubStarsStats(),
+        );
+
+        $this->app->bind(
+            'package-download-stats',
+            fn () => new PackageDownloadStats(),
+        );
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
         seo()
             ->site(config('app.name'))
