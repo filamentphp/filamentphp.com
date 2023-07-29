@@ -643,16 +643,16 @@
         </a>
 
         <a
-            href="{{ route('community') }}"
+            href="{{ route('articles') }}"
             @class([
                 'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
-                'opacity-80' => ! request()->routeIs('community*'),
-                'font-bold' => request()->routeIs('community*'),
+                'opacity-80' => ! request()->routeIs('articles*'),
+                'font-bold' => request()->routeIs('articles*'),
             ])
         >
             <div class="gsap-fadein">Community</div>
 
-            @if (request()->routeIs('community*'))
+            @if (request()->routeIs('articles*'))
                 <div
                     class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
                 >

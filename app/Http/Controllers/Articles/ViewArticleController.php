@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Community;
+namespace App\Http\Controllers\Articles;
 
 use App\Http\Controllers\Controller;
 
-class ViewCommunityRecordController extends Controller
+class ViewArticleController extends Controller
 {
     public function __invoke($record)
     {
-        return view('community.view-community-record', [
+        return view('articles.view-article', [
             'record' => [
                 'id' => 1,
                 'type' => 'Trick',

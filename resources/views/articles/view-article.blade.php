@@ -30,7 +30,7 @@
             <a
                 x-on:mouseenter="back_button_is_hovering = true"
                 x-on:mouseleave="back_button_is_hovering = false"
-                href="/community"
+                href="{{ route('articles') }}"
                 class="flex items-center gap-3 p-1 text-dolphin transition duration-300 hover:-translate-x-2 hover:text-evening"
             >
                 <svg

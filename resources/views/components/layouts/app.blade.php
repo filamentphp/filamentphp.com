@@ -27,8 +27,7 @@
             @foreach ([
                 route('docs') => 'Documentation',
                 route('plugins') => 'Plugins',
-                route('tricks') => 'Tricks',
-                route('blog') => 'Blog',
+                route('articles') => 'Community',
                 route('consulting') => 'Consulting'
             ] as $url => $label)
                 <li>

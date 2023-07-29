@@ -110,7 +110,7 @@
                 x-ref="message"
                 class="w-[23rem] pt-10 text-lg font-medium text-dolphin"
             >
-                A collection of articles and tricks written by the Filament team
+                A collection of articles written by the Filament team
                 and our community.
             </div>
 
@@ -119,19 +119,6 @@
                 x-ref="stats"
                 class="flex flex-wrap items-center gap-20 pt-10"
             >
-                {{-- Tricks --}}
-                <div class="group/stat gsap-stat will-change-transform">
-                    <div
-                        class="relative inline text-3xl font-black text-evening"
-                    >
-                        <span>{{ number_format($tricksCount) }}</span>
-                        <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
-                        ></span>
-                    </div>
-                    <div class="pt-4 text-sm text-dolphin">Tricks</div>
-                </div>
-
                 {{-- Articles --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
@@ -152,10 +139,23 @@
                     >
                         <span>{{ number_format($authorsCount) }}</span>
                         <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
                     <div class="pt-4 text-sm text-dolphin">Authors</div>
+                </div>
+
+                {{-- Stars --}}
+                <div class="group/stat gsap-stat will-change-transform">
+                    <div
+                        class="relative inline text-3xl font-black text-evening"
+                    >
+                        <span>{{ number_format($starsCount) }}</span>
+                        <span
+                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                        ></span>
+                    </div>
+                    <div class="pt-4 text-sm text-dolphin">Stars</div>
                 </div>
             </div>
         </div>
@@ -215,7 +215,7 @@
             {{-- Illustration --}}
             <img
                 x-ref="communitylightbulbs"
-                src="{{ Vite::asset('resources/images/community/handsholdinglightbulbs.webp') }}"
+                src="{{ Vite::asset('resources/images/articles/handsholdinglightbulbs.webp') }}"
                 alt=""
                 class="block w-full"
             />

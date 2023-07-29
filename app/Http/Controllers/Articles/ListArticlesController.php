@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Community;
+namespace App\Http\Controllers\Articles;
 
 use App\Http\Controllers\Controller;
 
-class ListCommunityRecordsController extends Controller
+class ListArticlesController extends Controller
 {
     public function __invoke()
     {
-        return view('community', [
-            'tricksCount' => 315,
+        return view('articles.list-articles', [
             'articlesCount' => 517,
             'authorsCount' => 23,
+            'starsCount' => 315,
             'records' => [
                 [
                     'id' => 1,

@@ -352,7 +352,7 @@
                         x-for="record in filteredRecords"
                         :key="record.id"
                     >
-                        <x-community.card />
+                        <x-articles.card />
                     </template>
                 </div>
 

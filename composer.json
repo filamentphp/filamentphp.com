@@ -28,7 +28,6 @@
         "pirsch-analytics/laravel-pirsch": "^0.4.1",
         "ryangjchandler/blade-capture-directive": "^0.2.0",
         "ryangjchandler/orbit": "^1.2",
-        "spatie/laravel-feed": "^4.1",
         "spatie/laravel-google-fonts": "^1.0",
         "spatie/laravel-ignition": "^1.0",
         "spatie/laravel-image-optimizer": "^1.7",

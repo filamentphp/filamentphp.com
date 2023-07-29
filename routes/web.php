@@ -81,7 +81,15 @@ Route::prefix('/docs')->group(function () {
     })->where('slug', '.*')->name('docs');
 });
 
-Route::feeds();
+Route::prefix('/articles')->group(function () {
+    Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
+        });
+    });
+});
 
 Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
@@ -93,34 +101,4 @@ Route::prefix('/plugins')->group(function () {
     });
 });
 
-Route::prefix('/tricks')->group(function () {
-    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
-
-    Route::name('tricks.')->group(function () {
-        Route::prefix('/{trick:slug}')->group(function () {
-            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/blog')->group(function () {
-    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
-
-    Route::name('blog.')->group(function () {
-        Route::prefix('/{article:slug}')->group(function () {
-            Route::get('/', Controllers\Blog\ViewArticleController::class)->name('article');
-        });
-    });
-});
-
 Route::redirect('/login', '/admin/login')->name('login');
-
-Route::prefix('/community')->group(function () {
-    Route::get('/', Controllers\Community\ListCommunityRecordsController::class)->name('community');
-
-    Route::name('community.')->group(function () {
-        Route::prefix('/{record}')->group(function () {
-            Route::get('/', Controllers\Community\ViewCommunityRecordController::class)->name('view');
-        });
-    });
-});
