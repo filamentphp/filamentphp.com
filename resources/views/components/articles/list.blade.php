@@ -19,8 +19,8 @@
                 },
             })
 
-            // Index the records
-            searchEngine.addAll(records)
+            // Index the articles
+            searchEngine.addAll(articles)
 
             if (reducedMotion) return
             gsap.fromTo(
@@ -41,12 +41,11 @@
     x-data="{
         searchEngine: null,
         search: '',
-        selectedTags: new Set(),
+        selectedCategories: new Set(),
         selectedVersion: '3',
-        selectedType: 'All',
 
-        tags: @js($tags),
-        records: @js($records),
+        articles: @js($articles),
+        categories: @js($categories),
 
         currentPage: 1,
         perPage: 24,
@@ -55,37 +54,29 @@
             return Math.ceil(this.totalItems / this.perPage)
         },
 
-        get filteredRecords() {
-            let filterResult = this.records
+        get filteredArticles() {
+            let filterResult = this.articles
 
-            // Show records that are in the selected tags
-            if (this.selectedTags.size > 0) {
-                filterResult = filterResult.filter((record) =>
-                    record.tags.some((recordTag) =>
-                        this.selectedTags.has(recordTag),
+            // Show articles that are in the selected categories
+            if (this.selectedCategories.size > 0) {
+                filterResult = filterResult.filter((article) =>
+                    article.categories.some((articleCategory) =>
+                        this.selectedCategories.has(articleCategory),
                     ),
                 )
             }
 
-            // Show records that are in the selected version
-            filterResult = filterResult.filter((record) =>
-                record.versions.includes(+this.selectedVersion),
+            // Show articles that are in the selected version, or no version at all
+            filterResult = filterResult.filter((article) =>
+                article.versions?.includes(+this.selectedVersion) || (! article.versions?.length),
             )
 
-            // If the selectedType is 'All', show all records, if the selectedType is 'Trick', only show records that have a type of 'Trick', if the selectedType is 'Article', only show records that have a type that is 'Article'
-            filterResult = filterResult.filter(
-                (record) =>
-                    this.selectedType === 'All' ||
-                    (this.selectedType === 'Trick' && record.type === 'Trick') ||
-                    (this.selectedType === 'Article' && record.type === 'Article'),
-            )
-
-            // If the search is not empty, show records that match the search
+            // If the search is not empty, show articles that match the search
             if (this.search) {
                 const searchResult = this.searchEngine.search(this.search)
 
-                filterResult = filterResult.filter((record) =>
-                    searchResult.some((result) => result.id === record.id),
+                filterResult = filterResult.filter((article) =>
+                    searchResult.some((result) => result.id === article.id),
                 )
             }
 
@@ -105,77 +96,7 @@
     <div
         class="flex flex-col gap-3 pt-5 min-[900px]:flex-row min-[900px]:items-center"
     >
-        {{-- Type Toggle --}}
-        <div
-            class="relative z-10 flex h-11 w-[276px] select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
-        >
-            <div
-                x-on:click="selectedType = 'All'"
-                class="relative z-20 w-14 text-center transition duration-300"
-                :class="{
-                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'All',
-                    'text-salmon': selectedType === 'All',
-                }"
-            >
-                All
-            </div>
-            <div
-                x-on:click="selectedType = 'Trick'"
-                class="relative z-20 flex w-[4.5rem] items-center gap-2 text-center transition duration-300"
-                :class="{
-                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'Trick',
-                    'text-violet-600': selectedType === 'Trick',
-                }"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    class="shrink-0"
-                >
-                    <path
-                        fill="currentColor"
-                        d="m9 4l2.5 5.5L17 12l-5.5 2.5L9 20l-2.5-5.5L1 12l5.5-2.5L9 4m0 4.83L8 11l-2.17 1L8 13l1 2.17L10 13l2.17-1L10 11L9 8.83M19 9l-1.26-2.74L15 5l2.74-1.25L19 1l1.25 2.75L23 5l-2.75 1.26L19 9m0 14l-1.26-2.74L15 19l2.74-1.25L19 15l1.25 2.75L23 19l-2.75 1.26L19 23Z"
-                    />
-                </svg>
-                <div>Tricks</div>
-            </div>
-            <div
-                x-on:click="selectedType = 'Article'"
-                class="relative z-20 flex w-[4.5rem] items-center gap-2 text-center transition duration-300"
-                :class="{
-                    'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'Article',
-                    'text-[#4BA284]': selectedType === 'Article',
-                }"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 28 28"
-                    class="shrink-0"
-                >
-                    <path
-                        fill="currentColor"
-                        d="M8 10.25a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm.75 3.75a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5ZM14 2a.75.75 0 0 1 .75.75V4h3.75V2.75a.75.75 0 0 1 1.5 0V4h.75A2.25 2.25 0 0 1 23 6.25v12.996a.75.75 0 0 1-.22.53l-5.504 5.504a.75.75 0 0 1-.53.22H6.75a2.25 2.25 0 0 1-2.25-2.25v-17A2.25 2.25 0 0 1 6.75 4H8V2.75a.75.75 0 0 1 1.5 0V4h3.75V2.75A.75.75 0 0 1 14 2ZM6 6.25v17c0 .414.336.75.75.75h9.246v-3.254a2.25 2.25 0 0 1 2.25-2.25H21.5V6.25a.75.75 0 0 0-.75-.75h-14a.75.75 0 0 0-.75.75Zm12.246 13.746a.75.75 0 0 0-.75.75v2.193l2.943-2.943h-2.193Z"
-                    />
-                </svg>
-                <div>Articles</div>
-            </div>
-            <div
-                class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
-                :class="{
-                    'bg-fair-pink w-16': selectedType === 'All',
-                    'translate-x-[4.15rem] bg-violet-100/60 w-24': selectedType === 'Trick',
-                    'translate-x-[10rem] bg-[#D4FFF0] w-[6.65rem]': selectedType === 'Article',
-                }"
-            ></div>
-        </div>
-
-        <div
-            class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
-        >
+        <div>
             {{-- Version Switch --}}
             <div
                 class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
@@ -184,9 +105,9 @@
                     x-on:click="selectedVersion = '1'"
                     class="relative z-20 w-14 text-center transition duration-300"
                     :class="{
-                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
-                                'text-salmon': selectedVersion === '1',
-                            }"
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
+                        'text-salmon': selectedVersion === '1',
+                    }"
                 >
                     v1.x
                 </div>
@@ -194,9 +115,9 @@
                     class="relative z-20 w-14 text-center transition duration-300"
                     x-on:click="selectedVersion = '2'"
                     :class="{
-                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
-                                'text-salmon': selectedVersion === '2',
-                            }"
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
+                        'text-salmon': selectedVersion === '2',
+                    }"
                 >
                     v2.x
                 </div>
@@ -204,20 +125,25 @@
                     class="relative z-20 w-14 text-center transition duration-300"
                     x-on:click="selectedVersion = '3'"
                     :class="{
-                                'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
-                                'text-salmon': selectedVersion === '3',
-                            }"
+                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
+                        'text-salmon': selectedVersion === '3',
+                    }"
                 >
                     v3.x
                 </div>
                 <div
                     class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
                     :class="{
-                                'translate-x-[4.1rem]': selectedVersion === '2',
-                                'translate-x-[8.2rem]': selectedVersion === '3',
-                            }"
+                        'translate-x-[4.1rem]': selectedVersion === '2',
+                        'translate-x-[8.2rem]': selectedVersion === '3',
+                    }"
                 ></div>
             </div>
+        </div>
+
+        <div
+            class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
+        >
             {{-- Search Bar --}}
             <div
                 class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs"
@@ -279,24 +205,24 @@
         </div>
     </div>
 
-    {{-- Tags --}}
+    {{-- Categories --}}
     <div class="pt-5">
-        <div class="font-semibold">Tags</div>
+        <div class="font-semibold">Categories</div>
 
-        {{-- List Of Tags --}}
+        {{-- List Of Categories --}}
         <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-5">
             <template
-                x-for="(tag, index) in tags"
+                x-for="(category, index) in categories"
                 :key="index"
             >
                 <div
                     class="rounded-full px-5 py-2.5 text-sm cursor-pointer transition duration-200 select-none"
-                    x-text="tag"
+                    x-text="category.name"
                     :class="{
-                        'bg-salmon text-white': selectedTags.has(tag),
-                        'bg-stone-100 hover:bg-stone-200/70': ! selectedTags.has(tag),
+                        'bg-salmon text-white': selectedCategories.has(category.slug),
+                        'bg-stone-100 hover:bg-stone-200/70': ! selectedCategories.has(category.slug),
                     }"
-                    x-on:click="selectedTags.has(tag) ? selectedTags.delete(tag) : selectedTags.add(tag)"
+                    x-on:click="selectedCategories.has(category.slug) ? selectedCategories.delete(category.slug) : selectedCategories.add(category.slug)"
                 ></div>
             </template>
         </div>
@@ -308,7 +234,7 @@
             <div class="flex items-center justify-between px-1 py-3">
                 <div class="flex flex-1 items-center justify-between">
                     <div
-                        x-show="filteredRecords.length"
+                        x-show="filteredArticles.length"
                         class="text-sm text-gray-700"
                     >
                         Showing
@@ -328,7 +254,7 @@
                         ></span>
                         results
                     </div>
-                    <div x-show="!filteredRecords.length">
+                    <div x-show="!filteredArticles.length">
                         <div class="text-sm text-gray-700">
                             No results found
                         </div>
@@ -338,19 +264,19 @@
             </div>
 
             <div class="relative min-h-[16rem]">
-                {{-- Records --}}
+                {{-- Articles --}}
                 <div
-                    x-ref="record_cards_wrapper"
+                    x-ref="article_cards_wrapper"
                     x-init="
                         () => {
-                            autoAnimate($refs.record_cards_wrapper)
+                            autoAnimate($refs.article_cards_wrapper)
                         }
                     "
                     class="grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
                 >
                     <template
-                        x-for="record in filteredRecords"
-                        :key="record.id"
+                        x-for="article in filteredArticles"
+                        :key="article.id"
                     >
                         <x-articles.card />
                     </template>
@@ -358,7 +284,7 @@
 
                 {{-- No Results Message --}}
                 <div
-                    x-show="! filteredRecords.length"
+                    x-show="! filteredArticles.length"
                     x-transition:enter="ease-out"
                     x-transition:enter-start="opacity-0"
                     x-transition:enter-end="opacity-100"
@@ -383,7 +309,7 @@
                         No Results Found
                     </div>
                     <div class="pt-0.5 text-sm text-evening/50">
-                        Sorry we couldn't find any records matching your search.
+                        Sorry we couldn't find any articles matching your search.
                     </div>
                 </div>
             </div>

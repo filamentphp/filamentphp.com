@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Articles;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 
 class ViewArticleController extends Controller
 {
-    public function __invoke($record)
+    public function __invoke(Article $article)
     {
+        seo()->title("{$article->title} by {$article->author->name}");
+
+        return view('articles.view-article', ['article' => $article]);
         return view('articles.view-article', [
             'record' => [
                 'id' => 1,
@@ -25,7 +29,7 @@ class ViewArticleController extends Controller
                     'articles_count' => 12,
                     'stars_count' => 448,
                 ],
-                'tags' => [
+                'categories' => [
                     'Form Builder',
                     'Admin Panel'
                 ],

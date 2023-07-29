@@ -52,25 +52,7 @@
                 'opacity-60 translate-x-2': back_button_is_hovering,
             }"
             >
-                <div>
-                    <button
-                        type="button"
-                        class="flex select-none items-center gap-2.5 rounded-lg bg-fair-pink bg-white py-2.5 pl-5 pr-6 text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
-                    >
-                        <svg
-                            class="w-[1.1rem] text-peach-orange"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
-                            />
-                        </svg>
-
-                        <div>Star</div>
-                    </button>
-                </div>
+                <livewire:star-record :record="$article" />
             </div>
         </div>
 
@@ -83,126 +65,80 @@
         >
             {{-- Left Side --}}
             <div class="w-full">
-                {{-- Type --}}
-                <div class="flex gap-5">
-                    <div
-                        @class([
-                            'flex select-none items-center justify-center gap-2 rounded-full py-2 pl-4 pr-5',
-                            'bg-violet-100/80 text-violet-700' => $record['type'] === 'Trick',
-                            'bg-[#D4FFF0] text-[#4BA284]' => $record['type'] === 'Article',
-                        ])
-                    >
-                        {{-- Stars --}}
-                        @if ($record['type'] === 'Trick')
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                class="text-violet-500"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="m9 4l2.5 5.5L17 12l-5.5 2.5L9 20l-2.5-5.5L1 12l5.5-2.5L9 4m0 4.83L8 11l-2.17 1L8 13l1 2.17L10 13l2.17-1L10 11L9 8.83M19 9l-1.26-2.74L15 5l2.74-1.25L19 1l1.25 2.75L23 5l-2.75 1.26L19 9m0 14l-1.26-2.74L15 19l2.74-1.25L19 15l1.25 2.75L23 19l-2.75 1.26L19 23Z"
-                                />
-                            </svg>
-                        @endif
-
-                        {{-- Article --}}
-                        @if ($record['type'] === 'Article')
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 28 28"
-                                class="text-[#47C6A0]"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="M8 10.25a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm.75 3.75a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5ZM14 2a.75.75 0 0 1 .75.75V4h3.75V2.75a.75.75 0 0 1 1.5 0V4h.75A2.25 2.25 0 0 1 23 6.25v12.996a.75.75 0 0 1-.22.53l-5.504 5.504a.75.75 0 0 1-.53.22H6.75a2.25 2.25 0 0 1-2.25-2.25v-17A2.25 2.25 0 0 1 6.75 4H8V2.75a.75.75 0 0 1 1.5 0V4h3.75V2.75A.75.75 0 0 1 14 2ZM6 6.25v17c0 .414.336.75.75.75h9.246v-3.254a2.25 2.25 0 0 1 2.25-2.25H21.5V6.25a.75.75 0 0 0-.75-.75h-14a.75.75 0 0 0-.75.75Zm12.246 13.746a.75.75 0 0 0-.75.75v2.193l2.943-2.943h-2.193Z"
-                                />
-                            </svg>
-                        @endif
-
-                        {{-- Type Name --}}
-                        <div>
-                            {{ $record['type'] }}
-                        </div>
-                    </div>
-                </div>
-
                 {{-- Title --}}
                 <div class="pt-5">
                     <div class="text-3xl font-extrabold">
-                        {{ $record['title'] }}
+                        {{ $article->title }}
                     </div>
                 </div>
 
-                {{-- Features and Health Checks --}}
-                <div
-                    class="grid grid-cols-[repeat(auto-fill,minmax(315px,1fr))] gap-x-16 gap-y-10 pt-7"
-                >
-                    {{-- Latest Version Compatibility --}}
-                    <div class="flex items-center gap-3">
-                        @if ($record['isCompatibleWithLatestVersion'])
-                            <div
-                                class="grid h-9 w-9 place-items-center rounded-full bg-lime-200/50 text-lime-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="22"
-                                    height="22"
-                                    viewBox="0 0 24 24"
+                @if ($article->isCompatibleWithLatestVersion() !== null)
+                    {{-- Features and Health Checks --}}
+                    <div
+                        class="grid grid-cols-[repeat(auto-fill,minmax(315px,1fr))] gap-x-16 gap-y-10 pt-7"
+                    >
+                        {{-- Latest Version Compatibility --}}
+                        <div class="flex items-center gap-3">
+                            @if ($article->isCompatibleWithLatestVersion())
+                                <div
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-lime-200/50 text-lime-600"
                                 >
-                                    <path
-                                        fill="currentColor"
-                                        d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
-                                    />
-                                </svg>
-                            </div>
-                        @else
-                            <div
-                                class="grid h-9 w-9 place-items-center rounded-full bg-rose-200/50 text-rose-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="22"
-                                    height="22"
-                                    viewBox="0 0 24 24"
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
+                                        />
+                                    </svg>
+                                </div>
+                            @else
+                                <div
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-rose-200/50 text-rose-600"
                                 >
-                                    <path
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 6v8m.05 4v.1h-.1V18h.1Z"
-                                    />
-                                </svg>
-                            </div>
-                        @endif
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 6v8m.05 4v.1h-.1V18h.1Z"
+                                        />
+                                    </svg>
+                                </div>
+                            @endif
 
-                        <div>
-                            <div class="font-medium">
-                                {{ $record['isCompatibleWithLatestVersion'] ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
-                            </div>
+                            <div>
+                                <div class="font-medium">
+                                    {{ $article->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
+                                </div>
 
-                            <div class="text-xs text-dolphin/80">
-                                Supported versions:
-                                {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $record['versions'])) }}
+                                <div class="text-xs text-dolphin/80">
+                                    Supported versions:
+                                    {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $article->versions)) }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endif
 
-                {{-- Tags --}}
+                {{-- Categories --}}
                 <div class="flex flex-wrap items-center gap-3.5 pt-6">
-                    @foreach ($record['tags'] as $tag)
+                    @foreach ($article->getCategories() as $category)
                         <div
                             class="select-none rounded-full bg-stone-200/50 px-5 py-2.5 text-sm"
                         >
                             <div class="text-sm">
-                                {{ $tag }}
+                                {{ $category->name }}
                             </div>
                         </div>
                     @endforeach
@@ -213,7 +149,10 @@
                     <div
                         class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                     >
-                        {{ $record['content'] }}
+                        {!! preg_replace(
+                            ['/\<h1(.*)\>(.*)\<\/h1\>/', '/\A---(.|\n)*?---/'], '',
+                            str($article->content)->markdown()->sanitizeHtml(),
+                        ) !!}
                     </div>
                 </div>
             </div>
@@ -231,7 +170,7 @@
                         >
                             <div
                                 style="
-                                    background-image: url({{ $record['author']['avatar'] }});
+                                    background-image: url({{ $article->author->getAvatarUrl() }});
                                 "
                                 class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
                             ></div>
@@ -239,17 +178,17 @@
 
                         {{-- Name --}}
                         <div class="pt-3.5 text-lg font-bold">
-                            {{ $record['author']['name'] }}
+                            {{ $article->author->name }}
                         </div>
 
                         {{-- Social Links --}}
                         <div class="flex items-center gap-4 pt-3">
                             {{-- Twitter --}}
-                            @if (filled($record['author']['twitter_url']))
+                            @if (filled($article->author->twitter_url))
                                 <a
                                     target="_blank"
-                                    href="{{ $record['author']['twitter_url'] }}"
-                                    class="grid h-9 w-9 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                    href="{{ $article->author->twitter_url }}"
+                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -267,11 +206,11 @@
                                 </a>
                             @endif
 
-                            {{-- Github --}}
+                            {{-- GitHub --}}
                             <a
                                 target="_blank"
-                                href="{{ $record['author']['github_url'] }}"
-                                class="grid h-9 w-9 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                href="{{ $article->author->github_url }}"
+                                class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -299,49 +238,37 @@
                             class="mt-4 space-y-4 rounded-2xl bg-merino/50 p-6 text-center shadow-lg shadow-black/[0.01]"
                         >
                             {{-- Bio --}}
-                            @if ($record['author']['bio'])
+                            @if ($article->author->getBio())
                                 <div class="prose">
-                                    {!! str($record['author']['bio'])->markdown()->sanitizeHtml() !!}
+                                    {!! str($article->author->getBio())->markdown()->sanitizeHtml() !!}
                                 </div>
                             @endif
 
                             {{-- Stats --}}
-                            <div
-                                class="flex w-full flex-wrap justify-center gap-x-16 gap-y-10"
-                            >
-                                {{-- Tricks --}}
-                                <div class="space-y-0.5">
-                                    <div class="text-lg font-extrabold">
-                                        {{ number_format($record['author']['tricks_count']) }}
+                            <div class="flex justify-center">
+                                <div class="grid grid-cols-2 gap-10">
+                                    {{-- Articles --}}
+                                    <div class="space-y-0.5">
+                                        <div class="text-lg font-extrabold">
+                                            {{ number_format($article->author->articles()->count()) }}
+                                        </div>
+                                        <div
+                                            class="text-sm font-medium text-hurricane/80"
+                                        >
+                                            Articles
+                                        </div>
                                     </div>
-                                    <div
-                                        class="text-sm font-medium text-hurricane/80"
-                                    >
-                                        Tricks
-                                    </div>
-                                </div>
 
-                                {{-- Articles --}}
-                                <div class="space-y-0.5">
-                                    <div class="text-lg font-extrabold">
-                                        {{ number_format($record['author']['articles_count']) }}
-                                    </div>
-                                    <div
-                                        class="text-sm font-medium text-hurricane/80"
-                                    >
-                                        Articles
-                                    </div>
-                                </div>
-
-                                {{-- Stars --}}
-                                <div class="space-y-0.5">
-                                    <div class="text-lg font-extrabold">
-                                        {{ number_format($record['author']['stars_count']) }}
-                                    </div>
-                                    <div
-                                        class="text-sm font-medium text-hurricane/80"
-                                    >
-                                        Stars
+                                    {{-- Stars --}}
+                                    <div class="space-y-0.5">
+                                        <div class="text-lg font-extrabold">
+                                            {{ number_format($article->author->getStarsCount()) }}
+                                        </div>
+                                        <div
+                                            class="text-sm font-medium text-hurricane/80"
+                                        >
+                                            Stars
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -349,94 +276,62 @@
                     </div>
                 </div>
 
-                {{-- More From This Author --}}
-                <div class="mx-auto w-full max-w-md">
-                    <div class="text-lg font-extrabold">
-                        More from this author
-                    </div>
-                    <div class="w-full space-y-5 pt-7">
-                        @foreach ($more_from_author as $otherRecord)
-                            <a
-                                href="#"
-                                class="relative block w-full rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
-                            >
-                                <div
-                                    class="flex w-full flex-wrap items-center justify-between gap-5"
+                @if (count($otherArticles = $article->author->articles()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
+                    {{-- More From This Author --}}
+                    <div class="mx-auto w-full max-w-md">
+                        <div class="text-lg font-extrabold">
+                            More from this author
+                        </div>
+                        <div class="w-full space-y-5 pt-7">
+                            @foreach ($otherArticles as $otherArticle)
+                                <a
+                                    href="{{ route('articles.view', ['article' => $otherArticle]) }}"
+                                    class="relative block w-full rounded-2xl bg-white py-3 px-5 shadow-lg shadow-hurricane/5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
                                 >
                                     <div
-                                        @class([
-                                            'flex select-none items-center justify-center gap-2 rounded-full py-2 pl-4 pr-5 text-sm',
-                                            'bg-violet-100/80 text-violet-700' => $otherRecord['type'] === 'Trick',
-                                            'bg-[#D4FFF0] text-[#4BA284]' => $otherRecord['type'] === 'Article',
-                                        ])
+                                        class="flex w-full items-start justify-between gap-5"
                                     >
-                                        {{-- Stars --}}
-                                        @if ($otherRecord['type'] === 'Trick')
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="18"
-                                                height="18"
-                                                viewBox="0 0 24 24"
-                                                class="text-violet-500"
-                                            >
-                                                <path
-                                                    fill="currentColor"
-                                                    d="m9 4l2.5 5.5L17 12l-5.5 2.5L9 20l-2.5-5.5L1 12l5.5-2.5L9 4m0 4.83L8 11l-2.17 1L8 13l1 2.17L10 13l2.17-1L10 11L9 8.83M19 9l-1.26-2.74L15 5l2.74-1.25L19 1l1.25 2.75L23 5l-2.75 1.26L19 9m0 14l-1.26-2.74L15 19l2.74-1.25L19 15l1.25 2.75L23 19l-2.75 1.26L19 23Z"
-                                                />
-                                            </svg>
-                                        @endif
+                                        <div class="flex-1 font-medium">
+                                            {{ $otherArticle->title }}
+                                        </div>
 
-                                        {{-- Article --}}
-                                        @if ($otherRecord['type'] === 'Article')
+                                        <div class="flex-shrink-0 flex items-center gap-1.5 pr-2">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
+                                                class="text-peach-orange"
                                                 width="20"
                                                 height="20"
-                                                viewBox="0 0 28 28"
-                                                class="text-[#47C6A0]"
+                                                viewBox="0 0 24 24"
                                             >
                                                 <path
                                                     fill="currentColor"
-                                                    d="M8 10.25a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h10a.75.75 0 0 1 0 1.5h-10a.75.75 0 0 1-.75-.75Zm.75 3.75a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5ZM14 2a.75.75 0 0 1 .75.75V4h3.75V2.75a.75.75 0 0 1 1.5 0V4h.75A2.25 2.25 0 0 1 23 6.25v12.996a.75.75 0 0 1-.22.53l-5.504 5.504a.75.75 0 0 1-.53.22H6.75a2.25 2.25 0 0 1-2.25-2.25v-17A2.25 2.25 0 0 1 6.75 4H8V2.75a.75.75 0 0 1 1.5 0V4h3.75V2.75A.75.75 0 0 1 14 2ZM6 6.25v17c0 .414.336.75.75.75h9.246v-3.254a2.25 2.25 0 0 1 2.25-2.25H21.5V6.25a.75.75 0 0 0-.75-.75h-14a.75.75 0 0 0-.75.75Zm12.246 13.746a.75.75 0 0 0-.75.75v2.193l2.943-2.943h-2.193Z"
+                                                    d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
                                                 />
                                             </svg>
-                                        @endif
-
-                                        {{-- Type Name --}}
-                                        <div>
-                                            {{ $otherRecord['type'] }}
+                                            <div
+                                                class="pt-0.5 text-sm font-medium text-dolphin"
+                                            >
+                                                {{ number_format($otherArticle->getStarsCount()) }}
+                                            </div>
                                         </div>
                                     </div>
 
-                                    {{-- Stars --}}
-                                    <div class="flex items-center gap-1.5 pr-2">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="text-peach-orange"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                fill="currentColor"
-                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="pt-0.5 text-sm font-medium text-dolphin"
-                                        >
-                                            {{ number_format($otherRecord['stars_count']) }}
-                                        </div>
+                                    <div class="pt-1 text-xs text-dolphin/80">
+                                        {{ $otherArticle->publish_date->diffForHumans() }}
                                     </div>
-                                </div>
 
-                                <div class="px-2 pb-1 pt-4 font-medium">
-                                    {{ $otherRecord['title'] }}
-                                </div>
-                            </a>
-                        @endforeach
+                                    <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-3">
+                                        @foreach ($otherArticle->getCategories() as $category)
+                                            <div class="rounded-full bg-slate-100 px-5 py-2.5 text-xs">
+                                                {{ $category->name }}
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

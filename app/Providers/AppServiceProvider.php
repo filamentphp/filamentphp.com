@@ -44,7 +44,6 @@ class AppServiceProvider extends ServiceProvider
         Relation::enforceMorphMap([
             'article' => Article::class,
             'plugin' => Plugin::class,
-            'trick' => Trick::class,
         ]);
 
         URL::forceScheme('https');

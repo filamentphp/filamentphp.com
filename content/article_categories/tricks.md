@@ -1,0 +1,4 @@
+---
+name: Tricks
+slug: tricks
+---

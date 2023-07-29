@@ -351,7 +351,7 @@
                                 </a>
                             @endif
 
-                            {{-- Github --}}
+                            {{-- GitHub --}}
                             <a
                                 target="_blank"
                                 href="{{ $plugin->author->github_url }}"

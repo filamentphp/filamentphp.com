@@ -34,6 +34,11 @@ class Author extends Model
         return $this->content;
     }
 
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class);
+    }
+
     public function plugins(): HasMany
     {
         return $this->hasMany(Plugin::class);

@@ -10,7 +10,7 @@
     ></div>
 
     <x-articles.list
-        :$records
-        :$tags
+        :$articles
+        :$categories
     />
 </x-layouts.app>
