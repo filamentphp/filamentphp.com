@@ -55,7 +55,8 @@ class Author extends Model
             $this->getStarsCountCacheKey(),
             now()->addDay(),
             fn (): int => Star::query()
-                ->where(fn (Builder $query) => $query->where('starrable_type', 'plugin')->whereIn('starrable_id', $this->plugins()->pluck('slug')))
+                ->where(fn (Builder $query) => $query->where('starrable_type', 'article')->whereIn('starrable_id', $this->articles()->pluck('slug')))
+                ->orWhere(fn (Builder $query) => $query->where('starrable_type', 'plugin')->whereIn('starrable_id', $this->plugins()->pluck('slug')))
                 ->count(),
         );
     }
