@@ -55,7 +55,7 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 - The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory. 
 - The `description` should be a short description of your plugin. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be one full sentence.
 - The `discord_url` should be a link to the Discord channel where people can discuss your plugin. If this doesn't exist yet, you can leave this empty until the Filament team creates it in the official server.
-- The `docs_url` should be a URL to a public, raw Markdown file of your plugin. You can leave this blank if your documentation does not live in a raw Markdown file, but please ensure that you have filled in a `url` instead, where we can redirect users who are looking for the documentation.
+- The `docs_url` should be a URL to a public, raw Markdown file of your plugin. You can leave this blank if your documentation does not live in a raw Markdown file, but please ensure that you have filled in a `url` instead, where we can redirect users who are looking for the documentation. If you have content in your README that you do not want to be displayed on the website, please add a `.filament-hidden` class to the element. This is especially useful for banner images.
 - The `github_repository` should be the name of the GitHub repository where your plugin is hosted.
 - The `has_dark_theme` should be `true` if your plugin supports Tailwind's dark mode, or `false` if not.
 - The `has_translations` should be `true` if your plugin supports multiple languages, or `false` if not.
