@@ -6,9 +6,9 @@ title: Notifications
 
 ## Sending notifications
 
-The admin panel uses the [Notifications](./../notifications/sending-notifications) package to send messages to users.
+The admin panel uses the [Notifications](../notifications/sending-notifications) package to send messages to users.
 
-Please read the [documentation](./../notifications/sending-notifications) to discover how to send notifications easily.
+Please read the [documentation](../notifications/sending-notifications) to discover how to send notifications easily.
 
 However, there are a few differences in configuration when using the admin panel.
 
@@ -16,7 +16,7 @@ However, there are a few differences in configuration when using the admin panel
 
 Instead of enabling database notifications inside the notifications package, you must enable it for the admin panel specifically.
 
-First, you must [publish the configuration file](./installation#publishing-configuration) for the admin panel.
+First, you must [publish the configuration file](installation#publishing-configuration) for the admin panel.
 
 Now, enable database notifications:
 
@@ -27,7 +27,7 @@ Now, enable database notifications:
 ],
 ```
 
-You may also control [polling](./../notifications/database-notifications#polling):
+You may also control [polling](../notifications/database-notifications#polling):
 
 ```php
 'database' => [
@@ -39,11 +39,11 @@ You may also control [polling](./../notifications/database-notifications#polling
 
 ## Echo
 
-Some features of the notifications package, including [receiving real-time database notifications](./../notifications/database-notifications#echo) and [broadcast notifications](./../notifications/broadcast-notifications), require Laravel Echo to be installed.
+Some features of the notifications package, including [receiving real-time database notifications](../notifications/database-notifications#echo) and [broadcast notifications](../notifications/broadcast-notifications), require Laravel Echo to be installed.
 
 Firstly, you must set up a [server-side websockets integration](https://laravel.com/docs/broadcasting#server-side-installation) like Pusher.
 
-Then, define your Echo configuration within the admin panel [configuration file](./installation#publishing-configuration):
+Then, define your Echo configuration within the admin panel [configuration file](installation#publishing-configuration):
 
 ```php
 'broadcasting' => [

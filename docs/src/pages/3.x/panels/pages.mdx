@@ -18,7 +18,7 @@ php artisan make:filament-page Settings
 
 This command will create two files - a page class in the `/Pages` directory of the Filament directory, and a view in the `/pages` directory of the Filament views directory.
 
-Page classes are all full-page [Livewire](https://laravel-livewire.com) components with a few extra utilities you can use with the panel.
+Page classes are all full-page [Livewire](https://livewire.laravel.com) components with a few extra utilities you can use with the panel.
 
 ## Conditionally hiding pages in navigation
 
@@ -42,13 +42,13 @@ public function mount(): void
 
 ## Adding actions to pages
 
-Actions are buttons that can perform tasks on the page, or visit a URL. You can read more about their capabilities [here](./../actions).
+Actions are buttons that can perform tasks on the page, or visit a URL. You can read more about their capabilities [here](../actions).
 
-Since all pages are Livewire components, you can [add actions](./../actions/adding-an-action-to-a-livewire-component#adding-the-action) anywhere. Pages already have the `InteractsWithActions` trait, `HasActions` interface, and `<x-filament-actions::modals />` Blade component all set up for you.
+Since all pages are Livewire components, you can [add actions](../actions/adding-an-action-to-a-livewire-component#adding-the-action) anywhere. Pages already have the `InteractsWithActions` trait, `HasActions` interface, and `<x-filament-actions::modals />` Blade component all set up for you.
 
 ### Header actions
 
-You can also easily add actions to the header of any page, including [resource pages](./resources). You don't need to worry about adding anything to the Blade, we handle that for you. Just return your actions from the `getHeaderActions()` method of the page class:
+You can also easily add actions to the header of any page, including [resource pages](resources). You don't need to worry about adding anything to the Blade, we handle that for you. Just return your actions from the `getHeaderActions()` method of the page class:
 
 ```php
 use Filament\Actions\Action;
@@ -67,7 +67,7 @@ protected function getHeaderActions(): array
 
 ### Refreshing form data
 
-If you're using actions on an [Edit](./resources/editing-records) or [View](./resources/viewing-records) resource page, you can refresh data within the main form using the `refreshFormData()` method:
+If you're using actions on an [Edit](resources/editing-records) or [View](resources/viewing-records) resource page, you can refresh data within the main form using the `refreshFormData()` method:
 
 ```php
 use Filament\Actions\Action;
@@ -86,7 +86,7 @@ This method accepts an array of model attributes that you wish to refresh in the
 
 ## Adding widgets to pages
 
-Filament allows you to display [widgets](./dashboard) inside pages, below the header and above the footer.
+Filament allows you to display [widgets](dashboard) inside pages, below the header and above the footer.
 
 To add a widget to a page, use the `getHeaderWidgets()` or `getFooterWidgets()` methods:
 
@@ -103,7 +103,7 @@ protected function getHeaderWidgets(): array
 
 `getHeaderWidgets()` returns an array of widgets to display above the page content, whereas `getFooterWidgets()` are displayed below.
 
-If you'd like to learn how to build and customize widgets, check out the [Dashboard](./dashboard) documentation section.
+If you'd like to learn how to build and customize widgets, check out the [Dashboard](dashboard) documentation section.
 
 ### Customizing the widgets grid
 
@@ -132,7 +132,7 @@ protected function getHeaderWidgetsColumns(): int | array
 }
 ```
 
-This pairs well with [responsive widget widths](./dashboard#responsive-widget-widths).
+This pairs well with [responsive widget widths](dashboard#responsive-widget-widths).
 
 #### Passing data to widgets from the page
 
@@ -155,6 +155,38 @@ Now, you can define a corresponding public `$stats` array property on the widget
 public $stats = [];
 ```
 
+### Passing properties to widgets on pages
+
+When registering a widget on a page, you can use the `make()` method to pass an array of [Livewire properties](https://livewire.laravel.com/docs/properties) to it:
+
+```php
+use App\Filament\Widgets\StatsOverviewWidget;
+
+protected function getHeaderWidgets(): array
+{
+    return [
+        StatsOverviewWidget::make([
+            'status' => 'active',
+        ]),
+    ];
+}
+```
+
+This array of properties gets mapped to [public Livewire properties](https://livewire.laravel.com/docs/properties) on the widget class:
+
+```php
+use Filament\Widgets\Widget;
+
+class StatsOverviewWidget extends Widget
+{
+    public string $status;
+
+    // ...
+}
+```
+
+Now, you can access the `status` in the widget class using `$this->status`.
+
 ## Customizing the page title
 
 By default, Filament will automatically generate a title for your page based on its name. You may override this by defining a `$title` property on your page class:
@@ -176,7 +208,7 @@ public function getTitle(): string | Htmlable
 
 ## Customizing the page navigation label
 
-By default, Filament will use the page's [title](#customizing-the-page-title) as its [navigation](./navigation) item label. You may override this by defining a `$navigationLabel` property on your page class:
+By default, Filament will use the page's [title](#customizing-the-page-title) as its [navigation](navigation) item label. You may override this by defining a `$navigationLabel` property on your page class:
 
 ```php
 protected static ?string $navigationLabel = 'Custom Navigation Label';
@@ -240,7 +272,7 @@ You may replace the default [heading](#customizing-the-page-heading), [subheadin
 ```php
 use Illuminate\Contracts\View\View;
 
-protected function getHeader(): View
+public function getHeader(): ?View
 {
     return view('filament.settings.custom-header');
 }
@@ -255,7 +287,7 @@ You may also add a footer to any page, below its content. You may return it from
 ```php
 use Illuminate\Contracts\View\View;
 
-protected function getFooter(): View
+public function getFooter(): ?View
 {
     return view('filament.settings.custom-footer');
 }

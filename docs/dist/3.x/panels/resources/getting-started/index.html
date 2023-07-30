@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en" class="hidden astro-XWOXDUXN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
+    <title>Getting started - Panel Builder - Filament</title>
+    <meta name="description" content="">
+    
+    <link rel="canonical" href="https://filamentphp.com/docs/3.x/panels/resources/getting-started/">
+
+    <!-- hack for flash of theme -->
+    
+
+  <!-- Styles -->
+  
+  <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
+<link rel="stylesheet" href="/docs/assets/dashboard.651d08e1.css" /><script type="module" src="/docs/hoisted.1ff5f80e.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10 astro-XWOXDUXN">
+    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
+    <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between">
+        <div class="relative flex flex-grow basis-0 items-center gap-3">
+            <div class="flex lg:hidden">
+                <div x-data class="flex items-center">
+    <button type="button" class="relative" aria-label="Open navigation" x-on:click="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
+        <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-7 w-7 stroke-gray-500" astro-icon="menu-icon"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div x-ref="panel" class="fixed !inset-0 z-[100] flex items-start overflow-y-auto pr-10 lg:hidden" x-float.flip.teleport aria-label="Navigation">
+        <div class="bg-[#171527]/50 pr-10 backdrop-blur-lg fixed inset-0 z-0 pointer-events-none">
+        </div>
+        <div class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-[#171527] sm:px-6 relative z-10 shadow-lg dark:shadow-black/50">
+            <div class="flex items-center gap-5">
+                <button type="button" aria-label="Close navigation">
+                    <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-gray-500" astro-icon="close-icon"><path d="m5 5 14 14m0-14L5 19"/></svg>
+                </button>
+                <div class="flex gap-3 items-center">
+                    <a href="/" aria-label="Homepage" class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out motion-reduce:transition-none hover:-translate-y-1">
+                        <svg width="128" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434] md:block"><g clip-path="url(#a)" fill="currentColor"><path d="M4.975 25.081c.254-1.197.496-2.355.728-3.475.193-.932.408-1.966.647-3.1l.146-.694 1.18-5.708H12.2l.793-3.777H8.265l.149-.747.165-.831c.176-.862.496-1.508.959-1.94.463-.43 1.102-.646 1.917-.646.463 0 .92.056 1.372.168.452.112.882.269 1.29.47l1.19-4.029a7.6 7.6 0 0 0-1.232-.411 11.797 11.797 0 0 0-1.48-.269A13.154 13.154 0 0 0 11.043 0c-.816 0-1.598.098-2.347.294a5.826 5.826 0 0 0-2.05.99c-.617.465-1.154 1.094-1.612 1.889-.457.795-.807 1.785-1.05 2.971L3.48 8.587l.053-.26H.793L0 12.104h2.744l-.04.193c-.074.348-.146.694-.217 1.035l-.107.51-.48 2.308-.346 1.679a965.389 965.389 0 0 1-.785 3.769 452.348 452.348 0 0 0-.72 3.483h4.926ZM19.047 8.294l-.472 1.214 2.21 1.555c.12.083.183.238.166.395l-.008.046-.149.681c-.037.171-.167.295-.32.306l-1.951.13 1.668 1.164c.12.083.183.239.165.395l-.007.047-.149.68c-.037.172-.167.296-.32.306l-1.951.131 1.668 1.163c.12.083.183.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.951.132 1.668 1.163c.119.083.183.238.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.952.131 1.669 1.163c.119.083.182.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.321.306l-2.736.242-.34 1.46h-2.185l.675-2.683c.038-.171.168-.295.321-.305l1.95-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.046.149-.681c.037-.171.167-.295.32-.306l1.95-.131-1.667-1.163a.425.425 0 0 1-.165-.395l.007-.047.149-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.162a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.038-.172.168-.296.32-.306l1.952-.131L16.49 9.91a.424.424 0 0 1-.165-.395l.008-.047.304-1.081 2.409-.093Zm1.68-8.143c.896 0 1.56.305 1.99.915.433.61.562 1.34.39 2.19-.195.975-.597 1.632-1.206 1.974-.61.34-1.368.512-2.275.512-.885 0-1.551-.266-1.999-.798-.448-.532-.575-1.29-.38-2.275.183-.895.585-1.539 1.206-1.93.62-.392 1.378-.588 2.274-.588ZM40.16 7.874c1.586 0 2.892.268 3.917.805 1.025.538 1.736 1.301 2.132 2.292.397.99.447 2.168.15 3.534a134 134 0 0 1-.348 1.704l-.38 1.805-.298 1.41-.553 2.652c-.193.93-.405 1.93-.637 3.005H39.88l.214-2.232h-.38a6.622 6.622 0 0 1-1.347 1.468 5.376 5.376 0 0 1-1.595.873 5.686 5.686 0 0 1-1.852.294c-1.046 0-1.922-.26-2.628-.78a4.033 4.033 0 0 1-1.47-2.074c-.276-.861-.304-1.802-.084-2.82.166-.784.433-1.438.802-1.964.37-.526.816-.957 1.34-1.293a7.06 7.06 0 0 1 1.735-.797 13.188 13.188 0 0 1 1.975-.445l5.174-.823c.11-.503.069-.943-.124-1.318-.193-.375-.537-.666-1.033-.873-.496-.207-1.13-.31-1.901-.31-.397 0-.818.03-1.265.092-.446.062-.912.151-1.396.269-.485.117-.984.263-1.496.436a20.15 20.15 0 0 0-1.579.613l.777-4.399c.397-.134.848-.265 1.355-.394a31.603 31.603 0 0 1 1.604-.361 21.025 21.025 0 0 1 1.727-.269c.59-.067 1.165-.1 1.727-.1Zm.991 8.88a3.701 3.701 0 0 1-.562.328c-.22.106-.523.212-.909.319-.386.106-.909.232-1.57.378a9.2 9.2 0 0 0-1.174.352 2.306 2.306 0 0 0-.876.57c-.231.247-.386.566-.463.958-.11.615-.005 1.094.314 1.435.32.342.755.512 1.306.512.397 0 .796-.087 1.199-.26a4.389 4.389 0 0 0 1.157-.747c.369-.325.708-.71 1.016-1.158l.562-2.686Zm24.03-5.89c-.173-.843-.526-1.515-1.058-2.017-.69-.649-1.65-.973-2.885-.973-.76 0-1.49.134-2.19.403-.7.268-1.344.635-1.934 1.1a7.607 7.607 0 0 0-1.496 1.552h-.413l.347-2.854-4.166.252c-.286 1.399-.567 2.75-.843 4.054-.275 1.304-.534 2.56-.776 3.77l-.348 1.678a469.35 469.35 0 0 0-.793 3.769 643.41 643.41 0 0 1-.727 3.483h4.942c.242-1.197.48-2.35.71-3.458.232-1.108.48-2.289.745-3.542l.71-3.475a11.94 11.94 0 0 1 1.067-1.108 4.81 4.81 0 0 1 1.124-.773c.39-.19.807-.285 1.248-.285.771 0 1.264.305 1.48.915.214.61.217 1.418.007 2.426l-.479 2.316a374.179 374.179 0 0 0-.727 3.526c-.22 1.097-.458 2.25-.711 3.458h4.926l.735-3.483c.237-1.125.499-2.381.785-3.77.133-.648.262-1.275.389-1.88l.339-1.611-.024.11.035-.04c.237-.26.475-.502.717-.727l.181-.166a5.203 5.203 0 0 1 1.132-.78 2.75 2.75 0 0 1 1.248-.294c.772 0 1.265.305 1.48.915.215.61.217 1.418.008 2.426l-.48 2.316a573.423 573.423 0 0 1-.719 3.534 1402.9 1402.9 0 0 1-.718 3.45h4.942c.242-1.197.48-2.355.71-3.475.232-1.119.497-2.378.794-3.777.132-.65.262-1.276.389-1.88l.338-1.612c.42-1.959.287-3.525-.396-4.7-.683-1.176-1.868-1.763-3.554-1.763-.76 0-1.493.137-2.199.41a7.675 7.675 0 0 0-1.958 1.117 7.932 7.932 0 0 0-1.546 1.595h-.362l-.026-.133Zm21.368-2.99c1.73 0 3.141.319 4.232.957 1.09.637 1.83 1.533 2.215 2.686.386 1.152.391 2.495.017 4.029-.089.37-.18.716-.273 1.04-.07.244-.145.481-.225.712l-.081.229h-10.12l-.003.066c-.023.64.07 1.198.28 1.671.314.711.834 1.243 1.562 1.595.727.353 1.62.529 2.677.529.463 0 .978-.042 1.546-.126a11.392 11.392 0 0 0 1.694-.386 7.815 7.815 0 0 0 1.554-.663l-.661 4.264c-.298.18-.706.347-1.223.504-.518.156-1.116.285-1.794.386-.678.1-1.408.15-2.19.15-1.984 0-3.64-.388-4.967-1.166a6.363 6.363 0 0 1-2.81-3.316c-.546-1.432-.62-3.133-.224-5.103.331-1.623.893-3.039 1.687-4.248.793-1.208 1.79-2.146 2.991-2.812 1.202-.665 2.573-.998 4.116-.998Zm.1 3.542c-.563 0-1.11.151-1.645.453-.535.302-1.011.772-1.43 1.41a6.12 6.12 0 0 0-.647 1.348l-.05.147 5.974-.126.02-.144c.081-.737-.026-1.397-.322-1.98-.374-.739-1.008-1.108-1.9-1.108ZM99.102 25.08c.242-1.197.48-2.347.71-3.45l.745-3.55.71-3.475a10.82 10.82 0 0 1 1.083-1.108 4.978 4.978 0 0 1 1.157-.773c.402-.19.84-.285 1.314-.285.871 0 1.422.305 1.653.915.232.61.237 1.418.017 2.426l-.48 2.316a887.36 887.36 0 0 1-1.438 6.984h4.943l.735-3.483c.237-1.125.494-2.381.769-3.77.143-.648.278-1.275.405-1.88l.339-1.611c.408-1.959.264-3.525-.43-4.7-.694-1.176-1.934-1.763-3.719-1.763a6.41 6.41 0 0 0-2.256.403 7.362 7.362 0 0 0-1.976 1.1 7.515 7.515 0 0 0-1.504 1.552h-.413l.347-2.854-4.166.252a773.733 773.733 0 0 1-.843 4.063c-.275 1.31-.534 2.563-.776 3.76l-.348 1.679a2903.763 2903.763 0 0 1-1.52 7.252h4.942Zm21.863.454c.397 0 .826-.037 1.289-.11a10.34 10.34 0 0 0 1.298-.285c.402-.117.719-.255.95-.411l.529-4.113c-.43.302-.857.515-1.281.638a4.211 4.211 0 0 1-1.165.184c-.805 0-1.353-.28-1.645-.839-.292-.56-.322-1.377-.091-2.451l1.248-6.044h4.918l.793-3.777h-4.924l.033-.158c.072-.338.14-.666.206-.982l.065-.312c.171-.823.339-1.623.504-2.401.166-.778.336-1.603.513-2.476l-5.058.89c-.232 1.108-.455 2.182-.67 3.223-.129.624-.269 1.291-.419 2l-.046.216h-2.667l-.794 3.777h2.676l-.021.102-.06.293c-.176.867-.344 1.678-.504 2.434a388.73 388.73 0 0 0-.454 2.182c-.144.7-.292 1.413-.447 2.14-.297 1.422-.264 2.598.1 3.526.363.93.989 1.62 1.876 2.074.887.453 1.97.68 3.248.68ZM27.124 21.606a849.78 849.78 0 0 0-.71 3.475H21.47c.254-1.197.496-2.358.727-3.483.232-1.125.496-2.381.794-3.77l1.917-9.3c.298-1.365.584-2.714.86-4.046L26.595.47l5.026-.436-.852 4.07c-.292 1.394-.598 2.863-.917 4.408l-1.934 9.3c-.298 1.41-.562 2.675-.794 3.794Z"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h128v26H0z"></path></clipPath></defs></svg>
+                    </a>
+                    <a href="/docs/" aria-label="Docs homepage" class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1">
+                        <div class="font-black text-butter dark:text-white text-xl pt-1">
+                            DOCS
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
+                <nav class="text-base lg:text-sm w-60 pr-5">
+  <ul role="list" class="mb-9 space-y-2.5">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
+          <h2 class="flex items-center gap-4 transition duration-300">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" class="" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M3.25 3A2.25 2.25 0 0 0 1 5.25v9.5A2.25 2.25 0 0 0 3.25 17h13.5A2.25 2.25 0 0 0 19 14.75v-9.5A2.25 2.25 0 0 0 16.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75V9h-15zM4 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H4zM6.25 6A.75.75 0 0 1 7 5.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H7a.75.75 0 0 1-.75-.75V6zM10 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H10z" clip-rule="evenodd"/></svg>
+            <span>Panel Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/forms/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
+            <span>Form Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/tables/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/notifications/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
+            <span>Notifications</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/actions/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Actions</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/infolists/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:queue-list"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h11a2.5 2.5 0 0 1 0 5h-11A2.5 2.5 0 0 1 2 4.5zm.75 4.583a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.58a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.587a.75.75 0 0 0 0 1.5h14.5a.75.75 0 1 0 0-1.5H2.75z"/></svg>
+            <span>Infolist Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/widgets/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <span>Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
+          </h2>
+        </a>
+      </li>
+  </ul>
+  <ul role="list" class="space-y-4">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Installation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Getting started</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/resources/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
+          <h2 class="">Resources</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          <li class="relative">
+              <a href="/docs/3.x/panels/resources/getting-started" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 font-semibold text-butter before:bg-butter">
+                <div class="transition duration-300 ease-out">Getting started</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/listing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Listing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/creating-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Creating records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/editing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Editing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/viewing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Viewing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/deleting-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Deleting records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/relation-managers" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Managing relationships</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/global-search" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Global search</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/widgets" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Widgets</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/custom-pages" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Custom pages</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/security" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Security</div>
+              </a>
+            </li>
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Pages</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Dashboard</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Navigation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/notifications" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Notifications</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/users" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Users</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/configuration" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Configuration</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Multi-tenancy</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/themes" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Themes</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/plugins" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Plugin development</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/testing" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/upgrade-guide" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Upgrading from v2.x</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li>
+  </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="flex gap-3 items-center">
+                <a href="/" aria-label="Homepage" class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out motion-reduce:transition-none hover:-translate-y-1">
+                    <svg width="128" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434] hidden min-[510px]:block"><g clip-path="url(#a)" fill="currentColor"><path d="M4.975 25.081c.254-1.197.496-2.355.728-3.475.193-.932.408-1.966.647-3.1l.146-.694 1.18-5.708H12.2l.793-3.777H8.265l.149-.747.165-.831c.176-.862.496-1.508.959-1.94.463-.43 1.102-.646 1.917-.646.463 0 .92.056 1.372.168.452.112.882.269 1.29.47l1.19-4.029a7.6 7.6 0 0 0-1.232-.411 11.797 11.797 0 0 0-1.48-.269A13.154 13.154 0 0 0 11.043 0c-.816 0-1.598.098-2.347.294a5.826 5.826 0 0 0-2.05.99c-.617.465-1.154 1.094-1.612 1.889-.457.795-.807 1.785-1.05 2.971L3.48 8.587l.053-.26H.793L0 12.104h2.744l-.04.193c-.074.348-.146.694-.217 1.035l-.107.51-.48 2.308-.346 1.679a965.389 965.389 0 0 1-.785 3.769 452.348 452.348 0 0 0-.72 3.483h4.926ZM19.047 8.294l-.472 1.214 2.21 1.555c.12.083.183.238.166.395l-.008.046-.149.681c-.037.171-.167.295-.32.306l-1.951.13 1.668 1.164c.12.083.183.239.165.395l-.007.047-.149.68c-.037.172-.167.296-.32.306l-1.951.131 1.668 1.163c.12.083.183.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.951.132 1.668 1.163c.119.083.183.238.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.952.131 1.669 1.163c.119.083.182.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.321.306l-2.736.242-.34 1.46h-2.185l.675-2.683c.038-.171.168-.295.321-.305l1.95-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.046.149-.681c.037-.171.167-.295.32-.306l1.95-.131-1.667-1.163a.425.425 0 0 1-.165-.395l.007-.047.149-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.162a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.038-.172.168-.296.32-.306l1.952-.131L16.49 9.91a.424.424 0 0 1-.165-.395l.008-.047.304-1.081 2.409-.093Zm1.68-8.143c.896 0 1.56.305 1.99.915.433.61.562 1.34.39 2.19-.195.975-.597 1.632-1.206 1.974-.61.34-1.368.512-2.275.512-.885 0-1.551-.266-1.999-.798-.448-.532-.575-1.29-.38-2.275.183-.895.585-1.539 1.206-1.93.62-.392 1.378-.588 2.274-.588ZM40.16 7.874c1.586 0 2.892.268 3.917.805 1.025.538 1.736 1.301 2.132 2.292.397.99.447 2.168.15 3.534a134 134 0 0 1-.348 1.704l-.38 1.805-.298 1.41-.553 2.652c-.193.93-.405 1.93-.637 3.005H39.88l.214-2.232h-.38a6.622 6.622 0 0 1-1.347 1.468 5.376 5.376 0 0 1-1.595.873 5.686 5.686 0 0 1-1.852.294c-1.046 0-1.922-.26-2.628-.78a4.033 4.033 0 0 1-1.47-2.074c-.276-.861-.304-1.802-.084-2.82.166-.784.433-1.438.802-1.964.37-.526.816-.957 1.34-1.293a7.06 7.06 0 0 1 1.735-.797 13.188 13.188 0 0 1 1.975-.445l5.174-.823c.11-.503.069-.943-.124-1.318-.193-.375-.537-.666-1.033-.873-.496-.207-1.13-.31-1.901-.31-.397 0-.818.03-1.265.092-.446.062-.912.151-1.396.269-.485.117-.984.263-1.496.436a20.15 20.15 0 0 0-1.579.613l.777-4.399c.397-.134.848-.265 1.355-.394a31.603 31.603 0 0 1 1.604-.361 21.025 21.025 0 0 1 1.727-.269c.59-.067 1.165-.1 1.727-.1Zm.991 8.88a3.701 3.701 0 0 1-.562.328c-.22.106-.523.212-.909.319-.386.106-.909.232-1.57.378a9.2 9.2 0 0 0-1.174.352 2.306 2.306 0 0 0-.876.57c-.231.247-.386.566-.463.958-.11.615-.005 1.094.314 1.435.32.342.755.512 1.306.512.397 0 .796-.087 1.199-.26a4.389 4.389 0 0 0 1.157-.747c.369-.325.708-.71 1.016-1.158l.562-2.686Zm24.03-5.89c-.173-.843-.526-1.515-1.058-2.017-.69-.649-1.65-.973-2.885-.973-.76 0-1.49.134-2.19.403-.7.268-1.344.635-1.934 1.1a7.607 7.607 0 0 0-1.496 1.552h-.413l.347-2.854-4.166.252c-.286 1.399-.567 2.75-.843 4.054-.275 1.304-.534 2.56-.776 3.77l-.348 1.678a469.35 469.35 0 0 0-.793 3.769 643.41 643.41 0 0 1-.727 3.483h4.942c.242-1.197.48-2.35.71-3.458.232-1.108.48-2.289.745-3.542l.71-3.475a11.94 11.94 0 0 1 1.067-1.108 4.81 4.81 0 0 1 1.124-.773c.39-.19.807-.285 1.248-.285.771 0 1.264.305 1.48.915.214.61.217 1.418.007 2.426l-.479 2.316a374.179 374.179 0 0 0-.727 3.526c-.22 1.097-.458 2.25-.711 3.458h4.926l.735-3.483c.237-1.125.499-2.381.785-3.77.133-.648.262-1.275.389-1.88l.339-1.611-.024.11.035-.04c.237-.26.475-.502.717-.727l.181-.166a5.203 5.203 0 0 1 1.132-.78 2.75 2.75 0 0 1 1.248-.294c.772 0 1.265.305 1.48.915.215.61.217 1.418.008 2.426l-.48 2.316a573.423 573.423 0 0 1-.719 3.534 1402.9 1402.9 0 0 1-.718 3.45h4.942c.242-1.197.48-2.355.71-3.475.232-1.119.497-2.378.794-3.777.132-.65.262-1.276.389-1.88l.338-1.612c.42-1.959.287-3.525-.396-4.7-.683-1.176-1.868-1.763-3.554-1.763-.76 0-1.493.137-2.199.41a7.675 7.675 0 0 0-1.958 1.117 7.932 7.932 0 0 0-1.546 1.595h-.362l-.026-.133Zm21.368-2.99c1.73 0 3.141.319 4.232.957 1.09.637 1.83 1.533 2.215 2.686.386 1.152.391 2.495.017 4.029-.089.37-.18.716-.273 1.04-.07.244-.145.481-.225.712l-.081.229h-10.12l-.003.066c-.023.64.07 1.198.28 1.671.314.711.834 1.243 1.562 1.595.727.353 1.62.529 2.677.529.463 0 .978-.042 1.546-.126a11.392 11.392 0 0 0 1.694-.386 7.815 7.815 0 0 0 1.554-.663l-.661 4.264c-.298.18-.706.347-1.223.504-.518.156-1.116.285-1.794.386-.678.1-1.408.15-2.19.15-1.984 0-3.64-.388-4.967-1.166a6.363 6.363 0 0 1-2.81-3.316c-.546-1.432-.62-3.133-.224-5.103.331-1.623.893-3.039 1.687-4.248.793-1.208 1.79-2.146 2.991-2.812 1.202-.665 2.573-.998 4.116-.998Zm.1 3.542c-.563 0-1.11.151-1.645.453-.535.302-1.011.772-1.43 1.41a6.12 6.12 0 0 0-.647 1.348l-.05.147 5.974-.126.02-.144c.081-.737-.026-1.397-.322-1.98-.374-.739-1.008-1.108-1.9-1.108ZM99.102 25.08c.242-1.197.48-2.347.71-3.45l.745-3.55.71-3.475a10.82 10.82 0 0 1 1.083-1.108 4.978 4.978 0 0 1 1.157-.773c.402-.19.84-.285 1.314-.285.871 0 1.422.305 1.653.915.232.61.237 1.418.017 2.426l-.48 2.316a887.36 887.36 0 0 1-1.438 6.984h4.943l.735-3.483c.237-1.125.494-2.381.769-3.77.143-.648.278-1.275.405-1.88l.339-1.611c.408-1.959.264-3.525-.43-4.7-.694-1.176-1.934-1.763-3.719-1.763a6.41 6.41 0 0 0-2.256.403 7.362 7.362 0 0 0-1.976 1.1 7.515 7.515 0 0 0-1.504 1.552h-.413l.347-2.854-4.166.252a773.733 773.733 0 0 1-.843 4.063c-.275 1.31-.534 2.563-.776 3.76l-.348 1.679a2903.763 2903.763 0 0 1-1.52 7.252h4.942Zm21.863.454c.397 0 .826-.037 1.289-.11a10.34 10.34 0 0 0 1.298-.285c.402-.117.719-.255.95-.411l.529-4.113c-.43.302-.857.515-1.281.638a4.211 4.211 0 0 1-1.165.184c-.805 0-1.353-.28-1.645-.839-.292-.56-.322-1.377-.091-2.451l1.248-6.044h4.918l.793-3.777h-4.924l.033-.158c.072-.338.14-.666.206-.982l.065-.312c.171-.823.339-1.623.504-2.401.166-.778.336-1.603.513-2.476l-5.058.89c-.232 1.108-.455 2.182-.67 3.223-.129.624-.269 1.291-.419 2l-.046.216h-2.667l-.794 3.777h2.676l-.021.102-.06.293c-.176.867-.344 1.678-.504 2.434a388.73 388.73 0 0 0-.454 2.182c-.144.7-.292 1.413-.447 2.14-.297 1.422-.264 2.598.1 3.526.363.93.989 1.62 1.876 2.074.887.453 1.97.68 3.248.68ZM27.124 21.606a849.78 849.78 0 0 0-.71 3.475H21.47c.254-1.197.496-2.358.727-3.483.232-1.125.496-2.381.794-3.77l1.917-9.3c.298-1.365.584-2.714.86-4.046L26.595.47l5.026-.436-.852 4.07c-.292 1.394-.598 2.863-.917 4.408l-1.934 9.3c-.298 1.41-.562 2.675-.794 3.794Z"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h128v26H0z"></path></clipPath></defs></svg>
+                </a>
+                <a href="/docs/" aria-label="Docs homepage" class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1">
+                    <div class="font-black text-butter dark:text-white text-xl min-[510px]:pt-1">
+                        DOCS
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="relative flex flex-1 justify-end gap-3.5 items-center">
+            <div x-data>
+  <p class="sr-only">Version</p>
+    <button x-on:click="$refs.panel.toggle" type="button" class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm text-gray-600 ring-1 ring-merino dark:bg-dolphin/10 dark:text-gray-300 dark:ring-inset dark:ring-white/5" aria-label="Open version options">
+      <span>Version&nbsp;</span>
+      <span class="font-bold">3.x</span>
+    </button>
+
+    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5" aria-label="Version options">
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '3.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>3.x</span>
+          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '2.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>2.x</span>
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '1.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>1.x</span>
+          </a>
+    </div>
+</div>
+            <div x-data="{
+    theme: 'system',
+    isDarkMode: window.matchMedia('(prefers-color-scheme: dark)'),
+    selected: 'system',
+    init() {
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.updateTheme(),
+        )
+
+        new MutationObserver(([{ oldValue }]) => {
+            let newValue =
+                document.documentElement.getAttribute('data-theme')
+            if (newValue !== oldValue) {
+                try {
+                    window.localStorage.setItem('theme', newValue)
+                } catch {}
+                this.updateThemeWithoutTransitions(newValue)
+            }
+        }).observe(document.documentElement, {
+            attributeFilter: ['data-theme'],
+            attributeOldValue: true,
+        })
+
+        this.isDarkMode.addEventListener('change', () =>
+            this.updateThemeWithoutTransitions(),
+        )
+    },
+    updateTheme(theme) {
+        this.theme = theme ?? window.localStorage.theme ?? 'system'
+
+        if (
+            this.theme === 'dark' ||
+            (this.theme === 'system' && this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.add('dark')
+        } else if (
+            this.theme === 'light' ||
+            (this.theme === 'system' && !this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.remove('dark')
+        }
+
+        this.selected = this.theme
+        window.localStorage.theme = this.theme
+        document.documentElement.setAttribute('data-theme', this.theme)
+        return this.theme
+    },
+    updateThemeWithoutTransitions(theme) {
+        this.updateTheme(theme)
+        document.documentElement.classList.add('[&_*]:!transition-none')
+        window.setTimeout(() => {
+            document.documentElement.classList.remove(
+                '[&_*]:!transition-none',
+            )
+        }, 0)
+    },
+}">
+  <p class="sr-only">Theme</p>
+  <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full ring-1 ring-black/5 dark:bg-dolphin/10 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-butter [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-butter [[data-theme=dark]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-hurricane [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-hurricane [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+  </button>
+  <div x-ref="panel" class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-[#1f1c36] dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
+      <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'light',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'light',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'light' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+          </div>
+          <div class="ml-3">Light</div>
+        </button><button x-bind:key="dark" x-on:click="updateTheme('dark'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'dark',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'dark',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'dark' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="ml-3">Dark</div>
+        </button><button x-bind:key="system" x-on:click="updateTheme('system'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'system',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'system',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'system' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:computer-desktop"><path fill-rule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="ml-3">System</div>
+        </button>
+  </div>
+</div>
+            <!--<div id="docsearch"></div>-->
+            <a href="https://github.com/filamentphp/filament" class="group/github-link block" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="h-7 w-7 transition duration-200 fill-stone-800 group-hover/github-link:fill-black dark:fill-gray-300 dark:group-hover/github-link:fill-white" astro-icon="github"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+        </div>
+    </div>
+</header>
+
+    
+
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-XWOXDUXN">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-XWOXDUXN">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-XWOXDUXN"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-XWOXDUXN"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-XWOXDUXN" x-data="{
+          position: 0,
+          init() {
+            this.position = localStorage.getItem('sidebarScrollPosition') || 0;
+
+            if (this.position > 0) {
+              this.$el.scrollTop = this.position;
+            }
+
+            this.$el.addEventListener('scroll', () => {
+              this.position = this.$el.scrollTop;
+              localStorage.setItem('sidebarScrollPosition', this.position);
+            });
+          }
+        }">
+          <nav class="text-base lg:text-sm w-60 pr-5">
+  <ul role="list" class="mb-9 space-y-2.5">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
+          <h2 class="flex items-center gap-4 transition duration-300">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" class="" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M3.25 3A2.25 2.25 0 0 0 1 5.25v9.5A2.25 2.25 0 0 0 3.25 17h13.5A2.25 2.25 0 0 0 19 14.75v-9.5A2.25 2.25 0 0 0 16.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75V9h-15zM4 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H4zM6.25 6A.75.75 0 0 1 7 5.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H7a.75.75 0 0 1-.75-.75V6zM10 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H10z" clip-rule="evenodd"/></svg>
+            <span>Panel Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/forms/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
+            <span>Form Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/tables/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/notifications/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
+            <span>Notifications</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/actions/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Actions</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/infolists/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:queue-list"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h11a2.5 2.5 0 0 1 0 5h-11A2.5 2.5 0 0 1 2 4.5zm.75 4.583a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.58a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.587a.75.75 0 0 0 0 1.5h14.5a.75.75 0 1 0 0-1.5H2.75z"/></svg>
+            <span>Infolist Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/widgets/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <span>Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
+          </h2>
+        </a>
+      </li>
+  </ul>
+  <ul role="list" class="space-y-4">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Installation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Getting started</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/resources/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
+          <h2 class="">Resources</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          <li class="relative">
+              <a href="/docs/3.x/panels/resources/getting-started" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 font-semibold text-butter before:bg-butter">
+                <div class="transition duration-300 ease-out">Getting started</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/listing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Listing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/creating-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Creating records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/editing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Editing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/viewing-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Viewing records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/deleting-records" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Deleting records</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/relation-managers" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Managing relationships</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/global-search" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Global search</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/widgets" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Widgets</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/custom-pages" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Custom pages</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/panels/resources/security" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Security</div>
+              </a>
+            </li>
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Pages</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Dashboard</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Navigation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/notifications" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Notifications</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/users" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Users</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/configuration" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Configuration</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Multi-tenancy</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/themes" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Themes</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/plugins" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Plugin development</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/testing" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/panels/upgrade-guide" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Upgrading from v2.x</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li>
+  </ul>
+</nav>
+        </div>
+      </div>
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-XWOXDUXN">
+        <article class="astro-XWOXDUXN">
+          <header class="mb-9 space-y-1 astro-XWOXDUXN">
+              <p class="font-display font-bold text-butter astro-XWOXDUXN">
+                  Panel Builder 
+                      - Resources
+                </p>
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-XWOXDUXN">
+                  Getting started
+                </h1>
+            </header>
+          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
+  <h2 id="overview"><a class="heading-anchor" href="#overview"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Overview</h2>
+<p>Resources are static classes that are used to build CRUD interfaces for your Eloquent models. They describe how administrators should be able to interact with data from your app - using tables and forms.</p>
+<h2 id="creating-a-resource"><a class="heading-anchor" href="#creating-a-resource"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Creating a resource</h2>
+<p>To create a resource for the <code>App\Models\Customer</code> model:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer
+</textarea></code></pre>
+<p>This will create several files in the <code>app/Filament/Resources</code> directory:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">.</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource.php</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource</span></div><div class='line'><span style="color: #A6ACCD;">|   +-- Pages</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- CreateCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- EditCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- ListCustomers.php</span></div><textarea data-torchlight-original="true" style="display: none !important;">.
++-- CustomerResource.php
++-- CustomerResource
+|   +-- Pages
+|   |   +-- CreateCustomer.php
+|   |   +-- EditCustomer.php
+|   |   +-- ListCustomers.php
+</textarea></code></pre>
+<p>Your new resource class lives in <code>CustomerResource.php</code>.</p>
+<p>The classes in the <code>Pages</code> directory are used to customize the pages in the app that interact with your resource. They&#39;re all full-page <a href="https://livewire.laravel.com">Livewire</a> components that you can customize in any way you wish.</p>
+<blockquote>
+<p>Have you created a resource, but it&#39;s not appearing in the navigation menu? If you have a <a href="#authorization">model policy</a>, make sure you return <code>true</code> from the <code>viewAny()</code> method.</p>
+</blockquote>
+<h3 id="simple-modal-resources"><a class="heading-anchor" href="#simple-modal-resources"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Simple (modal) resources</h3>
+<p>Sometimes, your models are simple enough that you only want to manage records on one page, using modals to create, edit and delete records. To generate a simple resource with modals:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--simple</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --simple
+</textarea></code></pre>
+<p>Your resource will have a &quot;Manage&quot; page, which is a List page with modals added.</p>
+<p>Additionally, your simple resource will have no <code>getRelations()</code> method, as <a href="relation-managers">relation managers</a> are only displayed on the Edit and View pages, which are not present in simple resources. Everything else is the same.</p>
+<h3 id="automatically-generating-forms-and-tables"><a class="heading-anchor" href="#automatically-generating-forms-and-tables"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Automatically generating forms and tables</h3>
+<p>If you&#39;d like to save time, Filament can automatically generate the <a href="#resource-forms">form</a> and <a href="#resource-tables">table</a> for you, based on your model&#39;s database columns.</p>
+<p>The <code>doctrine/dbal</code> package is required to use this functionality:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">doctrine/dbal</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require doctrine/dbal --dev
+</textarea></code></pre>
+<p>When creating your resource, you may now use <code>--generate</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--generate</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --generate
+</textarea></code></pre>
+<blockquote>
+<p>If your table contains ENUM columns, <code>doctrine/dbal</code> is unable to scan your table and will crash. Hence Filament is unable to generate the schema for your resource if it contains an ENUM column. Read more about this issue <a href="https://github.com/doctrine/dbal/issues/3819#issuecomment-573419808">here</a>.</p>
+</blockquote>
+<h3 id="handling-soft-deletes"><a class="heading-anchor" href="#handling-soft-deletes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Handling soft deletes</h3>
+<p>By default, you will not be able to interact with deleted records in the app. If you&#39;d like to add functionality to restore, force delete and filter trashed records in your resource, use the <code>--soft-deletes</code> flag when generating the resource:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--soft-deletes</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --soft-deletes
+</textarea></code></pre>
+<p>You can find out more about soft deleting <a href="deleting-records#handling-soft-deletes">here</a>.</p>
+<h3 id="generating-a-view-page"><a class="heading-anchor" href="#generating-a-view-page"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Generating a View page</h3>
+<p>By default, only List, Create and Edit pages are generated for your resource. If you&#39;d also like a <a href="viewing-records">View page</a>, use the <code>--view</code> flag:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--view</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer --view
+</textarea></code></pre>
+<h2 id="record-titles"><a class="heading-anchor" href="#record-titles"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Record titles</h2>
+<p>A <code>$recordTitleAttribute</code> may be set for your resource, which is the name of the column on your model that can be used to identify it from others.</p>
+<p>For example, this could be a blog post&#39;s <code>title</code> or a customer&#39;s <code>name</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">recordTitleAttribute </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $recordTitleAttribute = 'name';
+</textarea></code></pre>
+<p>This is required for features like <a href="global-search">global search</a> to work.</p>
+<blockquote>
+<p>You may specify the name of an <a href="https://laravel.com/docs/eloquent-mutators#defining-an-accessor">Eloquent accessor</a> if just one column is inadequate at identifying a record.</p>
+</blockquote>
+<h2 id="resource-forms"><a class="heading-anchor" href="#resource-forms"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Resource forms</h2>
+<p>Resource classes contain a <code>form()</code> method that is used to build the forms on the <a href="creating-records">Create</a> and <a href="editing-records">Edit</a> pages:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Form</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">email</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms;
+use Filament\Forms\Form;
+
+public static function form(Form $form): Form
+{
+    return $form
+        -&gt;schema([
+            Forms\Components\TextInput::make('name')-&gt;required(),
+            Forms\Components\TextInput::make('email')-&gt;email()-&gt;required(),
+            // ...
+        ]);
+}
+</textarea></code></pre>
+<p>The <code>schema()</code> method is used to define the structure of your form. It is an array of <a href="../../forms/fields/getting-started#available-fields">fields</a> and <a href="../../forms/layout/getting-started#available-layout-components">layout components</a>, in the order they should appear in your form.</p>
+<p>Check out the Forms docs for a <a href="../../forms/getting-started">guide</a> on how to build forms with Filament.</p>
+<h3 id="hiding-components-based-on-the-current-operation"><a class="heading-anchor" href="#hiding-components-based-on-the-current-operation"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Hiding components based on the current operation</h3>
+<p>The <code>hiddenOn()</code> method of form components allows you to dynamically hide fields based on the current page or action.</p>
+<p>In this example, we hide the <code>password</code> field on the <code>edit</code> page:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">hiddenOn</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Livewire\Component;
+
+Forms\Components\TextInput::make('password')
+    -&gt;password()
+    -&gt;required()
+    -&gt;hiddenOn('edit'),
+</textarea></code></pre>
+<p>Alternatively, we have a <code>visibleOn()</code> shortcut method for only showing a field on one page or action:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">required</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">visibleOn</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Livewire\Component;
+
+Forms\Components\TextInput::make('password')
+    -&gt;password()
+    -&gt;required()
+    -&gt;visibleOn('create'),
+</textarea></code></pre>
+<h2 id="resource-tables"><a class="heading-anchor" href="#resource-tables"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Resource tables</h2>
+<p>Resource classes contain a <code>table()</code> method that is used to build the table on the <a href="listing-records">List page</a>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Builder</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">TextColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">filters</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filters</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Filter</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">verified</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">whereNotNull</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email_verified_at</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">actions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">EditAction</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">bulkActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BulkActionGroup</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">                Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">DeleteBulkAction</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+public static function table(Table $table): Table
+{
+    return $table
+        -&gt;columns([
+            Tables\Columns\TextColumn::make('name'),
+            Tables\Columns\TextColumn::make('email'),
+            // ...
+        ])
+        -&gt;filters([
+            Tables\Filters\Filter::make('verified')
+                -&gt;query(fn (Builder $query): Builder =&gt; $query-&gt;whereNotNull('email_verified_at')),
+            // ...
+        ])
+        -&gt;actions([
+            Tables\Actions\EditAction::make(),
+        ])
+        -&gt;bulkActions([
+            Tables\Actions\BulkActionGroup::make([
+                Tables\Actions\DeleteBulkAction::make(),
+            ]),
+        ]);
+}
+</textarea></code></pre>
+<p>Check out the <a href="../../tables/getting-started">tables</a> docs to find out how to add table columns, filters, actions and more.</p>
+<h2 id="authorization"><a class="heading-anchor" href="#authorization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Authorization</h2>
+<p>For authorization, Filament will observe any <a href="https://laravel.com/docs/authorization#creating-policies">model policies</a> that are registered in your app. The following methods are used:</p>
+<ul>
+<li><code>viewAny()</code> is used to completely hide resources from the navigation menu, and prevents the user from accessing any pages.</li>
+<li><code>create()</code> is used to control <a href="creating-records">creating new records</a>.</li>
+<li><code>update()</code> is used to control <a href="editing-records">editing a record</a>.</li>
+<li><code>view()</code> is used to control <a href="viewing-records">viewing a record</a>.</li>
+<li><code>delete()</code> is used to prevent a single record from being deleted. <code>deleteAny()</code> is used to prevent records from being bulk deleted. Filament uses the <code>deleteAny()</code> method because iterating through multiple records and checking the <code>delete()</code> policy is not very performant.</li>
+<li><code>forceDelete()</code> is used to prevent a single soft-deleted record from being force-deleted. <code>forceDeleteAny()</code> is used to prevent records from being bulk force-deleted. Filament uses the <code>forceDeleteAny()</code> method because iterating through multiple records and checking the <code>forceDelete()</code> policy is not very performant.</li>
+<li><code>restore()</code> is used to prevent a single soft-deleted record from being restored. <code>restoreAny()</code> is used to prevent records from being bulk restored. Filament uses the <code>restoreAny()</code> method because iterating through multiple records and checking the <code>restore()</code> policy is not very performant.</li>
+<li><code>reorder()</code> is used to control <a href="listing-records#reordering-records">reordering a record</a>.</li>
+</ul>
+<h3 id="skipping-authorization"><a class="heading-anchor" href="#skipping-authorization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Skipping authorization</h3>
+<p>If you&#39;d like to skip authorization for a resource, you may set the <code>$shouldSkipAuthorization</code> property to <code>true</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">shouldSkipAuthorization </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static bool $shouldSkipAuthorization = true;
+</textarea></code></pre>
+<h2 id="customizing-the-model-label"><a class="heading-anchor" href="#customizing-the-model-label"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the model label</h2>
+<p>Each resource has a &quot;model label&quot; which is automatically generated from the model name. For example, an <code>App\Models\Customer</code> model will have a <code>customer</code> label.</p>
+<p>The label is used in several parts of the UI, and you may customize it using the <code>$modelLabel</code> property:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">modelLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">cliente</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $modelLabel = 'cliente';
+</textarea></code></pre>
+<p>Alternatively, you may use the <code>getModelLabel()</code> to define a dynamic label:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getModelLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getModelLabel(): string
+{
+    return __('filament/resources/customer.label');
+}
+</textarea></code></pre>
+<h3 id="customizing-the-plural-model-label"><a class="heading-anchor" href="#customizing-the-plural-model-label"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the plural model label</h3>
+<p>Resources also have a &quot;plural model label&quot; which is automatically generated from the model label. For example, a <code>customer</code> label will be pluralized into <code>customers</code>.</p>
+<p>You may customize the plural version of the label using the <code>$pluralModelLabel</code> property:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">pluralModelLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">clientes</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $pluralModelLabel = 'clientes';
+</textarea></code></pre>
+<p>Alternatively, you may set a dynamic plural label in the <code>getPluralModelLabel()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPluralModelLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.plural_label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPluralModelLabel(): string
+{
+    return __('filament/resources/customer.plural_label');
+}
+</textarea></code></pre>
+<h2 id="resource-navigation-items"><a class="heading-anchor" href="#resource-navigation-items"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Resource navigation items</h2>
+<p>Filament will automatically generate a navigation menu item for your resource using the <a href="#plural-label">plural label</a>.</p>
+<p>If you&#39;d like to customize the navigation item label, you may use the <code>$navigationLabel</code> property:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationLabel </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Mis Clientes</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationLabel = 'Mis Clientes';
+</textarea></code></pre>
+<p>Alternatively, you may set a dynamic navigation label in the <code>getNavigationLabel()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/resources/customer.navigation_label</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationLabel(): string
+{
+    return __('filament/resources/customer.navigation_label');
+}
+</textarea></code></pre>
+<h3 id="setting-a-resource-navigation-icon"><a class="heading-anchor" href="#setting-a-resource-navigation-icon"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a resource navigation icon</h3>
+<p>The <code>$navigationIcon</code> property supports the name of any Blade component. By default, <a href="https://heroicons.com">Heroicons</a> are installed. However, you may create your own custom icon components or install an alternative library if you wish.</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationIcon </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-user-group</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationIcon = 'heroicon-o-user-group';
+</textarea></code></pre>
+<p>Alternatively, you may set a dynamic navigation icon in the <code>getNavigationIcon()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationIcon</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-o-user-group</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationIcon(): ?string
+{
+    return 'heroicon-o-user-group';
+}
+</textarea></code></pre>
+<h3 id="sorting-resource-navigation-items"><a class="heading-anchor" href="#sorting-resource-navigation-items"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Sorting resource navigation items</h3>
+<p>The <code>$navigationSort</code> property allows you to specify the order in which navigation items are listed:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationSort </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?int $navigationSort = 2;
+</textarea></code></pre>
+<p>Alternatively, you may set a dynamic navigation item order in the <code>getNavigationSort()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationSort</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">2</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationSort(): ?int
+{
+    return 2;
+}
+</textarea></code></pre>
+<h3 id="grouping-resource-navigation-items"><a class="heading-anchor" href="#grouping-resource-navigation-items"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Grouping resource navigation items</h3>
+<p>You may group navigation items by specifying a <code>$navigationGroup</code> property:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationGroup </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Shop</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $navigationGroup = 'Shop';
+</textarea></code></pre>
+<p>Alternatively, you may use the <code>getNavigationGroup()</code> method to set a dynamic group label:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getNavigationGroup</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">__</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filament/navigation.groups.shop</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getNavigationGroup(): ?string
+{
+    return __('filament/navigation.groups.shop');
+}
+</textarea></code></pre>
+<h2 id="generating-urls-to-resource-pages"><a class="heading-anchor" href="#generating-urls-to-resource-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Generating URLs to resource pages</h2>
+<p>Filament provides <code>getUrl()</code> static method on resource classes to generate URLs to resources and specific pages within them. Traditionally, you would need to construct the URL by hand or by using Laravel&#39;s <code>route()</code> helper, but these methods depend on knowledge of the resource&#39;s slug or route naming conventions.</p>
+<p>The <code>getUrl()</code> method, without any arguments, will generate a URL to the resource&#39;s <a href="listing-records">List page</a>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomerResource</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CustomerResource</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">();</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// /admin/customers</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Resources\CustomerResource;
+
+CustomerResource::getUrl(); // /admin/customers
+</textarea></code></pre>
+<p>You may also generate URLs to specific pages within the resource. The name of each page is the array key in the <code>getPages()</code> array of the resource. For example, to generate a URL to the <a href="creating-records">Create page</a>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomerResource</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CustomerResource</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// /admin/customers/create</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Resources\CustomerResource;
+
+CustomerResource::getUrl('create'); // /admin/customers/create
+</textarea></code></pre>
+<p>Some pages in the <code>getPages()</code> method use URL parameters like <code>record</code>. To generate a URL to these pages and pass in a record, you should use the second argument:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomerResource</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">CustomerResource</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">record</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">customer</span><span style="color: #89DDFF;">]);</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// /admin/customers/edit/1</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Resources\CustomerResource;
+
+CustomerResource::getUrl('edit', ['record' =&gt; $customer]); // /admin/customers/edit/1
+</textarea></code></pre>
+<p>In this example, <code>$customer</code> can be an Eloquent model object, or an ID.</p>
+<h2 id="customizing-the-resource-eloquent-query"><a class="heading-anchor" href="#customizing-the-resource-eloquent-query"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the resource Eloquent query</h2>
+<p>Within Filament, every query to your resource model will start with the <code>getEloquentQuery()</code> method.</p>
+<p>Because of this, it&#39;s very easy to apply your own query constraints or <a href="https://laravel.com/docs/eloquent#query-scopes">model scopes</a> that affect the entire resource:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">where</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_active</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()-&gt;where('is_active', true);
+}
+</textarea></code></pre>
+<h3 id="disabling-global-scopes"><a class="heading-anchor" href="#disabling-global-scopes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Disabling global scopes</h3>
+<p>By default, Filament will observe all global scopes that are registered to your model. However, this may not be ideal if you wish to access, for example, soft deleted records.</p>
+<p>To overcome this, you may override the <code>getEloquentQuery()</code> method that Filament uses:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">withoutGlobalScopes</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()-&gt;withoutGlobalScopes();
+}
+</textarea></code></pre>
+<p>Alternatively, you may remove specific global scopes:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Builder</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">parent</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getEloquentQuery</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">withoutGlobalScopes</span><span style="color: #89DDFF;">([</span><span style="color: #FFCB6B;">ActiveScope</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()-&gt;withoutGlobalScopes([ActiveScope::class]);
+}
+</textarea></code></pre>
+<p>More information about removing global scopes may be found in the <a href="https://laravel.com/docs/eloquent#removing-global-scopes">Laravel documentation</a>.</p>
+<h2 id="customizing-the-resource-url"><a class="heading-anchor" href="#customizing-the-resource-url"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the resource URL</h2>
+<p>By default, Filament will generate a URL based on the name of the resource. You can customize this by setting the <code>$slug</code> property on the resource:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">slug </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">pending-orders</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $slug = 'pending-orders';
+</textarea></code></pre>
+<h2 id="deleting-resource-pages"><a class="heading-anchor" href="#deleting-resource-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Deleting resource pages</h2>
+<p>If you&#39;d like to delete a page from your resource, you can just delete the page file from the <code>Pages</code> directory of your resource, and its entry in the <code>getPages()</code> method.</p>
+<p>For example, you may have a resource with records that may not be created by anyone. Delete the <code>Create</code> page file, and then remove it from <code>getPages()</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPages</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ListCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">EditCustomer</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/{record}/edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPages(): array
+{
+    return [
+        'index' =&gt; Pages\ListCustomers::route('/'),
+        'edit' =&gt; Pages\EditCustomer::route('/{record}/edit'),
+    ];
+}
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/01-getting-started.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">GitHub discussion</a>
+          </p>
+</div>
+        </article>
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-XWOXDUXN">
+          <div class="astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
+                  Previous
+                </dt>
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/panels/getting-started" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    <span aria-hidden="true" class="astro-XWOXDUXN">&larr;</span> Getting started
+                  </a>
+                </dd>
+              </div>
+            <div class="ml-auto text-right astro-XWOXDUXN">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
+                  Next
+                </dt>
+                <dd class="mt-1 astro-XWOXDUXN">
+                  <a href="/docs/3.x/panels/resources/listing-records" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    Listing records <span aria-hidden="true" class="astro-XWOXDUXN">&rarr;</span>
+                  </a>
+                </dd>
+              </div>
+        </dl>
+      </div>
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-XWOXDUXN">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-XWOXDUXN">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
+                  On this page
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-a-resource&#34;,&#34;text&#34;:&#34;Creating a resource&#34;,&#34;title&#34;:&#34;Creating a resource&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;simple-modal-resources&#34;,&#34;text&#34;:&#34;Simple (modal) resources&#34;,&#34;title&#34;:&#34;Simple (modal) resources&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-forms-and-tables&#34;,&#34;text&#34;:&#34;Automatically generating forms and tables&#34;,&#34;title&#34;:&#34;Automatically generating forms and tables&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-soft-deletes&#34;,&#34;text&#34;:&#34;Handling soft deletes&#34;,&#34;title&#34;:&#34;Handling soft deletes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;generating-a-view-page&#34;,&#34;text&#34;:&#34;Generating a View page&#34;,&#34;title&#34;:&#34;Generating a View page&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;record-titles&#34;,&#34;text&#34;:&#34;Record titles&#34;,&#34;title&#34;:&#34;Record titles&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resource-forms&#34;,&#34;text&#34;:&#34;Resource forms&#34;,&#34;title&#34;:&#34;Resource forms&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;hiding-components-based-on-the-current-operation&#34;,&#34;text&#34;:&#34;Hiding components based on the current operation&#34;,&#34;title&#34;:&#34;Hiding components based on the current operation&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resource-tables&#34;,&#34;text&#34;:&#34;Resource tables&#34;,&#34;title&#34;:&#34;Resource tables&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorization&#34;,&#34;text&#34;:&#34;Authorization&#34;,&#34;title&#34;:&#34;Authorization&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;skipping-authorization&#34;,&#34;text&#34;:&#34;Skipping authorization&#34;,&#34;title&#34;:&#34;Skipping authorization&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-model-label&#34;,&#34;text&#34;:&#34;Customizing the model label&#34;,&#34;title&#34;:&#34;Customizing the model label&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-plural-model-label&#34;,&#34;text&#34;:&#34;Customizing the plural model label&#34;,&#34;title&#34;:&#34;Customizing the plural model label&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resource-navigation-items&#34;,&#34;text&#34;:&#34;Resource navigation items&#34;,&#34;title&#34;:&#34;Resource navigation items&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-a-resource-navigation-icon&#34;,&#34;text&#34;:&#34;Setting a resource navigation icon&#34;,&#34;title&#34;:&#34;Setting a resource navigation icon&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;sorting-resource-navigation-items&#34;,&#34;text&#34;:&#34;Sorting resource navigation items&#34;,&#34;title&#34;:&#34;Sorting resource navigation items&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;grouping-resource-navigation-items&#34;,&#34;text&#34;:&#34;Grouping resource navigation items&#34;,&#34;title&#34;:&#34;Grouping resource navigation items&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;generating-urls-to-resource-pages&#34;,&#34;text&#34;:&#34;Generating URLs to resource pages&#34;,&#34;title&#34;:&#34;Generating URLs to resource pages&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-resource-eloquent-query&#34;,&#34;text&#34;:&#34;Customizing the resource Eloquent query&#34;,&#34;title&#34;:&#34;Customizing the resource Eloquent query&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;disabling-global-scopes&#34;,&#34;text&#34;:&#34;Disabling global scopes&#34;,&#34;title&#34;:&#34;Disabling global scopes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-resource-url&#34;,&#34;text&#34;:&#34;Customizing the resource URL&#34;,&#34;title&#34;:&#34;Customizing the resource URL&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;deleting-resource-pages&#34;,&#34;text&#34;:&#34;Deleting resource pages&#34;,&#34;title&#34;:&#34;Deleting resource pages&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Overview
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#creating-a-resource" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'creating-a-resource' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Creating a resource
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#simple-modal-resources" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'simple-modal-resources' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Simple (modal) resources
+                              </a>
+                            </li><li class="astro-XWOXDUXN">
+                              <a href="#automatically-generating-forms-and-tables" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'automatically-generating-forms-and-tables' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Automatically generating forms and tables
+                              </a>
+                            </li><li class="astro-XWOXDUXN">
+                              <a href="#handling-soft-deletes" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'handling-soft-deletes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Handling soft deletes
+                              </a>
+                            </li><li class="astro-XWOXDUXN">
+                              <a href="#generating-a-view-page" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'generating-a-view-page' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Generating a View page
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#record-titles" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'record-titles' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Record titles
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#resource-forms" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'resource-forms' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Resource forms
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#hiding-components-based-on-the-current-operation" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'hiding-components-based-on-the-current-operation' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Hiding components based on the current operation
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#resource-tables" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'resource-tables' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Resource tables
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#authorization" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'authorization' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Authorization
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#skipping-authorization" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'skipping-authorization' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Skipping authorization
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#customizing-the-model-label" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'customizing-the-model-label' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Customizing the model label
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#customizing-the-plural-model-label" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'customizing-the-plural-model-label' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Customizing the plural model label
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#resource-navigation-items" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'resource-navigation-items' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Resource navigation items
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#setting-a-resource-navigation-icon" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-a-resource-navigation-icon' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Setting a resource navigation icon
+                              </a>
+                            </li><li class="astro-XWOXDUXN">
+                              <a href="#sorting-resource-navigation-items" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'sorting-resource-navigation-items' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Sorting resource navigation items
+                              </a>
+                            </li><li class="astro-XWOXDUXN">
+                              <a href="#grouping-resource-navigation-items" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'grouping-resource-navigation-items' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Grouping resource navigation items
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#generating-urls-to-resource-pages" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'generating-urls-to-resource-pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Generating URLs to resource pages
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#customizing-the-resource-eloquent-query" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'customizing-the-resource-eloquent-query' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Customizing the resource Eloquent query
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#disabling-global-scopes" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'disabling-global-scopes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Disabling global scopes
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#customizing-the-resource-url" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'customizing-the-resource-url' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Customizing the resource URL
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#deleting-resource-pages" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'deleting-resource-pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Deleting resource pages
+                        </a>
+                      </h3>
+                      
+                    </li>
+                </ol>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

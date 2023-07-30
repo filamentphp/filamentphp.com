@@ -23,25 +23,60 @@
         display: inline-block;
         margin-block: 0.75em !important;
     }
-}
 
-.navigation-custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #f1e5e4b0 transparent;
+    .prose h2,
+    .prose h3,
+    .prose h4,
+    .prose h5,
+    .prose h6 {
+        @apply lg:relative;
+    }
+
+    .prose .heading-anchor {
+        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+        @apply lg:absolute lg:-left-7 lg:top-0;
+    }
+
+    .prose code *::selection {
+        @apply !bg-cream/20;
+    }
+
+    .prose *::selection {
+        @apply !bg-primary-500/20;
+    }
 }
 
 .navigation-custom-scrollbar::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    height: 10px;
+    width: 10px;
 }
+
 .navigation-custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
+
 .navigation-custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #f1e5e4b0;
-  border-radius: 100vh;
-  border: 3px solid transparent;
+    background: transparent;
 }
-.navigation-custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d4c6c5;
+
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+}
+
+/* Light Theme */
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #f1e5e4b0;
+}
+
+.navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+    background: #d4c6c5;
+}
+
+/* Dark Theme */
+.dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #2f2b49;
+}
+
+.dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+    background: #373355;
 }

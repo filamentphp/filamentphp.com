@@ -45,55 +45,58 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/support', '/docs/support/overview');
 
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+        $requestUri = request()->getRequestUri();
+
+        if (
+            str($requestUri)->endsWith('/') &&
+            (session()->get('trailingSlashRedirectFrom') !== $requestUri)
+        ) {
+            session()->flash('trailingSlashRedirectFrom', $requestUri);
+
+            return redirect(str($requestUri)->beforeLast('/'));
+        }
+
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
             return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        $filePath = public_path("docs/{$slug}/index.html");
+        $filePath = base_path("docs/dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
         }
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
-        $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+        $version = Str::before($slug, '.x');
+
+        if (! is_numeric($version)) {
+            abort(404);
+        }
+
+        $versionNavigation = $navigation[$version - 1];
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 
-Route::feeds();
+Route::prefix('/community')->group(function () {
+    Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
+        });
+    });
+});
 
 Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
 
     Route::name('plugins.')->group(function () {
-        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
-
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/tricks')->group(function () {
-    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
-
-    Route::name('tricks.')->group(function () {
-        Route::prefix('/{trick:slug}')->group(function () {
-            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/blog')->group(function () {
-    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
-
-    Route::name('blog.')->group(function () {
-        Route::prefix('/{article:slug}')->group(function () {
-            Route::get('/', Controllers\Blog\ViewArticleController::class)->name('article');
         });
     });
 });

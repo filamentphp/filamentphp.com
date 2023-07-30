@@ -37,19 +37,19 @@ Filament ships with two main types of columns - static and editable.
 
 Static columns display data to the user:
 
-- [Text column](./text)
-- [Icon column](./icon)
-- [Image column](./image)
-- [Color column](./color)
+- [Text column](text)
+- [Icon column](icon)
+- [Image column](image)
+- [Color column](color)
 
 Editable columns allow the user to update data in the database without leaving the table:
 
-- [Select column](./select)
-- [Toggle column](./toggle)
-- [Text input column](./text-input)
-- [Checkbox column](./checkbox)
+- [Select column](select)
+- [Toggle column](toggle)
+- [Text input column](text-input)
+- [Checkbox column](checkbox)
 
-You may also [create your own custom columns](./custom) to display data however you wish.
+You may also [create your own custom columns](custom) to display data however you wish.
 
 ## Setting a label
 
@@ -250,7 +250,7 @@ TextColumn::make('title')
 
 #### Action modals
 
-You may open [action modals](./../actions#modals) by passing in an `Action` object to the `action()` method:
+You may open [action modals](../actions#modals) by passing in an `Action` object to the `action()` method:
 
 ```php
 use Filament\Tables\Actions\Action;
@@ -340,7 +340,7 @@ TextColumn::make('id')
 
 #### Customizing the toggle columns dropdown trigger action
 
-To customize the toggle dropdown trigger button, you may use the `toggleColumnsTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](./../actions/trigger-button) can be used:
+To customize the toggle dropdown trigger button, you may use the `toggleColumnsTriggerAction()` method, passing a closure that returns an action. All methods that are available to [customize action trigger buttons](../actions/trigger-button) can be used:
 
 ```php
 use Filament\Tables\Actions\Action;
@@ -398,16 +398,17 @@ TextColumn::make('title')
 
 ## Aligning column content
 
-Table columns are aligned to the start (left in LTR interfaces or right in RTL interfaces) by default. You may change the alignment using the `alignment()` method, and passing it `start`, `center`, `end`, `left`, `right` or `justify` options:
+Table columns are aligned to the start (left in LTR interfaces or right in RTL interfaces) by default. You may change the alignment using the `alignment()` method, and passing it `Alignment::Start`, `Alignment::Center`, `Alignment::End` or `Alignment::Justify` options:
 
 ```php
+use Filament\Support\Enums\Alignment;
 use Filament\Tables\Columns\TextColumn;
 
-TextColumn::make('name')
-    ->alignment('end')
+TextColumn::make('email')
+    ->alignment(Alignment::End)
 ```
 
-<AutoScreenshot name="tables/columns/alignment" alt="Table with column aligned to the right" version="3.x" />
+<AutoScreenshot name="tables/columns/alignment" alt="Table with column aligned to the end" version="3.x" />
 
 Alternatively, you may use shorthand methods like `alignEnd()`:
 

@@ -16,7 +16,7 @@ You may create a `resources/views/vendor/filament/components/brand.blade.php` fi
 
 ## Dark mode
 
-By default, Filament only includes a light theme. However, you may allow the user to switch to dark mode if they wish, using the `dark_mode` setting of the [configuration file](./installation#publishing-configuration):
+By default, Filament only includes a light theme. However, you may allow the user to switch to dark mode if they wish, using the `dark_mode` setting of the [configuration file](installation#publishing-configuration):
 
 ```php
 'dark_mode' => true,
@@ -49,7 +49,7 @@ When the user toggles between dark or light mode, a browser event called **dark-
 
 By default, the sidebar is only collapsible on mobile. You may make it collapsible on desktop as well.
 
-You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
 
 In `config/filament.php`, set the `layouts.sidebar.is_collapsible_on_desktop` to `true`:
 
@@ -183,7 +183,7 @@ Filament::serving(function () {
 
 If you specify a custom font family in your `tailwind.config.js`, you may wish to import it via Google Fonts.
 
-You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
 
 Set the `google_fonts` config option to a new Google Fonts URL to load:
 
@@ -195,7 +195,7 @@ Set the `google_fonts` config option to a new Google Fonts URL to load:
 
 Filament exposes a configuration option that allows you to change the maximum content width of all pages.
 
-You must [publish the configuration](./installation#publishing-configuration) in order to access this feature.
+You must [publish the configuration](installation#publishing-configuration) in order to access this feature.
 
 In `config/filament.php`, set the `layouts.max_content_width` to any value between `xl` and `7xl`, or `full` for no max width:
 
@@ -306,18 +306,18 @@ The available hooks are as follows:
 - `footer.start` - start of footer content (centered)
 - `footer.end` - end of footer content (centered)
 - `footer.after` - after footer
-- `sidebar.start` - before [sidebar](./navigation) content
-- `sidebar.end` - after [sidebar](./navigation) content
+- `sidebar.start` - before [sidebar](navigation) content
+- `sidebar.end` - after [sidebar](navigation) content
 - `scripts.start` - before scripts are defined
 - `scripts.end` - after scripts are defined
 - `styles.start` - before styles are defined
 - `styles.end` - after styles are defined
-- `global-search.start` - before [global search](./resources/global-search) input
-- `global-search.end` - after [global search](./resources/global-search) input
-- `user-menu.start` - before [user menu](./navigation#customizing-the-user-menu) input
-- `user-menu.end` - after [user menu](./navigation#customizing-the-user-menu) input
-- `user-menu.account.before` - before the account item in the [user menu](./navigation#customizing-the-user-menu)
-- `user-menu.account.after` - after the account item in the [user menu](./navigation#customizing-the-user-menu)
+- `global-search.start` - before [global search](resources/global-search) input
+- `global-search.end` - after [global search](resources/global-search) input
+- `user-menu.start` - before [user menu](navigation#customizing-the-user-menu) input
+- `user-menu.end` - after [user menu](navigation#customizing-the-user-menu) input
+- `user-menu.account.before` - before the account item in the [user menu](navigation#customizing-the-user-menu)
+- `user-menu.account.after` - after the account item in the [user menu](navigation#customizing-the-user-menu)
 - `page.header-widgets.start` - before page header widgets
 - `page.header-widgets.end` - after page header widgets
 - `page.footer-widgets.start` - before page footer widgets

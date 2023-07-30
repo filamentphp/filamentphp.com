@@ -2,7 +2,6 @@
 import { collectHeadings, getAllLinks } from "src/lib/helpers";
 import Navigation from "@components/Navigation.astro";
 import Header from "@components/Header.astro";
-import Sponsors from "@components/Sponsors.astro";
 import Prose from "@components/Prose.astro";
 import Hero from "@components/Hero.astro";
 import rawNavigation from '../navigation.json';
@@ -83,12 +82,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
 
-    <div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+    {isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
         <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden"></div>
         <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
         <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
-        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5 navigation-custom-scrollbar" x-data={`{
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar" x-data={`{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -169,7 +168,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )}
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6 navigation-custom-scrollbar">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar">
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
           {
             tableOfContents.length > 0 && (
@@ -214,10 +213,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )
           }
         </nav>
-        <!--<div class="w-56">-->
-        <!--  <Sponsors />-->
-        <!--</div>-->
       </div>
-    </div>
+    </div>}
   </body>
 </html>

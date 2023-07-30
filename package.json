@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "prettier": "npx prettier --write ."
+        "prettier": "npx prettier --write .",
+        "generate-docs": "cd docs && npm run generate && cd ../"
     },
     "devDependencies": {
         "@formkit/auto-animate": "^0.7.0",

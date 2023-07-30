@@ -80,7 +80,7 @@ CheckboxList::make('technologies')
 
 <AutoScreenshot name="forms/fields/checkbox-list/columns" alt="Checkbox list with 2 columns" version="3.x" />
 
-This method accepts the same options as the `columns()` method of the [grid](./layout/grid). This allows you to responsively customize the number of columns at various breakpoints.
+This method accepts the same options as the `columns()` method of the [grid](layout/grid). This allows you to responsively customize the number of columns at various breakpoints.
 
 ### Setting the grid direction
 
@@ -133,7 +133,7 @@ CheckboxList::make('technologies')
 
 ## Integrating with an Eloquent relationship
 
-> If you're building a form inside your Livewire component, make sure you have set up the [form's model](./../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
+> If you're building a form inside your Livewire component, make sure you have set up the [form's model](../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
 
 You may employ the `relationship()` method of the `CheckboxList` to point to a `BelongsToMany` relationship. Filament will load the options from the relationship, and save them back to the relationship's pivot table when the form is submitted. The `titleAttribute` is the name of a column that will be used to generate a label for each option:
 
@@ -231,4 +231,26 @@ CheckboxList::make('technologies')
     ])
     ->searchable()
     ->searchDebounce(500)
+```
+
+## Customizing the checkbox list action objects
+
+This field uses action objects for easy customization of buttons within it. You can customize these buttons by passing a function to an action registration method. The function has access to the `$action` object, which you can use to [customize it](../../actions/trigger-button). The following methods are available to customize the actions:
+
+- `selectAllAction()`
+- `deselectAllAction()`
+
+Here is an example of how you might customize an action:
+
+```php
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\CheckboxList;
+
+CheckboxList::make('technologies')
+    ->options([
+        // ...
+    ])
+    ->selectAllAction(
+        fn (Action $action) => $action->label('Select all technologies'),
+    )
 ```

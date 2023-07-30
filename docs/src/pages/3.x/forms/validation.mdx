@@ -6,7 +6,7 @@ title: Validation
 
 ## Overview
 
-Validation rules may be added to any [field](./fields).
+Validation rules may be added to any [field](fields).
 
 In Laravel, validation rules are usually defined in arrays like `['required', 'max:255']` or a combined string like `required|max:255`. This is fine if you're exclusively working in the backend with simple form requests. But Filament is also able to give your users frontend validation, so they can fix their mistakes before any backend requests are made.
 
@@ -80,7 +80,7 @@ Field::make('name')->alphaNum()
 
 ### ASCII
 
-The field must be entirely 7-bit ASCII characters. [See the Laravel documentation.](https://laravel.com/docs/10.x/validation#rule-ascii)
+The field must be entirely 7-bit ASCII characters. [See the Laravel documentation.](https://laravel.com/docs/validation#rule-ascii)
 
 ```php
 Field::make('name')->ascii()
@@ -173,7 +173,7 @@ The field value must exist in the database. [See the Laravel documentation.](htt
 Field::make('invitation')->exists()
 ```
 
-By default, the form's model will be searched, [if it is registered](./adding-a-form-to-a-livewire-component#setting-a-form-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](adding-a-form-to-a-livewire-component#setting-a-form-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\Invitation;
@@ -187,7 +187,7 @@ By default, the field name will be used as the column to search. You may specify
 Field::make('invitation')->exists(column: 'id')
 ```
 
-You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Exists;
@@ -406,7 +406,7 @@ The field value must not exist in the database. [See the Laravel documentation.]
 Field::make('email')->unique()
 ```
 
-By default, the form's model will be searched, [if it is registered](./adding-a-form-to-a-livewire-component#setting-a-form-model). You may specify a custom table name or model to search:
+By default, the form's model will be searched, [if it is registered](adding-a-form-to-a-livewire-component#setting-a-form-model). You may specify a custom table name or model to search:
 
 ```php
 use App\Models\User;
@@ -426,13 +426,13 @@ Sometimes, you may wish to ignore a given model during unique validation. For ex
 Field::make('email')->unique(ignorable: $ignoredUser)
 ```
 
-If you're using the [panel builder](./../panels), you can easily ignore the current record by using `ignoreRecord` instead:
+If you're using the [panel builder](../panels), you can easily ignore the current record by using `ignoreRecord` instead:
 
 ```php
 Field::make('email')->unique(ignoreRecord: true)
 ```
 
-You can further customize the rule by passing a [closure](./advanced#closure-customization) to the `callback` parameter:
+You can further customize the rule by passing a [closure](advanced#closure-customization) to the `callback` parameter:
 
 ```php
 use Illuminate\Validation\Rules\Unique;

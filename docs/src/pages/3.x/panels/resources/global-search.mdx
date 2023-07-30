@@ -10,7 +10,7 @@ Global search allows you to search across all of your resource records, from any
 
 ## Setting global search result titles
 
-To enable global search on your model, you must [set a title attribute](./getting-started#record-titles) for your resource:
+To enable global search on your model, you must [set a title attribute](getting-started#record-titles) for your resource:
 
 ```php
 protected static ?string $recordTitleAttribute = 'title';
@@ -18,7 +18,7 @@ protected static ?string $recordTitleAttribute = 'title';
 
 This attribute is used to retrieve the search result title for that record.
 
-**Note:** Your resource needs to have an Edit or View page to allow the global search results to link to a URL, otherwise no results will be returned for this resource.
+> Your resource needs to have an Edit or View page to allow the global search results to link to a URL, otherwise no results will be returned for this resource.
 
 You may customize the title further by overriding `getGlobalSearchResultTitle()` method:
 
@@ -65,7 +65,7 @@ public static function getGlobalSearchEloquentQuery(): Builder
 
 ## Customizing global search result URLs
 
-Global search results will link to the [Edit page](./editing-records) of your resource, or the [View page](./viewing-page) if the user does not have [edit permissions](./editing-records#authorization). To customize this, you may override the `getGlobalSearchResultUrl()` method and return a route of your choice:
+Global search results will link to the [Edit page](editing-records) of your resource, or the [View page](viewing-page) if the user does not have [edit permissions](editing-records#authorization). To customize this, you may override the `getGlobalSearchResultUrl()` method and return a route of your choice:
 
 ```php
 public static function getGlobalSearchResultUrl(Model $record): string
@@ -92,7 +92,7 @@ public static function getGlobalSearchResultActions(Model $record): array
 }
 ```
 
-You can learn more about how to style action buttons [here](./../../actions/trigger-button).
+You can learn more about how to style action buttons [here](../../actions/trigger-button).
 
 ### Opening URLs from global search actions
 
@@ -128,7 +128,7 @@ protected static int $globalSearchResultsLimit = 20;
 
 As [explained above](#title), global search is automatically enables once you set a title attribute for your resource. Sometimes you may want to specify the title attribute while not enabling global search.
 
-This can be achieved by disabling global search in the [configuration](./configuration):
+This can be achieved by disabling global search in the [configuration](configuration):
 
 ```php
 use Filament\Panel;
@@ -143,7 +143,7 @@ public function panel(Panel $panel): Panel
 
 ## Registering global search keybindings
 
-The global search field can be opened using keyboard shortcuts. To configure these, pass the `globalSearchKeyBindings()` method to the [configuration](./configuration):
+The global search field can be opened using keyboard shortcuts. To configure these, pass the `globalSearchKeyBindings()` method to the [configuration](configuration):
 
 ```php
 use Filament\Panel;

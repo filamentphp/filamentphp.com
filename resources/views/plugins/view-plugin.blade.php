@@ -74,7 +74,7 @@
                     <div>Support</div>
                 </a>
 
-                <livewire:plugins.star-plugin :plugin="$plugin" />
+                <livewire:star-record :record="$plugin" />
 
                 @if (filled($plugin->url))
                     {{-- Link --}}
@@ -292,8 +292,18 @@
                 @if (filled($docs = $plugin->getDocs()))
                     {{-- Documentation --}}
                     <div class="pt-10">
-                        <div class="prose">
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str($docs)->markdown()->sanitizeHtml(),) !!}
+                        <div
+                            class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                        >
+                            {!!
+                                preg_replace(
+                                    ['/\<h1(.*)\>(.*)\<\/h1\>/', '/\A---(.|\n)*?---/'],
+                                    '',
+                                    str($docs)
+                                        ->markdown()
+                                        ->sanitizeHtml(),
+                                )
+                            !!}
                         </div>
                     </div>
                 @endif
@@ -348,7 +358,7 @@
                                 </a>
                             @endif
 
-                            {{-- Github --}}
+                            {{-- GitHub --}}
                             <a
                                 target="_blank"
                                 href="{{ $plugin->author->github_url }}"

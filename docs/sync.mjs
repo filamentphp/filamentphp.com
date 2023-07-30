@@ -75,11 +75,6 @@ const getTitleFromMarkdown = (file) => {
     return frontmatter.title
 }
 
-const sanitizeRelativeLinks = (content) => {
-    const regex = /]\((?!http|\/|#)/g
-    return content.replaceAll(regex, '](./')
-}
-
 console.log('Processing docs...')
 
 let structure = []
@@ -114,7 +109,7 @@ versions.forEach((version) => {
         fs.mkdir(`src/pages/1.x/admin`, { recursive: true }, () => {
             const sourceFiles = getDirContents(`./filament/1.x/docs`)
 
-            sourceFiles.forEach((file, index) => {
+            sourceFiles.forEach((file) => {
                 const destination = file
                     .split('docs/')
                     .pop()
@@ -279,8 +274,6 @@ versions.forEach((version) => {
                                                 '',
                                             )}"`,
                                         )
-
-                                        result = sanitizeRelativeLinks(result)
 
                                         fs.writeFile(
                                             `src/pages/${version}/${packageName}/${destination}`,
