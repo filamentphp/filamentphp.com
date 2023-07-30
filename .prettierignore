@@ -6,6 +6,7 @@ composer.lock
 docs/dist
 docs/filament
 docs/node_modules
+docs/src/navigation.json
 docs/src/pages
 docs/torchlight-cache
 public

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Pagination Blade component - Core Concepts - Filament</title>
+    <title>Tabs Blade component - Core Concepts - Filament</title>
     <meta name="description" content="">
     
-    <link rel="canonical" href="https://filamentphp.com/docs/3.x/support/ui/pagination/">
+    <link rel="canonical" href="https://filamentphp.com/docs/3.x/support/blade-components/tabs/">
 
     <!-- hack for flash of theme -->
     
@@ -262,8 +262,8 @@
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Select Blade component</div>
               </a>
             </li><li class="relative">
-              <a href="/docs/3.x/support/blade-components/tabs" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
-                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Tabs Blade component</div>
+              <a href="/docs/3.x/support/blade-components/tabs" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 font-semibold text-butter before:bg-butter">
+                <div class="transition duration-300 ease-out">Tabs Blade component</div>
               </a>
             </li>
         </ul>
@@ -655,8 +655,8 @@
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Select Blade component</div>
               </a>
             </li><li class="relative">
-              <a href="/docs/3.x/support/blade-components/tabs" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
-                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Tabs Blade component</div>
+              <a href="/docs/3.x/support/blade-components/tabs" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 font-semibold text-butter before:bg-butter">
+                <div class="transition duration-300 ease-out">Tabs Blade component</div>
               </a>
             </li>
         </ul>
@@ -670,86 +670,136 @@
           <header class="mb-9 space-y-1 astro-XWOXDUXN">
               <p class="font-display font-bold text-butter astro-XWOXDUXN">
                   Core Concepts 
+                      - Blade Components
                 </p>
               <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-XWOXDUXN">
-                  Pagination Blade component
+                  Tabs Blade component
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <h2 id="overview"><a class="heading-anchor" href="#overview"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Overview</h2>
-<p>The pagination component can be used in a Livewire Blade view only. It can render a list of paginated links:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ListUsers</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Component</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">render</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">livewire.list-users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">paginate</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
-use Illuminate\Contracts\View\View;
-use Livewire\Component;
+<p>The tabs component allows you to render a set of tabs, which can be used to toggle between multiple sections of content:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">label</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Content tabs</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 1</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 2</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 2</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs label="Content tabs"&gt;
+    &lt;x-filament::tabs.item&gt;
+        Tab 1
+    &lt;/x-filament::tabs.item&gt;
 
-class ListUsers extends Component
-{
-    // ...
-    
-    public function render(): View
-    {
-        return view('livewire.list-users', [
-            'users' =&gt; User::query()-&gt;paginate(10),
-        ]);
-    }
-}
-</textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::pagination</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">:paginator</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$users</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::pagination :paginator="$users" /&gt;
-</textarea></code></pre>
-<p>Alternatively, you can use simple pagination, which will just render a &quot;previous&quot; and &quot;next&quot; button:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">simplePaginate</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
+    &lt;x-filament::tabs.item&gt;
+        Tab 2
+    &lt;/x-filament::tabs.item&gt;
 
-User::query()-&gt;simplePaginate(10)
+    &lt;x-filament::tabs.item&gt;
+        Tab 2
+    &lt;/x-filament::tabs.item&gt;
+&lt;/x-filament::tabs&gt;
 </textarea></code></pre>
-<h2 id="allowing-the-user-to-customize-the-number-of-items-per-page"><a class="heading-anchor" href="#allowing-the-user-to-customize-the-number-of-items-per-page"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Allowing the user to customize the number of items per page</h2>
-<p>You can allow the user to customize the number of items per page by passing an array of options to the <code>page-options</code> attribute. You must also define a Livewire property where the user&#39;s selection will be stored:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">User</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">View</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Component</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ListUsers</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Component</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">|</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">perPage </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">render</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">View</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">view</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">livewire.list-users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">query</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">paginate</span><span style="color: #89DDFF;">($this-&gt;</span><span style="color: #A6ACCD;">perPage</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\User;
-use Illuminate\Contracts\View\View;
-use Livewire\Component;
+<h2 id="triggering-the-active-state-of-the-tab"><a class="heading-anchor" href="#triggering-the-active-state-of-the-tab"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Triggering the active state of the tab</h2>
+<p>By default tabs do not appear &quot;active&quot;. To make a tab appear active, you can use the <code>active</code> attribute:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">active</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 1</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item active&gt;
+        Tab 1
+    &lt;/x-filament::tabs.item&gt;
 
-class ListUsers extends Component
-{
-    public int | string $perPage = 10;
-    
-    // ...
-    
-    public function render(): View
-    {
-        return view('livewire.list-users', [
-            'users' =&gt; User::query()-&gt;paginate($this-&gt;perPage),
-        ]);
-    }
-}
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
 </textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::pagination</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:paginator</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$users</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:page-options</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">[5, 10, 20, 50, 100, &#39;all&#39;]</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:current-page-option-property</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">perPage</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">/&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::pagination
-    :paginator="$users"
-    :page-options="[5, 10, 20, 50, 100, 'all']"
-    :current-page-option-property="perPage"
-/&gt;
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/09-ui/02-pagination.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
+<p>You can also use the <code>active</code> attribute to make a tab appear active conditionally:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">:active</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$activeTab === &#39;tab1&#39;</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">wire:click</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$set(&#39;activeTab&#39;, &#39;tab1&#39;)</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    &gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 1</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item
+        :active="$activeTab === 'tab1'"
+        wire:click="$set('activeTab', 'tab1')"
+    &gt;
+        Tab 1
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre>
+<p>Or you can use the <code>alpine-active</code> attribute to make a tab appear active conditionally using Alpine.js:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #C3E88D;">{</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">activeTab:</span><span style="color: #89DDFF;"> &#39;tab1&#39; </span><span style="color: #C792EA;">}</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">alpine-active</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">activeTab === &#39;tab1&#39;</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">x-on:click</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">alpineActive = &#39;tab1&#39;</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    &gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Tab 1</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs x-data={ activeTab: 'tab1' }&gt;
+    &lt;x-filament::tabs.item
+        alpine-active="activeTab === 'tab1'"
+        x-on:click="alpineActive = 'tab1'"
+    &gt;
+        Tab 1
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre>
+<h2 id="setting-a-tab-icon"><a class="heading-anchor" href="#setting-a-tab-icon"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a tab icon</h2>
+<p>Tabs may have an <a href="https://blade-ui-kit.com/blade-icons?set=1#search">icon</a>, which you can set using the <code>icon</code> attribute:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">icon</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">heroicon-m-bell</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Notifications</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item icon="heroicon-m-bell"&gt;
+        Notifications
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre>
+<h3 id="setting-the-tab-icon-position"><a class="heading-anchor" href="#setting-the-tab-icon-position"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting the tab icon position</h3>
+<p>The icon of the tab may be positioned before or after the label using the <code>icon-position</code> attribute:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">icon</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">heroicon-m-bell</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">icon-position</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">after</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    &gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Notifications</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item
+        icon="heroicon-m-bell"
+        icon-position="after"
+    &gt;
+        Notifications
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre>
+<h2 id="setting-a-tab-badge"><a class="heading-anchor" href="#setting-a-tab-badge"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting a tab badge</h2>
+<p>Tabs may have a <a href="badge">badge</a>, which you can set using the <code>badge</code> slot:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Notifications</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-slot</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">name</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">badge</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">            5</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-slot</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item&gt;
+        Notifications
+
+        &lt;x-slot name="badge"&gt;
+            5
+        &lt;/x-slot&gt;
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre>
+<h2 id="using-a-tab-as-an-anchor-link"><a class="heading-anchor" href="#using-a-tab-as-an-anchor-link"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using a tab as an anchor link</h2>
+<p>By default, a tab&#39;s underlying HTML tag is <code>&lt;button&gt;</code>. You can change it to be an <code>&lt;a&gt;</code> tag by using the <code>tag</code> attribute:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::tabs.item</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">:href</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">route(&#39;notifications&#39;)</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #C792EA;">tag</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">a</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    &gt;</span></div><div class='line'><span style="color: #A6ACCD;">        Notifications</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs.item</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">{{-- Other tabs --}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">x-filament::tabs</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::tabs&gt;
+    &lt;x-filament::tabs.item
+        :href="route('notifications')"
+        tag="a"
+    &gt;
+        Notifications
+    &lt;/x-filament::tabs.item&gt;
+
+    {{-- Other tabs --}}
+&lt;/x-filament::tabs&gt;
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/09-blade-components/02-tabs.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">GitHub discussion</a>
           </p>
 </div>
         </article>
         <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-XWOXDUXN">
-          
-            <div class="ml-auto text-right astro-XWOXDUXN">
+          <div class="astro-XWOXDUXN">
                 <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
-                  Next
+                  Previous
                 </dt>
                 <dd class="mt-1 astro-XWOXDUXN">
-                  <a href="/docs/3.x/support/overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
-                    Overview <span aria-hidden="true" class="astro-XWOXDUXN">&rarr;</span>
+                  <a href="/docs/3.x/support/blade-components/select" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-XWOXDUXN">
+                    <span aria-hidden="true" class="astro-XWOXDUXN">&larr;</span> Select Blade component
                   </a>
                 </dd>
               </div>
+            
         </dl>
       </div>
       <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-XWOXDUXN">
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-XWOXDUXN">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-user-to-customize-the-number-of-items-per-page&#34;,&#34;text&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;title&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;triggering-the-active-state-of-the-tab&#34;,&#34;text&#34;:&#34;Triggering the active state of the tab&#34;,&#34;title&#34;:&#34;Triggering the active state of the tab&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-tab-icon&#34;,&#34;text&#34;:&#34;Setting a tab icon&#34;,&#34;title&#34;:&#34;Setting a tab icon&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;setting-the-tab-icon-position&#34;,&#34;text&#34;:&#34;Setting the tab icon position&#34;,&#34;title&#34;:&#34;Setting the tab icon position&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-tab-badge&#34;,&#34;text&#34;:&#34;Setting a tab badge&#34;,&#34;title&#34;:&#34;Setting a tab badge&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-a-tab-as-an-anchor-link&#34;,&#34;text&#34;:&#34;Using a tab as an anchor link&#34;,&#34;title&#34;:&#34;Using a tab as an anchor link&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-XWOXDUXN">
                       <h3 class="astro-XWOXDUXN">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -759,8 +809,35 @@ class ListUsers extends Component
                       
                     </li><li class="astro-XWOXDUXN">
                       <h3 class="astro-XWOXDUXN">
-                        <a href="#allowing-the-user-to-customize-the-number-of-items-per-page" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'allowing-the-user-to-customize-the-number-of-items-per-page' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
-                          Allowing the user to customize the number of items per page
+                        <a href="#triggering-the-active-state-of-the-tab" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'triggering-the-active-state-of-the-tab' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Triggering the active state of the tab
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#setting-a-tab-icon" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-a-tab-icon' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Setting a tab icon
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-XWOXDUXN">
+                          <li class="astro-XWOXDUXN">
+                              <a href="#setting-the-tab-icon-position" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-the-tab-icon-position' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Setting the tab icon position
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#setting-a-tab-badge" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'setting-a-tab-badge' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Setting a tab badge
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-XWOXDUXN">
+                      <h3 class="astro-XWOXDUXN">
+                        <a href="#using-a-tab-as-an-anchor-link" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'using-a-tab-as-an-anchor-link' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Using a tab as an anchor link
                         </a>
                       </h3>
                       
