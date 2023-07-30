@@ -65,6 +65,11 @@
         >
             {{-- Left Side --}}
             <div class="w-full">
+                {{-- Article Type --}}
+                <div class="flex">
+                    <x-articles.type-badge :type="$article->type" />
+                </div>
+
                 {{-- Title --}}
                 <div class="pt-5">
                     <div class="text-3xl font-extrabold">
@@ -139,8 +144,6 @@
 
                 {{-- Categories --}}
                 <div class="flex flex-wrap items-center gap-3.5 pt-6">
-                    <x-articles.type-badge :type="$article->type" />
-
                     @foreach ($article->getCategories() as $category)
                         <div
                             class="select-none rounded-full bg-stone-200/50 px-5 py-2.5 text-sm"
@@ -157,10 +160,15 @@
                     <div
                         class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                     >
-                        {!! preg_replace(
-                            ['/\<h1(.*)\>(.*)\<\/h1\>/', '/\A---(.|\n)*?---/'], '',
-                            str($article->content)->markdown()->sanitizeHtml(),
-                        ) !!}
+                        {!!
+                            preg_replace(
+                                ['/\<h1(.*)\>(.*)\<\/h1\>/', '/\A---(.|\n)*?---/'],
+                                '',
+                                str($article->content)
+                                    ->markdown()
+                                    ->sanitizeHtml(),
+                            )
+                        !!}
                     </div>
                 </div>
             </div>
@@ -295,16 +303,21 @@
                             @foreach ($otherArticles as $otherArticle)
                                 <a
                                     href="{{ route('articles.view', ['article' => $otherArticle]) }}"
-                                    class="relative block w-full rounded-2xl bg-white py-3 px-5 shadow-lg shadow-hurricane/5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
+                                    class="relative block w-full rounded-2xl bg-white px-5 py-3 shadow-lg shadow-hurricane/5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
                                 >
                                     <div
-                                        class="flex w-full items-start justify-between gap-5"
+                                        class="flex w-full items-center justify-between gap-5"
                                     >
-                                        <div class="flex-1 font-medium">
-                                            {{ $otherArticle->title }}
-                                        </div>
+                                        {{-- Article Type --}}
+                                        <x-articles.type-badge
+                                            :type="$article->type"
+                                            size="sm"
+                                        />
 
-                                        <div class="flex-shrink-0 flex items-center gap-1.5 pr-2">
+                                        {{-- Stars --}}
+                                        <div
+                                            class="flex items-center gap-1.5 pr-2"
+                                        >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 class="text-peach-orange"
@@ -325,15 +338,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="pt-1 text-xs text-dolphin/80">
-                                        {{ $otherArticle->publish_date->diffForHumans() }}
+                                    {{-- Title --}}
+                                    <div class="px-1 pb-1 pt-4 font-medium">
+                                        <div class="line-clamp-2">
+                                            {{ $otherArticle->title }}
+                                        </div>
+                                        <div
+                                            class="pt-1 text-xs text-dolphin/80"
+                                        >
+                                            {{ $otherArticle->publish_date->diffForHumans() }}
+                                        </div>
                                     </div>
 
-                                    <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-3">
-                                        <x-articles.type-badge :type="$article->type" size="sm" />
-
+                                    <div
+                                        class="flex flex-wrap gap-x-2.5 gap-y-3 pt-3"
+                                    >
                                         @foreach ($otherArticle->getCategories() as $category)
-                                            <div class="rounded-full bg-slate-100 px-5 py-2.5 text-xs">
+                                            <div
+                                                class="rounded-full bg-slate-100 px-5 py-2.5 text-xs"
+                                            >
                                                 {{ $category->name }}
                                             </div>
                                         @endforeach
