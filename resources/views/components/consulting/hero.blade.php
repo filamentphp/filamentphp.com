@@ -4,7 +4,7 @@
     class="mx-auto w-full max-w-6xl px-10 pt-20"
 >
     {{-- Header --}}
-    <div class="flex items-center justify-around gap-20">
+    <div class="flex items-center justify-between gap-20">
         <div>
             {{-- Title --}}
             <div
