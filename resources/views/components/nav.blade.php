@@ -45,7 +45,7 @@
             navTimeline.play()
         }
     "
-    class="relative mx-auto flex max-w-8xl items-center justify-between px-8 py-10"
+    class="relative mx-auto flex max-w-8xl items-center justify-between overflow-x-clip px-8 py-10 sm:overflow-x-visible"
 >
     {{-- Background Blob --}}
     <img
