@@ -69,13 +69,17 @@
             }
 
             // Show articles that are in the selected version, or no version at all
-            filterResult = filterResult.filter((article) =>
-                article.versions?.includes(+this.selectedVersion) || (! article.versions?.length),
+            filterResult = filterResult.filter(
+                (article) =>
+                    article.versions?.includes(+this.selectedVersion) ||
+                    ! article.versions?.length,
             )
 
             // If the selectedType is 'all', show all records, else show only the records that match the selected type
             filterResult = filterResult.filter(
-                (record) => this.selectedType === 'all' || this.selectedType === record.type,
+                (record) =>
+                    this.selectedType === 'all' ||
+                    this.selectedType === record.type,
             )
 
             // If the search is not empty, show articles that match the search
@@ -109,7 +113,7 @@
         >
             <div
                 x-on:click="selectedType = 'all'"
-                class="relative z-20 w-20 text-center transition duration-300"
+                class="relative z-20 w-16 text-center transition duration-300"
                 :class="{
                     'cursor-pointer text-evening/70 hover:text-evening': selectedType !== 'all',
                     'text-salmon': selectedType === 'all',
@@ -139,24 +143,22 @@
             @endforeach
 
             <div
-                class="absolute w-24 left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
+                class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
-                    'bg-fair-pink': selectedType === 'all',
+                    'bg-fair-pink w-[4.5rem]': selectedType === 'all',
+                    'translate-x-[4.5rem] w-[6.5rem]' : selectedType === 'article',
+                    'translate-x-[10.7rem] w-[6rem]' : selectedType === 'news',
+                    'translate-x-[17rem] w-[6rem]' : selectedType === 'tricks',
                     @foreach ($types as $type)
-                        @js(match($type['color']) {
+
+                        @js(match ($type['color']) {
                             'amber' => 'bg-amber-100/60',
                             'blue' => 'bg-blue-100/60',
                             'violet' => 'bg-violet-100/60',
                         }): selectedType === @js($type['slug']),
                     @endforeach
+
                 }"
-                x-bind:style="
-                    @foreach ($types as $type)
-                        if (selectedType === @js($type['slug'])) {
-                            return 'transform: translateX({{ $loop->iteration * 6 }}rem)'
-                        }
-                    @endforeach
-                "
             ></div>
         </div>
 
@@ -282,13 +284,17 @@
                 :key="index"
             >
                 <div
-                    class="rounded-full px-5 py-2.5 text-sm cursor-pointer transition duration-200 select-none"
+                    class="cursor-pointer select-none rounded-full px-5 py-2.5 text-sm transition duration-200"
                     x-text="category.name"
                     :class="{
                         'bg-salmon text-white': selectedCategories.has(category.slug),
                         'bg-stone-100 hover:bg-stone-200/70': ! selectedCategories.has(category.slug),
                     }"
-                    x-on:click="selectedCategories.has(category.slug) ? selectedCategories.delete(category.slug) : selectedCategories.add(category.slug)"
+                    x-on:click="
+                        selectedCategories.has(category.slug)
+                            ? selectedCategories.delete(category.slug)
+                            : selectedCategories.add(category.slug)
+                    "
                 ></div>
             </template>
         </div>
@@ -375,7 +381,8 @@
                         No Results Found
                     </div>
                     <div class="pt-0.5 text-sm text-evening/50">
-                        Sorry we couldn't find any articles matching your search.
+                        Sorry we couldn't find any articles matching your
+                        search.
                     </div>
                 </div>
             </div>
