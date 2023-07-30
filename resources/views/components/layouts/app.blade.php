@@ -28,7 +28,8 @@
                 route('docs') => 'Documentation',
                 route('plugins') => 'Plugins',
                 route('articles') => 'Community',
-                route('consulting') => 'Consulting'
+                route('consulting') => 'Consulting',
+                'https://shop.filamentphp.com' => 'Shop',
             ] as $url => $label)
                 <li>
                     <a

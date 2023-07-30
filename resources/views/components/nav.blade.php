@@ -688,6 +688,13 @@
             @endif
         </a>
 
+        <a
+            href="https://shop.filamentphp.com"
+            class="group/nav-link opacity-80 relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block"
+        >
+            <div class="gsap-fadein">Shop</div>
+        </a>
+
         {{-- Github --}}
         <div class="group/github relative">
             {{-- Github Icon --}}
