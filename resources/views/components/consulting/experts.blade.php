@@ -12,7 +12,7 @@
     </div>
 
     {{-- Consultant List --}}
-    <div class="space-y-5">
+    <div class="space-y-5 pb-20">
         <x-consulting.consultant
             number="01"
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
@@ -24,14 +24,14 @@
             number="02"
             avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
             name="Zep Fietje"
-            title="Lead UI Designer"
+            title="Lead UI Designer & Developer"
             url="https://zepfietje.com/consult?ref=filamentphp.com"
         />
         <x-consulting.consultant
             number="03"
             avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
             name="Ryan Chandler"
-            title="Co-Founder"
+            title="Co-Founder & Developer"
             url="https://www.ringerhq.com/experts/ryangjchandler"
         />
     </div>

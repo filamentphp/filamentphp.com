@@ -6,7 +6,12 @@
     'url',
 ])
 
-<div class="flex items-center gap-10 pt-10">
+<div
+    x-data="{
+        book_is_hovered: false,
+    }"
+    class="flex items-center gap-10 pt-10"
+>
     {{-- Number --}}
     <div class="text-lg font-semibold tracking-widest text-dolphin">
         {{ $number }}
@@ -16,11 +21,19 @@
     <img
         src="{{ $avatar }}"
         alt="{{ $name }}"
-        class="h-36 w-36 rounded-full"
+        class="h-36 w-36 rounded-full transition duration-300"
+        :class="{
+            'scale-105': book_is_hovered,
+        }"
     />
 
     {{-- Information --}}
-    <div class="space-y-1">
+    <div
+        class="space-y-1 transition duration-300"
+        :class="{
+            'translate-x-1': book_is_hovered,
+        }"
+    >
         {{-- Name --}}
         <div class="text-3xl font-bold">
             {{ $name }}
@@ -36,12 +49,14 @@
     <div class="flex flex-1 justify-end">
         <a
             href="{{ $url }}"
-            class="group/call relative grid h-12 w-60 rounded-full bg-stone-200/80 px-1.5 transition duration-300 hover:bg-stone-200/50"
+            class="group/call relative z-0 grid h-12 w-60 rounded-full bg-stone-200/80 px-1.5 transition duration-300 hover:bg-stone-200/50"
             target="_blank"
+            x-on:mouseenter="book_is_hovered = true"
+            x-on:mouseleave="book_is_hovered = false"
         >
             {{-- Icons --}}
             <div
-                class="grid h-10 w-10 place-items-center self-center rounded-full bg-[#5779F8] text-white transition duration-500 ease-in-out [grid-area:1/-1] group-hover/call:translate-x-[11.7rem] group-hover/call:bg-butter"
+                class="relative z-10 grid h-10 w-10 place-items-center self-center rounded-full bg-[#5779F8] text-white transition duration-500 [grid-area:1/-1] group-hover/call:translate-x-[11.7rem] group-hover/call:bg-butter"
             >
                 {{-- Phone Icon --}}
                 <svg
@@ -50,7 +65,7 @@
                     height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="transition duration-500 ease-in-out [grid-area:1/-1] group-hover/call:rotate-45 group-hover/call:opacity-0"
+                    class="transition duration-500 [grid-area:1/-1] group-hover/call:rotate-45 group-hover/call:opacity-0"
                 >
                     <path
                         d="M13.5 2C13.5 2 15.834 2.212 18.803 5.182C21.773 8.152 21.985 10.485 21.985 10.485M14.207 5.536C14.207 5.536 15.197 5.818 16.682 7.303C18.167 8.788 18.45 9.778 18.45 9.778"
@@ -70,7 +85,7 @@
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
-                    class="-rotate-45 opacity-0 transition duration-500 ease-in-out [grid-area:1/-1] group-hover/call:rotate-0 group-hover/call:opacity-100"
+                    class="-rotate-45 opacity-0 transition duration-500 [grid-area:1/-1] group-hover/call:rotate-0 group-hover/call:opacity-100"
                 >
                     <path
                         fill="none"
@@ -85,7 +100,7 @@
 
             {{-- Book A Call --}}
             <div
-                class="self-center justify-self-center font-medium transition duration-500 ease-in-out [grid-area:1/-1] group-hover/call:-translate-x-2"
+                class="self-center justify-self-center font-medium transition duration-300 [grid-area:1/-1] group-hover/call:-translate-x-2"
             >
                 Book a call
             </div>
