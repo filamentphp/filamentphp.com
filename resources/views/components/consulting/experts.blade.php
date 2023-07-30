@@ -5,10 +5,12 @@
 >
     {{-- Title --}}
     <div class="flex items-center gap-5">
-        <div class="text-2xl font-semibold text-evening">
+        <div class="shrink-0 text-2xl font-semibold text-evening">
             Choose your expert
         </div>
-        <div class="h-0.5 w-full max-w-[15rem] rounded-full bg-evening"></div>
+        <div
+            class="h-0.5 w-full rounded-full bg-evening md:max-w-[15rem]"
+        ></div>
     </div>
 
     {{-- Consultant List --}}

@@ -10,43 +10,46 @@
     x-data="{
         book_is_hovered: false,
     }"
-    class="flex items-center gap-10 pt-10"
+    class="flex flex-col items-start gap-x-10 gap-y-5 pt-10 md:flex-row md:items-center"
 >
-    {{-- Number --}}
-    <div class="text-lg font-semibold tracking-widest text-dolphin">
-        {{ $number }}
-    </div>
-
-    {{-- Avatar --}}
-    <img
-        src="{{ $avatar }}"
-        alt="{{ $name }}"
-        class="h-36 w-36 rounded-full transition duration-300"
-        :class="{
-            'scale-105': book_is_hovered,
-        }"
-    />
-
-    {{-- Information --}}
     <div
-        class="space-y-1 transition duration-300"
-        :class="{
-            'translate-x-1': book_is_hovered,
-        }"
+        class="flex min-w-[15rem] flex-col gap-x-10 gap-y-5 md:flex-row md:items-center"
     >
-        {{-- Name --}}
-        <div class="text-3xl font-bold">
-            {{ $name }}
+        {{-- Number --}}
+        <div
+            class="hidden text-lg font-semibold tracking-widest text-dolphin md:block"
+        >
+            {{ $number }}
         </div>
-
-        {{-- Title --}}
-        <div class="text-lg font-medium text-dolphin">
-            {{ $title }}
+        {{-- Avatar --}}
+        <img
+            src="{{ $avatar }}"
+            alt="{{ $name }}"
+            class="aspect-square w-28 rounded-full transition duration-300 lg:w-36"
+            :class="{
+                'scale-105': book_is_hovered,
+            }"
+        />
+        {{-- Information --}}
+        <div
+            class="space-y-1 transition duration-300"
+            :class="{
+                'translate-x-1': book_is_hovered,
+            }"
+        >
+            {{-- Name --}}
+            <div class="text-2xl font-bold lg:text-3xl">
+                {{ $name }}
+            </div>
+            {{-- Title --}}
+            <div class="text-base font-medium text-dolphin lg:text-lg">
+                {{ $title }}
+            </div>
         </div>
     </div>
 
     {{-- Call Link --}}
-    <div class="flex flex-1 justify-end">
+    <div class="flex flex-1 md:justify-end">
         <a
             href="{{ $url }}"
             class="group/call relative z-0 grid h-12 w-60 rounded-full bg-stone-200/80 px-1.5 transition duration-300 hover:bg-stone-200/50"

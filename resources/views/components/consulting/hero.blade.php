@@ -4,7 +4,7 @@
     class="mx-auto w-full max-w-6xl px-10 pt-20"
 >
     {{-- Header --}}
-    <div class="flex items-center justify-between gap-20">
+    <div class="flex flex-wrap-reverse md:flex-nowrap items-center justify-start md:justify-between gap-y-10 gap-x-20">
         <div>
             {{-- Title --}}
             <div
@@ -29,7 +29,7 @@
             x-ref="phone"
             src="{{ Vite::asset('resources/images/consulting/phone.webp') }}"
             alt=""
-            class="block w-60"
+            class="block w-40 md:w-60"
         />
     </div>
 </section>
