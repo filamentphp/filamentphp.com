@@ -10,6 +10,5 @@ github_repository: bezhanSalleh/filament-google-analytics
 has_dark_theme: true
 has_translations: true
 image: bezhansalleh-google-analytics.png
-thumbnail: bezhansalleh-google-analytics.png
 versions: [2, 3]
 ---

@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-exceptions/mai
 github_repository: bezhanSalleh/filament-exceptions
 has_dark_theme: true
 has_translations: true
-image: bezhansalleh-exception-viewer.jpeg
-thumbnail: bezhansalleh-exception-viewer.jpeg
+image: bezhansalleh-exception-viewer.jpg
 versions: [2, 3]
 ---
