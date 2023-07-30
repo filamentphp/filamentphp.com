@@ -32,9 +32,9 @@ class AppServiceProvider extends ServiceProvider
             ->site(config('app.name'))
             ->title(
                 modify: fn (string $title) => $title . ' - ' . config('app.name'),
-                default: 'Filament - The elegant TALLkit for Laravel artisans.',
+                default: 'Filament - accelerated Laravel development framework: admin panel, form builder, table builder and more',
             )
-            ->description(default: 'Filament is a collection of tools for rapidly building beautiful TALL stack apps, designed for humans.')
+            ->description(default: 'A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS.')
             ->twitterSite('filamentphp');
 
         Model::preventLazyLoading(! app()->isProduction());
