@@ -4,7 +4,9 @@
     class="mx-auto w-full max-w-6xl px-10 pt-20"
 >
     {{-- Header --}}
-    <div class="flex flex-wrap-reverse md:flex-nowrap items-center justify-start md:justify-between gap-y-10 gap-x-20">
+    <div
+        class="flex flex-wrap-reverse items-center justify-start gap-x-20 gap-y-10 md:flex-nowrap md:justify-between"
+    >
         <div>
             {{-- Title --}}
             <div
