@@ -27,10 +27,48 @@
 
         <x-seo::meta />
 
+        {{-- Favicon --}}
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png?v=w1dBNxT7Wg"
+        />
         <link
             rel="icon"
             type="image/png"
-            href="{{ asset('/images/icon.png') }}"
+            sizes="32x32"
+            href="/favicon/favicon-32x32.png?v=w1dBNxT7Wg"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon/favicon-16x16.png?v=w1dBNxT7Wg"
+        />
+        <link
+            rel="manifest"
+            href="/favicon/site.webmanifest?v=w1dBNxT7Wg"
+        />
+        <link
+            rel="mask-icon"
+            href="/favicon/safari-pinned-tab.svg?v=w1dBNxT7Wg"
+            color="#fdae4b"
+        />
+        <link
+            rel="shortcut icon"
+            href="/favicon/favicon.ico?v=w1dBNxT7Wg"
+        />
+        <meta
+            name="msapplication-TileColor"
+            content="#ffc40d"
+        />
+        <meta
+            name="msapplication-config"
+            content="/favicon/browserconfig.xml?v=w1dBNxT7Wg"
+        />
+        <meta
+            name="theme-color"
+            content="#ffffff"
         />
 
         <!-- Fonts -->
