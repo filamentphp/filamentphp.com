@@ -1,6 +1,53 @@
 <section
     x-cloak
     x-data="{}"
+    x-init="
+        () => {
+            if (reducedMotion) return
+            gsap.timeline()
+                .fromTo(
+                    $refs.consulting,
+                    {
+                        autoAlpha: 0,
+                        x: -30,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                )
+                .fromTo(
+                    $refs.message,
+                    {
+                        autoAlpha: 0,
+                        x: 10,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                    '<',
+                )
+                .fromTo(
+                    $refs.phone,
+                    {
+                        autoAlpha: 0,
+                        x: 20,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                    '<',
+                )
+        }
+    "
     class="mx-auto w-full max-w-6xl px-10 pt-20"
 >
     {{-- Header --}}

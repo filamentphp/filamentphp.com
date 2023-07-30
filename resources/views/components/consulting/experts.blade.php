@@ -1,10 +1,46 @@
 <section
     x-cloak
     x-data="{}"
+    x-init="
+        () => {
+            if (reducedMotion) return
+            gsap.timeline()
+                .fromTo(
+                    $refs.title,
+                    {
+                        autoAlpha: 0,
+                        x: -30,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                )
+                .fromTo(
+                    $refs.list,
+                    {
+                        autoAlpha: 0,
+                        x: 20,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
+                    '<',
+                )
+        }
+    "
     class="mx-auto w-full max-w-6xl px-10 pt-20"
 >
     {{-- Title --}}
-    <div class="flex items-center gap-5">
+    <div
+        x-ref="title"
+        class="flex items-center gap-5"
+    >
         <div class="shrink-0 text-2xl font-semibold text-evening">
             Choose your expert
         </div>
@@ -14,7 +50,10 @@
     </div>
 
     {{-- Consultant List --}}
-    <div class="space-y-5 pb-20">
+    <div
+        x-ref="list"
+        class="space-y-5 pb-20"
+    >
         <x-consulting.consultant
             number="01"
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
