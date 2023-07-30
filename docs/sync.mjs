@@ -109,7 +109,7 @@ versions.forEach((version) => {
         fs.mkdir(`src/pages/1.x/admin`, { recursive: true }, () => {
             const sourceFiles = getDirContents(`./filament/1.x/docs`)
 
-            sourceFiles.forEach((file, index) => {
+            sourceFiles.forEach((file) => {
                 const destination = file
                     .split('docs/')
                     .pop()

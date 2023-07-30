@@ -8,6 +8,5 @@ docs/filament
 docs/node_modules
 docs/src/pages
 docs/torchlight-cache
-public/build
-public/docs
+public
 storage

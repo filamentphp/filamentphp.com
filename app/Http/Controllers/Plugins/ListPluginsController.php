@@ -14,9 +14,9 @@ class ListPluginsController extends Controller
     {
         seo()->title('Plugins');
 
-        return view('plugins', [
+        return view('plugins.list-plugins', [
             'authorsCount' => Author::query()->whereHas('plugins')->count(),
-            'categories' => PluginCategory::query()->orderBy('name')->get(),
+            'categories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
             'pluginsCount' => Plugin::count(),
             'plugins' => cache()->remember(
                 'plugins',
