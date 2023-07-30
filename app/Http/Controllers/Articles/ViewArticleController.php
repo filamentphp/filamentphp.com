@@ -12,6 +12,7 @@ class ViewArticleController extends Controller
         seo()->title("{$article->title} by {$article->author->name}");
 
         return view('articles.view-article', ['article' => $article]);
+
         return view('articles.view-article', [
             'record' => [
                 'id' => 1,
@@ -31,7 +32,7 @@ class ViewArticleController extends Controller
                 ],
                 'categories' => [
                     'Form Builder',
-                    'Admin Panel'
+                    'Admin Panel',
                 ],
                 'versions' => [2, 3],
                 'created_at' => '1 year ago',
@@ -54,7 +55,7 @@ class ViewArticleController extends Controller
                     'title' => 'Changes to Admin Panel resources in v2.13.0',
                     'stars_count' => 33,
                 ],
-            ]
+            ],
         ]);
     }
 }

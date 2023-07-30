@@ -110,8 +110,8 @@
                 x-ref="message"
                 class="w-[23rem] pt-10 text-lg font-medium text-dolphin"
             >
-                A collection of articles written by the Filament team
-                and our community.
+                A collection of articles written by the Filament team and our
+                community.
             </div>
 
             {{-- Stats --}}
@@ -210,7 +210,7 @@
                         )
                 }
             "
-            class="shrink-0 absolute -bottom-[1.65rem] -right-5 -z-10 hidden w-72 md:relative md:right-auto md:top-auto md:w-80 min-[840px]:block"
+            class="absolute -bottom-[1.65rem] -right-5 -z-10 hidden w-72 shrink-0 md:relative md:right-auto md:top-auto md:w-80 min-[840px]:block"
         >
             {{-- Illustration --}}
             <img

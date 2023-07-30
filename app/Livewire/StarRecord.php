@@ -4,7 +4,6 @@ namespace App\Livewire;
 
 use App\Actions\Star;
 use App\Actions\Unstar;
-use App\Models\record;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 

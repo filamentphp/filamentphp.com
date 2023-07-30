@@ -16,12 +16,14 @@
     ])
 >
     {{-- Type Icon --}}
-    <div @class([
-        '-my-4',
-        'text-amber-500' => $type->color === 'amber',
-        'text-blue-500' => $type->color === 'blue',
-        'text-violet-500' => $type->color === 'violet',
-    ])>
+    <div
+        @class([
+            '-my-4',
+            'text-amber-500' => $type->color === 'amber',
+            'text-blue-500' => $type->color === 'blue',
+            'text-violet-500' => $type->color === 'violet',
+        ])
+    >
         {!! $type->getIcon() !!}
     </div>
 

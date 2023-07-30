@@ -7,8 +7,6 @@ use App\Models\Article;
 use App\Models\ArticleCategory;
 use App\Models\ArticleType;
 use App\Models\Author;
-use App\Models\Plugin;
-use App\Models\PluginCategory;
 use App\Models\Star;
 
 class ListArticlesController extends Controller

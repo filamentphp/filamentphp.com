@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Models\Article;
 use App\Models\Plugin;
-use App\Models\Trick;
 use App\Services\PackageDownloadStats;
 use App\Services\PackageGitHubStarsStats;
 use Illuminate\Database\Eloquent\Model;
