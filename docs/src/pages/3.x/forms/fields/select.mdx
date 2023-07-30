@@ -98,6 +98,29 @@ Select::make('technologies')
     ->getOptionLabelsUsing(fn (array $values): array => Technology::whereIn('id', $values)->pluck('name', 'id')->toArray()),
 ```
 
+## Grouping options
+
+You can group options together under a label, to organize them better. To do this, you can pass an array of groups to `options()` or wherever you would normally pass an array of options. The keys of the array are used as group labels, and the values are arrays of options in that group:
+
+```php
+use Filament\Forms\Components\Select;
+
+Select::make('status')
+    ->searchable()
+    ->options([
+        'In Process' => [
+            'draft' => 'Draft',
+            'reviewing' => 'Reviewing',
+        ],
+        'Reviewed' => [
+            'published' => 'Published',
+            'rejected' => 'Rejected',
+        ],
+    ])
+```
+
+<AutoScreenshot name="forms/fields/select/grouped" alt="Grouped select" version="3.x" />
+
 ## Integrating with an Eloquent relationship
 
 > If you're building a form inside your Livewire component, make sure you have set up the [form's model](../adding-a-form-to-a-livewire-component#setting-a-form-model). Otherwise, Filament doesn't know which model to use to retrieve the relationship from.
