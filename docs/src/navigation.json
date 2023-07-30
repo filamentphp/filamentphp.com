@@ -1436,6 +1436,121 @@
                                 "links": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Blade Components",
+                        "slug": "blade-components",
+                        "href": "/docs/3.x/support/blade-components/overview",
+                        "links": [
+                            {
+                                "title": "Overview",
+                                "slug": "overview",
+                                "href": "/docs/3.x/support/blade-components/overview",
+                                "links": []
+                            },
+                            {
+                                "title": "Avatar Blade component",
+                                "slug": "avatar",
+                                "href": "/docs/3.x/support/blade-components/avatar",
+                                "links": []
+                            },
+                            {
+                                "title": "Badge Blade component",
+                                "slug": "badge",
+                                "href": "/docs/3.x/support/blade-components/badge",
+                                "links": []
+                            },
+                            {
+                                "title": "Breadcrumbs Blade component",
+                                "slug": "breadcrumbs",
+                                "href": "/docs/3.x/support/blade-components/breadcrumbs",
+                                "links": []
+                            },
+                            {
+                                "title": "Button Blade component",
+                                "slug": "button",
+                                "href": "/docs/3.x/support/blade-components/button",
+                                "links": []
+                            },
+                            {
+                                "title": "Card Blade component",
+                                "slug": "card",
+                                "href": "/docs/3.x/support/blade-components/card",
+                                "links": []
+                            },
+                            {
+                                "title": "Checkbox Blade component",
+                                "slug": "checkbox",
+                                "href": "/docs/3.x/support/blade-components/checkbox",
+                                "links": []
+                            },
+                            {
+                                "title": "Dropdown Blade component",
+                                "slug": "dropdown",
+                                "href": "/docs/3.x/support/blade-components/dropdown",
+                                "links": []
+                            },
+                            {
+                                "title": "Fieldset Blade component",
+                                "slug": "fieldset",
+                                "href": "/docs/3.x/support/blade-components/fieldset",
+                                "links": []
+                            },
+                            {
+                                "title": "Icon button Blade component",
+                                "slug": "icon-button",
+                                "href": "/docs/3.x/support/blade-components/icon-button",
+                                "links": []
+                            },
+                            {
+                                "title": "Input wrapper Blade component",
+                                "slug": "input-wrapper",
+                                "href": "/docs/3.x/support/blade-components/input-wrapper",
+                                "links": []
+                            },
+                            {
+                                "title": "Input Blade component",
+                                "slug": "input",
+                                "href": "/docs/3.x/support/blade-components/input",
+                                "links": []
+                            },
+                            {
+                                "title": "Link Blade component",
+                                "slug": "link",
+                                "href": "/docs/3.x/support/blade-components/link",
+                                "links": []
+                            },
+                            {
+                                "title": "Loading indicator Blade component",
+                                "slug": "loading-indicator",
+                                "href": "/docs/3.x/support/blade-components/loading-indicator",
+                                "links": []
+                            },
+                            {
+                                "title": "Modal Blade component",
+                                "slug": "modal",
+                                "href": "/docs/3.x/support/blade-components/modal",
+                                "links": []
+                            },
+                            {
+                                "title": "Pagination Blade component",
+                                "slug": "pagination",
+                                "href": "/docs/3.x/support/blade-components/pagination",
+                                "links": []
+                            },
+                            {
+                                "title": "Section Blade component",
+                                "slug": "section",
+                                "href": "/docs/3.x/support/blade-components/section",
+                                "links": []
+                            },
+                            {
+                                "title": "Select Blade component",
+                                "slug": "select",
+                                "href": "/docs/3.x/support/blade-components/select",
+                                "links": []
+                            }
+                        ]
                     }
                 ]
             }

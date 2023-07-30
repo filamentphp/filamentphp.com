@@ -45,7 +45,7 @@
             navTimeline.play()
         }
     "
-    class="relative mx-auto flex max-w-8xl items-center justify-between px-8 py-10"
+    class="relative mx-auto flex max-w-8xl items-center justify-between overflow-x-clip px-8 py-10 sm:overflow-x-visible"
 >
     {{-- Background Blob --}}
     <img
@@ -686,6 +686,13 @@
                     ></div>
                 </div>
             @endif
+        </a>
+
+        <a
+            href="https://shop.filamentphp.com"
+            class="group/nav-link relative hidden text-evening opacity-80 transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block"
+        >
+            <div class="gsap-fadein">Shop</div>
         </a>
 
         {{-- Github --}}
