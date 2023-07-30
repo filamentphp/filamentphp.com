@@ -1,6 +1,6 @@
 ---
-name: Tricks
-slug: tricks
+name: Trick
+slug: trick
 color: violet
 ---
 

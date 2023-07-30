@@ -5,3 +5,7 @@
 [x-cloak] {
     display: none;
 }
+
+.filament-hidden {
+    display: none;
+}
