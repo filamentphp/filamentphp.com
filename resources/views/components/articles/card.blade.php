@@ -4,49 +4,26 @@
 >
     <div class="px-1.5 pb-1 pt-2.5">
         <div class="flex flex-wrap items-center justify-between gap-5">
-            {{-- Author --}}
-            <div class="flex items-center gap-3">
-                <div class="h-9 w-9 shrink-0 overflow-hidden rounded-full">
-                    <template x-if="article.author.avatar">
-                        <div
-                            x-bind:style="'background-image: url(' + article.author.avatar + ')'"
-                            class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
-                        ></div>
-                    </template>
-                    <template x-if="! article.author.avatar">
-                        <div
-                            class="grid h-full w-full place-items-center bg-fair-pink text-salmon/50"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="22"
-                                height="22"
-                                viewBox="0 0 24 24"
-                            >
-                                <g fill="currentColor">
-                                    <circle
-                                        cx="12"
-                                        cy="6"
-                                        r="4"
-                                    />
-                                    <path
-                                        d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z"
-                                    />
-                                </g>
-                            </svg>
-                        </div>
-                    </template>
-                </div>
-                <div class="space-y-0.5 text-xs">
-                    <div
-                        class="font-semibold capitalize"
-                        x-text="article.author.name"
-                    ></div>
-                    <div
-                        class="text-dolphin/80"
-                        x-text="article.publish_date"
-                    ></div>
-                </div>
+            <div
+                class="flex select-none items-center justify-center gap-2 rounded-full py-2.5 pl-4 pr-5 text-xs"
+                x-bind:class="{
+                    'bg-amber-100/80 text-amber-700': types[article.type].color === 'amber',
+                    'bg-blue-100/80 text-blue-700': types[article.type].color === 'blue',
+                    'bg-violet-100/80 text-violet-700': types[article.type].color === 'violet',
+                }"
+            >
+                {{-- Type Icon --}}
+                <div
+                    x-html="types[article.type].icon"
+                    class="-my-4"
+                    x-bind:class="{
+                        'text-amber-500': types[article.type].color === 'amber',
+                        'text-blue-500': types[article.type].color === 'blue',
+                        'text-violet-500': types[article.type].color === 'violet',
+                    }"
+                ></div>
+                {{-- Type Name --}}
+                <div x-text="types[article.type].name"></div>
             </div>
 
             {{-- Stars --}}
@@ -73,34 +50,56 @@
         {{-- Title --}}
         <div
             x-text="article.title"
-            class="line-clamp-2 pt-3 text-base font-medium text-evening"
+            class="line-clamp-2 pt-3.5 text-base font-medium text-evening"
         ></div>
 
-        {{-- Categories --}}
-        <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-5">
-            <div
-                class="flex select-none items-center justify-center gap-2 rounded-full py-2.5 pl-4 pr-5 text-xs"
-                x-bind:class="{
-                    'bg-amber-100/80 text-amber-700': types[article.type].color === 'amber',
-                    'bg-blue-100/80 text-blue-700': types[article.type].color === 'blue',
-                    'bg-violet-100/80 text-violet-700': types[article.type].color === 'violet',
-                }"
-            >
-                {{-- Type Icon --}}
-                <div
-                    x-html="types[article.type].icon"
-                    class="-my-4"
-                    x-bind:class="{
-                        'text-amber-500': types[article.type].color === 'amber',
-                        'text-blue-500': types[article.type].color === 'blue',
-                        'text-violet-500': types[article.type].color === 'violet',
-                    }"
-                ></div>
-
-                {{-- Type Name --}}
-                <div x-text="types[article.type].name"></div>
+        {{-- Author --}}
+        <div class="flex items-center gap-3 pt-3.5">
+            <div class="h-9 w-9 shrink-0 overflow-hidden rounded-full">
+                <template x-if="article.author.avatar">
+                    <div
+                        x-bind:style="'background-image: url(' + article.author.avatar + ')'"
+                        class="aspect-square h-full w-full bg-cover bg-center bg-no-repeat"
+                    ></div>
+                </template>
+                <template x-if="! article.author.avatar">
+                    <div
+                        class="grid h-full w-full place-items-center bg-fair-pink text-salmon/50"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                        >
+                            <g fill="currentColor">
+                                <circle
+                                    cx="12"
+                                    cy="6"
+                                    r="4"
+                                />
+                                <path
+                                    d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                </template>
             </div>
+            <div class="space-y-0.5 text-xs">
+                <div
+                    class="font-semibold capitalize"
+                    x-text="article.author.name"
+                ></div>
+                <div
+                    class="text-dolphin/80"
+                    x-text="article.publish_date"
+                ></div>
+            </div>
+        </div>
 
+        {{-- Categories --}}
+        <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-4">
             <template
                 x-for="category in article.categories"
                 :key="category"
