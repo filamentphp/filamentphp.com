@@ -69,42 +69,34 @@ Route::prefix('/docs')->group(function () {
         }
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
-        $versionNavigation = $navigation[Str::before($slug, '.x') - 1];
+        $version = Str::before($slug, '.x');
+
+        if (! is_numeric($version)) {
+            abort(404);
+        }
+
+        $versionNavigation = $navigation[$version - 1];
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 
-Route::feeds();
+Route::prefix('/community')->group(function () {
+    Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
+        });
+    });
+});
 
 Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
 
     Route::name('plugins.')->group(function () {
-        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
-
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/tricks')->group(function () {
-    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
-
-    Route::name('tricks.')->group(function () {
-        Route::prefix('/{trick:slug}')->group(function () {
-            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/blog')->group(function () {
-    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
-
-    Route::name('blog.')->group(function () {
-        Route::prefix('/{article:slug}')->group(function () {
-            Route::get('/', Controllers\Blog\ViewArticleController::class)->name('article');
         });
     });
 });

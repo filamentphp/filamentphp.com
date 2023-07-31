@@ -148,7 +148,7 @@
                 x-ref="message"
                 class="max-w-sm pt-10 text-lg font-medium text-dolphin"
             >
-                Community made packages for Filament projects which gives you
+                Community made packages for Filament projects, which give you
                 access to awesome new features.
             </div>
 

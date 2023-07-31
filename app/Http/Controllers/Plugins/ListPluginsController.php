@@ -12,11 +12,18 @@ class ListPluginsController extends Controller
 {
     public function __invoke()
     {
-        seo()->title('Plugins');
+        seo()
+            ->title('Plugins')
+            ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
+            ->tag('previewlinks:overline', 'Filament')
+            ->tag('previewlinks:title', 'Plugins')
+            ->tag('previewlinks:subtitle', 'Community made packages for Filament projects, which give you access to awesome new features.')
+            ->tag('previewlinks:image', 'https://filamentphp.com/images/icon.png')
+            ->tag('previewlinks:repository', 'filament/filament');
 
-        return view('plugins', [
+        return view('plugins.list-plugins', [
             'authorsCount' => Author::query()->whereHas('plugins')->count(),
-            'categories' => PluginCategory::query()->orderBy('name')->get(),
+            'categories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
             'pluginsCount' => Plugin::count(),
             'plugins' => cache()->remember(
                 'plugins',

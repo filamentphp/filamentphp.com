@@ -2,7 +2,6 @@
 import { collectHeadings, getAllLinks } from "src/lib/helpers";
 import Navigation from "@components/Navigation.astro";
 import Header from "@components/Header.astro";
-import Sponsors from "@components/Sponsors.astro";
 import Prose from "@components/Prose.astro";
 import Hero from "@components/Hero.astro";
 import rawNavigation from '../navigation.json';
@@ -83,7 +82,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12">
+    {isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
         <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden"></div>
         <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
@@ -214,10 +213,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )
           }
         </nav>
-        <!--<div class="w-56">-->
-        <!--  <Sponsors />-->
-        <!--</div>-->
       </div>
-    </div>
+    </div>}
   </body>
 </html>
