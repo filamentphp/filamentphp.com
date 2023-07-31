@@ -266,7 +266,7 @@
                                     {{-- Articles --}}
                                     <div class="space-y-0.5">
                                         <div class="text-lg font-extrabold">
-                                            {{ number_format($article->author->articles()->published()->count()) }}
+                                            {{ number_format($article->author->articles()->published()->count(),) }}
                                         </div>
                                         <div
                                             class="text-sm font-medium text-hurricane/80"
