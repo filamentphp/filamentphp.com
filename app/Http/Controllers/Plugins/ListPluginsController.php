@@ -14,11 +14,10 @@ class ListPluginsController extends Controller
     {
         seo()
             ->title('Plugins')
-            ->previewify('main', [
-                'overline' => 'Filament',
-                'title' => 'Plugins',
-                'subtitle' => 'Community made packages for Filament projects, which give you access to awesome new features.',
-            ]);
+            ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
+            ->tag('previewlinks:overline', 'Filament')
+            ->tag('previewlinks:title', 'Plugins')
+            ->tag('previewlinks:subtitle', 'Community made packages for Filament projects, which give you access to awesome new features.');
 
         return view('plugins.list-plugins', [
             'authorsCount' => Author::query()->whereHas('plugins')->count(),

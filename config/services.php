@@ -34,8 +34,4 @@ return [
         'token' => env('ANYSTACK_TOKEN'),
     ],
 
-    'previewify' => [
-        'key' => env('PREVIEWIFY_API_TOKEN'),
-    ],
-
 ];
