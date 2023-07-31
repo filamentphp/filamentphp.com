@@ -1,7 +1,7 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-60"
+    class="mx-auto w-full max-w-screen-lg pt-60"
 >
     <div
         x-data="{}"
