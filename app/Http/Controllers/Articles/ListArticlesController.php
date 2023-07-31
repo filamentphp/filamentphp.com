@@ -18,6 +18,7 @@ class ListArticlesController extends Controller
                 'articles',
                 now()->addMinutes(15),
                 fn (): array => Article::query()
+                    ->where('publish_date', '<=', now())
                     ->orderByDesc('publish_date')
                     ->with(['author'])
                     ->get()
