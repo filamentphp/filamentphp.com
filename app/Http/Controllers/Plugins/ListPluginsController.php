@@ -17,7 +17,9 @@ class ListPluginsController extends Controller
             ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
             ->tag('previewlinks:overline', 'Filament')
             ->tag('previewlinks:title', 'Plugins')
-            ->tag('previewlinks:subtitle', 'Community made packages for Filament projects, which give you access to awesome new features.');
+            ->tag('previewlinks:subtitle', 'Community made packages for Filament projects, which give you access to awesome new features.')
+            ->tag('previewlinks:image', 'https://filamentphp.com/images/icon.png')
+            ->tag('previewlinks:repository', 'filament/filament');
 
         return view('plugins.list-plugins', [
             'authorsCount' => Author::query()->whereHas('plugins')->count(),
