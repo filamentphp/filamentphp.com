@@ -31,12 +31,10 @@
                         $refs.content,
                         {
                             autoAlpha: 0,
-                            x: 30,
                             y: -30,
                         },
                         {
                             autoAlpha: 1,
-                            x: 0,
                             y: 0,
                             duration: 0.7,
                             ease: 'power4.out',
@@ -47,12 +45,10 @@
                         $refs.decorationbg,
                         {
                             autoAlpha: 0,
-                            x: 30,
                             y: -30,
                         },
                         {
                             autoAlpha: 1,
-                            x: 0,
                             y: 0,
                             duration: 0.7,
                             ease: 'back.out',
