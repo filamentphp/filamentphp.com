@@ -3,7 +3,7 @@ title: Brazilian CPF CNPJ fields
 slug: brazilian-cpfcnpj-field
 author_slug: leandrocfe
 publish_date: 2023-03-01
-categories: [form-builder]
+categories: [form-builder, alpinejs]
 type_slug: trick
 ---
 

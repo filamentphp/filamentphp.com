@@ -3,7 +3,7 @@ title: Brazilian Phone Number field
 slug: brazilian-phone-number-field
 author_slug: leandrocfe
 publish_date: 2022-12-05
-categories: [form-builder]
+categories: [form-builder, alpinejs]
 type_slug: trick
 ---
 
