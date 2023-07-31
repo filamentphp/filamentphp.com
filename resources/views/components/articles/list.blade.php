@@ -151,12 +151,14 @@
                     'translate-x-[17rem] w-[6rem]' : selectedType === 'trick',
                     @foreach ($types as $type)
 
+
                         @js(match ($type['color']) {
                             'amber' => 'bg-amber-100/60',
                             'blue' => 'bg-blue-100/60',
                             'violet' => 'bg-violet-100/60',
                         }): selectedType === @js($type['slug']),
                     @endforeach
+
 
                 }"
             ></div>
