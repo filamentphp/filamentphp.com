@@ -266,7 +266,7 @@
                                     {{-- Articles --}}
                                     <div class="space-y-0.5">
                                         <div class="text-lg font-extrabold">
-                                            {{ number_format($article->author->articles()->count()) }}
+                                            {{ number_format($article->author->articles()->published()->count()) }}
                                         </div>
                                         <div
                                             class="text-sm font-medium text-hurricane/80"
@@ -292,7 +292,7 @@
                     </div>
                 </div>
 
-                @if (count($otherArticles = $article->author->articles()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherArticles = $article->author->articles()->published()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div class="mx-auto w-full max-w-md">
                         <div class="text-lg font-extrabold">
