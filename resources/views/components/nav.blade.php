@@ -61,9 +61,9 @@
         aria-haspopup="true"
         x-on:click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"
         x-on:click.away="$store.sidebar.isOpen = false"
-        class="lg:hidden"
+        class="transition duration-300 hover:scale-110 lg:hidden"
     >
-        <x-heroicon-o-bars-3 class="h-6 w-6" />
+        <x-heroicon-o-bars-3 class="h-7 w-7" />
 
         <span class="sr-only">Toggle Menu</span>
     </button>
