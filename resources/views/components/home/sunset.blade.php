@@ -83,7 +83,7 @@
                         $refs.cloud3,
                         {
                             autoAlpha: 0,
-                            x: 100,
+                            x: 20,
                         },
                         {
                             autoAlpha: 1,
