@@ -51,7 +51,7 @@
     <img
         src="{{ Vite::asset('resources/svg/background-blob.svg') }}"
         alt=""
-        class="absolute right-0 -top-[10rem,clamp(50vw),40rem] z-[-100] lg:-right-[10rem]"
+        class="absolute -top-[10rem,clamp(50vw),40rem] right-0 z-[-100] lg:-right-[10rem]"
     />
 
     {{-- Mobile Menu Button --}}

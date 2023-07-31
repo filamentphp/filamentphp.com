@@ -4,7 +4,7 @@
         downloadCounterTarget: @js(app('package-download-stats')()),
         githubStarsCounterTarget: @js(app('package-github-stars-stats')()),
     }"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-20 overflow-x-clip"
+    class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20"
 >
     <div
         x-data="{

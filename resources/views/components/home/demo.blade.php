@@ -134,7 +134,7 @@
 
             {{-- Decoration Background --}}
             <div
-                class="relative -z-10 h-[120%] w-full lg:w-[110%] self-center justify-self-center rounded-[3rem] bg-gradient-to-br from-dawn-pink to-transparent [grid-area:1/-1] md:left-10 md:rotate-2 md:justify-self-start lg:h-[25rem]"
+                class="relative -z-10 h-[120%] w-full self-center justify-self-center rounded-[3rem] bg-gradient-to-br from-dawn-pink to-transparent [grid-area:1/-1] md:left-10 md:rotate-2 md:justify-self-start lg:h-[25rem] lg:w-[110%]"
             ></div>
         </div>
     </div>
