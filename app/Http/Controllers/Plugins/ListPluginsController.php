@@ -12,7 +12,13 @@ class ListPluginsController extends Controller
 {
     public function __invoke()
     {
-        seo()->title('Plugins');
+        seo()
+            ->title('Plugins')
+            ->previewify('main', [
+                'overline' => 'Filament',
+                'title' => 'Plugins',
+                'subtitle' => 'Community made packages for Filament projects, which give you access to awesome new features.',
+            ]);
 
         return view('plugins.list-plugins', [
             'authorsCount' => Author::query()->whereHas('plugins')->count(),
