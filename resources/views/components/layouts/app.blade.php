@@ -21,7 +21,7 @@
         x-cloak
         :aria-hidden="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-        class="fixed inset-y-0 left-0 z-[1000] w-full max-w-xs transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
+        class="fixed inset-y-0 left-0 z-[1000] w-full max-w-[19rem] transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
     >
         <a
             href="/"
@@ -56,7 +56,7 @@
                 </svg>
             </div>
         </a>
-        <ul class="-mx-3 space-y-2">
+        <ul class="-mx-3 select-none space-y-2">
             <li>
                 <a
                     href="{{ route('home') }}"
