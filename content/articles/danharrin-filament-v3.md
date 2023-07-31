@@ -33,7 +33,7 @@ In v2, our main package was the "admin panel". Now, Filament allows you to [buil
 
 ## Improved theme customization
 
-Customize the [color palette](/docs/3.x/panels/themes#changing-the-colors) and [typography](/docs/3.x/panels/themes#changing-the-font) of your panel without having to compile any Tailwind CSS. Easily hookin to our [suite of CSS classes](/docs/3.x/support/style-customization) to characterize a panel with your own branding - it's all yours.
+Customize the [color palette](/docs/3.x/panels/themes#changing-the-colors) and [typography](/docs/3.x/panels/themes#changing-the-font) of your panel without having to compile any Tailwind CSS. Easily hook into our [suite of CSS classes](/docs/3.x/support/style-customization) to characterize a panel with your own branding - it's all yours.
 
 ## Enhanced authentication features
 
