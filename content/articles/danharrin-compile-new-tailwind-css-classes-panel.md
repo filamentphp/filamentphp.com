@@ -2,7 +2,7 @@
 title: How can I compile new Tailwind CSS classes in a panel?
 slug: danharrin-combine-new-tailwind-css-classes-panel
 author_slug: danharrin
-publish_date: 2022-08-01
+publish_date: 2023-08-01
 categories: [panel-builder, tailwind-css]
 type_slug: trick
 ---
