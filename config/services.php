@@ -35,7 +35,7 @@ return [
     ],
 
     'previewify' => [
-        'key' => env('PREVIEWIFY_KEY'),
+        'key' => env('PREVIEWIFY_API_TOKEN'),
     ],
 
 ];
