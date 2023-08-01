@@ -107,12 +107,12 @@ Finally, you also need at least one filter already set up in a `Resource` in you
 
     ```bash
     {
-    "repositories": [
-        {
-        "type": "composer",
-        "url": "https://filament-filter-sets.composer.sh"
-        }
-    ],
+        "repositories": [
+            {
+                "type": "composer",
+                "url": "https://filament-filter-sets.composer.sh"
+            }
+        ],
     }
     ```
 
@@ -190,11 +190,10 @@ Finally, you also need at least one filter already set up in a `Resource` in you
     After you have [created your custom theme](https://github.com/filamentphp/filament/blob/3.x/packages/panels/docs/11-themes.md), add Filter Set's views to your theme's `tailwind.config.js` file:
 
     ```js
-        content: [
-            ...
-            './vendor/archilex/filament-filter-sets/**/*.php',
-        ],
-    }
+    content: [
+        ...
+        './vendor/archilex/filament-filter-sets/**/*.php',
+    ],
     ```
 
     Next, import Filter Set's custom `choices.js` stylesheet into your theme's css file:
@@ -256,17 +255,16 @@ Filter Sets v2 is mostly a compatibility update to support Filament v3. Follow t
     After you have [created your custom theme](https://github.com/filamentphp/filament/blob/3.x/packages/panels/docs/11-themes.md), add Filter Set’s views to your theme’s `tailwind.config.js` file:
 
     ```js
-        content: [
-            ...
-            ‘./vendor/archilex/filament-filter-sets/**/*.php’,
-        ],
-    }
+    content: [
+        ...
+        './vendor/archilex/filament-filter-sets/**/*.php',
+    ],
     ```
 
     Next, import Filter Set’s custom `choices.js` stylesheet into your theme’s css file:
 
     ```css
-    @import ‘../../../../vendor/archilex/filament-filter-sets/resources/css/plugin.css’;
+    @import '../../../../vendor/archilex/filament-filter-sets/resources/css/plugin.css';
     ```
 
 3. If you have already published your config file you need to make the following changes. 
@@ -334,21 +332,21 @@ Filter Sets v2 is mostly a compatibility update to support Filament v3. Follow t
 
     7.1 Update your view components:
 
-        ```php
-        <x-filament-filter-sets::favorites-bar />
-        ```
+    ```php
+    <x-filament-filter-sets::favorites-bar />
+    ```
     
     7.2 Add the following line to the top of your `app.css` file:
 
-        ```css
-        @import '../../vendor/archilex/filament-filter-sets/resources/dist/filament-filter-sets.css';
-        ```
+    ```css
+    @import '../../vendor/archilex/filament-filter-sets/resources/dist/filament-filter-sets.css';
+    ```
 
     7.3 Add the following line to the top of your `app.js` file:
 
-        ```js
-        import '../../vendor/archilex/filament-filter-sets/resources/dist/filament-filter-sets.js';
-        ```
+    ```js
+    import '../../vendor/archilex/filament-filter-sets/resources/dist/filament-filter-sets.js';
+    ```
 
     7.4 Update your `ListFilterSets` component:
 
@@ -735,16 +733,15 @@ class FilterSetPolicy
 
 Filter Sets offers multiple way to customize the plugin to suit your needs. We've already discussed policies above, but here are a few other ways to customize Filter Sets.
 
-
 #### Filter Sets Filter
 You can change some of the Filter Sets filter setting using any of the following methods:
 
 ```php
 FilterSetFilter::make()
-  ->label('Filter group') // default is 'Filter sets'
-  ->placeholder('Select filter group') // default is 'Select filter set'
-  ->optionsLimit(10) // default is 50
-  ->createOptionModalHeading('New filter group') // default is 'New filter set'
+    ->label('Filter group') // default is 'Filter sets'
+    ->placeholder('Select filter group') // default is 'Select filter set'
+    ->optionsLimit(10) // default is 50
+    ->createOptionModalHeading('New filter group') // default is 'New filter set'
 ```
 
 #### Favorites Bar
@@ -874,11 +871,10 @@ Filter Sets compiles its CSS using Filament's default color scheme for its 'prim
 Next you need to add the path to Filter Sets view resources to your `tailwind.config.js` file:
 
 ```js
-module.exports = {
-    content: [
-        // ...additional views
-        './vendor/archilex/filament-filter-sets/**/*.php'
-    ],
+content: [
+    ...
+    './vendor/archilex/filament-filter-sets/**/*.php',
+],
 ```
 
 Next, import Filter Set's custom icon picker css to your `filament.css` file:
