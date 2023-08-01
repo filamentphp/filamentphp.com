@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/mohamedsabil83/filament-forms-tinyed
 github_repository: mohamedsabil83/filament-forms-tinyeditor
 has_dark_theme: true
 has_translations: true
-image: mohamedsabil83-filament-forms-tinyeditor.jpg
+image: mohamedsabil83-filament-forms-tinyeditor.png
 versions: [2, 3]
 ---
