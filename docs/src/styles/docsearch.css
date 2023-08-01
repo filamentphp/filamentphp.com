@@ -296,7 +296,7 @@
 }
 
 .DocSearch-Hit-source {
-    @apply sticky top-0 z-10 px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:text-slate-100 bg-white dark:bg-slate-800;
+    @apply sticky top-0 z-10 bg-white px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:bg-slate-800 dark:text-slate-100;
 }
 
 .DocSearch-Hit-Tree {
