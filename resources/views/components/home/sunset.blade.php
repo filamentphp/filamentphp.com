@@ -1,7 +1,7 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-60"
+    class="mx-auto w-full max-w-screen-lg pt-60"
 >
     <div
         x-data="{}"
@@ -20,11 +20,9 @@
                         $refs.left_mountain,
                         {
                             autoAlpha: 0,
-                            x: -50,
                         },
                         {
                             autoAlpha: 1,
-                            x: 0,
                             duration: 0.7,
                             ease: 'circ.out',
                         },
@@ -33,11 +31,9 @@
                         $refs.right_mountain,
                         {
                             autoAlpha: 0,
-                            x: 50,
                         },
                         {
                             autoAlpha: 1,
-                            x: 0,
                             duration: 0.7,
                             ease: 'circ.out',
                         },
@@ -59,7 +55,7 @@
                         $refs.cloud1,
                         {
                             autoAlpha: 0,
-                            x: 200,
+                            x: 20,
                         },
                         {
                             autoAlpha: 1,
@@ -73,7 +69,7 @@
                         $refs.cloud2,
                         {
                             autoAlpha: 0,
-                            x: -200,
+                            x: -20,
                         },
                         {
                             autoAlpha: 1,
@@ -87,7 +83,7 @@
                         $refs.cloud3,
                         {
                             autoAlpha: 0,
-                            x: 100,
+                            x: 20,
                         },
                         {
                             autoAlpha: 1,
@@ -240,7 +236,7 @@
             {{-- Cloud 2 --}}
             <div
                 x-ref="cloud2"
-                class="relative -right-40 -top-10 self-start justify-self-center [grid-area:1/-1] sm:-top-3"
+                class="relative -right-20 -top-10 self-start justify-self-center [grid-area:1/-1] sm:-right-40 sm:-top-3"
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud2.svg') }}"
@@ -290,7 +286,7 @@
             {{-- Right Birds --}}
             <div
                 x-ref="right_birds"
-                class="relative -right-44 z-20 w-32 self-start justify-self-center [grid-area:1/-1] sm:top-20"
+                class="relative z-20 w-32 self-start justify-self-center [grid-area:1/-1] sm:-right-44 sm:top-20"
             >
                 <div class="flex justify-center">
                     <img

@@ -1,4 +1,3 @@
-import Alpine from 'alpinejs'
 import { gsap } from 'gsap'
 import * as ScrollTrigger from 'gsap/ScrollTrigger'
 import Tooltip from '@ryangjchandler/alpine-tooltip'
@@ -28,6 +27,3 @@ window.MiniSearch = MiniSearch
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Tooltip)
-
-window.Alpine = Alpine
-Alpine.start()

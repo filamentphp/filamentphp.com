@@ -1,3 +1,7 @@
+@php
+    seo()->image(asset('images/og.jpg'));
+@endphp
+
 <x-layouts.app>
     <x-home.hero />
     <x-home.demo />

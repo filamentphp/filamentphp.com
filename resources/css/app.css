@@ -9,3 +9,7 @@
 .permalink {
     @apply no-underline mr-2;
 }
+
+.filament-hidden {
+    display: none;
+}

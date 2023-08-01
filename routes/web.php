@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,56 +27,76 @@ Route::view('/consulting', 'consulting')->name('consulting');
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/app/getting-started');
-    Route::redirect('/resources', '/docs/app/resources');
-    Route::redirect('/pages', '/docs/app/pages');
-    Route::redirect('/dashboard', '/docs/app/dashboard');
-    Route::redirect('/navigation', '/docs/app/navigation');
-    Route::redirect('/plugin-development', '/docs/app/plugin-development');
+    Route::redirect('/getting-started', '/docs/panels/getting-started');
+    Route::redirect('/resources', '/docs/panels/resources/getting-started');
+    Route::redirect('/pages', '/docs/panels/pages');
+    Route::redirect('/dashboard', '/docs/panels/dashboard');
+    Route::redirect('/navigation', '/docs/panels/navigation');
+    Route::redirect('/plugin-development', '/docs/panels/plugins');
 
-    Route::get('/{slug?}', function (string $slug = null): string {
+    Route::redirect('/admin', '/docs/panels/installation');
+    Route::redirect('/panels', '/docs/panels/installation');
+    Route::redirect('/forms', '/docs/forms/installation');
+    Route::redirect('/tables', '/docs/tables/installation');
+    Route::redirect('/notifications', '/docs/notifications/installation');
+    Route::redirect('/actions', '/docs/actions/installation');
+    Route::redirect('/infolists', '/docs/infolists/installation');
+    Route::redirect('/widgets', '/docs/widgets/installation');
+    Route::redirect('/support', '/docs/support/overview');
+
+    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+        $requestUri = request()->getRequestUri();
+
+        if (
+            str($requestUri)->endsWith('/') &&
+            (session()->get('trailingSlashRedirectFrom') !== $requestUri)
+        ) {
+            session()->flash('trailingSlashRedirectFrom', $requestUri);
+
+            return redirect(str($requestUri)->beforeLast('/'));
+        }
+
         $slug = trim($slug, '/');
 
-        $filePath = public_path("docs/{$slug}/index.html");
+        if (filled($slug) && (! str_contains($slug, '.x'))) {
+            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
+        }
 
-        if (! file_exists($filePath)) {
+        $filePath = base_path("docs/dist/{$slug}/index.html");
+
+        if (file_exists($filePath)) {
+            return file_get_contents($filePath);
+        }
+
+        $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
+        $version = Str::before($slug, '.x');
+
+        if (! is_numeric($version)) {
             abort(404);
         }
 
-        return file_get_contents($filePath);
+        $versionNavigation = $navigation[$version - 1];
+
+        return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 
-Route::feeds();
+Route::prefix('/community')->group(function () {
+    Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
+        });
+    });
+});
 
 Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
 
     Route::name('plugins.')->group(function () {
-        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
-
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/tricks')->group(function () {
-    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
-
-    Route::name('tricks.')->group(function () {
-        Route::prefix('/{trick:slug}')->group(function () {
-            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/blog')->group(function () {
-    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
-
-    Route::name('blog.')->group(function () {
-        Route::prefix('/{article:slug}')->group(function () {
-            Route::get('/', Controllers\Blog\ViewArticleController::class)->name('article');
         });
     });
 });

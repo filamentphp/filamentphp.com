@@ -1,10 +1,10 @@
 <div
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-20 min-[550px]:px-10"
+    class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20 min-[550px]:px-10 sm:overflow-x-visible"
 >
     <div
-        class="relative flex items-start justify-center min-[550px]:justify-start md:gap-20 lg:gap-40 xl:justify-between"
+        class="relative flex items-start justify-center min-[550px]:justify-start lg:gap-40 xl:justify-between"
     >
         {{-- Left Side --}}
         <div class="min-[500px]:pl-10 sm:shrink-0 sm:pl-14 xl:pl-0">

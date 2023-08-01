@@ -148,7 +148,7 @@
                 x-ref="message"
                 class="max-w-sm pt-10 text-lg font-medium text-dolphin"
             >
-                Community made packages for Filament projects which gives you
+                Community made packages for Filament projects, which give you
                 access to awesome new features.
             </div>
 
@@ -200,7 +200,7 @@
             <div class="flex flex-wrap gap-x-5 gap-y-8 pt-10">
                 <a
                     x-ref="submit_plugins"
-                    href="#"
+                    href="https://github.com/filamentphp/filamentphp.com/blob/main/README.md#contributing"
                     class="group/button relative block"
                 >
                     {{-- Button --}}
@@ -235,7 +235,7 @@
                 </a>
                 <a
                     x-ref="how_to_make_plugins"
-                    href="#"
+                    href="/docs/support/plugins"
                     class="group/button relative block"
                 >
                     {{-- Button --}}

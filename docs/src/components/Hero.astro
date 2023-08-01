@@ -9,19 +9,19 @@ const { getStartedLink } = Astro.props
 <section class="py-5 sm:py-10 px-5">
     <div class="text-center">
         <div
-            class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#343a3f] dark:text-white"
+            class="pt-12 text-3xl sm:text-4xl lg:text-5xl font-black text-midnight dark:text-white"
         >
             Filament Documentation
         </div>
         <div
-            class="pt-4 text-lg md:text-xl lg:text-2xl text-evening/60 dark:text-white/80"
+            class="pt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-evening/60 dark:text-white/80"
         >
             A collection of beautiful full-stack components.
             <br />
             The perfect starting point for your next app.
         </div>
     </div>
-    <div class="grid place-items-center pt-4">
+    <div class="grid place-items-center pt-6">
         <a
             href={getStartedLink}
             class="px-7 py-3 rounded-full transition duration-300 text-white bg-[#ffbc74] hover:bg-[#ffbc74]/80 dark:text-midnight dark:hover:bg-[#ffbc74]/90 relative z-30"
@@ -29,14 +29,14 @@ const { getStartedLink } = Astro.props
             Get Started
         </a>
     </div>
-    <div class="pt-10 sm:pt-5 relative w-full max-w-7xl mx-auto min-h-[270px]">
+    <div class="pt-12 relative w-full max-w-7xl mx-auto min-h-[270px]">
         <div class="grid place-items-center">
             <div class="grid relative w-80 h-56">
                 <!-- Bulb Light -->
                 <img
                     src={bulbLight}
                     alt=""
-                    class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden"
+                    class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden z-10"
                 />
                 <!-- Bulb Dark -->
                 <img
@@ -72,9 +72,10 @@ const { getStartedLink } = Astro.props
                 height="250"
                 viewBox="0 0 634 634"
                 fill="none"
+                style="mix-blend-mode:color-dodge"
                 xmlns="http://www.w3.org/2000/svg"
             >
-                <g style="mix-blend-mode:color-dodge">
+                <g>
                     <rect
                         width="634"
                         height="634"
@@ -111,7 +112,7 @@ const { getStartedLink } = Astro.props
         </div>
         <!-- Sun -->
         <div
-            class="absolute -top-5 lg:-top-28 right-0 min-[600px]:right-10 lg:right-20 dark:hidden"
+            class="hidden sm:block absolute -top-5 lg:-top-28 right-0 min-[600px]:right-10 lg:right-20 dark:hidden"
         >
             <svg
                 width="106"
@@ -155,7 +156,7 @@ const { getStartedLink } = Astro.props
         </div>
         <!-- Birds -->
         <div
-            class="absolute -top-5 lg:-top-24 right-0 min-[600px]:right-20 lg:right-32 dark:hidden z-20"
+            class="hidden sm:block absolute -top-5 lg:-top-24 right-0 min-[600px]:right-20 lg:right-32 dark:hidden z-20"
         >
             <svg
                 class="scale-75 text-[#2A2C2A] dark:text-white/10"
@@ -188,7 +189,7 @@ const { getStartedLink } = Astro.props
         </div>
         <!-- Right Cloud -->
         <div
-            class="absolute top-20 right-20 lg:right-40 hidden min-[450px]:block"
+            class="absolute top-20 right-0 min-[640px]:right-20 lg:right-40 hidden min-[450px]:block"
         >
             <svg
                 width="122"
@@ -292,7 +293,7 @@ const { getStartedLink } = Astro.props
         class="pt-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center"
     >
         <a
-            href="#"
+            href="/docs/panels"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -300,8 +301,8 @@ const { getStartedLink } = Astro.props
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
+                    width="37"
+                    height="37"
                     viewBox="0 0 21 21"
                 >
                     <path
@@ -310,7 +311,7 @@ const { getStartedLink } = Astro.props
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         d="m17.498 15.498l-.01-10a2 2 0 0 0-2-1.998h-10a2 2 0 0 0-1.995 1.85l-.006.152l.01 10a2 2 0 0 0 2 1.998h10a2 2 0 0 0 1.995-1.85zM7.5 7.5v9.817m10-9.817h-14"
-                    ></path>
+                    />
                 </svg>
             </div>
             <div class="space-y-0.5">
@@ -347,59 +348,7 @@ const { getStartedLink } = Astro.props
             </div>
         </a>
         <a
-            href="#"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="37"
-                    height="37"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        fill="currentColor"
-                        d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.514 2.514 0 0 0 2.5-2.5V5.56a2.514 2.514 0 0 0-2.5-2.5ZM8.71 19.94H5.56a1.5 1.5 0 0 1-1.5-1.5v-3.11h4.65Zm0-5.61H4.06V9.67h4.65Zm0-5.66H4.06V5.56a1.5 1.5 0 0 1 1.5-1.5h3.15Zm11.23 9.77a1.511 1.511 0 0 1-1.5 1.5H9.71v-4.61h10.23Zm0-4.11H9.71V9.67h10.23Zm0-5.66H9.71V4.06h8.73a1.511 1.511 0 0 1 1.5 1.5Z"
-                    ></path>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Table Builder
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Craft beautiful, optimized, and interactive
-                    Livewire-powered datatables for any situation.
-                </div>
-            </div>
-        </a>
-        <a
-            href="#"
+            href="/docs/forms"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -451,7 +400,56 @@ const { getStartedLink } = Astro.props
             </div>
         </a>
         <a
-            href="#"
+            href="/docs/tables"
+            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+        >
+            <div
+                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="37"
+                    height="37"
+                    viewBox="0 0 28 28"
+                >
+                    <path fill="currentColor" d="M3 6.75A3.75 3.75 0 0 1 6.75 3h14.5A3.75 3.75 0 0 1 25 6.75v14.5A3.75 3.75 0 0 1 21.25 25H6.75A3.75 3.75 0 0 1 3 21.25V6.75ZM4.5 18.5v2.75a2.25 2.25 0 0 0 2.25 2.25H9.5v-5h-5Zm5-1.5v-6h-5v6h5Zm1.5 1.5v5h6v-5h-6Zm6-1.5v-6h-6v6h6Zm1.5 1.5v5h2.75a2.25 2.25 0 0 0 2.25-2.25V18.5h-5Zm5-1.5v-6h-5v6h5Zm0-10.25a2.25 2.25 0 0 0-2.25-2.25H18.5v5h5V6.75ZM17 4.5h-6v5h6v-5Zm-7.5 0H6.75A2.25 2.25 0 0 0 4.5 6.75V9.5h5v-5Z"/>
+                </svg>
+            </div>
+            <div class="space-y-0.5">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="text-base font-bold text-evening dark:text-white/80"
+                    >
+                        Table Builder
+                    </div>
+                    <div
+                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="max-w-xs text-sm font-medium text-dolphin">
+                    Craft beautiful, optimized, and interactive
+                    Livewire-powered datatables for any situation.
+                </div>
+            </div>
+        </a>
+        <a
+            href="/docs/notifications"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -513,7 +511,7 @@ const { getStartedLink } = Astro.props
         </a>
 
         <a
-            href="#"
+            href="/docs/actions"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -525,14 +523,7 @@ const { getStartedLink } = Astro.props
                     height="32"
                     viewBox="0 0 24 24"
                 >
-                    <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        d="m16.574 19.2l-3.938-3.938l-1.203 1.202c-1.23 1.232-1.846 1.847-2.508 1.702c-.662-.146-.963-.963-1.565-2.596l-2.007-5.45C4.152 6.861 3.55 5.231 4.39 4.391c.84-.84 2.47-.24 5.73.962l5.45 2.007c1.633.602 2.45.903 2.596 1.565c.145.662-.47 1.277-1.702 2.508l-1.202 1.203l3.938 3.938c.408.408.612.612.706.84c.125.303.125.643 0 .947c-.094.227-.298.431-.706.839s-.612.612-.84.706a1.238 1.238 0 0 1-.947 0c-.227-.094-.43-.298-.839-.706Z"
-                    ></path>
+                    <g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M15.414 10.941c.781.462.781 1.656 0 2.118l-4.72 2.787C9.934 16.294 9 15.71 9 14.786V9.214c0-.924.934-1.507 1.694-1.059l4.72 2.787Z"/></g>
                 </svg>
             </div>
             <div class="space-y-0.5">
@@ -575,7 +566,7 @@ const { getStartedLink } = Astro.props
             </div>
         </a>
         <a
-            href="#"
+            href="/docs/infolists"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -610,7 +601,7 @@ const { getStartedLink } = Astro.props
                     <div
                         class="text-base font-bold text-evening dark:text-white/80"
                     >
-                        Info Lists
+                        Infolist Builder
                     </div>
                     <div
                         class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
@@ -644,7 +635,7 @@ const { getStartedLink } = Astro.props
             </div>
         </a>
         <a
-            href="#"
+            href="/docs/widgets"
             class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
         >
             <div
@@ -656,19 +647,7 @@ const { getStartedLink } = Astro.props
                     height="32"
                     viewBox="0 0 24 24"
                 >
-                    <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            d="M14.5 6.5h3m0 0h3m-3 0v3m0-3v-3"
-                        ></path>
-                        <path
-                            d="M2.5 6.5c0-1.886 0-2.828.586-3.414C3.672 2.5 4.614 2.5 6.5 2.5c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 9.328 2.5 8.386 2.5 6.5Zm11 11c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586c-.586-.586-.586-1.528-.586-3.414Zm-11 0c0-1.886 0-2.828.586-3.414c.586-.586 1.528-.586 3.414-.586c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414c0 1.886 0 2.828-.586 3.414c-.586.586-1.528.586-3.414.586c-1.886 0-2.828 0-3.414-.586C2.5 20.328 2.5 19.386 2.5 17.5Z"
-                        ></path>
-                    </g>
+                    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18"/><path d="M3 11c0-.943 0-1.414.293-1.707C3.586 9 4.057 9 5 9c.943 0 1.414 0 1.707.293C7 9.586 7 10.057 7 11v6c0 .943 0 1.414-.293 1.707C6.414 19 5.943 19 5 19c-.943 0-1.414 0-1.707-.293C3 18.414 3 17.943 3 17v-6Zm7-4c0-.943 0-1.414.293-1.707C10.586 5 11.057 5 12 5c.943 0 1.414 0 1.707.293C14 5.586 14 6.057 14 7v10c0 .943 0 1.414-.293 1.707C13.414 19 12.943 19 12 19c-.943 0-1.414 0-1.707-.293C10 18.414 10 17.943 10 17V7Zm7-3c0-.943 0-1.414.293-1.707C17.586 2 18.057 2 19 2c.943 0 1.414 0 1.707.293C21 2.586 21 3.057 21 4v13c0 .943 0 1.414-.293 1.707C20.414 19 19.943 19 19 19c-.943 0-1.414 0-1.707-.293C17 18.414 17 17.943 17 17V4Z"/></g>
                 </svg>
             </div>
             <div class="space-y-0.5">
@@ -709,5 +688,148 @@ const { getStartedLink } = Astro.props
                 </div>
             </div>
         </a>
+        <a
+            href="/docs/support"
+            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+        >
+            <div
+                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                >
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.94v.117c0 2.525 0 3.788-.597 4.802c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5"/>
+                </svg>
+            </div>
+            <div class="space-y-0.5">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="text-base font-bold text-evening dark:text-white/80"
+                    >
+                        Core Concepts
+                    </div>
+                    <div
+                        class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
+                    >
+                        New
+                    </div>
+                    <div
+                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="max-w-xs text-sm font-medium text-dolphin">
+                    This section of the documentation contains information that applies to all packages in the Filament ecosystem.
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="pt-24 max-w-7xl mx-auto">
+        <h3 class="text-2xl md:text-3xl text-center font-medium dark:text-white">
+            Our Sponsors
+        </h3>
+
+        <p class="pt-3 text-center max-w-xl mx-auto text-base lg:text-lg text-evening/60 dark:text-white/80">
+            Filament is open source at heart. Our sponsors fund new features, bug fixes, and our community support.
+        </p>
+
+        <div class="pt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <a href="https://ploi.io" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png" alt="Ploi" class="block rounded-xl">
+            </a>
+
+            <a href="https://tappnetwork.com" target="__blank" class="block bg-white rounded-xl my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/44533235/cd8be68b-59f3-4b93-8b25-f82c6f2d7864" alt="Tapp Network" class="block">
+            </a>
+
+            <a href="https://codecourse.com" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/178451980-762bc3f0-3dc5-4fcb-ba1d-00f264a8936c.png" alt="Codecourse" class="block rounded-xl">
+            </a>
+
+            <a href="https://laradir.com" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/198047886-3cbed5d7-f855-4529-9ab6-eebdb708b974.png" alt="Laradir" class="block rounded-xl">
+            </a>
+
+            <a href="https://uselocale.com" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/222703942-927b565f-e389-47b3-b583-0e605b17d9bd.png" alt="Locale" class="block rounded-xl">
+            </a>
+
+            <a href="https://luckymedia.dev/?utm_campaign=sponsor&amp;utm_source=filament&amp;utm_medium=web" target="__blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/41773797/68e31a53-0d4e-463e-91bc-3b9258807908" alt="Lucky Media" class="block rounded-xl">
+            </a>
+
+            <a href="https://solutionforest.net" target="__blank" title="Solution Forest" class="block bg-white rounded-xl p-4 my-auto">
+                <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 39.16">
+                    <path fill="#007c90" d="M58.73,23.5H41.16a3.92,3.92,0,1,1,0-7.84H58.73a3.92,3.92,0,1,1,0,7.84Z"></path>
+                    <path fill="#fcaf17" d="M41.16,39.16a3.93,3.93,0,0,1-3.92-3.93,3.91,3.91,0,0,1,1.15-2.76,4,4,0,0,1,3.53-1.07,4.83,4.83,0,0,1,.74.22,4.32,4.32,0,0,1,.67.36,2.8,2.8,0,0,1,.59.49,3.91,3.91,0,0,1,1.15,2.76A4,4,0,0,1,43.92,38a3.44,3.44,0,0,1-.59.48,3.11,3.11,0,0,1-.67.36,3.92,3.92,0,0,1-1.5.31Z"></path>
+                    <path fill="#007c90" d="M22.14,39.16h-18a3.92,3.92,0,0,1,0-7.84H21.73l.41,0a3.91,3.91,0,0,0,0-7.82H11.74A11.74,11.74,0,0,1,11.74,0H62.65a3.92,3.92,0,0,1,0,7.84H11.74a3.91,3.91,0,1,0,0,7.81h10.4a11.74,11.74,0,0,1,.51,23.47A4.06,4.06,0,0,1,22.14,39.16Z"></path>
+                    <path fill="#00707e" d="M78.81,16a1.22,1.22,0,0,1,.74-2.21,1.32,1.32,0,0,1,.76.24,5,5,0,0,0,3.07,1.08c1.08,0,1.73-.43,1.73-1.13v0c0-.67-.41-1-2.42-1.52-2.42-.62-4-1.29-4-3.68v0c0-2.18,1.75-3.62,4.21-3.62a7,7,0,0,1,3.81,1.06,1.2,1.2,0,0,1,.58,1,1.22,1.22,0,0,1-1.24,1.22,1.3,1.3,0,0,1-.67-.19,4.94,4.94,0,0,0-2.52-.81c-1,0-1.54.46-1.54,1v0c0,.79.51,1,2.59,1.58,2.44.64,3.81,1.51,3.81,3.61v0c0,2.39-1.82,3.73-4.41,3.73A7.72,7.72,0,0,1,78.81,16Z"></path>
+                    <path fill="#00707e" d="M92.25,11.26v0a6.39,6.39,0,0,1,12.77,0v0a6.39,6.39,0,0,1-12.77,0Zm10,0v0a3.65,3.65,0,0,0-3.64-3.78A3.6,3.6,0,0,0,95,11.19v0A3.65,3.65,0,0,0,98.65,15,3.6,3.6,0,0,0,102.26,11.26Z"></path>
+                    <path fill="#00707e" d="M110.46,6.44a1.32,1.32,0,1,1,2.64,0v8.39H118a1.2,1.2,0,1,1,0,2.4h-6.22a1.31,1.31,0,0,1-1.32-1.32Z"></path>
+                    <path fill="#00707e" d="M124.33,12.08V6.44a1.32,1.32,0,1,1,2.64,0V12c0,2,1,3,2.59,3s2.59-1,2.59-2.89V6.44a1.33,1.33,0,1,1,2.65,0V12c0,3.64-2,5.42-5.27,5.42S124.33,15.62,124.33,12.08Z"></path>
+                    <path fill="#00707e" d="M143.38,7.65h-2.54a1.22,1.22,0,1,1,0-2.43h7.72a1.22,1.22,0,1,1,0,2.43H146V16a1.32,1.32,0,0,1-2.64,0Z"></path>
+                    <path fill="#00707e" d="M154.91,6.44a1.32,1.32,0,1,1,2.64,0V16a1.32,1.32,0,1,1-2.64,0Z"></path>
+                    <path fill="#00707e" d="M163.11,11.26v0a6.39,6.39,0,0,1,12.78,0v0a6.22,6.22,0,0,1-6.41,6.21A6.15,6.15,0,0,1,163.11,11.26Zm10,0v0a3.65,3.65,0,0,0-3.64-3.78,3.59,3.59,0,0,0-3.6,3.74v0A3.64,3.64,0,0,0,169.52,15,3.59,3.59,0,0,0,173.12,11.26Z"></path>
+                    <path fill="#00707e" d="M181.32,6.47a1.31,1.31,0,0,1,1.32-1.32h.28a1.64,1.64,0,0,1,1.37.77l5.1,6.7V6.42a1.31,1.31,0,1,1,2.61,0V16a1.31,1.31,0,0,1-1.32,1.32h-.09a1.64,1.64,0,0,1-1.37-.77l-5.29-6.94V16a1.31,1.31,0,1,1-2.61,0Z"></path>
+                    <path fill="#00707e" d="M78.38,25.43a1.31,1.31,0,0,1,1.32-1.32h6.73a1.21,1.21,0,0,1,0,2.41H81v2.55h4.64a1.21,1.21,0,0,1,0,2.41H81v3.43a1.32,1.32,0,1,1-2.64,0Z"></path>
+                    <path fill="#00707e" d="M92.19,30.16v0a6.22,6.22,0,0,1,6.41-6.21A6.15,6.15,0,0,1,105,30.09v0a6.39,6.39,0,0,1-12.78,0Zm10,0v0a3.65,3.65,0,0,0-3.64-3.78A3.6,3.6,0,0,0,95,30.09v0A3.65,3.65,0,0,0,98.6,33.9,3.59,3.59,0,0,0,102.2,30.16Z"></path>
+                    <path fill="#00707e" d="M110.4,25.43a1.32,1.32,0,0,1,1.32-1.32h4.18a4.8,4.8,0,0,1,3.5,1.22,3.78,3.78,0,0,1,1,2.75v0A3.67,3.67,0,0,1,118,31.77L119.86,34a1.53,1.53,0,0,1,.43,1A1.23,1.23,0,0,1,119,36.23a1.6,1.6,0,0,1-1.31-.68l-2.57-3.27h-2.11v2.63a1.33,1.33,0,0,1-2.65,0ZM115.72,30c1.29,0,2-.69,2-1.7v0c0-1.14-.79-1.72-2.08-1.72h-2.62V30Z"></path>
+                    <path fill="#00707e" d="M125.9,34.81V25.43a1.31,1.31,0,0,1,1.32-1.32h6.66a1.19,1.19,0,0,1,1.19,1.19,1.17,1.17,0,0,1-1.19,1.16h-5.35V28.9h4.58a1.18,1.18,0,0,1,1.18,1.19,1.17,1.17,0,0,1-1.18,1.16h-4.58v2.53H134a1.18,1.18,0,1,1,0,2.35h-6.75A1.31,1.31,0,0,1,125.9,34.81Z"></path>
+                    <path fill="#00707e" d="M140.59,34.86a1.24,1.24,0,0,1-.5-1,1.21,1.21,0,0,1,1.24-1.21,1.26,1.26,0,0,1,.75.24A5.08,5.08,0,0,0,145.16,34c1.08,0,1.73-.43,1.73-1.14v0c0-.67-.41-1-2.42-1.53-2.42-.62-4-1.29-4-3.67v0c0-2.18,1.75-3.62,4.2-3.62A6.94,6.94,0,0,1,148.5,25a1.18,1.18,0,0,1,.59,1,1.22,1.22,0,0,1-1.24,1.22,1.28,1.28,0,0,1-.67-.19,5,5,0,0,0-2.52-.8c-1,0-1.55.46-1.55,1v0c0,.79.52,1,2.6,1.58,2.43.63,3.81,1.51,3.81,3.6v0c0,2.38-1.82,3.72-4.41,3.72A7.78,7.78,0,0,1,140.59,34.86Z"></path>
+                    <path fill="#00707e" d="M157.7,26.55h-2.54a1.22,1.22,0,1,1,0-2.44h7.73a1.22,1.22,0,0,1,0,2.44h-2.54v8.36a1.33,1.33,0,0,1-2.65,0Z"></path>
+                </svg>
+            </a>
+
+            <a href="https://spectate.net/?utm_campaign=sponsor&amp;utm_source=filament&amp;utm_medium=web" target="__blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/41773797/04247ff0-f405-4de8-ac6f-16e7f7c0920b" alt="Spectate" class="block rounded-xl">
+            </a>
+
+            <a href="https://zimplerapps.com" target="__blank" class="block bg-white rounded-xl p-4 my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/44533235/7098329d-3b1d-457d-bbeb-125af76433d4" alt="ZimplerApps" class="block">
+            </a>
+
+            <a href="https://docuwriter.ai" target="__blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/41773797/71346486-49ee-425a-895b-292fa106ead1" alt="DocuWriter.ai" class="block rounded-xl">
+            </a>
+
+            <a href="https://ego-trace.com" target="__blank" class="block bg-white rounded-xl p-4 my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/171833049-69fa5cbb-988e-4472-bcaf-4754dbade77d.png" alt="EgoTrace" class="block">
+            </a>
+
+            <a href="https://flareapp.io" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/166236825-250ad64d-92b1-4291-bd97-306d51bb0ce7.png" alt="Flare" class="block rounded-xl">
+            </a>
+
+            <a href="https://native-media.fr" target="__blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/44533235/31c1de77-3a70-413a-8564-3c82f512c424" alt="Native Media" class="block rounded-xl">
+            </a>
+
+            <a href="https://ohdear.app" target="__blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/198252053-a2ae3314-5076-4383-9d1c-9507362f847f.jpg" alt="Oh Dear" class="block rounded-xl">
+            </a>
+
+            <a href="https://github.com/sponsors/danharrin" target="__blank" class="block my-auto font-medium text-sm text-center rounded-xl bg-pink-100 px-4 py-8 transition hover:bg-pink-200">
+                Your logo here? <span class="hover:scale-105">💖</span>
+            </a>
+        </div>
     </div>
 </section>
