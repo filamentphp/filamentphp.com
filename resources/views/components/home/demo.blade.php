@@ -127,7 +127,7 @@
                 {{-- Screenshot --}}
                 <img
                     src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"
-                    alt=""
+                    alt="Filament demo"
                     class="w-full"
                 />
             </div>

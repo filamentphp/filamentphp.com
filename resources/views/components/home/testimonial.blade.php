@@ -42,7 +42,7 @@
             {{-- Blue Quote Icon --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/blue-quote.svg') }}"
-                alt=""
+                alt="Quote"
                 class="absolute -top-1.5 left-4 w-6"
             />
             {{-- Corner --}}

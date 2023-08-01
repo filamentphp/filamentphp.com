@@ -147,7 +147,7 @@
                     <img
                         x-ref="supercar"
                         src="{{ Vite::asset('resources/images/home/supercar.webp') }}"
-                        alt=""
+                        alt="Car"
                         class="w-28 opacity-0"
                     />
                 </div>
@@ -459,7 +459,7 @@
                 <img
                     x-ref="arrow"
                     src="{{ Vite::asset('resources/svg/home/decoration-up-arrow-red.svg') }}"
-                    alt=""
+                    alt="Up arrow"
                     class="w-32"
                 />
             </div>
@@ -538,7 +538,7 @@
                     <img
                         x-ref="rocket"
                         src="{{ Vite::asset('resources/images/home/rocket.webp') }}"
-                        alt=""
+                        alt="Rocket"
                         class="w-full"
                     />
                 </div>

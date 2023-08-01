@@ -216,7 +216,7 @@
             <img
                 x-ref="communitylightbulbs"
                 src="{{ Vite::asset('resources/images/articles/handsholdinglightbulbs.webp') }}"
-                alt=""
+                alt="Hands holding light bulbs"
                 class="block w-full"
             />
 

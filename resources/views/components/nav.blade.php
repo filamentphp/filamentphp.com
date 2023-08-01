@@ -50,7 +50,7 @@
     {{-- Background Blob --}}
     <img
         src="{{ Vite::asset('resources/svg/background-blob.svg') }}"
-        alt=""
+        alt="Blob"
         class="absolute -top-[10rem,clamp(50vw),40rem] right-0 z-[-100] lg:-right-[10rem]"
     />
 

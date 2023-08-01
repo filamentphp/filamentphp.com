@@ -228,7 +228,7 @@
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud1.svg') }}"
-                    alt=""
+                    alt="Cloud"
                     class="w-[10rem] sm:w-[14rem]"
                 />
             </div>
@@ -240,7 +240,7 @@
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud2.svg') }}"
-                    alt=""
+                    alt="Cloud"
                     class="w-[8rem] sm:w-[12rem]"
                 />
             </div>
@@ -252,7 +252,7 @@
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud3.svg') }}"
-                    alt=""
+                    alt="Cloud"
                     class="w-[8rem]"
                 />
             </div>
@@ -265,19 +265,19 @@
                 <div class="flex items-center gap-10">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
-                        alt=""
+                        alt="Bird"
                         class="w-[2rem]"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
-                        alt=""
+                        alt="Bird"
                         class="w-[2rem]"
                     />
                 </div>
                 <div class="flex justify-center pt-5">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
-                        alt=""
+                        alt="Bird"
                         class="w-[3rem]"
                     />
                 </div>
@@ -291,14 +291,14 @@
                 <div class="flex justify-center">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
-                        alt=""
+                        alt="Bird"
                         class="w-[3rem]"
                     />
                 </div>
                 <div class="flex justify-start pt-5">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
-                        alt=""
+                        alt="Bird"
                         class="w-[2rem]"
                     />
                 </div>
@@ -312,17 +312,17 @@
                 <div class="flex items-end">
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
-                        alt=""
+                        alt="Giraffes"
                         class="w-[2rem] scale-x-[-1] opacity-80"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
-                        alt=""
+                        alt="Giraffes"
                         class="w-[2.5rem]"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
-                        alt=""
+                        alt="Giraffes"
                         class="w-[1.5rem] opacity-60"
                     />
                 </div>
@@ -335,7 +335,7 @@
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/mountain1.svg') }}"
-                    alt=""
+                    alt="Mountain"
                     class="w-[30rem]"
                 />
             </div>
@@ -347,7 +347,7 @@
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/mountain2.svg') }}"
-                    alt=""
+                    alt="Mountain"
                     class="w-[30rem]"
                 />
             </div>
@@ -358,7 +358,7 @@
             <img
                 x-ref="supercar"
                 src="{{ Vite::asset('resources/images/home/supercar.webp') }}"
-                alt=""
+                alt="Car"
                 class="w-44"
             />
         </div>
