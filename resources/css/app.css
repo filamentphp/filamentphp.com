@@ -1,3 +1,5 @@
+@import 'torchlight.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +8,8 @@
     display: none;
 }
 
-.permalink {
-    @apply no-underline mr-2;
+.heading-anchor {
+    @apply no-underline mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
 }
 
 .filament-hidden {

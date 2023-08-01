@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import './fonts.css';
 @import './docsearch.css';
-@import './torchlight.css';
+@import '../../../resources/css/torchlight.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 

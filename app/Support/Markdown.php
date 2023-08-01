@@ -17,8 +17,9 @@ class Markdown
         $environment = new Environment([
             'allow_unsafe_links' => false,
             'heading_permalink' => [
-                'html_class' => 'permalink',
+                'html_class' => 'heading-anchor',
                 'id_prefix' => '',
+                'fragment_prefix' => '',
                 'symbol' => '#',
                 'title' => 'Permalink',
             ],
@@ -28,7 +29,7 @@ class Markdown
         $environment->addExtension(new TableExtension);
         $environment->addExtension(new HeadingPermalinkExtension);
         $environment->addExtension(new TorchlightExtension);
-        
+
         $converter = new MarkdownConverter($environment);
 
         return new HtmlString($converter->convert($text)->getContent());

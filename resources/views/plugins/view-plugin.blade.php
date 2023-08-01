@@ -293,7 +293,7 @@
                     {{-- Documentation --}}
                     <div class="pt-10">
                         <div class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden">
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str(App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
+                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/','', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
                         </div>
                     </div>
                 @endif

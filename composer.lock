@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6a19cb910e43823551a613b8fd11b7c",
+    "content-hash": "0aca17769bb8aba319c4fb96c3edc668",
     "packages": [
         {
             "name": "archtechx/laravel-seo",
@@ -120,16 +120,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.277.4",
+            "version": "3.277.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9f36e76a3e1f8c7eba8cacbfa1d5f1257cd04241"
+                "reference": "69539f82d8690be86f686ea5be1e572b44efcd8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9f36e76a3e1f8c7eba8cacbfa1d5f1257cd04241",
-                "reference": "9f36e76a3e1f8c7eba8cacbfa1d5f1257cd04241",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/69539f82d8690be86f686ea5be1e572b44efcd8b",
+                "reference": "69539f82d8690be86f686ea5be1e572b44efcd8b",
                 "shasum": ""
             },
             "require": {
@@ -209,9 +209,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.277.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.277.5"
             },
-            "time": "2023-07-28T22:10:53+00:00"
+            "time": "2023-07-31T18:10:09+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1399,16 +1399,16 @@
         },
         {
             "name": "filament/actions",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/actions.git",
-                "reference": "918bb0ec850f245aebb2c64a0116f1a14a32d79f"
+                "reference": "861a55abdbd4b9f6d7f24cb4dc33603cb10f3c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/actions/zipball/918bb0ec850f245aebb2c64a0116f1a14a32d79f",
-                "reference": "918bb0ec850f245aebb2c64a0116f1a14a32d79f",
+                "url": "https://api.github.com/repos/filamentphp/actions/zipball/861a55abdbd4b9f6d7f24cb4dc33603cb10f3c8c",
+                "reference": "861a55abdbd4b9f6d7f24cb4dc33603cb10f3c8c",
                 "shasum": ""
             },
             "require": {
@@ -1445,20 +1445,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T12:30:53+00:00"
+            "time": "2023-08-01T07:38:11+00:00"
         },
         {
             "name": "filament/filament",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/panels.git",
-                "reference": "90a2b8f01aa9566cff2af7cf9a168484266a1749"
+                "reference": "b4af1023d48f6b6731b44e9b0e169ce3e3f47c3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/panels/zipball/90a2b8f01aa9566cff2af7cf9a168484266a1749",
-                "reference": "90a2b8f01aa9566cff2af7cf9a168484266a1749",
+                "url": "https://api.github.com/repos/filamentphp/panels/zipball/b4af1023d48f6b6731b44e9b0e169ce3e3f47c3c",
+                "reference": "b4af1023d48f6b6731b44e9b0e169ce3e3f47c3c",
                 "shasum": ""
             },
             "require": {
@@ -1510,20 +1510,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T13:18:12+00:00"
+            "time": "2023-08-01T07:38:22+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "1d5396f6454433d4af6fd3d0fa7c530226be7116"
+                "reference": "fb74903ed5063cd2ea03fd6c9cefc3ecd53ebadf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/1d5396f6454433d4af6fd3d0fa7c530226be7116",
-                "reference": "1d5396f6454433d4af6fd3d0fa7c530226be7116",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/fb74903ed5063cd2ea03fd6c9cefc3ecd53ebadf",
+                "reference": "fb74903ed5063cd2ea03fd6c9cefc3ecd53ebadf",
                 "shasum": ""
             },
             "require": {
@@ -1566,20 +1566,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T10:44:47+00:00"
+            "time": "2023-08-01T07:38:16+00:00"
         },
         {
             "name": "filament/infolists",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/infolists.git",
-                "reference": "66314753308ed57071bf51d95162689e1a57b454"
+                "reference": "ee2be7e800f5d15211cdd5fe6a48a02d35d6151a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/66314753308ed57071bf51d95162689e1a57b454",
-                "reference": "66314753308ed57071bf51d95162689e1a57b454",
+                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/ee2be7e800f5d15211cdd5fe6a48a02d35d6151a",
+                "reference": "ee2be7e800f5d15211cdd5fe6a48a02d35d6151a",
                 "shasum": ""
             },
             "require": {
@@ -1617,20 +1617,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T10:44:43+00:00"
+            "time": "2023-08-01T07:38:16+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
-                "reference": "acb0d420b2496d2b142e6665bc72ce070b4877a6"
+                "reference": "d42d6d5c0ecd2b2329839cc4e2263d445c6a65cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/acb0d420b2496d2b142e6665bc72ce070b4877a6",
-                "reference": "acb0d420b2496d2b142e6665bc72ce070b4877a6",
+                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/d42d6d5c0ecd2b2329839cc4e2263d445c6a65cf",
+                "reference": "d42d6d5c0ecd2b2329839cc4e2263d445c6a65cf",
                 "shasum": ""
             },
             "require": {
@@ -1669,24 +1669,25 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T10:44:47+00:00"
+            "time": "2023-08-01T07:38:12+00:00"
         },
         {
             "name": "filament/support",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
-                "reference": "cdd50815a58a12231f946b10b22a8befde08fdb4"
+                "reference": "5bf2c19303afa673498a10316fad6c6183a312e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/support/zipball/cdd50815a58a12231f946b10b22a8befde08fdb4",
-                "reference": "cdd50815a58a12231f946b10b22a8befde08fdb4",
+                "url": "https://api.github.com/repos/filamentphp/support/zipball/5bf2c19303afa673498a10316fad6c6183a312e7",
+                "reference": "5bf2c19303afa673498a10316fad6c6183a312e7",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.0",
+                "doctrine/dbal": "^3.2",
                 "ext-intl": "*",
                 "illuminate/contracts": "^9.0|^10.0",
                 "illuminate/support": "^9.0|^10.0",
@@ -1725,20 +1726,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T12:31:33+00:00"
+            "time": "2023-08-01T07:38:37+00:00"
         },
         {
             "name": "filament/tables",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "d9dcd8d091280bd02a07e7ac76b10a6cfe73c530"
+                "reference": "1f68869e4546a9c5770d4077697d4a501273a5e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/d9dcd8d091280bd02a07e7ac76b10a6cfe73c530",
-                "reference": "d9dcd8d091280bd02a07e7ac76b10a6cfe73c530",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/1f68869e4546a9c5770d4077697d4a501273a5e3",
+                "reference": "1f68869e4546a9c5770d4077697d4a501273a5e3",
                 "shasum": ""
             },
             "require": {
@@ -1778,20 +1779,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T12:31:36+00:00"
+            "time": "2023-08-01T07:38:38+00:00"
         },
         {
             "name": "filament/widgets",
-            "version": "v3.0.0-beta21",
+            "version": "v3.0.0-beta27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/widgets.git",
-                "reference": "f61e8c6744ca667416bda2397b2b347a96c1181f"
+                "reference": "70f00c22788ede557e1e03e8a951c182dc4b8624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/f61e8c6744ca667416bda2397b2b347a96c1181f",
-                "reference": "f61e8c6744ca667416bda2397b2b347a96c1181f",
+                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/70f00c22788ede557e1e03e8a951c182dc4b8624",
+                "reference": "70f00c22788ede557e1e03e8a951c182dc4b8624",
                 "shasum": ""
             },
             "require": {
@@ -1822,7 +1823,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2023-07-29T12:31:50+00:00"
+            "time": "2023-08-01T07:38:40+00:00"
         },
         {
             "name": "flowframe/laravel-drift",
@@ -5220,16 +5221,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.19",
+            "version": "v0.11.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1724ceff278daeeac5a006744633bacbb2dc4706"
+                "reference": "0fa27040553d1d280a67a4393194df5228afea5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1724ceff278daeeac5a006744633bacbb2dc4706",
-                "reference": "1724ceff278daeeac5a006744633bacbb2dc4706",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0fa27040553d1d280a67a4393194df5228afea5b",
+                "reference": "0fa27040553d1d280a67a4393194df5228afea5b",
                 "shasum": ""
             },
             "require": {
@@ -5290,9 +5291,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.19"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.20"
             },
-            "time": "2023-07-15T19:42:19+00:00"
+            "time": "2023-07-31T14:32:22+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8865,6 +8866,126 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
             },
             "time": "2023-01-03T09:29:04+00:00"
+        },
+        {
+            "name": "torchlight/torchlight-commonmark",
+            "version": "v0.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-commonmark-php.git",
+                "reference": "eb618ae6187090126a9ef881ccaf9c315d49c99b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-commonmark-php/zipball/eb618ae6187090126a9ef881ccaf9c315d49c99b",
+                "reference": "eb618ae6187090126a9ef881ccaf9c315d49c99b",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^1.5|^2.0",
+                "php": "^7.2|^8.0",
+                "torchlight/torchlight-laravel": "^0.5.10"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\Commonmark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Commonmark extension for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "commonmark",
+                "laravel",
+                "markdown",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-commonmark-php/issues",
+                "source": "https://github.com/torchlight-api/torchlight-commonmark-php/tree/v0.5.5"
+            },
+            "time": "2022-02-23T17:09:44+00:00"
+        },
+        {
+            "name": "torchlight/torchlight-laravel",
+            "version": "v0.5.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
+                "reference": "fe2b0dd48397632fa2e1272c22136b7ab3a79767"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/fe2b0dd48397632fa2e1272c22136b7ab3a79767",
+                "reference": "fe2b0dd48397632fa2e1272c22136b7ab3a79767",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.2",
+                "illuminate/cache": "^7.26.0|^8.0|^9.0|^10.0",
+                "illuminate/console": "^7.26.0|^8.0|^9.0|^10.0",
+                "illuminate/http": "^7.26.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^7.26.0|^8.0|^9.0|^10.0",
+                "illuminate/view": "^7.26.0|^8.0|^9.0|^10.0",
+                "php": "^7.3|^8.0",
+                "ramsey/uuid": "^3.7|^4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^8.5.23|^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Torchlight\\TorchlightServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "laravel",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.5.13"
+            },
+            "time": "2023-02-14T02:49:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
