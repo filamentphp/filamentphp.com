@@ -2,7 +2,7 @@
 title: How to improve table pagination performance
 slug: danharrin-fast-table-pagination
 author_slug: danharrin
-publish_date: 2022-08-01
+publish_date: 2023-08-01
 categories: [table-builder, integration]
 type_slug: trick
 ---

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Contracts\Starrable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -90,5 +91,10 @@ class Article extends Model implements Starrable
     public function getStarsCountCacheKey(): string
     {
         return "article:{$this->slug}:stars_count";
+    }
+
+    public function scopePublished(Builder $query): Builder
+    {
+        return $query->where('publish_date', '<=', now());
     }
 }

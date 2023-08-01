@@ -22,11 +22,9 @@
                         $refs.tweets_section,
                         {
                             autoAlpha: 0,
-                            x: 50,
                         },
                         {
                             autoAlpha: 1,
-                            x: 0,
                             duration: 0.7,
                             ease: 'circ.out',
                         },

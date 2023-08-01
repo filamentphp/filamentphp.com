@@ -2,7 +2,7 @@
 title: Why is my panel resource missing from the sidebar?
 slug: danharrin-panel-resource-missing
 author_slug: danharrin
-publish_date: 2022-08-01
+publish_date: 2023-08-01
 categories: [panel-builder]
 type_slug: trick
 ---

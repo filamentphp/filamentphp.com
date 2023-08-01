@@ -51,7 +51,7 @@
     <img
         src="{{ Vite::asset('resources/svg/background-blob.svg') }}"
         alt=""
-        class="absolute -right-[5rem] -top-[10rem,clamp(50vw),40rem] z-[-100] sm:-right-[10rem] lg:-right-[10rem]"
+        class="absolute -top-[10rem,clamp(50vw),40rem] right-0 z-[-100] lg:-right-[10rem]"
     />
 
     {{-- Mobile Menu Button --}}
@@ -61,9 +61,9 @@
         aria-haspopup="true"
         x-on:click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"
         x-on:click.away="$store.sidebar.isOpen = false"
-        class="lg:hidden"
+        class="transition duration-300 hover:scale-110 lg:hidden"
     >
-        <x-heroicon-o-bars-3 class="h-6 w-6" />
+        <x-heroicon-o-bars-3 class="h-7 w-7" />
 
         <span class="sr-only">Toggle Menu</span>
     </button>

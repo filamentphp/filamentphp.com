@@ -18,7 +18,7 @@ class ListArticlesController extends Controller
                 'articles',
                 now()->addMinutes(15),
                 fn (): array => Article::query()
-                    ->where('publish_date', '<=', now())
+                    ->published()
                     ->orderByDesc('publish_date')
                     ->with(['author'])
                     ->get()
@@ -38,7 +38,9 @@ class ListArticlesController extends Controller
                     ])
                     ->all(),
             ),
-            'articlesCount' => Article::count(),
+            'articlesCount' => Article::query()
+                ->published()
+                ->count(),
             'authorsCount' => Author::query()->whereHas('articles')->count(),
             'categories' => ArticleCategory::query()->orderBy('name')->get()->keyBy('slug'),
             'types' => ArticleType::query()->orderBy('name')->get()->keyBy('slug')->map(fn (ArticleType $type): array => [

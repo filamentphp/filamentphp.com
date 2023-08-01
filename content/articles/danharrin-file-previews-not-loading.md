@@ -2,7 +2,7 @@
 title: Why are my file previews not loading?
 slug: danharrin-file-previews-not-loading
 author_slug: danharrin
-publish_date: 2022-08-01
+publish_date: 2023-08-01
 categories: [form-builder]
 type_slug: trick
 ---

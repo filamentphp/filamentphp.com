@@ -2,7 +2,7 @@
 title: Why is my panel showing a 403 error in production?
 slug: danharrin-panel-403-in-production
 author_slug: danharrin
-publish_date: 2022-08-01
+publish_date: 2023-08-01
 categories: [panel-builder]
 type_slug: trick
 ---

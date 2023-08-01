@@ -186,10 +186,6 @@
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Section</div>
               </a>
             </li><li class="relative">
-              <a href="/docs/3.x/infolists/layout/card" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
-                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Card</div>
-              </a>
-            </li><li class="relative">
               <a href="/docs/3.x/infolists/layout/split" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Split</div>
               </a>
@@ -527,10 +523,6 @@
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Section</div>
               </a>
             </li><li class="relative">
-              <a href="/docs/3.x/infolists/layout/card" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
-                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Card</div>
-              </a>
-            </li><li class="relative">
               <a href="/docs/3.x/infolists/layout/split" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
                 <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Split</div>
               </a>
@@ -609,15 +601,15 @@ RepeatableEntry::make('comments')
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/infolists/entries/repeatable/grid.jpg?raw=true" alt="Repeatable entry in grid layout" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
-<h2 id="removing-the-wrapping-card"><a class="heading-anchor" href="#removing-the-wrapping-card"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Removing the wrapping card</h2>
-<p>By default, each item in a repeatable entry gets wrapped in a card. This behavior can be disabled using <code>wrappedInCard()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RepeatableEntry</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">RepeatableEntry</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">comments</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">wrappedInCard</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\RepeatableEntry;
+<h2 id="removing-the-styled-container"><a class="heading-anchor" href="#removing-the-styled-container"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Removing the styled container</h2>
+<p>By default, each item in a repeatable entry gets wrapped in a container styled as a card. This behavior can be disabled using <code>contained()</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RepeatableEntry</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">RepeatableEntry</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">comments</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">contained</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\RepeatableEntry;
 
 RepeatableEntry::make('comments')
     -&gt;schema([
         // ...
     ])
-    -&gt;wrappedInCard(false)
+    -&gt;contained(false)
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/03-entries/06-repeatable.md" class="text-sm astro-XWOXDUXN" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-XWOXDUXN">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-XWOXDUXN">GitHub discussion</a>
           </p>
@@ -650,7 +642,7 @@ RepeatableEntry::make('comments')
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-XWOXDUXN">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-XWOXDUXN">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grid-layout&#34;,&#34;text&#34;:&#34;Grid layout&#34;,&#34;title&#34;:&#34;Grid layout&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;removing-the-wrapping-card&#34;,&#34;text&#34;:&#34;Removing the wrapping card&#34;,&#34;title&#34;:&#34;Removing the wrapping card&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-XWOXDUXN" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;grid-layout&#34;,&#34;text&#34;:&#34;Grid layout&#34;,&#34;title&#34;:&#34;Grid layout&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;removing-the-styled-container&#34;,&#34;text&#34;:&#34;Removing the styled container&#34;,&#34;title&#34;:&#34;Removing the styled container&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-XWOXDUXN">
                       <h3 class="astro-XWOXDUXN">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -667,8 +659,8 @@ RepeatableEntry::make('comments')
                       
                     </li><li class="astro-XWOXDUXN">
                       <h3 class="astro-XWOXDUXN">
-                        <a href="#removing-the-wrapping-card" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'removing-the-wrapping-card' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
-                          Removing the wrapping card
+                        <a href="#removing-the-styled-container" class="inline-block transition duration-300 ease-out astro-XWOXDUXN" x-bind:class="current == 'removing-the-styled-container' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Removing the styled container
                         </a>
                       </h3>
                       
