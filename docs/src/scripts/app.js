@@ -12,7 +12,9 @@ docsearch({
     indexName: 'filamentadmin',
     placeholder: 'Search docs',
     searchParameters: {
-        facetFilters: [`version:${document.getElementById('current-version').innerText}`],
+        facetFilters: [
+            `version:${document.getElementById('current-version').innerText}`,
+        ],
     },
 })
 
