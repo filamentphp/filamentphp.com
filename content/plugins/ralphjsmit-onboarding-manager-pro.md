@@ -1,6 +1,6 @@
 ---
 name: Onboarding Manager Pro
-slug: ralphjsmit-onboarding-manager-pro
+slug: onboarding-manager-pro
 anystack_id: e543d70c-bd28-4d99-9fda-d5356878789c
 author_slug: ralphjsmit
 categories: [panel-builder, widget]

@@ -1,6 +1,6 @@
 ---
 name: Media Library Manager
-slug: ralphjsmit-media-library-manager
+slug: media-library-pro
 anystack_id: 64871b95-5e01-4b5e-9da4-c6ac4a78bf21
 author_slug: ralphjsmit
 categories: [form-builder, form-field, spatie, panel-builder]
@@ -15,7 +15,10 @@ versions: [2, 3]
 
 This package allows you to give your users a beautiful way to upload images to your application and manage their library. It integrates with and is based on [Spatie MediaLibrary](https://github.com/spatie/laravel-medialibrary), one of the most popular and widely used packages in the Laravel ecosystem.
 
+**New: Package includes Filament V3 support!** 
+
 [**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)
+[**Upgrading from V2 to V3?**](#upgrading-from-v2-to-v3)
 
 ### Features
 
@@ -50,6 +53,8 @@ This package allows you to give your users a beautiful way to upload images to y
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
 ### Screenshots
+
+NB.: The below screenshots are shown in a Filament V2 panel. Currently the package supports already Filament V3. I'll update the screenshots next week :)
 
 #### Library (light and dark mode)
 
@@ -717,6 +722,40 @@ Or, on individual pages only:
 - If you have overridden custom views, please remove the overridden views or compare them with the new ones. Internally the Blade views have changed a lot.
 - If you have extended pages like the BrowseLibrary, MediaInfo or UploadMedia page, please check your custom overrides with the new code. The BrowseLibrary component has changed the most.
 - Re-compile your assets using `npm run build` or `npm run prod` if you are using a custom theme.
+
+The V2 is a paid upgrade to the V1. All license holders have got the ability to purchase the V2 at a discount. If you want to purchase the upgrade from V1 to V2, please send an email to `support@ralphjsmit.com`.
+
+### Upgrading from V2 to V3
+                  
+The Filament Media library plugin has a V3 version that already has support for Filament V3.
+
+If you want to upgrade to Media Library V3 and therefore Filament V3 support, take the following steps:
+
+- Require `ralphjsmit/laravel-filament-media-library` `'^3.0'` instead of a 2.x version.
+- For each of the panels that you want to use the MediaLibrary plugin in, please register the plugin like follows:
+    ```php
+    use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
+    
+    $panel
+        ->plugin(FilamentMediaLibrary::make()) 
+    ```             
+- Filament V3 offers plugins the ability to be customized per panel. This means that instead of global config values that apply to all panels, you can now set different values per panel. If you want, review the `config/filament-media-library.php` configuration file. Set the values that you want to change using the methods on the `FilamentMediaLibrary` class. The methods look very similar to the keys they had in the config. For example, the key `disk.visibility` has become a method `FilamentMediaLibrary::make()->diskVisibility()`. You can also choose to do nothing. The package will retain compatibility with your current config. Whilst we do recommend to stay up-to-date and migrate your config, it is not a stricty requirement. For example:
+```php
+    $panel
+        ->plugin(
+            FilamentMediaLibrary::make()
+                ->diskVisibility('public)
+                ->modelItem(CustomMediaLibraryItemModel::class)
+                ->modelFolder(CustomMediaLibraryFolderModel::class)
+                ->acceptVideo()
+                ->acceptPdf(false)
+                // ..
+        ) 
+    ``` 
+- If you had custom configuration values for the `400` and `800` conversions (hinting at their square size in px), these conversion names have now changed to `small` and `medium`. If you prefer to keep the old config file, you do not to change the names/keys. If you changed these config values and you want to migrate them to the new plugin configuration syntax from V3, use the `->conversionSmall(enabled: true, width: 400)` and `->conversionMedium(enabled: true, width: 800)` methods.    
+- If you have extended pages like the BrowseLibrary, MediaInfo or UploadMedia page, please check your custom overrides with the new code. The best is to publish your views again.
+               
+The V3 is available to all customers who previously purchased a license for V2. If you want to purchase the upgrade from V1 to V3, please send an email to `support@ralphjsmit.com`.
 
 
 ## Support
