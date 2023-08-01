@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
             ->site(config('app.name'))
             ->title(
                 modify: fn (string $title) => $title . ' - ' . config('app.name'),
-                default: 'Filament - accelerated Laravel development framework: admin panel, form builder, table builder and more',
+                default: 'Filament - Accelerated Laravel development framework: admin panel, form builder, table builder and more',
             )
             ->description(default: 'A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS.')
             ->twitterSite('filamentphp');
