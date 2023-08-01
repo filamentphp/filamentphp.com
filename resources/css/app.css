@@ -5,3 +5,7 @@
 [x-cloak] {
     display: none;
 }
+
+.permalink {
+    @apply no-underline mr-2;
+}
