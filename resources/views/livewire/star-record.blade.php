@@ -48,11 +48,11 @@
             class="relative ml-3 h-full w-full border-l border-dawn-pink px-3.5"
         >
             <div
-                class="relative top-2.5 h-5 min-w-[1rem] overflow-hidden text-center font-medium transition"
+                class="relative top-2.5 h-5 min-w-[2rem] overflow-y-hidden text-center font-medium transition"
             >
                 {{-- Will Go Down --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[1rem] transition duration-500"
+                    class="absolute right-0 top-0 min-w-[2rem] transition duration-500"
                     x-text="delayedStarsCount"
                     :class="{
                         'translate-y-full opacity-0': isStarred,
@@ -62,7 +62,7 @@
 
                 {{-- Will Go Up --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[1rem] transition duration-500"
+                    class="absolute right-0 top-0 min-w-[2rem] transition duration-500"
                     x-text="delayedStarsCount"
                     :class="{
                         '-translate-y-full opacity-0': !isStarred,

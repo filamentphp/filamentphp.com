@@ -35,7 +35,7 @@
 }
 
 .DocSearch-Button-Placeholder {
-    @apply ml-2 text-sm font-light text-hurricane/80 dark:text-white/40;
+    @apply ml-2 text-sm text-hurricane/80 dark:text-white/40;
 }
 
 .DocSearch-Button-Keys {
@@ -78,7 +78,7 @@
 }
 
 .DocSearch-Modal {
-    @apply relative m-auto mt-16 flex max-w-xl flex-col rounded-xl bg-white font-thin shadow-lg dark:bg-slate-800;
+    @apply relative m-auto mt-16 flex max-w-xl flex-col rounded-xl bg-white shadow-lg dark:bg-slate-800;
 }
 
 .DocSearch-SearchBar {
@@ -91,7 +91,7 @@
 }
 
 .DocSearch-Input {
-    @apply flex-1 appearance-none bg-transparent px-3 py-0 text-sm font-thin text-slate-900 outline-none dark:text-slate-100;
+    @apply flex-1 appearance-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none dark:text-slate-100;
 }
 
 .DocSearch-Input::placeholder {
@@ -230,7 +230,7 @@
 
 .DocSearch-Help,
 .DocSearch-Label {
-    @apply font-thin text-slate-500 dark:text-slate-400;
+    @apply text-slate-500 dark:text-slate-400;
 }
 
 .DocSearch-Help {
@@ -254,7 +254,7 @@
 }
 
 .DocSearch-HitsFooter {
-    @apply flex justify-center text-sm font-thin text-slate-500;
+    @apply flex justify-center text-sm text-slate-500;
     margin-bottom: var(--docsearch-spacing);
     padding: var(--docsearch-spacing);
 }
@@ -296,7 +296,7 @@
 }
 
 .DocSearch-Hit-source {
-    @apply sticky top-0 z-10 px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:text-slate-100;
+    @apply sticky top-0 z-10 px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:text-slate-100 bg-white dark:bg-slate-800;
 }
 
 .DocSearch-Hit-Tree {
@@ -439,7 +439,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Commands {
-    @apply m-0 mr-auto flex list-none p-0 font-thin text-slate-500 dark:text-slate-400;
+    @apply m-0 mr-auto flex list-none p-0 text-slate-500 dark:text-slate-400;
 }
 
 .DocSearch-Commands li {
