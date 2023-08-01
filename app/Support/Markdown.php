@@ -28,7 +28,7 @@ class Markdown
                 'html_class' => 'table-of-contents',
                 'position' => 'top',
                 'style' => 'bullet',
-                'min_heading_level' => 1,
+                'min_heading_level' => 2,
                 'max_heading_level' => 6,
                 'normalize' => 'relative',
                 'placeholder' => null,
