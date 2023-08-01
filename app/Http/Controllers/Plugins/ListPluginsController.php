@@ -14,6 +14,7 @@ class ListPluginsController extends Controller
     {
         seo()
             ->title('Plugins')
+            ->description('Community made packages for Filament projects, which give you access to awesome new features.')
             ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
             ->tag('previewlinks:overline', 'Filament')
             ->tag('previewlinks:title', 'Plugins')

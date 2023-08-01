@@ -11,6 +11,7 @@ class ViewPluginController extends Controller
     {
         seo()
             ->title("{$plugin->name} by {$plugin->author->name}")
+            ->description($plugin->description)
             ->image($plugin->getImageUrl() ?? $plugin->getThumbnailUrl());
 
         return view('plugins.view-plugin', ['plugin' => $plugin]);

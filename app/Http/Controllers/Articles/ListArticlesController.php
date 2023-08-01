@@ -13,6 +13,16 @@ class ListArticlesController extends Controller
 {
     public function __invoke()
     {
+        seo()
+            ->title('Articles')
+            ->description('A collection of articles written by the Filament team and our community.')
+            ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
+            ->tag('previewlinks:overline', 'Filament')
+            ->tag('previewlinks:title', 'Articles')
+            ->tag('previewlinks:subtitle', 'A collection of articles written by the Filament team and our community.')
+            ->tag('previewlinks:image', 'https://filamentphp.com/images/icon.png')
+            ->tag('previewlinks:repository', 'filament/filament');
+
         return view('articles.list-articles', [
             'articles' => cache()->remember(
                 'articles',
