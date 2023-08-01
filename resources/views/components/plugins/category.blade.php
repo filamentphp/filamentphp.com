@@ -4,7 +4,7 @@
             ? selectedCategories.delete('{{ $slug }}')
             : selectedCategories.add('{{ $slug }}')
     "
-    class="select-none py-1 transition duration-300 ease-out will-change-transform hover:translate-x-1.5"
+    class="inline-block select-none py-1 transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 sm:hover:translate-x-1.5 sm:hover:translate-y-0"
 >
     <div
         class="inline-flex cursor-pointer items-center gap-4 rounded-full py-1.5 pl-1.5 pr-6 shadow-lg shadow-black/[0.02] transition duration-200 ease-out"

@@ -354,11 +354,11 @@
         </div>
     </div>
 
-    <div class="flex items-start gap-5 pt-5">
+    <div class="items-start gap-5 pt-5 sm:flex">
         {{-- Categories --}}
-        <div class="hidden w-full max-w-[15rem] sm:block">
+        <div class="w-full sm:max-w-[15rem]">
             <div class="font-semibold">Categories</div>
-            <div class="pt-5">
+            <div class="flex flex-wrap gap-x-2 gap-y-0.5 pt-5 sm:block">
                 @foreach ($categories as $category)
                     <x-plugins.category
                         :name="$category->name"
@@ -375,7 +375,9 @@
         <div class="w-full">
             {{-- Pagination --}}
             <div class="flex items-center justify-between px-1 py-3">
-                <div class="flex flex-1 items-center justify-between">
+                <div
+                    class="flex flex-1 flex-wrap items-center justify-between gap-5 sm:flex-nowrap"
+                >
                     <div
                         x-show="filteredPlugins.length"
                         class="text-sm text-gray-700"
