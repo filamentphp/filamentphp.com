@@ -333,7 +333,9 @@
                         Alex Justesen
                     </x-slot>
                 </x-home.testimonial>
-                <x-home.testimonial>
+                <x-home.testimonial
+                    url="https://twitter.com/HassanZahirnia/status/1669268332418068480"
+                >
                     Started my second
                     <strong>Filament</strong>
                     project a while ago. It's the first time in my career that I
@@ -344,8 +346,7 @@
                     and what's important, without dealing with
                     <strong>implementation difficulties</strong>
                     and
-                    <strong>business logic</strong>
-                    .
+                    <strong>business logic.</strong>
                     <x-slot
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/15275787?v=4"
