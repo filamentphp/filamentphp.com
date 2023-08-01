@@ -31,7 +31,7 @@ Let's say a user regularly needs to view their data using multiple filters. For 
 #### Video
 
 Check out a short demonstration of how Filter Sets works.
-[![Youtube video](https://user-images.githubusercontent.com/6097099/257350909-30682a46-8e69-453b-b760-31677a805cfe.png)](https://youtube.com/playlist?list=PLmA3_LEzgIQ0f-Y4qurWY53mETjUJ4VUL)
+[![Youtube video](https://user-images.githubusercontent.com/6097099/257350909-30682a46-8e69-453b-b760-31677a805cfe.png)](https://www.youtube.com/watch?v=4Z4xcYAsdgg&list=PLmA3_LEzgIQ0f-Y4qurWY53mETjUJ4VUL)
 
 And Filter Sets don't have to be that complicated to be extremely useful. Even a single filter added to your Favorites Bar puts data **one click away** as opposed to as many as four.
 
