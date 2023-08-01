@@ -25,7 +25,7 @@
                                 {
                                     autoAlpha: 0,
                                     x: 0,
-                                    duration: 0.9,
+                                    duration: 1.1,
                                     ease: 'circ.in',
                                 },
                             )
