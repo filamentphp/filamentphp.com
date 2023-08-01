@@ -14,12 +14,12 @@ pre.astro-code {
     @apply w-full min-w-0 !bg-transparent !py-0;
 }
 
-pre code.torchlight {
+pre.torchlight {
     @apply block min-w-full;
 }
 
-pre code.torchlight .line-number,
-pre code.torchlight .summary-caret {
+pre.torchlight .line-number,
+pre.torchlight .summary-caret {
     @apply mr-4 select-none;
 }
 
