@@ -235,7 +235,7 @@
                 </a>
                 <a
                     x-ref="how_to_make_plugins"
-                    href="/docs/support/plugins"
+                    href="/docs/support/plugins/getting-started"
                     class="group/button relative block"
                 >
                     {{-- Button --}}
