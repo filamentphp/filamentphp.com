@@ -672,7 +672,10 @@
 <p><strong>Livewire v3 is still in beta</strong>
 Although breaking changes should be minimal, we recommend testing your application thoroughly before using Livewire v3 in production.</p>
 </blockquote>
-<p>First, require the Table Builder package using Composer:</p>
+<p>First, since Livewire v3 is still in beta, make sure that the <code>minimum-stability</code> in your <code>composer.json</code> is set to <code>dev</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">minimum-stability</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">dev</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"minimum-stability": "dev",
+</textarea></code></pre>
+<p>Then, require the Table Builder package using Composer:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/tables:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.0</span><span style="color: #89DDFF;">&quot;</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/tables:"^3.0"
 </textarea></code></pre>
 <h2 id="new-laravel-projects"><a class="heading-anchor" href="#new-laravel-projects"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>New Laravel projects</h2>
