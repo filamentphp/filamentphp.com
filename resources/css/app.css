@@ -9,7 +9,7 @@
 }
 
 .heading-anchor {
-    @apply no-underline mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+    @apply mr-2 inline-block align-baseline text-butter no-underline shadow-none dark:shadow-none;
 }
 
 .filament-hidden {
