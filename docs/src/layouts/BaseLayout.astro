@@ -19,11 +19,11 @@ let { title = "Filament", description = "", pageTitle = null, githubUrl = null }
 
 let { headings = [] } = Astro.props;
 
-let isHomePage = Astro.url.pathname === "/docs";
+let isHomePage = Astro.url.pathname === "/docs/";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels", "3.x", "panels", ""];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/", "3.x", "panels", ""];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
