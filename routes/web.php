@@ -16,11 +16,7 @@ use Illuminate\Support\Str;
 |
 */
 
-if (config('app.env') === 'beta') {
-    Route::redirect('/', '/docs')->name('home');
-} else {
-    Route::view('/', 'home')->name('home');
-}
+Route::view('/', 'home')->name('home');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 
