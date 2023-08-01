@@ -1,5 +1,5 @@
 ---
-name: Access Secret 
+name: Access Secret 🔑
 slug: access-secret
 author_slug: dasundev
 categories: [panel-authorization]
