@@ -8,7 +8,7 @@ const versions = navigation.map((item) => {
   }
 }).reverse();
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/3.x/panels/", "3.x", "panels"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/3.x/panels", "3.x", "panels"];
 let currentVersion = segments[1].replaceAll("/", "");
 ---
 
