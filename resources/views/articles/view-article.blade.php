@@ -284,7 +284,7 @@
                     </div>
                 </div>
 
-                @if (count($otherArticles = $article->author->articles()->published()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherArticles = $article->author->articles()->with(['type'])->published()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div class="mx-auto w-full max-w-md">
                         <div class="text-lg font-extrabold">
@@ -302,7 +302,7 @@
                                     >
                                         {{-- Article Type --}}
                                         <x-articles.type-badge
-                                            :type="$article->type"
+                                            :type="$otherArticle->type"
                                             size="sm"
                                         />
 
