@@ -1,9 +1,15 @@
+@import 'torchlight.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 [x-cloak] {
     display: none;
+}
+
+.heading-anchor {
+    @apply mr-2 inline-block align-baseline text-butter no-underline shadow-none dark:shadow-none;
 }
 
 .filament-hidden {

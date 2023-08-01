@@ -122,7 +122,7 @@
             {{-- Decoration Arrow --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-down-arrow-peach.svg') }}"
-                alt=""
+                alt="Down arrow"
                 class="w-[6.5rem]"
             />
         </div>
@@ -140,7 +140,7 @@
                         {{-- Lighting Bolt --}}
                         <img
                             src="{{ Vite::asset('resources/images/home/lightingbolt.webp') }}"
-                            alt=""
+                            alt="Lightning bolt"
                             class="w-4 md:w-5"
                         />
                         {{-- Blur Background --}}
@@ -584,7 +584,7 @@
             {{-- Decoration Lines --}}
             <img
                 src="{{ Vite::asset('resources/svg/home/decoration-three-lines.svg') }}"
-                alt=""
+                alt="Decoration lines"
                 class="relative -left-7 w-14 md:-left-5 md:-top-2"
             />
         </div>

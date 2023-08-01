@@ -77,7 +77,7 @@
         <img
             x-ref="phone"
             src="{{ Vite::asset('resources/images/consulting/phone.webp') }}"
-            alt=""
+            alt="Phone"
             class="block w-40 md:w-60"
         />
     </div>

@@ -235,7 +235,7 @@
                 </a>
                 <a
                     x-ref="how_to_make_plugins"
-                    href="/docs/support/plugins"
+                    href="/docs/support/plugins/getting-started"
                     class="group/button relative block"
                 >
                     {{-- Button --}}
@@ -370,7 +370,7 @@
             <img
                 x-ref="ideapuzzle"
                 src="{{ Vite::asset('resources/images/plugins/ideapuzzle.webp') }}"
-                alt=""
+                alt="Puzzle"
                 class="block w-full"
             />
 
@@ -388,19 +388,19 @@
             <img
                 x-ref="geometric_shape_1"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
-                alt=""
+                alt="Shape"
                 class="absolute -left-10 -top-5 hidden w-8 md:block lg:-right-16 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_2"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
-                alt=""
+                alt="Shape"
                 class="absolute -left-20 bottom-20 hidden w-8 md:block lg:-right-32 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_3"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
-                alt=""
+                alt="Shape"
                 class="absolute -bottom-16 -left-10 hidden w-8 md:block lg:-right-14 lg:left-auto"
             />
         </div>

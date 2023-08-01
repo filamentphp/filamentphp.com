@@ -31,7 +31,8 @@
         "spatie/laravel-google-fonts": "^1.0",
         "spatie/laravel-ignition": "^1.0",
         "spatie/laravel-image-optimizer": "^1.7",
-        "spatie/yaml-front-matter": "^2.0"
+        "spatie/yaml-front-matter": "^2.0",
+        "torchlight/torchlight-commonmark": "^0.5.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

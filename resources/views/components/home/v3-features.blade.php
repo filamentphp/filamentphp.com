@@ -287,7 +287,7 @@
                     <img
                         x-ref="geometric_shape_1"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-14"
                     />
                 </div>
@@ -297,11 +297,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/action-modals.webp') }}"
+                            alt="Action modals"
                             class="w-full"
                         />
                     </div>
@@ -312,7 +312,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/handpoint.webp') }}"
-                            alt=""
+                            alt="Hand pointing"
                             class="w-12"
                         />
                         <div
@@ -342,7 +342,7 @@
                     <img
                         x-ref="geometric_shape_2"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-14"
                     />
                 </div>
@@ -352,11 +352,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/table-report.webp') }}"
+                            alt="Table report"
                             class="w-full"
                         />
                     </div>
@@ -367,7 +367,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/report.webp') }}"
-                            alt=""
+                            alt="Report"
                             class="w-16"
                         />
                         <div
@@ -398,7 +398,7 @@
                     <img
                         x-ref="geometric_shape_3"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-3.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-16"
                     />
                 </div>
@@ -408,11 +408,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/tenancy.webp') }}"
+                            alt="Tenant switcher"
                             class="w-full"
                         />
                     </div>
@@ -423,7 +423,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/cloud.webp') }}"
-                            alt=""
+                            alt="Cloud"
                             class="w-20"
                         />
                         <div
@@ -453,7 +453,7 @@
                     <img
                         x-ref="geometric_shape_4"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-12"
                     />
                 </div>
@@ -463,11 +463,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/infolist.webp') }}"
+                            alt="Infolist"
                             class="w-full"
                         />
                     </div>
@@ -478,7 +478,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/featherpaper.webp') }}"
-                            alt=""
+                            alt="Quill on paper"
                             class="w-16"
                         />
                         <div
@@ -508,7 +508,7 @@
                     <img
                         x-ref="geometric_shape_5"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-5.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-14"
                     />
                 </div>
@@ -518,11 +518,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/panels.webp') }}"
+                            alt="Multiple panels"
                             class="w-full"
                         />
                     </div>
@@ -533,7 +533,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/infinity.webp') }}"
-                            alt=""
+                            alt="Infinity"
                             class="w-16"
                         />
                         <div
@@ -564,7 +564,7 @@
                     <img
                         x-ref="geometric_shape_6"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-6.webp') }}"
-                        alt=""
+                        alt="Shape"
                         class="block w-14"
                     />
                 </div>
@@ -574,11 +574,11 @@
                     class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
                 >
                     <div
-                        class="absolute left-10 top-10 w-[30rem] overflow-hidden rounded-3xl shadow-xl"
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
                     >
                         <img
-                            src="{{ Vite::asset('resources/images/home/imageplaceholder.webp') }}"
-                            alt=""
+                            src="{{ Vite::asset('resources/images/features/theme.webp') }}"
+                            alt="Theme"
                             class="w-full"
                         />
                     </div>
@@ -589,7 +589,7 @@
                     <div class="relative inline-block">
                         <img
                             src="{{ Vite::asset('resources/images/home/colorpalette.webp') }}"
-                            alt=""
+                            alt="Color palette"
                             class="w-16"
                         />
                         <div

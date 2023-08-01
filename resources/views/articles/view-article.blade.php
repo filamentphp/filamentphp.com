@@ -160,15 +160,7 @@
                     <div
                         class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                     >
-                        {!!
-                            preg_replace(
-                                ['/\<h1(.*)\>(.*)\<\/h1\>/', '/\A---(.|\n)*?---/'],
-                                '',
-                                str($article->content)
-                                    ->markdown()
-                                    ->sanitizeHtml(),
-                            )
-                        !!}
+                        {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($article->content))->sanitizeHtml()) !!}
                     </div>
                 </div>
             </div>
@@ -292,7 +284,7 @@
                     </div>
                 </div>
 
-                @if (count($otherArticles = $article->author->articles()->published()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherArticles = $article->author->articles()->with(['type'])->published()->where('slug', '!=', $article->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div class="mx-auto w-full max-w-md">
                         <div class="text-lg font-extrabold">
@@ -310,7 +302,7 @@
                                     >
                                         {{-- Article Type --}}
                                         <x-articles.type-badge
-                                            :type="$article->type"
+                                            :type="$otherArticle->type"
                                             size="sm"
                                         />
 
