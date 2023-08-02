@@ -370,7 +370,7 @@
                     class="tall-link-wrapper group/tall-link absolute -right-[10rem] top-64 z-20"
                 >
                     <a
-                        href="https://laravel-livewire.com"
+                        href="https://livewire.laravel.com"
                         target="_blank"
                         class="flex items-center gap-3 transition duration-300 group-hover/tall-link:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/tall-link:transform-none"
                     >
