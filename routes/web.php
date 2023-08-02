@@ -47,7 +47,7 @@ Route::redirect('/discord', 'https://filamentphp.com/discord')->name('discord');
 
 Route::get('/docs/{slug?}', function (?string $slug = null) {
     return redirect("https://filamentphp.com/docs/{$slug}");
-})->where('slug', '.*');
+})->where('slug', '.*')->name('docs');
 //Route::prefix('/docs')->group(function () {
 //    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
 //
