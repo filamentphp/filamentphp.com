@@ -82,7 +82,7 @@
     "
     class="relative flex"
 >
-    {{-- Left Arrow --}}
+    {{-- Previous Button --}}
     <div
         class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
         :class="{
@@ -113,6 +113,7 @@
         </svg>
     </div>
 
+    {{-- Current Page Button --}}
     <div
         class="absolute left-1/2 top-0 z-10 mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:hidden"
         :class="{
@@ -169,15 +170,16 @@
         </template>
     </div>
 
-    <template x-if="totalPages <= 8">
-        <template
-            x-for="page in totalPages"
-            :key="page"
-            class="hidden items-center justify-center sm:flex"
-        >
-            <x-ui.pagination-button />
+    <div class="hidden items-center justify-center sm:flex">
+        <template x-if="totalPages <= 8">
+            <template
+                x-for="page in totalPages"
+                :key="page"
+            >
+                <x-ui.pagination-button />
+            </template>
         </template>
-    </template>
+    </div>
 
     <template x-if="totalPages > 8">
         <div class="hidden w-[360px] items-center justify-center sm:flex">
@@ -347,6 +349,7 @@
         </div>
     </template>
 
+    {{-- Next Arrow --}}
     <div
         class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
         :class="{

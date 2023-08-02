@@ -421,11 +421,11 @@
             {{-- Pagination --}}
             <div class="flex items-center justify-between px-1 py-3">
                 <div
-                    class="flex flex-1 flex-wrap items-center justify-between gap-5 sm:flex-nowrap"
+                    class="flex flex-1 flex-wrap items-center justify-between gap-5 lg:flex-nowrap"
                 >
                     <div
                         x-show="filteredPlugins.length"
-                        class="text-sm text-gray-700"
+                        class="text-sm text-gray-700 shrink-0"
                     >
                         Showing
                         <span
