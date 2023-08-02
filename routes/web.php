@@ -97,4 +97,10 @@ Route::prefix('/plugins')->group(function () {
     });
 });
 
+Route::redirect('/blog', '/community');
+Route::redirect('/tricks', '/community');
+Route::get('/tricks/{slug}', function (string $slug) {
+    return redirect("https://v2.filamentphp.com/tricks/{$slug}");
+});
+
 Route::redirect('/login', '/admin/login')->name('login');
