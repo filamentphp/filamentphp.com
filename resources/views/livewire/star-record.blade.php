@@ -55,15 +55,13 @@
                 </span>
             </div>
         </div>
-        <div
-            class="relative ml-3 h-full w-full border-l border-dawn-pink px-3.5"
-        >
+        <div class="ml-3 h-full w-full border-l border-dawn-pink px-3.5">
             <div
-                class="relative top-2.5 h-5 min-w-[1rem] overflow-y-hidden text-center font-medium transition"
+                class="relative top-2.5 grid h-5 w-full min-w-[1rem] overflow-y-hidden text-center font-medium transition"
             >
                 {{-- Will Go Down --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[1rem] transition duration-[400ms]"
+                    class="self-center justify-self-center transition duration-[400ms] [grid-area:1/-1]"
                     x-text="delayedStarsCount"
                     :class="{
                         'translate-y-full opacity-0': isStarred,
@@ -73,7 +71,7 @@
 
                 {{-- Will Go Up --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[1rem] transition duration-[400ms]"
+                    class="self-center justify-self-center transition duration-[400ms] [grid-area:1/-1]"
                     x-text="delayedStarsCount"
                     :class="{
                         '-translate-y-full opacity-0': !isStarred,
