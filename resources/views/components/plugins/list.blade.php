@@ -425,7 +425,7 @@
                 >
                     <div
                         x-show="filteredPlugins.length"
-                        class="text-sm text-gray-700 shrink-0"
+                        class="shrink-0 text-sm text-gray-700"
                     >
                         Showing
                         <span
