@@ -14,23 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home')->name('home');
+Route::redirect('/', 'https://filamentphp.com')->name('home');
+//Route::view('/', 'home')->name('home');
 
-Route::view('/consulting', 'consulting')->name('consulting');
+Route::redirect('/consulting', 'https://filamentphp.com/consulting')->name('consulting');
+//Route::view('/consulting', 'consulting')->name('consulting');
 
-Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
+Route::redirect('/discord', 'https://filamentphp.com/discord')->name('discord');
+//Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::prefix('/docs')->group(function () {
-    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
-
-    Route::redirect('/getting-started', '/docs/admin/getting-started');
-    Route::redirect('/resources', '/docs/admin/resources');
-    Route::redirect('/pages', '/docs/admin/pages');
-    Route::redirect('/dashboard', '/docs/admin/dashboard');
-    Route::redirect('/navigation', '/docs/admin/navigation');
-    Route::redirect('/theming', '/docs/admin/theming');
-    Route::redirect('/plugin-development', '/docs/admin/plugin-development');
-});
+Route::get('/docs/{slug?}', function (?string $slug) {
+    return redirect("https://filamentphp.com/docs/{$slug}");
+})->where('slug', '.*');
+//Route::prefix('/docs')->group(function () {
+//    Route::get('/{versionSlug?}/{packageSlug?}/{pageSlug?}', Controllers\DocumentationController::class)->where('pageSlug', '.*')->name('docs');
+//
+//    Route::redirect('/getting-started', '/docs/admin/getting-started');
+//    Route::redirect('/resources', '/docs/admin/resources');
+//    Route::redirect('/pages', '/docs/admin/pages');
+//    Route::redirect('/dashboard', '/docs/admin/dashboard');
+//    Route::redirect('/navigation', '/docs/admin/navigation');
+//    Route::redirect('/theming', '/docs/admin/theming');
+//    Route::redirect('/plugin-development', '/docs/admin/plugin-development');
+//});
 
 Route::prefix('/links')->group(function () {
     Route::get('/', Controllers\Links\ListLinksController::class)->name('links');
@@ -67,7 +73,8 @@ Route::prefix('/tricks')->group(function () {
 });
 
 Route::prefix('/blog')->group(function () {
-    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
+    Route::redirect('/', 'https://filamentphp.com/blog')->name('blog');
+//    Route::get('/', Controllers\Blog\ListArticlesController::class)->name('blog');
 
     Route::name('blog.')->group(function () {
         Route::prefix('/{article:slug}')->group(function () {
