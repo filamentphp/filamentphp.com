@@ -14,6 +14,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('/plugins')->group(function () {
+    Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
+
+    Route::name('plugins.')->group(function () {
+        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
+
+        Route::prefix('/{plugin:slug}')->group(function () {
+            Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
+        });
+    });
+});
+
+Route::prefix('/tricks')->group(function () {
+    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
+
+    Route::name('tricks.')->group(function () {
+        Route::prefix('/{trick:slug}')->group(function () {
+            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
+        });
+    });
+});
+
 Route::redirect('/', 'https://filamentphp.com')->name('home');
 //Route::view('/', 'home')->name('home');
 
@@ -49,28 +71,6 @@ Route::prefix('/links')->group(function () {
 });
 
 Route::feeds();
-
-Route::prefix('/plugins')->group(function () {
-    Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
-
-    Route::name('plugins.')->group(function () {
-        Route::get('/feed/json', Controllers\Plugins\FeedController::class)->name('feed');
-
-        Route::prefix('/{plugin:slug}')->group(function () {
-            Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
-        });
-    });
-});
-
-Route::prefix('/tricks')->group(function () {
-    Route::get('/', Controllers\Tricks\ListTricksController::class)->name('tricks');
-
-    Route::name('tricks.')->group(function () {
-        Route::prefix('/{trick:slug}')->group(function () {
-            Route::get('/', Controllers\Tricks\ViewTrickController::class)->name('view');
-        });
-    });
-});
 
 Route::prefix('/blog')->group(function () {
     Route::redirect('/', 'https://filamentphp.com/blog')->name('blog');
