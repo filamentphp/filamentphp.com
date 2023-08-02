@@ -23,7 +23,7 @@ Route::redirect('/consulting', 'https://filamentphp.com/consulting')->name('cons
 Route::redirect('/discord', 'https://filamentphp.com/discord')->name('discord');
 //Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/docs/{slug?}', function (?string $slug) {
+Route::get('/docs/{slug?}', function (?string $slug = null) {
     return redirect("https://filamentphp.com/docs/{$slug}");
 })->where('slug', '.*');
 //Route::prefix('/docs')->group(function () {
