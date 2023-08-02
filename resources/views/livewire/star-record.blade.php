@@ -10,7 +10,7 @@
             $watch('starsCount', (value) => {
                 setTimeout(() => {
                     delayedStarsCount = value
-                }, 175)
+                }, 180)
             })
         }
     "
@@ -18,11 +18,15 @@
     <button
         wire:click="toggleStar"
         type="button"
-        class="flex h-10 select-none rounded-lg bg-fair-pink bg-white text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
+        class="group/star-button flex h-10 select-none rounded-lg bg-fair-pink bg-white text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
     >
-        <div class="flex h-full items-center gap-3 pl-5">
+        <div class="flex h-full items-center gap-3 pl-4">
             <svg
-                class="w-[1.1rem] text-peach-orange"
+                class="w-[1.2rem] transition duration-200"
+                :class="{
+                    'text-butter': isStarred,
+                    'text-peach-orange group-hover/star-button:text-butter translate-x-2 rotate-[71deg]': ! isStarred,
+                }"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
             >
@@ -32,7 +36,14 @@
                 />
             </svg>
             <div class="flex w-[3.4rem]">
-                <span>Star</span>
+                <span
+                    class="transition duration-200"
+                    :class="{
+                        'translate-x-2': ! isStarred,
+                    }"
+                >
+                    Star
+                </span>
                 <span
                     class="transition duration-200"
                     :class="{
@@ -48,11 +59,11 @@
             class="relative ml-3 h-full w-full border-l border-dawn-pink px-3.5"
         >
             <div
-                class="relative top-2.5 h-5 min-w-[2rem] overflow-y-hidden text-center font-medium transition"
+                class="relative top-2.5 h-5 min-w-[1rem] overflow-y-hidden text-center font-medium transition"
             >
                 {{-- Will Go Down --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[2rem] transition duration-500"
+                    class="absolute right-0 top-0 min-w-[1rem] transition duration-[400ms]"
                     x-text="delayedStarsCount"
                     :class="{
                         'translate-y-full opacity-0': isStarred,
@@ -62,7 +73,7 @@
 
                 {{-- Will Go Up --}}
                 <div
-                    class="absolute right-0 top-0 min-w-[2rem] transition duration-500"
+                    class="absolute right-0 top-0 min-w-[1rem] transition duration-[400ms]"
                     x-text="delayedStarsCount"
                     :class="{
                         '-translate-y-full opacity-0': !isStarred,
