@@ -155,58 +155,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         @js(match ($type['color']) {
                             'amber' => 'bg-amber-100/60',
                             'blue' => 'bg-blue-100/60',
@@ -218,58 +166,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    'translate-x-[4.5rem] w-[6.5rem] bg-amber-100/60' : selectedType === 'article',
+                    'translate-x-[10.7rem] w-[6rem] bg-blue-100/60' : selectedType === 'news',
+                    'translate-x-[17rem] w-[6rem] bg-violet-100/60' : selectedType === 'trick',
                 }"
             ></div>
         </div>
