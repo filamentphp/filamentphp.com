@@ -184,10 +184,10 @@ php artisan migrate
 If you are using the plugin in Filament V3, you should register the plugin in each of the panels that you have in your project and would like to use the media library in:
 
 ```php
-  use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
-  
-  $panel
-      ->plugin(FilamentMediaLibrary::make()) 
+use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
+
+$panel
+    ->plugin(FilamentMediaLibrary::make()) 
 ```
 
 ### Setting up the disk
