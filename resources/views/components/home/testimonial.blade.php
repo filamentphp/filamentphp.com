@@ -67,6 +67,7 @@
                 src="{{ $author->attributes->get('avatar') }}"
                 alt="{{ $author }}"
                 class="h-10 w-10 rounded-full"
+                loading="lazy"
             />
             <div class="space-y-px truncate">
                 <div class="font-bold">

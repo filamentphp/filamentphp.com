@@ -4,11 +4,25 @@ namespace App\Http\Controllers\Plugins;
 
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
+use App\Models\V2Plugin;
 
 class ViewPluginController extends Controller
 {
-    public function __invoke(Plugin $plugin)
+    public function __invoke(string $plugin)
     {
+        $pluginSlug = $plugin;
+
+        $plugin = Plugin::find($pluginSlug);
+
+        if (
+            (! $plugin) &&
+            $v2Plugin = V2Plugin::query()
+                ->where('slug', $pluginSlug)
+                ->first()
+        ) {
+            return redirect("https://v2.filamentphp.com/plugins/{$v2Plugin->slug}");
+        }
+
         seo()
             ->title("{$plugin->name} by {$plugin->author->name}")
             ->description($plugin->description)

@@ -34,6 +34,7 @@ class Plugin extends Model implements Starrable
         $table->json('categories')->nullable();
         $table->text('description')->nullable();
         $table->string('docs_url')->nullable();
+        $table->string('discord_url')->nullable();
         $table->string('github_repository');
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
