@@ -43,10 +43,10 @@ Route::prefix('/docs')->group(function () {
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
-		if (
-			str($requestUri)->endsWith('/') &&
-			(session()->get('trailingSlashRedirectFrom') !== $requestUri)
-		) {
+        if (
+            str($requestUri)->endsWith('/') &&
+            (session()->get('trailingSlashRedirectFrom') !== $requestUri)
+        ) {
             session()->flash('trailingSlashRedirectFrom', $requestUri);
 
             return redirect(str($requestUri)->beforeLast('/'));
