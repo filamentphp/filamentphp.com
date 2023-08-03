@@ -158,7 +158,7 @@
                 {{-- Message --}}
                 <div
                     x-ref="message"
-                    class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-transparent brightness-150 sm:text-lg"
+                    class="truncate bg-gradient-to-r from-dolphin to-transparent bg-clip-text pt-5 text-center text-transparent brightness-[1.8] sm:text-lg"
                 >
                     Stop rebuilding the same UI over and over and over and over
                     and over
@@ -215,7 +215,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Build a Laravel admin panel, customer-facing
                                 app, SaaS, or anything you can imagine!
                             </div>
@@ -265,7 +267,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Easily build stunning Livewire-powered forms
                                 with over 25 components out of the box.
                             </div>
@@ -315,7 +319,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Craft beautiful, optimized, and interactive
                                 Livewire-powered datatables for any situation.
                             </div>
@@ -374,7 +380,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Notify your users of important events by
                                 delivering real-time messages using Livewire.
                             </div>
@@ -431,7 +439,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Open interactive modals and slide-overs - a
                                 great way to keep the user in the flow of the
                                 application.
@@ -499,7 +509,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Display read-only information to users about a
                                 particular record, with a fully flexible layout.
                             </div>
@@ -562,7 +574,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="max-w-xs text-sm text-dolphin">
+                            <div
+                                class="max-w-xs text-sm text-dolphin brightness-125"
+                            >
                                 Build a dashboard for your application, complete
                                 with real-time charts and stats.
                             </div>

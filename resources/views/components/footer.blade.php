@@ -101,6 +101,13 @@
                 >
                     <a
                         target="_blank"
+                        href="https://status.filamentphp.com"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Status
+                    </a>
+                    <a
+                        target="_blank"
                         href="https://github.com/filamentphp/filament/discussions/new"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
@@ -111,7 +118,7 @@
                         href="https://github.com/sponsors/danharrin"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Sponsor Us
+                        Sponsor
                     </a>
                     <a
                         href="https://shop.filamentphp.com"
