@@ -1,6 +1,6 @@
 ---
 name: Notifications Pro
-slug: notifications-pro
+slug: ralphjsmit-notifications-pro
 anystack_id: 49b2f23f-cd8f-49f4-a94d-d78c3c26b45d
 author_slug: ralphjsmit
 categories: [panel-builder]
