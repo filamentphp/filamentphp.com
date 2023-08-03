@@ -200,8 +200,9 @@ If you want to change the disk, publish the Spatie Medialibrary configuration fi
 php artisan vendor:publish --provider='Spatie\MediaLibrary\MediaLibraryServiceProvider' --tag='config'
 ```
 
-Then, for each of the places where you registered the plugin, update it to use the new disk name. This could be an S3 disk for example.
+Then, update the following part of the config with your new disk. This could be an S3 disk for example.
 
+```php
 /*
  * The disk on which to store added files and derived images by default. Choose
  * one or more of the disks you've configured in config/filesystems.php.
