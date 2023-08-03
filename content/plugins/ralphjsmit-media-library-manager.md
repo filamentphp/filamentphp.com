@@ -167,6 +167,8 @@ Next, you should require the package via the command line. You will be prompted 
 composer require ralphjsmit/laravel-filament-media-library
 ```
 
+If you want to use the plugin in Filament V2, please require the `'^2.0'` version. If you want to use the plugin in Filament V3, please require the `'^3.0'` version (which is the default). 
+
 After purchasing the plugin, you'll also be shown installation instructions with the appropriate credentials pre-filled.
 
 Finally, you'll need to publish the migration and migrate the database:
@@ -175,6 +177,17 @@ Finally, you'll need to publish the migration and migrate the database:
 php artisan vendor:publish --tag="filament-media-library-migrations"
 
 php artisan migrate
+```
+
+### Configuring the plugin per-panel (Filament V3)
+                                                     
+If you are using the plugin in Filament V3, you should register the plugin in each of the panels that you have in your project and would like to use the media library in:
+
+```php
+  use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
+  
+  $panel
+      ->plugin(FilamentMediaLibrary::make()) 
 ```
 
 ### Setting up the disk
@@ -187,9 +200,8 @@ If you want to change the disk, publish the Spatie Medialibrary configuration fi
 php artisan vendor:publish --provider='Spatie\MediaLibrary\MediaLibraryServiceProvider' --tag='config'
 ```
 
-Then, update the following part of the config with your new disk. This could be an S3 disk for example.
+Then, for each of the places where you registered the plugin, update it to use the new disk name. This could be an S3 disk for example.
 
-```php
 /*
  * The disk on which to store added files and derived images by default. Choose
  * one or more of the disks you've configured in config/filesystems.php.
@@ -744,7 +756,7 @@ If you want to upgrade to Media Library V3 and therefore Filament V3 support, ta
     $panel
         ->plugin(
             FilamentMediaLibrary::make()
-                ->diskVisibility('public)
+                ->diskVisibility('public')
                 ->modelItem(CustomMediaLibraryItemModel::class)
                 ->modelFolder(CustomMediaLibraryFolderModel::class)
                 ->acceptVideo()
