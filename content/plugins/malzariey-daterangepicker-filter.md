@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/malzariey/filament-daterangepicker-f
 github_repository: malzariey/filament-daterangepicker-filter
 has_dark_theme: true
 has_translations: true
-image: malzariey-daterangepicker-filter-light.png
+image: malzariey-daterangepicker-filter.png
 versions: [3]
 ---
