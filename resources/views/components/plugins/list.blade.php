@@ -503,6 +503,11 @@
                     </div>
                 </div>
             </div>
+
+            {{-- Pagination --}}
+            <div class="flex items-center justify-end px-1 pt-7">
+                <x-ui.pagination />
+            </div>
         </div>
     </div>
 </section>
