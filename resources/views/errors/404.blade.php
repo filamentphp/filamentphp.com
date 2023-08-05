@@ -2,7 +2,7 @@
     <div
         x-cloak
         x-data
-        class="grid place-items-center px-5 pt-40 text-center"
+        class="grid place-items-center px-5 pt-20 text-center"
     >
         <img
             src="{{ Vite::asset('resources/images/errors/404_page_not_found.webp') }}"
