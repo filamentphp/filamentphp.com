@@ -9,6 +9,7 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-language-switc
 github_repository: bezhanSalleh/filament-language-switch
 has_dark_theme: true
 has_translations: true
-image: bezhansalleh-language-switch.png
+image: bezhansalleh-language-switch.jpg
+thumbnail: bezhansalleh-language-switch.jpg
 versions: [2, 3]
 ---
