@@ -757,11 +757,11 @@
 </ul>
 <p>Please upgrade Filament before upgrading to Livewire v3. Instructions on how to upgrade Livewire can be found <a href="https://livewire.laravel.com/docs/upgrading">here</a>.</p>
 <blockquote>
-<p><strong>Livewire v3 is still in beta</strong>
-While they will attempt to keep breaking changes to a minimum, they could still happen. Filament v3 is also not stable because of that. Therefore, we recommend testing your application thoroughly before using Filament v3 in production.</p>
+<p><strong>Livewire v3 is still in beta!</strong><br/>
+Although breaking changes should be minimal, we recommend testing your application thoroughly before using Filament v3 in production.</p>
 </blockquote>
 <h2 id="upgrading-automatically"><a class="heading-anchor" href="#upgrading-automatically"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading automatically</h2>
-<p>Since Livewire v3 is still in beta, make sure that the <code>minimum-stability</code> in your <code>composer.json</code> is set to <code>dev</code>:</p>
+<p>Since Livewire v3 is still in beta, set the <code>minimum-stability</code> in your <code>composer.json</code> to <code>dev</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">minimum-stability</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">dev</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"minimum-stability": "dev",
 </textarea></code></pre>
 <p>The easiest way to upgrade your app is to run the automated upgrade script. This script will automatically upgrade your application to the latest version of Filament, and make changes to your code which handle most breaking changes.</p>
@@ -775,7 +775,7 @@ vendor/bin/filament-v3
 <p>Some plugins you&#39;re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they&#39;ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
 </blockquote>
 <h2 id="upgrading-manually"><a class="heading-anchor" href="#upgrading-manually"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading manually</h2>
-<p>Since Livewire v3 is still in beta, make sure that the <code>minimum-stability</code> in your <code>composer.json</code> is set to <code>dev</code>:</p>
+<p>Since Livewire v3 is still in beta, set the <code>minimum-stability</code> in your <code>composer.json</code> to <code>dev</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">minimum-stability</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">dev</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"minimum-stability": "dev",
 </textarea></code></pre>
 <h3 id="high-impact-changes"><a class="heading-anchor" href="#high-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>High impact changes</h3>
@@ -810,6 +810,13 @@ DateTimePicker::make('published_at')
 <ul>
 <li><code>Closure $get</code> to <code>\Filament\Forms\Get $get</code></li>
 <li><code>Closure $set</code> to <code>\Filament\Forms\Set $set</code></li>
+</ul>
+<h3 id="low-impact-changes"><a class="heading-anchor" href="#low-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Low impact changes</h3>
+<h4 id="rule-modification-callback-parameter-renamed"><a class="heading-anchor" href="#rule-modification-callback-parameter-renamed"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Rule modification callback parameter renamed</h4>
+<p>The parameter for modifying rule objects has been renamed to <code>modifyRuleUsing()</code>, affecting:</p>
+<ul>
+<li><code>exists()</code></li>
+<li><code>unique()</code></li>
 </ul><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/10-upgrade-guide.md" class="text-sm astro-6NPNCUYZ" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-6NPNCUYZ">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-6NPNCUYZ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-6NPNCUYZ">GitHub discussion</a>
           </p>
@@ -833,7 +840,7 @@ DateTimePicker::make('published_at')
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-6NPNCUYZ">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-6NPNCUYZ">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-6NPNCUYZ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;new-requirements&#34;,&#34;text&#34;:&#34;New requirements&#34;,&#34;title&#34;:&#34;New requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-automatically&#34;,&#34;text&#34;:&#34;Upgrading automatically&#34;,&#34;title&#34;:&#34;Upgrading automatically&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-manually&#34;,&#34;text&#34;:&#34;Upgrading manually&#34;,&#34;title&#34;:&#34;Upgrading manually&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;high-impact-changes&#34;,&#34;text&#34;:&#34;High impact changes&#34;,&#34;title&#34;:&#34;High impact changes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;medium-impact-changes&#34;,&#34;text&#34;:&#34;Medium impact changes&#34;,&#34;title&#34;:&#34;Medium impact changes&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-6NPNCUYZ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;new-requirements&#34;,&#34;text&#34;:&#34;New requirements&#34;,&#34;title&#34;:&#34;New requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-automatically&#34;,&#34;text&#34;:&#34;Upgrading automatically&#34;,&#34;title&#34;:&#34;Upgrading automatically&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-manually&#34;,&#34;text&#34;:&#34;Upgrading manually&#34;,&#34;title&#34;:&#34;Upgrading manually&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;high-impact-changes&#34;,&#34;text&#34;:&#34;High impact changes&#34;,&#34;title&#34;:&#34;High impact changes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;medium-impact-changes&#34;,&#34;text&#34;:&#34;Medium impact changes&#34;,&#34;title&#34;:&#34;Medium impact changes&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;low-impact-changes&#34;,&#34;text&#34;:&#34;Low impact changes&#34;,&#34;title&#34;:&#34;Low impact changes&#34;}]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-6NPNCUYZ">
                       <h3 class="astro-6NPNCUYZ">
                         <a href="#new-requirements" class="inline-block transition duration-300 ease-out astro-6NPNCUYZ" x-bind:class="current == 'new-requirements' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -862,6 +869,10 @@ DateTimePicker::make('published_at')
                             </li><li class="astro-6NPNCUYZ">
                               <a href="#medium-impact-changes" class="inline-block transition duration-300 ease-out astro-6NPNCUYZ" x-bind:class="current == 'medium-impact-changes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Medium impact changes
+                              </a>
+                            </li><li class="astro-6NPNCUYZ">
+                              <a href="#low-impact-changes" class="inline-block transition duration-300 ease-out astro-6NPNCUYZ" x-bind:class="current == 'low-impact-changes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Low impact changes
                               </a>
                             </li>
                         </ol>
