@@ -42,13 +42,13 @@
                         />
                     </svg>
                 </div>
-                <div>Go to home</div>
+                <div>Go home</div>
             </a>
             <a
                 href="{{ route('docs') }}"
                 class="group/button flex items-center justify-center gap-3 rounded-xl bg-dawn-pink py-3 pl-6 pr-5 text-hurricane transition duration-200 hover:bg-dawn-pink/70 motion-reduce:transition-none"
             >
-                <div>Visit the Docs</div>
+                <div>Read the documentation</div>
                 <div
                     class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
                 >
