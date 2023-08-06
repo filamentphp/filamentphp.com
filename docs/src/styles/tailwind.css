@@ -50,7 +50,8 @@
     }
 
     /* All `code` elements and their children */
-    .prose code::selection, .prose code *::selection {
+    .prose code::selection,
+    .prose code *::selection {
         @apply bg-cream/20;
     }
 
@@ -67,7 +68,8 @@
     }
 
     /* All `code` elements and their children */
-    .dark .prose code::selection, .dark .prose code *::selection {
+    .dark .prose code::selection,
+    .dark .prose code *::selection {
         @apply bg-slate-500/50;
     }
 }
