@@ -11,4 +11,5 @@ has_translations: false
 image: dasundev-access-secret.jpg
 url: https://www.dasun.dev/blog/securing-filament-access-with-filament-access-secret
 versions: [2, 3]
+publish_date: 2023-08-01
 ---

@@ -115,7 +115,7 @@
 
     {{-- Current Page Button --}}
     <div
-        class="absolute left-1/2 top-0 z-10 mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:hidden"
+        class="absolute left-1/2 top-0 z-10 mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:hidden"
         :class="{
             'scale-110' : moveAnimation,
 
@@ -128,7 +128,7 @@
 
     <template x-if="totalPages <= 8">
         <div
-            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:flex"
+            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:flex"
             :class="{
                 'scale-110' : moveAnimation,
                 '!left-[40px]' : currentPage == 1,
@@ -146,7 +146,7 @@
 
     <template x-if="totalPages > 8">
         <div
-            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 sm:flex"
+            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:flex"
             :class="{
                 'scale-110' : moveAnimation,
                 '!left-[40px]' : currentPage == 1,
@@ -161,7 +161,7 @@
         ></div>
     </template>
 
-    <div class="flex items-center justify-center sm:hidden">
+    <div class="flex items-center justify-center md:hidden">
         <template
             x-for="page in pagesInRangeForSmallScreen"
             :key="page.number"
@@ -170,7 +170,7 @@
         </template>
     </div>
 
-    <div class="hidden items-center justify-center sm:flex">
+    <div class="hidden items-center justify-center md:flex">
         <template x-if="totalPages <= 8">
             <template
                 x-for="page in totalPages"
@@ -182,7 +182,7 @@
     </div>
 
     <template x-if="totalPages > 8">
-        <div class="hidden w-[360px] items-center justify-center sm:flex">
+        <div class="hidden w-[360px] items-center justify-center md:flex">
             <div x-data="{
                 page: 1,
             }">

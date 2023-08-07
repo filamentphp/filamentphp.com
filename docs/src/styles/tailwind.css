@@ -37,12 +37,40 @@
         @apply lg:absolute lg:-left-7 lg:top-0;
     }
 
-    .prose code *::selection {
-        @apply !bg-cream/20;
+    /* Light Theme */
+
+    /* All elements except `.prose` and `code` */
+    *:not(.prose):not(code)::selection {
+        @apply bg-stone-500/10;
     }
 
-    .prose *::selection {
-        @apply !bg-primary-500/20;
+    /* All `.prose` elements except `code` */
+    .prose *:not(code)::selection {
+        @apply bg-primary-500/20;
+    }
+
+    /* All `code` elements and their children */
+    .prose code::selection,
+    .prose code *::selection {
+        @apply bg-cream/20;
+    }
+
+    /* Dark Theme */
+
+    /* All elements except `.prose` and `code` */
+    .dark *::selection {
+        @apply bg-slate-500/50;
+    }
+
+    /* All `.prose` elements except `code` */
+    .dark .prose *:not(code)::selection {
+        @apply bg-slate-500/50;
+    }
+
+    /* All `code` elements and their children */
+    .dark .prose code::selection,
+    .dark .prose code *::selection {
+        @apply bg-slate-500/50;
     }
 }
 

@@ -107,7 +107,7 @@
         {{-- Description --}}
         <div
             x-text="plugin.description"
-            class="line-clamp-2 pt-1 text-[.8rem] text-dolphin"
+            class="line-clamp-2 min-h-[3rem] pt-1 text-[.8rem] text-dolphin"
         ></div>
 
         {{-- Author and Price --}}
