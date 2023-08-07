@@ -128,18 +128,54 @@ Optionally, you can publish the config file.
 php artisan vendor:publish --tag="filament-onboard-config"
 ```
 
-### Custom themes
+### Configuring the plugin per-panel (Filament V3)
 
-If you're using a [custom theme](https://filamentphp.com/docs/2.x/admin/appearance#building-themes), you'll need to instruct Tailwind to also purge the view-files for the plugin. Add the following key to the `content` key of your `tailwind.config.js` file:
+If you are using the plugin in Filament V3, you should register the plugin in each of the panels that you have in your project and would like to use the media library in:
+
+```php
+use RalphJSmit\Filament\Onboard\FilamentOnboard;
+
+$panel
+    ->plugin(FilamentOnboard::make()) 
+```
+
+In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
+
+In the rest of the docs, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentOnboard::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
+
+Therefore, the following code examples mean the same:
+
+```php
+$plugin
+    ->prefix('welcome')
+    ->someOtherMethod();
+```
+
+```php
+use RalphJSmit\Filament\Onboard\FilamentOnboard;
+
+$panel
+    ->plugin(
+        FilamentOnboard::make()
+            ->prefix('welcome')
+            ->someOtherMethod()
+    ) 
+```
+
+### Custom themes   
+
+Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the onboarding manager in.
+
+> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS.
+
+You'll need to instruct Tailwind to also purge the view-files for the onboarding manager. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the onboarding manager in**:
 
 ```js
 content: [
     // Your other files
-    './vendor/ralphjsmit/laravel-filament-onboard/resources/**/*.blade.php'
+    './vendor/ralphjsmit/laravel-filament-onboard/resources/**/*.blade.php',
 ],
 ```
-
-Next, you'll also need to disable the loading of our default stylesheet, because we don't want to load unnecessary CSS. Set the `filament-onboard.register.default_css` to `false`.
 
 ## Usage
 
@@ -149,40 +185,37 @@ Configuring your onboarding is very simple. First, I'll show you how to configur
 
 It might be handy to know a little bit about how the package works. Two important concepts here are **tracks** and **steps**. Each track is a series of steps that a user has to complete. Your application typically has one or two tracks: one track for outside the admin panel and one track for the widget.
 
-You can determine yourself using a closure when a step is viewed as "complete". If all steps in a track are complete, the track is deemed complete as well.
+You can determine yourself using a closure when a step is viewed as "complete". If all steps in a track are complete, the whole track is deemed complete as well.
 
 ### Creating a track
+                     
+The place to create a track is in the `panel()` methods of each panel service provider that you want to use the plugin in. 
 
-The best place to create a track is in the `boot()` method of a service provider. You can use the `AppServiceProvider` for that, but it might be useful to create a separate `OnboardServiceProvider` that contains all the onboarding logic. There is no direct benefit, but it keeps your service providers clean and simple.
-
-Create a track using the `Onboard::addTrack()` or `Onboard::make()->addTrack()` method. You should wrap all the logic in the `Filament::serving()` closure.
+Create a track using the `$plugin->addTrack()` method.
 
 ```php
-use Filament\Facades\Filament;
-use RalphJSmit\Filament\Onboard\Facades\Onboard;
-
-public function boot(): void
-{
-    Filament::serving(function() {
-        Onboard::addTrack(/** Your steps */)
-    });
-}
+$plugin
+    ->addTrack(fn () => Track::make([
+        /** Your steps */
+    ]),
 ```
+
+**Please make sure that you put the `fn() => ` before the `Track::make()` part, so that the argument is a closure instead of a direct. Otherwise, the logic in the plugin will be executed too early and it will throw an error.** 
 
 ### Adding steps to a track
 
-Next, you can **add steps** to a track by adding an array with steps. Create a single step by using the `Onboard::addStep()` method.
+Next, you can **add steps** to a track by adding an array with steps. Create a single step by using the `Step::make()` method.
 
 When using the admin widget, each step is represented by a nice card (see the images above).
 
-The `Onboard::addStep()` method accepts two parameters:
+The `Step::make()` method accepts two parameters:
 
 1. The name of the step. This name is displayed to the user.
 2. A unique identifier for the step. This identifier should be a string and is unique in your complete application.
 
 ```php
-Onboard::addTrack([
-    Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
+Track::make([
+    Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
         /** Other configuration for the step... */
 ])
 ```
@@ -192,7 +225,7 @@ Onboard::addTrack([
 You can add a description for the step by adding the `->description()` method:
 
 ```php
-Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->description('Sign in with Notion and grant access to your workspace.')
 ```
 
@@ -201,7 +234,7 @@ Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
 You can add an icon to the step by using the `->icon()` method:
 
 ```php
-Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->icon('heroicon-o-check-circle')
 ```
 
@@ -210,7 +243,7 @@ Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
 You can use the `->link()` method to add a link to the step. This link will be displayed to the user. You can use this to redirect to an OAuth provider or to a specific page in the dashboard:
 
 ```php
-Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->link('Add workspace →', route('callbacks.notion.authorize'), shouldOpenInNewTab: true)
 ```
 
@@ -219,7 +252,7 @@ Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
 You can use the `->completeIf()` method to specify a closure that will determine whether this step is complete. This closure should return a boolean:
 
 ```php
-Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->completeIf(fn () => auth()->user()->workspaces()->exists())
 ```
 
@@ -230,10 +263,9 @@ You can use the `->columnSpan()` method to specify how many columns wide the car
 You can even use an array to make the design responsive. It uses the same technique as the native [Grid](https://filamentphp.com/docs/2.x/forms/layout#grid), so you can use the same techniques here.
 
 ```php
-Onboard::make()
-    ->addTrack([
-        Onboard::addStep(/** */)
-            ->columnSpan(['default' => 1, 'md' => 1, 'lg' => 2, ])
+Track::make([
+    Step::make(/** */)
+        ->columnSpan(['default' => 1, 'md' => 1, 'lg' => 2, ])
         // Other steps..
     ])
     ->columns(['default' => 1, 'md' => 3, 'lg' => 6, ])
@@ -245,23 +277,30 @@ The final result might look something like this:
 
 ```php
 use Filament\Facades\Filament;
-use RalphJSmit\Filament\Onboard\Facades\Onboard;
+use RalphJSmit\Filament\Onboard\FilamentOnboard;
 
-public function boot(): void
+public function panel(Panel $panel): Panel
 {
-    Filament::serving(function() {
-        Onboard::addTrack([
-            Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
-                ->description('Sign in with Notion and grant access to your workspace.')
-                ->icon('heroicon-o-check-circle')
-                ->link('Add workspace →', route('callbacks.notion.authorize'))
-                ->completeIf(fn () => auth()->user()->workspaces()->exists())
-                ->columnSpan(1),
-            // Other steps
-            // Onboard::addStep(/** */)...
-            // Onboard::addStep(/** */)...
-        ])->columns(3)
-    });
+    return $panel
+        ->default()
+        ->id('admin')
+        ->path('admin')
+        // Other panel configuration...
+        ->plugin(
+            FilamentOnboard::make()
+                ->addTrack(fn () => Track::make([
+                    Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
+                        ->description('Sign in with Notion and grant access to your workspace.')
+                        ->icon('heroicon-o-check-circle')
+                        ->link('Add workspace →', route('callbacks.notion.authorize'))
+                        ->completeIf(fn () => auth()->user()->workspaces()->exists())
+                        ->columnSpan(1),
+                    // Other steps
+                    // Step::make(/** */)...
+                    // Step::make(/** */)...
+                ])->columns(3)      
+              )
+        );
 }
 ```
 
@@ -275,7 +314,16 @@ Now that we have defined our steps, we can register the widget class to use on t
 
 The widget class is `RalphJSmit\Filament\Onboard\Widgets\OnboardTrackWidget`.
 
-You can register the widget by adding it to the `filament.widgets.register` config, or you can register it via a service provider.
+You can register the widget by via a panel service provider:
+
+```php
+use RalphJSmit\Filament\Onboard\Widgets\OnboardTrackWidget;
+
+$panel
+    ->widgets([
+        OnboardTrackWidget::class,    
+  ])
+```
 
 Now your widget should be visible on the dashboard!
 
@@ -284,48 +332,43 @@ Now your widget should be visible on the dashboard!
 The package also provides easy functionality to prevent the users from accessing the dashboard. In order to force a user to complete a track, you can chain the `->completeBeforeAccess()` to the track:
 
 ```php
-Onboard::make()
-    ->addTrack([
-        Onboard::addStep(name: 'Connect Notion', identifier: 'widget::connect-notion')
-            ->description('Sign in with Notion and grant access to your workspace.')
-            ->icon('heroicon-o-check-circle')
-            ->link('Add workspace →', route('callbacks.notion.authorize'))
-            ->completeIf(fn () => auth()->user()->workspaces()->exists())
-            ->columnSpan(1),
-        // Other steps
-        // Onboard::addStep(/** */)...
-        // Onboard::addStep(/** */)...
-    ])
-    ->completeBeforeAccess()
+Track::make([
+    Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
+        ->description('Sign in with Notion and grant access to your workspace.')
+        ->icon('heroicon-o-check-circle')
+        ->link('Add workspace →', route('callbacks.notion.authorize'))
+        ->completeIf(fn () => auth()->user()->workspaces()->exists())
+        ->columnSpan(1),
+    // Other steps
+    // Onboard::addStep(/** */)...
+    // Onboard::addStep(/** */)...
+])
+->completeBeforeAccess()
 ```
 
-Next, you should register a middleware. Open your `filament` config and add the `\RalphJSmit\Filament\Onboard\Http\Middleware\OnboardMiddleware` class to the `filament.middleware.auth` key:
-
+Next, you should register a middleware. Open your panel service providers and add the middleware to the `authMiddleware()`. The middleware should be after/below the `Authenticate` middelware.
 ```php
 use RalphJSmit\Filament\Onboard\Http\Middleware\OnboardMiddleware;
 
-'middleware' => [
-    'auth' => [
+$panel
+    ->authMiddleware([
         Authenticate::class,
         OnboardMiddleware::class, // Add here.
-    ],
-    'base' => [
-        // ...
-    ],
-],
+    ])
 ```
 
 Now, whenever a user visits a page and there is still a track with uncompleted steps, they will be automatically redirected to a page where they can complete that step.
 
 #### Custom url when completing before access (NEW)
 
-By default, this page will have the url path "/filament/onboard". You can change this url by updating the `filament-onboard.prefix` config to use a different path prefix:
+By default, this page will have the url path "/filament/onboard". You can change this url by providing a different prefix to the `->prefix()` method when configuring the plugin:
 
 ```php
-// This is the route prefix that will be used for the route(s) in the package.
-// Currently, there is only one route, but this prefix would also be used for
-// new routes if new routes would ever be added.
-'prefix' => 'filament/onboard',
+$plugin
+    // This is the route prefix that will be used for the route(s) in the package.
+    // Currently, there is only one route, but this prefix would also be used for
+    // new routes if new routes would ever be added.
+    ->prefix('welcome')
 ```
 
 #### Forcing a user to visit a link
@@ -337,11 +380,13 @@ If you want your users to visit a link, e.g. for an OAuth app, you can use the e
 If you want your user to complete a wizard, you can use the `->wizard(/** Your wizard steps */)` method:
 
 ```php
-use Filament\Forms\Components\TextInput;use Filament\Forms\Components\Wizard\Step;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Wizard\Step as WizardStep;
+use RalphJSmit\Filament\Onboard\Step;
 
-Onboard::addStep('Your title', 'onboard::unique-identifier')
+Step::make('Your title', 'onboard::unique-identifier')
     ->wizard([
-        Step::make("Your label")
+        WizardStep::make("Your label")
             ->statePath('step_1') // It is recommended to keep the form data in a separate array key for each step. 
             ->schema([
                 TextInput::make('name')
@@ -359,16 +404,21 @@ Onboard::addStep('Your title', 'onboard::unique-identifier')
     ])
 ```
 
-For all the `Step` configuration options (adding an icon and description), see the [Filament documentation](https://filamentphp.com/docs/2.x/forms/layout#wizard).
+> NB. The example import the steps for the wizard using `Filament\Forms\Components\Wizard\Step as WizardStep`. Otherwise it would collide with the `RalphJSmit\Filament\Onboard\Step`. The actual class name is still `Step`.
+
+For all the `Step` configuration options (adding an icon and description), see the [Filament documentation](https://filamentphp.com/docs/3.x/forms/layout/wizard).
 
 #### Pre-filling the wizard form with data
 
 You can use the `->wizardFillFormUsing()` method to specify data that will be pre-filled into the form. For example, this is useful if you want to retrieve information about an existing record.
 
 ```php
-Onboard::addStep('Your title', 'onboard::unique-identifier')
+use Filament\Forms\Components\Wizard\Step as WizardStep;
+use RalphJSmit\Filament\Onboard\Step;
+
+Step::make('Your title', 'onboard::unique-identifier')
     ->wizard([
-        Step::make("Your label")
+        WizardStep::make("Your label")
             ->statePath('step_1') // It is recommended to keep the form data separate for each step.
             ->schema([
                 TextInput::make('name')
@@ -402,9 +452,12 @@ You can omit one of the parameters if you don't need it, but make sure to always
 Usually you will use this closure to save the data and then redirect. It is handy to redirect the user to the `filament.pages.dashboard` route, because if there are no steps left, the user will be redirected to the dashboard. And if there still are steps to complete, the middleware will automatically pick that up and redirect the user to the next step.
 
 ```php
-Onboard::addStep('Your title', 'onboard::unique-identifier')
+use Filament\Forms\Components\Wizard\Step as WizardStep;
+use RalphJSmit\Filament\Onboard\Step;
+
+Step::make('Your title', 'onboard::unique-identifier')
     ->wizard([
-        Step::make("Your label")
+        WizardStep::make("Your label")
             ->statePath('step_1') // It is recommended to keep the form data separate for each step.
             ->schema([
                 TextInput::make('name')
@@ -430,7 +483,7 @@ You can customize the "submit" button in the wizard by using the `->wizardSubmit
 
 #### Marking the wizard as completed
 
-Don't forget the use the `->completeIf()` method to specify when the wizardstep has been completed. Otherwise your users might be locked into the wizard forever.
+Don't forget the use the `->completeIf()` method to specify when the wizardstep has been completed. Otherwise, your users might be locked into the wizard forever.
 
 ```php
 ->completeIf(fn () => user()->plan_id !== null)
@@ -444,12 +497,13 @@ Possible values are: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `
 
 ### Customizing the redirect
 
-By default, the package redirects the user to the admin dashboard after successfully completing the onboarding flow. However, you may customize the route that it used in the `filament-onboard.redirect-route` config.
+By default, the package redirects the user to the admin dashboard after successfully completing the onboarding flow. However, you may customize the route that it used using the `$plugin->redirectRoute()`.
 
 > Make sure to add a *route* and not a url. Inputting a url won't work, only routes do.
 
 ```php
-'redirect-route' => 'filament.resources.organisations.index',
+$plugin
+    ->redirectRoute('some-custom-route')
 ```
 
 ### Advanced complete onboarding example
@@ -459,32 +513,32 @@ Below you can find a complete and more advanced onboarding example. This example
 The below code is used to generate the cards in the onboarding widget:
 
 ```php
-Onboard::addTrack([
-    Onboard::addStep('Create list', 'widget::create-list')
+Track::make([
+    Step::make('Create list', 'widget::create-list')
         ->description("Create a list to gather your subscribers.")
         ->link('Add workspace →', route('callbacks.notion.authorize'))
         ->icon('tabler-list-check')
         ->columnSpan(2)
         ->completeIf(fn () => auth()->user()->workspaces()->exists()),
-    Onboard::addStep('Connect Notion', 'widget::connect-notion')
+    Step::make('Connect Notion', 'widget::connect-notion')
         ->description("Sign in with Notion and grant access to your workspace.")
         ->link('Add workspace →', route('callbacks.notion.authorize'))
         ->icon('tabler-brand-notion')
         ->columnSpan(2)
         ->completeIf(fn () => auth()->user()->workspaces()->exists()),
-    Onboard::addStep('Embed form on site', 'widget::embed-form')
+    Step::make('Embed form on site', 'widget::embed-form')
         ->description("Collect subscribers via the form or API. Or import subscribers from other software.")
         ->link('Copy code', '#')
         ->icon('tabler-code')
         ->columnSpan(3)
         ->completeIf(fn () => auth()->user()->copied_embed_form !== null),
-    Onboard::addStep('Tweak the design', 'widget::tweak-design')
+    Step::make('Tweak the design', 'widget::tweak-design')
         ->description("Make your newsletter completely personal.")
         ->link('Create a new design', '#')
         ->icon('tabler-color-swatch')
         ->columnSpan(3)
         ->completeIf(fn () => auth()->user()->designs->first->created_at->lt(auth()->user()->designs->first->updated_at)),
-    Onboard::addStep('Send newsletters', 'widget::send-newsletters')
+    Step::make('Send newsletters', 'widget::send-newsletters')
         ->description("Enjoy the stellar Notion writing experience and send beautifully-designed newsletters!")
         ->icon('tabler-send')
         ->columnSpan(4)
@@ -495,16 +549,18 @@ Onboard::addTrack([
 The below code is used for the onboarding part outside the admin panel:
 
 ```php
+use Filament\Forms\Components\Wizard\Step as WizardStep;
+
 Onboard::make()
     ->addTrack([
-        Onboard::addStep('Connect to Notion', 'onboard::connect-notion')
+        Step::make('Connect to Notion', 'onboard::connect-notion')
             ->description('Click the button below to give Newsly access to your workspace')
             ->link('Add workspace →', route('callbacks.notion.authorize'))
             ->icon('tabler-brand-notion')
             ->completeIf(fn () => user()->workspaces()->exists()),
-        Onboard::addStep('Create email list', 'onboard::create-email-list')
+        Step::make('Create email list', 'onboard::create-email-list')
             ->wizard([
-                Step::make("Create list")
+                WizardStep::make("Create list")
                     ->icon('tabler-list-check')
                     ->statePath('list')
                     ->schema([
@@ -518,7 +574,7 @@ Onboard::make()
                             ->helperText('NB.: Changing the slug will also change the URL of your subscribe page.')
                             ->required(),
                     ]),
-                Step::make("Configure design")
+                WizardStep::make("Configure design")
                     ->icon('tabler-color-swatch')
                     ->statePath('design')
                     ->schema(DesignResource::form(Form::make())->getSchema()),
@@ -551,6 +607,51 @@ Onboard::make()
     ->completeBeforeAccess();`
 ```
 
+### Upgrading from V1 to V2
+
+The Filament Onboarding plugin has a V2 version that already has support for Filament V3.
+
+If you want to upgrade to Onboarding Manager V2, and therefore Filament V3 support, take the following steps:
+
+- Require `ralphjsmit/laravel-filament-onboard` `'^2.0'` instead of a 1.x version.
+- For each of the panels that you want to use the Onboard plugin in, please register the plugin like follows:
+    ```php
+    use RalphJSmit\Filament\Onboard\FilamentOnboard;
+    
+    $panel
+        ->plugin(FilamentOnboard::make()) 
+    ```             
+- Filament V3 offers plugins the ability to be customized per panel. This means that instead of global config values that apply to all panels, you can now set different values per panel. If you want, review the `config/filament-onboard.php` configuration file. Set the values that you want to change using the methods on the `FilamentOnboard` class. The methods look very similar to the keys they had in the config. For example, the key redirect-route` has become a method `FilamentMediaLibrary::make()->redirectRoute()`. You can also choose to do nothing. The package will retain compatibility with your current config. Whilst we do recommend to stay up-to-date and migrate your config, it is not a stricty requirement. An example plugin configuration could look like:
+```php
+    $panel
+        ->plugin(
+            FilamentOnboard::make()
+                ->redirectRoute('some-route-name')
+                ->prefix('welcome')
+                // ..
+        ) 
+``` 
+- Replace all code referring `Onboard::addTrack()` and `Onboard::make()->addTrack()` with `RalphJSmit\Filament\Onboard\Track::make()`. The `Onboard` facade has been removed.
+- Replace all code referring `Onboard::addStep()` and `Onboard::make()->addStep()` with `RalphJSmit\Filament\Onboard\Step::make()`. The `Onboard` facade has been removed.
+- Previously, all tracks were registered in the `boot()` method of a service provider which you could choose. Now, the logic for registering tracks has moved into the panel service providers. That has the benefit that you can now register different tracks per panel. For a example, a different onboarding track in your admin panel than the track for your normal users. For upgrading, it means that you will need to copy the code that you previously had as `Onboard::addTrack()`, and update it to use the `$plugin->addTrack()` method. You will also need to create the track using `Track::make()`:
+```php
+    $panel
+        ->plugin(
+            FilamentOnboard::make()
+                ->addTrack(fn () => Track::make([
+                    Step::make(/** */),
+                    // Other steps...
+                ])
+                    ->completeBeforeAccess(/** */),
+                    // Other methods on the Track...
+                )
+                // ..
+        ) 
+```
+- Please make sure that you are registering the track inside `->addTrack()` using a closure: `fn () => Track::make()`. If you register it without a closure, it will throw an error.
+- If you have extended components like the `Track`, `TrackCollection`, `Step` or `StepCollection`, please check your custom overrides with the new code. The best is to publish your views again.
+               
+The V2 is available to all customers who previously purchased a license for V1.
 
 ## Support
 

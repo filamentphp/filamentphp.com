@@ -193,9 +193,9 @@ $panel
 
 In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
 
-In the rest of the docs, if we refer to the `$plugn` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
+In the rest of the docs, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
 
-Therefore, the following code examples are equivalent:
+Therefore, the following code examples mean the same:
 
 ```php
 $plugin
@@ -245,9 +245,12 @@ $plugin
 ```
 
 ### Custom themes
+                     
+Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. 
 
-If you're using a [custom theme](https://filamentphp.com/docs/2.x/admin/appearance#building-themes), you'll need to instruct Tailwind
-to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
+> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS. 
+                     
+You'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
 ```js
 content: [
@@ -435,7 +438,7 @@ Facades\MediaLibrary::registerMediaInfoFormFields(function (array $schema, Media
 
 #### Adding tags to media library items (NEW IN V2)
 
-This example will show you how to add tags to your media library items based on the [Filament Spatie Tags plugin](https://filamentphp.com/plugins/spatie-tags). I will assume you have already run the migrations. You can find the installation instructions [here](https://filamentphp.com/docs/2.x/spatie-laravel-tags-plugin/installation#installation).
+This example will show you how to add tags to your media library items based on the [Filament Spatie Tags plugin](https://filamentphp.com/plugins/spatie-tags). I will assume you have already run the migrations. You can find the installation instructions [here](https://filamentphp.com/plugins/filament-spatie-media-library#installation).
 
 Next, you need to prepare the Eloquent model for attaching tags. That means that we need to add a trait to the MediaLibraryItem Model. In order to achieve that, create a new file in your project with the name `MediaLibraryItem`, that extends the original `MediaLibraryItem` model and adds the `HasTags`-trait. You could do this in your own `app/Models` directory, but you are free to choose your own.
 
@@ -712,6 +715,8 @@ MediaColumn::make('thumbnail')
 
 You only do not need to use the `->collection()`, `->conversion()` methods.
 
+> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation. 
+
 You can also use the MediaColumn to display multiple images from a relationship. For example, consider that you have a `Post` model with a `thumbnail` relationship. Say that we also have an `Author` model. We could add an `HasManyThrough` relationship to the `Author` model to get the thumbnails of the posts from this author:
 
 ```php
@@ -762,6 +767,8 @@ MediaEntry::make('thumbnail')
     ->circular()
     ->size(40)
 ```
+
+> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation.
 
 Next, we could use the `MediaEntry` to display the thumbnails of the posts from this author:
 
