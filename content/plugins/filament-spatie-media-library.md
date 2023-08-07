@@ -13,4 +13,5 @@ has_translations: true
 image: filament-spatie-media-library.jpg
 thumbnail: filament-spatie-media-library.jpg
 versions: [2, 3]
+publish_date: 2023-07-17
 ---

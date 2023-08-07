@@ -45,6 +45,7 @@
         selectedCategories: new Set(),
         selectedVersion: '3',
         selectedPrice: 'All',
+        selectedSort: 'Newest',
         features: {
             dark_theme: false,
             translations: false,
@@ -94,6 +95,21 @@
                     (this.selectedPrice === 'Free' && plugin.price === 'Free') ||
                     (this.selectedPrice === 'Paid' && plugin.price !== 'Free'),
             )
+
+            // Sort the results
+            if (this.selectedSort === 'Newest') {
+                filterResult = filterResult.sort((a, b) =>
+                    a.publish_date < b.publish_date ? 1 : -1,
+                )
+            } else if (this.selectedSort === 'Oldest') {
+                filterResult = filterResult.sort((a, b) =>
+                    a.publish_date > b.publish_date ? 1 : -1,
+                )
+            } else if (this.selectedSort === 'Alphabetical') {
+                filterResult = filterResult.sort((a, b) =>
+                    a.name > b.name ? 1 : -1,
+                )
+            }
 
             // If the search is not empty, show plugins that match the search
             if (this.search) {
@@ -421,11 +437,11 @@
             {{-- Pagination --}}
             <div class="flex items-center justify-between px-1 py-3">
                 <div
-                    class="flex flex-1 flex-wrap items-center justify-between gap-5 sm:flex-nowrap"
+                    class="flex flex-1 flex-wrap items-center gap-5 lg:flex-nowrap"
                 >
                     <div
                         x-show="filteredPlugins.length"
-                        class="text-sm text-gray-700"
+                        class="mr-auto text-sm text-gray-700"
                     >
                         Showing
                         <span
@@ -444,11 +460,23 @@
                         ></span>
                         results
                     </div>
+
+                    {{-- Sort Selectbox --}}
+                    <select
+                        x-model="selectedSort"
+                        class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
+                    >
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                        <option>Alphabetical</option>
+                    </select>
+
                     <div x-show="!filteredPlugins.length">
                         <div class="text-sm text-gray-700">
                             No results found
                         </div>
                     </div>
+
                     <x-ui.pagination />
                 </div>
             </div>
@@ -502,6 +530,11 @@
                         Sorry we couldn't find any plugins matching your search.
                     </div>
                 </div>
+            </div>
+
+            {{-- Pagination --}}
+            <div class="flex items-center justify-end px-1 pt-7">
+                <x-ui.pagination />
             </div>
         </div>
     </div>
