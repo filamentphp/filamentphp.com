@@ -99,11 +99,11 @@
             // Sort the results
             if (this.selectedSort === 'Newest') {
                 filterResult = filterResult.sort((a, b) =>
-                    a.created_at < b.created_at ? 1 : -1,
+                    a.publish_date < b.publish_date ? 1 : -1,
                 )
             } else if (this.selectedSort === 'Oldest') {
                 filterResult = filterResult.sort((a, b) =>
-                    a.created_at > b.created_at ? 1 : -1,
+                    a.publish_date > b.publish_date ? 1 : -1,
                 )
             } else if (this.selectedSort === 'Alphabetical') {
                 filterResult = filterResult.sort((a, b) =>
