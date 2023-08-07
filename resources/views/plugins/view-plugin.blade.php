@@ -453,7 +453,7 @@
 
                             @if (filled($plugin->author->sponsor_url))
                                 {{-- Sponsor Button --}}
-                                <div class="flex justify-center pt-5">
+                                <div class="flex justify-center pb-1.5">
                                     <a
                                         href="{{ $plugin->author->sponsor_url }}"
                                         class="group relative z-10 block text-white"
