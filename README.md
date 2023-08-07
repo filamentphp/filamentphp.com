@@ -24,6 +24,7 @@ avatar: dan-harrin.jpg
 github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin
 mastodon_url: https://phpc.social/@danharrin
+sponsor_url: https://github.com/sponsors/danharrin
 ---
 
 Your bio should be written in Markdown here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be in full sentences.
@@ -34,6 +35,7 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
 - The `mastodon_url` should be a link to your Mastodon profile. It is optional.
+- The `sponsors_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
 
 ### Submitting a plugin
 
