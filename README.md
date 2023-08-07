@@ -53,6 +53,7 @@ has_dark_theme: true
 has_translations: true
 image: filament-spatie-media-library.jpg
 versions: [2, 3]
+publish_date: 2023-08-01
 ---
 ```
 
@@ -70,6 +71,7 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 - The `image` should be the name of a file in the `content/plugins/images` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
 - The `thumbnail` is optional, and is the name of a file in the `content/plugins/thumbnails directory` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. It will be used as a replacement for the `image` any time that the plugin is listed alongside others, and the size is smaller. If you do not provide a `thumbnail`, the `image` will be used instead.
 - The `versions` should be an array of Filament major versions that your plugin supports.
+- The `publish_date` is the date that you submitted the plugin to the website. It usually should be the date that you submitted the pull request for the plugin.
 
 #### Quality guidelines
 
