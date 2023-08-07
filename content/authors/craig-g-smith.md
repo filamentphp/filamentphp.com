@@ -1,7 +1,7 @@
 ---
 name: Craig G Smith
 slug: craig-g-smith
-avatar: dan-harrin.jpg
+avatar: craig-g-smith.jpg
 github_url: https://github.com/phpsa
 twitter_url: https://twitter.com/cgs4knz
 ---
