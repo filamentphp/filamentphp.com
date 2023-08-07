@@ -7,9 +7,10 @@ description: Add Jalali / Shamsi calendar to Filament's DateTime column, and Dat
 discord_url: 
 docs_url: https://raw.githubusercontent.com/mokhosh/filament-jalali/main/README.md
 github_repository: mokhosh/filament-jalali
-image: mokhosh-jalali.jpg
-image: mokhosh-jalali.jpg
 has_dark_theme: true
 has_translations: true
+image: mokhosh-jalali.jpg
+thumbnail: mokhosh-jalali.jpg
 versions: [2, 3]
+publish_date: 2023-07-24
 ---
