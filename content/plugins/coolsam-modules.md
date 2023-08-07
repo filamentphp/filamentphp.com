@@ -11,4 +11,5 @@ has_dark_theme: true
 has_translations: true
 image: coolsam-modules.jpg
 versions: [2, 3]
+publish_date: 2023-07-24
 ---

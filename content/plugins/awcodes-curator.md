@@ -11,4 +11,5 @@ has_dark_theme: true
 has_translations: true
 image: awcodes-curator.jpg
 versions: [2, 3]
+publish_date: 2023-07-30
 ---

@@ -12,4 +12,5 @@ has_translations: true
 image: filament-spatie-settings.jpg
 thumbnail: filament-spatie-settings.jpg
 versions: [2, 3]
+publish_date: 2023-07-17
 ---

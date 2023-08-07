@@ -11,4 +11,5 @@ has_dark_theme: true
 has_translations: false
 image: coolsam-flatpickr.png
 versions: [2, 3]
+publish_date: 2023-08-02
 ---
