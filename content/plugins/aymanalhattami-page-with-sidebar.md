@@ -7,8 +7,8 @@ description: Organize resource pages in the sidebar to make navigation between r
 discord_url: https://discord.com/channels/883083792112300104/1089477113142333441
 docs_url: https://github.com/aymanalhattami/filament-page-with-sidebar/blob/main/README.md
 github_repository: https://github.com/aymanalhattami/filament-page-with-sidebar
-has_dark_theme: yes
-has_translations: yes
+has_dark_theme: true
+has_translations: true
 image: aymanalhattami-page-with-sidebar.png
 versions: [2, 3]
 ---
