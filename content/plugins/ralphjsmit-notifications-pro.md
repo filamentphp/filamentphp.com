@@ -11,6 +11,7 @@ has_dark_theme: true
 has_translations: true
 image: ralphjsmit-notifications-pro.jpg
 versions: [2, 3]
+publish_date: 2023-07-17
 ---
 
 This package allows you to integrate Laravel-notifications in your Filament Admin application. The primary goal is to support the regular Notification system with classes, as [how it is described in the Laravel-docs](https://laravel.com/docs/9.x/notifications). The advantage of this approach is that it allows you to create notification classes that can be sent via multiple channel. For example, send the notification to a user via email ánd show it in the admin panel.

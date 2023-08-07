@@ -51,6 +51,7 @@ class ListPluginsController extends Controller
                         ],
                         'categories' => $plugin->categories,
                         'versions' => $plugin->versions,
+                        'publish_date' => $plugin->publish_date->format('Y-m-d'),
                     ])
                     ->all(),
             ),

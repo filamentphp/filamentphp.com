@@ -11,6 +11,7 @@ has_dark_theme: true
 has_translations: true
 image: ralphjsmit-media-library-manager.jpg
 versions: [2, 3]
+publish_date: 2023-07-17
 ---
 
 This package allows you to give your users a beautiful way to upload images to your application and manage their library. It integrates with and is based on [Spatie MediaLibrary](https://github.com/spatie/laravel-medialibrary), one of the most popular and widely used packages in the Laravel ecosystem.

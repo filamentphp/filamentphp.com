@@ -11,6 +11,7 @@ has_dark_theme: true
 has_translations: true
 image: ralphjsmit-onboarding-manager-pro.jpg
 versions: [2, 3]
+publish_date: 2023-07-17
 ---
 
 This package allows you to design beautiful and fully integrated onboarding experiences for Filament Admin. Make it painless for your users to start using your app or SaaS and prevent them from dropping off. The package provides easy syntax inspired by the [Spatie's and Caleb Porzio's Laravel Onboard](https://github.com/laravel-onboard).
