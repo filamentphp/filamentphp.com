@@ -14,20 +14,23 @@ class ViewPluginController extends Controller
 
         $plugin = Plugin::find($pluginSlug);
 
-        if (
-            (! $plugin) &&
-            $v2Plugin = V2Plugin::query()
-                ->where('slug', $pluginSlug)
-                ->first()
-        ) {
-            return redirect("https://v2.filamentphp.com/plugins/{$v2Plugin->slug}");
+        if ($plugin) {
+            seo()
+                ->title("{$plugin->name} by {$plugin->author->name}")
+                ->description($plugin->description)
+                ->image($plugin->getImageUrl() ?? $plugin->getThumbnailUrl());
+
+            return view('plugins.view-plugin', ['plugin' => $plugin]);
         }
 
-        seo()
-            ->title("{$plugin->name} by {$plugin->author->name}")
-            ->description($plugin->description)
-            ->image($plugin->getImageUrl() ?? $plugin->getThumbnailUrl());
+        $v2Plugin = V2Plugin::query()
+            ->where('slug', $pluginSlug)
+            ->first();
 
-        return view('plugins.view-plugin', ['plugin' => $plugin]);
+        if (! $v2Plugin) {
+            abort(404);
+        }
+
+        return redirect("https://v2.filamentphp.com/plugins/{$v2Plugin->slug}");
     }
 }
