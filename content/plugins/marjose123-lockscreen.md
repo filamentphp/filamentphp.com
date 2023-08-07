@@ -11,4 +11,5 @@ has_dark_theme: true
 has_translations: true
 image: marjose123-lockscreen.jpg
 versions: [2]
+publish_date: 2023-08-03
 ---
