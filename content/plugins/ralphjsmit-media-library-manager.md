@@ -18,7 +18,7 @@ This package allows you to give your users a beautiful way to upload images to y
 
 **New: Package includes Filament V3 support!** 
 
-[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)
+[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)<br>
 [**Upgrading from V2 to V3?**](#upgrading-from-v2-to-v3)
 
 ### Features
@@ -62,53 +62,53 @@ NB.: The below screenshots are shown in a Filament V2 panel. Currently the packa
 
 The MediaLibrary page is the page where your users can view all their images. The complete package is compatible with both dark- and lightmode.
 
-![Media Library page](https://ralphjsmit.com/storage/media/226/responsive-images/FilamentMediaLibrary___responsive_2620_1709.jpg)
+![Media Library page](https://ralphjsmit.com/storage/media/243/responsive-images/FilamentMediaLibrary___responsive_2749_1996.jpg)
 
-![Media Library page Dark Mode](https://ralphjsmit.com/storage/media/221/responsive-images/FilamentMediaLibrary-Dark___responsive_2863_2118.jpg)
+![Media Library page Dark Mode](https://ralphjsmit.com/storage/media/247/responsive-images/FilamentMediaLibrary-Dark___responsive_2749_1996.jpg)
 
 #### Upload & bulk upload
 
 Users can drag-and-drop their images unto the upload component. Bulk uploads are allowed. You can use Laravel's queue processing feature to handle the process of generating responsive images in the background.
 
-![Filament MediaLibrary regular upload](https://ralphjsmit.com/storage/media/220/responsive-images/FilamentMediaLibrary-Upload___responsive_2752_1872.jpg)
+![Filament MediaLibrary regular upload](https://ralphjsmit.com/storage/media/251/responsive-images/FilamentMediaLibrary-Upload___responsive_2749_1996.jpg)
 
-![Filament Media Library Bulk Upload](https://ralphjsmit.com/storage/media/211/responsive-images/FilamentMediaLibrary-BulkUpload___responsive_2573_1787.jpg)
+![Filament Media Library Bulk Upload](https://ralphjsmit.com/storage/media/244/responsive-images/FilamentMediaLibrary-BulkUpload___responsive_2749_1996.jpg)
 
-![Media Library Bulk Upload](https://ralphjsmit.com/storage/media/213/responsive-images/FilamentMediaLibrary-BulkUpload-StoringFiles___responsive_2573_1787.jpg)
+![Media Library Bulk Upload](https://ralphjsmit.com/storage/media/245/responsive-images/FilamentMediaLibrary-BulkUpload-StoringFiles___responsive_2749_1996.jpg)
 
 #### MediaPicker Field & modal
 
 You can use the MediaPicker Field everywhere inside the admin panel where you want it: as a single field or in a repeater. It works everywhere.
 
-![MediaPicker Field & modal](https://ralphjsmit.com/storage/media/210/responsive-images/Custom-Field___responsive_1366_574.jpg)
+![MediaPicker Field & modal](https://ralphjsmit.com/storage/media/242/responsive-images/Custom-field___responsive_1142_470.jpg)
 
 When a user clicks on 'Choose image', he/she will see the following modal, which they can use to pick an image.
 
-![Filament MediaPicker Modal](https://ralphjsmit.com/storage/media/217/responsive-images/FilamentMediaLibrary-Modal___responsive_2752_1872.jpg)
+![Filament MediaPicker Modal](https://ralphjsmit.com/storage/media/249/responsive-images/FilamentMediaLibrary-Modal___responsive_2576_1726.jpg)
 
 Users can also pick multiple images at the same time (V2-feature):
 
-![Filament MediaPicker Modal Multiple](https://ralphjsmit.com/storage/media/218/responsive-images/FilamentMediaLibrary-Modal-Multiple___responsive_2752_1872.jpg)
+![Filament MediaPicker Modal Multiple](https://ralphjsmit.com/storage/media/248/responsive-images/FilamentMediaLibrary-Modal-Multiple___responsive_2576_1726.jpg)
 
 #### Image detail
 
 You can browse images using the UI:
 
-![Filament MediaLibrary Browse library](https://ralphjsmit.com/storage/media/212/responsive-images/FilamentMediaLibrary-CreateFolder___responsive_1132_844.jpg)
+![Filament MediaLibrary Browse library](https://ralphjsmit.com/storage/media/246/responsive-images/FilamentMediaLibrary-CreateFolder___responsive_865_678.jpg)
 
 For each image, you can view the image, view rows of information (can add custom rows) and edit each item using a custom form:
 
-![Image detail vertical](https://ralphjsmit.com/storage/media/222/responsive-images/MediaInfo---custom-forms___responsive_816_1834.jpg)
+![Image detail vertical](https://ralphjsmit.com/storage/media/256/responsive-images/MediaInfo---custom-forms___responsive_679_1925.jpg)
 
 One of the use cases could be to allow adding tags to images:
 
-![Custom form with tags](https://ralphjsmit.com/storage/media/224/responsive-images/MediaInfo-tags___responsive_816_538.jpg)
+![Custom form with tags](https://ralphjsmit.com/storage/media/254/responsive-images/MediaInfo-tags___responsive_600_458.jpg)
 
 #### Default theme
 
 By default Filament comes with it's own CSS, which integrates neatly into the admin panel design. However, as I did in the above screenshots, it is just as beautiful if you integrate it with your own Filament theme.
 
-![Filament MediaLibrary With Default Theme](https://ralphjsmit.com/storage/media/219/responsive-images/FilamentMediaLibrary-Page-DefaultTheme___responsive_3290_2238.jpg)
+![Filament MediaLibrary With Default Theme](https://ralphjsmit.com/storage/media/255/responsive-images/FilamentMediaLibrary-Page-DefaultTheme___responsive_2679_1901.jpg)
 
 <br><br>
 

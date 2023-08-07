@@ -625,7 +625,7 @@ If you want to upgrade to Onboarding Manager V2, and therefore Filament V3 suppo
     $panel
         ->plugin(FilamentOnboard::make()) 
     ```             
-- Filament V3 offers plugins the ability to be customized per panel. This means that instead of global config values that apply to all panels, you can now set different values per panel. If you want, review the `config/filament-onboard.php` configuration file. Set the values that you want to change using the methods on the `FilamentOnboard` class. The methods look very similar to the keys they had in the config. For example, the key redirect-route` has become a method `FilamentMediaLibrary::make()->redirectRoute()`. You can also choose to do nothing. The package will retain compatibility with your current config. Whilst we do recommend to stay up-to-date and migrate your config, it is not a stricty requirement. An example plugin configuration could look like:
+- Filament V3 offers plugins the ability to be customized per panel. This means that instead of global config values that apply to all panels, you can now set different values per panel. If you want, review the `config/filament-onboard.php` configuration file. Set the values that you want to change using the methods on the `FilamentOnboard` class. The methods look very similar to the keys they had in the config. For example, the key `redirect-route` has become a method `FilamentMediaLibrary::make()->redirectRoute()`. You can also choose to do nothing. The package will retain compatibility with your current config. Whilst we do recommend to stay up-to-date and migrate your config, it is not a stricty requirement. An example plugin configuration could look like:
 ```php
     $panel
         ->plugin(
