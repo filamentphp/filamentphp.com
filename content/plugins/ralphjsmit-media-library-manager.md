@@ -741,7 +741,7 @@ MediaColumn::make('thumbnails')
     ->stacked()
 ```
 
-### Filament V3 Infolists entry
+### Filament V3 Infolists entry (V3)
 
 The plugin also includes a handy `MediaEntry` infolist component, that you can use to display media in your infolists.
 
