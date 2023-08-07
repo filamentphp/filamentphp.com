@@ -1,5 +1,11 @@
 The source code for the [Filament](https://filamentphp.com) website.
 
+## Docs
+
+> **Warning**
+> Please submit pull requests for documentation changes to the [`filament/filament`](https://github.com/filamentphp/filament) repository. The relevant documentation files can be found in the `/docs` directory of each package.
+
+
 ## Contributing
 
 Submitting plugins and articles can be done by submitting a pull request to this repository. We have opted for this approach to allow for a more open and transparent process, as well as a smoother review process based on GitHub, where you and Filament maintainers can communicate directly.
