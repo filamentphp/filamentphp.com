@@ -18,7 +18,7 @@ This package allows you to give your users a beautiful way to upload images to y
 
 **New: Package includes Filament V3 support!** 
 
-[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)
+[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)<br>
 [**Upgrading from V2 to V3?**](#upgrading-from-v2-to-v3)
 
 ### Features
@@ -29,6 +29,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - Folders **(NEW IN V2)**
 - Table column to display a media library item **(NEW IN V2)**
 - Custom forms when viewing/editing an image **(NEW IN V2)**
+- Filament V3 Infolists entry to display a media library item **(NEW IN V3)**
 - Integration with Spatie MediaLibrary.
 - Bulk-upload images.
 - Responsive images.
@@ -61,54 +62,53 @@ NB.: The below screenshots are shown in a Filament V2 panel. Currently the packa
 
 The MediaLibrary page is the page where your users can view all their images. The complete package is compatible with both dark- and lightmode.
 
-![Media Library page](https://ralphjsmit.com/storage/media/226/responsive-images/FilamentMediaLibrary___responsive_2620_1709.jpg)
+![Media Library page](https://ralphjsmit.com/storage/media/243/responsive-images/FilamentMediaLibrary___responsive_2749_1996.jpg)
 
-![Media Library page Dark Mode](https://ralphjsmit.com/storage/media/221/responsive-images/FilamentMediaLibrary-Dark___responsive_2863_2118.jpg)
+![Media Library page Dark Mode](https://ralphjsmit.com/storage/media/247/responsive-images/FilamentMediaLibrary-Dark___responsive_2749_1996.jpg)
 
 #### Upload & bulk upload
 
 Users can drag-and-drop their images unto the upload component. Bulk uploads are allowed. You can use Laravel's queue processing feature to handle the process of generating responsive images in the background.
 
-![Filament MediaLibrary regular upload](https://ralphjsmit.com/storage/media/220/responsive-images/FilamentMediaLibrary-Upload___responsive_2752_1872.jpg)
+![Filament MediaLibrary regular upload](https://ralphjsmit.com/storage/media/251/responsive-images/FilamentMediaLibrary-Upload___responsive_2749_1996.jpg)
 
-![Filament Media Library Bulk Upload](https://ralphjsmit.com/storage/media/211/responsive-images/FilamentMediaLibrary-BulkUpload___responsive_2573_1787.jpg)
+![Filament Media Library Bulk Upload](https://ralphjsmit.com/storage/media/244/responsive-images/FilamentMediaLibrary-BulkUpload___responsive_2749_1996.jpg)
 
-![Media Library Bulk Upload](https://ralphjsmit.com/storage/media/213/responsive-images/FilamentMediaLibrary-BulkUpload-StoringFiles___responsive_2573_1787.jpg)
+![Media Library Bulk Upload](https://ralphjsmit.com/storage/media/245/responsive-images/FilamentMediaLibrary-BulkUpload-StoringFiles___responsive_2749_1996.jpg)
 
 #### MediaPicker Field & modal
 
 You can use the MediaPicker Field everywhere inside the admin panel where you want it: as a single field or in a repeater. It works everywhere.
 
-![MediaPicker Field & modal](https://ralphjsmit.com/storage/media/210/responsive-images/Custom-Field___responsive_1366_574.jpg)
+![MediaPicker Field & modal](https://ralphjsmit.com/storage/media/242/responsive-images/Custom-field___responsive_1142_470.jpg)
 
 When a user clicks on 'Choose image', he/she will see the following modal, which they can use to pick an image.
 
-![Filament MediaPicker Modal](https://ralphjsmit.com/storage/media/217/responsive-images/FilamentMediaLibrary-Modal___responsive_2752_1872.jpg)
+![Filament MediaPicker Modal](https://ralphjsmit.com/storage/media/249/responsive-images/FilamentMediaLibrary-Modal___responsive_2576_1726.jpg)
 
 Users can also pick multiple images at the same time (V2-feature):
 
-![Filament MediaPicker Modal Multiple](https://ralphjsmit.com/storage/media/218/responsive-images/FilamentMediaLibrary-Modal-Multiple___responsive_2752_1872.jpg)
-
+![Filament MediaPicker Modal Multiple](https://ralphjsmit.com/storage/media/248/responsive-images/FilamentMediaLibrary-Modal-Multiple___responsive_2576_1726.jpg)
 
 #### Image detail
 
 You can browse images using the UI:
 
-![Filament MediaLibrary Browse library](https://ralphjsmit.com/storage/media/212/responsive-images/FilamentMediaLibrary-CreateFolder___responsive_1132_844.jpg)
+![Filament MediaLibrary Browse library](https://ralphjsmit.com/storage/media/246/responsive-images/FilamentMediaLibrary-CreateFolder___responsive_865_678.jpg)
 
 For each image, you can view the image, view rows of information (can add custom rows) and edit each item using a custom form:
 
-![Image detail vertical](https://ralphjsmit.com/storage/media/222/responsive-images/MediaInfo---custom-forms___responsive_816_1834.jpg)
+![Image detail vertical](https://ralphjsmit.com/storage/media/256/responsive-images/MediaInfo---custom-forms___responsive_679_1925.jpg)
 
 One of the use cases could be to allow adding tags to images:
 
-![Custom form with tags](https://ralphjsmit.com/storage/media/224/responsive-images/MediaInfo-tags___responsive_816_538.jpg)
+![Custom form with tags](https://ralphjsmit.com/storage/media/254/responsive-images/MediaInfo-tags___responsive_600_458.jpg)
 
 #### Default theme
 
 By default Filament comes with it's own CSS, which integrates neatly into the admin panel design. However, as I did in the above screenshots, it is just as beautiful if you integrate it with your own Filament theme.
 
-![Filament MediaLibrary With Default Theme](https://ralphjsmit.com/storage/media/219/responsive-images/FilamentMediaLibrary-Page-DefaultTheme___responsive_3290_2238.jpg)
+![Filament MediaLibrary With Default Theme](https://ralphjsmit.com/storage/media/255/responsive-images/FilamentMediaLibrary-Page-DefaultTheme___responsive_2679_1901.jpg)
 
 <br><br>
 
@@ -191,6 +191,29 @@ $panel
     ->plugin(FilamentMediaLibrary::make()) 
 ```
 
+In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
+
+In the rest of the docs, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
+
+Therefore, the following code examples mean the same:
+
+```php
+$plugin
+    ->diskVisibilityPrivate()
+    ->someOtherMethod();
+```
+
+```php
+use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
+
+$panel
+    ->plugin(
+        FilamentMediaLibrary::make()
+            ->diskVisibilityPrivate()
+            ->someOtherMethod()
+    ) 
+```
+
 ### Setting up the disk
 
 The Filament Media library uses the [Spatie Medialibrary](https://spatie.be/docs/laravel-medialibrary/master/introduction) as underlying package. By default, the Spatie Medialibrary package will put your images on the `public` disk.
@@ -201,7 +224,7 @@ If you want to change the disk, publish the Spatie Medialibrary configuration fi
 php artisan vendor:publish --provider='Spatie\MediaLibrary\MediaLibraryServiceProvider' --tag='config'
 ```
 
-Then, update the following part of the config with your new disk. This could be an S3 disk for example.
+Then, configure the panel with your new disk in the `config/media-library.php`. This could be an S3 disk for example.
 
 ```php
 /*
@@ -214,18 +237,20 @@ Then, update the following part of the config with your new disk. This could be 
 Finally, if your disk is a private disk (like S3), then you need to update the `filament-media-library.disk.visibility` value to “private”:
 
 ```php
-// By default, this package assumes that the disk you are using is public. If your
-// disk is private, update the below "visibility" setting here to "private".
-'disk' => [
-    'visibility' => 'public', // "public" or "private"
-],
+// By default, this package assumes that the disk you are using is public. If your disk
+// is private, use the below "diskVisibilityPrivate()" method to set it to "private".
+$plugin
+    ->diskVisibilityPrivate()
+    // Alternative: ->diskVisbility('private')
 ```
 
-
 ### Custom themes
+                     
+Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. 
 
-If you're using a [custom theme](https://filamentphp.com/docs/2.x/admin/appearance#building-themes), you'll need to instruct Tailwind
-to also purge the view-files for the media library. Add the following key to the `content` key of your `tailwind.config.js` file:
+> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS. 
+                     
+You'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
 ```js
 content: [
@@ -233,9 +258,6 @@ content: [
     './vendor/ralphjsmit/laravel-filament-media-library/resources/**/*.blade.php'
 ],
 ```
-
-Next, you'll also need to disable the loading of our default stylesheet, because we don't want to load unnecessary CSS. Set the `filament-media-library.register.default_css` to `false`.
-
 
 ## Usage
 
@@ -282,7 +304,13 @@ MediaLibraryItem::addUpload($uploadedFile);
 
 If you want to override the title or navigation label, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
 
-Finally, you should update the `filament-media-library.register.pages` config option to use your own new page instead of the default page.
+Finally, you should register the new page in Filament by using the `->registrablePages()` method:
+
+```php
+$plugin->registrablePages([
+    YourExtendedMediaLibraryPage::class, 
+])
+```
 
 ### MediaPicker
 
@@ -410,7 +438,7 @@ Facades\MediaLibrary::registerMediaInfoFormFields(function (array $schema, Media
 
 #### Adding tags to media library items (NEW IN V2)
 
-This example will show you how to add tags to your media library items based on the [Filament Spatie Tags plugin](https://filamentphp.com/plugins/spatie-tags). I will assume you have already run the migrations. You can find the installation instructions [here](https://filamentphp.com/docs/2.x/spatie-laravel-tags-plugin/installation#installation).
+This example will show you how to add tags to your media library items based on the [Filament Spatie Tags plugin](https://filamentphp.com/plugins/spatie-tags). I will assume you have already run the migrations. You can find the installation instructions [here](https://filamentphp.com/plugins/filament-spatie-media-library#installation).
 
 Next, you need to prepare the Eloquent model for attaching tags. That means that we need to add a trait to the MediaLibraryItem Model. In order to achieve that, create a new file in your project with the name `MediaLibraryItem`, that extends the original `MediaLibraryItem` model and adds the `HasTags`-trait. You could do this in your own `app/Models` directory, but you are free to choose your own.
 
@@ -539,10 +567,9 @@ Now you are ready and the `create` and `delete` actions are governed by a policy
 By default, the plugin registers four media conversions. The media conversions are:
 
 1. `responsive`
-2. `400`
-3. `800`
+2. `400` (known as `small`)
+3. `800` (known as `medium`)
 4. `thumb`
-
 
 These conversions are used throughout the plugin, so you cannot remove them. However, you are free to register additional media conversions using the `MediaLibrary::registerMediaConversions()` function:
 
@@ -565,50 +592,59 @@ You are free to register as many conversions as you like. However, be aware that
 
 By default, the plugin generates a square media conversion called `thumb` that is used to display each media item in the library.
 
-If you wish, you can change the conversion that is displayed in the library by updating the `filament-media-library.thumbnail-media-conversion` in the config:
+If you wish, you can change the conversion that is displayed in the library by using the `->thumbnailMediaConversion()` method in the panel service providers:
 
 ```php
 // You can change the media conversion that is used to display the previews in the library.
 // The default conversion is `thumb`. This conversion is a square conversion and generated
 // automatically already. However, you can change the conversion to any other conversion.
 // Please keep in mind that square conversions that aren't large work best.
-'thumbnail-media-conversion' => 'thumb',
+$plugin->thumbnailMediaConversion('thumb');
+```
+
+### Changing the conversion for the media picker
+
+By default, the plugin generates a square media conversion called `thumb` that is used to display each media item in the media picker.
+
+If you wish, you can change the conversion that is displayed in the library by using the `->mediaPickerMediaConversion()` method in the panel service providers:
+
+```php
+// You can change the media conversion that is used to display the previews in the library.
+// The default conversion is `thumb`. This conversion is a square conversion and generated
+// automatically already. However, you can change the conversion to any other conversion.
+// Please keep in mind that square conversions that aren't large work best.
+$plugin->mediaPickerMediaConversion('thumb');
 ```
 
 ### Enable uploading videos & PDFs
 
 The media library also has support for uploading videos & PDFs. By default, these options are disabled, because they might need the installation of an addition library.
 
-You can enable video and PDF-support using the configuration file:
+You can enable video and PDF-support using the plugin configuration:
 
 ```php
-    // You can specify the filetypes you want your users to be able to upload.
-    'accepted_filetypes' => [
-        // There is no additional configuration needed for accepting images.
-        'image' => true,
+  // You can specify the filetypes you want your users to be able to upload.
+  $plugin
+      // There is no additional configuration needed for accepting images.
+      ->acceptImage()
 
-        // In order to upload PDFs, you need to have the "spatie/pdf-to-image" package configured correctly.
-        // This package is already required via Composer, but you need to make sure that the extension for
-        // imagick has been installed and that Ghostscript is installed. Check out the following link:
-        // https://github.com/spatie/pdf-to-image#requirements
-        'pdf' => false,
+      // In order to upload PDFs, you need to have the "spatie/pdf-to-image" package configured correctly.
+      // This package is already required via Composer, but you need to make sure that the extension for
+      // imagick has been installed and that Ghostscript is installed. Check out the following link:
+      // https://github.com/spatie/pdf-to-image#requirements
+      ->acceptPdf()
 
-        // In order to let your users upload videos, you need to have the FFmpeg binary installed. See
-        // the website of FFmpeg for installation instructions: https://ffmpeg.org/download.html.
-        'video' => false,
-    ],
+      // In order to let your users upload videos, you need to have the FFmpeg binary installed. See
+      // the website of FFmpeg for installation instructions: https://ffmpeg.org/download.html.
+      ->acceptVideo()
 ```
 
 ### Changing the width of the media picker modal
 
-You can update the width of the media picker modal using the `filament-media-library.modals.media-picker.width` setting in the config. The default width is `7xl`.
+You can update the width of the media picker modal using the `->mediaPickerModalWidth()` method in the plugin configuration. The default width is `7xl`.
 
 ```php
-'modals' => [
-    'media-picker' => [
-        'width' => '7xl',
-    ],
-],
+$plugin->mediaPickerModalWidth('7xl');
 ```
 
 ### Showing the upload box by default (NEW IN V2)
@@ -616,12 +652,10 @@ You can update the width of the media picker modal using the `filament-media-lib
 It is possible to show the upload box by default instead of having to open the box first by clicking the 'upload'
 button. Depending on your application, this might improve the user experience.
 
-To enable this behaviour, set the `filament-media-library.settings.show-upload-box-by-default` to `true`:
+To enable this behaviour, use the `->showUploadBoxByDefault()` on the plugin configuration:
 
 ```php
-'settings' => [
-    'show-upload-box-by-default' => true,
-],
+$plugin->showUploadBoxByDefault();
 ```
 
 ### Showing a warning box when there are unstored files in the upload box (NEW IN V2)
@@ -635,12 +669,10 @@ This can be confusing for some users. Some users forget to click "Store" and the
 
 In order to solve this problem and improve the UX, you can choose to enable a warning box when there are files in the upload box that are not stored yet. The warning will be "Don't forget to click 'store' to upload your file/files".
 
-To enable the warning box, set the `filament-media-library.settings.warning-unstored-uploads` to `true`:
+To enable the warning box, set the `->unstoredUploadsWarning()` to `true`:
 
 ```php
-'settings' => [
-    'warning-unstored-uploads' => true,
-],
+$plugin->unstoredUploadsWarning();
 ```
 
 ### Adding a custom button label to the media picker (NEW IN V2)
@@ -652,6 +684,100 @@ MediaPicker::make('hero_image_id')
     ->buttonLabel('Choose hero image'),
 ```
 
+### Media table column
+
+You can use the MediaColumn to display a preview of the media item in a table resource. For this to work, you need to have a relationship to the media library item in your model. 
+
+For example, consider a situation where you have a `thumbnail_id` on your Eloquent model. This `thumbnail_id` will contain the ID of the media library item that has been selected using the `MediaPicker::make('thumbnail_id')`. You then need to add the following relationship to your Eloquent model:
+
+```php
+public function thumbnail(): BelongsTo
+{
+    return $this->belongsTo(MediaLibraryItem::class, 'thumbnail_id');
+}
+```
+
+Next, you can use the MediaColumn like this:   
+
+```php
+use RalphJSmit\Filament\MediaLibrary\Tables\Columns\MediaColumn;
+
+MediaColumn::make('thumbnail'),
+```
+
+All methods available on the `ImageColumn` class are also available on the `MediaColumn` class.
+
+```php
+MediaColumn::make('thumbnail')
+    ->circular()
+    ->size(40)
+```
+
+You only do not need to use the `->collection()`, `->conversion()` methods.
+
+> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation. 
+
+You can also use the MediaColumn to display multiple images from a relationship. For example, consider that you have a `Post` model with a `thumbnail` relationship. Say that we also have an `Author` model. We could add an `HasManyThrough` relationship to the `Author` model to get the thumbnails of the posts from this author:
+
+```php
+class Author extends Model
+{
+    public function thumbnails(): HasManyThrough
+    {
+        return $this->hasManyThrough(
+            MediaLibraryItem::class,
+            Post::class,
+            'author_id', // Foreign key on posts table
+            'id', // Key on authors table
+            'id', // Key on filament_media_library_items table
+            'thumbnail_id', // Foreign key on posts table
+        );
+    }
+    
+    // ...
+}
+```
+
+Next, we could use the MediaColumn to display the thumbnails of the posts from this author:
+
+```php
+MediaColumn::make('thumbnails')
+    ->circular()
+    ->stacked()
+```
+
+### Filament V3 Infolists entry (V3)
+
+The plugin also includes a handy `MediaEntry` infolist component, that you can use to display media in your infolists.
+
+This `MediaEntry` components works in exactly the same way as the `MediaColumn` component. Therefore, I'll assume the `thumbnail` and `thumbnails` relationships from above.  
+
+Next, you can use the `MediaColumn` like this:
+
+```php
+use RalphJSmit\Filament\MediaLibrary\Infolists\Components\MediaEntry;
+
+MediaEntry::make('thumbnail'),
+```
+
+All methods available on the `ImageEntry` class are also available on the `MediaEntry` class.
+
+```php
+MediaEntry::make('thumbnail')
+    ->circular()
+    ->size(40)
+```
+
+> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation.
+
+Next, we could use the `MediaEntry` to display the thumbnails of the posts from this author:
+
+```php
+MediaEntry::make('thumbnails')
+    ->circular()
+    ->stacked()
+```
+
 ### Overriding custom classes
 
 The plugin provides several configuration options to override the internal classes it uses. This can be handy in situations where you want to make a small tweak to a certain behaviour or design.
@@ -659,43 +785,38 @@ The plugin provides several configuration options to override the internal class
 Make sure to always extend the original class.
 
 ```php
-// Use the below setting to customize the model used for media library items.
-// This allows you to override the model for an iten and customize it.
-// Make sure to always extend the original model, so that you will not accidentally
-// lose functionality or forget to upgrade functions.
-'models' => [
-    'item' => MediaLibraryItem::class,
-    'folder' => MediaLibraryFolder::class,
-],
+$plugin
+    // Use the below methods to customize the model used for media library items.
+    // This allows you to override the model for an iten and customize it.
+    // Make sure to always extend the original model, so that you will not accidentally
+    // lose functionality or forget to upgrade functions.
+    ->modelItem(MediaLibraryItem::class)
+    ->modelFolder(MediaLibraryFolder::class)
 ```
 
 ```php
 // The resources and pages to enable in your application.
-'register' => [
+$plugin
     // From the below array, you can remove the pages you don't need.
     // If you want to modify a page yourself, you can extend the original page
     // and register your own class here that extends the page. In that way, you can
     // customize labels, titles, etc.
-    'pages' => [
+    ->registrablePages([
         MediaLibrary::class,
-    ],
-
+    ])
+    
     // The below three classes are the main Livewire-components. If you want to modify
     // one of the classes, you can create a new class that extends the original class
     // and update the configuration here accordingly.
     // NB.: Please note that I cannot guarantee that breaking changes will never happen
     // inside these classes, so be sure to check if your changes still work after each update.
-    'livewire' => [
-        'upload-media' => UploadMedia::class,
-        'media-info' => MediaInfo::class,
-        'browse-library' => BrowseLibrary::class,
-    ],
-
-    // ..
+    ->uploadMediaComponent(UploadMedia::class)
+    ->mediaInfoComponent(MediaInfo::class)
+    ->browseLibraryComponent(BrowseLibrary::class)
 ],
 ```
 
-> NB.: Please note that I cannot guarantee that breaking changes will never happen inside these classes, so be sure to check if your changes still work after each update.
+> NB.: Please note that I cannot guarantee that breaking changes will never happen inside these classes, so be sure to check if your changes still work after each update. 
 
 ## Using the MediaPicker outside the admin panel
 
