@@ -16,6 +16,10 @@ publish_date: 2023-07-17
 
 This package allows you to integrate Laravel-notifications in your Filament Admin application. The primary goal is to support the regular Notification system with classes, as [how it is described in the Laravel-docs](https://laravel.com/docs/9.x/notifications). The advantage of this approach is that it allows you to create notification classes that can be sent via multiple channel. For example, send the notification to a user via email ánd show it in the admin panel.
 
+**New: Package includes Filament V3 support!**
+
+[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)
+
 ### Features
 
 - Integrates with the Notification-classes from Laravel.
@@ -178,6 +182,17 @@ class User extends Model
 
     // ..
 }
+```
+
+### Configuring the plugin per-panel (Filament V3)
+
+If you are using the plugin in Filament V3, you should register the plugin in each of the panels that you have in your project and would like to use the media library in:
+
+```php
+use RalphJSmit\Filament\Notifications\FilamentNotifications;
+
+$panel
+    ->plugin(FilamentNotifications::make()) 
 ```
 
 ## Usage
@@ -545,6 +560,23 @@ class TestWorkflowFailedNotification extends Notification implements AsFilamentN
     }
 }
 ```
+
+## Upgrading from V1 to V2
+
+The Filament Notifications Pro plugin has a V2 version that already has support for Filament V3.
+
+If you want to upgrade to Notifications Pro V2, and therefore Filament V3 support, take the following steps:
+
+- Require `ralphjsmit/laravel-filament-notifications` `'^2.0'` instead of a 1.x version.
+- For each of the panels that you want to use the Notifications Pro plugin in, please register the plugin like follows:
+```php
+use RalphJSmit\Filament\Notifications\FilamentNotifications;
+
+$panel
+    ->plugin(FilamentNotifications::make()) 
+```
+- If you have extended pages like the `Notifications` page, please check your custom overrides with the new code. The `Notifications` has dropped several methods like `getTableFilters()`, which has been replaced by a static function `table(Table $table): Table` and `$table->filters()`.
+- Re-compile your assets using `npm run build` or `npm run prod` if you are using a custom theme.
 
 ## Support
 
