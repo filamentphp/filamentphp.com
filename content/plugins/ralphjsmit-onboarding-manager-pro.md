@@ -16,6 +16,10 @@ publish_date: 2023-07-17
 
 This package allows you to design beautiful and fully integrated onboarding experiences for Filament Admin. Make it painless for your users to start using your app or SaaS and prevent them from dropping off. The package provides easy syntax inspired by the [Spatie's and Caleb Porzio's Laravel Onboard](https://github.com/laravel-onboard).
 
+**New: Package includes Filament V3 support!**
+
+[**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)
+
 ### Features
 
 - Prevent users from accessing Filament without first completing required parts of your onboarding.
