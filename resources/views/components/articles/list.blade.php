@@ -168,12 +168,14 @@
 
 
 
+
                         @js(match ($type['color']) {
                             'amber' => 'bg-amber-100/60',
                             'blue' => 'bg-blue-100/60',
                             'violet' => 'bg-violet-100/60',
                         }): selectedType === @js($type['slug']),
                     @endforeach
+
 
 
 
