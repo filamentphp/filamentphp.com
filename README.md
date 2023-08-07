@@ -23,6 +23,7 @@ slug: dan-harrin
 avatar: dan-harrin.jpg
 github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin
+mastodon_url: https://phpc.social/@danharrin
 ---
 
 Your bio should be written in Markdown here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be in full sentences.
@@ -32,6 +33,7 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 - The `avatar` should be the name of a file in the `content/authors/avatars` directory. Your avatar must be square, at least 1000x1000 pixels in size, and preferably a JPEG.
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
+- The `mastodon_url` should be a link to your Mastodon profile. It is optional.
 
 ### Submitting a plugin
 
@@ -58,7 +60,7 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 
 - The `slug` should match the current filename.
 - The `author_slug` should match the `slug` of the author profile you created earlier.
-- The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory. 
+- The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory.
 - The `description` should be a short description of your plugin. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be one full sentence.
 - The `discord_url` should be a link to the Discord channel where people can discuss your plugin. If this doesn't exist yet, you can leave this empty until the Filament team creates it in the official server.
 - The `docs_url` should be a URL to a public, raw Markdown file of your plugin. You can leave this blank if your documentation does not live in a raw Markdown file, but please ensure that you have filled in a `url` instead, where we can redirect users who are looking for the documentation. If you have content in your README that you do not want to be displayed on the website, please add a `.filament-hidden` class to the element. This is especially useful for banner images.
