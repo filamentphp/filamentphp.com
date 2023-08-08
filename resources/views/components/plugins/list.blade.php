@@ -6,7 +6,7 @@
         () => {
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
-                fields: ['name', 'description', 'author.name'],
+                fields: ['name', 'description', 'slug', 'author.name'],
                 searchOptions: {
                     fuzzy: 0.1,
                     prefix: true,
