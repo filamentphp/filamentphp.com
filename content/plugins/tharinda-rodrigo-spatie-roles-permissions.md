@@ -10,5 +10,6 @@ github_repository: althinect/filament-spatie-roles-permissions
 image: tharinda-rodrigo-spatie-roles-permissions.jpeg
 has_dark_theme: true
 has_translations: true
+publish_date: 2021-12-28
 versions: [2, 3]
 ---
