@@ -55,11 +55,11 @@
         @apply bg-cream/20;
     }
 
-    p code{
+    p code {
         @apply bg-merino;
     }
 
-    p code::selection{
+    p code::selection {
         @apply !bg-primary-500/20;
     }
 
@@ -81,11 +81,11 @@
         @apply bg-slate-500/50;
     }
 
-    .dark p code{
+    .dark p code {
         @apply bg-dolphin/40;
     }
 
-    .dark p code::selection{
+    .dark p code::selection {
         @apply !bg-slate-500/50;
     }
 }
