@@ -56,7 +56,7 @@
     }
 
     p code {
-        @apply bg-merino py-0.5 px-1.5 rounded;
+        @apply rounded bg-merino px-1.5 py-0.5;
     }
 
     p code::selection {
