@@ -84,6 +84,9 @@
 
             // If the search is not empty, show articles that match the search
             if (this.search) {
+                // Reset page number
+                this.currentPage = 1
+
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((article) =>
@@ -154,12 +157,14 @@
 
 
 
+
                         @js(match ($type['color']) {
                             'amber' => 'bg-amber-100/60',
                             'blue' => 'bg-blue-100/60',
                             'violet' => 'bg-violet-100/60',
                         }): selectedType === @js($type['slug']),
                     @endforeach
+
 
 
 

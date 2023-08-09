@@ -113,6 +113,9 @@
 
             // If the search is not empty, show plugins that match the search
             if (this.search) {
+                // Reset page number
+                this.currentPage = 1
+
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((plugin) =>
