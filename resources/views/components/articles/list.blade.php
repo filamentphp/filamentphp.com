@@ -146,13 +146,19 @@
             @endforeach
 
             @php
-                $typeConditionalColorClasses = $types->map(
-                    fn (array $type): string => \Illuminate\Support\Js::from(match ($type['color']) {
-                        'amber' => 'bg-amber-100/60',
-                        'blue' => 'bg-blue-100/60',
-                        'violet' => 'bg-violet-100/60',
-                    }) . ': selectedType === ' . \Illuminate\Support\Js::from($type['slug']),
-                )->implode(',');
+                $typeConditionalColorClasses = $types
+                    ->map(
+                        fn (array $type): string => \Illuminate\Support\Js::from(
+                            match ($type['color']) {
+                                'amber' => 'bg-amber-100/60',
+                                'blue' => 'bg-blue-100/60',
+                                'violet' => 'bg-violet-100/60',
+                            },
+                        ) .
+                            ': selectedType === ' .
+                            \Illuminate\Support\Js::from($type['slug']),
+                    )
+                    ->implode(',');
             @endphp
 
             <div
