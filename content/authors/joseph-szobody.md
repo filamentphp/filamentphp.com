@@ -1,7 +1,7 @@
 ---
 name: Joseph Szobody
-slug: jszobody
-avatar: danharrin.jpg
+slug: joseph-szobody
+avatar: joseph-szobody.jpg
 github_url: https://github.com/jszobody
 twitter_url: https://twitter.com/jszobody
 ---

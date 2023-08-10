@@ -1,8 +1,7 @@
 ---
 name: Impersonate
 slug: impersonate
-author_slug: jszobody
-avatar: jszobody.jpg
+author_slug: joseph-szobody
 categories: [action, table-builder]
 description: Easily impersonate your users
 discord_url: https://discord.com/channels/883083792112300104/927101316990398494
