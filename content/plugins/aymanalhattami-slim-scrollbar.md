@@ -5,7 +5,7 @@ author_slug: aymanalhattami
 categories: [panel-builder]
 description: A simple package to make the application's scrollbars slim.
 discord_url: 
-docs_url: https://github.com/aymanalhattami/filament-slim-scrollbar/blob/main/README.md
+docs_url: https://raw.githubusercontent.com/aymanalhattami/filament-slim-scrollbar/main/README.md
 github_repository: aymanalhattami/filament-slim-scrollbar
 has_dark_theme: true
 has_translations: true
