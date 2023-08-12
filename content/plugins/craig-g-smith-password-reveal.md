@@ -4,7 +4,7 @@ slug: craig-g-smith-password-reveal
 author_slug: craig-g-smith
 categories: [form-builder, form-field]
 description: Password input to allow for masking / unmasking, auto-generate and copy
-discord_url:
+discord_url: https://discord.com/channels/883083792112300104/970412812990033971
 docs_url: https://raw.githubusercontent.com/phpsa/filament-password-reveal/master/README.md
 github_repository: phpsa/filament-password-reveal
 has_dark_theme: true
