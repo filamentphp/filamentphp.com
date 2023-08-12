@@ -60,61 +60,11 @@ Schema::create('users', function (Blueprint $table) {
     $table->rememberToken();
     $table->timestamps();
 });
-
-// app/Models/User.php
-
-protected $fillable = [
-    'name',
-    'email',
-    'password',
-    'color',
-];
-```
-
-For testing and seeding purposes let's also add the new attribute to our `UserFactory`
-
-```php
-// database/factories/UserFactory.php
-
-public function definition(): array
-{
-    return [
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
-        'color' => fake()->hexColor(),
-    ];
-}
-```
-
-Now, let's edit our `DatabaseSeeder` so we have some users to continue with.
-
-```php
-// database/seeders/DatabaseSeeder.php
-
-public function run(): void
-{
-    User::factory(10)->create();
-}
-```
-
-Then run the following command:
-
-```bash
-php artisan migrate --seed
 ```
 
 ## Usage
 
-Now let's create a controller to display user information, e.g. **UserController**, by running the following command:
-
-```bash
-php artisan make:controller -i UserController
-```
-
-Fill it like this:
+For this example, we'll create an invokable controller to display user information, e.g. **UserController** and modify it like the following:
 
 ```php
 <?php
@@ -132,7 +82,7 @@ class UserController extends Controller
 }
 ```
 
-Next, we need to add a route to view the user in our app in the `web.php` route file.
+Then, prepare our `web.php` route file.
 
 ```php
 // routes/web.php
@@ -140,7 +90,7 @@ Next, we need to add a route to view the user in our app in the `web.php` route 
 Route::get('/{user}', UserController::class);
 ```
 
-Modify the body content in `welcome.blade.php` with the following:
+Also, modify the body content in `welcome.blade.php` with the following:
 
 ```html
 <x-layouts.app>
