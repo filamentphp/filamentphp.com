@@ -1,5 +1,5 @@
 ---
-name: Filament Password Input
+name: Password Input
 slug: craig-g-smith-password-reveal
 author_slug: craig-g-smith
 categories: [form-field]
