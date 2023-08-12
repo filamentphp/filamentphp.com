@@ -27,7 +27,7 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.7bd9e927.css" /><script type="module" src="/docs/hoisted.9a1268b2.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.96da89c9.css" /><script type="module" src="/docs/hoisted.9a1268b2.js"></script></head>
   <body class="bg-cream dark:bg-[#171527] astro-DUO5LYZF">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
@@ -802,12 +802,12 @@ TextInput::make('password')
     -&gt;password()
     -&gt;autocomplete('new-password')
 </textarea></code></pre>
-<p>As a shortcut for <code>autocomplete=&quot;off&quot;</code>, you may <code>disableAutocomplete()</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">disableAutocomplete</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
+<p>As a shortcut for <code>autocomplete=&quot;off&quot;</code>, you may use <code>autocomplete(false)</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">password</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">password</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">autocomplete</span><span style="color: #89DDFF;">(false)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\TextInput;
 
 TextInput::make('password')
     -&gt;password()
-    -&gt;disableAutocomplete()
+    -&gt;autocomplete(false)
 </textarea></code></pre>
 <p>For more complex autocomplete options, text inputs also support <a href="#autocompleting-text-with-a-datalist">datalists</a>.</p>
 <h3 id="autocompleting-text-with-a-datalist"><a class="heading-anchor" href="#autocompleting-text-with-a-datalist"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Autocompleting text with a datalist</h3>
