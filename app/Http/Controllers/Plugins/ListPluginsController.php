@@ -40,6 +40,7 @@ class ListPluginsController extends Controller
                         'price' => $plugin->getPrice(),
                         'stars_count' => $plugin->getStarsCount(),
                         'thumbnail_url' => $plugin->getThumbnailUrl(),
+                        'github_repository' => $plugin->github_repository,
                         'description' => $plugin->description,
                         'author' => [
                             'name' => $plugin->author->name,
