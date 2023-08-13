@@ -1,5 +1,5 @@
 ---
-name: Customizing colors per-user outside of a panel
+title: Customizing colors per-user outside of a panel
 slug: mohamedsabil83-easy-way-to-benefit-from-the-new-color-mechanism-in-frontend
 author_slug: mohamedsabil83
 publish_date: 2023-08-08
