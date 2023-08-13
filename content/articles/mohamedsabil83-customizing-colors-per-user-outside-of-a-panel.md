@@ -4,7 +4,7 @@ slug: mohamedsabil83-easy-way-to-benefit-from-the-new-color-mechanism-in-fronten
 author_slug: mohamedsabil83
 publish_date: 2023-08-08
 categories: [general]
-type_slug: article
+type_slug: trick
 ---
 
 **Filament 3** was released a few days ago that's contains many new features in addition to several new main core packages (Actions, Infolist Builder, and Widgets).
