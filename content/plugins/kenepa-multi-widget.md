@@ -3,7 +3,7 @@ name: Multi Widget
 slug: kenepa-multi-widget
 author_slug: kenepa
 categories: [widget, panel-builder]
-description: Filament Multi Widget adds a new type of widget to your Filament application. The Multi Widget allows you to combine multiple widgets into a single widget, that can be switched using tabs. This plugin helps clean up your Filament dashboard.
+description: The Multi Widget allows you to combine multiple widgets into a single widget, that can be switched using tabs.
 discord_url: https://discord.com/channels/883083792112300104/1105811827000098948
 docs_url: https://raw.githubusercontent.com/kenepa/multi-widget/2.x/README.md
 github_repository: kenepa/multi-widget
