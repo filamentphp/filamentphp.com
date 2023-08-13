@@ -55,6 +55,16 @@
         @apply bg-cream/20;
     }
 
+    p code,
+    ul code {
+        @apply rounded bg-merino px-1.5 py-0.5;
+    }
+
+    p code::selection,
+    ul code::selection {
+        @apply !bg-primary-500/20;
+    }
+
     /* Dark Theme */
 
     /* All elements except `.prose` and `code` */
@@ -71,6 +81,16 @@
     .dark .prose code::selection,
     .dark .prose code *::selection {
         @apply bg-slate-500/50;
+    }
+
+    .dark p code,
+    .dark ul code {
+        @apply bg-dolphin/40;
+    }
+
+    .dark p code::selection,
+    .dark ul code::selection {
+        @apply !bg-slate-500/50;
     }
 }
 
