@@ -1,5 +1,5 @@
 ---
-name: Easy way to benefit from the new color mechanism in frontend
+name: Customizing colors per-user outside of a panel
 slug: mohamedsabil83-easy-way-to-benefit-from-the-new-color-mechanism-in-frontend
 author_slug: mohamedsabil83
 publish_date: 2023-08-08
@@ -7,13 +7,11 @@ categories: [general]
 type_slug: article
 ---
 
-# Easy way to benefit from the new color mechanism in Frontend
-
 **Filament 3** was released a few days ago that's contains many new features in addition to several new main core packages (Actions, Infolist Builder, and Widgets).
 
 Among the new features is the ability to add an unlimited number of panels (AKA admin areas / dashboards). Each of them is its own service provider, allowing you to  customizing the Panel as needed, including specifying and assigning colors individually.
 
-We can take advantage of this feature in the Frontend (non admin parts) of the site by allowing, for example, each user to choose their own preferred color. To clarify this, we will build a quick example.
+We can take advantage of this feature in the Frontend (non panel parts) of the site by allowing, for example, each user to choose their own preferred color. To clarify this, we will build a quick example.
 
 ## Installation
 
