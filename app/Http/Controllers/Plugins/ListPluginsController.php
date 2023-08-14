@@ -39,6 +39,7 @@ class ListPluginsController extends Controller
                         ->pluck('count', 'starrable_id');
 
                     return Plugin::query()
+                        ->orderByDesc('publish_date')
                         ->with(['author'])
                         ->get()
                         ->map(fn (Plugin $plugin): array => [

@@ -110,14 +110,8 @@
                     a.name > b.name ? 1 : -1,
                 )
             } else if (this.selectedSort === 'Popular') {
-                // Many plugins might have the same star count, so if they do,
-                // also ensure that newer plugins are before older ones.
                 filterResult = filterResult.sort((a, b) =>
-                    a.stars_count < b.stars_count
-                        ? 1
-                        : a.publish_date < b.publish_date
-                        ? 0
-                        : -1,
+                    a.stars_count < b.stars_count ? 1 : -1,
                 )
             }
 
