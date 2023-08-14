@@ -84,6 +84,9 @@
 
             // If the search is not empty, show articles that match the search
             if (this.search) {
+                // Reset page number
+                this.currentPage = 1
+
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((article) =>
@@ -142,6 +145,22 @@
                 </div>
             @endforeach
 
+            @php
+                $typeConditionalColorClasses = $types
+                    ->map(
+                        fn (array $type): string => \Illuminate\Support\Js::from(
+                            match ($type['color']) {
+                                'amber' => 'bg-amber-100/60',
+                                'blue' => 'bg-blue-100/60',
+                                'violet' => 'bg-violet-100/60',
+                            },
+                        ) .
+                            ': selectedType === ' .
+                            \Illuminate\Support\Js::from($type['slug']),
+                    )
+                    ->implode(',');
+            @endphp
+
             <div
                 class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
@@ -149,62 +168,7 @@
                     'translate-x-[4.5rem] w-[6.5rem]' : selectedType === 'article',
                     'translate-x-[10.7rem] w-[6rem]' : selectedType === 'news',
                     'translate-x-[17rem] w-[6rem]' : selectedType === 'trick',
-                    @foreach ($types as $type)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        @js(match ($type['color']) {
-                            'amber' => 'bg-amber-100/60',
-                            'blue' => 'bg-blue-100/60',
-                            'violet' => 'bg-violet-100/60',
-                        }): selectedType === @js($type['slug']),
-                    @endforeach
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    'translate-x-[4.5rem] w-[6.5rem] bg-amber-100/60' : selectedType === 'article',
-                    'translate-x-[10.7rem] w-[6rem] bg-blue-100/60' : selectedType === 'news',
-                    'translate-x-[17rem] w-[6rem] bg-violet-100/60' : selectedType === 'trick',
+                    {{ $typeConditionalColorClasses }},
                 }"
             ></div>
         </div>

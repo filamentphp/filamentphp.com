@@ -17,5 +17,8 @@ pnpm-debug.log*
 # Filament source files
 /filament
 
-# torchlight cache
+# Torchlight cache
 /torchlight-cache
+
+# raw documentation
+/src/pages/*.x
