@@ -113,7 +113,7 @@
                 // Many plugins might have the same star count, so if they do,
                 // also ensure that newer plugins are before older ones.
                 filterResult = filterResult.sort((a, b) =>
-                    a.stars_count < b.stars_count ? 1 : (a.publish_date < b.publish_date ? -1 : -2),
+                    a.stars_count < b.stars_count ? 1 : (a.publish_date < b.publish_date ? 0 : -1),
                 )
             }
 
