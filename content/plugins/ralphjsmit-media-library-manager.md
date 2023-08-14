@@ -214,7 +214,7 @@ $panel
     ) 
 ```
 
-### Setting up the disk
+### Setting up the disk (& configuring S3)
 
 The Filament Media library uses the [Spatie Medialibrary](https://spatie.be/docs/laravel-medialibrary/master/introduction) as underlying package. By default, the Spatie Medialibrary package will put your images on the `public` disk.
 
@@ -243,6 +243,18 @@ $plugin
     ->diskVisibilityPrivate()
     // Alternative: ->diskVisbility('private')
 ```
+
+Finally, you'll also need to replace the default `url_generator` in the `config/media-library` to use the custom generator. This is only necessary if you have set your disk visibility to private:
+
+```php
+/*
+ * When urls to files get generated, this class will be called. Use the default
+ * if your files are stored locally above the site root or on s3.
+ */
+'url_generator' => RalphJSmit\Filament\MediaLibrary\UrlGenerator\MediaLibraryUrlGenerator::class,
+```
+
+If you skip this step, then you risk that some images in the library are not displayed correctly. 
 
 ### Custom themes
                      
