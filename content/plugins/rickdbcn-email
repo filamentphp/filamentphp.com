@@ -5,7 +5,7 @@ author_slug: rickdbcn
 categories: [panel-builder, analytics]
 description: Log all outgoing emails in your project within your Filament panel.
 discord_url:
-docs_url: https://github.com/RickDBCN/filament-email/blob/main/README.md
+docs_url: https://raw.githubusercontent.com/RickDBCN/filament-email/main/README.md
 github_repository: rickdbcn/filament-email
 has_dark_theme: true
 has_translations: true
