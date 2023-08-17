@@ -9,7 +9,7 @@ type_slug: news
 
 Filament v3 has been released! This is a major release with a lot of new features and improvements. The team has refreshed the design of every single Blade template in the project.
 
-In addition, Filament now requires Laravel 9+ instead of 8+, Livewire 3 instead of Livewire 2, and PHP 8.1+.
+In addition, Filament now requires Laravel 10+ instead of 8+, Livewire 3 instead of Livewire 2, and PHP 8.1+.
 
 ## Action modals, everywhere
 
