@@ -289,7 +289,37 @@
                     </div>
                 </div>
 
-                @if (filled($docs = $plugin->getDocs()))
+                <span id="documentation" class="sr-only">{{ __('Documentation') }}</span>
+
+                @if (filled($plugin->docs_urls))
+                    <label class="flex flex-row mt-4 items-center space-x-2">
+                        <span>
+                            {{ __('Documentation version') }}:
+                        </span>
+                        <select
+                            x-data="{
+                                selected: @js(request()->query('v')),
+                                init() {
+                                    this.$watch('selected', () => {
+                                        console.log('here');
+                                        const url = new URL(window.location);
+                                        url.searchParams.set('v', this.selected);
+                                        url.hash = 'documentation'
+                                        window.location.href = url;
+                                    });
+                                }
+                            }"
+                            x-model="selected"
+                            class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
+                        >
+                            @foreach ($plugin->docs_urls as $key => $value)
+                                <option value="{{ $key }}">{{ $key }}</option>
+                            @endforeach
+                        </select>
+                    </label>
+                @endif
+
+                @if (filled($docs = $plugin->getDocs(request()->query('v'))))
                     {{-- Documentation --}}
                     <div class="pt-10">
                         <div
