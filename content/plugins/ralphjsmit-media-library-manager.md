@@ -361,6 +361,26 @@ MediaPicker::make(‘images’)
 
 The value of the field will be an array with the `id`’s of the MediaLibraryItem’s that are being selected.
 
+#### Opening the MediaPicker in a default folder
+
+By default, the MediaPicker will open in the root folder. However, in some cases, you might want to open the MediaPicker in a specific default folder. You can do that using the `->defaultFolder()` function. 
+
+The `defaultFolder()` functions accepts a `MediaLibraryFolder` object as parameter. You can also pass a closure, and use that closure to retrieve the folder dynamically from e.g. the current record.
+
+```php
+MediaPicker::make('featured_image_id')
+    ->defaultFolder(MediaLibraryFolder::find(99)),
+```
+
+Using a closure:    
+
+```php
+MediaPicker::make('featured_image_id')
+    ->defaultFolder(fn (Event $event) => $event->mediaLibraryFolder),
+```
+
+NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via support@ralphjsmit.com. 
+
 #### Reordering multiple items in the media picker
 
 If you are allowing your users to select multiple items, you can use the `->reorderable()` method to allow your users to reorder the images. This can be useful in situations where the order of the media matters, for example if you want to construct a slideshow or carousel.
