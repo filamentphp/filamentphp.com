@@ -83,6 +83,8 @@ docs_urls:
     v2: https://raw.githubusercontent.com/author/plugin/2.x/README.md
 ```
 
+The first key/url pair is the one that will be shown by default. The keys should be query string safe values (e.g. avoid spaces).
+
 #### Quality guidelines
 
 In Filament v2, we introduced the plugins section of the website. We did not enforce many rules on the plugins that were submitted, and as a result, some plugins were not consistent in quality with others. In Filament v3, we are introducing some quality guidelines to ensure that plugins are consistent with each other, and that they are of a high quality. You are more than welcome to create a plugin, distribute it on GitHub and Packagist, and not submit it to the Filament website, if you do not wish to meet these guidelines. However, if you do wish to submit your plugin to the website, please ensure:
