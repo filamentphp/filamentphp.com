@@ -260,7 +260,7 @@ If you skip this step, then you risk that some images in the library are not dis
                      
 Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. 
 
-> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS. 
+> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. Therefore, a custom theme is required for this package. If you are not yet using a custom theme and you'll switch to it, you'll get the benefits from a custom theme as well, including a (big) reduction the CSS file size by eliminating duplicate classes.
                      
 You'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
