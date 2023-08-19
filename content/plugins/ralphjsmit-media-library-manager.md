@@ -381,7 +381,7 @@ MediaPicker::make('featured_image_id')
 
 NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via support@ralphjsmit.com. 
 
-#### Reordering multiple items in the media picker
+#### Reordering multiple items in the media picker (V3)
 
 If you are allowing your users to select multiple items, you can use the `->reorderable()` method to allow your users to reorder the images. This can be useful in situations where the order of the media matters, for example if you want to construct a slideshow or carousel.
 
