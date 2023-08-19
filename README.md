@@ -133,4 +133,4 @@ error_page 404 /index.php;
 
 ## Debugging missing content
 
-If you are working on the website locally, and you notice that some Markdown-based content is missing, it is likely that it has not reached the cache yet. Please run `php artisan clear-orbit-cache` and `php artisan cache:clear`.
+If you are working on the website locally, and you notice that some Markdown-based content is missing, it is likely that it has not reached the cache yet. Please run `php artisan clear-orbit-cache` and `php artisan cache:clear`. If images aren't showing up, you probably also need to run `php artisan optimize-images`.
