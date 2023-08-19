@@ -301,7 +301,6 @@
                                 selected: @js(request()->query('v')),
                                 init() {
                                     this.$watch('selected', () => {
-                                        console.log('here');
                                         const url = new URL(window.location);
                                         url.searchParams.set('v', this.selected);
                                         url.hash = 'documentation'
