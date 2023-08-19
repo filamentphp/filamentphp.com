@@ -379,7 +379,7 @@ MediaPicker::make('featured_image_id')
     ->defaultFolder(fn (Event $event) => $event->mediaLibraryFolder),
 ```
 
-NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via support@ralphjsmit.com. 
+NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com. 
 
 #### Reordering multiple items in the media picker
 
