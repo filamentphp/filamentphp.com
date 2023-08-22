@@ -10,6 +10,6 @@ github_repository: MarJose123/filament-lockscreen
 has_dark_theme: true
 has_translations: true
 image: marjose123-lockscreen.jpg
-versions: [2]
-publish_date: 2023-08-03
+versions: [2,3]
+publish_date: 2022-09-12
 ---
