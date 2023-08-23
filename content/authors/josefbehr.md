@@ -1,7 +1,7 @@
 ---
 name: Josef Behr
-slug: josef-behr
-avatar: josef-behr.jpg
+slug: josefbehr
+avatar: josefbehr.jpg
 github_url: https://github.com/josefbehr
 ---
 
