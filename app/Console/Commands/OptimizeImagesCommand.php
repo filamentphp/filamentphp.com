@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Intervention\Image\ImageManagerStatic as Image;
+use Throwable;
 
 class OptimizeImagesCommand extends Command
 {
@@ -31,42 +32,54 @@ class OptimizeImagesCommand extends Command
         foreach ([
             'authors/avatars',
         ] as $directory) {
-            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..']);
+            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..', '.DS_Store']);
 
             foreach ($files as $file) {
-                Image::make(base_path("content/{$directory}/{$file}"))
-                    ->fit(500, 500)
-                    ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
+                try {
+                    Image::make(base_path("content/{$directory}/{$file}"))
+                        ->fit(500, 500)
+                        ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
 
-                $this->info("Optimized {$directory}/{$file}");
+                    $this->info("Optimized {$directory}/{$file}");
+                } catch (Throwable $exception) {
+                    $this->error("Unable to optimize {$directory}/{$file}");
+                }
             }
         }
 
         foreach ([
             'plugins/images',
         ] as $directory) {
-            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..']);
+            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..', '.DS_Store']);
 
             foreach ($files as $file) {
-                Image::make(base_path("content/{$directory}/{$file}"))
-                    ->fit(1920, 1080)
-                    ->save(public_path("images/content/{$directory}/{$file}"));
+                try {
+                    Image::make(base_path("content/{$directory}/{$file}"))
+                        ->fit(1920, 1080)
+                        ->save(public_path("images/content/{$directory}/{$file}"));
 
-                $this->info("Optimized {$directory}/{$file}");
+                    $this->info("Optimized {$directory}/{$file}");
+                } catch (Throwable $exception) {
+                    $this->error("Unable to optimize {$directory}/{$file}");
+                }
             }
         }
 
         foreach ([
             'plugins/thumbnails',
         ] as $directory) {
-            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..']);
+            $files = array_diff(scandir(base_path("content/{$directory}")), ['.', '..', '.DS_Store']);
 
             foreach ($files as $file) {
-                Image::make(base_path("content/{$directory}/{$file}"))
-                    ->fit(1024, 576)
-                    ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
+                try {
+                    Image::make(base_path("content/{$directory}/{$file}"))
+                        ->fit(1024, 576)
+                        ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
 
-                $this->info("Optimized {$directory}/{$file}");
+                    $this->info("Optimized {$directory}/{$file}");
+                } catch (Throwable $exception) {
+                    $this->error("Unable to optimize {$directory}/{$file}");
+                }
             }
         }
 

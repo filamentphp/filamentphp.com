@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-DUO5LYZF">
+<html lang="en" class="hidden astro-KLTXWB3V">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +27,8 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.86523203.css" /><script type="module" src="/docs/hoisted.9a1268b2.js"></script></head>
-  <body class="bg-cream dark:bg-[#171527] astro-DUO5LYZF">
+<link rel="stylesheet" href="/docs/assets/dashboard.2d7f7b5b.css" /><script type="module" src="/docs/hoisted.9a1268b2.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] astro-KLTXWB3V">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
     <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
         <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -426,12 +426,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-DUO5LYZF">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-DUO5LYZF">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-DUO5LYZF"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-DUO5LYZF"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-DUO5LYZF"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-DUO5LYZF" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-KLTXWB3V">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-KLTXWB3V">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-KLTXWB3V"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-KLTXWB3V"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-KLTXWB3V"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-KLTXWB3V" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -668,17 +668,17 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-DUO5LYZF">
-        <article class="astro-DUO5LYZF">
-          <header class="mb-9 space-y-1 astro-DUO5LYZF">
-              <p class="font-display font-bold text-butter astro-DUO5LYZF">
-                    <span id="current-package" class="astro-DUO5LYZF">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-KLTXWB3V">
+        <article class="astro-KLTXWB3V">
+          <header class="mb-9 space-y-1 astro-KLTXWB3V">
+              <p class="font-display font-bold text-butter astro-KLTXWB3V">
+                    <span id="current-package" class="astro-KLTXWB3V">
                         Core Concepts
                     </span>
 
                     
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-DUO5LYZF">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-KLTXWB3V">
                   Assets
                 </h1>
             </header>
@@ -687,7 +687,7 @@
 <p>All packages in the Filament ecosystem share an asset management system. This allows both official plugins and third-party plugins to register CSS and JavaScript files that can then be consumed by Blade views.</p>
 <h2 id="the-filamentasset-facade"><a class="heading-anchor" href="#the-filamentasset-facade"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>The <code>FilamentAsset</code> facade</h2>
 <p>The <code>FilamentAsset</code> facade is used to register files into the asset system. These files may be sourced from anywhere in the filesystem, but are then copied into the <code>/public</code> directory of the application when the <code>php artisan filament:assets</code> command is run. By copying them into the <code>/public</code> directory for you, we can predictably load them in Blade views, and also ensure that third party packages are able to load their assets without having to worry about where they are located.</p>
-<p>Assets always have a unique ID chosen by you, which is used as the file name when the asset is copied into the <code>/public</code> directory. This ID is also used to reference the asset in Blade views. While the ID is unique, if you are registering assets for a plugin then you do not need to worry about IDs clashing with other plugins, since the asset will be copied into a directory named after your plugin.</p>
+<p>Assets always have a unique ID chosen by you, which is used as the file name when the asset is copied into the <code>/public</code> directory. This ID is also used to reference the asset in Blade views. While the ID is unique, if you are registering assets for a plugin, then you do not need to worry about IDs clashing with other plugins, since the asset will be copied into a directory named after your plugin.</p>
 <p>The <code>FilamentAsset</code> facade should be used in the <code>boot()</code> method of a service provider. It can be used inside an application service provider such as <code>AppServiceProvider</code>, or inside a plugin service provider.</p>
 <p>The <code>FilamentAsset</code> facade has one main method, <code>register()</code>, which accepts an array of assets to register:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentAsset</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">register</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\Facades\FilamentAsset;
@@ -713,7 +713,7 @@ FilamentAsset::register([
 </textarea></code></pre>
 <p>Now, all the assets for this plugin will be copied into their own directory inside <code>/public</code>, to avoid the possibility of clashing with other plugins&#39; files with the same names.</p>
 <h2 id="registering-css-files"><a class="heading-anchor" href="#registering-css-files"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Registering CSS files</h2>
-<p>To register a CSS file with the asset system, use the <code>FilamentAsset::register()</code> method in the <code>boot()</code> method of a service provider. You must pass in an array of <code>Css</code> objects, which each represent a CSS file that should be registered in the asset system.</p>
+<p>To register a CSS file with the asset system, use the <code>FilamentAsset::register()</code> method in the <code>boot()</code> method of a service provider. You must pass in an array of <code>Css</code> objects, which each represents a CSS file that should be registered in the asset system.</p>
 <p>Each <code>Css</code> object has a unique ID and a path to the CSS file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Assets</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Css</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Facades</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">FilamentAsset</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">register</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Css</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-stylesheet</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">__DIR__</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/../../resources/css/custom.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
@@ -726,7 +726,7 @@ FilamentAsset::register([
 <p>Now, when the <code>php artisan filament:assets</code> command is run, this CSS file is copied into the <code>/public</code> directory. In addition, it is now loaded into all Blade views that use Filament. If you&#39;re interested in only loading the CSS when it is required by an element on the page, check out the <a href="#lazy-loading-css">Lazy loading CSS</a> section.</p>
 <h3 id="using-tailwind-css-in-plugins"><a class="heading-anchor" href="#using-tailwind-css-in-plugins"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using Tailwind CSS in plugins</h3>
 <p>Typically, registering CSS files is used to register custom stylesheets for your application. If you want to process these files using Tailwind CSS, you need to consider the implications of that, especially if you are a plugin developer.</p>
-<p>Tailwind builds are unique to every application - they contain a minimal set of utility classes, only the ones that you are actually using in your application. This means that if you are a plugin developer, you probably should not be building your Tailwind CSS files into your plugin. Instead, you should provide the raw CSS files, and instruct the user that they should build the Tailwind CSS file themselves. To do this, they probably just need to add your vendor directory into the <code>content</code> array of their <code>tailwind.config.js</code> file:</p>
+<p>Tailwind builds are unique to every application - they contain a minimal set of utility classes, only the ones that you are actually using in your application. This means that if you are a plugin developer, you probably should not be building your Tailwind CSS files into your plugin. Instead, you should provide the raw CSS files and instruct the user that they should build the Tailwind CSS file themselves. To do this, they probably just need to add your vendor directory into the <code>content</code> array of their <code>tailwind.config.js</code> file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-js"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">export</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">default</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">content</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> [</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.blade.php</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">./vendor/filament/**/*.blade.php</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">./vendor/danharrin/filament-blog/resources/views/**/*.blade.php</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #676E95;">// Your plugin&#39;s vendor directory</span></div><div class='line'><span style="color: #A6ACCD;">    ]</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">export default {
     content: [
         './resources/**/*.blade.php',
@@ -737,7 +737,7 @@ FilamentAsset::register([
 }
 </textarea></code></pre>
 <p>This means that when they build their Tailwind CSS file, it will include all the utility classes that are used in your plugin&#39;s views, as well as the utility classes that are used in their application and the Filament core.</p>
-<p>However, with this technique, there might be extra complications for users who use your plugin with the <a href="../panels">Panel Builder</a>. If they have a <a href="../panels/theming">custom theme</a>, they will be fine, since they are building their own CSS file anyway using Tailwind CSS. However, if they are using the default stylesheet which is shipped with the panel builder, you might have to be careful about the utility classes that you use in your plugin&#39;s views. For instance, if you use a utility class that is not included in the default stylesheet, the user is not compiling it themselves, and it will not be included in the final CSS file. This means that your plugin&#39;s views might not look as expected. This is one of the few situations where I would recommend compiling and <a href="#registering-css-files">registering</a> a Tailwind CSS-compiled stylesheet in your plugin.</p>
+<p>However, with this technique, there might be extra complications for users who use your plugin with the <a href="../panels">Panel Builder</a>. If they have a <a href="../panels/theming">custom theme</a>, they will be fine, since they are building their own CSS file anyway using Tailwind CSS. However, if they are using the default stylesheet which is shipped with the Panel Builder, you might have to be careful about the utility classes that you use in your plugin&#39;s views. For instance, if you use a utility class that is not included in the default stylesheet, the user is not compiling it themselves, and it will not be included in the final CSS file. This means that your plugin&#39;s views might not look as expected. This is one of the few situations where I would recommend compiling and <a href="#registering-css-files">registering</a> a Tailwind CSS-compiled stylesheet in your plugin.</p>
 <h3 id="lazy-loading-css"><a class="heading-anchor" href="#lazy-loading-css"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Lazy loading CSS</h3>
 <p>By default, all CSS files registered with the asset system are loaded in the <code>&lt;head&gt;</code> of every Filament page. This is the simplest way to load CSS files, but sometimes they may be quite heavy and not required on every page. In this case, you can leverage the <a href="https://github.com/tanthammar/alpine-lazy-load-assets">Alpine.js Lazy Load Assets</a> package that comes bundled with Filament. It allows you to easily load CSS files on-demand using Alpine.js. The premise is very simple, you use the <code>x-load-css</code> directive on an element, and when that element is loaded onto the page, the specified CSS files are loaded into the <code>&lt;head&gt;</code> of the page. This is perfect for both small UI elements and entire pages that require a CSS file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">{}</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-load-css</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">[</span><span style="color: #82AAFF;">@js</span><span style="color: #C3E88D;">(\Filament\Support\Facades\</span><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getStyleHref</span><span style="color: #89DDFF;">(&#39;</span><span style="color: #C3E88D;">custom-stylesheet</span><span style="color: #89DDFF;">&#39;)</span><span style="color: #C3E88D;">)]</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">&lt;!-- ... --&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div
@@ -774,7 +774,7 @@ FilamentAsset::register([
 ]);
 </textarea></code></pre>
 <h2 id="registering-javascript-files"><a class="heading-anchor" href="#registering-javascript-files"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Registering JavaScript files</h2>
-<p>To register a JavaScript file with the asset system, use the <code>FilamentAsset::register()</code> method in the <code>boot()</code> method of a service provider. You must pass in an array of <code>Js</code> objects, which each represent a JavaScript file that should be registered in the asset system.</p>
+<p>To register a JavaScript file with the asset system, use the <code>FilamentAsset::register()</code> method in the <code>boot()</code> method of a service provider. You must pass in an array of <code>Js</code> objects, which each represents a JavaScript file that should be registered in the asset system.</p>
 <p>Each <code>Js</code> object has a unique ID and a path to the JavaScript file:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Support</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Assets</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Js</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">register</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">Js</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">custom-script</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">__DIR__</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">.</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/../../resources/js/custom.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">]);</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Support\Assets\Js;
 
@@ -902,12 +902,12 @@ FilamentAsset::register([
 </textarea></code></pre>
 <p>When you run <code>php artisan filament:assets</code>, the compiled file will be copied into the <code>/public</code> directory.</p>
 <p>Finally, you can load this asynchronous Alpine component in your view using <code>ax-load</code> attributes and the <code>FilamentAsset::getAlpineComponentSrc()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-ignore</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">ax-load</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">ax-load-src</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> \Filament\Support\Facades\</span><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getAlpineComponentSrc</span><span style="color: #89DDFF;">(&#39;</span><span style="color: #C3E88D;">test-component</span><span style="color: #89DDFF;">&#39;)</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">testComponent({</span></div><div class='line'><span style="color: #C3E88D;">        state: $wire.</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">applyStateBindingModifiers</span><span style="color: #89DDFF;">(&quot;</span><span style="color: #C3E88D;">entangle(&#39;</span><span style="color: #89DDFF;">{$</span><span style="color: #A6ACCD;">statePath</span><span style="color: #89DDFF;">}</span><span style="color: #C3E88D;">&#39;)</span><span style="color: #89DDFF;">&quot;)</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #C3E88D;">,</span></div><div class='line'><span style="color: #C3E88D;">    })</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">input</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-model</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">state</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">div</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-ignore</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">ax-load</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">ax-load-src</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> \Filament\Support\Facades\</span><span style="color: #FFCB6B;">FilamentAsset</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getAlpineComponentSrc</span><span style="color: #89DDFF;">(&#39;</span><span style="color: #C3E88D;">test-component</span><span style="color: #89DDFF;">&#39;)</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">x-data</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">testComponent({</span></div><div class='line'><span style="color: #C3E88D;">        state: $wire.</span><span style="color: #82AAFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">applyStateBindingModifiers</span><span style="color: #89DDFF;">(&quot;</span><span style="color: #A6ACCD;">\$</span><span style="color: #C3E88D;">entangle(&#39;</span><span style="color: #89DDFF;">{$</span><span style="color: #A6ACCD;">statePath</span><span style="color: #89DDFF;">}</span><span style="color: #C3E88D;">&#39;)</span><span style="color: #89DDFF;">&quot;)</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">}}</span><span style="color: #C3E88D;">,</span></div><div class='line'><span style="color: #C3E88D;">    })</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">input</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">x-model</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">state</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">div</span><span style="color: #89DDFF;">&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;div
     x-ignore
     ax-load
     ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('test-component') }}"
     x-data="testComponent({
-        state: $wire.{{ $applyStateBindingModifiers("entangle('{$statePath}')") }},
+        state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$statePath}')") }},
     })"
 &gt;
     &lt;input x-model="state" /&gt;
@@ -936,97 +936,97 @@ FilamentAsset::register([
     Js::make('example-external-script', 'https://example.com/external.js'),
     Js::make('example-local-script', asset('js/local.js')),
 ]);
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/02-assets.md" class="text-sm astro-DUO5LYZF" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-DUO5LYZF">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-DUO5LYZF">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-DUO5LYZF">GitHub discussion</a>
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/02-assets.md" class="text-sm astro-KLTXWB3V" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-KLTXWB3V">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-DUO5LYZF">
-          <div class="astro-DUO5LYZF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DUO5LYZF">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-KLTXWB3V">
+          <div class="astro-KLTXWB3V">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-DUO5LYZF">
-                  <a href="/docs/3.x/support/overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DUO5LYZF">
-                    <span aria-hidden="true" class="astro-DUO5LYZF">&larr;</span> Overview
+                <dd class="mt-1 astro-KLTXWB3V">
+                  <a href="/docs/3.x/support/overview" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-KLTXWB3V">
+                    <span aria-hidden="true" class="astro-KLTXWB3V">&larr;</span> Overview
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-DUO5LYZF">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DUO5LYZF">
+            <div class="ml-auto text-right astro-KLTXWB3V">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
                   Next
                 </dt>
-                <dd class="mt-1 astro-DUO5LYZF">
-                  <a href="/docs/3.x/support/icons" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-DUO5LYZF">
-                    Icons <span aria-hidden="true" class="astro-DUO5LYZF">&rarr;</span>
+                <dd class="mt-1 astro-KLTXWB3V">
+                  <a href="/docs/3.x/support/icons" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-KLTXWB3V">
+                    Icons <span aria-hidden="true" class="astro-KLTXWB3V">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-DUO5LYZF">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-DUO5LYZF">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-DUO5LYZF">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-KLTXWB3V">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-KLTXWB3V">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-DUO5LYZF" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-filamentasset-facade&#34;,&#34;text&#34;:&#34;The FilamentAsset facade&#34;,&#34;title&#34;:&#34;The FilamentAsset facade&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-assets-for-a-plugin&#34;,&#34;text&#34;:&#34;Registering assets for a plugin&#34;,&#34;title&#34;:&#34;Registering assets for a plugin&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-css-files&#34;,&#34;text&#34;:&#34;Registering CSS files&#34;,&#34;title&#34;:&#34;Registering CSS files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-tailwind-css-in-plugins&#34;,&#34;text&#34;:&#34;Using Tailwind CSS in plugins&#34;,&#34;title&#34;:&#34;Using Tailwind CSS in plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-css&#34;,&#34;text&#34;:&#34;Lazy loading CSS&#34;,&#34;title&#34;:&#34;Lazy loading CSS&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-css-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering CSS files from a URL&#34;,&#34;title&#34;:&#34;Registering CSS files from a URL&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-javascript-files&#34;,&#34;text&#34;:&#34;Registering JavaScript files&#34;,&#34;title&#34;:&#34;Registering JavaScript files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-javascript&#34;,&#34;text&#34;:&#34;Lazy loading JavaScript&#34;,&#34;title&#34;:&#34;Lazy loading JavaScript&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-script-data&#34;,&#34;text&#34;:&#34;Registering script data&#34;,&#34;title&#34;:&#34;Registering script data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-javascript-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering JavaScript files from a URL&#34;,&#34;title&#34;:&#34;Registering JavaScript files from a URL&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-DUO5LYZF">
-                      <h3 class="astro-DUO5LYZF">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-KLTXWB3V" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-filamentasset-facade&#34;,&#34;text&#34;:&#34;The FilamentAsset facade&#34;,&#34;title&#34;:&#34;The FilamentAsset facade&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-assets-for-a-plugin&#34;,&#34;text&#34;:&#34;Registering assets for a plugin&#34;,&#34;title&#34;:&#34;Registering assets for a plugin&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-css-files&#34;,&#34;text&#34;:&#34;Registering CSS files&#34;,&#34;title&#34;:&#34;Registering CSS files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-tailwind-css-in-plugins&#34;,&#34;text&#34;:&#34;Using Tailwind CSS in plugins&#34;,&#34;title&#34;:&#34;Using Tailwind CSS in plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-css&#34;,&#34;text&#34;:&#34;Lazy loading CSS&#34;,&#34;title&#34;:&#34;Lazy loading CSS&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-css-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering CSS files from a URL&#34;,&#34;title&#34;:&#34;Registering CSS files from a URL&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-javascript-files&#34;,&#34;text&#34;:&#34;Registering JavaScript files&#34;,&#34;title&#34;:&#34;Registering JavaScript files&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-javascript&#34;,&#34;text&#34;:&#34;Lazy loading JavaScript&#34;,&#34;title&#34;:&#34;Lazy loading JavaScript&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-script-data&#34;,&#34;text&#34;:&#34;Registering script data&#34;,&#34;title&#34;:&#34;Registering script data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;registering-javascript-files-from-a-url&#34;,&#34;text&#34;:&#34;Registering JavaScript files from a URL&#34;,&#34;title&#34;:&#34;Registering JavaScript files from a URL&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-DUO5LYZF">
-                      <h3 class="astro-DUO5LYZF">
-                        <a href="#the-filamentasset-facade" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'the-filamentasset-facade' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#the-filamentasset-facade" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'the-filamentasset-facade' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           The FilamentAsset facade
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-DUO5LYZF">
-                          <li class="astro-DUO5LYZF">
-                              <a href="#registering-assets-for-a-plugin" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-assets-for-a-plugin' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-KLTXWB3V">
+                          <li class="astro-KLTXWB3V">
+                              <a href="#registering-assets-for-a-plugin" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-assets-for-a-plugin' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering assets for a plugin
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-DUO5LYZF">
-                      <h3 class="astro-DUO5LYZF">
-                        <a href="#registering-css-files" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-css-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#registering-css-files" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-css-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering CSS files
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-DUO5LYZF">
-                          <li class="astro-DUO5LYZF">
-                              <a href="#using-tailwind-css-in-plugins" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'using-tailwind-css-in-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-KLTXWB3V">
+                          <li class="astro-KLTXWB3V">
+                              <a href="#using-tailwind-css-in-plugins" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'using-tailwind-css-in-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Using Tailwind CSS in plugins
                               </a>
-                            </li><li class="astro-DUO5LYZF">
-                              <a href="#lazy-loading-css" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'lazy-loading-css' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-KLTXWB3V">
+                              <a href="#lazy-loading-css" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'lazy-loading-css' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Lazy loading CSS
                               </a>
-                            </li><li class="astro-DUO5LYZF">
-                              <a href="#registering-css-files-from-a-url" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-css-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-KLTXWB3V">
+                              <a href="#registering-css-files-from-a-url" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-css-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering CSS files from a URL
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-DUO5LYZF">
-                      <h3 class="astro-DUO5LYZF">
-                        <a href="#registering-javascript-files" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-javascript-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#registering-javascript-files" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-javascript-files' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering JavaScript files
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-DUO5LYZF">
-                          <li class="astro-DUO5LYZF">
-                              <a href="#lazy-loading-javascript" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'lazy-loading-javascript' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-KLTXWB3V">
+                          <li class="astro-KLTXWB3V">
+                              <a href="#lazy-loading-javascript" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'lazy-loading-javascript' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Lazy loading JavaScript
                               </a>
-                            </li><li class="astro-DUO5LYZF">
-                              <a href="#registering-script-data" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-script-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-KLTXWB3V">
+                              <a href="#registering-script-data" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-script-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering script data
                               </a>
-                            </li><li class="astro-DUO5LYZF">
-                              <a href="#registering-javascript-files-from-a-url" class="inline-block transition duration-300 ease-out astro-DUO5LYZF" x-bind:class="current == 'registering-javascript-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-KLTXWB3V">
+                              <a href="#registering-javascript-files-from-a-url" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'registering-javascript-files-from-a-url' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Registering JavaScript files from a URL
                               </a>
                             </li>
