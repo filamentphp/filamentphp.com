@@ -29,30 +29,42 @@ class ListPluginsController extends Controller
             'plugins' => cache()->remember(
                 'plugins',
                 now()->addMinutes(15),
-                fn (): array => Plugin::query()
-                    ->orderBy('name')
-                    ->with(['author'])
-                    ->get()
-                    ->map(fn (Plugin $plugin): array => [
-                        'id' => $plugin->slug,
-                        'name' => $plugin->name,
-                        'slug' => $plugin->slug,
-                        'price' => $plugin->getPrice(),
-                        'stars_count' => $plugin->getStarsCount(),
-                        'thumbnail_url' => $plugin->getThumbnailUrl(),
-                        'description' => $plugin->description,
-                        'author' => [
-                            'name' => $plugin->author->name,
-                            'avatar' => $plugin->author->getAvatarUrl(),
-                        ],
-                        'features' => [
-                            'dark_theme' => $plugin->has_dark_theme,
-                            'translations' => $plugin->has_translations,
-                        ],
-                        'categories' => $plugin->categories,
-                        'versions' => $plugin->versions,
-                    ])
-                    ->all(),
+                function (): array {
+                    $stars = Star::query()
+                        ->toBase()
+                        ->where('starrable_type', 'plugin')
+                        ->groupBy('starrable_id')
+                        ->selectRaw('count(id) as count, starrable_id')
+                        ->get()
+                        ->pluck('count', 'starrable_id');
+
+                    return Plugin::query()
+                        ->orderByDesc('publish_date')
+                        ->with(['author'])
+                        ->get()
+                        ->map(fn (Plugin $plugin): array => [
+                            'id' => $plugin->slug,
+                            'name' => $plugin->name,
+                            'slug' => $plugin->slug,
+                            'price' => $plugin->getPrice(),
+                            'stars_count' => $stars[$plugin->getKey()] ?? 0,
+                            'thumbnail_url' => $plugin->getThumbnailUrl(),
+                            'github_repository' => $plugin->github_repository,
+                            'description' => $plugin->description,
+                            'author' => [
+                                'name' => $plugin->author->name,
+                                'avatar' => $plugin->author->getAvatarUrl(),
+                            ],
+                            'features' => [
+                                'dark_theme' => $plugin->has_dark_theme,
+                                'translations' => $plugin->has_translations,
+                            ],
+                            'categories' => $plugin->categories,
+                            'versions' => $plugin->versions,
+                            'publish_date' => $plugin->publish_date->format('Y-m-d'),
+                        ])
+                        ->all();
+                },
             ),
             'starsCount' => Star::query()->where('starrable_type', 'plugin')->count(),
         ]);

@@ -293,7 +293,7 @@
                     {{-- Documentation --}}
                     <div class="pt-10">
                         <div
-                            class="prose prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                            class="prose selection:bg-stone-500/30 prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
                             {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
                         </div>
@@ -346,6 +346,40 @@
                                             d="M15.021 3.343c.509-.087 1.078-.116 1.614-.025a4.85 4.85 0 0 1 2.54 1.273c.456.01.905-.08 1.302-.208a5.36 5.36 0 0 0 1.098-.501l.009-.006a.75.75 0 0 1 1.042 1.037c-.207.315-.496.877-.819 1.507l-.155.301c-.185.36-.375.724-.552 1.036c-.111.196-.23.395-.35.567v.274A12.34 12.34 0 0 1 8.287 21.03a12.32 12.32 0 0 1-6.694-1.97a.75.75 0 0 1 .5-1.374a7.471 7.471 0 0 0 4.033-.642a4.858 4.858 0 0 1-2.61-2.922a.75.75 0 0 1 .147-.722l.01-.01A4.848 4.848 0 0 1 2.05 9.793v-.052a.75.75 0 0 1 .553-.724A4.84 4.84 0 0 1 2.09 6.84a4.9 4.9 0 0 1 .65-2.442a.75.75 0 0 1 1.232-.1a10.89 10.89 0 0 0 7.006 3.93a4.85 4.85 0 0 1 2.562-4.406c.402-.214.934-.385 1.482-.479ZM3.743 10.891a3.35 3.35 0 0 0 2.503 2.164a.75.75 0 0 1 .072 1.453c-.272.083-.551.14-.834.173a3.358 3.358 0 0 0 2.59 1.3a.75.75 0 0 1 .45 1.339a8.97 8.97 0 0 1-3.548 1.695a10.82 10.82 0 0 0 3.313.515h.009A10.838 10.838 0 0 0 19.25 8.607v-.535a.75.75 0 0 1 .186-.495c.07-.079.19-.261.36-.56c.16-.282.338-.622.523-.981l.033-.066a4.992 4.992 0 0 1-1.593.097a.75.75 0 0 1-.47-.237a3.35 3.35 0 0 0-1.904-1.032a3.42 3.42 0 0 0-1.11.025a3.605 3.605 0 0 0-1.028.323a3.35 3.35 0 0 0-1.678 3.74a.75.75 0 0 1-.767.925a12.39 12.39 0 0 1-8.149-3.627a3.41 3.41 0 0 0-.063.657v.002a3.34 3.34 0 0 0 1.486 2.785A.75.75 0 0 1 4.64 11a4.798 4.798 0 0 1-.897-.11Z"
                                             clip-rule="evenodd"
                                         />
+                                    </svg>
+                                </a>
+                            @endif
+
+                            {{-- Mastodon --}}
+                            @if (filled($plugin->author->mastodon_url))
+                                <a
+                                    target="_blank"
+                                    href="{{ $plugin->author->mastodon_url }}"
+                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48"
+                                        width="24"
+                                        height="24"
+                                    >
+                                        <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="3"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="m41.0662 20.4015c0 6.2578-.9723 8.3975-2.8838 10.19-3.8743 3.6342-14.1824 3.3518-14.1824 3.3518a40.2923 40.2923 0 0 1 -7.0141-.5285s-1.1259 7.4142 13.1041 3.7783l-.1445 4.2408c-2.1685.29-22.807 7.92-22.956-18.657l-.056-2.3759c0-6.2578.05-8.4823 2.8838-11.611 3.5658-3.9373 14.1827-3.4353 14.1827-3.4353s10.617-.502 14.182 3.4353c2.8336 3.129 2.8838 5.3535 2.8838 11.611"
+                                            />
+                                            <path
+                                                d="m24 23.3125v-5.9774a4.6542 4.6542 0 0 0 -4.6543-4.6542 4.6542 4.6542 0 0 0 -4.6542 4.6542v9.6463"
+                                            />
+                                            <path
+                                                d="m24 17.3351a4.6542 4.6542 0 0 1 4.6543-4.6542 4.6542 4.6542 0 0 1 4.6542 4.6542v9.6463"
+                                            />
+                                        </g>
                                     </svg>
                                 </a>
                             @endif
@@ -416,6 +450,41 @@
                                     </div>
                                 </div>
                             </div>
+
+                            @if (filled($plugin->author->sponsor_url))
+                                {{-- Sponsor Button --}}
+                                <div class="flex justify-center pb-1.5">
+                                    <a
+                                        href="{{ $plugin->author->sponsor_url }}"
+                                        class="group relative z-10 block text-white"
+                                    >
+                                        {{-- Button --}}
+                                        <div
+                                            class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                        >
+                                            <div>Sponsor</div>
+                                            <div>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="22"
+                                                    height="22"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        fill="currentColor"
+                                                        d="m12 5.5l-.54.52l.01.011l.53-.53ZM8.962 18.91l-.465.59l.465-.59Zm6.076 0l-.464-.588l.464.589Zm-8.037-2.49a.75.75 0 0 0-.954 1.16l.954-1.16Zm-4.659-3.009a.75.75 0 1 0 1.316-.72l-1.316.72Zm11.128-5.38a.75.75 0 1 0 1.06-1.062L13.47 8.03ZM2.75 9.136c0-2.15 1.215-3.954 2.874-4.713c1.612-.737 3.778-.541 5.836 1.597l1.08-1.04C10.1 2.444 7.264 2.025 5 3.06C2.786 4.073 1.25 6.425 1.25 9.137h1.5ZM8.497 19.5c.513.404 1.063.834 1.62 1.16c.557.325 1.193.59 1.883.59v-1.5c-.31 0-.674-.12-1.126-.385c-.453-.264-.922-.628-1.448-1.043L8.497 19.5Zm7.006 0c1.426-1.125 3.25-2.413 4.68-4.024c1.457-1.64 2.567-3.673 2.567-6.339h-1.5c0 2.197-.9 3.891-2.188 5.343c-1.315 1.48-2.972 2.647-4.488 3.842l.929 1.178ZM22.75 9.137c0-2.712-1.535-5.064-3.75-6.077c-2.264-1.035-5.098-.616-7.54 1.92l1.08 1.04c2.058-2.137 4.224-2.333 5.836-1.596c1.659.759 2.874 2.562 2.874 4.713h1.5Zm-8.176 9.185c-.526.415-.995.779-1.448 1.043c-.452.264-.816.385-1.126.385v1.5c.69 0 1.326-.265 1.883-.59c.558-.326 1.107-.756 1.62-1.16l-.929-1.178Zm-5.148 0c-.796-.627-1.605-1.226-2.425-1.901l-.954 1.158c.83.683 1.708 1.335 2.45 1.92l.93-1.177Zm-5.768-5.63a7.252 7.252 0 0 1-.908-3.555h-1.5c0 1.638.42 3.046 1.092 4.274l1.316-.72Zm7.812-6.66l2 1.998l1.06-1.06l-2-2l-1.06 1.061Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        {{-- Shadow --}}
+                                        <div
+                                            class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                        ></div>
+                                    </a>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>

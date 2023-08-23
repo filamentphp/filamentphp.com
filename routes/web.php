@@ -16,11 +16,7 @@ use Illuminate\Support\Str;
 |
 */
 
-if (config('app.env') === 'beta') {
-    Route::redirect('/', '/docs')->name('home');
-} else {
-    Route::view('/', 'home')->name('home');
-}
+Route::view('/', 'home')->name('home');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 
@@ -95,10 +91,23 @@ Route::prefix('/plugins')->group(function () {
     Route::get('/', Controllers\Plugins\ListPluginsController::class)->name('plugins');
 
     Route::name('plugins.')->group(function () {
+        // V2 plugin redirects immediately to V3 plugin page.
+        Route::redirect('/impersonate', '/plugins/joseph-szobody-impersonate');
+        Route::redirect('/media-library-pro', '/plugins/ralphjsmit-media-library-manager');
+        Route::redirect('/notifications-pro', '/plugins/ralphjsmit-notifications-pro');
+        Route::redirect('/onboarding-manager-pro', '/plugins/ralphjsmit-onboarding-manager-pro');
+        Route::redirect('/seo', '/plugins/ralphjsmit-seo');
+
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
         });
     });
+});
+
+Route::redirect('/blog', '/community');
+Route::redirect('/tricks', '/community');
+Route::get('/tricks/{slug}', function (string $slug) {
+    return redirect("https://v2.filamentphp.com/tricks/{$slug}");
 });
 
 Route::redirect('/login', '/admin/login')->name('login');

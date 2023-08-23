@@ -68,12 +68,5 @@
             title="Lead UI Designer & Developer"
             url="https://zepfietje.com/consult?ref=filamentphp.com"
         />
-        <x-consulting.consultant
-            number="03"
-            avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
-            name="Ryan Chandler"
-            title="Co-Founder & Developer"
-            url="https://www.ringerhq.com/experts/ryangjchandler"
-        />
     </div>
 </section>

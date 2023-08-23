@@ -68,16 +68,60 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       document.documentElement.classList.remove("hidden");
     </script>
 
-  <!-- Styles -->
-  <style>
-      [x-cloak=''],
-      [x-cloak='x-cloak'],
-      [x-cloak='1'] {
-          display: none !important;
-      }
-  </style>
+    <!-- Styles -->
+    <style>
+        [x-cloak=''],
+        [x-cloak='x-cloak'],
+        [x-cloak='1'] {
+            display: none !important;
+        }
+    </style>
+
+    <!-- Styles -->
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-touch-icon.png?v=w1dBNxT7Wg"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png?v=w1dBNxT7Wg"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/favicon-16x16.png?v=w1dBNxT7Wg"
+    />
+    <link
+        rel="manifest"
+        href="/favicon/site.webmanifest?v=w1dBNxT7Wg"
+    />
+    <link
+        rel="mask-icon"
+        href="/favicon/safari-pinned-tab.svg?v=w1dBNxT7Wg"
+        color="#fdae4b"
+    />
+    <link
+        rel="shortcut icon"
+        href="/favicon/favicon.ico?v=w1dBNxT7Wg"
+    />
+    <meta
+        name="msapplication-TileColor"
+        content="#ffc40d"
+    />
+    <meta
+        name="msapplication-config"
+        content="/favicon/browserconfig.xml?v=w1dBNxT7Wg"
+    />
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    />
   </head>
-  <body class="bg-cream dark:bg-[#171527] selection:bg-stone-500/10">
+  <body class="bg-cream dark:bg-[#171527]">
     <Header navigation={navigation} />
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
@@ -111,10 +155,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <header class="mb-9 space-y-1">
               {! isHomePage && (
                 <p class="font-display font-bold text-butter">
-                  {packageNavigation.title} {section && section.links.length !== 0 && (
-                    <>
-                      - {section.title}
-                    </>
+                    <span id="current-package">
+                        {packageNavigation.title}
+                    </span>
+
+                    {section && section.links.length !== 0 && (
+                        <>
+                            - <span id="current-section">
+                                {section.title}
+                            </span>
+                        </>
                     )}
                 </p>
               )}

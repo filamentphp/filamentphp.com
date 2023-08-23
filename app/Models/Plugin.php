@@ -25,6 +25,7 @@ class Plugin extends Model implements Starrable
         'has_dark_theme' => 'boolean',
         'has_translations' => 'boolean',
         'versions' => 'array',
+        'publish_date' => 'date',
     ];
 
     public static function schema(Blueprint $table)
@@ -34,6 +35,7 @@ class Plugin extends Model implements Starrable
         $table->json('categories')->nullable();
         $table->text('description')->nullable();
         $table->string('docs_url')->nullable();
+        $table->string('discord_url')->nullable();
         $table->string('github_repository');
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
@@ -43,6 +45,7 @@ class Plugin extends Model implements Starrable
         $table->string('thumbnail')->nullable();
         $table->string('url')->nullable();
         $table->json('versions')->nullable();
+        $table->date('publish_date');
     }
 
     public function author(): BelongsTo

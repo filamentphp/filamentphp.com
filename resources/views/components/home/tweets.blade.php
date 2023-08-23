@@ -199,7 +199,7 @@
                         name="author"
                         avatar="https://avatars.githubusercontent.com/u/89408?v=4"
                         twitter-handle="shocm"
-                        title="Cofounder at phparch"
+                        title="php[architect] Team"
                     >
                         Eric Van Johnson
                     </x-slot>

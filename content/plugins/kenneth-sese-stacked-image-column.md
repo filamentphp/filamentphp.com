@@ -11,4 +11,5 @@ has_dark_theme: true
 has_translations: true
 image: kenneth-sese-stacked-image-column.png
 versions: [2]
+publish_date: 2023-08-01
 ---

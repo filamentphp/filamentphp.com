@@ -1,5 +1,11 @@
 The source code for the [Filament](https://filamentphp.com) website.
 
+## Docs
+
+> **Warning**
+> Please submit pull requests for documentation changes to the [`filament/filament`](https://github.com/filamentphp/filament) repository. The relevant documentation files can be found in the `/docs` directory of each package.
+
+
 ## Contributing
 
 Submitting plugins and articles can be done by submitting a pull request to this repository. We have opted for this approach to allow for a more open and transparent process, as well as a smoother review process based on GitHub, where you and Filament maintainers can communicate directly.
@@ -17,6 +23,8 @@ slug: dan-harrin
 avatar: dan-harrin.jpg
 github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin
+mastodon_url: https://phpc.social/@danharrin
+sponsor_url: https://github.com/sponsors/danharrin
 ---
 
 Your bio should be written in Markdown here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be in full sentences.
@@ -26,6 +34,8 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 - The `avatar` should be the name of a file in the `content/authors/avatars` directory. Your avatar must be square, at least 1000x1000 pixels in size, and preferably a JPEG.
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
+- The `mastodon_url` should be a link to your Mastodon profile. It is optional.
+- The `sponsors_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
 
 ### Submitting a plugin
 
@@ -45,6 +55,7 @@ has_dark_theme: true
 has_translations: true
 image: filament-spatie-media-library.jpg
 versions: [2, 3]
+publish_date: 2023-08-01
 ---
 ```
 
@@ -52,7 +63,7 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 
 - The `slug` should match the current filename.
 - The `author_slug` should match the `slug` of the author profile you created earlier.
-- The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory. 
+- The `categories` should be an array of categories that your plugin is related to. Available categories can be found in the `content/plugin_categories` directory.
 - The `description` should be a short description of your plugin. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be one full sentence.
 - The `discord_url` should be a link to the Discord channel where people can discuss your plugin. If this doesn't exist yet, you can leave this empty until the Filament team creates it in the official server.
 - The `docs_url` should be a URL to a public, raw Markdown file of your plugin. You can leave this blank if your documentation does not live in a raw Markdown file, but please ensure that you have filled in a `url` instead, where we can redirect users who are looking for the documentation. If you have content in your README that you do not want to be displayed on the website, please add a `.filament-hidden` class to the element. This is especially useful for banner images.
@@ -62,6 +73,7 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 - The `image` should be the name of a file in the `content/plugins/images` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
 - The `thumbnail` is optional, and is the name of a file in the `content/plugins/thumbnails directory` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. It will be used as a replacement for the `image` any time that the plugin is listed alongside others, and the size is smaller. If you do not provide a `thumbnail`, the `image` will be used instead.
 - The `versions` should be an array of Filament major versions that your plugin supports.
+- The `publish_date` is the date that you submitted the plugin to the website. It usually should be the date that you submitted the pull request for the plugin.
 
 #### Quality guidelines
 
@@ -121,4 +133,4 @@ error_page 404 /index.php;
 
 ## Debugging missing content
 
-If you are working on the website locally, and you notice that some Markdown-based content is missing, it is likely that it has not reached the cache yet. Please run `php artisan clear-orbit-cache` and `php artisan clear:cache`.
+If you are working on the website locally, and you notice that some Markdown-based content is missing, it is likely that it has not reached the cache yet. Please run `php artisan clear-orbit-cache` and `php artisan cache:clear`.

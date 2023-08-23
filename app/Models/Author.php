@@ -27,6 +27,8 @@ class Author extends Model
         $table->string('name');
         $table->string('slug');
         $table->string('twitter_url')->nullable();
+        $table->string('mastodon_url')->nullable();
+        $table->string('sponsor_url')->nullable();
     }
 
     public function getBio(): ?string

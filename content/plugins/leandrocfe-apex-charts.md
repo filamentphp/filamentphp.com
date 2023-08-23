@@ -1,6 +1,6 @@
 ---
 name: Apex Charts
-slug: apex-charts
+slug: leandrocfe-apex-charts
 author_slug: leandrocfe
 categories: [panel-builder, widget, analytics]
 description: Apex Charts integration for Filament.
@@ -9,6 +9,7 @@ docs_url: https://raw.githubusercontent.com/leandrocfe/filament-apex-charts/mast
 github_repository: leandrocfe/filament-apex-charts
 has_dark_theme: true
 has_translations: false
-image: apex-charts.jpg
+image: leandrocfe-apex-charts.jpg
 versions: [2, 3]
+publish_date: 2023-07-31
 ---
