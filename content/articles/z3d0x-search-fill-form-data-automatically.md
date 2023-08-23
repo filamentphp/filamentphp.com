@@ -1,5 +1,5 @@
 ---
-name: Search & fill form data automatically
+title: Search & fill form data automatically
 slug: z3d0x-search-fill-form-data-automatically
 author_slug: z3d0x
 publish_date: 2023-08-20
