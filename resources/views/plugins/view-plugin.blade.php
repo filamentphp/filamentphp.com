@@ -292,10 +292,12 @@
                 @if (filled($docs = $plugin->getDocs(request()->query('v'))))
                     {{-- Documentation --}}
                     <div class="pt-10">
-                        <div class="flex flex-wrap items-center justify-between gap-5">
+                        <div
+                            class="flex flex-wrap items-center justify-between gap-5"
+                        >
                             <div
                                 id="documentation"
-                                class="text-3xl font-extrabold scroll-mt-10"
+                                class="scroll-mt-10 text-3xl font-extrabold"
                             >
                                 Documentation
                             </div>

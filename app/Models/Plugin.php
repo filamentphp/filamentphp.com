@@ -60,7 +60,7 @@ class Plugin extends Model implements Starrable
         return $this->morphMany(Star::class, 'starrable');
     }
 
-    public function getDocs(string|null $version = null): ?string
+    public function getDocs(string $version = null): ?string
     {
         if (filled($this->content)) {
             return $this->content;
@@ -178,7 +178,7 @@ class Plugin extends Model implements Starrable
     {
         return [
             "plugin:{$this->slug}:docs:",
-            ...array_map(fn($key) => "plugin:{$this->slug}:docs:{$key}", array_keys($this->docs_urls)),
+            ...array_map(fn ($key) => "plugin:{$this->slug}:docs:{$key}", array_keys($this->docs_urls)),
         ];
     }
 }
