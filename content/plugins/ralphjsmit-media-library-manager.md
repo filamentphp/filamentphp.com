@@ -260,7 +260,7 @@ If you skip this step, then you risk that some images in the library are not dis
                      
 Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. 
 
-> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS. 
+> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. Therefore, a custom theme is required for this package. If you are not yet using a custom theme and you'll switch to it, you'll get the benefits from a custom theme as well, including a (big) reduction the CSS file size by eliminating duplicate classes.
                      
 You'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
@@ -360,6 +360,26 @@ MediaPicker::make(‘images’)
 ```
 
 The value of the field will be an array with the `id`’s of the MediaLibraryItem’s that are being selected.
+
+#### Opening the MediaPicker in a default folder (V3)
+
+By default, the MediaPicker will open in the root folder. However, in some cases, you might want to open the MediaPicker in a specific default folder. You can do that using the `->defaultFolder()` function. 
+
+The `defaultFolder()` functions accepts a `MediaLibraryFolder` object as parameter. You can also pass a closure, and use that closure to retrieve the folder dynamically from e.g. the current record.
+
+```php
+MediaPicker::make('featured_image_id')
+    ->defaultFolder(MediaLibraryFolder::find(99)),
+```
+
+Using a closure:    
+
+```php
+MediaPicker::make('featured_image_id')
+    ->defaultFolder(fn (Event $event) => $event->mediaLibraryFolder),
+```
+
+NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com. 
 
 #### Reordering multiple items in the media picker
 
