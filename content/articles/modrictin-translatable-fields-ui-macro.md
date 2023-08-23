@@ -1,9 +1,9 @@
 ---
 name: Show the users which fields are translatable
-slug: translatable-fields-ui-macro
+slug: modrictin-translatable-fields-ui-macro
 author_slug: modrictin
 publish_date: 2023-08-17
-categories: [ general ]
+categories: [general]
 type_slug: trick
 ---
 
@@ -18,8 +18,9 @@ With this little trick you can show the users which fields are translatable with
 Simply use
 
 ```php
-    TextInput::make('label')->hint('Translatable')
-                    ->hintIcon('heroicon-m-language');
+TextInput::make('label')
+         ->hint('Translatable')
+         ->hintIcon('heroicon-m-language');
 ```
 
 Or, what I like to do is to create a little Macro on the `Filament\Forms\Components\Field` class.
@@ -27,16 +28,16 @@ Or, what I like to do is to create a little Macro on the `Filament\Forms\Compone
 Like this:
 
 ```php
-    Field::macro('translatable', function () {
-            return $this->hint('Translatable')
+Field::macro('translatable', function () {
+    return $this->hint('Translatable')
                 ->hintIcon('heroicon-m-language');
-        });
+});
 ```
 
 And then use it like this:
 
 ```php
-    TextInput::make('label')->translatable();
+TextInput::make('label')->translatable();
 ```
 
 ## Hope it helps!

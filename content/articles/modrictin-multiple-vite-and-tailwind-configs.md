@@ -3,7 +3,7 @@ name: Have multiple Vite and Tailwind bundles in your Filament project
 slug: modrictin-multiple-vite-and-tailwind-configs
 author_slug: modrictin
 publish_date: 2023-08-17
-categories: [ general,tailwind-css,panel-builder ]
+categories: [general,tailwind-css,panel-builder]
 type_slug: trick
 ---
 
@@ -129,18 +129,18 @@ Additionally, I've established a unified command that streamlines the process of
 
 #### package.json:
 ```json
-  {
-    ...
-      "scripts": {
-        "dev:admin": "vite --config vite.admin.config.js",
-        "dev:be": "vite --config vite.be.config.js",
-        "build:be": "vite build --config vite.be.config.js",
-        "build:admin": "vite build --config vite.admin.config.js",
-        "dev": "npm run dev:admin & npm run dev:be",
-        "build": "npm run build:be && npm run build:admin"
-      },
-    ...
-  }
+{
+  ...
+  "scripts": {
+    "dev:admin": "vite --config vite.admin.config.js",
+    "dev:be": "vite --config vite.be.config.js",
+    "build:be": "vite build --config vite.be.config.js",
+    "build:admin": "vite build --config vite.admin.config.js",
+    "dev": "npm run dev:admin & npm run dev:be",
+    "build": "npm run build:be && npm run build:admin"
+  },
+  ...
+}
 ```
 
 ### Step 5: Run the new scripts!

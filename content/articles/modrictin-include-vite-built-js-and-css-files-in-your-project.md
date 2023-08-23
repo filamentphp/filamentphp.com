@@ -3,7 +3,7 @@ name: Have multiple Vite and Tailwind bundles in your Filament project
 slug: modrictin-include-vite-built-js-and-css-files-in-your-project
 author_slug: modrictin
 publish_date: 2023-08-17
-categories: [ general,tailwind-css,panel-builder ]
+categories: [general,tailwind-css,panel-builder]
 type_slug: trick
 ---
 
@@ -24,7 +24,7 @@ Please note, the second parameter in the `asset()` function is the build directo
 
 ```php
 Vite::useHotFile('admin.hot')
-          ->asset('resources/sass/admin/app.scss','admin')
+    ->asset('resources/sass/admin/app.scss','admin')
 ```
 
 ### Get asset html
@@ -51,9 +51,9 @@ class AdminPanelProvider extends PanelProvider
         return $panel
              ...
              ->renderHook('panels::head.start',
-                            fn(): string => Vite::useHotFile('admin.hot')
-                                ->useBuildDirectory('admin')
-                                ->withEntryPoints(['resources/js/admin/app.js'])->toHtml())
+                fn(): string => Vite::useHotFile('admin.hot')
+                    ->useBuildDirectory('admin')
+                    ->withEntryPoints(['resources/js/admin/app.js'])->toHtml())
              ...
     }
 }
@@ -62,11 +62,12 @@ class AdminPanelProvider extends PanelProvider
 #### Add assets to your FilamentResources:
 
 Please read more about this here [FilamentResources](https://filamentphp.com/docs/3.x/support/assets).
+
 ```php
-    FilamentAsset::register([
-        Css::make('admin-css', Vite::useHotFile('admin.hot')
-            ->asset('resources/sass/admin/app.scss','admin'))
-    ]);
+FilamentAsset::register([
+    Css::make('admin-css', Vite::useHotFile('admin.hot')
+       ->asset('resources/sass/admin/app.scss','admin'))
+]);
 ```
 
 
