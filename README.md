@@ -103,7 +103,7 @@ To submit an article, create a new file in the `content/articles` directory. The
 
 ```md
 ---
-name: How to create a plugin
+title: How to create a plugin
 slug: filament-how-to-create-a-plugin
 author_slug: filament
 publish_date: 2022-06-20
