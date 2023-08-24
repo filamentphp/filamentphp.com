@@ -115,7 +115,7 @@
                     </a>
                     <a
                         target="_blank"
-                        href="https://github.com/sponsors/danharrin"
+                        href="https://github.com/filamentphp/filament?sponsor=1"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Sponsor
