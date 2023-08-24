@@ -797,7 +797,7 @@
         >
             <a
                 x-ref="getstarted"
-                href="https://github.com/sponsors/danharrin"
+                href="https://github.com/filamentphp/filament?sponsor=1"
                 class="group relative z-10 block text-white"
             >
                 {{-- Button --}}
