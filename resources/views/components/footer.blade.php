@@ -115,7 +115,7 @@
                         href="{{ route('team') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Meet our team
+                        Meet Our Team
                     </a>
                     <a
                         target="_blank"
