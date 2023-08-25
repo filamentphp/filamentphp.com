@@ -29,7 +29,7 @@
         <x-team.member
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
             name="Dan Harrin"
-            title="Lead Developer"
+            title="Co-Founder & Lead Developer"
             website="https://danharrin.com"
             twitter="https://twitter.com/danjharrin"
             github="https://github.com/danharrin"
