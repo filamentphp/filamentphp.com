@@ -2,7 +2,7 @@
 name: Star Rating
 slug: ibrahim-bougaoua-star-rating
 author_slug: ibrahim-bougaoua
-categories: [action, form-field,form-builder,table-column]
+categories: [action, form-field, form-builder, table-column, table-builder]
 description: Star rating field & column.
 discord_url: https://discord.com/channels/883083792112300104/1143876931650080768
 docs_url: https://raw.githubusercontent.com/ibrahimBougaoua/filament-rating-star/main/README.md
