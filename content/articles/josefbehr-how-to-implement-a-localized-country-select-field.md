@@ -9,7 +9,7 @@ type_slug: article
 
 Oftentimes in applications users need to provide a country (e.g. as part of an address) and it would be nice to show a `Select` with all available countries rather than having them freely enter it in a `TextInput`. For multi-language applications it would then also be great to show the country list in the current locale rather than just English.
 
-Achieving this is quite easy using the [iso3166 package](https://iso3166.thephpleague.com/) and PHP's (intl extension)[https://www.php.net/manual/de/book.intl.php].
+Achieving this is quite easy using the [iso3166 package](https://iso3166.thephpleague.com/) and PHP's [intl extension](https://www.php.net/manual/de/book.intl.php).
 
 Install the [iso3166 package](https://github.com/thephpleague/iso3166) by thephpleague:
 
