@@ -1,5 +1,5 @@
 ---
-name: How to implement a localized country select field
+title: How to implement a localized country select field
 slug: josefbehr-how-to-implement-a-localized-country-select-field
 author_slug: josefbehr
 publish_date: 2023-08-23
@@ -11,12 +11,14 @@ Oftentimes in applications users need to provide a country (e.g. as part of an a
 
 Achieving this is quite easy using the [iso3166 package](https://iso3166.thephpleague.com/) and PHP's (intl extension)[https://www.php.net/manual/de/book.intl.php].
 
-Install the [iso3166 package](https://github.com/thephpleague/iso3166) by thephpleague
+Install the [iso3166 package](https://github.com/thephpleague/iso3166) by thephpleague:
+
 ```bash
 $ composer require league/iso3166
 ```
 
-and require the intl extension in your composer.json
+and require the intl extension in your composer.json:
+
 ```json
     "require": {
         ...
@@ -24,7 +26,8 @@ and require the intl extension in your composer.json
     },
 ```
 
-Then create a new PHP class somewhere in your project (e.g. in `app/Filament/Forms/Components/`) that extends the default `Select` component
+Then create a new PHP class somewhere in your project (e.g. in `app/Filament/Forms/Components/`) that extends the default `Select` component:
+
 ```php
 <?php
 
