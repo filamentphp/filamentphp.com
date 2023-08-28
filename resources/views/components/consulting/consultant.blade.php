@@ -25,10 +25,13 @@
         <img
             src="{{ $avatar }}"
             alt="{{ $name }}"
+            height="144"
+            width="144"
             class="aspect-square w-28 rounded-full transition duration-300 lg:w-36"
             :class="{
                 'scale-105': book_is_hovered,
             }"
+            loading="lazy"
         />
         {{-- Information --}}
         <div
@@ -59,7 +62,7 @@
         >
             {{-- Icons --}}
             <div
-                class="relative z-10 grid h-10 w-10 place-items-center self-center rounded-full bg-[#5779F8] text-white transition duration-500 [grid-area:1/-1] group-hover/call:translate-x-[11.7rem] group-hover/call:bg-butter"
+                class="relative z-10 grid h-10 w-10 place-items-center self-center rounded-full bg-[#5779F8] text-white transition duration-[400ms] [grid-area:1/-1] group-hover/call:translate-x-[11.7rem] group-hover/call:bg-butter"
             >
                 {{-- Phone Icon --}}
                 <svg
@@ -68,7 +71,7 @@
                     height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="transition duration-500 [grid-area:1/-1] group-hover/call:rotate-45 group-hover/call:opacity-0"
+                    class="transition duration-[400ms] [grid-area:1/-1] group-hover/call:rotate-45 group-hover/call:opacity-0"
                 >
                     <path
                         d="M13.5 2C13.5 2 15.834 2.212 18.803 5.182C21.773 8.152 21.985 10.485 21.985 10.485M14.207 5.536C14.207 5.536 15.197 5.818 16.682 7.303C18.167 8.788 18.45 9.778 18.45 9.778"
@@ -88,7 +91,7 @@
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
-                    class="-rotate-45 opacity-0 transition duration-500 [grid-area:1/-1] group-hover/call:rotate-0 group-hover/call:opacity-100"
+                    class="-rotate-45 opacity-0 transition duration-[400ms] [grid-area:1/-1] group-hover/call:rotate-0 group-hover/call:opacity-100"
                 >
                     <path
                         fill="none"

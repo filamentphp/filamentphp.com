@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="hidden astro-KLTXWB3V">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
+    <title>Upgrading from v2.x - Actions - Filament</title>
+    <meta name="description" content="">
+    
+    <link rel="canonical" href="https://filamentphp.com/docs/3.x/actions/upgrade-guide/">
+
+    <!-- hack for flash of theme -->
+    
+
+    <!-- Styles -->
+    
+
+    <!-- Styles -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=w1dBNxT7Wg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=w1dBNxT7Wg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=w1dBNxT7Wg">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=w1dBNxT7Wg">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=w1dBNxT7Wg" color="#fdae4b">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=w1dBNxT7Wg">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
+    <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" />
+<link rel="stylesheet" href="/docs/assets/dashboard.2d7f7b5b.css" /><script type="module" src="/docs/hoisted.9a1268b2.js"></script></head>
+  <body class="bg-cream dark:bg-[#171527] astro-KLTXWB3V">
+    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
+    <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
+        <div class="relative flex flex-grow basis-0 items-center gap-3">
+            <div class="flex lg:hidden">
+                <div x-data class="flex items-center">
+    <button type="button" class="relative" aria-label="Open navigation" x-on:click="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
+        <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-7 w-7 stroke-gray-500" astro-icon="menu-icon"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div x-ref="panel" class="fixed !inset-0 z-[100] flex items-start overflow-y-auto pr-10 lg:hidden" x-float.flip.teleport aria-label="Navigation">
+        <div class="bg-[#171527]/50 pr-10 backdrop-blur-lg fixed inset-0 z-0 pointer-events-none">
+        </div>
+        <div class="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-[#171527] sm:px-6 relative z-10 shadow-lg dark:shadow-black/50">
+            <div class="flex items-center gap-5">
+                <button type="button" aria-label="Close navigation">
+                    <svg fill="none" stroke-linecap="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 stroke-gray-500" astro-icon="close-icon"><path d="m5 5 14 14m0-14L5 19"/></svg>
+                </button>
+                <div class="flex gap-3 items-center">
+                    <a href="/" aria-label="Homepage" class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out motion-reduce:transition-none hover:-translate-y-1">
+                        <svg width="128" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434] md:block"><g clip-path="url(#a)" fill="currentColor"><path d="M4.975 25.081c.254-1.197.496-2.355.728-3.475.193-.932.408-1.966.647-3.1l.146-.694 1.18-5.708H12.2l.793-3.777H8.265l.149-.747.165-.831c.176-.862.496-1.508.959-1.94.463-.43 1.102-.646 1.917-.646.463 0 .92.056 1.372.168.452.112.882.269 1.29.47l1.19-4.029a7.6 7.6 0 0 0-1.232-.411 11.797 11.797 0 0 0-1.48-.269A13.154 13.154 0 0 0 11.043 0c-.816 0-1.598.098-2.347.294a5.826 5.826 0 0 0-2.05.99c-.617.465-1.154 1.094-1.612 1.889-.457.795-.807 1.785-1.05 2.971L3.48 8.587l.053-.26H.793L0 12.104h2.744l-.04.193c-.074.348-.146.694-.217 1.035l-.107.51-.48 2.308-.346 1.679a965.389 965.389 0 0 1-.785 3.769 452.348 452.348 0 0 0-.72 3.483h4.926ZM19.047 8.294l-.472 1.214 2.21 1.555c.12.083.183.238.166.395l-.008.046-.149.681c-.037.171-.167.295-.32.306l-1.951.13 1.668 1.164c.12.083.183.239.165.395l-.007.047-.149.68c-.037.172-.167.296-.32.306l-1.951.131 1.668 1.163c.12.083.183.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.951.132 1.668 1.163c.119.083.183.238.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.952.131 1.669 1.163c.119.083.182.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.321.306l-2.736.242-.34 1.46h-2.185l.675-2.683c.038-.171.168-.295.321-.305l1.95-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.046.149-.681c.037-.171.167-.295.32-.306l1.95-.131-1.667-1.163a.425.425 0 0 1-.165-.395l.007-.047.149-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.162a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.038-.172.168-.296.32-.306l1.952-.131L16.49 9.91a.424.424 0 0 1-.165-.395l.008-.047.304-1.081 2.409-.093Zm1.68-8.143c.896 0 1.56.305 1.99.915.433.61.562 1.34.39 2.19-.195.975-.597 1.632-1.206 1.974-.61.34-1.368.512-2.275.512-.885 0-1.551-.266-1.999-.798-.448-.532-.575-1.29-.38-2.275.183-.895.585-1.539 1.206-1.93.62-.392 1.378-.588 2.274-.588ZM40.16 7.874c1.586 0 2.892.268 3.917.805 1.025.538 1.736 1.301 2.132 2.292.397.99.447 2.168.15 3.534a134 134 0 0 1-.348 1.704l-.38 1.805-.298 1.41-.553 2.652c-.193.93-.405 1.93-.637 3.005H39.88l.214-2.232h-.38a6.622 6.622 0 0 1-1.347 1.468 5.376 5.376 0 0 1-1.595.873 5.686 5.686 0 0 1-1.852.294c-1.046 0-1.922-.26-2.628-.78a4.033 4.033 0 0 1-1.47-2.074c-.276-.861-.304-1.802-.084-2.82.166-.784.433-1.438.802-1.964.37-.526.816-.957 1.34-1.293a7.06 7.06 0 0 1 1.735-.797 13.188 13.188 0 0 1 1.975-.445l5.174-.823c.11-.503.069-.943-.124-1.318-.193-.375-.537-.666-1.033-.873-.496-.207-1.13-.31-1.901-.31-.397 0-.818.03-1.265.092-.446.062-.912.151-1.396.269-.485.117-.984.263-1.496.436a20.15 20.15 0 0 0-1.579.613l.777-4.399c.397-.134.848-.265 1.355-.394a31.603 31.603 0 0 1 1.604-.361 21.025 21.025 0 0 1 1.727-.269c.59-.067 1.165-.1 1.727-.1Zm.991 8.88a3.701 3.701 0 0 1-.562.328c-.22.106-.523.212-.909.319-.386.106-.909.232-1.57.378a9.2 9.2 0 0 0-1.174.352 2.306 2.306 0 0 0-.876.57c-.231.247-.386.566-.463.958-.11.615-.005 1.094.314 1.435.32.342.755.512 1.306.512.397 0 .796-.087 1.199-.26a4.389 4.389 0 0 0 1.157-.747c.369-.325.708-.71 1.016-1.158l.562-2.686Zm24.03-5.89c-.173-.843-.526-1.515-1.058-2.017-.69-.649-1.65-.973-2.885-.973-.76 0-1.49.134-2.19.403-.7.268-1.344.635-1.934 1.1a7.607 7.607 0 0 0-1.496 1.552h-.413l.347-2.854-4.166.252c-.286 1.399-.567 2.75-.843 4.054-.275 1.304-.534 2.56-.776 3.77l-.348 1.678a469.35 469.35 0 0 0-.793 3.769 643.41 643.41 0 0 1-.727 3.483h4.942c.242-1.197.48-2.35.71-3.458.232-1.108.48-2.289.745-3.542l.71-3.475a11.94 11.94 0 0 1 1.067-1.108 4.81 4.81 0 0 1 1.124-.773c.39-.19.807-.285 1.248-.285.771 0 1.264.305 1.48.915.214.61.217 1.418.007 2.426l-.479 2.316a374.179 374.179 0 0 0-.727 3.526c-.22 1.097-.458 2.25-.711 3.458h4.926l.735-3.483c.237-1.125.499-2.381.785-3.77.133-.648.262-1.275.389-1.88l.339-1.611-.024.11.035-.04c.237-.26.475-.502.717-.727l.181-.166a5.203 5.203 0 0 1 1.132-.78 2.75 2.75 0 0 1 1.248-.294c.772 0 1.265.305 1.48.915.215.61.217 1.418.008 2.426l-.48 2.316a573.423 573.423 0 0 1-.719 3.534 1402.9 1402.9 0 0 1-.718 3.45h4.942c.242-1.197.48-2.355.71-3.475.232-1.119.497-2.378.794-3.777.132-.65.262-1.276.389-1.88l.338-1.612c.42-1.959.287-3.525-.396-4.7-.683-1.176-1.868-1.763-3.554-1.763-.76 0-1.493.137-2.199.41a7.675 7.675 0 0 0-1.958 1.117 7.932 7.932 0 0 0-1.546 1.595h-.362l-.026-.133Zm21.368-2.99c1.73 0 3.141.319 4.232.957 1.09.637 1.83 1.533 2.215 2.686.386 1.152.391 2.495.017 4.029-.089.37-.18.716-.273 1.04-.07.244-.145.481-.225.712l-.081.229h-10.12l-.003.066c-.023.64.07 1.198.28 1.671.314.711.834 1.243 1.562 1.595.727.353 1.62.529 2.677.529.463 0 .978-.042 1.546-.126a11.392 11.392 0 0 0 1.694-.386 7.815 7.815 0 0 0 1.554-.663l-.661 4.264c-.298.18-.706.347-1.223.504-.518.156-1.116.285-1.794.386-.678.1-1.408.15-2.19.15-1.984 0-3.64-.388-4.967-1.166a6.363 6.363 0 0 1-2.81-3.316c-.546-1.432-.62-3.133-.224-5.103.331-1.623.893-3.039 1.687-4.248.793-1.208 1.79-2.146 2.991-2.812 1.202-.665 2.573-.998 4.116-.998Zm.1 3.542c-.563 0-1.11.151-1.645.453-.535.302-1.011.772-1.43 1.41a6.12 6.12 0 0 0-.647 1.348l-.05.147 5.974-.126.02-.144c.081-.737-.026-1.397-.322-1.98-.374-.739-1.008-1.108-1.9-1.108ZM99.102 25.08c.242-1.197.48-2.347.71-3.45l.745-3.55.71-3.475a10.82 10.82 0 0 1 1.083-1.108 4.978 4.978 0 0 1 1.157-.773c.402-.19.84-.285 1.314-.285.871 0 1.422.305 1.653.915.232.61.237 1.418.017 2.426l-.48 2.316a887.36 887.36 0 0 1-1.438 6.984h4.943l.735-3.483c.237-1.125.494-2.381.769-3.77.143-.648.278-1.275.405-1.88l.339-1.611c.408-1.959.264-3.525-.43-4.7-.694-1.176-1.934-1.763-3.719-1.763a6.41 6.41 0 0 0-2.256.403 7.362 7.362 0 0 0-1.976 1.1 7.515 7.515 0 0 0-1.504 1.552h-.413l.347-2.854-4.166.252a773.733 773.733 0 0 1-.843 4.063c-.275 1.31-.534 2.563-.776 3.76l-.348 1.679a2903.763 2903.763 0 0 1-1.52 7.252h4.942Zm21.863.454c.397 0 .826-.037 1.289-.11a10.34 10.34 0 0 0 1.298-.285c.402-.117.719-.255.95-.411l.529-4.113c-.43.302-.857.515-1.281.638a4.211 4.211 0 0 1-1.165.184c-.805 0-1.353-.28-1.645-.839-.292-.56-.322-1.377-.091-2.451l1.248-6.044h4.918l.793-3.777h-4.924l.033-.158c.072-.338.14-.666.206-.982l.065-.312c.171-.823.339-1.623.504-2.401.166-.778.336-1.603.513-2.476l-5.058.89c-.232 1.108-.455 2.182-.67 3.223-.129.624-.269 1.291-.419 2l-.046.216h-2.667l-.794 3.777h2.676l-.021.102-.06.293c-.176.867-.344 1.678-.504 2.434a388.73 388.73 0 0 0-.454 2.182c-.144.7-.292 1.413-.447 2.14-.297 1.422-.264 2.598.1 3.526.363.93.989 1.62 1.876 2.074.887.453 1.97.68 3.248.68ZM27.124 21.606a849.78 849.78 0 0 0-.71 3.475H21.47c.254-1.197.496-2.358.727-3.483.232-1.125.496-2.381.794-3.77l1.917-9.3c.298-1.365.584-2.714.86-4.046L26.595.47l5.026-.436-.852 4.07c-.292 1.394-.598 2.863-.917 4.408l-1.934 9.3c-.298 1.41-.562 2.675-.794 3.794Z"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h128v26H0z"></path></clipPath></defs></svg>
+                    </a>
+                    <a href="/docs/" aria-label="Docs homepage" class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1">
+                        <div class="font-black text-butter dark:text-white text-xl pt-1">
+                            DOCS
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
+                <nav class="text-base lg:text-sm w-60 pr-5">
+  <ul role="list" class="mb-9 space-y-2.5">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M3.25 3A2.25 2.25 0 0 0 1 5.25v9.5A2.25 2.25 0 0 0 3.25 17h13.5A2.25 2.25 0 0 0 19 14.75v-9.5A2.25 2.25 0 0 0 16.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75V9h-15zM4 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H4zM6.25 6A.75.75 0 0 1 7 5.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H7a.75.75 0 0 1-.75-.75V6zM10 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H10z" clip-rule="evenodd"/></svg>
+            <span>Panel Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/forms/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
+            <span>Form Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/tables/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/notifications/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
+            <span>Notifications</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/actions/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
+          <h2 class="flex items-center gap-4 transition duration-300">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" class="" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Actions</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/infolists/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:queue-list"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h11a2.5 2.5 0 0 1 0 5h-11A2.5 2.5 0 0 1 2 4.5zm.75 4.583a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.58a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.587a.75.75 0 0 0 0 1.5h14.5a.75.75 0 1 0 0-1.5H2.75z"/></svg>
+            <span>Infolist Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/widgets/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <span>Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
+          </h2>
+        </a>
+      </li>
+  </ul>
+  <ul role="list" class="space-y-4">
+    <li>
+        <a href="/docs/3.x/actions/installation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Installation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/overview" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Overview</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/trigger-button" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Trigger button</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/modals" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Modals</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/grouping-actions" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Grouping actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/adding-an-action-to-a-livewire-component" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Adding an action to a Livewire component</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/prebuilt-actions/create" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Prebuilt Actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          <li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/create" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Create action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/edit" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Edit action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/view" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">View action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/delete" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Delete action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/replicate" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Replicate action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/force-delete" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Force-delete action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/restore" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Restore action</div>
+              </a>
+            </li>
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/advanced" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Advanced actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/testing" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/upgrade-guide" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
+          <h2 class="">Upgrading from v2.x</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li>
+  </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="flex gap-3 items-center">
+                <a href="/" aria-label="Homepage" class="text-gray-900 dark:text-primary-500 transition duration-500 ease-out hidden min-[510px]:block motion-reduce:transition-none hover:-translate-y-1">
+                    <svg width="128" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434]"><g clip-path="url(#a)" fill="currentColor"><path d="M4.975 25.081c.254-1.197.496-2.355.728-3.475.193-.932.408-1.966.647-3.1l.146-.694 1.18-5.708H12.2l.793-3.777H8.265l.149-.747.165-.831c.176-.862.496-1.508.959-1.94.463-.43 1.102-.646 1.917-.646.463 0 .92.056 1.372.168.452.112.882.269 1.29.47l1.19-4.029a7.6 7.6 0 0 0-1.232-.411 11.797 11.797 0 0 0-1.48-.269A13.154 13.154 0 0 0 11.043 0c-.816 0-1.598.098-2.347.294a5.826 5.826 0 0 0-2.05.99c-.617.465-1.154 1.094-1.612 1.889-.457.795-.807 1.785-1.05 2.971L3.48 8.587l.053-.26H.793L0 12.104h2.744l-.04.193c-.074.348-.146.694-.217 1.035l-.107.51-.48 2.308-.346 1.679a965.389 965.389 0 0 1-.785 3.769 452.348 452.348 0 0 0-.72 3.483h4.926ZM19.047 8.294l-.472 1.214 2.21 1.555c.12.083.183.238.166.395l-.008.046-.149.681c-.037.171-.167.295-.32.306l-1.951.13 1.668 1.164c.12.083.183.239.165.395l-.007.047-.149.68c-.037.172-.167.296-.32.306l-1.951.131 1.668 1.163c.12.083.183.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.951.132 1.668 1.163c.119.083.183.238.165.395l-.008.047-.148.68c-.038.172-.168.296-.32.306l-1.952.131 1.669 1.163c.119.083.182.239.165.395l-.008.047-.148.68c-.038.172-.168.296-.321.306l-2.736.242-.34 1.46h-2.185l.675-2.683c.038-.171.168-.295.321-.305l1.95-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.046.149-.681c.037-.171.167-.295.32-.306l1.95-.131-1.667-1.163a.425.425 0 0 1-.165-.395l.007-.047.149-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.162a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.037-.172.167-.296.32-.306l1.951-.132-1.668-1.163a.425.425 0 0 1-.165-.395l.008-.047.148-.68c.038-.172.168-.296.32-.306l1.952-.131L16.49 9.91a.424.424 0 0 1-.165-.395l.008-.047.304-1.081 2.409-.093Zm1.68-8.143c.896 0 1.56.305 1.99.915.433.61.562 1.34.39 2.19-.195.975-.597 1.632-1.206 1.974-.61.34-1.368.512-2.275.512-.885 0-1.551-.266-1.999-.798-.448-.532-.575-1.29-.38-2.275.183-.895.585-1.539 1.206-1.93.62-.392 1.378-.588 2.274-.588ZM40.16 7.874c1.586 0 2.892.268 3.917.805 1.025.538 1.736 1.301 2.132 2.292.397.99.447 2.168.15 3.534a134 134 0 0 1-.348 1.704l-.38 1.805-.298 1.41-.553 2.652c-.193.93-.405 1.93-.637 3.005H39.88l.214-2.232h-.38a6.622 6.622 0 0 1-1.347 1.468 5.376 5.376 0 0 1-1.595.873 5.686 5.686 0 0 1-1.852.294c-1.046 0-1.922-.26-2.628-.78a4.033 4.033 0 0 1-1.47-2.074c-.276-.861-.304-1.802-.084-2.82.166-.784.433-1.438.802-1.964.37-.526.816-.957 1.34-1.293a7.06 7.06 0 0 1 1.735-.797 13.188 13.188 0 0 1 1.975-.445l5.174-.823c.11-.503.069-.943-.124-1.318-.193-.375-.537-.666-1.033-.873-.496-.207-1.13-.31-1.901-.31-.397 0-.818.03-1.265.092-.446.062-.912.151-1.396.269-.485.117-.984.263-1.496.436a20.15 20.15 0 0 0-1.579.613l.777-4.399c.397-.134.848-.265 1.355-.394a31.603 31.603 0 0 1 1.604-.361 21.025 21.025 0 0 1 1.727-.269c.59-.067 1.165-.1 1.727-.1Zm.991 8.88a3.701 3.701 0 0 1-.562.328c-.22.106-.523.212-.909.319-.386.106-.909.232-1.57.378a9.2 9.2 0 0 0-1.174.352 2.306 2.306 0 0 0-.876.57c-.231.247-.386.566-.463.958-.11.615-.005 1.094.314 1.435.32.342.755.512 1.306.512.397 0 .796-.087 1.199-.26a4.389 4.389 0 0 0 1.157-.747c.369-.325.708-.71 1.016-1.158l.562-2.686Zm24.03-5.89c-.173-.843-.526-1.515-1.058-2.017-.69-.649-1.65-.973-2.885-.973-.76 0-1.49.134-2.19.403-.7.268-1.344.635-1.934 1.1a7.607 7.607 0 0 0-1.496 1.552h-.413l.347-2.854-4.166.252c-.286 1.399-.567 2.75-.843 4.054-.275 1.304-.534 2.56-.776 3.77l-.348 1.678a469.35 469.35 0 0 0-.793 3.769 643.41 643.41 0 0 1-.727 3.483h4.942c.242-1.197.48-2.35.71-3.458.232-1.108.48-2.289.745-3.542l.71-3.475a11.94 11.94 0 0 1 1.067-1.108 4.81 4.81 0 0 1 1.124-.773c.39-.19.807-.285 1.248-.285.771 0 1.264.305 1.48.915.214.61.217 1.418.007 2.426l-.479 2.316a374.179 374.179 0 0 0-.727 3.526c-.22 1.097-.458 2.25-.711 3.458h4.926l.735-3.483c.237-1.125.499-2.381.785-3.77.133-.648.262-1.275.389-1.88l.339-1.611-.024.11.035-.04c.237-.26.475-.502.717-.727l.181-.166a5.203 5.203 0 0 1 1.132-.78 2.75 2.75 0 0 1 1.248-.294c.772 0 1.265.305 1.48.915.215.61.217 1.418.008 2.426l-.48 2.316a573.423 573.423 0 0 1-.719 3.534 1402.9 1402.9 0 0 1-.718 3.45h4.942c.242-1.197.48-2.355.71-3.475.232-1.119.497-2.378.794-3.777.132-.65.262-1.276.389-1.88l.338-1.612c.42-1.959.287-3.525-.396-4.7-.683-1.176-1.868-1.763-3.554-1.763-.76 0-1.493.137-2.199.41a7.675 7.675 0 0 0-1.958 1.117 7.932 7.932 0 0 0-1.546 1.595h-.362l-.026-.133Zm21.368-2.99c1.73 0 3.141.319 4.232.957 1.09.637 1.83 1.533 2.215 2.686.386 1.152.391 2.495.017 4.029-.089.37-.18.716-.273 1.04-.07.244-.145.481-.225.712l-.081.229h-10.12l-.003.066c-.023.64.07 1.198.28 1.671.314.711.834 1.243 1.562 1.595.727.353 1.62.529 2.677.529.463 0 .978-.042 1.546-.126a11.392 11.392 0 0 0 1.694-.386 7.815 7.815 0 0 0 1.554-.663l-.661 4.264c-.298.18-.706.347-1.223.504-.518.156-1.116.285-1.794.386-.678.1-1.408.15-2.19.15-1.984 0-3.64-.388-4.967-1.166a6.363 6.363 0 0 1-2.81-3.316c-.546-1.432-.62-3.133-.224-5.103.331-1.623.893-3.039 1.687-4.248.793-1.208 1.79-2.146 2.991-2.812 1.202-.665 2.573-.998 4.116-.998Zm.1 3.542c-.563 0-1.11.151-1.645.453-.535.302-1.011.772-1.43 1.41a6.12 6.12 0 0 0-.647 1.348l-.05.147 5.974-.126.02-.144c.081-.737-.026-1.397-.322-1.98-.374-.739-1.008-1.108-1.9-1.108ZM99.102 25.08c.242-1.197.48-2.347.71-3.45l.745-3.55.71-3.475a10.82 10.82 0 0 1 1.083-1.108 4.978 4.978 0 0 1 1.157-.773c.402-.19.84-.285 1.314-.285.871 0 1.422.305 1.653.915.232.61.237 1.418.017 2.426l-.48 2.316a887.36 887.36 0 0 1-1.438 6.984h4.943l.735-3.483c.237-1.125.494-2.381.769-3.77.143-.648.278-1.275.405-1.88l.339-1.611c.408-1.959.264-3.525-.43-4.7-.694-1.176-1.934-1.763-3.719-1.763a6.41 6.41 0 0 0-2.256.403 7.362 7.362 0 0 0-1.976 1.1 7.515 7.515 0 0 0-1.504 1.552h-.413l.347-2.854-4.166.252a773.733 773.733 0 0 1-.843 4.063c-.275 1.31-.534 2.563-.776 3.76l-.348 1.679a2903.763 2903.763 0 0 1-1.52 7.252h4.942Zm21.863.454c.397 0 .826-.037 1.289-.11a10.34 10.34 0 0 0 1.298-.285c.402-.117.719-.255.95-.411l.529-4.113c-.43.302-.857.515-1.281.638a4.211 4.211 0 0 1-1.165.184c-.805 0-1.353-.28-1.645-.839-.292-.56-.322-1.377-.091-2.451l1.248-6.044h4.918l.793-3.777h-4.924l.033-.158c.072-.338.14-.666.206-.982l.065-.312c.171-.823.339-1.623.504-2.401.166-.778.336-1.603.513-2.476l-5.058.89c-.232 1.108-.455 2.182-.67 3.223-.129.624-.269 1.291-.419 2l-.046.216h-2.667l-.794 3.777h2.676l-.021.102-.06.293c-.176.867-.344 1.678-.504 2.434a388.73 388.73 0 0 0-.454 2.182c-.144.7-.292 1.413-.447 2.14-.297 1.422-.264 2.598.1 3.526.363.93.989 1.62 1.876 2.074.887.453 1.97.68 3.248.68ZM27.124 21.606a849.78 849.78 0 0 0-.71 3.475H21.47c.254-1.197.496-2.358.727-3.483.232-1.125.496-2.381.794-3.77l1.917-9.3c.298-1.365.584-2.714.86-4.046L26.595.47l5.026-.436-.852 4.07c-.292 1.394-.598 2.863-.917 4.408l-1.934 9.3c-.298 1.41-.562 2.675-.794 3.794Z"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h128v26H0z"></path></clipPath></defs></svg>
+                </a>
+                <a href="/docs/" aria-label="Docs homepage" class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1">
+                    <div class="font-black text-butter dark:text-white text-xl min-[510px]:pt-1">
+                        DOCS
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="relative flex flex-1 justify-end gap-3.5 items-center">
+            <div x-data>
+  <p class="sr-only">Version</p>
+    <button x-on:click="$refs.panel.toggle" type="button" class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm text-gray-600 ring-1 ring-merino dark:bg-dolphin/10 dark:text-gray-300 dark:ring-inset dark:ring-white/5" aria-label="Open version options">
+      <span class="hidden sm:block">Version&nbsp;</span>
+      <span id="current-version" class="font-bold">3.x</span>
+    </button>
+
+    <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5" aria-label="Version options">
+        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '3.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>3.x</span>
+          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '2.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>2.x</span>
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '3.x',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '1.x' !== '3.x',
+            }">
+            <span>Version&nbsp;</span>
+            <span>1.x</span>
+          </a>
+    </div>
+</div>
+            <div x-data="{
+    theme: 'system',
+    isDarkMode: window.matchMedia('(prefers-color-scheme: dark)'),
+    selected: 'system',
+    init() {
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.updateTheme(),
+        )
+
+        new MutationObserver(([{ oldValue }]) => {
+            let newValue =
+                document.documentElement.getAttribute('data-theme')
+            if (newValue !== oldValue) {
+                try {
+                    window.localStorage.setItem('theme', newValue)
+                } catch {}
+                this.updateThemeWithoutTransitions(newValue)
+            }
+        }).observe(document.documentElement, {
+            attributeFilter: ['data-theme'],
+            attributeOldValue: true,
+        })
+
+        this.isDarkMode.addEventListener('change', () =>
+            this.updateThemeWithoutTransitions(),
+        )
+    },
+    updateTheme(theme) {
+        this.theme = theme ?? window.localStorage.theme ?? 'system'
+
+        if (
+            this.theme === 'dark' ||
+            (this.theme === 'system' && this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.add('dark')
+        } else if (
+            this.theme === 'light' ||
+            (this.theme === 'system' && !this.isDarkMode.matches)
+        ) {
+            document.documentElement.classList.remove('dark')
+        }
+
+        this.selected = this.theme
+        window.localStorage.theme = this.theme
+        document.documentElement.setAttribute('data-theme', this.theme)
+        return this.theme
+    },
+    updateThemeWithoutTransitions(theme) {
+        this.updateTheme(theme)
+        document.documentElement.classList.add('[&_*]:!transition-none')
+        window.setTimeout(() => {
+            document.documentElement.classList.remove(
+                '[&_*]:!transition-none',
+            )
+        }, 0)
+    },
+}">
+  <p class="sr-only">Theme</p>
+  <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full ring-1 ring-black/5 dark:bg-dolphin/10 dark:ring-inset dark:ring-white/5" aria-label="Open navigation" x-on:click="$refs.panel.toggle">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-butter [[data-theme=light]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-butter [[data-theme=dark]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-hurricane [:not(.dark)[data-theme=system]_&#38;]:block" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="hidden h-6 w-6 fill-hurricane [.dark[data-theme=system]_&#38;]:block" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+  </button>
+  <div x-ref="panel" class="hidden absolute w-36 space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-[#1f1c36] dark:ring-white/5" x-float.shift.offset.trap="{shift: {padding: 12}}" aria-label="Theme options">
+      <button x-bind:key="light" x-on:click="updateTheme('light'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'light',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'light',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'light' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:sun"><path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.657-1.596a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zm-9.193 9.192a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06zM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10zM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10zm9.596 5.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06z"/></svg>
+          </div>
+          <div class="ml-3">Light</div>
+        </button><button x-bind:key="dark" x-on:click="updateTheme('dark'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'dark',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'dark',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'dark' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="ml-3">Dark</div>
+        </button><button x-bind:key="system" x-on:click="updateTheme('system'); $refs.panel.close();" class="w-full flex cursor-pointer select-none items-center rounded-[0.5rem] p-1 hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
+              'text-butter hover:text-butter hover:dark:text-butter': selected === 'system',
+              'text-gray-700 dark:text-gray-300 hover:dark:text-white': selected !== 'system',
+            }">
+          <div class="rounded-md bg-white p-1.5 ring-1 ring-gray-900/5 dark:bg-dolphin/20 dark:ring-inset dark:ring-white/5 transition duration-200">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" x-bind:class="selected == 'system' ? 'fill-butter dark:fill-butter' : 'fill-hurricane'" class="h-4 w-4" astro-icon="heroicons:computer-desktop"><path fill-rule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="ml-3">System</div>
+        </button>
+  </div>
+</div>
+            <div id="docsearch"></div>
+            <a href="https://github.com/filamentphp/filament" class="group/github-link block" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="h-7 w-7 transition duration-200 fill-stone-800 group-hover/github-link:fill-black dark:fill-gray-300 dark:group-hover/github-link:fill-white" astro-icon="github"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+        </div>
+    </div>
+</header>
+
+    
+
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-KLTXWB3V">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-KLTXWB3V">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-KLTXWB3V"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-KLTXWB3V"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-KLTXWB3V"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-KLTXWB3V" x-data="{
+          position: 0,
+          init() {
+            this.position = localStorage.getItem('sidebarScrollPosition') || 0;
+
+            if (this.position > 0) {
+              this.$el.scrollTop = this.position;
+            }
+
+            this.$el.addEventListener('scroll', () => {
+              this.position = this.$el.scrollTop;
+              localStorage.setItem('sidebarScrollPosition', this.position);
+            });
+          }
+        }">
+          <nav class="text-base lg:text-sm w-60 pr-5">
+  <ul role="list" class="mb-9 space-y-2.5">
+    <li>
+        <a href="/docs/3.x/panels/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M3.25 3A2.25 2.25 0 0 0 1 5.25v9.5A2.25 2.25 0 0 0 3.25 17h13.5A2.25 2.25 0 0 0 19 14.75v-9.5A2.25 2.25 0 0 0 16.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75V9h-15zM4 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H4zM6.25 6A.75.75 0 0 1 7 5.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H7a.75.75 0 0 1-.75-.75V6zM10 5.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H10z" clip-rule="evenodd"/></svg>
+            <span>Panel Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/forms/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:document-text"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5z" clip-rule="evenodd"/></svg>
+            <span>Form Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/tables/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:table-cells"><path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75zM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Table Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/notifications/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:bell"><path fill-rule="evenodd" d="M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076 32.91 32.91 0 0 0 3.256.508 3.5 3.5 0 0 0 6.972 0 32.903 32.903 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.448 11.448 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 14.943a33.54 33.54 0 0 0 3.9 0 2 2 0 0 1-3.9 0z" clip-rule="evenodd"/></svg>
+            <span>Notifications</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/actions/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
+          <h2 class="flex items-center gap-4 transition duration-300">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" class="" astro-icon="heroicons:play"><path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84z"/></svg>
+            <span>Actions</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/infolists/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:queue-list"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h11a2.5 2.5 0 0 1 0 5h-11A2.5 2.5 0 0 1 2 4.5zm.75 4.583a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.58a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H2.75zm0 3.587a.75.75 0 0 0 0 1.5h14.5a.75.75 0 1 0 0-1.5H2.75z"/></svg>
+            <span>Infolist Builder</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/widgets/installation" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:chart-bar"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1zm-6 4A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1zm-6 4A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1z"/></svg>
+            <span>Widgets</span>
+          </h2>
+        </a>
+      </li><li>
+        <a href="/docs/3.x/support/overview" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30">
+          <h2 class="flex items-center gap-4 transition duration-300 group-hover/navigation-section-link:translate-x-1">
+            <svg fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300 dark:group-hover/navigation-section-link:text-purple-400" class="" astro-icon="heroicons:cube-transparent"><path fill-rule="evenodd" d="M9.638 1.093a.75.75 0 0 1 .724 0l2 1.104a.75.75 0 1 1-.724 1.313L10 2.607l-1.638.903a.75.75 0 1 1-.724-1.313l2-1.104zM5.403 4.287a.75.75 0 0 1-.295 1.019l-.805.444.805.444a.75.75 0 0 1-.724 1.314L3.5 7.02v.73a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .388-.657l1.996-1.1a.75.75 0 0 1 1.019.294zm9.194 0a.75.75 0 0 1 1.02-.295l1.995 1.101A.75.75 0 0 1 18 5.75v2a.75.75 0 0 1-1.5 0v-.73l-.884.488a.75.75 0 1 1-.724-1.314l.806-.444-.806-.444a.75.75 0 0 1-.295-1.02zM7.343 8.284a.75.75 0 0 1 1.02-.294L10 8.893l1.638-.903a.75.75 0 1 1 .724 1.313l-1.612.89v1.557a.75.75 0 0 1-1.5 0v-1.557l-1.612-.89a.75.75 0 0 1-.295-1.019zM2.75 11.5a.75.75 0 0 1 .75.75v1.557l1.608.887a.75.75 0 0 1-.724 1.314l-1.996-1.101A.75.75 0 0 1 2 14.25v-2a.75.75 0 0 1 .75-.75zm14.5 0a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-.388.657l-1.996 1.1a.75.75 0 1 1-.724-1.313l1.608-.887V12.25a.75.75 0 0 1 .75-.75zm-7.25 4a.75.75 0 0 1 .75.75v.73l.888-.49a.75.75 0 0 1 .724 1.313l-2 1.104a.75.75 0 0 1-.724 0l-2-1.104a.75.75 0 1 1 .724-1.313l.888.49v-.73a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>
+            <span>Core Concepts</span>
+          </h2>
+        </a>
+      </li>
+  </ul>
+  <ul role="list" class="space-y-4">
+    <li>
+        <a href="/docs/3.x/actions/installation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Installation</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/overview" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Overview</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/trigger-button" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Trigger button</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/modals" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Modals</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/grouping-actions" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Grouping actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/adding-an-action-to-a-livewire-component" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Adding an action to a Livewire component</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/prebuilt-actions/create" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Prebuilt Actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          <li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/create" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Create action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/edit" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Edit action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/view" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">View action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/delete" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Delete action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/replicate" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Replicate action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/force-delete" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Force-delete action</div>
+              </a>
+            </li><li class="relative">
+              <a href="/docs/3.x/actions/prebuilt-actions/restore" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">Restore action</div>
+              </a>
+            </li>
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/advanced" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Advanced actions</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/testing" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2 class="">Testing</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
+        <a href="/docs/3.x/actions/upgrade-guide" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
+          <h2 class="">Upgrading from v2.x</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li>
+  </ul>
+</nav>
+        </div>
+      </div>
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-KLTXWB3V">
+        <article class="astro-KLTXWB3V">
+          <header class="mb-9 space-y-1 astro-KLTXWB3V">
+              <p class="font-display font-bold text-butter astro-KLTXWB3V">
+                    <span id="current-package" class="astro-KLTXWB3V">
+                        Actions
+                    </span>
+
+                    
+                </p>
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-KLTXWB3V">
+                  Upgrading from v2.x
+                </h1>
+            </header>
+          <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
+  <blockquote>
+<p>If you see anything missing from this guide, please do not hesitate to <a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/14-upgrade-guide.md">make a pull request</a> to our repository! Any help is appreciated!</p>
+</blockquote>
+<h2 id="new-requirements"><a class="heading-anchor" href="#new-requirements"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>New requirements</h2>
+<ul>
+<li>Laravel v9.0+</li>
+<li>Livewire v3.0+</li>
+</ul>
+<p>Please upgrade Filament before upgrading to Livewire v3. Instructions on how to upgrade Livewire can be found <a href="https://livewire.laravel.com/docs/upgrading">here</a>.</p>
+<blockquote>
+<p><strong>Livewire v3 is recently released!</strong><br/>
+The Livewire team have done a great job in making it stable, but it was a complete rewrite of Livewire v2. You may encounter issues, so we recommend testing your application thoroughly before using Filament v3 in production.</p>
+</blockquote>
+<h2 id="upgrading-automatically"><a class="heading-anchor" href="#upgrading-automatically"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading automatically</h2>
+<p>The easiest way to upgrade your app is to run the automated upgrade script. This script will automatically upgrade your application to the latest version of Filament and make changes to your code, which handles most breaking changes.</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/upgrade:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.0-stable</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">vendor/bin/filament-v3</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/upgrade:"^3.0-stable" -W --dev
+
+vendor/bin/filament-v3
+</textarea></code></pre>
+<p>Make sure to carefully follow the instructions, and review the changes made by the script. You may need to make some manual changes to your code afterwards, but the script should handle most of the repetitive work for you.</p>
+<p>Finally, you must run <code>php artisan filament:install</code> to finalize the Filament v3 installation. This command must be run for all new Filament projects.</p>
+<p>You can now <code>composer remove filament/upgrade</code> as you don&#39;t need it anymore.</p>
+<blockquote>
+<p>Some plugins you&#39;re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they&#39;ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
+</blockquote>
+<h2 id="upgrading-manually"><a class="heading-anchor" href="#upgrading-manually"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading manually</h2>
+<h3 id="low-impact-changes"><a class="heading-anchor" href="#low-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Low-impact changes</h3>
+<h4 id="action-execution-with-forms"><a class="heading-anchor" href="#action-execution-with-forms"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Action execution with forms</h4>
+<p>In v2, if you passed a string to the <code>action()</code> function, and used a modal, the method with that name on the class would be run when the modal was submitted:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">import_data</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">importData</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">FileUpload</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">file</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;"> Action::make('import_data')
+    -&gt;action('importData')
+    -&gt;form([
+        FileUpload::make('file'),
+    ])
+</textarea></code></pre>
+<p>In v3, passing a string to the <code>action()</code> hard-wires it to run that action when the trigger button is clicked, so it does not open a modal.</p>
+<p>It is recommended to place your logic in a closure function instead. See the <a href="overview">documentation</a> for more information.</p>
+<p>One easy alternative is using <code>Closure::fromCallable()</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">import_data</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">action</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Closure</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">fromCallable</span><span style="color: #89DDFF;">([$this,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">importData</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]))</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('import_data')
+    -&gt;action(Closure::fromCallable([$this, 'importData']))
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/10-upgrade-guide.md" class="text-sm astro-KLTXWB3V" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-KLTXWB3V">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">GitHub discussion</a>
+          </p>
+</div>
+        </article>
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-KLTXWB3V">
+          <div class="astro-KLTXWB3V">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
+                  Previous
+                </dt>
+                <dd class="mt-1 astro-KLTXWB3V">
+                  <a href="/docs/3.x/actions/testing" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-KLTXWB3V">
+                    <span aria-hidden="true" class="astro-KLTXWB3V">&larr;</span> Testing
+                  </a>
+                </dd>
+              </div>
+            
+        </dl>
+      </div>
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-KLTXWB3V">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-KLTXWB3V">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
+                  On this page
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-KLTXWB3V" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;new-requirements&#34;,&#34;text&#34;:&#34;New requirements&#34;,&#34;title&#34;:&#34;New requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-automatically&#34;,&#34;text&#34;:&#34;Upgrading automatically&#34;,&#34;title&#34;:&#34;Upgrading automatically&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading-manually&#34;,&#34;text&#34;:&#34;Upgrading manually&#34;,&#34;title&#34;:&#34;Upgrading manually&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;low-impact-changes&#34;,&#34;text&#34;:&#34;Low-impact changes&#34;,&#34;title&#34;:&#34;Low-impact changes&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#new-requirements" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'new-requirements' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          New requirements
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#upgrading-automatically" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'upgrading-automatically' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Upgrading automatically
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#upgrading-manually" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'upgrading-manually' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Upgrading manually
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-KLTXWB3V">
+                          <li class="astro-KLTXWB3V">
+                              <a href="#low-impact-changes" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'low-impact-changes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Low-impact changes
+                              </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

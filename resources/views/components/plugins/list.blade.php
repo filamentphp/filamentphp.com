@@ -109,10 +109,17 @@
                 filterResult = filterResult.sort((a, b) =>
                     a.name > b.name ? 1 : -1,
                 )
+            } else if (this.selectedSort === 'Popular') {
+                filterResult = filterResult.sort((a, b) =>
+                    a.stars_count < b.stars_count ? 1 : -1,
+                )
             }
 
             // If the search is not empty, show plugins that match the search
             if (this.search) {
+                // Reset page number
+                this.currentPage = 1
+
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((plugin) =>
@@ -467,6 +474,7 @@
                         class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
                     >
                         <option>Newest</option>
+                        <option>Popular</option>
                         <option>Oldest</option>
                         <option>Alphabetical</option>
                     </select>

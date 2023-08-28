@@ -20,6 +20,8 @@ Route::view('/', 'home')->name('home');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 
+Route::view('/team', 'team')->name('team');
+
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
 Route::prefix('/docs')->group(function () {
@@ -92,6 +94,7 @@ Route::prefix('/plugins')->group(function () {
 
     Route::name('plugins.')->group(function () {
         // V2 plugin redirects immediately to V3 plugin page.
+        Route::redirect('/impersonate', '/plugins/joseph-szobody-impersonate');
         Route::redirect('/media-library-pro', '/plugins/ralphjsmit-media-library-manager');
         Route::redirect('/notifications-pro', '/plugins/ralphjsmit-notifications-pro');
         Route::redirect('/onboarding-manager-pro', '/plugins/ralphjsmit-onboarding-manager-pro');

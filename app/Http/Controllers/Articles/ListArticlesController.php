@@ -27,26 +27,36 @@ class ListArticlesController extends Controller
             'articles' => cache()->remember(
                 'articles',
                 now()->addMinutes(15),
-                fn (): array => Article::query()
-                    ->published()
-                    ->orderByDesc('publish_date')
-                    ->with(['author'])
-                    ->get()
-                    ->map(fn (Article $article): array => [
-                        'id' => $article->slug,
-                        'title' => $article->title,
-                        'slug' => $article->slug,
-                        'publish_date' => $article->publish_date->diffForHumans(),
-                        'stars_count' => $article->getStarsCount(),
-                        'author' => [
-                            'name' => $article->author->name,
-                            'avatar' => $article->author->getAvatarUrl(),
-                        ],
-                        'categories' => $article->categories,
-                        'type' => $article->type_slug,
-                        'versions' => $article->versions,
-                    ])
-                    ->all(),
+                function (): array {
+                    $stars = Star::query()
+                        ->toBase()
+                        ->where('starrable_type', 'article')
+                        ->groupBy('starrable_id')
+                        ->selectRaw('count(id) as count, starrable_id')
+                        ->get()
+                        ->pluck('count', 'starrable_id');
+
+                    return Article::query()
+                        ->published()
+                        ->orderByDesc('publish_date')
+                        ->with(['author'])
+                        ->get()
+                        ->map(fn (Article $article): array => [
+                            'id' => $article->slug,
+                            'title' => $article->title,
+                            'slug' => $article->slug,
+                            'publish_date' => $article->publish_date->diffForHumans(),
+                            'stars_count' => $stars[$article->getKey()] ?? 0,
+                            'author' => [
+                                'name' => $article->author->name,
+                                'avatar' => $article->author->getAvatarUrl(),
+                            ],
+                            'categories' => $article->categories,
+                            'type' => $article->type_slug,
+                            'versions' => $article->versions,
+                        ])
+                        ->all();
+                },
             ),
             'articlesCount' => Article::query()
                 ->published()

@@ -473,7 +473,6 @@ svg.DocSearch-Hit-Select-Icon {
         height: 100vh;
         height: -webkit-fill-available;
         height: calc(var(--docsearch-vh, 1vh) * 100);
-        position: absolute;
     }
 
     .DocSearch-Footer {
