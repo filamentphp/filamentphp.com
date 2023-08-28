@@ -7,4 +7,4 @@ twitter_url: https://twitter.com/amendozaaguiar
 sponsor_url: https://github.com/sponsors/amendozaaguiar
 ---
 
-I'm a Colombian based back-end and front-end developer. #php #laravel #html #css #js #reactjs
+I'm a Colombian based back-end and front-end developer.
