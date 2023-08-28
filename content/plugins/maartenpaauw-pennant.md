@@ -2,22 +2,21 @@
 name: Pennant feature flags
 slug: maartenpaauw-pennant
 author_slug: maartenpaauw
-categories: [ panel-builder, table-builder ]
-description: Filament support for `laravel/pennant`.
+categories: [panel-builder, table-builder]
+description: Seamlessly integrate feature flags from Laravel Pennant into Filament.
 anystack_id: 99ea0c8c-ad09-42eb-a524-e17514543ddc
-discord_url:
+discord_url: https://discord.com/channels/883083792112300104/1145610616552300595
 github_repository: maartenpaauw/pennant-for-filament
 has_dark_theme: true
 has_translations: true
 image: maartenpaauw-pennant.jpg
-versions: [ 3 ]
+versions: [3]
 publish_date: 2023-08-21
 ---
 
 # Introduction
 
-Pennant for Filament is a powerful package that seamlessly integrates feature flags from Laravel Pennant into the
-[Filament](https://filamentphp.com/) UI. With this package, managing and controlling feature flags becomes an effortless
+Pennant for Filament is a powerful package that seamlessly integrates feature flags from Laravel Pennant into the [Filament](https://filamentphp.com/) UI. With this package, managing and controlling feature flags becomes an effortless
 task. Not only can you view and modify feature flags associated with the currently logged-in user, but you can also
 manage feature flags for other users and models.
 
