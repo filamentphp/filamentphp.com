@@ -95,10 +95,28 @@
                     >
                         Community
                     </a>
+                    <a
+                        href="{{ route('consulting') }}"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Consulting
+                    </a>
+                    <a
+                        href="https://shop.filamentphp.com"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Shop
+                    </a>
                 </div>
                 <div
                     class="flex flex-col items-start gap-3 text-sm font-medium"
                 >
+                    <a
+                        href="{{ route('team') }}"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Meet Our Team
+                    </a>
                     <a
                         target="_blank"
                         href="https://status.filamentphp.com"
@@ -115,22 +133,10 @@
                     </a>
                     <a
                         target="_blank"
-                        href="https://github.com/sponsors/danharrin"
+                        href="https://github.com/filamentphp/filament?sponsor=1"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Sponsor
-                    </a>
-                    <a
-                        href="https://shop.filamentphp.com"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                    >
-                        Shop
-                    </a>
-                    <a
-                        href="{{ route('consulting') }}"
-                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                    >
-                        Consulting
                     </a>
                 </div>
             </div>

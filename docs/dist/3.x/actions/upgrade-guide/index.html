@@ -597,13 +597,10 @@
 </ul>
 <p>Please upgrade Filament before upgrading to Livewire v3. Instructions on how to upgrade Livewire can be found <a href="https://livewire.laravel.com/docs/upgrading">here</a>.</p>
 <blockquote>
-<p><strong>Livewire v3 is still in beta!</strong><br/>
-Although breaking changes should be minimal, we recommend testing your application thoroughly before using Filament v3 in production.</p>
+<p><strong>Livewire v3 is recently released!</strong><br/>
+The Livewire team have done a great job in making it stable, but it was a complete rewrite of Livewire v2. You may encounter issues, so we recommend testing your application thoroughly before using Filament v3 in production.</p>
 </blockquote>
 <h2 id="upgrading-automatically"><a class="heading-anchor" href="#upgrading-automatically"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading automatically</h2>
-<p>Since Livewire v3 is still in beta, set the <code>minimum-stability</code> in your <code>composer.json</code> to <code>dev</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">minimum-stability</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">dev</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"minimum-stability": "dev",
-</textarea></code></pre>
 <p>The easiest way to upgrade your app is to run the automated upgrade script. This script will automatically upgrade your application to the latest version of Filament and make changes to your code, which handles most breaking changes.</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/upgrade:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.0-stable</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">vendor/bin/filament-v3</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/upgrade:"^3.0-stable" -W --dev
 
@@ -616,9 +613,6 @@ vendor/bin/filament-v3
 <p>Some plugins you&#39;re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they&#39;ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
 </blockquote>
 <h2 id="upgrading-manually"><a class="heading-anchor" href="#upgrading-manually"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading manually</h2>
-<p>Since Livewire v3 is still in beta, set the <code>minimum-stability</code> in your <code>composer.json</code> to <code>dev</code>:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">minimum-stability</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">dev</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"minimum-stability": "dev",
-</textarea></code></pre>
 <h3 id="low-impact-changes"><a class="heading-anchor" href="#low-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Low-impact changes</h3>
 <h4 id="action-execution-with-forms"><a class="heading-anchor" href="#action-execution-with-forms"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Action execution with forms</h4>
 <p>In v2, if you passed a string to the <code>action()</code> function, and used a modal, the method with that name on the class would be run when the modal was submitted:</p>
