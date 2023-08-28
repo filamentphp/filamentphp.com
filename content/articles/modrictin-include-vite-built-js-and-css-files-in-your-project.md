@@ -1,5 +1,5 @@
 ---
-name: Have multiple Vite and Tailwind bundles in your Filament project
+title: Have multiple Vite and Tailwind bundles in your Filament project
 slug: modrictin-include-vite-built-js-and-css-files-in-your-project
 author_slug: modrictin
 publish_date: 2023-08-17

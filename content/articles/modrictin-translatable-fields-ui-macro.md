@@ -1,5 +1,5 @@
 ---
-name: Show the users which fields are translatable
+title: Show the users which fields are translatable
 slug: modrictin-translatable-fields-ui-macro
 author_slug: modrictin
 publish_date: 2023-08-17
@@ -13,7 +13,7 @@ If you are using `filament/spatie-laravel-translatable-plugin` you probably want
 
 With this little trick you can show the users which fields are translatable with the helper text and a nice icon.
 
-![translatable-icon-image](images/content/articles/modrictin-translatable-ui-macro/translatable-icon.webp)
+![translatable-icon-image](/images/content/articles/modrictin-translatable-ui-macro/translatable-icon.webp)
 
 Simply use
 
