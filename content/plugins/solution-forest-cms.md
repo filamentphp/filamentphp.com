@@ -1,14 +1,15 @@
 ---
 name: Website CMS Management
-slug: solution-forest-filament-cms-website
+slug: solution-forest-cms-website
 anystack_id: 991dd482-2b68-4ed0-90ba-5b13ed01ecaf
 author_slug: solution-forest
 categories: [kit, developer-tool]
 description: The Filament CMS Website Plugin is specifically built for website owners who use Filament CMS to manage their website content.
+discord_url: https://discord.com/channels/883083792112300104/1107360799636340880
 github_repository: solutionforest/filament-cms-website-plugin
 has_dark_theme: false
 has_translations: true
-image: solution-forest-filament-cms-website.jpg
+image: solution-forest-cms-website.png
 versions: [2, 3]
 publish_date: 2023-08-23
 ---
