@@ -904,6 +904,7 @@ Filter::make('is_admin')
     -&gt;label('Administrators only?')
     -&gt;indicator('Administrators')
 </textarea></code></pre>
+<p>If you are using a <a href="#custom-filter-forms">custom filter form</a>, you should use <a href="#custom-active-indicators"><code>indicateUsing()</code></a> to display an active indicator.</p>
 <h3 id="custom-active-indicators"><a class="heading-anchor" href="#custom-active-indicators"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Custom active indicators</h3>
 <p>Not all indicators are simple, so you may need to use <code>indicateUsing()</code> to customize which indicators should be shown at any time.</p>
 <p>For example, if you have a custom date filter, you may create a custom indicator that formats the selected date:</p>
