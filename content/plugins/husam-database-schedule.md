@@ -1,5 +1,5 @@
 ---
-name: Filament Database Schedule
+name: Database Schedule
 slug: husam-database-schedule
 author_slug: husam-tariq
 categories: [developer-tool, panel-builder, kit]
