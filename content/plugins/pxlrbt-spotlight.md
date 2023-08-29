@@ -10,6 +10,6 @@ github_repository: pxlrbt/filament-spotlight
 has_dark_theme: false
 has_translations: true
 image: pxlrbt-spotlight.png
-versions: [2]
+versions: [2, 3]
 publish_date: 2022-03-24
 ---

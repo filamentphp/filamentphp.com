@@ -366,13 +366,13 @@
         {{-- Takeoff --}}
         <div
             x-ref="take_off"
-            class="pt-3 text-3xl font-extrabold"
+            class="px-4 pt-3 text-3xl font-extrabold"
         >
             Ready to take off?
         </div>
         <div
             x-ref="take_off_message"
-            class="mx-auto max-w-md pt-2 text-dolphin"
+            class="mx-auto max-w-md px-4 pt-2 text-dolphin"
         >
             Give Filament a try, and we bet that you’ll be amazed in the first
             few minutes.
@@ -381,7 +381,7 @@
         {{-- Get Started Link --}}
         <div
             x-ref="getstarted"
-            class="pt-10"
+            class="px-4 pt-10"
         >
             <a
                 href="{{ route('docs') }}"
