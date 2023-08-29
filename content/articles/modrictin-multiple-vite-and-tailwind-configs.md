@@ -155,7 +155,7 @@ You can now build multiple Vite and Tailwind configurations for your Filament pr
 
 Check out my other article on how to include vite built these files in your filament project.
 
-[How to include vite built files in your filament project](https://filamentphp.com/modrictin-include-vite-built-js-and-css-files-in-your-project)
+[How to include vite built files in your filament project](https://filamentphp.com/community/modrictin-include-vite-built-js-and-css-files-in-your-project)
 
 Please email me to [modrictin7@gmail.com](mailto:modrictin7@gmail.com) if you have any feedback, question or suggestion.
 
