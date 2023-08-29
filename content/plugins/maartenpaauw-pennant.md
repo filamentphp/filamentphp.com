@@ -32,7 +32,7 @@ Filament, you can perform these actions directly from Filament's user-friendly i
 
 Check out this video demonstrating how straightforward it is to activate and deactivate feature flags using Filament:
 
-https://user-images.githubusercontent.com/4550875/262095665-6ecfd5b5-bd49-4226-99a7-13a7940d8735.mp4
+[![Demo video](https://user-images.githubusercontent.com/4550875/264145719-ae62bac9-3a7b-4513-8d15-93a965ca37e7.png)](https://www.youtube.com/watch?v=9quhtxAgHr4)
 
 # Features
 
@@ -81,7 +81,7 @@ _Filtering rich feature flags._
 
 _Translated feature flags._
 
-![Feature flags that cannot be deactivated](https://user-images.githubusercontent.com/4550875/262096682-c24986d1-39d4-4a01-8be1-9c22c84d5d06.png)
+![Feature flags that cannot be deactivated](https://user-images.githubusercontent.com/4550875/264147411-a9933ce4-fc78-4d44-8d05-6b780b506d3b.png)
 
 _Feature flags that cannot be deactivated._
 
