@@ -588,7 +588,7 @@
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <blockquote>
-<p>If you see anything missing from this guide, please do not hesitate to <a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/14-upgrade-guide.md">make a pull request</a> to our repository! Any help is appreciated!</p>
+<p>If you see anything missing from this guide, please do not hesitate to <a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/10-upgrade-guide.md">make a pull request</a> to our repository! Any help is appreciated!</p>
 </blockquote>
 <h2 id="new-requirements"><a class="heading-anchor" href="#new-requirements"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>New requirements</h2>
 <ul>
@@ -613,6 +613,7 @@ vendor/bin/filament-v3
 <p>Some plugins you&#39;re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they&#39;ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
 </blockquote>
 <h2 id="upgrading-manually"><a class="heading-anchor" href="#upgrading-manually"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading manually</h2>
+<p>After upgrading the dependency via Composer, you should execute <code>php artisan filament:upgrade</code> in order to clear any Laravel caches and publish the new frontend assets.</p>
 <h3 id="low-impact-changes"><a class="heading-anchor" href="#low-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Low-impact changes</h3>
 <h4 id="action-execution-with-forms"><a class="heading-anchor" href="#action-execution-with-forms"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Action execution with forms</h4>
 <p>In v2, if you passed a string to the <code>action()</code> function, and used a modal, the method with that name on the class would be run when the modal was submitted:</p>
