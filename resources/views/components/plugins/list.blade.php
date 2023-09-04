@@ -8,7 +8,7 @@
             searchEngine = new MiniSearch({
                 fields: ['name', 'description', 'github_repository', 'author.name'],
                 searchOptions: {
-                    fuzzy: 0.1,
+                    fuzzy: true,
                     prefix: true,
                 },
                 extractField: (document, fieldName) => {
