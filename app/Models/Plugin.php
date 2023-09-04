@@ -34,6 +34,7 @@ class Plugin extends Model implements Starrable
         $table->string('anystack_id')->nullable();
         $table->string('author_slug');
         $table->json('categories')->nullable();
+        $table->string('checkout_url')->nullable();
         $table->text('description')->nullable();
         $table->string('docs_url')->nullable();
         $table->json('docs_urls')->nullable();
@@ -43,6 +44,7 @@ class Plugin extends Model implements Starrable
         $table->boolean('has_translations')->default(false);
         $table->string('image')->nullable();
         $table->string('name');
+        $table->string('price')->nullable();
         $table->string('slug');
         $table->string('thumbnail')->nullable();
         $table->string('url')->nullable();
@@ -93,11 +95,15 @@ class Plugin extends Model implements Starrable
 
     public function isFree(): bool
     {
-        return blank($this->anystack_id);
+        return blank($this->price) && blank($this->anystack_id);
     }
 
     public function getCheckoutUrl(): ?string
     {
+        if (filled($this->checkout_url)) {
+            return $this->checkout_url;
+        }
+
         return cache()->get($this->getCheckoutUrlCacheKey());
     }
 
@@ -105,6 +111,10 @@ class Plugin extends Model implements Starrable
     {
         if ($this->isFree()) {
             return 'Free';
+        }
+
+        if (filled($this->price)) {
+            return $this->price;
         }
 
         return cache()->get($this->getPriceCacheKey()) ?: '$0.00';
