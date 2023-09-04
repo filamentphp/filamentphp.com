@@ -3,13 +3,14 @@ name: Minimal Theme
 slug: filament-minimal-theme
 author_slug: filament
 categories: [form-builder, panel-builder, table-builder, theme]
-checkout_url: https://filamentthemes.lemonsqueezy.com/checkout/buy/58c32592-f76a-4685-aba2-65487cbcd3cc?discount=0
+checkout_url: https://filamentthemes.lemonsqueezy.com/checkout/buy/58c32592-f76a-4685-aba2-65487cbcd3cc?embed=1&logo=0&discount=0
 description: Featuring a clean design with less rounding, a lighter background and redesigned UI components.
 discord_url:
 github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
 image: filament-minimal-theme.png
+is_lemon_squeezy_embedded: true
 is_presale: true
 price: € 49
 versions: [3]
