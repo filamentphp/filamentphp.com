@@ -601,13 +601,13 @@ export default defineConfig({
 <blockquote>
 <p>Upgrading from Filament v2? Please review the <a href="upgrade-guide">upgrade guide</a>.</p>
 </blockquote>
-<p>Filament automatically upgrades to the latest non-breaking version when you run <code>composer update</code>. If you notice that Filament is not upgrading automatically, ensure that the <code>filament:upgrade</code> command is present in your <code>composer.json</code>:</p>
+<p>Filament automatically upgrades to the latest non-breaking version when you run <code>composer update</code>. After any updates, all Laravel caches need to be cleared, and frontend assets need to be republished. You can do this all at once using the <code>filament:upgrade</code> command, which should have been added to your <code>composer.json</code> file when you ran <code>filament:install</code> the first time:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">post-autoload-dump</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">: </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">@php artisan filament:upgrade</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">]</span><span style="color: #A6ACCD;">,</span></div><textarea data-torchlight-original="true" style="display: none !important;">"post-autoload-dump": [
     // ...
     "@php artisan filament:upgrade"
 ],
 </textarea></code></pre>
-<p>If you prefer not to use automatic upgrades, remove the <code>filament:upgrade</code> command from your <code>composer.json</code> and run the following commands:</p>
+<p>Please note that <code>filament:upgrade</code> does not actually handle the update process, as Composer does that already. If you&#39;re upgrading manually without a <code>post-autoload-dump</code> hook, you can run the command yourself:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">update</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:upgrade</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer update
 
 php artisan filament:upgrade

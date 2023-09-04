@@ -23,6 +23,6 @@ class CreateArticlesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('tricks');
+        Schema::dropIfExists('articles');
     }
 }

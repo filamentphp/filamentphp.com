@@ -772,6 +772,7 @@ vendor/bin/filament-v3
 <p>Some plugins you&#39;re using may not be available in v3 just yet. You could temporarily remove them from your <code>composer.json</code> file until they&#39;ve been upgraded, replace them with a similar plugins that are v3-compatible, wait for the plugins to be upgraded before upgrading your app, or even write PRs to help the authors upgrade them.</p>
 </blockquote>
 <h2 id="upgrading-manually"><a class="heading-anchor" href="#upgrading-manually"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading manually</h2>
+<p>After upgrading the dependency via Composer, you should execute <code>php artisan filament:upgrade</code> in order to clear any Laravel caches and publish the new frontend assets.</p>
 <h3 id="high-impact-changes"><a class="heading-anchor" href="#high-impact-changes"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>High-impact changes</h3>
 <h4 id="config-file-renamed-and-combined-with-other-filament-packages"><a class="heading-anchor" href="#config-file-renamed-and-combined-with-other-filament-packages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Config file renamed and combined with other Filament packages</h4>
 <p>Only one config file is now used for all Filament packages. Most configuration has been moved into other parts of the codebase, and little remains. You should use the v3 documentation as a reference when replace the configuration options you did modify. To publish the new configuration file and remove the old one, run:</p>
