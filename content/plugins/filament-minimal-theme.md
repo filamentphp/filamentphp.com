@@ -10,6 +10,7 @@ github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
 image: filament-minimal-theme.png
+is_presale: true
 price: € 49
 versions: [3]
 publish_date: 2023-09-04

@@ -24,6 +24,7 @@ class Plugin extends Model implements Starrable
         'categories' => 'array',
         'has_dark_theme' => 'boolean',
         'has_translations' => 'boolean',
+        'is_presale' => 'boolean',
         'versions' => 'array',
         'publish_date' => 'date',
         'docs_urls' => 'array',
@@ -43,6 +44,7 @@ class Plugin extends Model implements Starrable
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
         $table->string('image')->nullable();
+        $table->boolean('is_presale')->nullable()->default(false);
         $table->string('name');
         $table->string('price')->nullable();
         $table->string('slug');
