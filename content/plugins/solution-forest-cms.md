@@ -11,40 +11,8 @@ has_dark_theme: false
 has_translations: true
 image: solution-forest-cms-website.png
 versions: [2, 3]
-publish_date: 2023-08-23
+publish_date: 2023-05-14
 ---
-
-- [Filament CMS Website Plugin](#filament-cms-website-plugin)
-- [Version Update](#version-update)
-- [Getting Started](#getting-started)
-  - [Installation via Composer](#installation-via-composer)
-  - [Updating the Filament CMS Website Plugin](#updating-the-filament-cms-website-plugin)
-- [Documentation](#documentation)
-  - [General Page](#general-page)
-    - [Create basic draft page](#create-basic-draft-page)
-    - [Publish draft page](#publish-draft-page)
-    - [Un-publish published page](#un-publish-published-page)
-    - [Schedule publish page](#schedule-publish-page)
-  - [Navigation](#navigation)
-    - [Example](#example)
-    - [Get the navigation](#get-the-navigation)
-    - [Templates](#templates)
-    - [Create Template](#create-template)
-    - [Create Template Renderer](#create-template-renderer)
-  - [Customize front-end middleware](#customize-front-end-middleware)
-  - [SEO](#seo)
-  - [Change Theme](#change-theme)
-  - [Data-type Page](#data-type-page)
-  - [Content-type Page](#content-type-page)
-  - [Translation](#translation)
-  - [Tag](#tag)
-  - [Audit logs](#audit-logs)
-- [Recommended Plugins](#recommended-plugins)
-- [Roadmap](#roadmap)
-- [License](#license)
-
-Filament CMS Website Plugin 
-========================================================================
 
 The Filament CMS Website Plugin is specifically built for website owners who use Filament CMS to manage their website content through the [Filament Admin Panel](https://github.com/filamentphp/filament).
 
