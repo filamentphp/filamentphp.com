@@ -1,6 +1,6 @@
 ---
 name: Web Installer
-slug: shipu-ahamed-web-installer
+slug: shipuahamed-web-installer
 author_slug: shipuahamed
 categories: [panel-builder, form-builder, form-field]
 description: This package provides to install your application easily, without having to worry about setting up your environment before starting with the installation process.
