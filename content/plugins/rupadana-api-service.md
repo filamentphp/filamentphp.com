@@ -1,6 +1,6 @@
 ---
-name: Filament API Service
-slug: filament-api-service
+name: API Service
+slug: api-service
 author_slug: rupadana
 categories: [kit]
 description: A simple api service for supporting Filament Resource.
