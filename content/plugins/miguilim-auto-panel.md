@@ -1,6 +1,6 @@
 ---
 name: Auto Panel
-slug: auto-panel
+slug: miguilim-auto-panel
 author_slug: miguilim
 categories: [developer-tool, kit, panel-builder]
 description: Construct your Filament panel Resources and Relation Managers at execution time like magic.
