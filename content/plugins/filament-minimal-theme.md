@@ -14,7 +14,7 @@ is_lemon_squeezy_embedded: true
 is_presale: true
 price: € 49
 versions: [3]
-publish_date: 2023-09-04
+publish_date: 2023-09-05
 ---
 
 Want your Filament applications to look more streamlined? The official Filament Minimal Theme features a clean design with less rounding, a lighter background and redesigned UI components. No need to hire a designer to make your projects look different from the default Filament style. Simply install our Composer package and you're good to go. Perfect for corporate software.
