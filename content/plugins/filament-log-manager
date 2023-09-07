@@ -1,0 +1,14 @@
+---
+name: Log Manager
+slug: filament-log-manager
+author_slug: filip-fonal
+categories: [developer-tool, analytics]
+description: A simple and clear interface to preview, download and delete Laravel log files using Filament Admin.
+docs_url: https://github.com/filipfonal/filament-log-manager/blob/main/README.md
+github_repository: https://github.com/filipfonal/filament-log-manager
+has_dark_theme: true
+has_translations: true
+image: filament-log-manager.jpg
+versions: [2]
+publish_date: 2022-08-27
+---
