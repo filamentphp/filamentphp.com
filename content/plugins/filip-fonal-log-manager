@@ -1,6 +1,6 @@
 ---
 name: Log Manager
-slug: filament-log-manager
+slug: filip-fonal-log-manager
 author_slug: filip-fonal
 categories: [developer-tool, analytics]
 description: A simple and clear interface to preview, download and delete Laravel log files using Filament Admin.
