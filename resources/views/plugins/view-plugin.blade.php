@@ -101,10 +101,20 @@
                     <a
                         href="{{ $plugin->getCheckoutUrl() }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                        @class([
+                            'block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]',
+                            'lemonsqueezy-button' => $plugin->is_lemon_squeezy_embedded,
+                        ])
                     >
-                        Buy for {{ $plugin->getPrice() }}
+                        {{ $plugin->is_presale ? 'Preorder' : 'Buy' }} for
+                        {{ $plugin->getPrice() }}
                     </a>
+                    @if ($plugin->is_lemon_squeezy_embedded)
+                        <script
+                            src="https://assets.lemonsqueezy.com/lemon.js"
+                            defer
+                        ></script>
+                    @endif
                 @endif
             </div>
         </div>
