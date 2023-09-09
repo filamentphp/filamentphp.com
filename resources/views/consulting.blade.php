@@ -7,4 +7,5 @@
 <x-layouts.app>
     <x-consulting.hero />
     <x-consulting.experts />
+    <x-consulting.kirschbaum />
 </x-layouts.app>

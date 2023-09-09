@@ -17,6 +17,19 @@
                         duration: 0.7,
                         ease: 'circ.out',
                     },
+                )
+                .fromTo(
+                    $refs.quick_question,
+                    {
+                        autoAlpha: 0,
+                        x: -20,
+                    },
+                    {
+                        autoAlpha: 1,
+                        x: 0,
+                        duration: 0.7,
+                        ease: 'circ.out',
+                    },
                     '<',
                 )
         }
@@ -26,7 +39,7 @@
     {{-- Consultant List --}}
     <div
         x-ref="list"
-        class="grid grid-cols-2 gap-x-20 gap-y-10"
+        class="grid grid-cols-1 gap-14 md:grid-cols-2"
     >
         <x-consulting.consultant
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
@@ -49,15 +62,18 @@
     </div>
 
     {{-- Quick Call Section --}}
-    <div class="pt-14">
+    <div
+        x-ref="quick_question"
+        class="pt-10"
+    >
         <div
-            class="flex flex-wrap items-center justify-between gap-10 rounded-xl bg-[#FFE5C8] p-10"
+            class="flex flex-wrap items-center justify-center gap-10 rounded-xl bg-[#FFE5C8] p-10 lg:justify-between"
         >
-            <div class="space-y-2">
+            <div class="space-y-2 text-center lg:text-left">
                 <div class="text-2xl font-bold text-[#544945]">
                     Have a quick support question?
                 </div>
-                <div class="text-[#AA8B7C] font-medium">
+                <div class="font-medium text-[#AA8B7C]">
                     Zep’s here to jump on a call and get you back on track.
                 </div>
             </div>
