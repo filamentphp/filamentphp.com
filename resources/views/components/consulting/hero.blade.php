@@ -67,7 +67,10 @@
                 x-ref="message"
                 class="max-w-lg pt-10 text-lg font-medium text-dolphin"
             >
-                If you're looking for dedicated help with your Filament project, we're here for you. Whether you’re a solo developer or running a big business, we have different consulting choices for you to choose from!
+                If you're looking for dedicated help with your Filament project,
+                we're here for you. Whether you’re a solo developer or running a
+                big business, we have different consulting choices for you to
+                choose from!
             </div>
         </div>
 
