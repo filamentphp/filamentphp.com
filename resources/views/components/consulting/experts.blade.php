@@ -34,39 +34,26 @@
                 )
         }
     "
-    class="mx-auto w-full max-w-6xl px-10 pt-20"
+    class="mx-auto w-full max-w-5xl px-10 pt-20"
 >
-    {{-- Title --}}
-    <div
-        x-ref="title"
-        class="flex items-center gap-5"
-    >
-        <div class="shrink-0 text-2xl font-semibold text-evening">
-            Choose your expert
-        </div>
-        <div
-            class="h-0.5 w-full rounded-full bg-evening md:max-w-[15rem]"
-        ></div>
-    </div>
-
     {{-- Consultant List --}}
     <div
         x-ref="list"
-        class="space-y-5 pb-20"
+        class="grid grid-cols-2 gap-y-10 gap-x-20"
     >
         <x-consulting.consultant
-            number="01"
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
             name="Dan Harrin"
-            title="Lead Developer"
-            url="https://www.ringerhq.com/experts/danharrin"
-        />
+            title="Creator of Filament"
+        >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore repudiandae qui facilis natus. Soluta, sed sequi minus voluptatem distinctio et architecto.
+        </x-consulting.consultant>
         <x-consulting.consultant
-            number="02"
             avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
             name="Zep Fietje"
             title="Lead UI Designer & Developer"
-            url="https://zepfietje.com/consult?ref=filamentphp.com"
-        />
+        >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore repudiandae qui facilis natus. Soluta, sed sequi minus voluptatem distinctio et architecto.
+        </x-consulting.consultant>
     </div>
 </section>
