@@ -16,7 +16,6 @@
                     duration: 0.7,
                     ease: 'circ.out',
                 },
-                '<',
             )
         }
     "

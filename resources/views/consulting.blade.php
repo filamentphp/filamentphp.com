@@ -8,4 +8,5 @@
     <x-consulting.hero />
     <x-consulting.experts />
     <x-consulting.kirschbaum />
+    <x-consulting.consulting-testimonials />
 </x-layouts.app>
