@@ -104,7 +104,7 @@
             <div class="flex flex-wrap items-center gap-4">
                 <div class="flex items-center gap-3">
                     <div class="">And...</div>
-                    <div class="flex">
+                    <div class="group/overlapping-experts flex">
                         <img
                             src="https://avatars.githubusercontent.com/u/41773797?v=4"
                             alt="Dan Harrin"
@@ -114,25 +114,25 @@
                         <img
                             src="https://avatars.githubusercontent.com/u/41773797?v=4"
                             alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/41773797?v=4"
                             alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/41773797?v=4"
                             alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/41773797?v=4"
                             alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                     </div>
