@@ -2,11 +2,10 @@
 
 namespace Tests;
 
-use Illuminate\Support\Collection;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Collection;
 use Laravel\Dusk\TestCase as BaseTestCase;
 
 abstract class DuskTestCase extends BaseTestCase
@@ -20,7 +19,7 @@ abstract class DuskTestCase extends BaseTestCase
      */
     public static function prepare(): void
     {
-        if (!static::runningInSail()) {
+        if (! static::runningInSail()) {
             static::startChromeDriver();
         }
     }
@@ -42,7 +41,8 @@ abstract class DuskTestCase extends BaseTestCase
         return RemoteWebDriver::create(
             $_ENV['DUSK_DRIVER_URL'] ?? 'http://localhost:9515',
             DesiredCapabilities::chrome()->setCapability(
-                ChromeOptions::CAPABILITY, $options
+                ChromeOptions::CAPABILITY,
+                $options
             )
         );
     }
