@@ -10,6 +10,6 @@ github_repository: filipfonal/filament-log-manager
 has_dark_theme: true
 has_translations: true
 image: filip-fonal-log-manager.png
-versions: [2,3]
+versions: [2, 3]
 publish_date: 2022-08-27
 ---
