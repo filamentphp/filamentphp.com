@@ -113,3 +113,4 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
+Route::redirect('/themes', '/plugins/filament-minimal-theme');
