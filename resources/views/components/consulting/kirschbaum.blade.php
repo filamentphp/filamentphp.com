@@ -109,31 +109,31 @@
                         <img
                             src="https://avatars.githubusercontent.com/u/13571642?v=4"
                             alt="Luis Güette"
-                            class="h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E]"
+                            class="h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/5186174?v=4"
                             alt="Adam Parker"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/11881203?v=4"
                             alt="Alex Six"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/10821263?v=4"
                             alt="Derek Goetz"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="https://avatars.githubusercontent.com/u/6799341?v=4"
                             alt="Kevin Ullyott"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                     </div>
