@@ -4,6 +4,13 @@
     x-ref="section"
     x-init="
         () => {
+            // Reset the page number on search input change
+            $watch('search', (newValue, oldValue) => {
+                if (newValue !== oldValue) {
+                    currentPage = 1
+                }
+            })
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['title', 'author.name'],
@@ -84,9 +91,6 @@
 
             // If the search is not empty, show articles that match the search
             if (this.search) {
-                // Reset page number
-                this.currentPage = 1
-
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((article) =>
