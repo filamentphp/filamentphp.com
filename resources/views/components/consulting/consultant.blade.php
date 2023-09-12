@@ -45,7 +45,7 @@
         ></div>
 
         {{-- Description --}}
-        <div class="px-3 text-dolphin">
+        <div class="px-3 prose prose-strong:text-burnt-dolphin prose-a:text-burnt-dolphin text-dolphin">
             {{ $slot }}
         </div>
     </div>

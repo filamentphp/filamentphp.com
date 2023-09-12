@@ -46,18 +46,20 @@
             name="Dan Harrin"
             title="Creator of Filament"
         >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            labore repudiandae qui facilis natus. Soluta, sed sequi minus
-            voluptatem distinctio et architecto.
+            <strong>Dan</strong> leads the Filament project from <strong>Cardiff, United Kingdom</strong>. He
+            works for <a href="#kirschbaum">Kirschbaum</a> as a Lead Developer, which is a Laravel-partnered
+            agency full of Filament and Laravel experts. Dan and the rest of the
+            Kirschbaum team are <a href="#kirschbaum">ready to take on your projects</a>, whatever the size!
         </x-consulting.consultant>
+
         <x-consulting.consultant
             avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
             name="Zep Fietje"
             title="Lead UI Designer & Developer"
         >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            labore repudiandae qui facilis natus. Soluta, sed sequi minus
-            voluptatem distinctio et architecto.
+            <strong>Zep</strong> is a freelance developer and consultant, specialising in UI design, but also
+            offering a wealth of development experience to the Filament team.
+            He's based in <strong>Eindhoven, Netherlands</strong>, and is <a href="https://zepfietje.com/consult?ref=filamentphp.com" target="_blank">available to answer your support questions</a> about Filament, on a one-off or recurring basis.
         </x-consulting.consultant>
     </div>
 

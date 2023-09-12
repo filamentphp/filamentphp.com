@@ -1,6 +1,7 @@
 <section
     x-cloak
     x-data="{}"
+    id="kirschbaum"
     x-init="
         () => {
             if (reducedMotion) return
@@ -106,38 +107,38 @@
                     <div class="">And...</div>
                     <div class="group/overlapping-experts flex">
                         <img
-                            src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                            alt="Dan Harrin"
-                            class="h-10 w-10 rounded-full ring-1 ring-white"
+                            src="https://avatars.githubusercontent.com/u/13571642?v=4"
+                            alt="Luis Güette"
+                            class="h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E]"
                             loading="lazy"
                         />
                         <img
-                            src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                            alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            src="https://avatars.githubusercontent.com/u/5186174?v=4"
+                            alt="Adam Parker"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
-                            src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                            alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            src="https://avatars.githubusercontent.com/u/11881203?v=4"
+                            alt="Alex Six"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
-                            src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                            alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            src="https://avatars.githubusercontent.com/u/10821263?v=4"
+                            alt="Derek Goetz"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
-                            src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                            alt="Dan Harrin"
-                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
+                            src="https://avatars.githubusercontent.com/u/6799341?v=4"
+                            alt="Kevin Ullyott"
+                            class="-ml-4 h-10 w-10 rounded-full ring-1 ring-white bg-[#58597E] transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                     </div>
                 </div>
-                <div class="">
+                <div>
                     <div class="text-2xl font-black">30+</div>
                     <div class="text-xs">Other Laravel Experts</div>
                 </div>
