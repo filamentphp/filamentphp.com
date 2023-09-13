@@ -1,4 +1,0 @@
----
-name: Livewire
-slug: livewire
----

@@ -45,6 +45,8 @@ class AppServiceProvider extends ServiceProvider
             'plugin' => Plugin::class,
         ]);
 
-        URL::forceScheme('https');
+        if (!app()->environment('testing')) {
+            URL::forceScheme('https');
+        }
     }
 }
