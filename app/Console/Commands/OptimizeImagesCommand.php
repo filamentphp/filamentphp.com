@@ -3,9 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Throwable;
 use Spatie\Image\Image;
 use Spatie\Image\Manipulations;
+use Throwable;
 
 class OptimizeImagesCommand extends Command
 {
@@ -82,7 +82,7 @@ class OptimizeImagesCommand extends Command
             foreach ($files as $file) {
                 try {
                     $webpFileName = pathinfo($file, PATHINFO_FILENAME) . '.webp';
-                    
+
                     Image::load(base_path("content/{$directory}/{$file}"))
                         ->fit(Manipulations::FIT_CONTAIN, 1024, 576)
                         ->format(Manipulations::FORMAT_WEBP)
