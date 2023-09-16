@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/savannabits/filament-signature-pad/m
 github_repository: savannabits/filament-signature-pad
 has_dark_theme: true
 has_translations: true
-image: coolsam-signature-pad.png
+image: coolsam-signature-pad.webp
 versions: [2, 3]
 publish_date: 2023-08-11
 ---

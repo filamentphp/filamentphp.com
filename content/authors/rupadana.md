@@ -1,7 +1,7 @@
 ---
 name: Rupadana
 slug: rupadana
-avatar: rupadana.jpeg
+avatar: rupadana.webp
 github_url: https://github.com/rupadana
 ---
 

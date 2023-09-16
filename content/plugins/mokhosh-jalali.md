@@ -9,8 +9,8 @@ docs_url: https://raw.githubusercontent.com/mokhosh/filament-jalali/main/README.
 github_repository: mokhosh/filament-jalali
 has_dark_theme: true
 has_translations: true
-image: mokhosh-jalali.jpg
-thumbnail: mokhosh-jalali.jpg
+image: mokhosh-jalali.webp
+thumbnail: mokhosh-jalali.webp
 versions: [2, 3]
 publish_date: 2023-07-24
 ---

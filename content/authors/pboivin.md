@@ -1,7 +1,7 @@
 ---
 name: Patrick Boivin
 slug: pboivin
-avatar: pboivin.jpg
+avatar: pboivin.webp
 github_url: https://github.com/pboivin
 twitter_url: https://twitter.com/pboivinca
 ---

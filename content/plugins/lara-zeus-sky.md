@@ -10,8 +10,8 @@ url: https://larazeus.com/sky
 github_repository: lara-zeus/sky
 has_dark_theme: true
 has_translations: true
-image: lara-zeus-sky.png
-thumbnail: lara-zeus-sky.png
+image: lara-zeus-sky.webp
+thumbnail: lara-zeus-sky.webp
 versions: [2, 3]
 publish_date: 2023-07-23
 ---

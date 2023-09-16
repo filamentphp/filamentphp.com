@@ -9,7 +9,7 @@ discord_url: https://discord.com/channels/883083792112300104/993463038357274635
 github_repository: ralphjsmit/laravel-filament-onboard
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-onboarding-manager-pro.jpg
+image: ralphjsmit-onboarding-manager-pro.webp
 versions: [2, 3]
 publish_date: 2023-07-17
 ---

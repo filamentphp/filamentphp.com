@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/webbingbrasil/filament-maps/main/REA
 github_repository: webbingbrasil/filament-maps
 has_dark_theme: true
 has_translations: false
-image: dmandrade-maps.jpg
+image: dmandrade-maps.webp
 versions: [2]
 publish_date: 2022-08-30
 ---

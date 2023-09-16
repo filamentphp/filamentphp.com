@@ -9,13 +9,13 @@ discord_url: https://discord.com/channels/883083792112300104/1093480983988281394
 github_repository: archilex/filament-filter-sets
 has_dark_theme: true
 has_translations: true
-image: kenneth-sese-filter-sets.png
+image: kenneth-sese-filter-sets.webp
 versions: [2, 3]
 publish_date: 2023-07-23
 ---
 
 # Filter Sets
-![Example with link favorite bar](https://user-images.githubusercontent.com/6097099/257302665-3a51440f-0790-4433-9c77-d7849a76845b.png)
+![Example with link favorite bar](https://user-images.githubusercontent.com/6097099/257302665-3a51440f-0790-4433-9c77-d7849a76845b.webp)
 
 ## Introduction
 

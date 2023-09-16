@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/ralphjsmit/laravel-filament-componen
 github_repository: ralphjsmit/laravel-filament-components
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-components.jpg
+image: ralphjsmit-components.webp
 versions: [2, 3]
 publish_date: 2023-07-17
 ---

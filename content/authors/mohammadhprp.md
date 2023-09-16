@@ -1,7 +1,7 @@
 ---
 name: Mohammadhprp
 slug: mohammadhprp
-avatar: mohammadhprp.jpg
+avatar: mohammadhprp.webp
 github_url: https://github.com/mohammadhprp
 twitter_url: https://twitter.com/mohammadhprp
 ---

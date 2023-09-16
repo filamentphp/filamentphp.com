@@ -9,7 +9,7 @@ discord_url: https://discord.com/channels/883083792112300104/1080807837833384017
 github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
-image: filament-minimal-theme.png
+image: filament-minimal-theme.webp
 is_lemon_squeezy_embedded: true
 is_presale: true
 price: € 49

@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/husam-tariq/filament-timepicker/3.0.
 github_repository: husam-tariq/filament-timepicker
 has_dark_theme: true
 has_translations: true
-image: husam-time-picker.jpg
+image: husam-time-picker.webp
 versions: [2, 3]
 publish_date: 2022-12-23
 ---

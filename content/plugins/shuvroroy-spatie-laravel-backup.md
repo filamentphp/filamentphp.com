@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/shuvroroy/filament-spatie-laravel-ba
 github_repository: shuvroroy/filament-spatie-laravel-backup
 has_dark_theme: true
 has_translations: true
-image: shuvroroy-spatie-laravel-backup.png
+image: shuvroroy-spatie-laravel-backup.webp
 versions: [2, 3]
 publish_date: 2022-01-02
 ---

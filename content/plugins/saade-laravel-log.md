@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/saade/filament-laravel-log/3.x/READM
 github_repository: saade/filament-laravel-log
 has_dark_theme: true
 has_translations: true
-image: saade-laravel-log.png
+image: saade-laravel-log.webp
 versions: [2, 3]
 publish_date: 2022-03-19
 ---

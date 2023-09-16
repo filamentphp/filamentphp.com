@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/leandrocfe/filament-ptbr-form-fields
 github_repository: leandrocfe/filament-ptbr-form-fields
 has_dark_theme: true
 has_translations: false
-image: leandrocfe-brazilian-form-fields.jpg
+image: leandrocfe-brazilian-form-fields.webp
 versions: [2, 3]
 publish_date: 2023-04-26
 ---

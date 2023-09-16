@@ -9,7 +9,7 @@ discord_url: https://discord.com/channels/883083792112300104/1145610616552300595
 github_repository: maartenpaauw/pennant-for-filament
 has_dark_theme: true
 has_translations: true
-image: maartenpaauw-pennant.jpg
+image: maartenpaauw-pennant.webp
 versions: [3]
 publish_date: 2023-08-21
 ---

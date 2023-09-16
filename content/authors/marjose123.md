@@ -1,7 +1,7 @@
 ---
 name: Josie Darang
 slug: marjose123
-avatar: marjose123.jpg
+avatar: marjose123.webp
 github_url: https://github.com/MarJose123
 ---
 

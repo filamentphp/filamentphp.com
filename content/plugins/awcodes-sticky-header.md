@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-sticky-header/2.x/R
 github_repository: awcodes/filament-sticky-header
 has_dark_theme: true
 has_translations: false
-image: awcodes-sticky-header.jpg
+image: awcodes-sticky-header.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

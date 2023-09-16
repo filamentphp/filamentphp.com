@@ -1,7 +1,7 @@
 ---
 name: Solution Forest
 slug: solution-forest
-avatar: solution-forest.png
+avatar: solution-forest.webp
 github_url: https://github.com/solutionforest
 ---
 

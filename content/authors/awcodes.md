@@ -1,7 +1,7 @@
 ---
 name: Adam Weston
 slug: awcodes
-avatar: awcodes.jpg
+avatar: awcodes.webp
 github_url: https://github.com/awcodes
 twitter_url: https://twitter.com/awcodes1
 ---

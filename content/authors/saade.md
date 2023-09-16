@@ -1,7 +1,7 @@
 ---
 name: Saade
 slug: saade
-avatar: saade.jpeg
+avatar: saade.webp
 github_url: https://github.com/saade
 twitter_url: https://twitter.com/saadeguilherme
 sponsor_url: https://github.com/sponsors/saade

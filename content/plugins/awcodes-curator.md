@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-curator/3.x/README.
 github_repository: awcodes/filament-curator
 has_dark_theme: true
 has_translations: true
-image: awcodes-curator.jpg
+image: awcodes-curator.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

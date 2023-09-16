@@ -7,7 +7,7 @@ description: Bring back laravel-money formatter for Filament Text Column.
 discord_url: https://discord.com/channels/883083792112300104/1148223343158382612
 docs_url: https://raw.githubusercontent.com/ariaieboy/filament-currency/main/README.md
 github_repository: ariaieboy/filament-currency
-image: ariaieboy-currency.png
+image: ariaieboy-currency.webp
 has_dark_theme: true
 has_translations: true
 versions: [3]

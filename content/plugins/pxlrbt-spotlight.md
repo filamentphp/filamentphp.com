@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/pxlrbt/filament-spotlight/main/readm
 github_repository: pxlrbt/filament-spotlight
 has_dark_theme: false
 has_translations: true
-image: pxlrbt-spotlight.png
+image: pxlrbt-spotlight.webp
 versions: [2, 3]
 publish_date: 2022-03-24
 ---

@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-quick-create/3.x/RE
 github_repository: awcodes/filament-quick-create
 has_dark_theme: true
 has_translations: false
-image: awcodes-quick-create.jpg
+image: awcodes-quick-create.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

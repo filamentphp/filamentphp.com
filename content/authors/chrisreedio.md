@@ -1,7 +1,7 @@
 ---
 name: Chris Reed
 slug: chrisreed
-avatar: chrisreedio.jpg
+avatar: chrisreedio.webp
 github_url: https://github.com/chrisreedio
 twitter_url: https://twitter.com/chrisreedtech
 sponsor_url: https://github.com/sponsors/chrisreedio

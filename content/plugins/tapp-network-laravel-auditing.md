@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-auditing/main/R
 github_repository: TappNetwork/filament-auditing
 has_dark_theme: true
 has_translations: true
-image: tapp-network-laravel-auditing.jpg
+image: tapp-network-laravel-auditing.webp
 versions: [2, 3]
 publish_date: 2022-08-16
 ---

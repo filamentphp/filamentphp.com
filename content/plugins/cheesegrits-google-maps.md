@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/cheesegrits/filament-google-maps/mai
 github_repository: cheesegrits/filament-google-maps
 has_dark_theme: true
 has_translations: true
-image: cheesegrits-google-maps.jpg
+image: cheesegrits-google-maps.webp
 versions: [2, 3]
 publish_date: 2023-07-18
 ---

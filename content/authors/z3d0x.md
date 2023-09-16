@@ -1,7 +1,7 @@
 ---
 name: ZedoX
 slug: z3d0x
-avatar: z3d0x.jpg
+avatar: z3d0x.webp
 github_url: https://github.com/z3d0x
 twitter_url: https://twitter.com/z3d0x
 ---

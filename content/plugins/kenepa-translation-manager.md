@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/kenepa/translation-manager/4.x/READM
 github_repository: kenepa/translation-manager
 has_dark_theme: true
 has_translations: true
-image: kenepa-translation-manager.jpg
+image: kenepa-translation-manager.webp
 versions: [2, 3]
 publish_date: 2023-05-09
 ---

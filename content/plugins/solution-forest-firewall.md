@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/solutionforest/filament-firewall/2.x
 github_repository: solutionforest/filament-firewall
 has_dark_theme: false
 has_translations: true
-image: solution-forest-firewall.png
+image: solution-forest-firewall.webp
 versions: [2, 3]
 publish_date: 2023-05-22
 ---

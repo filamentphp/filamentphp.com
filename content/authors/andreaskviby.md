@@ -1,7 +1,7 @@
 ---
 name: Andreas Kviby
 slug: andreaskviby
-avatar: andreaskviby.jpg
+avatar: andreaskviby.webp
 github_url: https://github.com/andreaskviby
 twitter_url: https://twitter.com/andreas_kviby
 ---

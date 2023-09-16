@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/Z3d0X/filament-logger/main/README.md
 github_repository: z3d0x/filament-logger
 has_dark_theme: true
 has_translations: true
-image: z3d0x-logger.jpeg
+image: z3d0x-logger.webp
 versions: [2, 3]
 publish_date: 2022-04-26
 ---

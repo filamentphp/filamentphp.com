@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/Shipu/web-installer/master/readme.md
 github_repository: shipu/web-installer
 has_dark_theme: false
 has_translations: false
-image: shipuahamed-web-installer.jpg
+image: shipuahamed-web-installer.webp
 versions: [3]
 publish_date: 2023-08-26
 ---

@@ -1,7 +1,7 @@
 ---
 name: Sam Maosa
 slug: coolsam
-avatar: coolsam.jpg
+avatar: coolsam.webp
 github_url: https://github.com/coolsam726
 twitter_url: https://twitter.com/coolsam726
 ---

@@ -9,8 +9,8 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-tags-plug
 github_repository: filamentphp/spatie-laravel-tags-plugin
 has_dark_theme: true
 has_translations: true
-image: filament-spatie-tags.jpg
-thumbnail: filament-spatie-tags.jpg
+image: filament-spatie-tags.webp
+thumbnail: filament-spatie-tags.webp
 versions: [2, 3]
 publish_date: 2023-07-17
 ---

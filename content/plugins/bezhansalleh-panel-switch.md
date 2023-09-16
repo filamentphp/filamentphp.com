@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-panel-switch/3
 github_repository: bezhanSalleh/filament-panel-switch
 has_dark_theme: true
 has_translations: false
-image: bezhansalleh-panel-switch.jpg
+image: bezhansalleh-panel-switch.webp
 versions: [3]
 publish_date: 2023-08-07
 ---

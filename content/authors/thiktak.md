@@ -1,7 +1,7 @@
 ---
 name: Georges OLIVARES
 slug: thiktak
-avatar: thiktak.png
+avatar: thiktak.webp
 github_url: https://github.com/thiktak
 ---
 

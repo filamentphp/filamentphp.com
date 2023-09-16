@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/hasnayeen/themes/3.x/README.md
 github_repository: hasnayeen/themes
 has_dark_theme: true
 has_translations: false
-image: hasnayeen-themes.jpg
+image: hasnayeen-themes.webp
 versions: [3]
 publish_date: 2023-09-02
 ---

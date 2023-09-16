@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/husam-tariq/filament-database-schedu
 github_repository: husam-tariq/filament-database-schedule
 has_dark_theme: true
 has_translations: true
-image: husam-database-schedule.jpg
+image: husam-database-schedule.webp
 versions: [3]
 publish_date: 2023-03-12
 ---

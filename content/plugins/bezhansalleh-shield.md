@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-shield/main/RE
 github_repository: bezhanSalleh/filament-shield
 has_dark_theme: true
 has_translations: true
-image: bezhansalleh-shield.png
+image: bezhansalleh-shield.webp
 versions: [2, 3]
 publish_date: 2023-07-31
 ---

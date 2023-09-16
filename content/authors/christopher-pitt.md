@@ -1,7 +1,7 @@
 ---
 name: Christopher Pitt
 slug: assertchris
-avatar: christopher-pitt.jpg
+avatar: christopher-pitt.webp
 github_url: https://github.com/assertchris
 twitter_url: https://twitter.com/assertchris
 sponsor_url: https://github.com/sponsors/assertchris

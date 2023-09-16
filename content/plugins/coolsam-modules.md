@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/savannabits/filament-modules/3.x/REA
 github_repository: savannabits/filament-modules
 has_dark_theme: true
 has_translations: true
-image: coolsam-modules.jpg
+image: coolsam-modules.webp
 versions: [2, 3]
 publish_date: 2023-07-24
 ---

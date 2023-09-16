@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/saade/filament-adjacency-list/3.x/RE
 github_repository: saade/filament-adjacency-list
 has_dark_theme: true
 has_translations: true
-image: saade-adjacency-list.png
+image: saade-adjacency-list.webp
 versions: [3]
 publish_date: 2023-08-17
 ---

@@ -1,7 +1,7 @@
 ---
 name: Mohamed Sabil
 slug: mohamedsabil83
-avatar: mohamedsabil83.jpg
+avatar: mohamedsabil83.webp
 github_url: https://github.com/mohamedsabil83
 twitter_url: https://twitter.com/mohamedsabil83
 ---

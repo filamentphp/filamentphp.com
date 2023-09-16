@@ -1,7 +1,7 @@
 ---
 name: Mo Khosh
 slug: mokhosh
-avatar: mokhosh.jpg
+avatar: mokhosh.webp
 github_url: https://github.com/mokhosh
 twitter_url: https://twitter.com/mskhosh
 ---

@@ -1,7 +1,7 @@
 ---
 name: Shipu Ahamed
 slug: shipuahamed
-avatar: shipuahamed.jpg
+avatar: shipuahamed.webp
 github_url: https://github.com/shipu
 twitter_url: https://twitter.com/shipu_ahamed
 ---

@@ -1,7 +1,7 @@
 ---
 name: Andrew Wallo
 slug: andrew-wallo
-avatar: andrew-wallo.jpg
+avatar: andrew-wallo.webp
 github_url: https://github.com/andrewdwallo
 twitter_url: https://twitter.com/andrewdwallo
 ---

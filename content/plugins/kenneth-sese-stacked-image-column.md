@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/archilex/filament-stacked-image-colu
 github_repository: archilex/filament-stacked-image-column
 has_dark_theme: true
 has_translations: true
-image: kenneth-sese-stacked-image-column.png
+image: kenneth-sese-stacked-image-column.webp
 versions: [2]
 publish_date: 2023-08-01
 ---

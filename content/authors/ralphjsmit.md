@@ -1,7 +1,7 @@
 ---
 name: Ralph J. Smit
 slug: ralphjsmit
-avatar: ralphjsmit.jpg
+avatar: ralphjsmit.webp
 github_url: https://github.com/ralphjsmit
 twitter_url: https://twitter.com/ralphjsmit
 ---

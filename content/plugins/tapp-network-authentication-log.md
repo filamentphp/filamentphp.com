@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-authentication-
 github_repository: TappNetwork/filament-authentication-log
 has_dark_theme: true
 has_translations: true
-image: tapp-network-authentication-log.jpg
+image: tapp-network-authentication-log.webp
 versions: [2, 3]
 publish_date: 2023-08-16
 ---

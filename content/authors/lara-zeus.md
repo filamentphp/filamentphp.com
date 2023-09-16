@@ -1,7 +1,7 @@
 ---
 name: Lara Zeus
 slug: lara-zeus
-avatar: lara-zeus.png
+avatar: lara-zeus.webp
 github_url: https://github.com/lara-zeus
 twitter_url: https://twitter.com/larazeus
 sponsor_url: https://github.com/sponsors/atmonshi

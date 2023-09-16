@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/awcodes/light-switch/1.x/README.md
 github_repository: awcodes/light-switch
 has_dark_theme: true
 has_translations: false
-image: awcodes-light-switch.jpg
+image: awcodes-light-switch.webp
 versions: [3]
 publish_date: 2023-08-12
 ---

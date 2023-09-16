@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/phpsa/filament-dadjokes/master/READM
 github_repository: phpsa/filament-dadjokes
 has_dark_theme: true
 has_translations: false
-image: craig-g-smith-dadjokes.png
+image: craig-g-smith-dadjokes.webp
 versions: [2, 3]
 publish_date: 2022-04-20
 ---

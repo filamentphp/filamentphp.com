@@ -1,7 +1,7 @@
 ---
 name: Ayman Alhattami
 slug: aymanalhattami
-avatar: aymanalhattami.jpg
+avatar: aymanalhattami.webp
 github_url: https://github.com/aymanalhattami
 twitter_url: https://twitter.com/aymanmalhattami
 ---

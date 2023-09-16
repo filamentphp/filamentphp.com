@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/mohammadhprp/filament-ip-to-country-
 github_repository: mohammadhprp/filament-ip-to-country-flag-column
 has_dark_theme: true
 has_translations: false
-image: mohammadhprp-ip-to-country-flag.jpg
+image: mohammadhprp-ip-to-country-flag.webp
 versions: [2, 3]
 publish_date: 2023-08-04
 ---

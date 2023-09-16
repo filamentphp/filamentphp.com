@@ -1,7 +1,7 @@
 ---
 name: Bezhan Salleh
 slug: bezhansalleh
-avatar: bezhansalleh.jpg
+avatar: bezhansalleh.webp
 github_url: https://github.com/bezhanSalleh
 twitter_url: https://twitter.com/bezhanSalleh
 mastodon_url: https://phpc.social/@BezhanSalleh

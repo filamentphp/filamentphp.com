@@ -1,7 +1,7 @@
 ---
 name: Husam T. Al Shaibani
 slug: husam-tariq
-avatar: husam-tariq.jpg
+avatar: husam-tariq.webp
 github_url: https://github.com/husam-tariq
 twitter_url: https://twitter.com/hu2am
 ---
