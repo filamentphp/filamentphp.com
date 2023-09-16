@@ -1,6 +1,6 @@
 ---
 name: Phone field
-slug: filament-phone-field
+slug: phone-field
 author_slug: abanoub-nassem
 categories: [form-builder, form-field, phone, input]
 description: Provides a Phone Input field for the Filament V2-V3 Forms, works in Admin-Panel and Forntend-Forms.
