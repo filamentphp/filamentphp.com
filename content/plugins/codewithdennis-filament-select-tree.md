@@ -1,7 +1,7 @@
 ---
 name: Select Tree
 slug: codewithdennis-select-tree
-author_slug: CodeWithDennis
+author_slug: codewithdennis
 categories: [form-field]
 description: The multi-level select field lets you pick one option at a time from a list that's neatly organized into different levels.
 discord_url: #
