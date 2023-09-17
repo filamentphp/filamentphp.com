@@ -48,14 +48,18 @@
         >
             <strong>Dan</strong>
             leads the Filament project from
-            <strong>Cardiff, United Kingdom</strong>
-            . He works for
+            {{-- format-ignore-start --}}
+            <strong>Cardiff, United Kingdom</strong>.
+            {{-- format-ignore-end --}}
+            He works for
             <a href="#kirschbaum">Kirschbaum</a>
             as a Lead Developer, which is a Laravel-partnered agency full of
             Filament and Laravel experts. Dan and the rest of the Kirschbaum
             team are
-            <a href="#kirschbaum">ready to take on your projects</a>
-            , whatever the size!
+            {{-- format-ignore-start --}}
+            <a href="#kirschbaum">ready to take on your projects</a>,
+            {{-- format-ignore-end --}}
+            whatever the size!
         </x-consulting.consultant>
 
         <x-consulting.consultant
@@ -64,17 +68,19 @@
             title="Lead UI Designer & Developer"
         >
             <strong>Zep</strong>
-            is a freelance developer and consultant, specialising in UI design,
-            but also offering a wealth of development experience to the Filament
-            team. He's based in
-            <strong>Eindhoven, Netherlands</strong>
-            , and is
+            is a full-stack developer and freelance consultant, specializing in
+            UI design, but also offering a wealth of development experience to
+            the Filament team. He's based in
+            {{-- format-ignore-start --}}
+            <strong>Eindhoven, Netherlands</strong>,
+            {{-- format-ignore-end --}}
+            and is
+            {{-- format-ignore-start --}}
             <a
                 href="https://zepfietje.com/consult?ref=filamentphp.com"
                 target="_blank"
-            >
-                available to answer your support questions
-            </a>
+            >available to answer your support questions</a>
+            {{-- format-ignore-end --}}
             about Filament, on a one-off or recurring basis.
         </x-consulting.consultant>
     </div>

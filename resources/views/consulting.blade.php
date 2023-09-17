@@ -1,7 +1,7 @@
 @php
     seo()
-    ->title('Consulting')
-    ->description('Looking for expert help with your Filament project? Schedule a consulting call with a Filament team member.')
+        ->title('Consulting')
+        ->description('Looking for dedicated help with your Filament project? Contact the experts who built Filament.');
 @endphp
 
 <x-layouts.app>

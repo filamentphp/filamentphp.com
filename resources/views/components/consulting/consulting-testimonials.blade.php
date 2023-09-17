@@ -33,7 +33,7 @@
             <li
                 class="flex flex-col items-center gap-8 rounded-xl bg-merino/50 px-10 py-4 text-evening md:flex-row"
             >
-                <div class="flex shrink-0 items-center gap-3">
+                <div class="shrink-0">
                     <div
                         class="h-28 w-28 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
                         style="
@@ -72,7 +72,7 @@
                             width="25"
                             height="18"
                             viewBox="0 0 25 18"
-                            class="scale-x-[-1] scale-y-[-1]"
+                            class="-scale-x-100 -scale-y-100"
                             fill="none"
                         >
                             <path
@@ -129,9 +129,11 @@
                     </svg>
                 </div>
                 <div class="px-2 pb-2 pt-5 font-medium">
-                    Zep is an outstanding consultant. His expertise and deep
-                    understanding of Filament helped us to deliver our project
-                    on time and within budget. Highly recommend!
+                    Working with Zep was a fantastic experience! He is extremely
+                    knowledgeable in Laravel and Filament. He was able to guide
+                    us through some complex features and offer valuable insights
+                    that helped us improve our product. I highly recommend Zep
+                    for your consulting needs.
                 </div>
                 <div class="-mr-2 flex justify-end">
                     <svg
@@ -139,7 +141,7 @@
                         width="25"
                         height="18"
                         viewBox="0 0 25 18"
-                        class="scale-x-[-1] scale-y-[-1]"
+                        class="-scale-x-100 -scale-y-100"
                         fill="none"
                     >
                         <path
@@ -149,15 +151,26 @@
                     </svg>
                 </div>
                 <div class="flex items-center gap-3 pt-5">
-                    <img
-                        src="https://pbs.twimg.com/profile_images/1498923096643825666/QPmkb1DU_400x400.jpg"
-                        alt="Martin Rohrlack"
-                        class="h-12 w-12 rounded-full ring-1 ring-white"
-                        loading="lazy"
-                    />
+                    <div class="shrink-0 items-center">
+                        <div
+                            class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
+                            style="
+                                background-image: url('{{ Vite::asset('resources/images/consulting/trevor.jpg') }}');
+                            "
+                        >
+                            <span class="sr-only">Trevor Greenleaf</span>
+                        </div>
+                    </div>
+
                     <div class="">
-                        <div class="font-bold">Martin Rohrlack</div>
-                        <div class="font-medium text-dolphin">ohscout.com</div>
+                        <div class="font-bold">Trevor Greenleaf</div>
+                        <a
+                            href="https://trevorgreenleaf.com"
+                            target="_blank"
+                            class="font-medium text-dolphin"
+                        >
+                            trevorgreenleaf.com
+                        </a>
                     </div>
                 </div>
             </li>

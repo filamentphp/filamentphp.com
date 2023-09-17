@@ -104,7 +104,6 @@
             </a>
             <div class="flex flex-wrap items-center gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="">And...</div>
                     <div class="group/overlapping-experts flex">
                         <img
                             src="https://avatars.githubusercontent.com/u/13571642?v=4"

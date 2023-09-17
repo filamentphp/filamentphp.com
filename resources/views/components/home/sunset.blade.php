@@ -313,7 +313,7 @@
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
                         alt="Giraffes"
-                        class="w-[2rem] scale-x-[-1] opacity-80"
+                        class="w-[2rem] -scale-x-100 opacity-80"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
