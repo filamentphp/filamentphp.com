@@ -37,7 +37,7 @@
                     <div
                         class="h-24 w-24 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
                         style="
-                            background-image: url('{{ Vite::asset('resources/images/consulting/michaela.webp') }}');
+                            background-image: url('{{ Vite::asset('resources/images/consulting/testimonials/michaela.webp') }}');
                         "
                     >
                         <span class="sr-only">Michaela Shiloh</span>
@@ -155,7 +155,7 @@
                         <div
                             class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
                             style="
-                                background-image: url('{{ Vite::asset('resources/images/consulting/trevor.webp') }}');
+                                background-image: url('{{ Vite::asset('resources/images/consulting/testimonials/trevor.webp') }}');
                             "
                         >
                             <span class="sr-only">Trevor Greenleaf</span>
