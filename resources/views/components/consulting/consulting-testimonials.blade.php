@@ -31,11 +31,11 @@
         {{-- Testimonial List --}}
         <ul class="space-y-10 pt-10">
             <li
-                class="flex flex-col items-center gap-8 rounded-xl bg-merino/50 px-10 py-4 text-evening md:flex-row"
+                class="flex flex-col items-center gap-4 rounded-xl bg-merino/50 px-10 py-6 text-evening md:flex-row md:gap-8"
             >
                 <div class="shrink-0">
                     <div
-                        class="h-28 w-28 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
+                        class="h-24 w-24 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
                         style="
                             background-image: url('{{ Vite::asset('resources/images/consulting/michaela.webp') }}');
                         "
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </li>
-            <li class="rounded-xl bg-merino/50 p-10 text-evening">
+            <li class="rounded-xl bg-merino/50 px-10 py-6 text-evening">
                 <div class="-ml-2 flex justify-start">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
