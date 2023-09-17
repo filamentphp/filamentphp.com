@@ -1,10 +1,12 @@
 @php
     seo()
     ->title('Consulting')
-    ->description('Looking for expert help with your Filament project? Schedule a consulting call with a Filament team member.')
+    ->description('Looking for dedicated help with your Filament project? Contact the experts who built Filament.');
 @endphp
 
 <x-layouts.app>
     <x-consulting.hero />
     <x-consulting.experts />
+    <x-consulting.kirschbaum />
+    <x-consulting.consulting-testimonials />
 </x-layouts.app>
