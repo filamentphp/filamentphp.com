@@ -9,7 +9,7 @@ docs_url: https://github.com/CodeWithDennis/filament-select-tree/blob/3.x/README
 github_repository: codewithdennis/filament-select-tree
 has_dark_theme: true
 has_translations: false
-image: codewithdennis-select-tree.png
+image: codewithdennis-select-tree.jpeg
 versions: [3]   
 publish_date: 2023-09-17
 ---
