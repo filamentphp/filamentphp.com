@@ -155,7 +155,7 @@
                         <div
                             class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat ring-1 ring-white"
                             style="
-                                background-image: url('{{ Vite::asset('resources/images/consulting/trevor.jpg') }}');
+                                background-image: url('{{ Vite::asset('resources/images/consulting/trevor.webp') }}');
                             "
                         >
                             <span class="sr-only">Trevor Greenleaf</span>
