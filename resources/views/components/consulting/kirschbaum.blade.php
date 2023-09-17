@@ -84,7 +84,7 @@
         {{-- Experts List --}}
         <div class="flex flex-wrap justify-between gap-10 pt-10">
             <a
-                href="https://www.ringerhq.com/experts/danharrin"
+                href="https://kirschbaumdevelopment.com"
                 target="_blank"
                 class="flex rounded-full bg-[#58597E] p-1.5 text-white shadow shadow-black/5 transition duration-300 hover:bg-[#6D72DD]"
             >
