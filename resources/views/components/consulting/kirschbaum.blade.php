@@ -103,7 +103,7 @@
                 </div>
             </a>
             <div class="flex flex-wrap items-center gap-4">
-                <div class="">And ...</div>
+                <div>and</div>
                 <div class="flex items-center gap-3">
                     <div class="group/overlapping-experts flex">
                         <img
