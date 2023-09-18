@@ -16,7 +16,7 @@ publish_date: 2023-07-17
 
 This package allows you to give your users a beautiful way to upload images to your application and manage their library. It integrates with and is based on [Spatie MediaLibrary](https://github.com/spatie/laravel-medialibrary), one of the most popular and widely used packages in the Laravel ecosystem.
 
-**New: Package includes Filament V3 support!** 
+**New: Package includes Filament V3 support!**
 
 [**Upgrading from V1 to V2?**](#upgrading-from-v1-to-v2)<br>
 [**Upgrading from V2 to V3?**](#upgrading-from-v2-to-v3)
@@ -50,7 +50,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - Customisable button label for the media picker **(NEW IN V2)**
 - Sorting files & folders **(NEW IN V2)**
 - English, Dutch and Italian translated included & translatable in any language
-
+- Global search for folders and files
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -106,7 +106,7 @@ One of the use cases could be to allow adding tags to images:
 
 #### Default theme
 
-By default Filament comes with it's own CSS, which integrates neatly into the admin panel design. However, as I did in the above screenshots, it is just as beautiful if you integrate it with your own Filament theme.
+By default Filament comes with its own CSS, which integrates neatly into the admin panel design. However, as I did in the above screenshots, it is just as beautiful if you integrate it with your own Filament theme.
 
 ![Filament MediaLibrary With Default Theme](https://ralphjsmit.com/storage/media/255/responsive-images/FilamentMediaLibrary-Page-DefaultTheme___responsive_2679_1901.jpg)
 
@@ -168,7 +168,7 @@ Next, you should require the package via the command line. You will be prompted 
 composer require ralphjsmit/laravel-filament-media-library
 ```
 
-If you want to use the plugin in Filament V2, please require the `'^2.0'` version. If you want to use the plugin in Filament V3, please require the `'^3.0'` version (which is the default). 
+If you want to use the plugin in Filament V2, please require the `'^2.0'` version. If you want to use the plugin in Filament V3, please require the `'^3.0'` version (which is the default).
 
 After purchasing the plugin, you'll also be shown installation instructions with the appropriate credentials pre-filled.
 
@@ -180,8 +180,25 @@ php artisan vendor:publish --tag="filament-media-library-migrations"
 php artisan migrate
 ```
 
+### Add plugin Blade files to your custom theme `tailwind.config.js` (required)
+
+Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. New in Filament V3 is that you need to create a custom theme in order to include CSS from plugins (in order to keep your panel as fast as possible). If you do not follow this step, you risk that the plugin pages/designs look weird, because CSS is missing.
+
+First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in.
+
+Next, you'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
+
+```js
+content: [
+    // Your other files
+    './vendor/ralphjsmit/laravel-filament-media-library/resources/**/*.blade.php'
+],
+```
+
+> NB. The `tailwind.config.js` you need to add this line to is not a possible `tailwind.config.js` file in your root project, but only in the `resources/css/filament/{nameOfTheme}/tailwind.config.js` file(s) of your theme(s).
+
 ### Configuring the plugin per-panel (Filament V3)
-                                                     
+
 If you are using the plugin in Filament V3, you should register the plugin in each of the panels that you have in your project and would like to use the media library in:
 
 ```php
@@ -254,22 +271,7 @@ Finally, you'll also need to replace the default `url_generator` in the `config/
 'url_generator' => RalphJSmit\Filament\MediaLibrary\UrlGenerator\MediaLibraryUrlGenerator::class,
 ```
 
-If you skip this step, then you risk that some images in the library are not displayed correctly. 
-
-### Custom themes
-                     
-Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. 
-
-> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. Therefore, a custom theme is required for this package. If you are not yet using a custom theme and you'll switch to it, you'll get the benefits from a custom theme as well, including a (big) reduction the CSS file size by eliminating duplicate classes.
-                     
-You'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
-
-```js
-content: [
-    // Your other files
-    './vendor/ralphjsmit/laravel-filament-media-library/resources/**/*.blade.php'
-],
-```
+If you skip this step, then you risk that some images in the library are not displayed correctly.
 
 ## Usage
 
@@ -361,9 +363,9 @@ MediaPicker::make(‘images’)
 
 The value of the field will be an array with the `id`’s of the MediaLibraryItem’s that are being selected.
 
-#### Opening the MediaPicker in a default folder (V3)
+#### Opening the MediaPicker in a default folder
 
-By default, the MediaPicker will open in the root folder. However, in some cases, you might want to open the MediaPicker in a specific default folder. You can do that using the `->defaultFolder()` function. 
+By default, the MediaPicker will open in the root folder. However, in some cases, you might want to open the MediaPicker in a specific default folder. You can do that using the `->defaultFolder()` function.
 
 The `defaultFolder()` functions accepts a `MediaLibraryFolder` object as parameter. You can also pass a closure, and use that closure to retrieve the folder dynamically from e.g. the current record.
 
@@ -372,7 +374,7 @@ MediaPicker::make('featured_image_id')
     ->defaultFolder(MediaLibraryFolder::find(99)),
 ```
 
-Using a closure:    
+Using a closure:
 
 ```php
 MediaPicker::make('featured_image_id')
@@ -381,7 +383,7 @@ MediaPicker::make('featured_image_id')
 
 NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com. 
 
-#### Reordering multiple items in the media picker
+#### Reordering multiple items in the media picker (V3)
 
 If you are allowing your users to select multiple items, you can use the `->reorderable()` method to allow your users to reorder the images. This can be useful in situations where the order of the media matters, for example if you want to construct a slideshow or carousel.
 
@@ -718,7 +720,7 @@ MediaPicker::make('hero_image_id')
 
 ### Media table column
 
-You can use the MediaColumn to display a preview of the media item in a table resource. For this to work, you need to have a relationship to the media library item in your model. 
+You can use the MediaColumn to display a preview of the media item in a table resource. For this to work, you need to have a relationship to the media library item in your model.
 
 For example, consider a situation where you have a `thumbnail_id` on your Eloquent model. This `thumbnail_id` will contain the ID of the media library item that has been selected using the `MediaPicker::make('thumbnail_id')`. You then need to add the following relationship to your Eloquent model:
 
@@ -729,7 +731,7 @@ public function thumbnail(): BelongsTo
 }
 ```
 
-Next, you can use the MediaColumn like this:   
+Next, you can use the MediaColumn like this:
 
 ```php
 use RalphJSmit\Filament\MediaLibrary\Tables\Columns\MediaColumn;
@@ -747,7 +749,7 @@ MediaColumn::make('thumbnail')
 
 You only do not need to use the `->collection()`, `->conversion()` methods.
 
-> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation. 
+> If you are getting an error like `App\Models\Post::getMediaLibraryCollectionName()`, please check if the relationship is defined. For example, if you want to use a `thumbnail` relationship, check if there is a method called `thumbnail()` on your model that returns a relation.
 
 You can also use the MediaColumn to display multiple images from a relationship. For example, consider that you have a `Post` model with a `thumbnail` relationship. Say that we also have an `Author` model. We could add an `HasManyThrough` relationship to the `Author` model to get the thumbnails of the posts from this author:
 
@@ -782,7 +784,7 @@ MediaColumn::make('thumbnails')
 
 The plugin also includes a handy `MediaEntry` infolist component, that you can use to display media in your infolists.
 
-This `MediaEntry` components works in exactly the same way as the `MediaColumn` component. Therefore, I'll assume the `thumbnail` and `thumbnails` relationships from above.  
+This `MediaEntry` components works in exactly the same way as the `MediaColumn` component. Therefore, I'll assume the `thumbnail` and `thumbnails` relationships from above.
 
 Next, you can use the `MediaColumn` like this:
 
@@ -848,7 +850,59 @@ $plugin
 ],
 ```
 
-> NB.: Please note that I cannot guarantee that breaking changes will never happen inside these classes, so be sure to check if your changes still work after each update. 
+> NB.: Please note that I cannot guarantee that breaking changes will never happen inside these classes, so be sure to check if your changes still work after each update.
+
+### Enabling global search in your panel (V3)
+
+The media library allows you to add global search to your panel. Normally, Filament only allows to globally search Resources (and not pages), but you can quite easily accomplish a search by creating a custom `GlobalSearchProvider`.
+
+Create a class somewhere in your project (an example could be `App/Filament/GlobalSearch/GlobalSearchProvider`). Add the following contents:
+
+```php
+
+namespace App\Filament\GlobalSearch;
+
+use Filament\GlobalSearch\DefaultGlobalSearchProvider;
+use Filament\GlobalSearch\GlobalSearchResult;
+use Filament\GlobalSearch\GlobalSearchResults;
+use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
+use RalphJSmit\Filament\MediaLibrary\Media\Models\MediaLibraryFolder;
+
+class GlobalSearchProvider extends DefaultGlobalSearchProvider
+{
+    public function getResults(string $query): ?GlobalSearchResults
+    {
+        $builder = parent::getResults($query);
+
+        $this->addMediaLibraryFolderResults($builder, $query);
+
+        return $builder;
+    }
+
+    protected function addMediaLibraryFolderResults(GlobalSearchResults $builder, string $query): void
+    {
+        $mediaLibraryFolders = FilamentMediaLibrary::get()->getModelFolder()::query()
+            ->where('name', 'LIKE', "%{$query}%")
+            ->get();
+
+        $globalSearchResults = $mediaLibraryFolders->map(function (MediaLibraryFolder $mediaLibraryFolder): GlobalSearchResult {
+            return new GlobalSearchResult(
+                title: $mediaLibraryFolder->name,
+                url: \RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary::getUrl(['folder' => $mediaLibraryFolder->getKey()]),
+            );
+        });
+
+        $builder->category(\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary::getTitle(), $globalSearchResults);
+    }
+}
+```
+
+Next, register the custom global search provider in your panel provider(s) where you are using the media library:
+
+```php
+$panel
+    ->globalSearch(\App\Filament\GlobalSearch\GlobalSearchProvider::class)
+```
 
 ## Using the MediaPicker outside the admin panel
 
@@ -893,7 +947,7 @@ Or, on individual pages only:
 The V2 is a paid upgrade to the V1. All license holders have got the ability to purchase the V2 at a discount. If you want to purchase the upgrade from V1 to V2, please send an email to `support@ralphjsmit.com`.
 
 ### Upgrading from V2 to V3
-                  
+
 The Filament Media library plugin has a V3 version that already has support for Filament V3.
 
 If you want to upgrade to Media Library V3 and therefore Filament V3 support, take the following steps:
@@ -930,4 +984,3 @@ The V3 is available to all customers who previously purchased a license for V2. 
 If you have a question, bug or feature request, please e-mail me at support@ralphjsmit.com or tag @ralphjsmit on [#media-library-pro](https://discord.com/channels/883083792112300104/961393209639067698) on Discord. Love to hear from you!
 
 🙋‍♂️ [Ralph J. Smit](https://ralphjsmit.com)
-                               
