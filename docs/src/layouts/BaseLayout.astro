@@ -121,7 +121,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         content="#ffffff"
     />
   </head>
-  <body class="bg-cream dark:bg-[#171527]">
+  <body class="bg-cream dark:bg-[#171527]" x-data="clipboard">
     <Header navigation={navigation} />
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
