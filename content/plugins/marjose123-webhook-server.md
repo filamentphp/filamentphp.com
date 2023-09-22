@@ -3,8 +3,8 @@ name: Webhook Server
 slug: filament-webhook-server
 author_slug: marjose123
 categories: [developer-tool]
-description: Filament support for `spatie/laravel-medialibrary`.
-discord_url: https://discord.com/channels/883083792112300104/1080807837833384017
+description: Send webhooks from Filament apps.
+discord_url: https://discord.com/channels/883083792112300104/1069185993770536990
 docs_url: https://raw.githubusercontent.com/MarJose123/filament-webhook-server/2.x/README.md
 github_repository: https://github.com/MarJose123/filament-webhook-server
 has_dark_theme: true
