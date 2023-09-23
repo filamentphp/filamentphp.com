@@ -757,6 +757,20 @@ public function panel(Panel $panel): Panel
         // ...
         -&gt;maxContentWidth('full');
 }
+</textarea></code></pre>
+<h2 id="spa-mode"><a class="heading-anchor" href="#spa-mode"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>SPA mode</h2>
+<blockquote>
+<p>Warning: This feature is experimental, and you may encounter bugs while using it. Please report any issues you find to <a href="https://github.com/livewire/livewire">Livewire</a> with a pull request containing a failing test.</p>
+</blockquote>
+<p>SPA mode utilizes <a href="https://livewire.laravel.com/docs/navigate">Livewire&#39;s <code>wire:navigate</code> feature</a> to make your server-rendered panel feel like a single-page-application, with less delay between page loads and a loading bar for longer requests. To enable SPA mode on a panel, you can use the <code>spa()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">spa</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Panel;
+
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        // ...
+        -&gt;spa();
+}
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/09-configuration.md" class="text-sm astro-KLTXWB3V" target="_blank" rel="noopener">Edit on GitHub</a><p class=" astro-KLTXWB3V">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-KLTXWB3V">GitHub discussion</a>
           </p>
@@ -789,7 +803,7 @@ public function panel(Panel $panel): Panel
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-KLTXWB3V">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-KLTXWB3V">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-KLTXWB3V" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;introducing-panels&#34;,&#34;text&#34;:&#34;Introducing panels&#34;,&#34;title&#34;:&#34;Introducing panels&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;the-default-admin-panel&#34;,&#34;text&#34;:&#34;The default admin panel&#34;,&#34;title&#34;:&#34;The default admin panel&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;creating-a-new-panel&#34;,&#34;text&#34;:&#34;Creating a new panel&#34;,&#34;title&#34;:&#34;Creating a new panel&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-path&#34;,&#34;text&#34;:&#34;Changing the path&#34;,&#34;title&#34;:&#34;Changing the path&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;render-hooks&#34;,&#34;text&#34;:&#34;Render hooks&#34;,&#34;title&#34;:&#34;Render hooks&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-domain&#34;,&#34;text&#34;:&#34;Setting a domain&#34;,&#34;title&#34;:&#34;Setting a domain&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-maximum-content-width&#34;,&#34;text&#34;:&#34;Customizing the maximum content width&#34;,&#34;title&#34;:&#34;Customizing the maximum content width&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-KLTXWB3V" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;introducing-panels&#34;,&#34;text&#34;:&#34;Introducing panels&#34;,&#34;title&#34;:&#34;Introducing panels&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;the-default-admin-panel&#34;,&#34;text&#34;:&#34;The default admin panel&#34;,&#34;title&#34;:&#34;The default admin panel&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;creating-a-new-panel&#34;,&#34;text&#34;:&#34;Creating a new panel&#34;,&#34;title&#34;:&#34;Creating a new panel&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-path&#34;,&#34;text&#34;:&#34;Changing the path&#34;,&#34;title&#34;:&#34;Changing the path&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;render-hooks&#34;,&#34;text&#34;:&#34;Render hooks&#34;,&#34;title&#34;:&#34;Render hooks&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-a-domain&#34;,&#34;text&#34;:&#34;Setting a domain&#34;,&#34;title&#34;:&#34;Setting a domain&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-maximum-content-width&#34;,&#34;text&#34;:&#34;Customizing the maximum content width&#34;,&#34;title&#34;:&#34;Customizing the maximum content width&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;spa-mode&#34;,&#34;text&#34;:&#34;SPA mode&#34;,&#34;title&#34;:&#34;SPA mode&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-KLTXWB3V">
                       <h3 class="astro-KLTXWB3V">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -839,6 +853,13 @@ public function panel(Panel $panel): Panel
                       <h3 class="astro-KLTXWB3V">
                         <a href="#customizing-the-maximum-content-width" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'customizing-the-maximum-content-width' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Customizing the maximum content width
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-KLTXWB3V">
+                      <h3 class="astro-KLTXWB3V">
+                        <a href="#spa-mode" class="inline-block transition duration-300 ease-out astro-KLTXWB3V" x-bind:class="current == 'spa-mode' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          SPA mode
                         </a>
                       </h3>
                       
