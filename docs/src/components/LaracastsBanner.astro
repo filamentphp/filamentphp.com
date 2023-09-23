@@ -1,6 +1,8 @@
 ---
 import filamentLogo from '@assets/laracasts/filament-laracasts-logo.webp'
 import laracastsLogo from '@assets/laracasts/laracasts.svg'
+
+const { title, description, url } = Astro.props;
 ---
 
 <div
@@ -24,18 +26,18 @@ import laracastsLogo from '@assets/laracasts/laracasts.svg'
   <div class="flex-1">
     <!-- Title -->
     <div class="font-bold text-xl sm:text-2xl">
-      Building advanced components for Filament
+        {title}
     </div>
 
     <!-- Description -->
     <div class="pt-2 text-[#BAD9FC] text-sm leading-relaxed">
-      Once you're confidently building interfaces with all the components that are included with Filament, you'll want to start building your own custom ones. This series will teach you how to build components, like custom form fields and table columns, and how to distribute them in a plugin package. Meanwhile, you'll get to know all the tools of Filament's internal component system, and how to use them to your advantage.
+        {description}
     </div>
 
     <!-- Link -->
     <div class="flex pt-5">
       <a
-        href="https://laracasts.com"
+        href={url}
         target="_blank"
         class="rounded-full px-12 py-2 bg-[#1B3152] flex justify-center gap-3 items-center text-sm transition duration-300 hover:bg-[#1b395f]"
       >
@@ -55,7 +57,7 @@ import laracastsLogo from '@assets/laracasts/laracasts.svg'
         >
 
         <!-- Label -->
-        <div>Play Series</div>
+        <div>Play Video</div>
       </a>
     </div>
   </div>
