@@ -909,13 +909,13 @@ $panel
 
 The Media Library has support for the [TipTap Editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) plugin to upload and/or choose images to insert into your text. The integration will replace the default media upload included in the editor.
 
-To enable the integration, first publish the config from the TipTap editor plugin:
+To enable the integration, publish the config from the TipTap editor plugin if you didn't publish it yet:
 
 ```
 php artisan vendor:publish --tag="filament-tiptap-editor-config"
 ```
 
-Next, open the `config/filament-tiptap-editor.php` config file and replace the `media_action` key with the following value:
+Next, open the `config/filament-tiptap-editor.php` config and replace the `media_action` key with the following value:
 
 ```php
 'media_action' => RalphJSmit\Filament\MediaLibrary\FilamentTipTap\Actions\MediaLibraryAction::class,
