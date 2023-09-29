@@ -1,7 +1,7 @@
 <section
     x-cloak
     x-data
-    class="mx-auto w-full max-w-5xl px-10 pt-20"
+    class="mx-auto w-full max-w-5xl px-5 pt-20"
 >
     {{-- Package Name --}}
     <div class="flex items-center justify-center gap-5">
