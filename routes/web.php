@@ -18,6 +18,8 @@ use Illuminate\Support\Str;
 
 Route::view('/', 'home')->name('home');
 
+Route::view('/packages/app', 'packages.app')->name('packages.app');
+
 Route::view('/consulting', 'consulting')->name('consulting');
 
 Route::view('/team', 'team')->name('team');
