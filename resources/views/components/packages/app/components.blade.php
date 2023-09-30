@@ -22,14 +22,20 @@
 >
     {{-- Header --}}
     <div class="mx-auto max-w-3xl text-center">
+        <img
+            src="{{ Vite::asset('resources/images/packages/app/components-3d.webp') }}"
+            alt=""
+            class="mx-auto w-44"
+        />
+
         {{-- Title --}}
-        <div class="text-3xl font-bold">
+        <div class="pt-8 text-2xl font-extrabold sm:text-3xl">
             Comprised of pre-built full stack components that are versatile
-            enough for many use cases
+            enough for many use cases.
         </div>
 
         {{-- Subtitle --}}
-        <div class="pt-6 text-xl font-medium text-dolphin">
+        <div class="pt-4 text-lg font-semibold text-dolphin sm:text-xl">
             Fully featured, simply intuitive and insanely attractive.
         </div>
     </div>
@@ -37,7 +43,7 @@
     {{-- Components List --}}
     <div class="space-y-12 pt-12">
         <div
-            class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]"
+            class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]"
         >
             {{-- Name --}}
             <div class="text-2xl font-extrabold text-evening">
@@ -63,7 +69,7 @@
             class="grid grid-cols-[repeat(auto-fill,minmax(25rem,1fr))] gap-12"
         >
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -86,7 +92,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -100,7 +106,7 @@
                 </div>
 
                 {{-- Image --}}
-                <div class="w-[150%] px-3 pt-8">
+                <div class="w-[155%] px-3 pt-8">
                     <img
                         src="{{ Vite::asset('resources/images/packages/app/table-builder.webp') }}"
                         alt="Filament Table Builder"
@@ -109,7 +115,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -132,7 +138,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">Actions</div>
@@ -153,7 +159,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -176,7 +182,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">Widgets</div>
