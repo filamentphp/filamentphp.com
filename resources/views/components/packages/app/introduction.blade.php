@@ -1,6 +1,23 @@
 <section
     x-cloak
     x-data
+    x-ref="section"
+    x-init="
+        () => {
+            if (reducedMotion) return
+            gsap.timeline().fromTo(
+                $refs.section,
+                {
+                    autoAlpha: 0,
+                },
+                {
+                    autoAlpha: 1,
+                    duration: 0.7,
+                    ease: 'circ.out',
+                },
+            )
+        }
+    "
     class="mx-auto w-full max-w-5xl px-5 pt-20"
 >
     {{-- Package Name --}}
@@ -51,7 +68,9 @@
                 alt="Filament demo"
                 class="w-full [grid-area:1/-1]"
             />
-            <div class="[grid-area:1/-1] w-full h-40 bg-gradient-to-t from-cream to-transparent self-end"></div>
+            <div
+                class="h-40 w-full self-end bg-gradient-to-t from-cream to-transparent [grid-area:1/-1]"
+            ></div>
         </div>
     </div>
 </section>
