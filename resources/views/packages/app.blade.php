@@ -7,4 +7,5 @@
 <x-layouts.app>
     <x-packages.app.introduction />
     <x-packages.app.downloads />
+    <x-packages.app.components />
 </x-layouts.app>
