@@ -131,7 +131,7 @@
                 company="DCS Digital"
                 :image="Vite::asset('resources/images/consulting/testimonials/scott.webp')"
                 name="Scott Bowler"
-                website="https://dcsdigital.co.uk"
+                website="https://www.dcsdigital.co.uk"
             >
                 After discovering Filament, I needed quick insights to evaluate
                 its potential for our project. An hour with Zep clarified
