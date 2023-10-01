@@ -89,7 +89,7 @@
         </div>
 
         {{-- Plus --}}
-        <div class="text-3xl font-medium text-[#B7A1A1]">+</div>
+        <div class="text-3xl text-[#B7A1A1]">+</div>
 
         {{-- SaaS Panel --}}
         <div
@@ -171,21 +171,17 @@
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="truncate text-lg font-medium">Sales</div>
+                        <div class="truncate font-medium">Sales</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="truncate text-lg font-medium">
-                            Marketing
-                        </div>
+                        <div class="truncate font-medium">Marketing</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="truncate text-lg font-medium">
-                            Customer Support
-                        </div>
+                        <div class="truncate font-medium">Customer Support</div>
                     </div>
                 </div>
             </div>
@@ -198,17 +194,17 @@
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate text-lg font-medium">Paddle</div>
+                        <div class="truncate font-medium">Paddle</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate text-lg font-medium">Stripe</div>
+                        <div class="truncate font-medium">Stripe</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate text-lg font-medium">Paypal</div>
+                        <div class="truncate font-medium">Paypal</div>
                     </div>
                 </div>
             </div>
