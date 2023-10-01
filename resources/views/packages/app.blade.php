@@ -9,4 +9,5 @@
     <x-packages.app.downloads />
     <x-packages.app.components />
     <x-packages.app.plugins :$pluginsCategories />
+    <x-packages.app.saas-scaling />
 </x-layouts.app>
