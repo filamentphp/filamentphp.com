@@ -28,7 +28,7 @@
             class="w-80"
         />
 
-        <div class="">
+        <div>
             {{-- Title --}}
             <div class="text-3xl font-black">Scaling</div>
 

@@ -21,10 +21,7 @@
     "
     class="mx-auto w-full max-w-5xl px-10 pt-14"
 >
-    <div
-        x-ref="testimonials"
-        class=""
-    >
+    <div x-ref="testimonials">
         {{-- Header --}}
         <div class="text-3xl font-extrabold">Here's what people say...</div>
 
