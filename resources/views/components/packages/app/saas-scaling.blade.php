@@ -54,11 +54,11 @@
 
     {{-- Stack --}}
     <div
-        class="flex flex-col items-center justify-center gap-7 py-20 text-center min-[500px]:flex-row"
+        class="flex flex-col items-center justify-center gap-x-10 gap-y-7 py-20 text-center min-[500px]:flex-row"
     >
         {{-- Admin Panel --}}
         <div
-            class="grid place-items-center gap-3 rounded-xl bg-[#f6eeee]/80 px-10 py-8 text-[#B7A1A1]"
+            class="grid place-items-center gap-3 rounded-xl bg-[#f6eeee]/80 px-14 py-10 text-[#B7A1A1]"
         >
             <div>
                 <svg
@@ -89,11 +89,11 @@
         </div>
 
         {{-- Plus --}}
-        <div class="text-2xl font-medium text-[#B7A1A1]">+</div>
+        <div class="text-3xl font-medium text-[#B7A1A1]">+</div>
 
         {{-- SaaS Panel --}}
         <div
-            class="grid place-items-center gap-3 rounded-xl bg-seashell-peach px-10 py-8 text-[#E7A586]"
+            class="grid place-items-center gap-3 rounded-xl bg-seashell-peach px-14 py-10 text-[#E7A586]"
         >
             <div>
                 <svg
@@ -104,19 +104,22 @@
                     fill="none"
                 >
                     <path
-                        d="M6.5 22.5703C6.5 15.6413 6.5 12.1768 7.319 11.0112C8.13583 9.84766 11.3923 8.73183 17.9075 6.50233L19.149 6.07766C22.5442 4.91416 24.2407 4.3335 26 4.3335C27.7572 4.3335 29.4558 4.91416 32.851 6.07766L34.0925 6.50233C40.6077 8.73183 43.8642 9.84766 44.681 11.0112C45.5 12.1768 45.5 15.6435 45.5 22.5703V25.9807C45.5 38.1963 36.3155 44.1265 30.5522 46.642C28.99 47.3245 28.21 47.6668 26 47.6668C23.79 47.6668 23.01 47.3245 21.4478 46.642C15.6845 44.1243 6.5 38.1985 6.5 25.9807V22.5703Z"
+                        d="M47.6667 47.6668H4.33337M43.3334 47.6668V23.8335M8.66671 47.6668V23.8335"
                         stroke="currentColor"
                         stroke-width="3"
+                        stroke-linecap="round"
                     />
                     <path
-                        d="M26 23.8337C28.3932 23.8337 30.3333 21.8936 30.3333 19.5003C30.3333 17.1071 28.3932 15.167 26 15.167C23.6067 15.167 21.6666 17.1071 21.6666 19.5003C21.6666 21.8936 23.6067 23.8337 26 23.8337Z"
+                        d="M35.8107 4.3335H16.1893C13.5828 4.3335 12.2807 4.3335 11.2342 4.98133C10.1855 5.627 9.60265 6.79266 8.43915 9.124L5.39499 16.8135C4.69299 18.5902 4.07765 20.6832 5.26065 22.1847C5.81796 22.8932 6.58236 23.4103 7.4474 23.664C8.31244 23.9176 9.23505 23.8951 10.0867 23.5997C10.9384 23.3043 11.6768 22.7506 12.1989 22.0158C12.7211 21.281 13.0011 20.4016 13 19.5002C13 20.6494 13.4565 21.7516 14.2692 22.5643C15.0818 23.3769 16.184 23.8335 17.3333 23.8335C18.4826 23.8335 19.5848 23.3769 20.3974 22.5643C21.2101 21.7516 21.6667 20.6494 21.6667 19.5002C21.6667 20.6494 22.1232 21.7516 22.9359 22.5643C23.7485 23.3769 24.8507 23.8335 26 23.8335C27.1493 23.8335 28.2515 23.3769 29.0641 22.5643C29.8768 21.7516 30.3333 20.6494 30.3333 19.5002C30.3333 20.6494 30.7899 21.7516 31.6025 22.5643C32.4152 23.3769 33.5174 23.8335 34.6667 23.8335C35.8159 23.8335 36.9181 23.3769 37.7308 22.5643C38.5434 21.7516 39 20.6494 39 19.5002C38.9999 20.4009 39.2804 21.2793 39.8027 22.0132C40.3249 22.7471 41.0629 23.3 41.9139 23.595C42.765 23.8901 43.6868 23.9126 44.5512 23.6594C45.4157 23.4063 46.1797 22.89 46.7371 22.1825C47.9201 20.681 47.3048 18.588 46.6028 16.8113L43.5608 9.124C42.3973 6.79266 41.8145 5.627 40.7658 4.98133C39.7193 4.3335 38.4171 4.3335 35.8107 4.3335Z"
                         stroke="currentColor"
                         stroke-width="3"
+                        stroke-linejoin="round"
                     />
                     <path
-                        d="M34.6667 32.5003C34.6667 34.8945 34.6667 36.8337 26 36.8337C17.3334 36.8337 17.3334 34.8945 17.3334 32.5003C17.3334 30.1062 21.2117 28.167 26 28.167C30.7884 28.167 34.6667 30.1062 34.6667 32.5003Z"
+                        d="M20.5834 46.5837V40.0837C20.5834 38.0578 20.5834 37.046 21.0189 36.292C21.3041 35.798 21.7144 35.3877 22.2084 35.1025C22.9624 34.667 23.9742 34.667 26 34.667C28.0259 34.667 29.0377 34.667 29.7917 35.1025C30.2857 35.3877 30.696 35.798 30.9812 36.292C31.4167 37.046 31.4167 38.0578 31.4167 40.0837V46.5837"
                         stroke="currentColor"
                         stroke-width="3"
+                        stroke-linecap="round"
                     />
                 </svg>
             </div>
@@ -168,17 +171,21 @@
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="text-lg font-medium truncate">Sales</div>
+                        <div class="truncate text-lg font-medium">Sales</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="text-lg font-medium truncate">Marketing</div>
+                        <div class="truncate text-lg font-medium">
+                            Marketing
+                        </div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
                     >
-                        <div class="text-lg font-medium truncate">Customer Support</div>
+                        <div class="truncate text-lg font-medium">
+                            Customer Support
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,17 +198,17 @@
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="text-lg font-medium truncate">Paddle</div>
+                        <div class="truncate text-lg font-medium">Paddle</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="text-lg font-medium truncate">Stripe</div>
+                        <div class="truncate text-lg font-medium">Stripe</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="text-lg font-medium truncate">Paypal</div>
+                        <div class="truncate text-lg font-medium">Paypal</div>
                     </div>
                 </div>
             </div>
