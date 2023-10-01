@@ -8,4 +8,5 @@
     <x-packages.app.introduction />
     <x-packages.app.downloads />
     <x-packages.app.components />
+    <x-packages.app.plugins :$pluginsCategories />
 </x-layouts.app>

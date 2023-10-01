@@ -4,6 +4,7 @@ use App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use App\Models\PluginCategory;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,9 @@ use Illuminate\Support\Str;
 
 Route::view('/', 'home')->name('home');
 
-Route::view('/packages/app', 'packages.app')->name('packages.app');
+Route::view('/packages/app', 'packages.app', [
+    'pluginsCategories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
+])->name('packages.app');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 

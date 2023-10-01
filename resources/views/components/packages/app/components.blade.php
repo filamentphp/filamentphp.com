@@ -66,7 +66,7 @@
             </div>
         </div>
         <div
-            class="grid grid-cols-[repeat(auto-fill,minmax(25rem,1fr))] gap-12"
+            class="grid md:grid-cols-2 gap-12"
         >
             <div
                 class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
