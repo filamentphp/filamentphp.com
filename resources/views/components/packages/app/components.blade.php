@@ -65,9 +65,7 @@
                 />
             </div>
         </div>
-        <div
-            class="grid md:grid-cols-2 gap-12"
-        >
+        <div class="grid gap-12 md:grid-cols-2">
             <div
                 class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >

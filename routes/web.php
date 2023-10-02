@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\PluginCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
-use App\Models\PluginCategory;
 
 /*
 |--------------------------------------------------------------------------
