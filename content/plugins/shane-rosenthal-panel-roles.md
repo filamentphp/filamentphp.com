@@ -1,6 +1,6 @@
 ---
 name: Panel Roles
-slug: filament-panel-roles
+slug: shanerbaner82-panel-roles
 author_slug: shane-rosenthal
 categories: [developer-tool, panel-authentication, panel-authorization, panel-builder]
 description: Filament Panel Roles is an intuitive way to ensure all users of a specified panel within Filament v3 is assigned a role during registration and has a specified role using Laravel Middleware.
