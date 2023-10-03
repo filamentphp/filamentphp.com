@@ -1,6 +1,6 @@
 ---
 name: Webhook Server
-slug: filament-webhook-server
+slug: marjose123-webhook-server
 author_slug: marjose123
 categories: [developer-tool]
 description: Send webhooks from Filament apps.
