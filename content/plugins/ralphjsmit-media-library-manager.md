@@ -51,6 +51,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - Sorting files & folders **(NEW IN V2)**
 - English, Dutch and Italian translated included & translatable in any language
 - Global search for folders and files
+- Integration with [TipTap editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -903,6 +904,24 @@ Next, register the custom global search provider in your panel provider(s) where
 $panel
     ->globalSearch(\App\Filament\GlobalSearch\GlobalSearchProvider::class)
 ```
+
+### TipTap Editor integration
+
+The Media Library has support for the [TipTap Editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) plugin to upload and/or choose images to insert into your text. The integration will replace the default media upload included in the editor.
+
+To enable the integration, publish the config from the TipTap editor plugin if you didn't publish it yet:
+
+```
+php artisan vendor:publish --tag="filament-tiptap-editor-config"
+```
+
+Next, open the `config/filament-tiptap-editor.php` config and replace the `media_action` key with the following value:
+
+```php
+'media_action' => RalphJSmit\Filament\MediaLibrary\FilamentTipTap\Actions\MediaLibraryAction::class,
+```
+
+Now you are able to use the TipTap editor to upload and/or choose images from the media library. 
 
 ## Using the MediaPicker outside the admin panel
 
