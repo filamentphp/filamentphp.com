@@ -115,6 +115,21 @@
             </li>
 
             <x-consulting.testimonials.item
+                company="Big Sweater Design"
+                :image="Vite::asset('resources/images/consulting/testimonials/vincent.webp')"
+                name="Vincent Maglione"
+                website="https://bigsweater.co"
+            >
+                Zep grasped my complex issue quickly, and within 15 minutes,
+                provided a solution that did exactly what I needed — with less
+                code than my initial attempt! Since we had time left on our
+                call, Zep generously shared his expertise on Filament's inner
+                workings, which has ultimately made me faster and more
+                proficient with the framework. Having access to a core Filament
+                developer has been invaluable.
+            </x-consulting.testimonials.item>
+
+            <x-consulting.testimonials.item
                 company="trevorgreenleaf.com"
                 :image="Vite::asset('resources/images/consulting/testimonials/trevor.webp')"
                 name="Trevor Greenleaf"
