@@ -319,10 +319,10 @@ MediaLibraryItem::addUpload($uploadedFile);
 
 If you want to override the title or navigation label, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
 
-Finally, you should register the new page in Filament by using the `->registrablePages()` method:
+Finally, you should register the new page in Filament by using the `->registerPages()` method:
 
 ```php
-$plugin->registrablePages([
+$plugin->registerPages([
     YourExtendedMediaLibraryPage::class, 
 ])
 ```
@@ -836,7 +836,7 @@ $plugin
     // If you want to modify a page yourself, you can extend the original page
     // and register your own class here that extends the page. In that way, you can
     // customize labels, titles, etc.
-    ->registrablePages([
+    ->registerPages([
         MediaLibrary::class,
     ])
     
