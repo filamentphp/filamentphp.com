@@ -15,5 +15,5 @@ has_dark_theme: true
 has_translations: true
 image: kenneth-sese-advanced-tables.png
 versions: [2, 3]
-publish_date: 2023-07-23
+publish_date: 2023-10-06
 ---
