@@ -1,6 +1,6 @@
 ---
 name: Image Optimizer
-slug: image-optimizer
+slug: joshembling-image-optimizer
 author_slug: josh-embling
 categories: [form-builder, form-field, spatie]
 description: Optimize your Filament images before they reach your database.
