@@ -1,7 +1,7 @@
 ---
 name: Shane D Rosenthal
 slug: shane-rosenthal
-avatar: laravelonline.jpeg
+avatar: laravelonline.jpg
 github_url: https://github.com/shanerbaner82
 twitter_url: https://twitter.com/ShaneDRosenthal
 sponsor_url: https://github.com/sponsors/shanerbaner82
