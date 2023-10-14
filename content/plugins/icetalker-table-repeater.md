@@ -8,7 +8,7 @@ docs_url: https://raw.githubusercontent.com/icetalker/filament-table-repeater/ma
 github_repository: icetalker/filament-table-repeater
 has_dark_theme: true
 has_translations: true
-image: icetalker-table-repeater.png
+image: icetalker-table-repeater.jpg
 versions: [2, 3]
 publish_date: 2023-09-28
 ---
