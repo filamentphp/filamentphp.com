@@ -4,7 +4,7 @@ slug: chrisreedio-socialment
 author_slug: chrisreedio
 categories: [panel-authentication]
 description: Lightweight social authentication for Filament.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1163030118093041674
 docs_url: https://raw.githubusercontent.com/chrisreedio/socialment/3.x/README.md
 github_repository: chrisreedio/socialment
 has_dark_theme: true
