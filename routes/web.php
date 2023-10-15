@@ -99,6 +99,7 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/notifications-pro', '/plugins/ralphjsmit-notifications-pro');
         Route::redirect('/onboarding-manager-pro', '/plugins/ralphjsmit-onboarding-manager-pro');
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
+        Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');

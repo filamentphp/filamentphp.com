@@ -31,7 +31,7 @@
                         height="25"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="scale-x-[-1]"
+                        class="-scale-x-100"
                     >
                         <path
                             d="M4 12.992h2.5m13.5 0-6-6m6 6-6 6m6-6H9.5"

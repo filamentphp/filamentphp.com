@@ -21,6 +21,7 @@ module.exports = {
                 merino: '#F2E7DD',
                 hurricane: '#807575',
                 dolphin: '#6C6489',
+                'burnt-dolphin': '#454059',
                 'peach-orange': '#FFC497',
                 'seashell-peach': '#FFF0E8',
                 'dawn-pink': '#F1E5E4',

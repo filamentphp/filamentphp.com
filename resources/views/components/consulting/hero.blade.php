@@ -48,7 +48,7 @@
                 )
         }
     "
-    class="mx-auto w-full max-w-6xl px-10 pt-20"
+    class="mx-auto w-full max-w-5xl px-10 pt-20"
 >
     {{-- Header --}}
     <div
@@ -68,8 +68,9 @@
                 class="max-w-lg pt-10 text-lg font-medium text-dolphin"
             >
                 If you're looking for dedicated help with your Filament project,
-                we're here for you. Schedule a consulting call with one of our
-                team members.
+                we're here for you. Whether you're a solo developer or running a
+                large company, we provide support and development services that
+                fit your needs.
             </div>
         </div>
 
