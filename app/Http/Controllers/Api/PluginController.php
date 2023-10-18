@@ -14,7 +14,7 @@ class PluginController extends Controller
      */
     public function index()
     {
-        return PluginResource::collection(Plugin::paginate());
+        return Plugin::paginate();
     }
 
 
@@ -23,7 +23,7 @@ class PluginController extends Controller
      */
     public function show(Plugin $plugin)
     {
-        return new PluginResource($plugin);
+        return $plugin;
     }
 
 }
