@@ -1,4 +1,6 @@
 <?php
 
-Route::get('plugins', [\App\Http\Controllers\Api\PluginController::class, 'index']);
-Route::get('plugins/{plugin:slug}', [\App\Http\Controllers\Api\PluginController::class, 'show']);
+use App\Http\Controllers\Api\PluginController;
+
+Route::get('plugins', [PluginController::class, 'index']);
+Route::get('plugins/{plugin:slug}', [PluginController::class, 'show']);
