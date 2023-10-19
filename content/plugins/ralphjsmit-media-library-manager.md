@@ -185,7 +185,7 @@ php artisan migrate
 
 Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. New in Filament V3 is that you need to create a custom theme in order to include CSS from plugins (in order to keep your panel as fast as possible). If you do not follow this step, you risk that the plugin pages/designs look weird, because CSS is missing.
 
-First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. Please check that you registered your theme in your panel provider(s) using `$panel->viteTheme('resources/css/filament/yourpanelname/theme.css`)` for Vite or the method for Mix specified in the create theme command output.
+First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. Please check that you registered your theme in your panel provider(s) using `$panel->viteTheme('resources/css/filament/{nameOfTheme}/theme.css`)` for Vite or the method for Mix specified in the create theme command output.
 
 Next, you'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
