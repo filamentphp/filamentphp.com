@@ -4,7 +4,7 @@ slug: randall-wilk-password-input
 author_slug: randall-wilk
 categories: [form-builder, form-field]
 description: Enhanced password input component for filament.
-docs_url: https://github.com/rawilk/filament-password-input/blob/main/README.md
+docs_url: https://raw.githubusercontent.com/rawilk/filament-password-input/main/README.md
 github_repository: https://github.com/rawilk/filament-password-input
 has_dark_theme: true
 has_translations: true
