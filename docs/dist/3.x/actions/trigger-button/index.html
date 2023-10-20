@@ -591,7 +591,7 @@
 <p>All actions have a trigger button. When the user clicks on it, the action is executed - a modal will open, a closure function will be executed, or they will be redirected to a URL.</p>
 <p>This page is about customizing the look of that trigger button.</p>
 <h2 id="choosing-a-trigger-style"><a class="heading-anchor" href="#choosing-a-trigger-style"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Choosing a trigger style</h2>
-<p>Out of the box, action triggers have 3 styles - &quot;button&quot;, &quot;link&quot;, and &quot;icon button&quot;.</p>
+<p>Out of the box, action triggers have 4 styles - &quot;button&quot;, &quot;link&quot;, &quot;icon button&quot;, and &quot;badge&quot;.</p>
 <p>&quot;Button&quot; triggers have a background color, label, and optionally an <a href="#setting-an-icon">icon</a>. Usually, this is the default button style, but you can use it manually with the <code>button()</code> method:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">button</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('edit')
     -&gt;button()
@@ -619,6 +619,15 @@
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/icon-button.jpg?raw=true" alt="Icon button trigger" loading="lazy" class="rounded-xl dark:hidden">
 
   <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/icon-button.jpg?raw=true" alt="Icon button trigger" loading="lazy" class="rounded-xl hidden dark:block">
+</div>
+<p>&quot;Badge&quot; triggers have a background color, label, and optionally an <a href="#setting-an-icon">icon</a>. You can use a badge as trigger using the <code>badge()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">edit</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badge</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">Action::make('edit')
+    -&gt;badge()
+</textarea></code></pre>
+<div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/badge.jpg?raw=true" alt="Badge trigger" loading="lazy" class="rounded-xl dark:hidden">
+
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/badge.jpg?raw=true" alt="Badge trigger" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <h3 id="using-an-icon-button-on-mobile-devices-only"><a class="heading-anchor" href="#using-an-icon-button-on-mobile-devices-only"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using an icon button on mobile devices only</h3>
 <p>You may want to use a button style with a label on desktop, but remove the label on mobile. This will transform it into an icon button. You can do this with the <code>labeledFrom()</code> method, passing in the responsive <a href="https://tailwindcss.com/docs/responsive-design#overview">breakpoint</a> at which you want the label to be added to the button:</p>
@@ -722,9 +731,9 @@ Action::make('filter')
     -&gt;badge(5)
 </textarea></code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
-  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/badge.jpg?raw=true" alt="Trigger with badge" loading="lazy" class="rounded-xl dark:hidden">
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/badged.jpg?raw=true" alt="Trigger with badge" loading="lazy" class="rounded-xl dark:hidden">
 
-  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/badge.jpg?raw=true" alt="Trigger with badge" loading="lazy" class="rounded-xl hidden dark:block">
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/badged.jpg?raw=true" alt="Trigger with badge" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <p>You can also pass a color to be used for the badge, which can be either <code>danger</code>, <code>gray</code>, <code>info</code>, <code>primary</code>, <code>success</code> and <code>warning</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Actions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Action</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Action</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">filter</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">iconButton</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-funnel</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badge</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">5</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badgeColor</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">success</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Actions\Action;
@@ -736,9 +745,9 @@ Action::make('filter')
     -&gt;badgeColor('success')
 </textarea></code></pre>
 <div class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
-  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/success-badge.jpg?raw=true" alt="Trigger with green badge" loading="lazy" class="rounded-xl dark:hidden">
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/light/actions/trigger-button/success-badged.jpg?raw=true" alt="Trigger with green badge" loading="lazy" class="rounded-xl dark:hidden">
 
-  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/success-badge.jpg?raw=true" alt="Trigger with green badge" loading="lazy" class="rounded-xl hidden dark:block">
+  <img src="https://github.com/filamentphp/filament/blob/3.x/docs-assets/screenshots/images/dark/actions/trigger-button/success-badged.jpg?raw=true" alt="Trigger with green badge" loading="lazy" class="rounded-xl hidden dark:block">
 </div>
 <h2 id="outlined-button-style"><a class="heading-anchor" href="#outlined-button-style"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Outlined button style</h2>
 <p>When you&#39;re using the &quot;button&quot; trigger style, you might wish to make it less prominent. You could use a different <a href="#setting-a-color">color</a>, but sometimes you might want to make it outlined instead. You can do this with the <code>outlined()</code> method:</p>
