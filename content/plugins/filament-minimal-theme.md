@@ -27,8 +27,7 @@ The Filament Minimal Theme covers all Filament packages and can also be used sta
 
 Filament Minimal Theme alpha requires the latest version of Filament v3, as it depends on new APIs added to Filament's core.
 
-> [!WARNING]
-> Filament Minimal Theme is currently in alpha, which means it's not yet ready for use in production environments.
+> This plugin is currently in alpha, which means it's not yet ready for use in production environments.
 
 ### Installation
 
