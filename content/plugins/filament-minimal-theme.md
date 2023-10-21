@@ -19,7 +19,7 @@ publish_date: 2023-09-05
 
 Want your Filament applications to look more streamlined? The official Filament Minimal Theme features a clean design with less rounding, a lighter background and redesigned UI components. No need to hire a designer to make your projects look different from the default Filament style. Simply install our Composer package and you're good to go. Perfect for corporate software.
 
-The Filament Minimal Theme covers all Filament packages and can also be used standalone outside Filament panels. You can choose a license for a single project or unlimited projects, both including free updates. During presale, you will receive immediate access to the GitHub repository to actively provide feedback during the testing phase. You'll receive an email with instructions to get started after you complete your order.
+> The Filament Minimal Theme covers all Filament packages and can also be used standalone outside Filament panels. You can choose a license for a single project or unlimited projects, both including free updates.
 
 ## Installation
 
