@@ -98,7 +98,7 @@
                     Have a quick support question?
                 </div>
                 <div class="font-medium text-[#AA8B7C]">
-                    Zep’s here to jump on a call and get you back on track.
+                    Zep's here to jump on a call and get you back on track.
                 </div>
             </div>
 

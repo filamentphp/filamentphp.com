@@ -374,7 +374,7 @@
             x-ref="take_off_message"
             class="mx-auto max-w-md px-4 pt-2 text-dolphin"
         >
-            Give Filament a try, and we bet that you’ll be amazed in the first
+            Give Filament a try, and we bet that you'll be amazed in the first
             few minutes.
         </div>
 
