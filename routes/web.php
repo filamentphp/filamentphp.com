@@ -19,9 +19,9 @@ use Illuminate\Support\Str;
 
 Route::view('/', 'home')->name('home');
 
-Route::view('/packages/app', 'packages.app', [
+Route::view('/use-cases/admin-panel', 'use-cases.admin-panel', [
     'pluginsCategories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
-])->name('packages.app');
+])->name('use-cases.admin-panel');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 

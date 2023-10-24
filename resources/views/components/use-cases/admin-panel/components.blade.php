@@ -23,7 +23,7 @@
     {{-- Header --}}
     <div class="mx-auto max-w-3xl text-center">
         <img
-            src="{{ Vite::asset('resources/images/packages/app/components-3d.webp') }}"
+            src="{{ Vite::asset('resources/images/use-cases/admin-panel/components-3d.webp') }}"
             alt=""
             class="mx-auto w-44"
         />
@@ -83,7 +83,7 @@
                 {{-- Image --}}
                 <div class="w-[150%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/form-builder.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/form-builder.webp') }}"
                         alt="Filament Form Builder"
                         class="w-full rounded-xl"
                     />
@@ -106,7 +106,7 @@
                 {{-- Image --}}
                 <div class="w-[155%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/table-builder.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/table-builder.webp') }}"
                         alt="Filament Table Builder"
                         class="w-full rounded-xl"
                     />
@@ -129,7 +129,7 @@
                 {{-- Image --}}
                 <div class="w-[130%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/notifications.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/notifications.webp') }}"
                         alt="Filament Notifications"
                         class="w-full rounded-xl"
                     />
@@ -150,7 +150,7 @@
                 {{-- Image --}}
                 <div class="w-[120%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/actions.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/actions.webp') }}"
                         alt="Filament Actions"
                         class="w-full rounded-xl"
                     />
@@ -173,7 +173,7 @@
                 {{-- Image --}}
                 <div class="w-[140%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/infolist-builder.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/infolist-builder.webp') }}"
                         alt="Filament Infolist Builder"
                         class="w-full rounded-xl"
                     />
@@ -194,7 +194,7 @@
                 {{-- Image --}}
                 <div class="w-[140%] px-3 pt-8">
                     <img
-                        src="{{ Vite::asset('resources/images/packages/app/widgets.webp') }}"
+                        src="{{ Vite::asset('resources/images/use-cases/admin-panel/widgets.webp') }}"
                         alt="Filament Widgets"
                         class="w-full rounded-xl"
                     />

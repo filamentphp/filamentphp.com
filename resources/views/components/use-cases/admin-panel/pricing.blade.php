@@ -4,7 +4,7 @@
     x-init="
         () => {
             window.pricingRiveInstance = new rive.Rive({
-                src: '{{ Vite::asset('resources/images/packages/app/filament_pricing.riv') }}',
+                src: '/rive/filament_pricing.riv',
                 canvas: document.getElementById('pricingCanvas'),
                 autoplay: false,
                 onLoad: () => {

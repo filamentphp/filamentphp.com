@@ -46,14 +46,14 @@
                 class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-x-10 gap-y-14 pt-20"
             >
                 @foreach ($pluginsCategories as $category)
-                    <x-packages.app.plugin-category
+                    <x-use-cases.admin-panel.plugin-category
                         :name="$category->name"
                         :slug="$category->slug"
                     >
                         <x-slot name="icon">
                             {!! $category->getIcon() !!}
                         </x-slot>
-                    </x-packages.app.plugin-category>
+                    </x-use-cases.admin-panel.plugin-category>
                 @endforeach
             </div>
         </div>

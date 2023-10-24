@@ -23,7 +23,7 @@
     {{-- Scaling --}}
     <div class="flex flex-wrap items-center justify-center gap-x-20 gap-y-10">
         <img
-            src="{{ Vite::asset('resources/images/packages/app/shuttlelaunch.webp') }}"
+            src="{{ Vite::asset('resources/images/use-cases/admin-panel/shuttlelaunch.webp') }}"
             alt=""
             class="w-80"
         />
