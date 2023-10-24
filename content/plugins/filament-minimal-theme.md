@@ -12,7 +12,7 @@ has_translations: true
 image: filament-minimal-theme.png
 is_lemon_squeezy_embedded: true
 is_presale: true
-price: € 49
+price: €49.00
 versions: [3]
 publish_date: 2023-09-05
 ---
