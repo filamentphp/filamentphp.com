@@ -34,9 +34,10 @@
 
             {{-- Description --}}
             <div class="max-w-lg pt-5 text-lg font-medium text-dolphin">
-                If you’re building something big, whether it’s a SaaS app or an online shop,
-                and you need multiple "admin" panels, with multi-tenant teams and a billing
-                integration, we’ve got everything you’ll needl!
+                If you’re building something big, whether it’s a SaaS app or an
+                online shop, and you need multiple "admin" panels, with
+                multi-tenant teams and a billing integration, we’ve got
+                everything you’ll needl!
             </div>
         </div>
     </div>

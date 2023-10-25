@@ -29,8 +29,12 @@
         />
 
         {{-- Title --}}
-        <div class="pt-8 text-2xl font-extrabold sm:text-3xl" style="text-wrap: balance">
-            Our components are versatile, customizable, and a great fit for your next project.
+        <div
+            class="pt-8 text-2xl font-extrabold sm:text-3xl"
+            style="text-wrap: balance"
+        >
+            Our components are versatile, customizable, and a great fit for your
+            next project.
         </div>
 
         {{-- Subtitle --}}
