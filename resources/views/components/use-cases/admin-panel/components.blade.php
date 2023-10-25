@@ -38,8 +38,12 @@
         </div>
 
         {{-- Subtitle --}}
-        <div class="pt-4 text-lg font-semibold text-dolphin sm:text-xl" style="text-wrap: balance">
-            Fully featured, simply intuitive and insanely attractive: the ultimate Livewire admin panel.
+        <div
+            class="pt-4 text-lg font-semibold text-dolphin sm:text-xl"
+            style="text-wrap: balance"
+        >
+            Fully featured, simply intuitive and insanely attractive: the
+            ultimate Livewire admin panel.
         </div>
     </div>
 
