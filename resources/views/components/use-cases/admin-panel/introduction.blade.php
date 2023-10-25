@@ -77,6 +77,30 @@
             <div
                 class="h-40 w-full self-end bg-gradient-to-t from-cream to-transparent [grid-area:1/-1]"
             ></div>
+            <a
+                href="https://demo.filamentphp.com"
+                class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl bg-evening px-7 py-3 text-white transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
+            >
+                <div>Visit the Demo</div>
+                <div
+                    class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
+                >
+                    <svg
+                        width="24"
+                        height="25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 12.992h2.5m13.5 0-6-6m6 6-6 6m6-6H9.5"
+                            stroke="#fff"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+            </a>
         </div>
     </div>
 </section>
