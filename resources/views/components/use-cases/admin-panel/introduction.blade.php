@@ -36,13 +36,13 @@
     <div class="pt-14 text-center">
         {{-- Title --}}
         <header class="font-black">
-            <div class="text-4xl">Build</div>
+            <div class="text-4xl">Build a</div>
             <div
                 class="inline-block bg-gradient-to-r from-butter/80 to-sky-400/60 bg-clip-text pb-3 pt-4 text-5xl text-transparent"
             >
                 Beautiful & Powerful
             </div>
-            <div class="text-4xl">Admin Panels In Seconds.</div>
+            <div class="text-4xl">Laravel Admin Panel In Minutes.</div>
         </header>
 
         {{-- Description --}}

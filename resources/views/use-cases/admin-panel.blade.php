@@ -11,5 +11,9 @@
     <x-use-cases.admin-panel.plugins :$plugins />
     <x-use-cases.admin-panel.saas-scaling />
     <x-use-cases.admin-panel.pricing />
-    <x-sunset />
+    <x-sunset>
+        <x-slot name="button">
+            Build a Laravel admin panel
+        </x-slot>
+    </x-sunset>
 </x-layouts.app>
