@@ -41,7 +41,10 @@ class ListArticlesController extends Controller
                         ->orderByDesc('publish_date')
                         ->with(['author'])
                         ->get()
-                        ->map(fn (Article $article): array => $article->getDataArray())
+                        ->map(fn (Article $article): array => [
+                            ...$article->getDataArray(),
+                            'stars_count' => $stars[$article->getKey()] ?? 0,
+                        ])
                         ->all();
                 },
             ),

@@ -105,7 +105,6 @@ class Article extends Model implements Starrable
             'title' => $this->title,
             'slug' => $this->slug,
             'publish_date' => $this->publish_date->diffForHumans(),
-            'stars_count' => $stars[$this->getKey()] ?? 0,
             'author' => [
                 'name' => $this->author->name,
                 'avatar' => $this->author->getAvatarUrl(),
