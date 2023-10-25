@@ -24,9 +24,16 @@
         <div class="relative z-50 self-center [grid-area:1/-1]">
             {{-- Title --}}
             <div class="grid place-items-center text-center">
-                <div class="text-3xl font-extrabold">Plugins, plugins, plugins...</div>
-                <div class="pt-3 text-lg font-medium text-dolphin" style="text-wrap: balance">
-                    Filament has an extensive ecosystem of official and third party plugins, which are easily installable as Composer packages
+                <div class="text-3xl font-extrabold">
+                    Plugins, plugins, plugins...
+                </div>
+                <div
+                    class="pt-3 text-lg font-medium text-dolphin"
+                    style="text-wrap: balance"
+                >
+                    Filament has an extensive ecosystem of official and third
+                    party plugins, which are easily installable as Composer
+                    packages
                 </div>
             </div>
 
