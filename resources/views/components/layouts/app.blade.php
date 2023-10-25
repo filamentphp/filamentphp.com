@@ -167,10 +167,17 @@
             <li>
                 <a
                     href="{{ route('team') }}"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                    @class([
+                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                        'font-medium hover:bg-merino' => ! request()->routeIs('team*'),
+                        'bg-merino font-black' => request()->routeIs('team*'),
+                    ])
                 >
                     <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                        @class([
+                            'transition duration-300',
+                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('team*'),
+                        ])
                     >
                         Meet Our Team
                     </div>
