@@ -1,7 +1,7 @@
 @php
     seo()
-        ->title('Filament - Laravel Admin Panel')
-        ->description('An admin panel built with Laravel and Livewire.');
+    ->title('Filament - Laravel Admin Panel')
+    ->description('An admin panel built with Laravel and Livewire.');
 @endphp
 
 <x-layouts.app>
