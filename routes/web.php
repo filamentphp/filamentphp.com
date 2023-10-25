@@ -39,7 +39,7 @@ Route::get('/use-cases/admin-panel', function () {
             ->toBase()
             ->where('starrable_type', 'plugin')
             ->groupBy('starrable_id')
-            ->selectRaw('count(id) as count, starrable_id')
+            ->selectRaw('count(stars.id) as count, starrable_id')
             ->leftJoin('plugins', 'plugins.slug', '=', 'starrable_id')
             ->whereIn('plugins.slug', $pluginSlugs)
             ->get()
