@@ -32,7 +32,7 @@
             class="self-center justify-self-center text-lg font-extrabold leading-normal min-[400px]:text-xl min-[500px]:[grid-area:1/-1] sm:text-[3.5cqw] sm:leading-[4.5cqw]"
         >
             <span class="inline min-[500px]:block">
-                Filament served users with over
+                Filament has served users with over
             </span>
             <span
                 class="bg-gradient-to-r from-[#51D7DB] to-[#B4ABA4] bg-clip-text text-transparent"

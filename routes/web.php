@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Plugin;
 use App\Models\PluginCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,17 @@ use Illuminate\Support\Str;
 Route::view('/', 'home')->name('home');
 
 Route::view('/use-cases/admin-panel', 'use-cases.admin-panel', [
-    'pluginsCategories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
+    'plugins' => Plugin::query()
+        ->with(['author'])
+            ->whereIn('slug', [
+            'bezhansalleh-shield',
+            'joseph-szobody-impersonate',
+            'awcodes-curator',
+            'pxlrbt-excel',
+            'saade-fullcalendar',
+            'cheesegrits-google-maps',
+        ])
+        ->get(),
 ])->name('use-cases.admin-panel');
 
 Route::view('/consulting', 'consulting')->name('consulting');

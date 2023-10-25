@@ -37,16 +37,15 @@
             <div
                 class="inline-block bg-gradient-to-r from-butter/80 to-sky-400/60 bg-clip-text pb-3 pt-4 text-5xl text-transparent"
             >
-                Powerful & Scalable
+                Beautiful & Powerful
             </div>
-            <div class="text-4xl">Web Apps In Seconds.</div>
+            <div class="text-4xl">Admin Panels In Seconds.</div>
         </header>
 
         {{-- Description --}}
-        <div class="pt-5 text-xl text-dolphin">
-            A UI framework build using the TALL stack, which gives you a set of
-            interactive pre-built components that encompass both the frontend
-            and backend.
+        <div class="pt-5 text-xl text-dolphin" style="text-wrap: balance">
+            Filament is a full-stack UI framework built using the TALL stack, which gives you a set of
+            interactive pre-built components that are perfect for building your next CMS or administration area.
         </div>
 
         {{-- Link --}}

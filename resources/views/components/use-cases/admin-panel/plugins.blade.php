@@ -18,44 +18,38 @@
             )
         }
     "
-    class="mx-auto w-full max-w-5xl px-5 pt-40"
+    class="mx-auto w-full max-w-6xl px-5 pt-40"
 >
     <div class="relative grid min-h-[55rem] lg:min-h-full">
         <div class="relative z-50 self-center [grid-area:1/-1]">
             {{-- Title --}}
             <div class="grid place-items-center text-center">
-                <div class="text-3xl font-extrabold">Plugins Ecosystem</div>
-                <div class="pt-3 text-lg font-medium text-dolphin">
-                    Extensive plugin ecosystem which encourages extension of the
-                    core features.
+                <div class="text-3xl font-extrabold">Plugins, plugins, plugins...</div>
+                <div class="pt-3 text-lg font-medium text-dolphin" style="text-wrap: balance">
+                    Filament has an extensive ecosystem of official and third party plugins, which are easily installable as Composer packages
                 </div>
             </div>
 
-            {{-- Link --}}
-            <div class="grid place-items-center pt-7">
-                <a
-                    href="{{ route('plugins') }}"
-                    class="rounded-full bg-[#ffba86] px-7 py-3 text-white transition duration-300 hover:bg-[#ffba86]/80"
-                >
-                    View Plugins
-                </a>
-            </div>
-
-            {{-- Plugin Categories --}}
+            {{-- Plugins --}}
             <div
-                class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-x-10 gap-y-14 pt-20"
+                class="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-6 pt-20"
             >
-                @foreach ($pluginsCategories as $category)
-                    <x-use-cases.admin-panel.plugin-category
-                        :name="$category->name"
-                        :slug="$category->slug"
-                    >
-                        <x-slot name="icon">
-                            {!! $category->getIcon() !!}
-                        </x-slot>
-                    </x-use-cases.admin-panel.plugin-category>
+                @foreach ($plugins as $plugin)
+                    <div x-data="{ plugin: @js($plugin->getDataArray()) }">
+                        <x-plugins.card />
+                    </div>
                 @endforeach
             </div>
+        </div>
+
+        {{-- Link --}}
+        <div class="grid place-items-center pt-7">
+            <a
+                href="{{ route('plugins') }}"
+                class="rounded-full bg-[#ffba86] px-7 py-3 text-white transition duration-300 hover:bg-[#ffba86]/80"
+            >
+                View all Plugins
+            </a>
         </div>
 
         {{-- Circles --}}

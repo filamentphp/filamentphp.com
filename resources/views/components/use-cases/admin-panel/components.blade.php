@@ -30,8 +30,7 @@
 
         {{-- Title --}}
         <div class="pt-8 text-2xl font-extrabold sm:text-3xl">
-            Comprised of pre-built full stack components that are versatile
-            enough for many use cases.
+            Our pre-built full-stack components are versatile and a great fit for your next project.
         </div>
 
         {{-- Subtitle --}}
@@ -42,29 +41,29 @@
 
     {{-- Components List --}}
     <div class="space-y-12 pt-12">
-        <div
-            class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]"
-        >
-            {{-- Name --}}
-            <div class="text-2xl font-extrabold text-evening">
-                Panel Builder
-            </div>
+{{--        <div--}}
+{{--            class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]"--}}
+{{--        >--}}
+{{--            --}}{{-- Name --}}
+{{--            <div class="text-2xl font-extrabold text-evening">--}}
+{{--                Panel Builder--}}
+{{--            </div>--}}
 
-            {{-- Description --}}
-            <div class="pt-3 font-medium text-dolphin">
-                Build a Laravel admin panel, customer-facing app, SaaS, or
-                anything you can imagine!
-            </div>
+{{--            --}}{{-- Description --}}
+{{--            <div class="pt-3 font-medium text-dolphin">--}}
+{{--                Build a Laravel admin panel, customer-facing app, SaaS, or--}}
+{{--                anything you can imagine!--}}
+{{--            </div>--}}
 
-            {{-- Image --}}
-            <div class="px-3 pt-8">
-                <img
-                    src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"
-                    alt="Filament demo"
-                    class="w-full rounded-xl"
-                />
-            </div>
-        </div>
+{{--            --}}{{-- Image --}}
+{{--            <div class="px-3 pt-8">--}}
+{{--                <img--}}
+{{--                    src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"--}}
+{{--                    alt="Filament demo"--}}
+{{--                    class="w-full rounded-xl"--}}
+{{--                />--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="grid gap-12 md:grid-cols-2">
             <div
                 class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
