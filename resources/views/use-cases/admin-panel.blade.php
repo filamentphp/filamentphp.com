@@ -11,4 +11,5 @@
     <x-use-cases.admin-panel.plugins :$plugins />
     <x-use-cases.admin-panel.saas-scaling />
     <x-use-cases.admin-panel.pricing />
+    <x-sunset />
 </x-layouts.app>

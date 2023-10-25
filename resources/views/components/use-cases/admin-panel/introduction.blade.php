@@ -25,7 +25,7 @@
         <div
             class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-r from-transparent to-evening"
         ></div>
-        <div class="text-2xl font-bold text-evening">Filament Framework</div>
+        <div class="text-2xl text-evening">Introducing <span class="font-bold">Filament</span></div>
         <div
             class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-l from-transparent to-evening"
         ></div>
@@ -51,7 +51,7 @@
         {{-- Link --}}
         <div class="grid place-items-center pt-10">
             <a
-                href="{{ route('docs') }}"
+                href="{{ route('docs', ['slug' => 'panels/getting-started']) }}"
                 class="rounded-full bg-[#ffbc74] px-7 py-3 text-white transition duration-300 hover:bg-[#ffbc74]/80"
             >
                 Get Started

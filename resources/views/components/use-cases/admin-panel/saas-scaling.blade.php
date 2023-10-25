@@ -30,14 +30,13 @@
 
         <div class="text-center min-[950px]:text-left">
             {{-- Title --}}
-            <div class="text-3xl font-black">Scaling</div>
+            <div class="text-3xl font-black">The possibilities are endless</div>
 
             {{-- Description --}}
             <div class="max-w-lg pt-5 text-lg font-medium text-dolphin">
-                If you’re building something big, whether it’s a SaaS app or an
-                online shop, and you need multiple panels, with multiple teams
-                and a billing integration, we’ve included everything you’d need
-                to achieve that goal!
+                If you’re building something big, whether it’s a SaaS app or an online shop,
+                and you need multiple "admin" panels, with multi-tenant teams and a billing
+                integration, we’ve got everything you’ll needl!
             </div>
         </div>
     </div>
@@ -136,7 +135,7 @@
                 and collaborate with others
             </div>
             <div class="pt-1 font-medium text-dolphin sm:text-lg">
-                You can also manage subscription billing of teams!
+                Filament has a suite of features for building multi-tenant apps
             </div>
             {{-- Arrow --}}
             <div class="absolute -right-20 -top-10">
@@ -187,24 +186,24 @@
             </div>
 
             <div class="pt-10 text-[#69CCCC]">
-                <div class="text-xl font-semibold">Billing Integration</div>
+                <div class="text-xl font-semibold">SaaS Features</div>
                 <div
                     class="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-7 pt-5"
                 >
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate font-medium">Paddle</div>
+                        <div class="truncate font-medium">Billing</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate font-medium">Stripe</div>
+                        <div class="truncate font-medium">Team Switching</div>
                     </div>
                     <div
                         class="grid place-items-center gap-3 rounded-xl bg-[#E8F6F6] p-10"
                     >
-                        <div class="truncate font-medium">Paypal</div>
+                        <div class="truncate font-medium">Team Management</div>
                     </div>
                 </div>
             </div>
