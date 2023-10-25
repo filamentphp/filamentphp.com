@@ -25,7 +25,10 @@
         <div
             class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-r from-transparent to-evening"
         ></div>
-        <div class="text-2xl text-evening">Introducing <span class="font-bold">Filament</span></div>
+        <div class="text-2xl text-evening">
+            Introducing
+            <span class="font-bold">Filament</span>
+        </div>
         <div
             class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-l from-transparent to-evening"
         ></div>
