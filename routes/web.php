@@ -2,7 +2,6 @@
 
 use App\Http\Controllers;
 use App\Models\Plugin;
-use App\Models\PluginCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -23,7 +22,7 @@ Route::view('/', 'home')->name('home');
 Route::view('/use-cases/admin-panel', 'use-cases.admin-panel', [
     'plugins' => Plugin::query()
         ->with(['author'])
-            ->whereIn('slug', [
+        ->whereIn('slug', [
             'bezhansalleh-shield',
             'joseph-szobody-impersonate',
             'awcodes-curator',

@@ -43,9 +43,13 @@
         </header>
 
         {{-- Description --}}
-        <div class="pt-5 text-xl text-dolphin" style="text-wrap: balance">
-            Filament is a full-stack UI framework built using the TALL stack, which gives you a set of
-            interactive pre-built components that are perfect for building your next CMS or administration area.
+        <div
+            class="pt-5 text-xl text-dolphin"
+            style="text-wrap: balance"
+        >
+            Filament is a full-stack UI framework built using the TALL stack,
+            which gives you a set of interactive pre-built components that are
+            perfect for building your next CMS or administration area.
         </div>
 
         {{-- Link --}}
