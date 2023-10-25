@@ -169,7 +169,7 @@
                     class="grid grid-cols-1 gap-x-12 gap-y-10 pb-7 pt-16 min-[450px]:px-5 md:place-items-center min-[900px]:grid-cols-2 lg:px-16"
                 >
                     <a
-                        href="/docs/panels"
+                        href="{{ route('use-cases.admin-panel') }}"
                         class="group/package-link flex flex-col items-start gap-5 transition duration-300 will-change-transform hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none min-[450px]:flex-row"
                     >
                         <div
