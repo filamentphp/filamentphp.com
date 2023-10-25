@@ -58,27 +58,5 @@
                 View all Plugins
             </a>
         </div>
-
-        {{-- Circles --}}
-        <div
-            class="absolute right-1/2 grid translate-x-1/2 [grid-area:1/-1] lg:relative lg:h-full lg:w-full"
-        >
-            {{-- Biggest Cicle --}}
-            <div
-                class="h-[60rem] w-[60rem] self-center justify-self-center rounded-full bg-[#FFEBDB]/20 ring-1 ring-[#FF9E51]/10 [grid-area:1/-1]"
-            ></div>
-            {{-- Outer Cicle --}}
-            <div
-                class="h-[50rem] w-[50rem] self-center justify-self-center rounded-full bg-[#FFEBDB]/40 ring-1 ring-[#FF9E51]/10 [grid-area:1/-1]"
-            ></div>
-            {{-- Middle Cicle --}}
-            <div
-                class="h-[40rem] w-[40rem] self-center justify-self-center rounded-full bg-[#FFEBDB]/60 ring-1 ring-[#FF9E51]/10 [grid-area:1/-1]"
-            ></div>
-            {{-- Inner Cicle --}}
-            <div
-                class="h-[30rem] w-[30rem] self-center justify-self-center rounded-full bg-[#FFEBDB] ring-1 ring-[#FF9E51]/10 [grid-area:1/-1]"
-            ></div>
-        </div>
     </div>
 </section>

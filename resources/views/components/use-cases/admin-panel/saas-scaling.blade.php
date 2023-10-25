@@ -139,7 +139,7 @@
                 Filament has a suite of features for building multi-tenant apps
             </div>
             {{-- Arrow --}}
-            <div class="absolute -right-20 -top-10">
+            <div class="absolute -right-20 -top-10 hidden md:block">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="37.16"
