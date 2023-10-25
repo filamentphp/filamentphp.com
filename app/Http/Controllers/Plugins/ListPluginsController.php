@@ -42,7 +42,10 @@ class ListPluginsController extends Controller
                         ->orderByDesc('publish_date')
                         ->with(['author'])
                         ->get()
-                        ->map(fn (Plugin $plugin): array => $plugin->getDataArray())
+                        ->map(fn (Plugin $plugin): array => [
+                            ...$plugin->getDataArray(),
+                            'stars_count' => $stars[$plugin->getKey()] ?? 0,
+                        ])
                         ->all();
                 },
             ),

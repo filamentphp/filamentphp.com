@@ -42,7 +42,7 @@
                 class="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-6 pt-20"
             >
                 @foreach ($plugins as $plugin)
-                    <div x-data="{ plugin: @js($plugin->getDataArray()) }">
+                    <div x-data="{ plugin: @js([...$plugin->getDataArray(), 'stars_count' => $pluginStars[$plugin->getKey()] ?? 0]) }">
                         <x-plugins.card />
                     </div>
                 @endforeach

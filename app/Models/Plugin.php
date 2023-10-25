@@ -203,7 +203,6 @@ class Plugin extends Model implements Starrable
             'name' => $this->name,
             'slug' => $this->slug,
             'price' => $this->getPrice(),
-            'stars_count' => $stars[$this->getKey()] ?? 0,
             'thumbnail_url' => $this->getThumbnailUrl(),
             'github_repository' => $this->github_repository,
             'description' => $this->description,
