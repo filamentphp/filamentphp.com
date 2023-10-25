@@ -10,5 +10,5 @@
     <x-home.v3-features />
     <x-home.sponsors />
     <x-home.tweets />
-    <x-home.sunset />
+    <x-sunset />
 </x-layouts.app>

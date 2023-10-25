@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Plugin;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -17,6 +18,22 @@ use Illuminate\Support\Str;
 */
 
 Route::view('/', 'home')->name('home');
+
+Route::get('/use-cases/admin-panel', function () {
+    return view('use-cases.admin-panel', [
+        'plugins' => Plugin::query()
+            ->with(['author'])
+            ->whereIn('slug', [
+                'bezhansalleh-shield',
+                'joseph-szobody-impersonate',
+                'awcodes-curator',
+                'pxlrbt-excel',
+                'saade-fullcalendar',
+                'cheesegrits-google-maps',
+            ])
+            ->get(),
+    ]);
+})->name('use-cases.admin-panel');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 

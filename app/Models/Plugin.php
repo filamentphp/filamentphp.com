@@ -195,4 +195,29 @@ class Plugin extends Model implements Starrable
             ...array_map(fn ($key) => "plugin:{$this->slug}:docs:{$key}", array_keys($this->docs_urls)),
         ];
     }
+
+    public function getDataArray(): array
+    {
+        return [
+            'id' => $this->slug,
+            'name' => $this->name,
+            'slug' => $this->slug,
+            'price' => $this->getPrice(),
+            'stars_count' => $stars[$this->getKey()] ?? 0,
+            'thumbnail_url' => $this->getThumbnailUrl(),
+            'github_repository' => $this->github_repository,
+            'description' => $this->description,
+            'author' => [
+                'name' => $this->author->name,
+                'avatar' => $this->author->getAvatarUrl(),
+            ],
+            'features' => [
+                'dark_theme' => $this->has_dark_theme,
+                'translations' => $this->has_translations,
+            ],
+            'categories' => $this->categories,
+            'versions' => $this->versions,
+            'publish_date' => $this->publish_date->format('Y-m-d'),
+        ];
+    }
 }
