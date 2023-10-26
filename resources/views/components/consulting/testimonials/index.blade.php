@@ -153,6 +153,22 @@
                 time to speak to the Filament team, and it's great to know
                 they're around if we ever need answers to tough questions.
             </x-consulting.testimonials.item>
+
+            <x-consulting.testimonials.item
+                company="ZimplerApps"
+                :image="Vite::asset('resources/images/consulting/testimonials/daniel.webp')"
+                name="Daniel Plomp"
+                website="https://www.zimplerapps.com"
+            >
+                I recently had the opportunity to have a really productive
+                session with Zep, tackling some complex challenges that were
+                slowing me down. It's clear that spending an hour with Zep is a
+                smart choice—it saves so much time compared to trying to figure
+                everything out on your own. Zep is not only incredibly
+                knowledgeable, but also easy to talk to and approachable. The
+                time and resources invested are truly worthwhile. I definitely
+                recommend Zep's services.
+            </x-consulting.testimonials.item>
         </ul>
     </div>
 </section>
