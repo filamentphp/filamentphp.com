@@ -69,10 +69,10 @@
     </button>
 
     {{-- Normal Logo --}}
-    <x-nav.logo />
+    {{-- <x-nav.logo /> --}}
 
     {{-- Halloween Logo --}}
-    {{-- <x-nav.halloween-logo /> --}}
+    <x-nav.halloween-logo />
 
     {{-- Nav Links --}}
     <div class="flex items-center justify-end gap-8 font-semibold sm:gap-14">
