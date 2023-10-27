@@ -68,8 +68,11 @@
         <span class="sr-only">Toggle Menu</span>
     </button>
 
-    {{-- Filament Logo --}}
-    <x-nav.logo />
+    {{-- Normal Logo --}}
+    {{-- <x-nav.logo /> --}}
+
+    {{-- Halloween Logo --}}
+    <x-nav.halloween-logo />
 
     {{-- Nav Links --}}
     <div class="flex items-center justify-end gap-8 font-semibold sm:gap-14">
