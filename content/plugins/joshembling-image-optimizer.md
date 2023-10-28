@@ -8,7 +8,7 @@ docs_url: https://raw.githubusercontent.com/joshembling/image-optimizer/main/REA
 github_repository: joshembling/image-optimizer
 has_dark_theme: true
 has_translations: false
-image: josh-embling-image-optimizer.png
+image: josh-embling-image-optimizer.webp
 versions: [3]
 publish_date: 2023-09-23
 ---

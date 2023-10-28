@@ -13,7 +13,7 @@ docs_urls:
     v1: https://raw.githubusercontent.com/archilex/advanced-tables-docs/main/v1.md
 has_dark_theme: true
 has_translations: true
-image: kenneth-sese-advanced-tables.png
+image: kenneth-sese-advanced-tables.webp
 versions: [2, 3]
 publish_date: 2023-10-06
 ---

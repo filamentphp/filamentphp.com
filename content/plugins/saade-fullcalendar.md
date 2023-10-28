@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/saade/filament-fullcalendar/3.x/READ
 github_repository: saade/filament-fullcalendar
 has_dark_theme: true
 has_translations: true
-image: saade-fullcalendar.png
+image: saade-fullcalendar.webp
 versions: [2, 3]
 publish_date: 2022-01-26
 ---

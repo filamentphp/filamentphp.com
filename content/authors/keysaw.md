@@ -1,7 +1,7 @@
 ---
 name: Keysaw
 slug: keysaw
-avatar: keysaw.jpg
+avatar: keysaw.webp
 github_url: https://github.com/Keysaw
 ---
 

@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-factory-acti
 github_repository: codewithdennis/filament-factory-action
 has_dark_theme: true
 has_translations: false
-image: codewithdennis-factory-action.png
+image: codewithdennis-factory-action.webp
 versions: [3]
 publish_date: 2023-10-11
 ---

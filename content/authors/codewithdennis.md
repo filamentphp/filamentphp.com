@@ -1,7 +1,7 @@
 ---
 name: CodeWithDennis
 slug: codewithdennis
-avatar: codewithdennis.png
+avatar: codewithdennis.webp
 github_url: https://github.com/CodeWithDennis
 ---
 

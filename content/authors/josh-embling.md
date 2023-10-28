@@ -1,7 +1,7 @@
 ---
 name: Josh Embling
 slug: josh-embling
-avatar: joshembling.jpeg
+avatar: josh-embling.webp
 github_url: https://github.com/joshembling
 twitter_url: https://twitter.com/joshembling
 ---
