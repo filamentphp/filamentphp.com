@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/arbermustafa/filament-locationpickr-
 github_repository: arbermustafa/filament-locationpickr-field
 has_dark_theme: false
 has_translations: false
-image: arbermustafa-locationpickr-field.jpg
 versions: [2, 3]
 publish_date: 2023-09-12
 ---

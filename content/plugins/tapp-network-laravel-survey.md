@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-survey/main/REA
 github_repository: TappNetwork/filament-survey
 has_dark_theme: true
 has_translations: true
-image: tapp-network-laravel-survey.jpg
 versions: [2, 3]
 publish_date: 2023-08-12
 ---

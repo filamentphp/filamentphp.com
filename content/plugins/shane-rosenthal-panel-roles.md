@@ -9,8 +9,7 @@ docs_url: https://raw.githubusercontent.com/shanerbaner82/panel-roles/main/READM
 github_repository: shanerbaner82/panel-roles
 has_dark_theme: true
 has_translations: false
-image: shane-rosenthal-panel-roles.jpg
-thumbnail: shane-rosenthal-panel-roles.jpg
+thumbnail: shane-rosenthal-panel-roles.webp
 versions: [3]
 publish_date: 2023-09-22
 ---

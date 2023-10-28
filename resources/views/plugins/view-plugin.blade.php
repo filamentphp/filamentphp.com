@@ -313,7 +313,7 @@
                             </div>
                             @if (filled($plugin->docs_urls))
                                 <div class="flex flex-wrap items-center gap-3">
-                                    <div class="">Version:</div>
+                                    <div>Version:</div>
                                     <select
                                         x-data="{
                                             selected: @js(request()->query('v')),
