@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/solutionforest/filament-tree/2.x/REA
 github_repository: solutionforest/filament-tree
 has_dark_theme: false
 has_translations: true
-image: solution-forest-tree.png
 versions: [2, 3]
 publish_date: 2023-04-22
 ---

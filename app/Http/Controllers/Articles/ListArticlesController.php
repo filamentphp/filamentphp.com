@@ -42,18 +42,8 @@ class ListArticlesController extends Controller
                         ->with(['author'])
                         ->get()
                         ->map(fn (Article $article): array => [
-                            'id' => $article->slug,
-                            'title' => $article->title,
-                            'slug' => $article->slug,
-                            'publish_date' => $article->publish_date->diffForHumans(),
+                            ...$article->getDataArray(),
                             'stars_count' => $stars[$article->getKey()] ?? 0,
-                            'author' => [
-                                'name' => $article->author->name,
-                                'avatar' => $article->author->getAvatarUrl(),
-                            ],
-                            'categories' => $article->categories,
-                            'type' => $article->type_slug,
-                            'versions' => $article->versions,
                         ])
                         ->all();
                 },

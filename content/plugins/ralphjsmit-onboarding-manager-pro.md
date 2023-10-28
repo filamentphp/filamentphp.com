@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/993463038357274635
 github_repository: ralphjsmit/laravel-filament-onboard
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-onboarding-manager-pro.jpg
 versions: [2, 3]
 publish_date: 2023-07-17
 ---
@@ -166,20 +165,22 @@ $panel
     ) 
 ```
 
-### Custom themes   
+### Add plugin Blade files to your custom theme `tailwind.config.js` (required)
 
-Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. To accomplish this, please make sure you are [using a theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the onboarding manager in.
+Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. New in Filament V3 is that you need to create a custom theme in order to include CSS from plugins (in order to keep your panel as fast as possible). If you do not follow this step, you risk that the plugin pages/designs look weird, because CSS is missing.
 
-> If you do not yet have a theme, please create one. Using themes is strongly recommended by Filament. If you are using a theme as well, you'll always benefit from the most optimal CSS file size, so that your panel will never be slow because of duplicate unused CSS.
+First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. Please check that you registered your theme in your panel provider(s) using `$panel->viteTheme('resources/css/filament/{nameOfTheme}/theme.css`)` for Vite or the method for Mix specified in the create theme command output.
 
-You'll need to instruct Tailwind to also purge the view-files for the onboarding manager. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the onboarding manager in**:
+Next, you'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
 ```js
 content: [
     // Your other files
-    './vendor/ralphjsmit/laravel-filament-onboard/resources/**/*.blade.php',
+   './vendor/ralphjsmit/laravel-filament-onboard/resources/**/*.blade.php',
 ],
 ```
+
+> NB. The `tailwind.config.js` you need to add this line to is not a possible `tailwind.config.js` file in your root project, but only in the `resources/css/filament/{nameOfTheme}/tailwind.config.js` file(s) of your theme(s).
 
 ## Usage
 
