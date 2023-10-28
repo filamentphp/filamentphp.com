@@ -1,7 +1,6 @@
 ---
 name: Joseph Szobody
 slug: joseph-szobody
-avatar: joseph-szobody.webp
 github_url: https://github.com/jszobody
 twitter_url: https://twitter.com/jszobody
 ---

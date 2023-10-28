@@ -1,7 +1,6 @@
 ---
 name: Tapp Network
 slug: tapp-network
-avatar: tapp-network.webp
 github_url: https://github.com/TappNetwork
 twitter_url: https://twitter.com/tappnetwork
 ---

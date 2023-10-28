@@ -1,7 +1,6 @@
 ---
 name: Shane D Rosenthal
 slug: shane-rosenthal
-avatar: shane-rosenthal.webp
 github_url: https://github.com/shanerbaner82
 twitter_url: https://twitter.com/ShaneDRosenthal
 sponsor_url: https://github.com/sponsors/shanerbaner82

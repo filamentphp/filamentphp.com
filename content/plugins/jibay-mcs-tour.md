@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/1143885429700050984
 github_repository: JibayMcs/filament-tour
 has_dark_theme: true
 has_translations: true
-image: jibay-mcs-tour.webp
 versions: [2, 3]
 publish_date: 2023-08-20
 ---

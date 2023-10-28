@@ -1,7 +1,6 @@
 ---
 name: Arbër Mustafa
 slug: arbermustafa
-avatar: arbermustafa.webp
 github_url: https://github.com/arbermustafa
 twitter_url: https://twitter.com/arber_mustafa
 ---

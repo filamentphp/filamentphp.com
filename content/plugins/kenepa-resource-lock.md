@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/kenepa/resource-lock/2.x/README.md
 github_repository: kenepa/resource-lock
 has_dark_theme: true
 has_translations: true
-image: kenepa-resource-lock.webp
 versions: [2, 3]
 publish_date: 2023-04-06
 ---

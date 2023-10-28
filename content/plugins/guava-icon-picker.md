@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/LukasFreyCZ/filament-icon-picker/mai
 github_repository: LukasFreyCZ/filament-icon-picker
 has_dark_theme: true
 has_translations: false
-image: guava-icon-picker.webp
 versions: [2, 3]
 publish_date: 2023-08-01
 ---

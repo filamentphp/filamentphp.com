@@ -1,7 +1,6 @@
 ---
 name: Kenepa
 slug: kenepa
-avatar: kenepa.webp
 github_url: https://github.com/kenepa
 ---
 

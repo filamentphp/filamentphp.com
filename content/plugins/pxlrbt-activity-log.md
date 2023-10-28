@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/pxlrbt/filament-activity-log/main/re
 github_repository: pxlrbt/filament-activity-log
 has_dark_theme: true
 has_translations: true
-image: pxlrbt-activity-log.webp
 versions: [2, 3]
 publish_date: 2023-07-19
 ---

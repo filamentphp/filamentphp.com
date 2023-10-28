@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/webbingbrasil/filament-advancedfilte
 github_repository: webbingbrasil/filament-advancedfilter
 has_dark_theme: false
 has_translations: true
-image: dmandrade-advancedfilter.webp
 versions: [2, 3]
 publish_date: 2022-08-30
 ---

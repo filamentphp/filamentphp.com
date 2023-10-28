@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/saade/filament-autograph/3.x/README.
 github_repository: saade/filament-autograph
 has_dark_theme: true
 has_translations: true
-image: saade-autograph.webp
 versions: [3]
 publish_date: 2023-08-21
 ---

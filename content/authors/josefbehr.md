@@ -1,7 +1,6 @@
 ---
 name: Josef Behr
 slug: josefbehr
-avatar: josefbehr.webp
 github_url: https://github.com/josefbehr
 ---
 

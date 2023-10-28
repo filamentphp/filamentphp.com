@@ -1,7 +1,6 @@
 ---
 name: Maarten Paauw
 slug: maartenpaauw
-avatar: maartenpaauw.webp
 github_url: https://github.com/maartenpaauw
 twitter_url: https://twitter.com/maartenpaauw
 ---

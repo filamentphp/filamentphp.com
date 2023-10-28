@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/kenepa/multi-widget/2.x/README.md
 github_repository: kenepa/multi-widget
 has_dark_theme: true
 has_translations: false
-image: kenepa-multi-widget.webp
 versions: [2, 3]
 publish_date: 2023-05-02
 ---

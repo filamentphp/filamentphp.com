@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-badgeable-column/2.
 github_repository: awcodes/filament-badgeable-column
 has_dark_theme: true
 has_translations: false
-image: awcodes-badgeable-column.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

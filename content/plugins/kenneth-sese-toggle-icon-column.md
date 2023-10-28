@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/archilex/filament-toggle-icon-column
 github_repository: archilex/filament-toggle-icon-column
 has_dark_theme: true
 has_translations: true
-image: kenneth-sese-toggle-icon-column.webp
 versions: [2, 3]
 publish_date: 2023-07-23
 ---

@@ -1,7 +1,6 @@
 ---
 name: Leandro Ferreira
 slug: leandrocfe
-avatar: leandrocfe.webp
 github_url: https://github.com/leandrocfe
 twitter_url: https://twitter.com/leandrocfe
 ---

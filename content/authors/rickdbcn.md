@@ -1,7 +1,6 @@
 ---
 name: Rick de Boer
 slug: rickdbcn
-avatar: rickdbcn.webp
 github_url: https://github.com/RickDBCN/
 twitter_url: https://twitter.com/rickdbcn
 ---

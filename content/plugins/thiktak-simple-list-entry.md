@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/Thiktak/filament-simple-list-entry/3
 github_repository: thiktak/filament-simple-list-entry
 has_dark_theme: true
 has_translations: false
-image: thiktak-simple-list-entry.webp
 versions: [3]
 publish_date: 2023-08-09
 ---

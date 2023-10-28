@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/RickDBCN/filament-email/main/README.
 github_repository: rickdbcn/filament-email
 has_dark_theme: true
 has_translations: true
-image: rickdbcn-email.webp
 versions: [3]
 publish_date: 2023-08-08
 ---

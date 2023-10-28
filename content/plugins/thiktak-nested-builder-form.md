@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/Thiktak/filament-nested-builder-form
 github_repository: thiktak/filament-nested-builder-form
 has_dark_theme: true
 has_translations: false
-image: thiktak-nested-builder-form.webp
 versions: [3]
 publish_date: 2023-09-15
 ---

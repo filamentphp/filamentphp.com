@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-versions/2.x/README
 github_repository: awcodes/filament-versions
 has_dark_theme: true
 has_translations: true
-image: awcodes-versions.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

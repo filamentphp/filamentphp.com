@@ -1,7 +1,6 @@
 ---
 name: Nehal Hasnayeen
 slug: hasnayeen
-avatar: hasnayeen.webp
 github_url: https://github.com/hasnayeen
 twitter_url: https://twitter.com/nhasnayeen
 ---

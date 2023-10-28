@@ -1,7 +1,6 @@
 ---
 name: Dennis Koch
 slug: pxlrbt
-avatar: pxlrbt.webp
 github_url: https://github.com/pxlrbt
 mastodon_url: https://phpc.social/@denniskoch
 sponsor_url: https://github.com/sponsors/pxlrbt

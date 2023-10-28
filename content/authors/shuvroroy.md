@@ -1,7 +1,6 @@
 ---
 name: Shuvro Roy
 slug: shuvroroy
-avatar: shuvroroy.webp
 github_url: https://github.com/shuvroroy
 twitter_url: https://twitter.com/shuvro_008
 ---

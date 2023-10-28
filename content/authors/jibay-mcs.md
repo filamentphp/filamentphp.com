@@ -1,7 +1,6 @@
 ---
 name: Jibay Mcs
 slug: jibay-mcs
-avatar: jibay-mcs.webp
 github_url: https://github.com/JibayMcs
 twitter_url: https://twitter.com/ZeAmateis
 ---

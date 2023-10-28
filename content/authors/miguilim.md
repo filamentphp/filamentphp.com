@@ -1,7 +1,6 @@
 ---
 name: Miguilim
 slug: miguilim
-avatar: miguilim.webp
 github_url: https://github.com/miguilimzero
 ---
 

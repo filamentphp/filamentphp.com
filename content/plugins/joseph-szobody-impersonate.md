@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/stechstudio/filament-impersonate/mas
 github_repository: stechstudio/filament-impersonate
 has_dark_theme: true
 has_translations: true
-image: joseph-szobody-impersonate.webp
 versions: [2, 3]
 publish_date: 2021-03-29
 ---

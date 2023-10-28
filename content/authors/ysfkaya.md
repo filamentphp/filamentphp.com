@@ -1,7 +1,6 @@
 ---
 name: Yusuf Kaya
 slug: ysfkaya
-avatar: ysfkaya.webp
 github_url: https://github.com/ysfkaya
 ---
 

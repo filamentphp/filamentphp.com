@@ -10,7 +10,6 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-media-lib
 github_repository: filamentphp/spatie-laravel-media-library-plugin
 has_dark_theme: true
 has_translations: true
-image: filament-spatie-media-library.webp
 thumbnail: filament-spatie-media-library.webp
 versions: [2, 3]
 publish_date: 2023-07-17

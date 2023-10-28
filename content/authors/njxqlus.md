@@ -1,7 +1,6 @@
 ---
 name: Mikael Ahabalyants 
 slug: njxqlus
-avatar: njxqlus.webp
 github_url: https://github.com/njxqlus
 ---
 

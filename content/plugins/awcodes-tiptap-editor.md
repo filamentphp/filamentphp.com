@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-tiptap-editor/3.x/R
 github_repository: awcodes/filament-tiptap-editor
 has_dark_theme: true
 has_translations: true
-image: awcodes-tiptap-editor.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

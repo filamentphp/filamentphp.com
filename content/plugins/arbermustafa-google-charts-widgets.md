@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/arbermustafa/filament-google-charts-
 github_repository: arbermustafa/filament-google-charts-widgets
 has_dark_theme: true
 has_translations: false
-image: arbermustafa-google-charts-widgets.webp
 versions: [2, 3]
 publish_date: 2022-06-12
 ---

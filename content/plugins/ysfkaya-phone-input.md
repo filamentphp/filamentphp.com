@@ -10,6 +10,5 @@ github_repository: ysfkaya/filament-phone-input
 has_dark_theme: true
 has_translations: false
 versions: [2, 3]
-image: filament-phone-input.webp
 publish_date: 2022-08-21
 ---

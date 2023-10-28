@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/amendozaaguiar/filament-route-statis
 github_repository: amendozaaguiar/filament-route-statistics
 has_dark_theme: true
 has_translations: true
-image: amendozaaguiar-route-statistics.webp
 versions: [3]
 publish_date: 2023-08-23
 ---

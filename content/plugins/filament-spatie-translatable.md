@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-translata
 github_repository: filamentphp/spatie-laravel-translatable-plugin
 has_dark_theme: true
 has_translations: true
-image: filament-spatie-translatable.webp
 thumbnail: filament-spatie-translatable.webp
 versions: [2, 3]
 publish_date: 2023-07-17

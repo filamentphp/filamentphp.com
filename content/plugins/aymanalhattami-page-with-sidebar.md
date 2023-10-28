@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/aymanalhattami/filament-page-with-si
 github_repository: aymanalhattami/filament-page-with-sidebar
 has_dark_theme: true
 has_translations: true
-image: aymanalhattami-page-with-sidebar.webp
 versions: [2, 3]
 publish_date: 2023-03-21
 ---

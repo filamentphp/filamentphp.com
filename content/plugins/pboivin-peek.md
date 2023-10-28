@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/pboivin/filament-peek/2.x/README.md
 github_repository: pboivin/filament-peek
 has_dark_theme: true
 has_translations: true
-image: pboivin-peek.webp
 versions: [2, 3]
 publish_date: 2023-08-01
 ---

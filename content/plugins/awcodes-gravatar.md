@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/awcodes/filament-gravatar/2.x/README
 github_repository: awcodes/filament-gravatar
 has_dark_theme: true
 has_translations: false
-image: awcodes-gravatar.webp
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

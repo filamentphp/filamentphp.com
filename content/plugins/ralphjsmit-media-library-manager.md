@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/961393209639067698
 github_repository: ralphjsmit/laravel-filament-media-library
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-media-library-manager.webp
 versions: [2, 3]
 publish_date: 2023-07-17
 ---
