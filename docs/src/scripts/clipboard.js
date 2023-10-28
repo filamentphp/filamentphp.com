@@ -20,7 +20,6 @@ export default (Alpine) => {
                 let copyToClipboardButton = document.createElement('button')
                 copyToClipboardButton.innerHTML = this.clipboardIcon
                 copyToClipboardButton.id = `code-block-copy-button-${key}`
-
                 ;['md:block', 'hidden'].forEach((value) =>
                     copyToClipboardButton.classList.add(value),
                 )
