@@ -76,7 +76,7 @@ pre.torchlight .summary-caret {
 }
 
 .code-block-wrapper .code-block-copy-button {
-    @apply absolute right-2 top-2 outline-none text-gray-200 hover:text-gray-500 opacity-25 hover:opacity-100;
+    @apply absolute right-2 top-2 text-gray-200 opacity-25 outline-none hover:text-gray-500 hover:opacity-100;
 }
 
 pre .code-block-copy-button:hover,
