@@ -74,3 +74,13 @@ pre.torchlight .summary-caret {
 .torchlight details:not([open]) .summary-hide-when-open {
     display: initial;
 }
+
+.code-block-wrapper .code-block-copy-button {
+    @apply absolute right-2 top-2 text-gray-200 opacity-25 outline-none hover:text-gray-500 hover:opacity-100;
+}
+
+pre .code-block-copy-button:hover,
+pre .code-block-copy-button:focus,
+pre .code-block-copy-button:active {
+    @apply text-white outline-none;
+}

@@ -1,7 +1,6 @@
 ---
 name: Ibrahim Bougaoua
 slug: ibrahim-bougaoua
-avatar: ibrahim-bougaoua.jpg
 github_url: https://github.com/ibrahimBougaoua
 twitter_url: https://twitter.com/BougaouaIbrahim
 ---
