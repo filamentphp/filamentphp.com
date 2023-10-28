@@ -38,10 +38,10 @@ Route::get('/use-cases/admin-panel', function () {
         'pluginStars' => Star::query()
             ->toBase()
             ->where('starrable_type', 'plugin')
+            ->whereIn('starrable_id', $pluginSlugs)
             ->groupBy('starrable_id')
             ->selectRaw('count(stars.id) as count, starrable_id')
             ->leftJoin('plugins', 'plugins.slug', '=', 'starrable_id')
-            ->whereIn('plugins.slug', $pluginSlugs)
             ->get()
             ->pluck('count', 'starrable_id'),
     ]);
