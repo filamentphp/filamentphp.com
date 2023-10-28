@@ -32,7 +32,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
             { "group-hover/navigation-section-link:translate-x-1": ! pathName.includes(`/${section.slug}/`) },
           ]}
           >
-            <Icon name={section.icon} class=""
+            <Icon name={section.icon}
               class:list={[
             "h-5 w-5 transition duration-300",
             { "dark:group-hover/navigation-section-link:text-purple-400": ! pathName.includes(`/${section.slug}/`) },
@@ -55,7 +55,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '');
             { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1": section.href !== pathName },
           ]}
         >
-          <h2 class="">{section.title}</h2>
+          <h2>{section.title}</h2>
         </a>
 
         <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">

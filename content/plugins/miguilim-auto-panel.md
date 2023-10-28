@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/miguilimzero/filament-auto-panel/mai
 github_repository: miguilimzero/filament-auto-panel
 has_dark_theme: true
 has_translations: true
-image: miguilim-auto-panel.jpg
 versions: [3]
 publish_date: 2023-08-28
 ---

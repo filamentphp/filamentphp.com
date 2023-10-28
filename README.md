@@ -20,7 +20,6 @@ To set up your author profile, create a new file in the `content/authors` direct
 ---
 name: Dan Harrin
 slug: dan-harrin
-avatar: dan-harrin.jpg
 github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin
 mastodon_url: https://phpc.social/@danharrin
@@ -30,8 +29,9 @@ sponsor_url: https://github.com/sponsors/danharrin
 Your bio should be written in Markdown here. In the future, we may introduce an Author page where people can see your contributions, so feel free to write a little about yourself. Please check the grammar and spelling of this description, preferably using [Grammarly](https://www.grammarly.com). It should be in full sentences.
 ```
 
+**Important: please upload an avatar to the `content/authors/avatars` directory. The file must be the same name as your slug. It must be square, at least 1000x1000 pixels in size, and preferably a JPEG.**
+
 - The `slug` should match the current filename.
-- The `avatar` should be the name of a file in the `content/authors/avatars` directory. Your avatar must be square, at least 1000x1000 pixels in size, and preferably a JPEG.
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
 - The `mastodon_url` should be a link to your Mastodon profile. It is optional.
@@ -53,11 +53,12 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-media-lib
 github_repository: filamentphp/spatie-laravel-media-library-plugin
 has_dark_theme: true
 has_translations: true
-image: filament-spatie-media-library.jpg
 versions: [2, 3]
 publish_date: 2023-08-01
 ---
 ```
+
+**Important: please upload an image to the `content/plugins/images` directory. The file must be the same name as the plugin's slug. It must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.**
 
 Please note: Do not include the word "Filament" in the name of your plugin. This is redundant, as all plugins on the website are for Filament. Please do not include it in the slug or filename either - unless its part of your author name.
 
@@ -70,8 +71,6 @@ Please note: Do not include the word "Filament" in the name of your plugin. This
 - The `github_repository` should be the name of the GitHub repository where your plugin is hosted.
 - The `has_dark_theme` should be `true` if your plugin supports Tailwind's dark mode, or `false` if not.
 - The `has_translations` should be `true` if your plugin supports multiple languages, or `false` if not.
-- The `image` should be the name of a file in the `content/plugins/images` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. If your image is a screenshot of your plugin, please ensure that it is using a light theme and not a dark theme, to ensure it fits in with the rest of the website.
-- The `thumbnail` is optional, and is the name of a file in the `content/plugins/thumbnails directory` directory. The image must fit the 16:9 aspect ratio, at least 2560x1440 pixels in size, and preferably a JPEG. It will be used as a replacement for the `image` any time that the plugin is listed alongside others, and the size is smaller. If you do not provide a `thumbnail`, the `image` will be used instead.
 - The `versions` should be an array of Filament major versions that your plugin supports.
 - The `publish_date` is the date that you submitted the plugin to the website. It usually should be the date that you submitted the pull request for the plugin.
 
@@ -144,3 +143,5 @@ error_page 404 /index.php;
 ## Debugging missing content
 
 If you are working on the website locally, and you notice that some Markdown-based content is missing, it is likely that it has not reached the cache yet. Please run `php artisan clear-orbit-cache` and `php artisan cache:clear`. If images aren't showing up, you probably also need to run `php artisan optimize-images`.
+
+> You need to [install image optimization tools](https://github.com/spatie/image-optimizer#optimization-tools) before you can run `php artisan optimize-images`.

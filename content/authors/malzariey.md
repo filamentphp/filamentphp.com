@@ -1,7 +1,6 @@
 ---
 name: Majid M. Al Zariey
 slug: malzariey
-avatar: malzariey.jpg
 github_url: https://github.com/malzariey
 twitter_url: https://twitter.com/malzariey
 ---

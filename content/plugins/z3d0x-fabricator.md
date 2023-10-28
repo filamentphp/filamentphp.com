@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/Z3d0X/filament-fabricator/2.x/docs/R
 github_repository: z3d0x/filament-fabricator
 has_dark_theme: true
 has_translations: true
-image: z3d0x-fabricator.jpg
 versions: [2, 3]
 publish_date: 2022-09-20
 ---

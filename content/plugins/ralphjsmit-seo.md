@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/ralphjsmit/laravel-filament-seo/main
 github_repository: ralphjsmit/laravel-filament-seo
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-seo.jpg
 versions: [2, 3]
 publish_date: 2023-07-17
 ---

@@ -102,15 +102,21 @@
                         Consulting
                     </a>
                     <a
-                        href="https://shop.filamentphp.com"
+                        href="{{ route('use-cases.admin-panel') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Shop
+                        Build an Admin Panel
                     </a>
                 </div>
                 <div
                     class="flex flex-col items-start gap-3 text-sm font-medium"
                 >
+                    <a
+                        href="https://shop.filamentphp.com"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Shop
+                    </a>
                     <a
                         href="{{ route('team') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
