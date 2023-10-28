@@ -75,12 +75,12 @@ pre.torchlight .summary-caret {
     display: initial;
 }
 
-.code-block-wrapper .copyBtn {
+.code-block-wrapper .code-block-copy-button {
     @apply absolute right-2 top-2 outline-none text-gray-200 hover:text-gray-500 opacity-25 hover:opacity-100;
 }
 
-pre .copyBtn:hover,
-    pre .copyBtn:focus,
-    pre .copyBtn:active {
+pre .code-block-copy-button:hover,
+pre .code-block-copy-button:focus,
+pre .code-block-copy-button:active {
     @apply text-white outline-none;
 }
