@@ -1,7 +1,6 @@
 ---
 name: Eighty Nine
 slug: eightynine
-avatar: eightynine.jpeg
 github_url: https://github.com/eighty9nine
 twitter_url: https://twitter.com/eighty9nine
 mastodon_url: 
