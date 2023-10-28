@@ -1,7 +1,6 @@
 ---
 name: Martin Hwang
 slug: icetalker
-avatar: icetalker.webp
 github_url: https://github.com/icetalker
 ---
 
