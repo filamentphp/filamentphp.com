@@ -399,7 +399,7 @@
                 x-on:click="showCategories = !showCategories"
             >
                 <div class="font-semibold">
-                    <span class="">Select Categories</span>
+                    <span>Select Categories</span>
                     <span class="text-sm tracking-tighter">
                         <span>(</span>
                         <span x-text="selectedCategories.size"></span>

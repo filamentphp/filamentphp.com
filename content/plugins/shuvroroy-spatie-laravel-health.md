@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/shuvroroy/filament-spatie-laravel-he
 github_repository: shuvroroy/filament-spatie-laravel-health
 has_dark_theme: true
 has_translations: true
-image: shuvroroy-spatie-laravel-health.png
 versions: [2, 3]
 publish_date: 2021-12-29
 ---

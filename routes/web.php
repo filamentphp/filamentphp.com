@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Plugin;
+use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -17,6 +19,33 @@ use Illuminate\Support\Str;
 */
 
 Route::view('/', 'home')->name('home');
+
+Route::get('/use-cases/admin-panel', function () {
+    $pluginSlugs = [
+        'bezhansalleh-shield',
+        'joseph-szobody-impersonate',
+        'awcodes-curator',
+        'pxlrbt-excel',
+        'saade-fullcalendar',
+        'cheesegrits-google-maps',
+    ];
+
+    return view('use-cases.admin-panel', [
+        'plugins' => Plugin::query()
+            ->with(['author'])
+            ->whereIn('slug', $pluginSlugs)
+            ->get(),
+        'pluginStars' => Star::query()
+            ->toBase()
+            ->where('starrable_type', 'plugin')
+            ->whereIn('starrable_id', $pluginSlugs)
+            ->groupBy('starrable_id')
+            ->selectRaw('count(stars.id) as count, starrable_id')
+            ->leftJoin('plugins', 'plugins.slug', '=', 'starrable_id')
+            ->get()
+            ->pluck('count', 'starrable_id'),
+    ]);
+})->name('use-cases.admin-panel');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 
