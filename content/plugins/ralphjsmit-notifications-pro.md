@@ -163,6 +163,10 @@ php artisan vendor:publish --tag="filament-notifications-translations"
 php artisan migrate
 ```
 
+### Custom themes
+
+If you are using a custom theme, the package will work out-of-the-box without any necessary changes.
+
 #### Replace `use Notifiable` with `use FilamentNotifiable`
 
 Next, you need to replace the default `Notifiable` trait with the `FilamentNotifiable` trait. You should do this on your User model and on every other model that you want to send notifications to.
