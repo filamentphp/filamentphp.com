@@ -1,7 +1,6 @@
 ---
 name: Amid Esfahani
 slug: amid
-avatar: amid.jpg
 github_url: https://github.com/amidesfahani
 ---
 
