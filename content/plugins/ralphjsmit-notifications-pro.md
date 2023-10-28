@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/1007359259677294764
 github_repository: ralphjsmit/laravel-filament-notifications
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-notifications-pro.jpg
 versions: [2, 3]
 publish_date: 2023-07-17
 ---
@@ -163,6 +162,10 @@ php artisan vendor:publish --tag="filament-notifications-translations"
 
 php artisan migrate
 ```
+
+### Custom themes
+
+If you are using a custom theme, the package will work out-of-the-box without any necessary changes.
 
 #### Replace `use Notifiable` with `use FilamentNotifiable`
 

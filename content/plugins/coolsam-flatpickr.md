@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/savannabits/filament-flatpickr/3.x/R
 github_repository: savannabits/filament-flatpickr
 has_dark_theme: true
 has_translations: false
-image: coolsam-flatpickr.png
 versions: [2, 3]
 publish_date: 2023-08-02
 ---

@@ -1,7 +1,6 @@
 ---
 name: Jeff Greco
 slug: jeffgreco
-avatar: jeffgreco.jpg
 github_url: https://github.com/jeffgreco13
 twitter_url: https://twitter.com/JeffGreco13
 ---

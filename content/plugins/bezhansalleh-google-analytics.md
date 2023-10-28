@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-google-analyti
 github_repository: bezhanSalleh/filament-google-analytics
 has_dark_theme: true
 has_translations: true
-image: bezhansalleh-google-analytics.png
 versions: [2, 3]
 publish_date: 2023-07-31
 ---
