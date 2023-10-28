@@ -11,7 +11,6 @@ docs_urls:
 github_repository: novadaemon/filament-pretty-json
 has_dark_theme: true
 has_translations: false
-image: novadaemon-pretty-json.jpg
 versions: [2, 3]
-publish_date: 2023-10-16
+publish_date: 2023-06-13
 ---

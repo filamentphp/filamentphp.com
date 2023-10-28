@@ -1,7 +1,6 @@
 ---
 name: Jesús García
 slug: novadaemon
-avatar: novadaemon.jpg
 github_url: https://github.com/novadaemon
 twitter_url: https://twitter.com/novadaemon
 ---
