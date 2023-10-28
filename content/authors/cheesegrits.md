@@ -1,7 +1,6 @@
 ---
 name: Hugh Messenger
 slug: cheesegrits
-avatar: cheesegrits.jpg
 github_url: https://github.com/cheesegrits
 twitter_url: https://twitter.com/cheesegrits
 ---

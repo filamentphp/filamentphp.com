@@ -1,7 +1,6 @@
 ---
 name: Danilo Andrade
 slug: dmandrade
-avatar: dmandrade.jpg
 github_url: https://github.com/dmandrade
 ---
 
