@@ -1,7 +1,6 @@
 ---
 name: Anderson Mendoza A
 slug: amendozaaguiar
-avatar: amendozaaguiar.jpeg
 github_url: https://github.com/amendozaaguiar
 twitter_url: https://twitter.com/amendozaaguiar
 ---
