@@ -135,11 +135,7 @@ class Plugin extends Model implements Starrable
 
     public function getImageUrl(): ?string
     {
-        if (blank($this->image)) {
-            return null;
-        }
-
-        return asset("images/content/plugins/images/{$this->image}");
+        return asset('images/content/plugins/images/' . ($this->image ?? "{$this->slug}.webp"));
     }
 
     public function getThumbnailUrl(): ?string

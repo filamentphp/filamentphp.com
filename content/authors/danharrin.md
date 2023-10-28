@@ -1,7 +1,6 @@
 ---
 name: Dan Harrin
 slug: danharrin
-avatar: danharrin.jpg
 github_url: https://github.com/danharrin
 twitter_url: https://twitter.com/danjharrin]
 sponsor_url: https://github.com/sponsors/danharrin
