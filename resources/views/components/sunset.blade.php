@@ -313,7 +313,7 @@
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
                         alt="Giraffes"
-                        class="w-[2rem] scale-x-[-1] opacity-80"
+                        class="w-[2rem] -scale-x-100 opacity-80"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
@@ -374,7 +374,7 @@
             x-ref="take_off_message"
             class="mx-auto max-w-md px-4 pt-2 text-dolphin"
         >
-            Give Filament a try, and we bet that you’ll be amazed in the first
+            Give Filament a try, and we bet that you'll be amazed in the first
             few minutes.
         </div>
 
@@ -384,10 +384,12 @@
             class="px-4 pt-10"
         >
             <a
-                href="{{ route('docs') }}"
+                href="{{ route('docs', ['slug' => 'panels/getting-started']) }}"
                 class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40 motion-reduce:transition-none sm:py-10"
             >
-                <div class="text-2xl font-bold sm:text-3xl">Get Started</div>
+                <div class="text-2xl font-bold sm:text-3xl">
+                    {{ $button ?? 'Get Started' }}
+                </div>
                 <div class="pr-4">
                     <svg
                         width="24"
