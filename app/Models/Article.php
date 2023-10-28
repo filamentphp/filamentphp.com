@@ -97,4 +97,21 @@ class Article extends Model implements Starrable
     {
         return $query->where('publish_date', '<=', now());
     }
+
+    public function getDataArray(): array
+    {
+        return [
+            'id' => $this->slug,
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'publish_date' => $this->publish_date->diffForHumans(),
+            'author' => [
+                'name' => $this->author->name,
+                'avatar' => $this->author->getAvatarUrl(),
+            ],
+            'categories' => $this->categories,
+            'type' => $this->type_slug,
+            'versions' => $this->versions,
+        ];
+    }
 }

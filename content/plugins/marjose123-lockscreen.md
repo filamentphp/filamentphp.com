@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/MarJose123/filament-lockscreen/1.x/R
 github_repository: MarJose123/filament-lockscreen
 has_dark_theme: true
 has_translations: true
-image: marjose123-lockscreen.jpg
 versions: [2, 3]
 publish_date: 2022-09-12
 ---

@@ -1,6 +1,6 @@
 <a
     x-bind:href="'/plugins/' + plugin.slug"
-    class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
+    class="block rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
 >
     <div
         x-bind:style="'background-image: url(' + plugin.thumbnail_url + ')'"
