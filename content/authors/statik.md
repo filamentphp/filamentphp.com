@@ -1,7 +1,6 @@
 ---
 name: Statik
 slug: statik
-avatar: statik.jpg
 github_url: https://github.com/statikbe
 twitter_url: https://twitter.com/statikbe
 ---
