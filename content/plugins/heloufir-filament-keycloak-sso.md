@@ -1,4 +1,5 @@
 ---
+anystack_id: 9a7c956c-587e-4487-9763-a4b6fd8cc829
 name: Filament Keycloak SSO
 slug: heloufir-filament-keycloak-sso
 author_slug: heloufir
