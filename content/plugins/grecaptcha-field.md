@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/AbanoubNassem/filament-grecaptcha-fi
 github_repository: https://github.com/AbanoubNassem/filament-grecaptcha-field
 has_dark_theme: true
 has_translations: false
-image: grecaptcha-field.gif
+image: grecaptcha-field.jpg
 versions: [2, 3]
 publish_date: 2022-10-20
 ---

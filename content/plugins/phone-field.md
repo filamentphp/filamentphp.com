@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/AbanoubNassem/filament-phone-field/m
 github_repository: https://github.com/AbanoubNassem/filament-phone-field
 has_dark_theme: true
 has_translations: false
-image: 
+image: phone-field.jpg
 versions: [2, 3]
 publish_date: 2022-10-31
 ---
