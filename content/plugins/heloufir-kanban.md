@@ -1,7 +1,7 @@
 ---
 anystack_id: 9a833198-82cc-42db-836d-a62aaf9e0a15
 name: Kanban
-slug: heloufir-filament-kanban
+slug: heloufir-kanban
 author_slug: heloufir
 categories: [filament]
 description: Integrates Kanban into Filament projects, simplifying task management, progress tracking, and team collaboration, enhancing productivity and organization.
