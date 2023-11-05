@@ -1,7 +1,7 @@
 ---
 anystack_id: 9a7c956c-587e-4487-9763-a4b6fd8cc829
 name: Keycloak SSO
-slug: heloufir-filament-keycloak-sso
+slug: heloufir-keycloak-sso
 author_slug: heloufir
 categories: [filament, authentication, permissions]
 description: Filament Keycloak simplifies user authentication and empowers role-based authorization using the robust Keycloak platform. Secure your applications with ease.
