@@ -11,5 +11,5 @@ has_dark_theme: false
 has_translations: false
 image: rupadana-filament-swiper.png
 versions: [3]
-publish_date: 2023-10-05
+publish_date: 2023-11-05
 ---
