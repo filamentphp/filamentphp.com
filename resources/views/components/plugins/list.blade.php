@@ -15,7 +15,7 @@
             searchEngine = new MiniSearch({
                 fields: ['name', 'description', 'github_repository', 'author.name'],
                 searchOptions: {
-                    fuzzy: true,
+                    fuzzy: 0.1,
                     prefix: true,
                 },
                 extractField: (document, fieldName) => {
@@ -128,6 +128,14 @@
 
                 filterResult = filterResult.filter((plugin) =>
                     searchResult.some((result) => result.id === plugin.id),
+                )
+
+                // Order the results by the search score
+                filterResult = filterResult.sort((a, b) =>
+                    searchResult.find((result) => result.id === a.id).score <
+                    searchResult.find((result) => result.id === b.id).score
+                        ? 1
+                        : -1,
                 )
             }
 
@@ -391,7 +399,7 @@
                 x-on:click="showCategories = !showCategories"
             >
                 <div class="font-semibold">
-                    <span class="">Select Categories</span>
+                    <span>Select Categories</span>
                     <span class="text-sm tracking-tighter">
                         <span>(</span>
                         <span x-text="selectedCategories.size"></span>

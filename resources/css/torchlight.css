@@ -24,9 +24,7 @@ pre.torchlight .summary-caret {
 }
 
 .torchlight.has-focus-lines .line:not(.line-focus) {
-    transition:
-        filter 0.35s,
-        opacity 0.35s;
+    transition: filter 0.35s, opacity 0.35s;
     filter: blur(0.095rem);
     opacity: 0.65;
 }
@@ -75,4 +73,14 @@ pre.torchlight .summary-caret {
 /* Show the [...] indicator when closed. */
 .torchlight details:not([open]) .summary-hide-when-open {
     display: initial;
+}
+
+.code-block-wrapper .code-block-copy-button {
+    @apply absolute right-2 top-2 text-gray-200 opacity-25 outline-none hover:text-gray-500 hover:opacity-100;
+}
+
+pre .code-block-copy-button:hover,
+pre .code-block-copy-button:focus,
+pre .code-block-copy-button:active {
+    @apply text-white outline-none;
 }

@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs'
+import Clipboard from './clipboard'
 import TableOfContents from './table-of-contents'
 import FloatingUi from '@awcodes/alpine-floating-ui'
 import Focus from '@alpinejs/focus'
@@ -19,6 +20,7 @@ docsearch({
 })
 
 Alpine.plugin(Focus)
+Alpine.plugin(Clipboard)
 Alpine.plugin(FloatingUi)
 Alpine.plugin(TableOfContents)
 

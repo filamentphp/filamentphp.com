@@ -15,7 +15,7 @@
             searchEngine = new MiniSearch({
                 fields: ['title', 'author.name'],
                 searchOptions: {
-                    fuzzy: true,
+                    fuzzy: 0.1,
                     prefix: true,
                 },
                 extractField: (document, fieldName) => {
@@ -95,6 +95,14 @@
 
                 filterResult = filterResult.filter((article) =>
                     searchResult.some((result) => result.id === article.id),
+                )
+
+                // Order the results by the search score
+                filterResult = filterResult.sort((a, b) =>
+                    searchResult.find((result) => result.id === a.id).score <
+                    searchResult.find((result) => result.id === b.id).score
+                        ? 1
+                        : -1,
                 )
             }
 
