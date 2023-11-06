@@ -1,7 +1,7 @@
 ---
 name: Abdullah Hegab
 slug: abdullah-hegab
-avatar: abdullahhegab.jpg
+avatar: abdullah-hegab.jpg
 github_url: https://github.com/Hegabovic
 ---
 Hegabovic is full-stack engineer, who's absolutely passionate about coding and perpetually hungers for fresh knowledge.
