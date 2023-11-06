@@ -1,3 +1,12 @@
+---
+title: Multi Tenancy Implementation With Multi Database Approach
+slug: multi-tenancy-implementation-with-multi-database-approach
+author_slug: abdullah-hegab
+publish_date: 2023-11-06
+categories: [multi-tenancy, integration]
+type_slug: article
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://tenancyforlaravel.com/assets/img/tenancyforlaravel.svg" width="400" alt="TenancyWithLaravel"></a></p>
 <h1 align="center">
 Full Guide Multi-Tenancy Implementation
