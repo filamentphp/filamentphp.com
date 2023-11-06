@@ -95,6 +95,12 @@ Route::prefix('/docs')->group(function () {
             return file_get_contents($filePath);
         }
 
+        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+
+        if (file_exists($filePath)) {
+            return file_get_contents($filePath);
+        }
+
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $version = Str::before($slug, '.x');
 
