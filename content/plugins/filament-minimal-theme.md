@@ -131,9 +131,6 @@ Note that some packages depend on other Filament packages, so you need to make s
     - Support
 - Notifications
     - Actions
-    - Forms
-    - Infolists
-    - Notifications
     - Support
 - Support
 - Tables
