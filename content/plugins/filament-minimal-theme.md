@@ -112,6 +112,39 @@ In your app CSS file, import the Minimal Theme stylesheets for the Filament pack
 @import '/vendor/filament/minimal-theme/resources/css/widgets';
 ```
 
+Note that some packages depend on other Filament packages, so you need to make sure to import the stylesheets of all dependencies. Here's the list of packages with their dependencies:
+
+- Actions
+    - Forms
+    - Infolists
+    - Notifications
+    - Support
+- Forms
+    - Actions
+    - Infolists
+    - Notifications
+    - Support
+- Infolists
+    - Actions
+    - Forms
+    - Notifications
+    - Support
+- Notifications
+    - Actions
+    - Forms
+    - Infolists
+    - Notifications
+    - Support
+- Support
+- Tables
+    - Actions
+    - Forms
+    - Infolists
+    - Notifications
+    - Support
+- Widgets
+    - Support
+
 Next, compile your updated stylesheet using `npm run build`.
 
 #### Configuration
