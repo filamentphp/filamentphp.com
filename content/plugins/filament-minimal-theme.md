@@ -99,6 +99,10 @@ First, make sure you've properly installed any Filament packages. Your project s
 In your app CSS file, import the Minimal Theme stylesheets for the Filament packages you're using:
 
 ```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import '/vendor/filament/minimal-theme/resources/css/actions';
 @import '/vendor/filament/minimal-theme/resources/css/forms';
 @import '/vendor/filament/minimal-theme/resources/css/infolists';
@@ -106,10 +110,6 @@ In your app CSS file, import the Minimal Theme stylesheets for the Filament pack
 @import '/vendor/filament/minimal-theme/resources/css/support';
 @import '/vendor/filament/minimal-theme/resources/css/tables';
 @import '/vendor/filament/minimal-theme/resources/css/widgets';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 ```
 
 Next, compile your updated stylesheet using `npm run build`.
