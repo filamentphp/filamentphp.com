@@ -51,6 +51,8 @@ You will be prompted to provide a username and password. Use your order email ad
 
 ### Panels
 
+#### Stylesheet
+
 To start using the Minimal Theme with the Filament Panel Builder, you need to [create a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme).
 
 Next, replace the imported Panel Builder stylesheet with the Minimal Theme stylesheet in your theme CSS file:
@@ -59,6 +61,8 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 - @import '/vendor/filament/filament/resources/css/theme.css';
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
+
+#### Configuration
 
 Finally, register the theme plugin in your panel configuration file, and configure the colors and icons:
 
@@ -84,11 +88,13 @@ class AdminPanelProvider extends PanelProvider
 }
 ```
 
-### Outside panels
+### Standalone
 
 If you're using Filament packages outside the Panel Builder, you may install the Minimal Theme using the following steps.
 
 First, make sure you've properly installed any Filament packages. Your project should have a Tailwind CSS config file that extends the Filament preset, a stylesheet (e.g. `resources/css/app.css`), and a layout view that renders `@filamentStyles`.
+
+#### Stylesheet
 
 In your app CSS file, import the Minimal Theme stylesheets for the Filament packages you're using:
 
@@ -107,6 +113,8 @@ In your app CSS file, import the Minimal Theme stylesheets for the Filament pack
 ```
 
 Next, compile your updated stylesheet using `npm run build`.
+
+#### Configuration
 
 Finally, the theme's colors, color shades, and icons need to be configured. You may do this by registering the theme's service provider in `config/app.php` by adding it to the `providers` array:
 
