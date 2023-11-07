@@ -60,7 +60,7 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
 
-Finally, register the theme plugin in your panel configuration file, optionally configuring colors and icons:
+Finally, register the theme plugin in your panel configuration file, and configure the colors and icons:
 
 ```php
 <?php
@@ -86,7 +86,44 @@ class AdminPanelProvider extends PanelProvider
 
 ### Outside panels
 
-Installation instructions for using the theme outside panels will still be added.
+If you're using Filament packages outside the Panel Builder, you may install the Minimal Theme using the following steps.
+
+First, make sure you've properly installed any Filament packages. Your project should have a Tailwind CSS config file that extends the Filament preset, a stylesheet (e.g. `resources/css/app.css`), and a layout view that renders `@filamentStyles`.
+
+In your app CSS file, import the Minimal Theme stylesheets for the Filament packages you're using:
+
+```css
+@import '/vendor/filament/minimal-theme/resources/css/actions';
+@import '/vendor/filament/minimal-theme/resources/css/forms';
+@import '/vendor/filament/minimal-theme/resources/css/infolists';
+@import '/vendor/filament/minimal-theme/resources/css/notifications';
+@import '/vendor/filament/minimal-theme/resources/css/support';
+@import '/vendor/filament/minimal-theme/resources/css/tables';
+@import '/vendor/filament/minimal-theme/resources/css/widgets';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Next, compile your updated stylesheet using `npm run build`.
+
+Finally, the theme's colors, color shades, and icons need to be configured. You may do this by registering the theme's service provider in `config/app.php` by adding it to the `providers` array:
+
+```php
+/*
+ * Package Service Providers...
+ */
+Filament\MinimalThemeServiceProvider::class,
+```
+
+Alternatively, if you need more control or only want to use the theme in certain parts of your app, you may configure the theme manually (e.g. in a middleware):
+
+```php
+use Filament\MinimalTheme;
+
+MinimalTheme::configure();
+```
 
 ## Issues
 
