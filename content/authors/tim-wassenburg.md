@@ -6,4 +6,4 @@ github_url: https://github.com/timwassenburg
 twitter_url: https://twitter.com/timwassenburg
 ---
 
-Tim is a Laravel developer from The Netherlands. He has extensive experience in PHP and Laravel and enjoys working with Filament.
+Tim, a freelance Laravel developer from the Netherlands, boasts extensive experience in PHP and Laravel and takes pleasure in working with Filament.
