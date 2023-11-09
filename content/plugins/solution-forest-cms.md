@@ -101,6 +101,17 @@ To get started with the Filament CMS Website Plugin, follow these steps:
         ...
     ];
     ```
+6. Register the plugin in your Panel provider:
+   > **Important:  Register the plugin in your Panel provider after version 2.x**
+   ``` bash
+    use SolutionForest\FilamentCms\FilamentCmsPanel;
+ 
+    public function panel(Panel $panel): Panel
+    {
+        return $panel
+            ->plugin(FilamentCmsPanel::make());
+    }
+   ```
 
 ## Updating the Filament CMS Website Plugin
 --------------------------------------------------------------------------------------------------
@@ -112,6 +123,8 @@ If the update includes any new migration files, they will be automatically publi
 It's important to note that before running any updates, you should always backup your code and database to ensure that you can easily revert to a previous state if any issues arise. Additionally, you should review the release notes for the updated package to understand any potential breaking changes or new features that may impact your application.
 
 # Documentation
+
+>***Please visit [this link](https://filament-cms-website-demo.solutionforest.net/docs/filament-cms) access the most updated document.***
 
 ## General Page
 
@@ -272,7 +285,8 @@ To change the theme, you can modify the theme parameter in the `config/filament-
      ```
 
 ## Data-type Page
-![Example](assets/screenshots/list-data-type-pages.png)
+![Example](https://demo.solutionforest.net/Filament/cms-plugin/list-data-type-pages.png))
+
 The data-type page is a resource that doesn't have an associated route. 
 
 For instance, if you create a 'link' data-type that includes information such as URLs and titles, you can retrieve this information from any page.
