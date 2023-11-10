@@ -470,7 +470,7 @@ To retrieve records under the content-type page, you can use the following code:
 ## Translation
 This guide assumes that you have already set up your model to be translatable, as per [Spatie's documentation](https://github.com/spatie/laravel-translatable#making-a-model-translatable).
 
-1. To set the `default_locales` for all resources at once, you can publish the [package's configuration file](https://filamentphp.com/docs/2.x/spatie-laravel-translatable-plugin/installation#publishing-configuration).
+1. **[Important] Please install [filament/spatie-laravel-translatable-plugin](https://filamentphp.com/plugins/filament-spatie-translatable) first, and following the instruction of this plugin.**
    
 2. Next, you need to prepare your resource classes and model, and update the settings in the `config/filament-cms.php` file. Here's an example configuration:
     ```bash
@@ -543,29 +543,24 @@ This guide assumes that you have already set up your model to be translatable, a
                 'edit' => Pages\EditCmsPage::route('/{record}/edit'),
             ];
         }
-
-        public static function getTranslatableLocales(): array
-        {
-            return config('filament-spatie-laravel-translatable-plugin.default_locales') ?? config('filament-cms.locales');
-        }
     }
     ```
 5. Finally, you need to add the necessary trait to your Filament resource pages:
     ```php
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Resources\Pages\ListRecords;
 
     class ListCmsPages extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\ListCmsPages
     {
-        use ListRecords\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\ListRecords\Concerns\Translatable;
+        
         protected static string $resource = CmsPageResource::class;
-
-        protected function getActions(): array
+        
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+                \Filament\Actions\CreateAction::make(),
+            ];
         }
     }
     ```
@@ -573,19 +568,19 @@ This guide assumes that you have already set up your model to be translatable, a
     namespace App\Filament\Resources\CmsPageResource\Pages;
 
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Resources\Pages\EditRecord;
 
     class EditCmsPage extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\EditCmsPage
     {
-        use EditRecord\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\EditRecord\Concerns\Translatable;
+        
         protected static string $resource = CmsPageResource::class;
-
-        protected function getActions(): array
+        
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveFormLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+                ...parent::getActions(),
+            ];
         }
     }
 
@@ -594,19 +589,18 @@ This guide assumes that you have already set up your model to be translatable, a
     namespace App\Filament\Resources\CmsPageResource\Pages;
 
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Pages\Actions;
-    use Filament\Resources\Pages\CreateRecord;
 
     class CreateCmsPage extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\CreateCmsPage
     {
-        use CreateRecord\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\CreateRecord\Concerns\Translatable;
+    
         protected static string $resource = CmsPageResource::class;
-        protected function getActions(): array
+    
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveFormLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+            ];
         }
     }
 
