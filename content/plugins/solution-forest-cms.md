@@ -467,6 +467,7 @@ To retrieve records under the content-type page, you can use the following code:
 \SolutionForest\FilamentCms\Support\Utils::getContentType('products')->get();
 ```
 
+
 ## Translation
 This guide assumes that you have already set up your model to be translatable, as per [Spatie's documentation](https://github.com/spatie/laravel-translatable#making-a-model-translatable).
 
@@ -525,7 +526,7 @@ This guide assumes that you have already set up your model to be translatable, a
         ];
     }
     ```
-4. You also need to add the necessary trait to your Filament resource:
+4. You also need to add the necessary trait to your Filament resource, to prepare for resource pages:
     ```php
     namespace App\Filament\Resources;
 
@@ -545,7 +546,7 @@ This guide assumes that you have already set up your model to be translatable, a
         }
     }
     ```
-5. Finally, you need to add the necessary trait to your Filament resource pages:
+5. Finally, you need to add the necessary trait to your Filament resource pages, to making resources page translatable after *resource class added necessary trait*. For all resource pages, you must apply the corresponding `Translatable` trait to it, and install a `LocaleSwitcher` header action. Also, you need to install the original actions of the cms resource pages, such as *preview page action* and *view published page action* inside `\SolutionForest\FilamentCms\Concern\CanPublishPage` trait:
     ```php
     use App\Filament\Resources\CmsPageResource;
 
@@ -605,6 +606,32 @@ This guide assumes that you have already set up your model to be translatable, a
     }
 
     ```
+6. Setting the translatable locales for a particular resource
+By default, the translatable locales can be set globally for all resources in the plugin configuration. Alternatively, you can customize the translatable locales for a particular resource by overriding the getTranslatableLocales() method in your resource class:
+
+    ```php
+    
+    class CmsPageResource extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource
+    {
+        use \Filament\Resources\Concerns\Translatable;
+    
+        // ...
+    
+        public static function getTranslatableLocales(): array
+        {
+            return ['en', 'fr'];
+        }
+    }
+    ```
+
+7. If you need to make `CmsTagResouce` and `CmsPageNavigationCategoryResource`, follow the same steps as mentioned above for `CmsPageResource`. Add the use `\Filament\Resources\Concerns\Translatable` trait to the respective resource classes and apply the necessary changes to the resource pages.
+
+    > **Special case for EditCmsPageNavigation page:**
+    >
+    > The `EditCmsPageNavigation` page is not a Filament preset resource page, but it already applies the `SolutionForest\FilamentTree\Concern\TreeRecords\Translatable` trait.
+    >
+    >If you want to make any adjustments, you just need to add the `getTranslatableLocales` method to the `CmsPageNavigationCategoryResource` class or override the `getTranslatableLocales` method in the `EditCmsPageNavigation` page.
+    >
 
 ## Tag
 By default, the tagging of cms page is disable. If you wish to enable it, you can update the `enable_page_tags` as true in the `config/filament-cms.php` file.
