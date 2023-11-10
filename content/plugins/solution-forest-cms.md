@@ -640,11 +640,40 @@ Additionally, you need to add the following policies for `AuditRelationManager`:
 Please refer to the official documentation of the Laravel Auditing package at [owen-it/laravel-auditing](https://github.com/owen-it/laravel-auditing) for more detailed information and instructions.
 ![audit-1](https://demo.solutionforest.net/Filament/cms-plugin/audit-1.png)
 
+## Authorizations
+The following abilities are set to **true** by default. You can define them in the `AuthServiceProvider` or use the `registerCmsAuthenticationUsing` method of `SolutionForest\FilamentCms\FilamentCmsPanel`.
+|Name of Ability|Description|
+|---|---|
+|publish|Determine whether the user can publish the page.|
+|unpublish|Determine whether the user can unpublish the page.|
+|schedulePublish|Determine whether the user can schedule publish the page.|
+|audit|Determine whether the user can view the audit logs the page.|
+|rollbackAudit|Determine whether the user can rollback the audit logs the page.|
+
+```php
+FilamentCmsPanel::make()
+    ->registerCmsAuthenticationUsing(function () {
+        \Illuminate\Support\Facades\Gate::define('publish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('unpublish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('schedulePublish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+
+        \Illuminate\Support\Facades\Gate::define('audit', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $pageClass = null, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('rollbackAudit', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $pageClass = null, ?string $resourceClass = null) => true);
+    })
+```
+
+You can use the following code to disable the default authentication setup in Filament CMS:
+```
+FilamentCmsPanel::make()
+    ->registerCmsAuthenticationUsing(fn () => false)
+```
+
 # Recommended Plugins
 --------------------------------------------------------
 
 In addition to the core functionality of this project, we recommend the following plugins to extend its capabilities:
 
+*   [Spatie Translatable](https://filamentphp.com/plugins/filament-spatie-translatable) - Filament support for Spatie's Laravel Translatable package.
 *   [Media Library Manager](https://filamentphp.com/plugins/media-library-pro) - A media manager that is compatible with Spatie MediaLibrary.
 *   [Curator](https://github.com/awcodes/filament-curator) - A free media manager designed for use with Filament Admin.
 
@@ -656,7 +685,7 @@ Here are some of the features and improvements we plan to implement in future re
 *   \[OK\] Scheduled Publish Page
 *   \[ \] Asset Manager
 *   \[OK\] Tag Manager
-*   \[  \] Versioning
+*   \[ \] Versioning
 
 Please note that this roadmap is subject to change and may be updated as we receive feedback and new feature requests from our users. We appreciate any suggestions or ideas you may have for improving this project!
 
