@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/1107360799636340880
 github_repository: solutionforest/filament-cms-website-plugin
 has_dark_theme: false
 has_translations: true
-image: solution-forest-cms-website.png
 versions: [2, 3]
 publish_date: 2023-05-14
 ---

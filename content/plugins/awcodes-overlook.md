@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/awcodes/overlook/2.x/README.md
 github_repository: awcodes/overlook
 has_dark_theme: true
 has_translations: false
-image: awcodes-overlook.jpg
 versions: [2, 3]
 publish_date: 2023-07-30
 ---

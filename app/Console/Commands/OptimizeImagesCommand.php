@@ -3,7 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Intervention\Image\ImageManagerStatic as Image;
+use Spatie\Image\Image;
+use Spatie\Image\Manipulations;
 use Throwable;
 
 class OptimizeImagesCommand extends Command
@@ -36,9 +37,19 @@ class OptimizeImagesCommand extends Command
 
             foreach ($files as $file) {
                 try {
-                    Image::make(base_path("content/{$directory}/{$file}"))
-                        ->fit(500, 500)
-                        ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
+                    $webpFileName = pathinfo($file, PATHINFO_FILENAME) . '.webp';
+
+                    if (file_exists(public_path("images/content/{$directory}/{$webpFileName}"))) {
+                        $this->warn("Skipped {$directory}/{$file}, already optimized.");
+
+                        continue;
+                    }
+
+                    Image::load(base_path("content/{$directory}/{$file}"))
+                        ->fit(Manipulations::FIT_CONTAIN, 500, 500)
+                        ->format(Manipulations::FORMAT_WEBP)
+                        ->optimize()
+                        ->save(public_path("images/content/{$directory}/{$webpFileName}"));
 
                     $this->info("Optimized {$directory}/{$file}");
                 } catch (Throwable $exception) {
@@ -54,9 +65,19 @@ class OptimizeImagesCommand extends Command
 
             foreach ($files as $file) {
                 try {
-                    Image::make(base_path("content/{$directory}/{$file}"))
-                        ->fit(1920, 1080)
-                        ->save(public_path("images/content/{$directory}/{$file}"));
+                    $webpFileName = pathinfo($file, PATHINFO_FILENAME) . '.webp';
+
+                    if (file_exists(public_path("images/content/{$directory}/{$webpFileName}"))) {
+                        $this->warn("Skipped {$directory}/{$file}, already optimized.");
+
+                        continue;
+                    }
+
+                    Image::load(base_path("content/{$directory}/{$file}"))
+                        ->fit(Manipulations::FIT_CONTAIN, 1920, 1080)
+                        ->format(Manipulations::FORMAT_WEBP)
+                        ->optimize()
+                        ->save(public_path("images/content/{$directory}/{$webpFileName}"));
 
                     $this->info("Optimized {$directory}/{$file}");
                 } catch (Throwable $exception) {
@@ -72,9 +93,19 @@ class OptimizeImagesCommand extends Command
 
             foreach ($files as $file) {
                 try {
-                    Image::make(base_path("content/{$directory}/{$file}"))
-                        ->fit(1024, 576)
-                        ->save(public_path("images/content/{$directory}/{$file}"), quality: 50);
+                    $webpFileName = pathinfo($file, PATHINFO_FILENAME) . '.webp';
+
+                    if (file_exists(public_path("images/content/{$directory}/{$webpFileName}"))) {
+                        $this->warn("Skipped {$directory}/{$file}, already optimized.");
+
+                        continue;
+                    }
+
+                    Image::load(base_path("content/{$directory}/{$file}"))
+                        ->fit(Manipulations::FIT_CONTAIN, 1024, 576)
+                        ->format(Manipulations::FORMAT_WEBP)
+                        ->optimize()
+                        ->save(public_path("images/content/{$directory}/{$webpFileName}"));
 
                     $this->info("Optimized {$directory}/{$file}");
                 } catch (Throwable $exception) {

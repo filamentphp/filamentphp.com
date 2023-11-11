@@ -207,7 +207,7 @@
                 <x-home.testimonial
                     url="https://twitter.com/ChrisHardie/status/1507793007470428167"
                 >
-                    I’ve built a few Laravel admin tools/sites now with Filament
+                    I've built a few Laravel admin tools/sites now with Filament
                     and just have to remark on how
                     <strong>well designed</strong>
                     it is, and how quickly one can create
@@ -307,7 +307,7 @@
                 <x-home.testimonial
                     url="https://twitter.com/LabsArtisan/status/1368248886725402625"
                 >
-                    👍 been using it today and I’ve got to say
+                    👍 been using it today and I've got to say
                     <strong>it's brilliant.</strong>
                     <x-slot
                         name="author"
