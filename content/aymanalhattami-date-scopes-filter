@@ -1,0 +1,15 @@
+---
+name: Date Scopes Filter
+slug: aymanalhattami-date-scopes-filter
+author_slug: aymanalhattami
+categories: [panel-builder, table-builder]
+description: Provide a filter by seconds, minutes, hours, days, weeks, months, quarter, years, decades and millenniums for table.
+discord_url: 
+docs_url: https://raw.githubusercontent.com/aymanalhattami/filament-date-scopes-filter/main/README.md
+github_repository: aymanalhattami/filament-date-scopes-filter
+has_dark_theme: true
+has_translations: true
+image: aymanalhattami-date-scopes-filter.jpg
+versions: [3]
+publish_date: 2023-11-17
+---
