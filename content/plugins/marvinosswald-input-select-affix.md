@@ -3,7 +3,7 @@ name: Input Select Affix
 slug: marvinosswald-input-select-affix
 author_slug: marvinosswald
 categories: [form-builder, form-field]
-description: this input enables you to render a select next to an input in a seamless fashion.
+description: This input enables you to render a select next to an input in a seamless fashion.
 docs_url: https://raw.githubusercontent.com/marvinosswald/filament-input-select-affix/main/README.md
 github_repository: marvinosswald/filament-input-select-affix
 has_dark_theme: true
