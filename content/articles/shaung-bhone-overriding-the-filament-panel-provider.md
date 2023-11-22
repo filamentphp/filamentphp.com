@@ -1,6 +1,6 @@
 ---
 title: Overriding the Filament PanelProvider
-slug: overriding-the-filament-panel-provider
+slug: shaung-bhone-overriding-the-filament-panel-provider
 author_slug: shaung-bhone
 publish_date: 2023-11-20
 categories: [panel-builder]
