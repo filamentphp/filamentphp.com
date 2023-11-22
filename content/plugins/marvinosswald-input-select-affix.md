@@ -9,5 +9,5 @@ github_repository: marvinosswald/filament-input-select-affix
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2023-11-22
+publish_date: 2023-11-21
 ---
