@@ -918,6 +918,15 @@ protected function applySearchToTableQuery(Builder $query): Builder
 </textarea></code></pre>
 <p>Scout uses this <code>whereIn()</code> method to retrieve results internally, so there is no performance penalty for using it.</p>
 <p>The <code>applyColumnSearchesToTableQuery()</code> method ensures that searching individual columns will still work. You can replace that method with your own implementation if you want to use Scout for those search inputs as well.</p>
+<p>For the global search input to show, at least one column in the table needs to be <code>searchable()</code>. Alternatively, if you are using Scout to control which columns are searchable already, you can simply pass <code>searchable()</code> to the entire table instead:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">searchable</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Table;
+
+public function table(Table $table): Table
+{
+    return $table
+        -&gt;searchable();
+}
+</textarea></code></pre>
 <h2 id="query-string"><a class="heading-anchor" href="#query-string"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Query string</h2>
 <p>Livewire ships with a feature to store data in the URL&#39;s query string, to access across requests.</p>
 <p>With Filament, this allows you to store your table&#39;s filters, sort, search and pagination state in the URL.</p>
