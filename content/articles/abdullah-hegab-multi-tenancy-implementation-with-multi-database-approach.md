@@ -1,9 +1,9 @@
 ---
 title: Multi Tenancy Implementation With Multi Database Approach
-slug: multi-tenancy-implementation-with-multi-database-approach
+slug: abdullah-hegab-multi-tenancy-implementation-with-multi-database-approach
 author_slug: abdullah-hegab
 publish_date: 2023-11-06
-categories: [multi-tenancy, integration]
+categories: [integration]
 type_slug: article
 ---
 
