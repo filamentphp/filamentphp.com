@@ -1,7 +1,6 @@
 ---
 name: Tim Wassenburg
 slug: tim-wassenburg
-avatar: tim-wassenburg.jpg
 github_url: https://github.com/timwassenburg
 twitter_url: https://twitter.com/timwassenburg
 ---

@@ -1,6 +1,6 @@
 ---
 title: How To Customize Logout Redirect
-slug: how-to-customize-logout-redirect
+slug: tim-wassenburg-how-to-customize-logout-redirect
 author_slug: tim-wassenburg
 publish_date: 2023-10-07
 categories: [general]
