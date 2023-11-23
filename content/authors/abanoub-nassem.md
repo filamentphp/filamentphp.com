@@ -1,7 +1,6 @@
 ---
 name: Abanoub Nassem
 slug: abanoub-nassem
-avatar: abanoub-nassem.jpg
 github_url: https://github.com/AbanoubNassem
 twitter_url: https://twitter.com/AbanoubNassem
 ---
