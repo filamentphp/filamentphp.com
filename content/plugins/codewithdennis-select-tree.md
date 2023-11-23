@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-select-tree/
 github_repository: codewithdennis/filament-select-tree
 has_dark_theme: true
 has_translations: true
-image: codewithdennis-select-tree.jpeg
 versions: [3]
 publish_date: 2023-09-17
 ---
