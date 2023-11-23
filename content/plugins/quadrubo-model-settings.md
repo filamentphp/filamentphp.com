@@ -1,6 +1,6 @@
 ---
 name: Model Settings
-slug: model-settings
+slug: quadrubo-model-settings
 author_slug: quadrubo
 categories: [form-builder, panel-builder]
 description: Filament support for model based settings with Glorand's Laravel Model Settings.
