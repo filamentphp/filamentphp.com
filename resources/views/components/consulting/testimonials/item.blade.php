@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="">
+        <div>
             <div class="font-bold">
                 {{ $name }}
             </div>

@@ -1,7 +1,6 @@
 ---
 name: Kenneth Sese
 slug: kenneth-sese
-avatar: kenneth-sese.jpg
 github_url: https://github.com/archilex
 twitter_url: https://twitter.com/archilex
 ---

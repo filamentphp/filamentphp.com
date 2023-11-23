@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/961393209639067698
 github_repository: ralphjsmit/laravel-filament-media-library
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-media-library-manager.jpg
 versions: [2, 3]
 publish_date: 2023-07-17
 ---
@@ -52,6 +51,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - English, Dutch and Italian translated included & translatable in any language
 - Global search for folders and files
 - Integration with [TipTap editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) **(NEW IN V3)**
+- Bulk delete folders including all content **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -185,7 +185,7 @@ php artisan migrate
 
 Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. New in Filament V3 is that you need to create a custom theme in order to include CSS from plugins (in order to keep your panel as fast as possible). If you do not follow this step, you risk that the plugin pages/designs look weird, because CSS is missing.
 
-First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in.
+First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. Please check that you registered your theme in your panel provider(s) using `$panel->viteTheme('resources/css/filament/{nameOfTheme}/theme.css`)` for Vite or the method for Mix specified in the create theme command output.
 
 Next, you'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
@@ -206,7 +206,7 @@ If you are using the plugin in Filament V3, you should register the plugin in ea
 use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
 
 $panel
-    ->plugin(FilamentMediaLibrary::make()) 
+    ->plugin(FilamentMediaLibrary::make())
 ```
 
 In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
@@ -229,7 +229,7 @@ $panel
         FilamentMediaLibrary::make()
             ->diskVisibilityPrivate()
             ->someOtherMethod()
-    ) 
+    )
 ```
 
 ### Setting up the disk (& configuring S3)
@@ -315,15 +315,30 @@ $uploadedFile = UploadedFile::createFromBase(new \Symfony\Component\HttpFoundati
 MediaLibraryItem::addUpload($uploadedFile);
 ```
 
-### Customizing the page
+### Customizing page navigation details
 
-If you want to override the title or navigation label, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
-
-Finally, you should register the new page in Filament by using the `->registrablePages()` method:
+If you want to customize the navigation details of the Media library page, you can configure it using the dedicated methods on the `$plugin` when configuring it:
 
 ```php
-$plugin->registrablePages([
-    YourExtendedMediaLibraryPage::class, 
+$plugin
+    ->navigationGroup('Media')
+    ->navigationSort(1)
+    ->navigationLabel('Media Browser')
+    ->navigationIcon('heroicon-o-camera')
+    ->activeNavigationIcon('heroicon-s-camera')
+    ->pageTitle('Media Browser')
+    ->slug('media-browser')
+```
+
+### Customizing the page
+
+If you want to customise or override other aspects of the page, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
+
+Finally, you should register the new page in Filament by using the `->registerPages()` method:
+
+```php
+$plugin->registerPages([
+    YourExtendedMediaLibraryPage::class,
 ])
 ```
 
@@ -356,13 +371,27 @@ The value of the field will be the `id` of the MediaLibraryItem that is being se
 You can use the `->multiple()` to select multiple items using the MediaPicker component:
 
 ```php
-MediaPicker::make(‘images’)
-    ->label(‘Choose images’)
+MediaPicker::make('images')
+    ->label('Choose images')
     ->required()
     ->multiple(),
 ```
 
-The value of the field will be an array with the `id`’s of the MediaLibraryItem’s that are being selected.
+The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected.
+
+#### Limiting the acceptd file types (V3)
+
+You can limit the `MediaPicker` to only allow selecting certain types of files. This works similar to the Filament `FileUpload` field by exposing an `->acceptedFileTypes()` method.
+
+For example, in order to only allow selecting PDFs, you can use it like this:
+
+```php
+MediaPicker::make('brochure_id')
+    ->label('Choose brochure')
+    ->acceptedFileTypes(['application/pdf']),
+```
+
+The `->acceptedFileTypes()` function accepts the mimetypes of the files that you want to allow. You can use wildcards like `video/*` or `image/*`.
 
 #### Opening the MediaPicker in a default folder
 
@@ -382,21 +411,21 @@ MediaPicker::make('featured_image_id')
     ->defaultFolder(fn (Event $event) => $event->mediaLibraryFolder),
 ```
 
-NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com. 
+NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com.
 
 #### Reordering multiple items in the media picker (V3)
 
 If you are allowing your users to select multiple items, you can use the `->reorderable()` method to allow your users to reorder the images. This can be useful in situations where the order of the media matters, for example if you want to construct a slideshow or carousel.
 
 ```php
-MediaPicker::make(‘images’)
-    ->label(‘Choose images’)
+MediaPicker::make('images')
+    ->label('Choose images')
     ->required()
     ->multiple()
     ->reorderable(),
 ```
 
-The value of the field will be an array with the `id`’s of the MediaLibraryItem’s that are being selected, in the order that they were selected.
+The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected, in the order that they were selected.
 
 If a user hovers over an image, the cursor will change into a “move” icon, so that it is clear that the media can be reordered.
 
@@ -477,7 +506,7 @@ This example will show you how to add tags to your media library items based on 
 
 Next, you need to prepare the Eloquent model for attaching tags. That means that we need to add a trait to the MediaLibraryItem Model. In order to achieve that, create a new file in your project with the name `MediaLibraryItem`, that extends the original `MediaLibraryItem` model and adds the `HasTags`-trait. You could do this in your own `app/Models` directory, but you are free to choose your own.
 
-```php 
+```php
 class MediaLibraryItem extends \RalphJSmit\Filament\MediaLibrary\Media\Models\MediaLibraryItem
 {
     use HasTags;
@@ -768,7 +797,7 @@ class Author extends Model
             'thumbnail_id', // Foreign key on posts table
         );
     }
-    
+
     // ...
 }
 ```
@@ -836,10 +865,10 @@ $plugin
     // If you want to modify a page yourself, you can extend the original page
     // and register your own class here that extends the page. In that way, you can
     // customize labels, titles, etc.
-    ->registrablePages([
+    ->registerPages([
         MediaLibrary::class,
     ])
-    
+
     // The below three classes are the main Livewire-components. If you want to modify
     // one of the classes, you can create a new class that extends the original class
     // and update the configuration here accordingly.
@@ -921,7 +950,7 @@ Next, open the `config/filament-tiptap-editor.php` config and replace the `media
 'media_action' => RalphJSmit\Filament\MediaLibrary\FilamentTipTap\Actions\MediaLibraryAction::class,
 ```
 
-Now you are able to use the TipTap editor to upload and/or choose images from the media library. 
+Now you are able to use the TipTap editor to upload and/or choose images from the media library.
 
 ## Using the MediaPicker outside the admin panel
 
@@ -956,7 +985,7 @@ Or, on individual pages only:
 - If you have published your config file, add the following key: `filament-media-library.models.folder` and value `RalphJSmit\Filament\MediaLibrary\Media\Models\MediaLibraryFolder::class`.
 - Publish 2 migrations and migrate:
   ```
-  php artisan vendor:publish --tag="filament-media-library-migrations" 
+  php artisan vendor:publish --tag="filament-media-library-migrations"
   php artisan migrate
   ```
 - If you have overridden custom views, please remove the overridden views or compare them with the new ones. Internally the Blade views have changed a lot.
@@ -975,10 +1004,10 @@ If you want to upgrade to Media Library V3 and therefore Filament V3 support, ta
 - For each of the panels that you want to use the MediaLibrary plugin in, please register the plugin like follows:
     ```php
     use RalphJSmit\Filament\MediaLibrary\FilamentMediaLibrary;
-    
+
     $panel
-        ->plugin(FilamentMediaLibrary::make()) 
-    ```             
+        ->plugin(FilamentMediaLibrary::make())
+    ```
 - Filament V3 offers plugins the ability to be customized per panel. This means that instead of global config values that apply to all panels, you can now set different values per panel. If you want, review the `config/filament-media-library.php` configuration file. Set the values that you want to change using the methods on the `FilamentMediaLibrary` class. The methods look very similar to the keys they had in the config. For example, the key `disk.visibility` has become a method `FilamentMediaLibrary::make()->diskVisibility()`. You can also choose to do nothing. The package will retain compatibility with your current config. Whilst we do recommend to stay up-to-date and migrate your config, it is not a stricty requirement. For example:
 ```php
     $panel
@@ -990,11 +1019,11 @@ If you want to upgrade to Media Library V3 and therefore Filament V3 support, ta
                 ->acceptVideo()
                 ->acceptPdf(false)
                 // ..
-        ) 
-    ``` 
-- If you had custom configuration values for the `400` and `800` conversions (hinting at their square size in px), these conversion names have now changed to `small` and `medium`. If you prefer to keep the old config file, you do not to change the names/keys. If you changed these config values and you want to migrate them to the new plugin configuration syntax from V3, use the `->conversionSmall(enabled: true, width: 400)` and `->conversionMedium(enabled: true, width: 800)` methods.    
+        )
+    ```
+- If you had custom configuration values for the `400` and `800` conversions (hinting at their square size in px), these conversion names have now changed to `small` and `medium`. If you prefer to keep the old config file, you do not to change the names/keys. If you changed these config values and you want to migrate them to the new plugin configuration syntax from V3, use the `->conversionSmall(enabled: true, width: 400)` and `->conversionMedium(enabled: true, width: 800)` methods.
 - If you have extended pages like the BrowseLibrary, MediaInfo or UploadMedia page, please check your custom overrides with the new code. The best is to publish your views again.
-               
+
 The V3 is available to all customers who previously purchased a license for V2. If you want to purchase the upgrade from V1 to V3, please send an email to `support@ralphjsmit.com`.
 
 
