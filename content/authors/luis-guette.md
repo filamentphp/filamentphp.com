@@ -1,7 +1,6 @@
 ---
 name: Luis Güette
 slug: luis-guette
-avatar: luis-guette.jpg
 github_url: https://github.com/guetteman
 twitter_url: https://twitter.com/guetteman
 ---
