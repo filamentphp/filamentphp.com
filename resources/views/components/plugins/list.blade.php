@@ -4,6 +4,13 @@
     x-ref="section"
     x-init="
         () => {
+            // Reset the page number on search input change
+            $watch('search', (newValue, oldValue) => {
+                if (newValue !== oldValue) {
+                    currentPage = 1
+                }
+            })
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['name', 'description', 'github_repository', 'author.name'],
@@ -117,13 +124,18 @@
 
             // If the search is not empty, show plugins that match the search
             if (this.search) {
-                // Reset page number
-                this.currentPage = 1
-
                 const searchResult = this.searchEngine.search(this.search)
 
                 filterResult = filterResult.filter((plugin) =>
                     searchResult.some((result) => result.id === plugin.id),
+                )
+
+                // Order the results by the search score
+                filterResult = filterResult.sort((a, b) =>
+                    searchResult.find((result) => result.id === a.id).score <
+                    searchResult.find((result) => result.id === b.id).score
+                        ? 1
+                        : -1,
                 )
             }
 
@@ -387,7 +399,7 @@
                 x-on:click="showCategories = !showCategories"
             >
                 <div class="font-semibold">
-                    <span class="">Select Categories</span>
+                    <span>Select Categories</span>
                     <span class="text-sm tracking-tighter">
                         <span>(</span>
                         <span x-text="selectedCategories.size"></span>

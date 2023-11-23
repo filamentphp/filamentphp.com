@@ -101,10 +101,20 @@
                     <a
                         href="{{ $plugin->getCheckoutUrl() }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                        @class([
+                            'block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]',
+                            'lemonsqueezy-button' => $plugin->is_lemon_squeezy_embedded,
+                        ])
                     >
-                        Buy for {{ $plugin->getPrice() }}
+                        {{ $plugin->is_presale ? 'Preorder' : 'Buy' }} for
+                        {{ $plugin->getPrice() }}
                     </a>
+                    @if ($plugin->is_lemon_squeezy_embedded)
+                        <script
+                            src="https://assets.lemonsqueezy.com/lemon.js"
+                            defer
+                        ></script>
+                    @endif
                 @endif
             </div>
         </div>
@@ -289,11 +299,47 @@
                     </div>
                 </div>
 
-                @if (filled($docs = $plugin->getDocs()))
+                @if (filled($docs = $plugin->getDocs(request()->query('v'))))
                     {{-- Documentation --}}
                     <div class="pt-10">
                         <div
-                            class="prose selection:bg-stone-500/30 prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                            class="flex flex-wrap items-center justify-between gap-5"
+                        >
+                            <div
+                                id="documentation"
+                                class="scroll-mt-10 text-3xl font-extrabold"
+                            >
+                                Documentation
+                            </div>
+                            @if (filled($plugin->docs_urls))
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <div>Version:</div>
+                                    <select
+                                        x-data="{
+                                            selected: @js(request()->query('v')),
+                                            init() {
+                                                this.$watch('selected', () => {
+                                                    const url = new URL(window.location)
+                                                    url.searchParams.set('v', this.selected)
+                                                    url.hash = 'documentation'
+                                                    window.location.href = url
+                                                })
+                                            },
+                                        }"
+                                        x-model="selected"
+                                        class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
+                                    >
+                                        @foreach ($plugin->docs_urls as $key => $value)
+                                            <option value="{{ $key }}">
+                                                {{ $key }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endif
+                        </div>
+                        <div
+                            class="prose pt-5 selection:bg-stone-500/30 prose-blockquote:not-italic prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
                             {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
                         </div>

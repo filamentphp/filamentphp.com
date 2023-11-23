@@ -154,18 +154,6 @@
             </li>
             <li>
                 <a
-                    href="https://github.com/sponsors/danharrin"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
-                >
-                    <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
-                    >
-                        Sponsor Us
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
                     href="https://shop.filamentphp.com"
                     class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
                 >
@@ -176,9 +164,66 @@
                     </div>
                 </a>
             </li>
+            <li>
+                <a
+                    href="{{ route('team') }}"
+                    @class([
+                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                        'font-medium hover:bg-merino' => ! request()->routeIs('team*'),
+                        'bg-merino font-black' => request()->routeIs('team*'),
+                    ])
+                >
+                    <div
+                        @class([
+                            'transition duration-300',
+                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('team*'),
+                        ])
+                    >
+                        Meet Our Team
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a
+                    target="_blank"
+                    href="https://status.filamentphp.com"
+                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                >
+                    <div
+                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                    >
+                        Status
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a
+                    target="_blank"
+                    href="https://github.com/filamentphp/filament/discussions/new"
+                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                >
+                    <div
+                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                    >
+                        Help
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/filamentphp/filament?sponsor=1"
+                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                >
+                    <div
+                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                    >
+                        Sponsor
+                    </div>
+                </a>
+            </li>
         </ul>
 
-        <div class="flexx-wrap flex items-center gap-3.5 text-hurricane">
+        <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
             <a
                 target="_blank"
                 href="https://twitter.com/filamentphp"
