@@ -51,6 +51,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - English, Dutch and Italian translated included & translatable in any language
 - Global search for folders and files
 - Integration with [TipTap editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) **(NEW IN V3)**
+- Bulk delete folders including all content **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -314,9 +315,24 @@ $uploadedFile = UploadedFile::createFromBase(new \Symfony\Component\HttpFoundati
 MediaLibraryItem::addUpload($uploadedFile);
 ```
 
+### Customizing page navigation details
+
+If you want to customize the navigation details of the Media library page, you can configure it using the dedicated methods on the `$plugin` when configuring it:
+
+```php
+$plugin
+    ->navigationGroup('Media')
+    ->navigationSort(1)
+    ->navigationLabel('Media Browser')
+    ->navigationIcon('heroicon-o-camera')
+    ->activeNavigationIcon('heroicon-s-camera')
+    ->pageTitle('Media Browser')
+    ->slug('media-browser')
+```
+
 ### Customizing the page
 
-If you want to override the title or navigation label, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
+If you want to customise or override other aspects of the page, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
 
 Finally, you should register the new page in Filament by using the `->registerPages()` method:
 
@@ -362,6 +378,20 @@ MediaPicker::make('images')
 ```
 
 The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected.
+
+#### Limiting the acceptd file types (V3)
+
+You can limit the `MediaPicker` to only allow selecting certain types of files. This works similar to the Filament `FileUpload` field by exposing an `->acceptedFileTypes()` method.
+
+For example, in order to only allow selecting PDFs, you can use it like this:
+
+```php
+MediaPicker::make('brochure_id')
+    ->label('Choose brochure')
+    ->acceptedFileTypes(['application/pdf']),
+```
+
+The `->acceptedFileTypes()` function accepts the mimetypes of the files that you want to allow. You can use wildcards like `video/*` or `image/*`.
 
 #### Opening the MediaPicker in a default folder
 
