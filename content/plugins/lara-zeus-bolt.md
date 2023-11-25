@@ -10,8 +10,6 @@ url: https://larazeus.com/bolt
 github_repository: lara-zeus/bolt
 has_dark_theme: true
 has_translations: true
-image: lara-zeus-bolt.png
-thumbnail: lara-zeus-bolt.png
 versions: [2, 3]
 publish_date: 2023-07-23
 ---

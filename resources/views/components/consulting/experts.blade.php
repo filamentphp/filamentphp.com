@@ -77,7 +77,7 @@
             and is
             {{-- format-ignore-start --}}
             <a
-                href="https://zepfietje.com/consult?ref=filamentphp.com"
+                href="https://zepfietje.com/consultation?ref=filamentphp.com"
                 target="_blank"
             >available to answer your support questions</a>
             {{-- format-ignore-end --}}
@@ -98,14 +98,14 @@
                     Have a quick support question?
                 </div>
                 <div class="font-medium text-[#AA8B7C]">
-                    Zep’s here to jump on a call and get you back on track.
+                    Zep's here to jump on a call and get you back on track.
                 </div>
             </div>
 
             {{-- Call Link --}}
             <div class="flex">
                 <a
-                    href="https://zepfietje.com/consult?ref=filamentphp.com"
+                    href="https://zepfietje.com/consultation?ref=filamentphp.com"
                     class="group/call relative z-0 grid h-12 w-60 rounded-full bg-dolphin/20 px-1.5 transition duration-300 hover:bg-dolphin/30"
                     target="_blank"
                     x-on:mouseenter="book_is_hovered = true"

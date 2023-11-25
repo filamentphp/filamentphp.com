@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/ibrahimBougaoua/filament-sort-order/
 github_repository: ibrahimBougaoua/filament-sort-order
 has_dark_theme: true
 has_translations: false
-image: ibrahim-bougaoua-sort-order.png
 versions: [2, 3]
 publish_date: 2023-08-09
 ---

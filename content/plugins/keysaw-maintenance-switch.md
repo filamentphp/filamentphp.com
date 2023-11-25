@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/Keysaw/maintenance-switch/main/READM
 github_repository: Keysaw/maintenance-switch
 has_dark_theme: true
 has_translations: true
-image: keysaw-maintenance-switch.jpg
 versions: [3]
 publish_date: 2023-05-30
 ---

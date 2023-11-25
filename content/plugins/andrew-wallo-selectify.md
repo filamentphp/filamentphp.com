@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/andrewdwallo/filament-selectify/2.x/
 github_repository: andrewdwallo/filament-selectify
 has_dark_theme: true
 has_translations: false
-image: andrew-wallo-selectify.jpg
 versions: [2, 3]
 publish_date: 2023-07-01
 ---
