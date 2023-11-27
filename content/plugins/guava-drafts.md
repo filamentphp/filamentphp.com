@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/GuavaCZ/filament-drafts/main/README.
 github_repository: GuavaCZ/filament-drafts
 has_dark_theme: true
 has_translations: true
-image: guava-drafts.jpg
 versions: [2, 3]
 publish_date: 2023-04-15
 ---

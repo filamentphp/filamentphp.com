@@ -10,8 +10,6 @@ url: https://larazeus.com/wind
 github_repository: lara-zeus/wind
 has_dark_theme: true
 has_translations: true
-image: lara-zeus-wind.png
-thumbnail: lara-zeus-wind.png
 versions: [2, 3]
 publish_date: 2023-07-23
 ---

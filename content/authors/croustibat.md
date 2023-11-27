@@ -1,7 +1,6 @@
 ---
 name: Baptiste Bouillot
 slug: croustibat
-avatar: croustibat.jpg
 github_url: https://github.com/croustibat
 twitter_url: https://twitter.com/bbbaptiste
 ---

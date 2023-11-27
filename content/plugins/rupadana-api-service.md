@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/rupadana/filament-api-service/main/R
 github_repository: rupadana/filament-api-service
 has_dark_theme: false
 has_translations: false
-image: rupadana-api-service.png
 versions: [3]
 publish_date: 2023-08-31
 ---

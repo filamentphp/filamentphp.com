@@ -38,10 +38,10 @@ Route::get('/use-cases/admin-panel', function () {
         'pluginStars' => Star::query()
             ->toBase()
             ->where('starrable_type', 'plugin')
+            ->whereIn('starrable_id', $pluginSlugs)
             ->groupBy('starrable_id')
             ->selectRaw('count(stars.id) as count, starrable_id')
             ->leftJoin('plugins', 'plugins.slug', '=', 'starrable_id')
-            ->whereIn('plugins.slug', $pluginSlugs)
             ->get()
             ->pluck('count', 'starrable_id'),
     ]);
@@ -93,6 +93,18 @@ Route::prefix('/docs')->group(function () {
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
+        }
+
+        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
+        }
+
+        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
         }
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
