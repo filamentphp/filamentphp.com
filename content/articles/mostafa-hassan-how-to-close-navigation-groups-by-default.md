@@ -1,6 +1,6 @@
 ---
 title: How to Close Navigation Groups by Default
-slug: how-to-close-navigation-groups-by-default
+slug: mostafa-hassan-how-to-close-navigation-groups-by-default
 author_slug: mostafa-hassan
 publish_date: 2023-11-26
 categories: [ panel-builder]
