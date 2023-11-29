@@ -7,7 +7,7 @@
         "generate-docs": "cd docs && npm run generate && cd ../"
     },
     "devDependencies": {
-        "@formkit/auto-animate": "^0.7.0",
+        "@formkit/auto-animate": "^0.8.1",
         "@rive-app/canvas": "^2.7.4",
         "@ryangjchandler/alpine-tooltip": "^1.3.0",
         "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -16,7 +16,7 @@
         "alpinejs": "^3.13.3",
         "autoprefixer": "^10.4.16",
         "gsap": "^3.12.2",
-        "laravel-vite-plugin": "^0.7.8",
+        "laravel-vite-plugin": "^0.8.1",
         "lodash": "^4.17.21",
         "minisearch": "^6.3.0",
         "postcss": "^8.4.31",
