@@ -215,6 +215,14 @@
           
         </ul>
       </li><li>
+        <a href="/docs/3.x/infolists/advanced" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2>Advanced infolists</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
         <a href="/docs/3.x/infolists/adding-an-infolist-to-a-livewire-component" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
           <h2>Adding an infolist to a Livewire component</h2>
         </a>
@@ -623,6 +631,14 @@
           
         </ul>
       </li><li>
+        <a href="/docs/3.x/infolists/advanced" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+          <h2>Advanced infolists</h2>
+        </a>
+
+        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+          
+        </ul>
+      </li><li>
         <a href="/docs/3.x/infolists/adding-an-infolist-to-a-livewire-component" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
           <h2>Adding an infolist to a Livewire component</h2>
         </a>
@@ -777,6 +793,16 @@ TextEntry::make('authors.name')
     -&gt;listWithLineBreaks()
     -&gt;limitList(3)
 </textarea></code></pre>
+<h4 id="expanding-the-limited-list"><a class="heading-anchor" href="#expanding-the-limited-list"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Expanding the limited list</h4>
+<p>You can allow the limited items to be expanded and collapsed, using the <code>expandableLimitedList()</code> method:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextEntry</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextEntry</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">authors.name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">listWithLineBreaks</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">limitList</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">3</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">expandableLimitedList</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\TextEntry;
+
+TextEntry::make('authors.name')
+    -&gt;listWithLineBreaks()
+    -&gt;limitList(3)
+    -&gt;expandableLimitedList()
+</textarea></code></pre>
+<p>Please note that this is only a feature for <code>listWithLineBreaks()</code> or <code>bulleted()</code>, where each item is on its own line.</p>
 <h3 id="using-a-list-separator"><a class="heading-anchor" href="#using-a-list-separator"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using a list separator</h3>
 <p>If you want to &quot;explode&quot; a text string from your model into multiple list items, you can do so with the <code>separator()</code> method. This is useful for displaying comma-separated tags <a href="#displaying-as-a-badge">as badges</a>, for example:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextEntry</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">TextEntry</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">tags</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">badge</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">separator</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">,</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\TextEntry;
