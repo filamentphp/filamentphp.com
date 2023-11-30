@@ -49,6 +49,30 @@ class ListPluginsController extends Controller
                         ->all();
                 },
             ),
+            'featured_plugins' => cache()->remember(
+                'featured_plugins',
+                now()->addMinutes(15),
+                function (): array {
+                    $stars = Star::query()
+                        ->toBase()
+                        ->where('starrable_type', 'plugin')
+                        ->groupBy('starrable_id')
+                        ->selectRaw('count(id) as count, starrable_id')
+                        ->get()
+                        ->pluck('count', 'starrable_id');
+
+                    return Plugin::query()
+                        ->orderByDesc('publish_date')
+                        ->with(['author'])
+                        ->get()
+                        ->map(fn (Plugin $plugin): array => [
+                            ...$plugin->getDataArray(),
+                            'stars_count' => $stars[$plugin->getKey()] ?? 0,
+                        ])
+                        ->take(3)
+                        ->all();
+                },
+            ),
             'starsCount' => Star::query()->where('starrable_type', 'plugin')->count(),
         ]);
     }
