@@ -7,7 +7,7 @@
     x-data="{
         plugins: @js($featuredPlugins),
     }"
-    {{ $attributes->class(['mx-auto w-full max-w-8xl px-10 pt-10']) }}
+    {{ $attributes->class(['mx-auto w-full max-w-8xl px-5 pt-10 sm:px-10']) }}
 >
     {{-- Header --}}
     <div class="flex items-center gap-5">
@@ -98,7 +98,7 @@
                     })
                 }
             "
-            class="swiper [--swiper-theme-color:#F89377]"
+            class="swiper [--swiper-navigation-sides-offset:0] [--swiper-navigation-size:30px] [--swiper-theme-color:#F89377]"
         >
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -107,7 +107,7 @@
                     :key="plugin.id"
                 >
                     <div class="swiper-slide">
-                        <div class="py-5 pr-5"><x-plugins.card /></div>
+                        <div class="px-5 py-5 sm:pl-0"><x-plugins.card /></div>
                     </div>
                 </template>
             </div>
