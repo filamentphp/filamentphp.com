@@ -774,7 +774,35 @@
 <blockquote>
 <p>The order of pages registered in this method matters - any wildcard route segments that are defined before hard-coded ones will be matched by Laravel&#39;s router first.</p>
 </blockquote>
-<p>Any <a href="https://laravel.com/docs/routing#route-parameters">parameters</a> defined in the route&#39;s path will be available to the page class, in an identical way to <a href="https://livewire.laravel.com/docs/components#accessing-route-parameters">Livewire</a>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/10-custom-pages.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+<p>Any <a href="https://laravel.com/docs/routing#route-parameters">parameters</a> defined in the route&#39;s path will be available to the page class, in an identical way to <a href="https://livewire.laravel.com/docs/components#accessing-route-parameters">Livewire</a>.</p>
+<h2 id="using-a-resource-record"><a class="heading-anchor" href="#using-a-resource-record"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using a resource record</h2>
+<p>If you&#39;d like to create a page that uses a record similar to the <a href="editing-records">Edit</a> or <a href="viewing-records">View</a> pages, you can use the <code>InteractsWithRecord</code> trait:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Page</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ManageUser</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Page</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">InteractsWithRecord</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">mount</span><span style="color: #89DDFF;">(</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">|</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #A6ACCD;">record </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">resolveRecord</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #C792EA;">static</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">authorizeResourceAccess</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Pages\Page;
+
+class ManageUser extends Page
+{
+    use InteractsWithRecord;
+    
+    public function mount(int | string $record): void
+    {
+        $this-&gt;record = $this-&gt;resolveRecord($record);
+
+        static::authorizeResourceAccess();
+    }
+
+    // ...
+}
+</textarea></code></pre>
+<p>The <code>mount()</code> method should resolve the record from the URL and store it in <code>$this-&gt;record</code>. You can access the record at any time using <code>$this-&gt;getRecord()</code> in the class or view.</p>
+<p>To add the record to the route as a parameter, you must define <code>{record}</code> in <code>getPages()</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getPages</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">array</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">manage</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ManageUser</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">route</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/{record}/manage</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function getPages(): array
+{
+    return [
+        // ...
+        'manage' =&gt; Pages\ManageUser::route('/{record}/manage'),
+    ];
+}
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/10-custom-pages.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>
@@ -806,11 +834,18 @@
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-a-resource-record&#34;,&#34;text&#34;:&#34;Using a resource record&#34;,&#34;title&#34;:&#34;Using a resource record&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#using-a-resource-record" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'using-a-resource-record' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Using a resource record
                         </a>
                       </h3>
                       
