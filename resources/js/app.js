@@ -7,6 +7,15 @@ import 'tippy.js/animations/shift-away-subtle.css'
 import autoAnimate from '@formkit/auto-animate'
 import MiniSearch from 'minisearch'
 import * as rive from '@rive-app/canvas'
+import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+// Swiper
+Swiper.use([Navigation, Pagination])
+window.Swiper = Swiper
 
 // Rive
 window.rive = rive

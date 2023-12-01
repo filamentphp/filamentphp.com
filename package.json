@@ -23,6 +23,7 @@
         "prettier": "^2.8.8",
         "prettier-plugin-blade": "^1.6.16",
         "prettier-plugin-tailwindcss": "^0.3.0",
+        "swiper": "^11.0.5",
         "tailwindcss": "^3.3.5",
         "tippy.js": "^6.3.7",
         "vite": "^4.5.0"
