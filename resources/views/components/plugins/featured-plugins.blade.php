@@ -1,13 +1,13 @@
 @props([
-    'featured_plugins',
+    'featuredPlugins',
 ])
 
 <div
     x-cloak
     x-data="{
-        plugins: @js($featured_plugins),
+        plugins: @js($featuredPlugins),
     }"
-    class="mx-auto w-full max-w-8xl px-10 pt-10"
+    {{ $attributes->class(['mx-auto w-full max-w-8xl px-10 pt-10']) }}
 >
     {{-- Header --}}
     <div class="flex items-center gap-5">
@@ -63,7 +63,7 @@
                 fill="#FF7816"
             />
         </svg>
-        <div class="text-2xl font-bold">Top Paid Plugins</div>
+        <div class="text-2xl font-bold">Featured Plugins</div>
     </div>
 
     {{-- Plugin List --}}

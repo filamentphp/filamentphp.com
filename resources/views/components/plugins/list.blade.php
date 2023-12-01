@@ -152,6 +152,9 @@
         },
     }"
 >
+    {{-- Header --}}
+    <div class="text-2xl font-bold">All Plugins</div>
+
     <div class="flex flex-wrap items-center gap-3 pt-5">
         {{-- Version Switch --}}
         <div class="min-[1170px]:min-w-[15rem]">

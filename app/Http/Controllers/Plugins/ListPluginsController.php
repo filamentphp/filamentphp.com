@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Plugins;
 
+use App\Actions\GetPluginsListData;
 use App\Http\Controllers\Controller;
 use App\Models\Author;
 use App\Models\Plugin;
@@ -10,7 +11,7 @@ use App\Models\Star;
 
 class ListPluginsController extends Controller
 {
-    public function __invoke()
+    public function __invoke(GetPluginsListData $getPluginsListData)
     {
         seo()
             ->title('Plugins')
@@ -23,57 +24,23 @@ class ListPluginsController extends Controller
             ->tag('previewlinks:repository', 'filament/filament');
 
         return view('plugins.list-plugins', [
-            'authorsCount' => Author::query()->whereHas('plugins')->count(),
-            'categories' => PluginCategory::query()->orderBy('name')->get()->keyBy('slug'),
+            'authorsCount' => Author::query()
+                ->whereHas('plugins')
+                ->count(),
+            'categories' => PluginCategory::query()
+                ->orderBy('name')
+                ->get()
+                ->keyBy('slug'),
             'pluginsCount' => Plugin::count(),
-            'plugins' => cache()->remember(
-                'plugins',
-                now()->addMinutes(15),
-                function (): array {
-                    $stars = Star::query()
-                        ->toBase()
-                        ->where('starrable_type', 'plugin')
-                        ->groupBy('starrable_id')
-                        ->selectRaw('count(id) as count, starrable_id')
-                        ->get()
-                        ->pluck('count', 'starrable_id');
-
-                    return Plugin::query()
-                        ->orderByDesc('publish_date')
-                        ->with(['author'])
-                        ->get()
-                        ->map(fn (Plugin $plugin): array => [
-                            ...$plugin->getDataArray(),
-                            'stars_count' => $stars[$plugin->getKey()] ?? 0,
-                        ])
-                        ->all();
-                },
-            ),
-            'featured_plugins' => cache()->remember(
-                'featured_plugins',
-                now()->addMinutes(15),
-                function (): array {
-                    $stars = Star::query()
-                        ->toBase()
-                        ->where('starrable_type', 'plugin')
-                        ->groupBy('starrable_id')
-                        ->selectRaw('count(id) as count, starrable_id')
-                        ->get()
-                        ->pluck('count', 'starrable_id');
-
-                    return Plugin::query()
-                        ->orderByDesc('publish_date')
-                        ->with(['author'])
-                        ->get()
-                        ->map(fn (Plugin $plugin): array => [
-                            ...$plugin->getDataArray(),
-                            'stars_count' => $stars[$plugin->getKey()] ?? 0,
-                        ])
-                        ->take(3)
-                        ->all();
-                },
-            ),
-            'starsCount' => Star::query()->where('starrable_type', 'plugin')->count(),
+            'plugins' => $getPluginsListData(),
+            'featuredPlugins' => $getPluginsListData([
+                'filament-minimal-theme',
+                'kenneth-sese-advanced-tables',
+                'ralphjsmit-media-library-manager',
+            ]),
+            'starsCount' => Star::query()
+                ->where('starrable_type', 'plugin')
+                ->count(),
         ]);
     }
 }
