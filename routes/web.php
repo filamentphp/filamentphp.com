@@ -95,6 +95,18 @@ Route::prefix('/docs')->group(function () {
             return file_get_contents($filePath);
         }
 
+        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
+        }
+
+        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
+        }
+
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $version = Str::before($slug, '.x');
 
@@ -102,7 +114,11 @@ Route::prefix('/docs')->group(function () {
             abort(404);
         }
 
-        $versionNavigation = $navigation[$version - 1];
+        $versionNavigation = $navigation[$version - 1] ?? null;
+
+        if ($versionNavigation === null) {
+            abort(404);
+        }
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');

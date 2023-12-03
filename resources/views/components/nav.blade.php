@@ -68,11 +68,19 @@
         <span class="sr-only">Toggle Menu</span>
     </button>
 
-    {{-- Normal Logo --}}
-    {{-- <x-nav.logo /> --}}
+    @php
+        $today = \Carbon\Carbon::now();
+        $isHalloween = $today->between(\Carbon\Carbon::parse('October 25'), \Carbon\Carbon::parse('November 1'));
+    @endphp
 
-    {{-- Halloween Logo --}}
-    <x-nav.halloween-logo />
+    {{-- Conditionally display the logos --}}
+    @if ($isHalloween)
+        {{-- Halloween Logo --}}
+        <x-nav.halloween-logo />
+    @else
+        {{-- Normal Logo --}}
+        <x-nav.logo />
+    @endif
 
     {{-- Nav Links --}}
     <div class="flex items-center justify-end gap-8 font-semibold sm:gap-14">

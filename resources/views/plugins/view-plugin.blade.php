@@ -627,4 +627,9 @@
             </div>
         </div>
     </section>
+
+    <x-plugins.featured-plugins
+        :$featuredPlugins
+        class="mt-16"
+    />
 </x-layouts.app>

@@ -70,11 +70,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Styles -->
     <style>
-        [x-cloak=''],
-        [x-cloak='x-cloak'],
-        [x-cloak='1'] {
-            display: none !important;
-        }
+      [x-cloak] {
+        display: none !important;
+      }
     </style>
 
     <!-- Styles -->
