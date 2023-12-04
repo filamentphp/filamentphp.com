@@ -658,7 +658,7 @@
                 <a
                     href="https://love.filamentphp.com"
                     target="_blank"
-                    class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl text-hurricane bg-dawn-pink hover:bg-dawn-pink/70 px-7 py-3 transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
+                    class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-200 [grid-area:1/-1] hover:bg-dawn-pink/70 motion-reduce:transition-none"
                 >
                     <div>View All Testimonials</div>
                     <div
