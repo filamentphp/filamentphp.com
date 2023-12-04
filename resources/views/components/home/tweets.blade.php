@@ -652,6 +652,35 @@
                     </x-slot>
                 </x-home.testimonial>
             </div>
+
+            {{-- See More Button --}}
+            <div class="flex justify-center pt-10">
+                <a
+                    href="https://love.filamentphp.com"
+                    target="_blank"
+                    class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl text-hurricane bg-dawn-pink hover:bg-dawn-pink/70 px-7 py-3 transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
+                >
+                    <div>View All Testimonials</div>
+                    <div
+                        class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
+                    >
+                        <svg
+                            width="24"
+                            height="25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4 12.992h2.5m13.5 0-6-6m6 6-6 6m6-6H9.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                </a>
+            </div>
         </div>
         <script>
             // Custom function to blur (opacity-50) all the testimonial tweets except the one being hovered
