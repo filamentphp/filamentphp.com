@@ -40,7 +40,7 @@
         height="39"
         viewBox="0 0 27 39"
         fill="none"
-        class="absolute -top-4 right-[-2rem] md:-top-2.5"
+        class="absolute -top-4 right-[-2rem] transition duration-300 will-change-transform md:group-hover/filament:-translate-x-3 motion-reduce:transition-none md:-top-2.5"
     >
         <path
             fill-rule="evenodd"
