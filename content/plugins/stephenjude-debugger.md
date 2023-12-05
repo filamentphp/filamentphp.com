@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/stephenjude/filament-debugger/main/R
 github_repository: stephenjude/filament-debugger
 has_dark_theme: true
 has_translations: true
-image: 
+image: stephenjude-debugger.png
 versions: [2, 3]
 publish_date: 2022-08-11
 ---
