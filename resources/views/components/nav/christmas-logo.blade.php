@@ -351,7 +351,7 @@
         height="31"
         viewBox="0 0 32 31"
         fill="none"
-        class="absolute -left-2.5 top-[-1.4rem]"
+        class="absolute -left-3.5 -top-6 min-[400px]:-left-2.5 min-[400px]:top-[-1.4rem]"
     >
         <g clip-path="url(#clip0_1285_417)">
             <path
@@ -615,7 +615,7 @@
     <img
         src="{{ Vite::asset('resources/images/nav/christmas/santa-and-friends.webp') }}"
         alt="Santa and Friends"
-        class="absolute bottom-[-0.4rem] right-[-0.3rem] z-10 w-24 opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none md:right-[0.4rem] md:w-28"
+        class="min-[400px]:sw-24 absolute -bottom-1 right-[-0.3rem] z-10 w-20 opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none min-[400px]:bottom-[-0.4rem] md:right-[0.4rem] md:w-28"
     />
 
     {{-- Merry Christmas --}}
@@ -625,7 +625,7 @@
         height="25"
         viewBox="0 0 67 25"
         fill="none"
-        class="absolute -top-8 right-5 translate-y-1 opacity-0 transition duration-300 will-change-transform group-hover/filament:translate-y-0 group-hover/filament:opacity-100 motion-reduce:transition-none md:right-7"
+        class="absolute -top-8 right-2 translate-y-1 opacity-0 transition duration-300 will-change-transform group-hover/filament:translate-y-0 group-hover/filament:opacity-100 motion-reduce:transition-none min-[400px]:right-5 md:right-7"
     >
         <path
             fill-rule="evenodd"
