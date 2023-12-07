@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/ibrahimBougaoua/RadioButtonImage/mai
 github_repository: ibrahimBougaoua/RadioButtonImage
 has_dark_theme: true
 has_translations: true
-image: ibrahim-bougaoua-radio-btn-image.jpg
 versions: [2, 3]
 publish_date: 2023-08-17
 ---

@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/jeffgreco13/filament-breezy/2.x/READ
 github_repository: jeffgreco13/filament-breezy
 has_dark_theme: true
 has_translations: true
-image: jeffgreco-breezy.png
 versions: [2, 3]
 publish_date: 2023-07-21
 ---

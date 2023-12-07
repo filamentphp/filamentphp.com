@@ -9,7 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/961393209639067698
 github_repository: ralphjsmit/laravel-filament-media-library
 has_dark_theme: true
 has_translations: true
-image: ralphjsmit-media-library-manager.jpg
 versions: [2, 3]
 publish_date: 2023-07-17
 ---
@@ -52,6 +51,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - English, Dutch and Italian translated included & translatable in any language
 - Global search for folders and files
 - Integration with [TipTap editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) **(NEW IN V3)**
+- Bulk delete folders including all content **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -185,7 +185,7 @@ php artisan migrate
 
 Since this plugin registers new HTML, you need to make sure that the Tailwind CSS classes are generated. New in Filament V3 is that you need to create a custom theme in order to include CSS from plugins (in order to keep your panel as fast as possible). If you do not follow this step, you risk that the plugin pages/designs look weird, because CSS is missing.
 
-First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in.
+First, make sure you are [using a custom theme](https://filamentphp.com/docs/3.x/panels/themes) for every panel that you want to use the media library in. Please check that you registered your theme in your panel provider(s) using `$panel->viteTheme('resources/css/filament/{nameOfTheme}/theme.css`)` for Vite or the method for Mix specified in the create theme command output.
 
 Next, you'll need to instruct Tailwind to also purge the view-files for the media library. Add the following key to the `content` key of the `tailwind.config.js` file **for each of the themes you use the media library in**:
 
@@ -315,9 +315,24 @@ $uploadedFile = UploadedFile::createFromBase(new \Symfony\Component\HttpFoundati
 MediaLibraryItem::addUpload($uploadedFile);
 ```
 
+### Customizing page navigation details
+
+If you want to customize the navigation details of the Media library page, you can configure it using the dedicated methods on the `$plugin` when configuring it:
+
+```php
+$plugin
+    ->navigationGroup('Media')
+    ->navigationSort(1)
+    ->navigationLabel('Media Browser')
+    ->navigationIcon('heroicon-o-camera')
+    ->activeNavigationIcon('heroicon-s-camera')
+    ->pageTitle('Media Browser')
+    ->slug('media-browser')
+```
+
 ### Customizing the page
 
-If you want to override the title or navigation label, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
+If you want to customise or override other aspects of the page, you can create a new class in your project that extends the `\RalphJSmit\Filament\MediaLibrary\Media\Pages\MediaLibrary` page. In this class you can override everything you want to customize, like the title, navigation label or navigatin group.
 
 Finally, you should register the new page in Filament by using the `->registerPages()` method:
 
@@ -363,6 +378,20 @@ MediaPicker::make('images')
 ```
 
 The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected.
+
+#### Limiting the acceptd file types (V3)
+
+You can limit the `MediaPicker` to only allow selecting certain types of files. This works similar to the Filament `FileUpload` field by exposing an `->acceptedFileTypes()` method.
+
+For example, in order to only allow selecting PDFs, you can use it like this:
+
+```php
+MediaPicker::make('brochure_id')
+    ->label('Choose brochure')
+    ->acceptedFileTypes(['application/pdf']),
+```
+
+The `->acceptedFileTypes()` function accepts the mimetypes of the files that you want to allow. You can use wildcards like `video/*` or `image/*`.
 
 #### Opening the MediaPicker in a default folder
 

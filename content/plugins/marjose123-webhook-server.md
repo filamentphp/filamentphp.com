@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/MarJose123/filament-webhook-server/2
 github_repository: MarJose123/filament-webhook-server
 has_dark_theme: true
 has_translations: true
-image: marjose123-webhook-server.jpg
 versions: [2, 3]
 publish_date: 2023-01-18
 ---
