@@ -209,9 +209,7 @@ $panel
     ->plugin(FilamentMediaLibrary::make())
 ```
 
-In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
-
-In the rest of the docs, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
+In the rest of the below documentation, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
 
 Therefore, the following code examples mean the same:
 
@@ -379,7 +377,7 @@ MediaPicker::make('images')
 
 The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected.
 
-#### Limiting the acceptd file types (V3)
+#### Limiting the accepted file types (V3)
 
 You can limit the `MediaPicker` to only allow selecting certain types of files. This works similar to the Filament `FileUpload` field by exposing an `->acceptedFileTypes()` method.
 
