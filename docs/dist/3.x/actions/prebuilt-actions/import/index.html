@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-6Z4GL52R">
+<html lang="en" class="hidden astro-WSM47DKC">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +26,9 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/docs/assets/dashboard.872aec4e.css" />
+  <link rel="stylesheet" href="/docs/assets/dashboard.58b4a153.css" />
 <link rel="stylesheet" href="/docs/assets/index.d926dd18.css" /><script type="module" src="/docs/hoisted.2c2e5204.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-6Z4GL52R">
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-WSM47DKC">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
   <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -603,12 +603,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-6Z4GL52R">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-6Z4GL52R">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-6Z4GL52R"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-6Z4GL52R"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-6Z4GL52R"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-6Z4GL52R" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-WSM47DKC">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-WSM47DKC">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-WSM47DKC"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-WSM47DKC"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-WSM47DKC"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-WSM47DKC" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -801,20 +801,20 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-6Z4GL52R">
-        <article class="astro-6Z4GL52R">
-          <header class="mb-9 space-y-1 astro-6Z4GL52R">
-              <p class="font-display font-bold text-butter astro-6Z4GL52R">
-                    <span id="current-package" class="astro-6Z4GL52R">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-WSM47DKC">
+        <article class="astro-WSM47DKC">
+          <header class="mb-9 space-y-1 astro-WSM47DKC">
+              <p class="font-display font-bold text-butter astro-WSM47DKC">
+                    <span id="current-package" class="astro-WSM47DKC">
                         Actions
                     </span>
 
                     
-                            - <span id="current-section" class="astro-6Z4GL52R">
+                            - <span id="current-section" class="astro-WSM47DKC">
                                 Prebuilt Actions
                             </span>
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-6Z4GL52R">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-WSM47DKC">
                   Import action
                 </h1>
             </header>
@@ -1043,7 +1043,7 @@ ImportColumn::make('customer_ratings')
     -&gt;nestedRecursiveRules(['integer', 'min:1', 'max:5'])
 </textarea></code></pre>
 <h3 id="customizing-how-a-column-is-filled-into-a-record"><a class="heading-anchor" href="#customizing-how-a-column-is-filled-into-a-record"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing how a column is filled into a record</h3>
-<p>If you want to customize how column state is filled into a record, you can pass a function to the <code>fillUsing()</code> method:</p>
+<p>If you want to customize how column state is filled into a record, you can pass a function to the <code>fillRecordUsing()</code> method:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Product</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">ImportColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sku</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fillRecordUsing</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Product</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">void</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #A6ACCD;">sku </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">strtoupper</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">})</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Models\Product;
 
 ImportColumn::make('sku')
@@ -1302,205 +1302,205 @@ class ProductImporter extends Importer
 }
 </textarea></code></pre>
 <p>Inside these hooks, you can access the current row&#39;s data using <code>$this-&gt;data</code>. You can also access the original row of data from the CSV, before it was <a href="#casting-state">cast</a> or mapped, using <code>$this-&gt;originalData</code>.</p>
-<p>The current record (if it exists yet) is accessible in <code>$this-&gt;record</code>, and the <a href="#using-import-options">import form options</a> using <code>$this-&gt;options</code>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/07-prebuilt-actions/08-import.md" class="text-sm astro-6Z4GL52R" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-6Z4GL52R">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-6Z4GL52R">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-6Z4GL52R">GitHub discussion</a>
+<p>The current record (if it exists yet) is accessible in <code>$this-&gt;record</code>, and the <a href="#using-import-options">import form options</a> using <code>$this-&gt;options</code>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/actions/docs/07-prebuilt-actions/08-import.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-6Z4GL52R">
-          <div class="astro-6Z4GL52R">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-6Z4GL52R">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-WSM47DKC">
+          <div class="astro-WSM47DKC">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-6Z4GL52R">
-                  <a href="/docs/3.x/actions/prebuilt-actions/restore" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-6Z4GL52R">
-                    <span aria-hidden="true" class="astro-6Z4GL52R">&larr;</span> Restore action
+                <dd class="mt-1 astro-WSM47DKC">
+                  <a href="/docs/3.x/actions/prebuilt-actions/restore" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
+                    <span aria-hidden="true" class="astro-WSM47DKC">&larr;</span> Restore action
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-6Z4GL52R">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-6Z4GL52R">
+            <div class="ml-auto text-right astro-WSM47DKC">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   Next
                 </dt>
-                <dd class="mt-1 astro-6Z4GL52R">
-                  <a href="/docs/3.x/actions/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-6Z4GL52R">
-                    Advanced actions <span aria-hidden="true" class="astro-6Z4GL52R">&rarr;</span>
+                <dd class="mt-1 astro-WSM47DKC">
+                  <a href="/docs/3.x/actions/advanced" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
+                    Advanced actions <span aria-hidden="true" class="astro-WSM47DKC">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-6Z4GL52R">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-6Z4GL52R">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-6Z4GL52R">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-WSM47DKC">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-6Z4GL52R" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-an-importer&#34;,&#34;text&#34;:&#34;Creating an importer&#34;,&#34;title&#34;:&#34;Creating an importer&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-importer-columns&#34;,&#34;text&#34;:&#34;Automatically generating importer columns&#34;,&#34;title&#34;:&#34;Automatically generating importer columns&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;defining-importer-columns&#34;,&#34;text&#34;:&#34;Defining importer columns&#34;,&#34;title&#34;:&#34;Defining importer columns&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-label-of-an-import-column&#34;,&#34;text&#34;:&#34;Customizing the label of an import column&#34;,&#34;title&#34;:&#34;Customizing the label of an import column&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;requiring-an-importer-column-to-be-mapped-to-a-csv-column&#34;,&#34;text&#34;:&#34;Requiring an importer column to be mapped to a CSV column&#34;,&#34;title&#34;:&#34;Requiring an importer column to be mapped to a CSV column&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;validating-csv-data&#34;,&#34;text&#34;:&#34;Validating CSV data&#34;,&#34;title&#34;:&#34;Validating CSV data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;casting-state&#34;,&#34;text&#34;:&#34;Casting state&#34;,&#34;title&#34;:&#34;Casting state&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;importing-relationships&#34;,&#34;text&#34;:&#34;Importing relationships&#34;,&#34;title&#34;:&#34;Importing relationships&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-multiple-values-in-a-single-column-as-an-array&#34;,&#34;text&#34;:&#34;Handling multiple values in a single column as an array&#34;,&#34;title&#34;:&#34;Handling multiple values in a single column as an array&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-how-a-column-is-filled-into-a-record&#34;,&#34;text&#34;:&#34;Customizing how a column is filled into a record&#34;,&#34;title&#34;:&#34;Customizing how a column is filled into a record&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;updating-existing-records-when-importing&#34;,&#34;text&#34;:&#34;Updating existing records when importing&#34;,&#34;title&#34;:&#34;Updating existing records when importing&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;updating-existing-records-when-importing-only&#34;,&#34;text&#34;:&#34;Updating existing records when importing only&#34;,&#34;title&#34;:&#34;Updating existing records when importing only&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ignoring-blank-state-for-an-import-column&#34;,&#34;text&#34;:&#34;Ignoring blank state for an import column&#34;,&#34;title&#34;:&#34;Ignoring blank state for an import column&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-import-options&#34;,&#34;text&#34;:&#34;Using import options&#34;,&#34;title&#34;:&#34;Using import options&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;improving-import-column-mapping-guesses&#34;,&#34;text&#34;:&#34;Improving import column mapping guesses&#34;,&#34;title&#34;:&#34;Improving import column mapping guesses&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;providing-example-csv-data&#34;,&#34;text&#34;:&#34;Providing example CSV data&#34;,&#34;title&#34;:&#34;Providing example CSV data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-a-custom-user-model&#34;,&#34;text&#34;:&#34;Using a custom user model&#34;,&#34;title&#34;:&#34;Using a custom user model&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-a-polymorphic-user-relationship&#34;,&#34;text&#34;:&#34;Using a polymorphic user relationship&#34;,&#34;title&#34;:&#34;Using a polymorphic user relationship&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;limiting-the-maximum-number-of-rows-that-can-be-imported&#34;,&#34;text&#34;:&#34;Limiting the maximum number of rows that can be imported&#34;,&#34;title&#34;:&#34;Limiting the maximum number of rows that can be imported&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-import-chunk-size&#34;,&#34;text&#34;:&#34;Changing the import chunk size&#34;,&#34;title&#34;:&#34;Changing the import chunk size&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-csv-delimiter&#34;,&#34;text&#34;:&#34;Changing the CSV delimiter&#34;,&#34;title&#34;:&#34;Changing the CSV delimiter&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-import-job&#34;,&#34;text&#34;:&#34;Customizing the import job&#34;,&#34;title&#34;:&#34;Customizing the import job&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-middleware&#34;,&#34;text&#34;:&#34;Customizing the import job middleware&#34;,&#34;title&#34;:&#34;Customizing the import job middleware&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-retries&#34;,&#34;text&#34;:&#34;Customizing the import job retries&#34;,&#34;title&#34;:&#34;Customizing the import job retries&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-tags&#34;,&#34;text&#34;:&#34;Customizing the import job tags&#34;,&#34;title&#34;:&#34;Customizing the import job tags&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-import-validation-messages&#34;,&#34;text&#34;:&#34;Customizing import validation messages&#34;,&#34;title&#34;:&#34;Customizing import validation messages&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-import-validation-attributes&#34;,&#34;text&#34;:&#34;Customizing import validation attributes&#34;,&#34;title&#34;:&#34;Customizing import validation attributes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;lifecycle-hooks&#34;,&#34;text&#34;:&#34;Lifecycle hooks&#34;,&#34;title&#34;:&#34;Lifecycle hooks&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;creating-an-importer&#34;,&#34;text&#34;:&#34;Creating an importer&#34;,&#34;title&#34;:&#34;Creating an importer&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;automatically-generating-importer-columns&#34;,&#34;text&#34;:&#34;Automatically generating importer columns&#34;,&#34;title&#34;:&#34;Automatically generating importer columns&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;defining-importer-columns&#34;,&#34;text&#34;:&#34;Defining importer columns&#34;,&#34;title&#34;:&#34;Defining importer columns&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-label-of-an-import-column&#34;,&#34;text&#34;:&#34;Customizing the label of an import column&#34;,&#34;title&#34;:&#34;Customizing the label of an import column&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;requiring-an-importer-column-to-be-mapped-to-a-csv-column&#34;,&#34;text&#34;:&#34;Requiring an importer column to be mapped to a CSV column&#34;,&#34;title&#34;:&#34;Requiring an importer column to be mapped to a CSV column&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;validating-csv-data&#34;,&#34;text&#34;:&#34;Validating CSV data&#34;,&#34;title&#34;:&#34;Validating CSV data&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;casting-state&#34;,&#34;text&#34;:&#34;Casting state&#34;,&#34;title&#34;:&#34;Casting state&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;importing-relationships&#34;,&#34;text&#34;:&#34;Importing relationships&#34;,&#34;title&#34;:&#34;Importing relationships&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;handling-multiple-values-in-a-single-column-as-an-array&#34;,&#34;text&#34;:&#34;Handling multiple values in a single column as an array&#34;,&#34;title&#34;:&#34;Handling multiple values in a single column as an array&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-how-a-column-is-filled-into-a-record&#34;,&#34;text&#34;:&#34;Customizing how a column is filled into a record&#34;,&#34;title&#34;:&#34;Customizing how a column is filled into a record&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;updating-existing-records-when-importing&#34;,&#34;text&#34;:&#34;Updating existing records when importing&#34;,&#34;title&#34;:&#34;Updating existing records when importing&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;updating-existing-records-when-importing-only&#34;,&#34;text&#34;:&#34;Updating existing records when importing only&#34;,&#34;title&#34;:&#34;Updating existing records when importing only&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;ignoring-blank-state-for-an-import-column&#34;,&#34;text&#34;:&#34;Ignoring blank state for an import column&#34;,&#34;title&#34;:&#34;Ignoring blank state for an import column&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-import-options&#34;,&#34;text&#34;:&#34;Using import options&#34;,&#34;title&#34;:&#34;Using import options&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;improving-import-column-mapping-guesses&#34;,&#34;text&#34;:&#34;Improving import column mapping guesses&#34;,&#34;title&#34;:&#34;Improving import column mapping guesses&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;providing-example-csv-data&#34;,&#34;text&#34;:&#34;Providing example CSV data&#34;,&#34;title&#34;:&#34;Providing example CSV data&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-a-custom-user-model&#34;,&#34;text&#34;:&#34;Using a custom user model&#34;,&#34;title&#34;:&#34;Using a custom user model&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;using-a-polymorphic-user-relationship&#34;,&#34;text&#34;:&#34;Using a polymorphic user relationship&#34;,&#34;title&#34;:&#34;Using a polymorphic user relationship&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;limiting-the-maximum-number-of-rows-that-can-be-imported&#34;,&#34;text&#34;:&#34;Limiting the maximum number of rows that can be imported&#34;,&#34;title&#34;:&#34;Limiting the maximum number of rows that can be imported&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-import-chunk-size&#34;,&#34;text&#34;:&#34;Changing the import chunk size&#34;,&#34;title&#34;:&#34;Changing the import chunk size&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;changing-the-csv-delimiter&#34;,&#34;text&#34;:&#34;Changing the CSV delimiter&#34;,&#34;title&#34;:&#34;Changing the CSV delimiter&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-import-job&#34;,&#34;text&#34;:&#34;Customizing the import job&#34;,&#34;title&#34;:&#34;Customizing the import job&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-middleware&#34;,&#34;text&#34;:&#34;Customizing the import job middleware&#34;,&#34;title&#34;:&#34;Customizing the import job middleware&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-retries&#34;,&#34;text&#34;:&#34;Customizing the import job retries&#34;,&#34;title&#34;:&#34;Customizing the import job retries&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-import-job-tags&#34;,&#34;text&#34;:&#34;Customizing the import job tags&#34;,&#34;title&#34;:&#34;Customizing the import job tags&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-import-validation-messages&#34;,&#34;text&#34;:&#34;Customizing import validation messages&#34;,&#34;title&#34;:&#34;Customizing import validation messages&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-import-validation-attributes&#34;,&#34;text&#34;:&#34;Customizing import validation attributes&#34;,&#34;title&#34;:&#34;Customizing import validation attributes&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;lifecycle-hooks&#34;,&#34;text&#34;:&#34;Lifecycle hooks&#34;,&#34;title&#34;:&#34;Lifecycle hooks&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#creating-an-importer" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'creating-an-importer' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#creating-an-importer" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'creating-an-importer' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Creating an importer
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#automatically-generating-importer-columns" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'automatically-generating-importer-columns' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#automatically-generating-importer-columns" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'automatically-generating-importer-columns' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Automatically generating importer columns
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#defining-importer-columns" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'defining-importer-columns' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#defining-importer-columns" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'defining-importer-columns' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Defining importer columns
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#customizing-the-label-of-an-import-column" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-the-label-of-an-import-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#customizing-the-label-of-an-import-column" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-label-of-an-import-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing the label of an import column
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#requiring-an-importer-column-to-be-mapped-to-a-csv-column" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'requiring-an-importer-column-to-be-mapped-to-a-csv-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#requiring-an-importer-column-to-be-mapped-to-a-csv-column" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'requiring-an-importer-column-to-be-mapped-to-a-csv-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Requiring an importer column to be mapped to a CSV column
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#validating-csv-data" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'validating-csv-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#validating-csv-data" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'validating-csv-data' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Validating CSV data
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#casting-state" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'casting-state' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#casting-state" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'casting-state' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Casting state
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#importing-relationships" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'importing-relationships' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#importing-relationships" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'importing-relationships' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Importing relationships
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#handling-multiple-values-in-a-single-column-as-an-array" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'handling-multiple-values-in-a-single-column-as-an-array' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#handling-multiple-values-in-a-single-column-as-an-array" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'handling-multiple-values-in-a-single-column-as-an-array' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Handling multiple values in a single column as an array
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#customizing-how-a-column-is-filled-into-a-record" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-how-a-column-is-filled-into-a-record' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#customizing-how-a-column-is-filled-into-a-record" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-how-a-column-is-filled-into-a-record' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing how a column is filled into a record
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#updating-existing-records-when-importing" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'updating-existing-records-when-importing' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#updating-existing-records-when-importing" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'updating-existing-records-when-importing' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Updating existing records when importing
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#updating-existing-records-when-importing-only" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'updating-existing-records-when-importing-only' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#updating-existing-records-when-importing-only" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'updating-existing-records-when-importing-only' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Updating existing records when importing only
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#ignoring-blank-state-for-an-import-column" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'ignoring-blank-state-for-an-import-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#ignoring-blank-state-for-an-import-column" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'ignoring-blank-state-for-an-import-column' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Ignoring blank state for an import column
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#using-import-options" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'using-import-options' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#using-import-options" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'using-import-options' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Using import options
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#improving-import-column-mapping-guesses" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'improving-import-column-mapping-guesses' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#improving-import-column-mapping-guesses" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'improving-import-column-mapping-guesses' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Improving import column mapping guesses
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#providing-example-csv-data" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'providing-example-csv-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#providing-example-csv-data" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'providing-example-csv-data' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Providing example CSV data
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#using-a-custom-user-model" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'using-a-custom-user-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#using-a-custom-user-model" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'using-a-custom-user-model' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Using a custom user model
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#using-a-polymorphic-user-relationship" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'using-a-polymorphic-user-relationship' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#using-a-polymorphic-user-relationship" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'using-a-polymorphic-user-relationship' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Using a polymorphic user relationship
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#limiting-the-maximum-number-of-rows-that-can-be-imported" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'limiting-the-maximum-number-of-rows-that-can-be-imported' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#limiting-the-maximum-number-of-rows-that-can-be-imported" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'limiting-the-maximum-number-of-rows-that-can-be-imported' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Limiting the maximum number of rows that can be imported
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#changing-the-import-chunk-size" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'changing-the-import-chunk-size' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#changing-the-import-chunk-size" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'changing-the-import-chunk-size' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Changing the import chunk size
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#changing-the-csv-delimiter" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'changing-the-csv-delimiter' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#changing-the-csv-delimiter" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'changing-the-csv-delimiter' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Changing the CSV delimiter
                         </a>
                       </h3>
                       
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#customizing-the-import-job" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-the-import-job' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#customizing-the-import-job" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-import-job' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Customizing the import job
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#customizing-the-import-job-middleware" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-the-import-job-middleware' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#customizing-the-import-job-middleware" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-import-job-middleware' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing the import job middleware
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#customizing-the-import-job-retries" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-the-import-job-retries' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#customizing-the-import-job-retries" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-import-job-retries' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing the import job retries
                               </a>
-                            </li><li class="astro-6Z4GL52R">
-                              <a href="#customizing-the-import-job-tags" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-the-import-job-tags' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#customizing-the-import-job-tags" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-import-job-tags' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing the import job tags
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#customizing-import-validation-messages" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-import-validation-messages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#customizing-import-validation-messages" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-import-validation-messages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Customizing import validation messages
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-6Z4GL52R">
-                          <li class="astro-6Z4GL52R">
-                              <a href="#customizing-import-validation-attributes" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'customizing-import-validation-attributes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#customizing-import-validation-attributes" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-import-validation-attributes' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing import validation attributes
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-6Z4GL52R">
-                      <h3 class="astro-6Z4GL52R">
-                        <a href="#lifecycle-hooks" class="inline-block transition duration-300 ease-out astro-6Z4GL52R" x-bind:class="current == 'lifecycle-hooks' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#lifecycle-hooks" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'lifecycle-hooks' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Lifecycle hooks
                         </a>
                       </h3>
