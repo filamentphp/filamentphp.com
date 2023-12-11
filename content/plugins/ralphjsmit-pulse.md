@@ -1,5 +1,5 @@
 ---
-name: SEO
+name: Laravel Pulse
 slug: ralphjsmit-pulse
 anystack_id: 9ad2abab-ec16-483c-a3ed-8f9a8f4be35f
 author_slug: ralphjsmit
@@ -13,7 +13,7 @@ versions: [3]
 publish_date: 2023-12-08
 ---
 
-This packages integrates [Laravel Pulse](https://pulse.laravel.com/) into [Filament](https://filamentphp.com/). It allows you to build custom Laravel Pulse dashboards directly inside your Filament panels. All default Pulse cards are included, a custom card to track the usage of your Filament application and you can add additional custom cards or third-party pacakges as well. 
+This package provides a beautiful integration of [Laravel Pulse](https://pulse.laravel.com/) into Filament. It allows you to build custom Laravel Pulse dashboards directly inside your Filament panels. All default Pulse cards are included, a custom card to track the usage of your Filament application and you can add additional custom cards or third-party pacakges as well. 
 
 Another very handy use case is if your users need certain advanced metrics about your application. You can then create a custom Pulse recorder/card, and display these additional cards straight inside Filament!
 # Features
