@@ -73,7 +73,7 @@ To install the package you should add the package to your `composer.json` file i
 Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key).
 
 ```bash
-composer require ralphjsmit/laravel-filament-pulse
+composer require ralphjsmit/laravel-filament-pulse:^0.1
 ```
 
 > In contrast to my other packages, you don't need to activate the license on specific domains that you use the license for. This is because there is only one license option which includes unlimited installations.
