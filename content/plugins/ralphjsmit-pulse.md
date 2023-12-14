@@ -5,7 +5,7 @@ anystack_id: 9ad2abab-ec16-483c-a3ed-8f9a8f4be35f
 author_slug: ralphjsmit
 categories: [analytics, developer-tool, kit, panel-builder]
 description: This package is a beautiful integration between Filament & Laravel Pulse.
-discord_url: [TBD](https://discord.com/channels/883083792112300104/1184779825752309770)
+discord_url: https://discord.com/channels/883083792112300104/1184779825752309770
 github_repository: ralphjsmit/laravel-filament-pulse
 has_dark_theme: true
 has_translations: true
