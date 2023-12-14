@@ -10,6 +10,7 @@ url: https://larazeus.com/matrix-choice
 github_repository: lara-zeus/matrix-choice
 has_dark_theme: true
 has_translations: true
+thumbnail: lara-zeus-matrix-choice.webp
 versions: [3]
 publish_date: 2023-11-04
 ---

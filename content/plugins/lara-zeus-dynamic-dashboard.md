@@ -10,6 +10,7 @@ url: https://larazeus.com/dynamic-dashboard
 github_repository: lara-zeus/dynamic-dashboard
 has_dark_theme: true
 has_translations: true
+thumbnail: lara-zeus-dynamic-dashboard.webp
 versions: [3]
 publish_date: 2023-06-15
 ---
