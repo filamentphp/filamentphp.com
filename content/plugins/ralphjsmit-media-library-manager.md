@@ -57,8 +57,6 @@ This package allows you to give your users a beautiful way to upload images to y
 
 ### Screenshots
 
-NB.: The below screenshots are shown in a Filament V2 panel. Currently the package supports already Filament V3. I'll update the screenshots next week :)
-
 #### Library (light and dark mode)
 
 The MediaLibrary page is the page where your users can view all their images. The complete package is compatible with both dark- and lightmode.
@@ -160,7 +158,6 @@ To install the package you should add the package to your `composer.json` file i
     }
   ],
 }
-
 ```
 
 Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key plus a colon ':' + the domain on which you activated it, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500:mydomain.com`).
