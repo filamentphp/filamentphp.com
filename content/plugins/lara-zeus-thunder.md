@@ -5,7 +5,7 @@ author_slug: lara-zeus
 categories: [panel-builder]
 checkout_url: https://store.larazeus.com/checkout/buy/e9fb129e-68cf-40eb-b3ab-c2878b6943cd?embed=1&logo=0
 description: Ticketing system. with offices, chat, and Frontend Ready.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1184785837335007322
 docs_url: http://larazeus.com/storage/docs/thunder/v2/filament.md
 url: https://larazeus.com/thunder
 github_repository: lara-zeus/thunder
