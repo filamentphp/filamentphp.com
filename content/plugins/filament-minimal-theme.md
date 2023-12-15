@@ -62,6 +62,26 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
 
+Make sure the PostCSS Nesting plugin is installed in your project:
+
+```bash
+npm install postcss-nesting --save-dev
+```
+
+Then register it by adding it to your `postcss.config.js` file:
+
+```diff
+export default {
+    plugins: {
++       'tailwindcss/nesting': 'postcss-nesting',
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+}
+```
+
+Now compile your theme stylesheet using `npm run build`.
+
 #### Configuration
 
 Finally, register the theme plugin in your panel configuration file, and configure the colors and icons:
@@ -93,6 +113,24 @@ class AdminPanelProvider extends PanelProvider
 If you're using Filament packages outside the Panel Builder, you may install the Minimal Theme using the following steps.
 
 First, make sure you've properly installed any Filament packages. Your project should have a Tailwind CSS config file that extends the Filament preset, a stylesheet (e.g. `resources/css/app.css`), and a layout view that renders `@filamentStyles`.
+
+Also, make sure the PostCSS Nesting plugin is installed in your project:
+
+```bash
+npm install postcss-nesting --save-dev
+```
+
+Then register it by adding it to your `postcss.config.js` file:
+
+```diff
+export default {
+    plugins: {
++       'tailwindcss/nesting': 'postcss-nesting',
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+}
+```
 
 #### Stylesheet
 
