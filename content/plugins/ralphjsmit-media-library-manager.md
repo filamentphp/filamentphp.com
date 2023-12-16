@@ -57,8 +57,6 @@ This package allows you to give your users a beautiful way to upload images to y
 
 ### Screenshots
 
-NB.: The below screenshots are shown in a Filament V2 panel. Currently the package supports already Filament V3. I'll update the screenshots next week :)
-
 #### Library (light and dark mode)
 
 The MediaLibrary page is the page where your users can view all their images. The complete package is compatible with both dark- and lightmode.
@@ -160,7 +158,6 @@ To install the package you should add the package to your `composer.json` file i
     }
   ],
 }
-
 ```
 
 Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key plus a colon ':' + the domain on which you activated it, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500:mydomain.com`).
@@ -209,9 +206,7 @@ $panel
     ->plugin(FilamentMediaLibrary::make())
 ```
 
-In the rest of the documentation, if you see any code examples that use the `$panel` variable, it will refer to this variable in the panel service provider for each of the panels that you register the plugin in.
-
-In the rest of the docs, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
+In the rest of the below documentation, if we refer to the `$plugin` variable, then we mean the `$plugin = FilamentMediaLibrary::make()`. This is not necessarily a variable, but it helps to keep the code examples shorter and simpler.
 
 Therefore, the following code examples mean the same:
 
@@ -379,7 +374,7 @@ MediaPicker::make('images')
 
 The value of the field will be an array with the `id`'s of the MediaLibraryItem's that are being selected.
 
-#### Limiting the acceptd file types (V3)
+#### Limiting the accepted file types (V3)
 
 You can limit the `MediaPicker` to only allow selecting certain types of files. This works similar to the Filament `FileUpload` field by exposing an `->acceptedFileTypes()` method.
 
@@ -1020,12 +1015,11 @@ If you want to upgrade to Media Library V3 and therefore Filament V3 support, ta
                 ->acceptPdf(false)
                 // ..
         )
-    ```
+```
 - If you had custom configuration values for the `400` and `800` conversions (hinting at their square size in px), these conversion names have now changed to `small` and `medium`. If you prefer to keep the old config file, you do not to change the names/keys. If you changed these config values and you want to migrate them to the new plugin configuration syntax from V3, use the `->conversionSmall(enabled: true, width: 400)` and `->conversionMedium(enabled: true, width: 800)` methods.
 - If you have extended pages like the BrowseLibrary, MediaInfo or UploadMedia page, please check your custom overrides with the new code. The best is to publish your views again.
 
 The V3 is available to all customers who previously purchased a license for V2. If you want to purchase the upgrade from V1 to V3, please send an email to `support@ralphjsmit.com`.
-
 
 ## Support
 
