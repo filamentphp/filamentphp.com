@@ -1,5 +1,5 @@
 ---
-name: Thunder ⚡️ Ticketing System.
+name: Thunder ⚡️ Ticketing System
 slug: lara-zeus-thunder
 author_slug: lara-zeus
 categories: [panel-builder]

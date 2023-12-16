@@ -1,5 +1,5 @@
 ---
-name: Bolt Pro ⚡️ Advanced Forms Bolt Features.
+name: Bolt Pro ⚡️ Advanced Features for Bolt
 slug: lara-zeus-bolt-pro
 author_slug: lara-zeus
 categories: [panel-builder]
