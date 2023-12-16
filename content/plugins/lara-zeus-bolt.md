@@ -1,5 +1,5 @@
 ---
-name: Bolt ⚡️ Form builder UI
+name: Bolt ⚡️ Form builder with UI
 slug: lara-zeus-bolt
 author_slug: lara-zeus
 categories: [panel-builder]
