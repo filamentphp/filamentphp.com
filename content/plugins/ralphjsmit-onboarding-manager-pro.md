@@ -604,7 +604,7 @@ Track::make([
             return $action
                 ->action(function (OnboardTrackWidget $livewire) {
                     $livewire->dispatch('copy-code', code: '<div>...</div>')
-                }) 
+                }); 
         })
         ->icon('tabler-code')
         ->columnSpan(3)
