@@ -97,7 +97,7 @@ This recorder will track frequently visited pages in your Filament panel. The re
 
 ### Add plugin Blade files to `tailwind.config.js`
 
-For all panels that you want to use the package in, make sure that you have created a (Filament custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme). Next, for each theme you need to add the following 2 lines to the `tailwind.config.js` file:
+For all panels that you want to use the package in, make sure that you have created a [Filament custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme). Next, for each theme you need to add the following 2 lines to the `tailwind.config.js` file:
 
 ```js
 content: [
