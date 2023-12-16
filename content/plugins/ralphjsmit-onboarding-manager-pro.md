@@ -251,6 +251,16 @@ Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->icon('heroicon-o-check-circle')
 ```
 
+#### Setting a color
+
+You can set the color of the icon using the `->color()` method. The default is `primary`.
+
+```php
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
+    ->icon('heroicon-o-check-circle')
+    ->color('info')
+```
+
 #### Adding a url or action
 
 Each Step can have a button at the bottom of the page. This button can either be a link/url or an advanced Filament action, including things like modals or forms.
