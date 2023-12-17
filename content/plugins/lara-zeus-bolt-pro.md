@@ -1,12 +1,12 @@
 ---
-name: Bolt Pro ⚡️ Advanced Forms Bolt Features.
+name: Bolt Pro ⚡️ Advanced Features for Bolt
 slug: lara-zeus-bolt-pro
 author_slug: lara-zeus
 categories: [panel-builder]
-checkout_url: https://store.larazeus.com/checkout/buy/610693ec-695d-4666-8136-da5e76c32b47?embed=1&logo=0
+checkout_url: https://store.larazeus.com/checkout/buy/610693ec-695d-4666-8136-da5e76c32b47?embed=1&media=0&logo=0&desc=0
 description: Advanced Forms Bolt management, More Filtering, Presets, and New Fields for Bolt the form builder
 discord_url: https://discord.com/channels/883083792112300104/1121563279668555897
-docs_url: http://larazeus.com/storage/docs/bolt/v2/bolt-pro.md
+docs_url: http://larazeus.com/storage/docs/bolt/v2/filament-bolt-pro.md
 url: https://larazeus.com/bolt-pro
 github_repository: lara-zeus/bolt-pro
 has_dark_theme: true
