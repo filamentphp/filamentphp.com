@@ -1,13 +1,13 @@
 ---
 title: Filament v3.1 is Finally Here!
-slug: alexandersix-filament-v31-is-finally-here
+slug: alexandersix-filament-v3-1
 author_slug: alexandersix
 publish_date: 2023-12-17
 categories: [general]
 type_slug: news
 ---
 
-![Filament v3.1 Release Banner Image](/images/content/articles/alexandersix-filament-31-is-finally-here/alexandersix-filament-31-is-finally-here-header.webp)
+![Filament v3.1 Release Banner Image](/images/content/articles/alexandersix-filament-v3-1/banner.webp)
 
 After over 100 patch releases to Filament version v3.0 (no really, [we're serious](https://github.com/filamentphp/filament/releases/tag/v3.0.103)), one of the biggest minor releases we've ever launched has finally landed! We've included a little bit of something for everyone in this release! We have everything from dashboard and navigation updates to entire new features for handling and querying large datasets.
 
@@ -15,7 +15,7 @@ You can find the v3.1.0 changelog [here](https://github.com/filamentphp/filament
 
 ### Global Dashboard Filters
 
-![A screenshot of a Filament dashboard using the new global dashboard filters.](/images/content/articles/alexandersix-filament-31-is-finally-here/global-dashboard-filters.webp)
+![A screenshot of a Filament dashboard using the new global dashboard filters.](/images/content/articles/alexandersix-filament-v3-1/global-dashboard-filters.webp)
 
 Dashboards are an important piece of the Filament panel. They offer developers a quick and easy way to implement charts, statistics, and tables to provide insights into users' data. Now, starting in version 3.1, Filament dashboards give developers the ability to create global filters using our built-in form components!
 
@@ -35,7 +35,7 @@ Check out the documentation for more information:
 
 ### Section Header Actions & Repeater/Builder "Item Actions"
 
-![A screenshot of a Repeater using an item action to open a new tab to the given item.](/images/content/articles/alexandersix-filament-31-is-finally-here/repeater-item-actions.webp)
+![A screenshot of a Repeater using an item action to open a new tab to the given item.](/images/content/articles/alexandersix-filament-v3-1/repeater-item-actions.webp)
 
 Actions are one of the main building blocks of the Filament panel, so we're always looking for ways to improve upon their usefulness. In version 3.1, we've added actions to two new areas: the Section header and Repeater/Builder items.
 
@@ -51,7 +51,7 @@ Check out the documentation for more information:
 
 ### Parent Navigation Items
 
-![A screenshot of a parent navigation item and its two children.](/images/content/articles/alexandersix-filament-31-is-finally-here/parent-navigation.webp)
+![A screenshot of a parent navigation item and its two children.](/images/content/articles/alexandersix-filament-v3-1/parent-navigation.webp)
 
 Before version 3.1, Filament offered two levels of navigation hierarchy: a navigation section and the navigation item itself. This setup has served us well for a long time and has allowed for a lot of flexibility, but we felt that an addition was in order. Now, Filament allows for another layer of navigation: the parent navigation item.
 
@@ -67,7 +67,7 @@ Check out the documentation for more information:
 
 ### CSV Imports
 
-![A screenshot of the mapping system used in the new CSV imports feature.](/images/content/articles/alexandersix-filament-31-is-finally-here/csv-import.webp)
+![A screenshot of the mapping system used in the new CSV imports feature.](/images/content/articles/alexandersix-filament-v3-1/csv-import.webp)
 
 There are few certainties in the world, but one of them is that if you build an application for long enough, handling large datasets via CSV files will eventually become a requirement. Exporting CSV files tends to be simple enough, but importing data into your applications from a CSV can quickly become difficult.
 
@@ -87,7 +87,7 @@ Check out the documentation for more information:
 
 ### Query Builder
 
-![A screenshot of a complex query built with the new Query Builder feature.](/images/content/articles/alexandersix-filament-31-is-finally-here/query-builder.webp)
+![A screenshot of a complex query built with the new Query Builder feature.](/images/content/articles/alexandersix-filament-v3-1/query-builder.webp)
 
 Buckle up, because this is quite possibly the biggest feature we've ever released in a minor version! Querying and filtering data is important for all sorts of business and technical reasons, and for many use cases, the existing filter system in Filament works well. It allows you to filter and sort on specific columns, which is perfect when your users are trying to narrow down the data that they're seeing in a single dimension.
 
@@ -103,7 +103,7 @@ Check out the documentation for more information:
 
 ### Sub-Navigation
 
-![A screenshot of a page using sub-navigation to show three related links on the same resource page.](/images/content/articles/alexandersix-filament-31-is-finally-here/sub-navigation.webp)
+![A screenshot of a page using sub-navigation to show three related links on the same resource page.](/images/content/articles/alexandersix-filament-v3-1/sub-navigation.webp)
 
 In Filament 3.1, we've not only added navigation features to the primary navigation, but we've also added an entirely new way to guide users to pages related to the resource they are currently viewing. We call it resource sub-navigation.
 
@@ -152,4 +152,4 @@ There are a handful of updates that aren't big enough to warrant their own secti
 
 ### Thank You!
 
-So much time and effort went into this release, and we couldn't have done it without the incredible Filament community requesting features, offering solutions, and testing all these updates! We're so excited to see what amazing creations that everyone comes up with! If you haven't already, come join the [official Filament discord](https://discord.gg/filament)–it's the perfect place to ask for help, show off your cool projects, or chat with the fine folks of the Filament community. And make sure to drop by and tell us what you think of the 3.1 release! What's _your_ favorite new feature?
+So much time and effort went into this release, and we couldn't have done it without the incredible Filament community requesting features, offering solutions, and testing all these updates! We're so excited to see what amazing creations that everyone comes up with! If you haven't already, come join the [official Filament discord](https://filamentphp.com/discord)–it's the perfect place to ask for help, show off your cool projects, or chat with the fine folks of the Filament community. And make sure to drop by and tell us what you think of the 3.1 release! What's _your_ favorite new feature?
