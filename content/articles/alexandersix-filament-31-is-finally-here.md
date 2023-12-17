@@ -2,7 +2,7 @@
 title: Filament 3.1 is Finally Here!
 slug: alexandersix-filament-31-is-finally-here
 author_slug: alexandersix
-publish_date: 2023-12-15
+publish_date: 2023-12-17
 categories: [general]
 type_slug: news
 ---
