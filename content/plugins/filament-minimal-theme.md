@@ -62,6 +62,8 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
 
+Now compile your theme stylesheet using `npm run build`.
+
 #### Configuration
 
 Finally, register the theme plugin in your panel configuration file, and configure the colors and icons:
