@@ -1,17 +1,17 @@
 ---
-title: Filament 3.1 is Finally Here!
-slug: alexandersix-filament-31-is-finally-here
+title: Filament v3.1 is Finally Here!
+slug: alexandersix-filament-v31-is-finally-here
 author_slug: alexandersix
 publish_date: 2023-12-17
 categories: [general]
 type_slug: news
 ---
 
-![Filament 3.1 Release Banner Image](/images/content/articles/alexandersix-filament-31-is-finally-here/alexandersix-filament-31-is-finally-here-header.webp)
+![Filament v3.1 Release Banner Image](/images/content/articles/alexandersix-filament-31-is-finally-here/alexandersix-filament-31-is-finally-here-header.webp)
 
-After over 100 patch releases to Filament version 3.0 (no really, [we're serious](https://github.com/filamentphp/filament/releases/tag/v3.0.103)), one of the biggest minor releases we've ever launched has finally landed! We've included a little bit of something for everyone in this release! We have everything from dashboard and navigation updates to entire new features for handling and querying large datasets.
+After over 100 patch releases to Filament version v3.0 (no really, [we're serious](https://github.com/filamentphp/filament/releases/tag/v3.0.103)), one of the biggest minor releases we've ever launched has finally landed! We've included a little bit of something for everyone in this release! We have everything from dashboard and navigation updates to entire new features for handling and querying large datasets.
 
-You can find the 3.1.0 changelog [here](https://github.com/filamentphp/filament/releases/tag/v3.1.0) if you prefer to read about the changes directly on Github. Otherwise, read on, and let's dive into some of the new features available in Filament version 3.1!
+You can find the v3.1.0 changelog [here](https://github.com/filamentphp/filament/releases/tag/v3.1.0) if you prefer to read about the changes directly on Github. Otherwise, read on, and let's dive into some of the new features available in Filament version 3.1!
 
 ### Global Dashboard Filters
 
@@ -121,7 +121,7 @@ Check out the documentation for more information:
 
 ### Distinct Validation
 
-The "distinct" validation rule has finally landed in Filament as of this 3.1 release! Many people in the Filament community (ourselves included) have bumped into situations where we needed this rule, and now we can do just that!
+The "distinct" validation rule has finally landed in Filament as of this v3.1 release! Many people in the Filament community (ourselves included) have bumped into situations where we needed this rule, and now we can do just that!
 
 With the addition of the "distinct" rule (via the chainable `distinct()` method), Filament can now enforce that certain fields do not have a value that is present in any other Repeater item. The fields that can use this rule are:
 
