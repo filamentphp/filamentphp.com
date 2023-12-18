@@ -59,9 +59,17 @@
             github="https://github.com/pxlrbt"
         />
         <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/11881203?v=4"
+            name="Alex Six"
+            title="Head of Developer Relations"
+            website="https://alexandersix.com"
+            twitter="https://twitter.com/alexandersix_"
+            github="https://github.com/alexandersix"
+        />
+        <x-team.member
             avatar="https://avatars.githubusercontent.com/u/3596800?v=4"
             name="Adam Weston"
-            title="Developer & Plugin Support"
+            title="Developer & Head of Plugin Support"
             website="https://aw.codes"
             twitter="https://twitter.com/awcodes1"
             github="https://github.com/awcodes"
@@ -70,9 +78,17 @@
             avatar="https://avatars.githubusercontent.com/u/15275787?v=4"
             name="Hassan Zahirnia"
             title="Lead UI/UX Marketing Designer"
-            website="https://zahirnia.com/"
+            website="https://zahirnia.com"
             twitter="https://twitter.com/HassanZahirnia"
             github="https://github.com/HassanZahirnia"
+        />
+        <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/14329460?v=4"
+            name="Guilherme Saade"
+            title="Developer & Plugin Support"
+            website="https://saade.dev"
+            twitter="https://twitter.com/saadeguilherme"
+            github="https://github.com/saade"
         />
     </div>
 </section>

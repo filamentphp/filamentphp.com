@@ -1,5 +1,4 @@
 ---
-anystack_id: 9adaf7c9-7f0a-45ce-bade-083f5b27edb0
 name: Sellarix
 slug: sellarix
 github_url: https://github.com/sellarix/laravel-blog
