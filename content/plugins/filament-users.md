@@ -1,6 +1,6 @@
 ---
-name: Filament Users
-slug: filament-users
+name: Tomato Users
+slug: tomato-users
 author_slug: fadymondy
 categories: [panel-authentication]
 description: User Resource For FilamentPHP Admin Dashboard.
@@ -9,7 +9,7 @@ docs_url: https://github.com/tomatophp/filament-users/blob/master/README.md
 github_repository: tomatophp/filament-users
 has_dark_theme: true
 has_translations: true
-image: filament-users.png
+image: tomato-users.png
 versions: [3]
 publish_date: 2023-09-28
 ---
