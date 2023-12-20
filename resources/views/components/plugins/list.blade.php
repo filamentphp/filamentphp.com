@@ -152,6 +152,9 @@
         },
     }"
 >
+    {{-- Header --}}
+    <div class="text-2xl font-bold">All Plugins</div>
+
     <div class="flex flex-wrap items-center gap-3 pt-5">
         {{-- Version Switch --}}
         <div class="min-[1170px]:min-w-[15rem]">
@@ -399,7 +402,7 @@
                 x-on:click="showCategories = !showCategories"
             >
                 <div class="font-semibold">
-                    <span class="">Select Categories</span>
+                    <span>Select Categories</span>
                     <span class="text-sm tracking-tighter">
                         <span>(</span>
                         <span x-text="selectedCategories.size"></span>

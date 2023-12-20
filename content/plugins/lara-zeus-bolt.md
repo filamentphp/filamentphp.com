@@ -1,5 +1,5 @@
 ---
-name: Bolt ⚡️ Form builder UI
+name: Bolt ⚡️ Form builder with UI
 slug: lara-zeus-bolt
 author_slug: lara-zeus
 categories: [panel-builder]
@@ -10,8 +10,7 @@ url: https://larazeus.com/bolt
 github_repository: lara-zeus/bolt
 has_dark_theme: true
 has_translations: true
-image: lara-zeus-bolt.png
-thumbnail: lara-zeus-bolt.png
+thumbnail: lara-zeus-bolt.webp
 versions: [2, 3]
 publish_date: 2023-07-23
 ---

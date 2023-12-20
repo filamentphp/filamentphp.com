@@ -22,7 +22,7 @@ class Author extends Model
 
     public static function schema(Blueprint $table)
     {
-        $table->string('avatar');
+        $table->string('avatar')->nullable();
         $table->string('github_url');
         $table->string('name');
         $table->string('slug');
@@ -48,7 +48,7 @@ class Author extends Model
 
     public function getAvatarUrl(): string
     {
-        return asset("images/content/authors/avatars/{$this->avatar}");
+        return asset('images/content/authors/avatars/' . ($this->avatar ?? "{$this->slug}.webp"));
     }
 
     public function getStarsCount(): int

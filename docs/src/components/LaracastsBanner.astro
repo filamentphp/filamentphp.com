@@ -2,7 +2,27 @@
 import filamentLogo from '@assets/laracasts/filament-laracasts-logo.webp'
 import laracastsLogo from '@assets/laracasts/laracasts.svg'
 
-const { title, description, url } = Astro.props;
+const { title, description, url, series } = Astro.props;
+
+let instructorName
+let instructorAvatar
+let instructorTwitter
+let instructorWebsite
+let instructorGitHub
+
+if (series === 'building-advanced-components') {
+    instructorName = 'Dan Harrin'
+    instructorAvatar = 'https://avatars.githubusercontent.com/u/41773797?v=4'
+    instructorTwitter = 'https://twitter.com/danjharrin'
+    instructorWebsite = 'https://danharrin.com'
+    instructorGitHub = 'https://github.com/danharrin'
+} else if (series === 'rapid-laravel-development') {
+    instructorName = 'Kevin McKee'
+    instructorAvatar = 'https://avatars.githubusercontent.com/u/4503765?v=4'
+    instructorTwitter = 'https://twitter.com/iAmKevinMcKee'
+    instructorWebsite = 'https://kevinmckee.me'
+    instructorGitHub = 'https://github.com/iAmKevinMcKee'
+}
 ---
 
 <div
@@ -37,7 +57,7 @@ const { title, description, url } = Astro.props;
     <!-- Link -->
     <div class="flex pt-5">
       <a
-        href={url}
+        href={`${url}?referer=DanHarrin`}
         target="_blank"
         class="rounded-full px-12 py-2 bg-[#1B3152] flex justify-center gap-3 items-center text-sm transition duration-300 hover:bg-[#1b395f]"
       >
@@ -68,25 +88,29 @@ const { title, description, url } = Astro.props;
   >
     <!-- Photo -->
     <img
-      src="https://avatars.githubusercontent.com/u/41773797?v=4"
-      alt="Dan Harrin"
+      src={instructorAvatar}
+      alt={instructorName}
       class="w-24 h-24 rounded-full"
     />
 
     <!-- Information -->
     <div>
       <!-- Name -->
-      <div class="font-semibold">Dan Harrin</div>
+      <div class="font-semibold">
+          {instructorName}
+      </div>
 
       <!-- Title -->
-      <div class="text-[#BAD9FC] font-medium text-sm">Instructor</div>
+      <div class="text-[#BAD9FC] font-medium text-sm">
+          Instructor
+      </div>
 
       <!-- Social Media Links -->
       <div class="pt-2 flex flex-wrap items-center gap-2.5 text-[#BAD9FC]">
         <!-- Twitter -->
         <a
           target="_blank"
-          href="https://twitter.com/danjharrin"
+          href={instructorTwitter}
           class="group/twitter-link relative grid h-8 w-8 place-items-center rounded-full bg-[#1C3E66] hover:text-white motion-reduce:transition-none"
         >
           <svg
@@ -120,7 +144,7 @@ const { title, description, url } = Astro.props;
         <!-- Website -->
         <a
           target="_blank"
-          href="https://danharrin.com"
+          href={instructorWebsite}
           class="grid h-8 w-8 place-items-center rounded-full bg-[#1C3E66] transition duration-300 hover:text-white motion-reduce:transition-none"
         >
           <svg
@@ -136,10 +160,10 @@ const { title, description, url } = Astro.props;
             ></path>
           </svg>
         </a>
-        <!-- Github -->
+        <!-- GitHub -->
         <a
           target="_blank"
-          href="https://github.com/danharrin"
+          href={instructorGitHub}
           class="grid h-8 w-8 place-items-center rounded-full bg-[#1C3E66] transition duration-300 hover:text-white motion-reduce:transition-none"
         >
           <svg

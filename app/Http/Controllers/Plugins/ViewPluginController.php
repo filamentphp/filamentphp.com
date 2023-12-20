@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Plugins;
 
+use App\Actions\GetPluginsListData;
 use App\Http\Controllers\Controller;
 use App\Models\Plugin;
 use App\Models\V2Plugin;
 
 class ViewPluginController extends Controller
 {
-    public function __invoke(string $plugin)
+    public function __invoke(GetPluginsListData $getPluginsListData, string $plugin)
     {
         $pluginSlug = $plugin;
 
@@ -20,7 +21,21 @@ class ViewPluginController extends Controller
                 ->description($plugin->description)
                 ->image($plugin->getImageUrl() ?? $plugin->getThumbnailUrl());
 
-            return view('plugins.view-plugin', ['plugin' => $plugin]);
+            $featuredPlugins = [
+                'filament-minimal-theme',
+                'kenneth-sese-advanced-tables',
+                'ralphjsmit-media-library-manager',
+            ];
+
+            if (in_array($pluginSlug, $featuredPlugins)) {
+                $featuredPlugins = array_diff($featuredPlugins, [$pluginSlug]);
+                $featuredPlugins[] = 'ralphjsmit-onboarding-manager-pro';
+            }
+
+            return view('plugins.view-plugin', [
+                'plugin' => $plugin,
+                'featuredPlugins' => $getPluginsListData($featuredPlugins),
+            ]);
         }
 
         $v2Plugin = V2Plugin::query()

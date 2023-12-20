@@ -9,8 +9,7 @@ docs_url: https://raw.githubusercontent.com/filamentphp/spatie-laravel-settings-
 github_repository: filamentphp/spatie-laravel-settings-plugin
 has_dark_theme: true
 has_translations: true
-image: filament-spatie-settings.jpg
-thumbnail: filament-spatie-settings.jpg
+thumbnail: filament-spatie-settings.webp
 versions: [2, 3]
 publish_date: 2023-07-17
 ---

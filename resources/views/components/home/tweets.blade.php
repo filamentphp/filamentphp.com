@@ -207,7 +207,7 @@
                 <x-home.testimonial
                     url="https://twitter.com/ChrisHardie/status/1507793007470428167"
                 >
-                    I’ve built a few Laravel admin tools/sites now with Filament
+                    I've built a few Laravel admin tools/sites now with Filament
                     and just have to remark on how
                     <strong>well designed</strong>
                     it is, and how quickly one can create
@@ -307,7 +307,7 @@
                 <x-home.testimonial
                     url="https://twitter.com/LabsArtisan/status/1368248886725402625"
                 >
-                    👍 been using it today and I’ve got to say
+                    👍 been using it today and I've got to say
                     <strong>it's brilliant.</strong>
                     <x-slot
                         name="author"
@@ -651,6 +651,35 @@
                         Mo Khosh
                     </x-slot>
                 </x-home.testimonial>
+            </div>
+
+            {{-- See More Button --}}
+            <div class="flex justify-center pt-10">
+                <a
+                    href="https://love.filamentphp.com"
+                    target="_blank"
+                    class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-200 [grid-area:1/-1] hover:bg-dawn-pink/70 motion-reduce:transition-none"
+                >
+                    <div>View All Testimonials</div>
+                    <div
+                        class="transition duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
+                    >
+                        <svg
+                            width="24"
+                            height="25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4 12.992h2.5m13.5 0-6-6m6 6-6 6m6-6H9.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                </a>
             </div>
         </div>
         <script>
