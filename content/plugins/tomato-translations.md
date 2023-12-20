@@ -1,6 +1,6 @@
 ---
-name: Filament Users
-slug: filament-translations
+name: Tomato Translations
+slug: tomato-translations
 author_slug: fadymondy
 categories: [developer-tool]
 description: Manage your translation with DB and cache,.
@@ -9,7 +9,7 @@ docs_url: https://github.com/tomatophp/filament-translations/blob/master/README.
 github_repository: tomatophp/filament-translations
 has_dark_theme: true
 has_translations: true
-image: filament-translations.png
+image: tomato-translations.png
 versions: [3]
 publish_date: 2023-09-28
 ---
