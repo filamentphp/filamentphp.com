@@ -36,7 +36,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 "repositories": [
     {
         "type": "composer",
-        "url": "https://privato.pub/composer/filament"
+        "url": "https://filament.privato.pub/composer"
     }
 ]
 ```
