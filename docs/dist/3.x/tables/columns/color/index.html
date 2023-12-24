@@ -987,7 +987,15 @@ use Filament\Tables\Columns\ColorColumn;
 ColorColumn::make('color')
     -&gt;copyable()
     -&gt;copyableState(fn (Post $record): string =&gt; "Color: {$record-&gt;color}")
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/05-color.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+</textarea></code></pre>
+<h2 id="wrapping-multiple-color-blocks"><a class="heading-anchor" href="#wrapping-multiple-color-blocks"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Wrapping multiple color blocks</h2>
+<p>Color blocks can be set to wrap if they can&#39;t fit on one line, by setting <code>wrap()</code>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Columns</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">ColorColumn</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">ColorColumn</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">color</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">wrap</span><span style="color: #89DDFF;">()</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Columns\ColorColumn;
+
+ColorColumn::make('color')
+    -&gt;wrap()
+</textarea></code></pre>
+<p>Note: the &quot;width&quot; for wrapping is affected by the column label, so you may need to use a shorter or hidden label to wrap more tightly.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/tables/docs/03-columns/05-color.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>
@@ -1019,7 +1027,7 @@ ColorColumn::make('color')
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-color-to-be-copied-to-the-clipboard&#34;,&#34;text&#34;:&#34;Allowing the color to be copied to the clipboard&#34;,&#34;title&#34;:&#34;Allowing the color to be copied to the clipboard&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-text-that-is-copied-to-the-clipboard&#34;,&#34;text&#34;:&#34;Customizing the text that is copied to the clipboard&#34;,&#34;title&#34;:&#34;Customizing the text that is copied to the clipboard&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-color-to-be-copied-to-the-clipboard&#34;,&#34;text&#34;:&#34;Allowing the color to be copied to the clipboard&#34;,&#34;title&#34;:&#34;Allowing the color to be copied to the clipboard&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-the-text-that-is-copied-to-the-clipboard&#34;,&#34;text&#34;:&#34;Customizing the text that is copied to the clipboard&#34;,&#34;title&#34;:&#34;Customizing the text that is copied to the clipboard&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;wrapping-multiple-color-blocks&#34;,&#34;text&#34;:&#34;Wrapping multiple color blocks&#34;,&#34;title&#34;:&#34;Wrapping multiple color blocks&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -1040,6 +1048,13 @@ ColorColumn::make('color')
                               </a>
                             </li>
                         </ol>
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#wrapping-multiple-color-blocks" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'wrapping-multiple-color-blocks' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Wrapping multiple color blocks
+                        </a>
+                      </h3>
+                      
                     </li>
                 </ol>
         </nav>
