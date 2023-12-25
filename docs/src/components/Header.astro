@@ -5,6 +5,7 @@ import ThemeSelector from '@components/ThemeSelector.astro'
 import { Icon } from 'astro-icon'
 import Logo from './Logo.astro'
 import HalloweenLogo from './HalloweenLogo.astro'
+import ChristmasLogo from './ChristmasLogo.astro'
 
 let { navigation = null } = Astro.props
 ---
@@ -31,6 +32,14 @@ let { navigation = null } = Astro.props
             const day = today.getDate()
             return (month === 10 && day >= 25) || (month === 11 && day === 1)
           },
+
+          get isChristmas() {
+            // Get the current date
+            const today = new Date()
+            const month = today.getMonth() + 1 // Months are 0-indexed, so we add 1
+            const day = today.getDate()
+            return (month === 12 && day >= 1)
+          },
         }"
         class="flex gap-3 items-center"
       >
@@ -49,7 +58,15 @@ let { navigation = null } = Astro.props
           </div>
           <div
             x-cloak
-            x-show="isHalloween === false"
+            x-show="isChristmas === true"
+          >
+            <ChristmasLogo
+              className="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434]"
+            />
+          </div>
+          <div
+            x-cloak
+            x-show="isHalloween === false && isChristmas === false"
           >
             <Logo
               className="hover:text-stone-800 transition motion-reduce:transition-none text-stone-900 dark:hover:text-butter dark:text-[#ffa434]"
@@ -61,7 +78,7 @@ let { navigation = null } = Astro.props
           aria-label="Docs homepage"
           class="transition duration-500 ease-out motion-reduce:transition-none hover:translate-x-1"
           x-bind:class="{
-            'ml-6': isHalloween,
+            'ml-6': isHalloween || isChristmas,
           }"
         >
           <div

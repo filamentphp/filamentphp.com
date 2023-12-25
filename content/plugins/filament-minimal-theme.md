@@ -36,7 +36,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 "repositories": [
     {
         "type": "composer",
-        "url": "https://privato.pub/composer/filament"
+        "url": "https://filament.privato.pub/composer"
     }
 ]
 ```
@@ -61,6 +61,8 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 - @import '/vendor/filament/filament/resources/css/theme.css';
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
+
+Now compile your theme stylesheet using `npm run build`.
 
 #### Configuration
 
