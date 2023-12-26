@@ -118,6 +118,7 @@ author_slug: filament
 publish_date: 2022-06-20
 categories: [general]
 type_slug: article
+canonical_url: https://mywebsite.com/blog/filament-how-to-create-a-plugin
 ---
 
 Luck, skill, and a little bit of magic!
@@ -128,6 +129,7 @@ Luck, skill, and a little bit of magic!
 - The `publish_date` should be the date that you would like the article to be published on the website.
 - The `categories` should be an array of categories that your article is related to. Available categories can be found in the `content/article_categories` directory.
 - The `type_slug` should be the slug of the article type that you would like to use. Available article types can be found in the `content/article_types` directory.
+- The `canonical_url` should be the full URL where the original article exists on the internet. Omit this if your article is not posted anywhere else.
 
 After this information, you can write your article using markdown directly in the file. Please check the grammar and spelling of this content, preferably using [Grammarly](https://www.grammarly.com).
 
