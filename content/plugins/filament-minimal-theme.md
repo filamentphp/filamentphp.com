@@ -19,6 +19,10 @@ Want your Filament applications to look more streamlined? The official Filament 
 
 > This theme covers all Filament packages and can be used standalone. You may choose a license for a single project (3 activations) or unlimited projects, both including free updates.
 
+## Screenshots
+
+![Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme.webp)
+
 ## Installation
 
 ### Requirements
