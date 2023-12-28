@@ -10,7 +10,6 @@ github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
 is_lemon_squeezy_embedded: true
-is_presale: true
 price: €49.00
 versions: [3]
 publish_date: 2023-09-05
@@ -18,15 +17,13 @@ publish_date: 2023-09-05
 
 Want your Filament applications to look more streamlined? The official Filament Minimal Theme features a clean design with less rounding, a lighter background and redesigned UI components. No need to hire a designer to make your projects look different from the default Filament style. Simply install our Composer package and you're good to go. Perfect for corporate software.
 
-> This theme covers all Filament packages and can be used standalone. You may choose a license for a single project or unlimited projects, both including free updates.
+> This theme covers all Filament packages and can be used standalone. You may choose a license for a single project (3 activations) or unlimited projects, both including free updates.
 
 ## Installation
 
 ### Requirements
 
-Filament Minimal Theme alpha requires the latest version of Filament v3, as it depends on new APIs added to Filament's core.
-
-> This plugin is currently in alpha, which means it's not yet ready for use in production environments.
+This plugin requires the latest version of Filament v3, as it depends on new APIs added to Filament's core.
 
 ### Installation
 
