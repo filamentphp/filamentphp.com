@@ -31,7 +31,7 @@ List orders page in dark mode using the Filament Minimal Theme:
 ![Screenshot of the list orders page in dark mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders.webp)
 
 List orders page in light mode using the default Filament theme:
-![Screenshot of the list orders page in dark mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders.webp)
+![Screenshot of the list orders page in dark mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders-default.webp)
 
 Edit post page in light mode using the Filament Minimal Theme:
 ![Screenshot of the edit post page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-edit-post.webp)
