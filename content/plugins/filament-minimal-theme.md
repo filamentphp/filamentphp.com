@@ -67,7 +67,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 Now you can install the package using:
 
 ```bash
-composer require filament/minimal-theme:"^3.0@alpha"
+composer require filament/minimal-theme:"^3.0@beta"
 ```
 
 You will be prompted to provide a username and password. Use your order email address as username and the license key you received as password.
