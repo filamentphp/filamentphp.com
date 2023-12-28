@@ -190,4 +190,4 @@ MinimalTheme::configure();
 
 ## Issues
 
-If you find a bug in this package, please [create an issue on the main Filament GitHub repository](https://github.com/filamentphp/filament/issues/new?assignees=&labels=bug%2Cunconfirmed%2Clow+priority&projects=&template=bug_report.yml).
+If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
