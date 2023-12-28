@@ -22,10 +22,10 @@ Want your Filament applications to look more streamlined? The official Filament 
 ## Screenshots
 
 List orders page in light mode using the Filament Minimal Theme:
-![Screenshot of the list orders page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-list-orders.webp)
+![Screenshot of the list orders page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-list-orders.webp)
 
 List orders page in light mode using the default Filament theme:
-![Screenshot of the list orders page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-list-orders-default.webp)
+![Screenshot of the list orders page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-list-orders-default.webp)
 
 List orders page in dark mode using the Filament Minimal Theme:
 ![Screenshot of the list orders page in dark mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders.webp)
