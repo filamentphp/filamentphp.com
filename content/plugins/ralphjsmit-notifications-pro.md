@@ -4,6 +4,8 @@ slug: ralphjsmit-notifications-pro
 anystack_id: 49b2f23f-cd8f-49f4-a94d-d78c3c26b45d
 author_slug: ralphjsmit
 categories: [panel-builder]
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-notifications-pro/configure
+price: €39.00
 description: Seamlessly integrate Laravel database notifications with Filament.
 discord_url: https://discord.com/channels/883083792112300104/1007359259677294764
 github_repository: ralphjsmit/laravel-filament-notifications
