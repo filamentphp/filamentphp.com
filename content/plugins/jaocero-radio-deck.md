@@ -1,6 +1,6 @@
 ---
 name: Radio Deck
-slug: filament-radio-deck
+slug: jaocero-radio-deck
 author_slug: jaocero
 categories: [form-field]
 description: Turn filament default radio button into a selectable card with icons, title and description.
