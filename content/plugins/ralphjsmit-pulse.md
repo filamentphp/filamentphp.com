@@ -4,7 +4,7 @@ slug: ralphjsmit-pulse
 anystack_id: 9ad2abab-ec16-483c-a3ed-8f9a8f4be35f
 author_slug: ralphjsmit
 categories: [analytics, developer-tool, kit, panel-builder]
-checkout_url: https://ralphjsmit.com/filament-plugins/filament-pulse/configure
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-pulse/configure?referer=filament
 price: €24.95
 description: This package is a beautiful integration between Filament & Laravel Pulse.
 discord_url: https://discord.com/channels/883083792112300104/1184779825752309770

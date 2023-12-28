@@ -4,7 +4,7 @@ slug: ralphjsmit-media-library-manager
 anystack_id: 64871b95-5e01-4b5e-9da4-c6ac4a78bf21
 author_slug: ralphjsmit
 categories: [form-builder, form-field, spatie, panel-builder]
-checkout_url: https://ralphjsmit.com/filament-plugins/filament-media-library-pro/configure
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-media-library-pro/configure?referer=filament
 price: €89.00
 description: Give your users a beautiful way to upload, manage and select media and images in Filament Admin. Integrates with Spatie Media Library.
 discord_url: https://discord.com/channels/883083792112300104/961393209639067698

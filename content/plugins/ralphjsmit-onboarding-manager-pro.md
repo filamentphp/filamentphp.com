@@ -4,7 +4,7 @@ slug: ralphjsmit-onboarding-manager-pro
 anystack_id: e543d70c-bd28-4d99-9fda-d5356878789c
 author_slug: ralphjsmit
 categories: [panel-builder, widget]
-checkout_url: https://ralphjsmit.com/filament-plugins/filament-onboarding-manager-pro/configure
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-onboarding-manager-pro/configure?referer=filament
 price: €59.00
 description: Beautiful onboarding experiences for Filament Admin.
 discord_url: https://discord.com/channels/883083792112300104/993463038357274635
