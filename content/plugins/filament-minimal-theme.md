@@ -21,7 +21,8 @@ Want your Filament applications to look more streamlined? The official Filament 
 
 ## Screenshots
 
-![Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme.webp)
+![Filament Minimal Theme screenshot of edit post page in light mode](/images/content/plugins/images/filament-minimal-theme-screenshot-light-edit-post.webp)
+![Filament Minimal Theme screenshot of edit post page in dark mode](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-edit-post.webp)
 
 ## Installation
 
