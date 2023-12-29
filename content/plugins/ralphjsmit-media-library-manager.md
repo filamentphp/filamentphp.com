@@ -1,7 +1,6 @@
 ---
 name: Media Library Manager
 slug: ralphjsmit-media-library-manager
-anystack_id: 64871b95-5e01-4b5e-9da4-c6ac4a78bf21
 author_slug: ralphjsmit
 categories: [form-builder, form-field, spatie, panel-builder]
 checkout_url: https://ralphjsmit.com/filament-plugins/filament-media-library-pro/configure?referer=filament

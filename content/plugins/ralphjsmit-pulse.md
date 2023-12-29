@@ -1,7 +1,6 @@
 ---
 name: Laravel Pulse
 slug: ralphjsmit-pulse
-anystack_id: 9ad2abab-ec16-483c-a3ed-8f9a8f4be35f
 author_slug: ralphjsmit
 categories: [analytics, developer-tool, kit, panel-builder]
 checkout_url: https://ralphjsmit.com/filament-plugins/filament-pulse/configure?referer=filament
