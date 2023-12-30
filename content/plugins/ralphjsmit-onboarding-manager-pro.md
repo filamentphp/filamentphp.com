@@ -111,10 +111,10 @@ To install the package you should add the following lines to your `composer.json
 ```json
 {
   "repositories": [
-      {
-          "type": "composer",
-          "url": "https://satis.ralphjsmit.com"
-      }
+    {
+      "type": "composer",
+      "url": "https://satis.ralphjsmit.com"
+    }
   ]
 }
 ```
