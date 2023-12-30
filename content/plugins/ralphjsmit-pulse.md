@@ -58,20 +58,22 @@ The package is supported on Laravel 10 and Filament V3.
 
 ### Installation via Composer
 
-To install the package you should add the package to your `composer.json` file in the `repositories` key:
+To install the package you should add the following lines to your `composer.json` file in the `repositories` key in order to allow access to the private package:
 
 ```json
 {
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://filament-pulse.composer.sh"
-    }
-  ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.ralphjsmit.com"
+        }
+    ]
 }
 ```
 
-Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key).
+> If you have one of my other premium packages installed already, then you don't need to repeat these lines.
+
+Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500`).
 
 ```bash
 composer require ralphjsmit/laravel-filament-pulse:^0.1
