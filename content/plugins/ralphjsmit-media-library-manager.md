@@ -4,7 +4,7 @@ slug: ralphjsmit-media-library-manager
 author_slug: ralphjsmit
 categories: [form-builder, form-field, spatie, panel-builder]
 checkout_url: https://ralphjsmit.com/filament-plugins/filament-media-library-pro/configure?referer=filament
-price: €89.00
+price: €49.00
 description: Give your users a beautiful way to upload, manage and select media and images in Filament Admin. Integrates with Spatie Media Library.
 discord_url: https://discord.com/channels/883083792112300104/961393209639067698
 github_repository: ralphjsmit/laravel-filament-media-library
@@ -148,20 +148,22 @@ If you use Laravel Sail, installing ImageMagick requires a few additional steps.
 
 ### Installation via Composer
 
-To install the package you should add the package to your `composer.json` file in the `repositories` key:
+To install the package you should add the following lines to your `composer.json` file in the `repositories` key in order to allow access to the private package:
 
 ```json
 {
   "repositories": [
     {
       "type": "composer",
-      "url": "https://filament-media-library-pro.composer.sh"
+      "url": "https://satis.ralphjsmit.com"
     }
-  ],
+  ]
 }
 ```
 
-Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key plus a colon ':' + the domain on which you activated it, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500:mydomain.com`).
+> If you have one of my other premium packages installed already, then you don't need to repeat these lines.
+
+Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500`).
 
 ```shell
 composer require ralphjsmit/laravel-filament-media-library
