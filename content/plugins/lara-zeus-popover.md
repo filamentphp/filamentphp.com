@@ -11,5 +11,5 @@ github_repository: lara-zeus/popover
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2023-12-12
+publish_date: 2024-01-01
 ---
