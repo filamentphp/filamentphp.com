@@ -11,7 +11,6 @@ url: https://larazeus.com/thunder
 github_repository: lara-zeus/thunder
 has_dark_theme: true
 has_translations: true
-thumbnail: lara-zeus-thunder.webp
 is_lemon_squeezy_embedded: true
 is_presale: false
 price: $49.00

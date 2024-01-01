@@ -11,7 +11,6 @@ url: https://larazeus.com/bolt-pro
 github_repository: lara-zeus/bolt-pro
 has_dark_theme: true
 has_translations: true
-thumbnail: lara-zeus-bolt-pro.webp
 is_lemon_squeezy_embedded: true
 is_presale: false
 price: $59.00
