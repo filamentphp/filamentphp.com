@@ -21,6 +21,18 @@ Want your Filament applications to look more streamlined? The official Filament 
 
 ## Screenshots
 
+Registration page in light mode using the Filament Minimal Theme:
+![Screenshot of the registration page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-registration.webp)
+
+Registration page in light mode using the default Filament theme:
+![Screenshot of the registration page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-registration-default.webp)
+
+Registration page in dark mode using the Filament Minimal Theme:
+![Screenshot of the registration page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-registration.webp)
+
+Registration page in dark mode using the default Filament theme:
+![Screenshot of the registration page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-registration-default.webp)
+
 List orders page in light mode using the Filament Minimal Theme:
 ![Screenshot of the list orders page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-list-orders.webp)
 
