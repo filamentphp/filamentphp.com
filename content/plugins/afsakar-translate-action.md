@@ -1,10 +1,10 @@
 ---
-name: Filament Translate Action
-slug: filament-translate-action
+name: Translate Action
+slug: afsakar-translate-action
 author_slug: afsakar
 categories: [form-builder, form-field]
 description: Translate action for FilamentPHP.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1191447030506201218
 docs_url: https://raw.githubusercontent.com/afsakar/filament-translate-action/main/README.md
 github_repository: afsakar/filament-translate-action
 has_dark_theme: true
