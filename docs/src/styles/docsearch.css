@@ -90,8 +90,9 @@
     @apply relative flex w-full items-center px-4;
 }
 
-.DocSearch-Input, .DocSearch-Input:focus {
-    @apply flex-1 appearance-none ring-0 border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none dark:text-slate-100 !important;
+.DocSearch-Input,
+.DocSearch-Input:focus {
+    @apply flex-1 appearance-none border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none ring-0 dark:text-slate-100 !important;
 }
 
 .DocSearch-Input::placeholder {
