@@ -90,19 +90,19 @@
     @apply relative flex w-full items-center px-4;
 }
 
-.DocSearch-Input {
-    @apply flex-1 appearance-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none dark:text-slate-100;
+.DocSearch-Input, .DocSearch-Input:focus {
+    @apply flex-1 appearance-none ring-0 border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none dark:text-slate-100 !important;
 }
 
 .DocSearch-Input::placeholder {
-    @apply text-slate-400 opacity-100;
+    @apply text-slate-400 opacity-100 !important;
 }
 
 .DocSearch-Input::-webkit-search-cancel-button,
 .DocSearch-Input::-webkit-search-decoration,
 .DocSearch-Input::-webkit-search-results-button,
 .DocSearch-Input::-webkit-search-results-decoration {
-    display: none;
+    display: none !important;
 }
 
 .DocSearch-LoadingIndicator,
