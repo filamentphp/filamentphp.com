@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-7Z3YXXIO">
+<html lang="en" class="hidden astro-WSM47DKC">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +26,9 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/docs/assets/dashboard.47bff61d.css" />
+  <link rel="stylesheet" href="/docs/assets/dashboard.0f270167.css" />
 <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-7Z3YXXIO">
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-WSM47DKC">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
   <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -733,12 +733,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-7Z3YXXIO">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-7Z3YXXIO">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-7Z3YXXIO"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-7Z3YXXIO"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-7Z3YXXIO"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-7Z3YXXIO" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-WSM47DKC">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-WSM47DKC">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-WSM47DKC"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-WSM47DKC"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-WSM47DKC"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-WSM47DKC" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -1061,17 +1061,17 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-7Z3YXXIO">
-        <article class="astro-7Z3YXXIO">
-          <header class="mb-9 space-y-1 astro-7Z3YXXIO">
-              <p class="font-display font-bold text-butter astro-7Z3YXXIO">
-                    <span id="current-package" class="astro-7Z3YXXIO">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-WSM47DKC">
+        <article class="astro-WSM47DKC">
+          <header class="mb-9 space-y-1 astro-WSM47DKC">
+              <p class="font-display font-bold text-butter astro-WSM47DKC">
+                    <span id="current-package" class="astro-WSM47DKC">
                         Form Builder
                     </span>
 
                     
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-7Z3YXXIO">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-WSM47DKC">
                   Advanced forms
                 </h1>
             </header>
@@ -1487,6 +1487,29 @@ Group::make()
             -&gt;required(),
     ])
 </textarea></code></pre>
+<h3 id="saving-data-to-a-belongsto-relationship"><a class="heading-anchor" href="#saving-data-to-a-belongsto-relationship"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Saving data to a <code>BelongsTo</code> relationship</h3>
+<p>Please note that if you are saving the data to a <code>BelongsTo</code> relationship, then the foreign key column in your database must be <code>nullable()</code>. This is because Filament saves the form first, before saving the relationship. Since the form is saved first, the foreign ID does not exist yet, so it must be nullable. Immediately after the form is saved, Filament saves the relationship, which will then fill in the foreign ID and save it again.</p>
+<p>It is worth noting that if you have an observer on your form model, then you may need to adapt it to ensure that it does not depend on the relationship existing when it it created. For example, if you have an observer that sends an email to a related record when a form is created, you may need to switch to using a different hook that runs after the relationship is attached, like <code>updated()</code>.</p>
+<h3 id="conditionally-saving-data-to-a-relationship"><a class="heading-anchor" href="#conditionally-saving-data-to-a-relationship"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Conditionally saving data to a relationship</h3>
+<p>Sometimes, saving the related record may be optional. If the user fills out the customer fields, then the customer will be created / updated. Otherwise, the customer will not be created, or will be deleted if it already exists. To do this, you can pass a <code>condition</code> function as an argument to <code>relationship()</code>, which can use the <code>$state</code> of the related form to determine whether the relationship should be saved or not:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Group</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">TextInput</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Group</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">customer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">condition</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">(?</span><span style="color: #F78C6C;">array</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">filled</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">state</span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Customer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">TextInput</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">email</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Email address</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">email</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">requiredWith</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Group;
+use Filament\Forms\Components\TextInput;
+
+Group::make()
+    -&gt;relationship(
+        'customer',
+        condition: fn (?array $state): bool =&gt; filled($state['name']),
+    )
+    -&gt;schema([
+        TextInput::make('name')
+            -&gt;label('Customer'),
+        TextInput::make('email')
+            -&gt;label('Email address')
+            -&gt;email()
+            -&gt;requiredWith('name'),
+    ])
+</textarea></code></pre>
+<p>In this example, the customer&#39;s name is not <code>required()</code>, and the email address is only required when the <code>name</code> is filled. The <code>condition</code> function is used to check whether the <code>name</code> field is filled, and if it is, then the customer will be created / updated. Otherwise, the customer will not be created, or will be deleted if it already exists.</p>
 <h2 id="inserting-livewire-components-into-a-form"><a class="heading-anchor" href="#inserting-livewire-components-into-a-form"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Inserting Livewire components into a form</h2>
 <p>You may use insert a Livewire component directly into a form:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Foo</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">Livewire</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Foo</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Forms\Components\Livewire;
@@ -1545,182 +1568,192 @@ Livewire::make(Foo::class)
 use App\Livewire\Foo;
 
 Livewire::make(Foo::class)-&gt;lazy()       
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/07-advanced.md" class="text-sm astro-7Z3YXXIO" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-7Z3YXXIO">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-7Z3YXXIO">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-7Z3YXXIO">GitHub discussion</a>
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/forms/docs/07-advanced.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-7Z3YXXIO">
-          <div class="astro-7Z3YXXIO">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-7Z3YXXIO">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-WSM47DKC">
+          <div class="astro-WSM47DKC">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-7Z3YXXIO">
-                  <a href="/docs/3.x/forms/actions" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-7Z3YXXIO">
-                    <span aria-hidden="true" class="astro-7Z3YXXIO">&larr;</span> Actions
+                <dd class="mt-1 astro-WSM47DKC">
+                  <a href="/docs/3.x/forms/actions" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
+                    <span aria-hidden="true" class="astro-WSM47DKC">&larr;</span> Actions
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-7Z3YXXIO">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-7Z3YXXIO">
+            <div class="ml-auto text-right astro-WSM47DKC">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   Next
                 </dt>
-                <dd class="mt-1 astro-7Z3YXXIO">
-                  <a href="/docs/3.x/forms/adding-a-form-to-a-livewire-component" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-7Z3YXXIO">
-                    Adding a form to a Livewire component <span aria-hidden="true" class="astro-7Z3YXXIO">&rarr;</span>
+                <dd class="mt-1 astro-WSM47DKC">
+                  <a href="/docs/3.x/forms/adding-a-form-to-a-livewire-component" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
+                    Adding a form to a Livewire component <span aria-hidden="true" class="astro-WSM47DKC">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-7Z3YXXIO">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-7Z3YXXIO">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-7Z3YXXIO">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-WSM47DKC">
+        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-7Z3YXXIO" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-basics-of-reactivity&#34;,&#34;text&#34;:&#34;The basics of reactivity&#34;,&#34;title&#34;:&#34;The basics of reactivity&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;reactive-fields-on-blur&#34;,&#34;text&#34;:&#34;Reactive fields on blur&#34;,&#34;title&#34;:&#34;Reactive fields on blur&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;debouncing-reactive-fields&#34;,&#34;text&#34;:&#34;Debouncing reactive fields&#34;,&#34;title&#34;:&#34;Debouncing reactive fields&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;form-component-utility-injection&#34;,&#34;text&#34;:&#34;Form component utility injection&#34;,&#34;title&#34;:&#34;Form component utility injection&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-state-of-a-field&#34;,&#34;text&#34;:&#34;Injecting the current state of a field&#34;,&#34;title&#34;:&#34;Injecting the current state of a field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-component-instance&#34;,&#34;text&#34;:&#34;Injecting the current form component instance&#34;,&#34;title&#34;:&#34;Injecting the current form component instance&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-livewire-component-instance&#34;,&#34;text&#34;:&#34;Injecting the current Livewire component instance&#34;,&#34;title&#34;:&#34;Injecting the current Livewire component instance&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-record&#34;,&#34;text&#34;:&#34;Injecting the current form record&#34;,&#34;title&#34;:&#34;Injecting the current form record&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-state-of-another-field&#34;,&#34;text&#34;:&#34;Injecting the state of another field&#34;,&#34;title&#34;:&#34;Injecting the state of another field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-a-function-to-set-the-state-of-another-field&#34;,&#34;text&#34;:&#34;Injecting a function to set the state of another field&#34;,&#34;title&#34;:&#34;Injecting a function to set the state of another field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-operation&#34;,&#34;text&#34;:&#34;Injecting the current form operation&#34;,&#34;title&#34;:&#34;Injecting the current form operation&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-multiple-utilities&#34;,&#34;text&#34;:&#34;Injecting multiple utilities&#34;,&#34;title&#34;:&#34;Injecting multiple utilities&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-dependencies-from-laravels-container&#34;,&#34;text&#34;:&#34;Injecting dependencies from Laravel's container&#34;,&#34;title&#34;:&#34;Injecting dependencies from Laravel's container&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;field-lifecycle&#34;,&#34;text&#34;:&#34;Field lifecycle&#34;,&#34;title&#34;:&#34;Field lifecycle&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-hydration&#34;,&#34;text&#34;:&#34;Field hydration&#34;,&#34;title&#34;:&#34;Field hydration&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-updates&#34;,&#34;text&#34;:&#34;Field updates&#34;,&#34;title&#34;:&#34;Field updates&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-dehydration&#34;,&#34;text&#34;:&#34;Field dehydration&#34;,&#34;title&#34;:&#34;Field dehydration&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;reactive-forms-cookbook&#34;,&#34;text&#34;:&#34;Reactive forms cookbook&#34;,&#34;title&#34;:&#34;Reactive forms cookbook&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;conditionally-hiding-a-field&#34;,&#34;text&#34;:&#34;Conditionally hiding a field&#34;,&#34;title&#34;:&#34;Conditionally hiding a field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;conditionally-making-a-field-required&#34;,&#34;text&#34;:&#34;Conditionally making a field required&#34;,&#34;title&#34;:&#34;Conditionally making a field required&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;generating-a-slug-from-a-title&#34;,&#34;text&#34;:&#34;Generating a slug from a title&#34;,&#34;title&#34;:&#34;Generating a slug from a title&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dependant-select-options&#34;,&#34;text&#34;:&#34;Dependant select options&#34;,&#34;title&#34;:&#34;Dependant select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dynamic-fields-based-on-a-select-option&#34;,&#34;text&#34;:&#34;Dynamic fields based on a select option&#34;,&#34;title&#34;:&#34;Dynamic fields based on a select option&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;auto-hashing-password-field&#34;,&#34;text&#34;:&#34;Auto-hashing password field&#34;,&#34;title&#34;:&#34;Auto-hashing password field&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;saving-data-to-relationships&#34;,&#34;text&#34;:&#34;Saving data to relationships&#34;,&#34;title&#34;:&#34;Saving data to relationships&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;inserting-livewire-components-into-a-form&#34;,&#34;text&#34;:&#34;Inserting Livewire components into a form&#34;,&#34;title&#34;:&#34;Inserting Livewire components into a form&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;passing-parameters-to-a-livewire-component&#34;,&#34;text&#34;:&#34;Passing parameters to a Livewire component&#34;,&#34;title&#34;:&#34;Passing parameters to a Livewire component&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-a-livewire-component&#34;,&#34;text&#34;:&#34;Lazy loading a Livewire component&#34;,&#34;title&#34;:&#34;Lazy loading a Livewire component&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;the-basics-of-reactivity&#34;,&#34;text&#34;:&#34;The basics of reactivity&#34;,&#34;title&#34;:&#34;The basics of reactivity&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;reactive-fields-on-blur&#34;,&#34;text&#34;:&#34;Reactive fields on blur&#34;,&#34;title&#34;:&#34;Reactive fields on blur&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;debouncing-reactive-fields&#34;,&#34;text&#34;:&#34;Debouncing reactive fields&#34;,&#34;title&#34;:&#34;Debouncing reactive fields&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;form-component-utility-injection&#34;,&#34;text&#34;:&#34;Form component utility injection&#34;,&#34;title&#34;:&#34;Form component utility injection&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-state-of-a-field&#34;,&#34;text&#34;:&#34;Injecting the current state of a field&#34;,&#34;title&#34;:&#34;Injecting the current state of a field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-component-instance&#34;,&#34;text&#34;:&#34;Injecting the current form component instance&#34;,&#34;title&#34;:&#34;Injecting the current form component instance&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-livewire-component-instance&#34;,&#34;text&#34;:&#34;Injecting the current Livewire component instance&#34;,&#34;title&#34;:&#34;Injecting the current Livewire component instance&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-record&#34;,&#34;text&#34;:&#34;Injecting the current form record&#34;,&#34;title&#34;:&#34;Injecting the current form record&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-state-of-another-field&#34;,&#34;text&#34;:&#34;Injecting the state of another field&#34;,&#34;title&#34;:&#34;Injecting the state of another field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-a-function-to-set-the-state-of-another-field&#34;,&#34;text&#34;:&#34;Injecting a function to set the state of another field&#34;,&#34;title&#34;:&#34;Injecting a function to set the state of another field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-the-current-form-operation&#34;,&#34;text&#34;:&#34;Injecting the current form operation&#34;,&#34;title&#34;:&#34;Injecting the current form operation&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-multiple-utilities&#34;,&#34;text&#34;:&#34;Injecting multiple utilities&#34;,&#34;title&#34;:&#34;Injecting multiple utilities&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;injecting-dependencies-from-laravels-container&#34;,&#34;text&#34;:&#34;Injecting dependencies from Laravel's container&#34;,&#34;title&#34;:&#34;Injecting dependencies from Laravel's container&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;field-lifecycle&#34;,&#34;text&#34;:&#34;Field lifecycle&#34;,&#34;title&#34;:&#34;Field lifecycle&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-hydration&#34;,&#34;text&#34;:&#34;Field hydration&#34;,&#34;title&#34;:&#34;Field hydration&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-updates&#34;,&#34;text&#34;:&#34;Field updates&#34;,&#34;title&#34;:&#34;Field updates&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;field-dehydration&#34;,&#34;text&#34;:&#34;Field dehydration&#34;,&#34;title&#34;:&#34;Field dehydration&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;reactive-forms-cookbook&#34;,&#34;text&#34;:&#34;Reactive forms cookbook&#34;,&#34;title&#34;:&#34;Reactive forms cookbook&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;conditionally-hiding-a-field&#34;,&#34;text&#34;:&#34;Conditionally hiding a field&#34;,&#34;title&#34;:&#34;Conditionally hiding a field&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;conditionally-making-a-field-required&#34;,&#34;text&#34;:&#34;Conditionally making a field required&#34;,&#34;title&#34;:&#34;Conditionally making a field required&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;generating-a-slug-from-a-title&#34;,&#34;text&#34;:&#34;Generating a slug from a title&#34;,&#34;title&#34;:&#34;Generating a slug from a title&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dependant-select-options&#34;,&#34;text&#34;:&#34;Dependant select options&#34;,&#34;title&#34;:&#34;Dependant select options&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dynamic-fields-based-on-a-select-option&#34;,&#34;text&#34;:&#34;Dynamic fields based on a select option&#34;,&#34;title&#34;:&#34;Dynamic fields based on a select option&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;auto-hashing-password-field&#34;,&#34;text&#34;:&#34;Auto-hashing password field&#34;,&#34;title&#34;:&#34;Auto-hashing password field&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;saving-data-to-relationships&#34;,&#34;text&#34;:&#34;Saving data to relationships&#34;,&#34;title&#34;:&#34;Saving data to relationships&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;saving-data-to-a-belongsto-relationship&#34;,&#34;text&#34;:&#34;Saving data to a BelongsTo relationship&#34;,&#34;title&#34;:&#34;Saving data to a BelongsTo relationship&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;conditionally-saving-data-to-a-relationship&#34;,&#34;text&#34;:&#34;Conditionally saving data to a relationship&#34;,&#34;title&#34;:&#34;Conditionally saving data to a relationship&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;inserting-livewire-components-into-a-form&#34;,&#34;text&#34;:&#34;Inserting Livewire components into a form&#34;,&#34;title&#34;:&#34;Inserting Livewire components into a form&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;passing-parameters-to-a-livewire-component&#34;,&#34;text&#34;:&#34;Passing parameters to a Livewire component&#34;,&#34;title&#34;:&#34;Passing parameters to a Livewire component&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;lazy-loading-a-livewire-component&#34;,&#34;text&#34;:&#34;Lazy loading a Livewire component&#34;,&#34;title&#34;:&#34;Lazy loading a Livewire component&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
                       
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#the-basics-of-reactivity" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'the-basics-of-reactivity' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#the-basics-of-reactivity" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'the-basics-of-reactivity' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           The basics of reactivity
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-7Z3YXXIO">
-                          <li class="astro-7Z3YXXIO">
-                              <a href="#reactive-fields-on-blur" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'reactive-fields-on-blur' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#reactive-fields-on-blur" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'reactive-fields-on-blur' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Reactive fields on blur
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#debouncing-reactive-fields" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'debouncing-reactive-fields' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#debouncing-reactive-fields" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'debouncing-reactive-fields' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Debouncing reactive fields
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#form-component-utility-injection" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'form-component-utility-injection' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#form-component-utility-injection" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'form-component-utility-injection' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Form component utility injection
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-7Z3YXXIO">
-                          <li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-current-state-of-a-field" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-current-state-of-a-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#injecting-the-current-state-of-a-field" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-current-state-of-a-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the current state of a field
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-current-form-component-instance" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-current-form-component-instance' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-the-current-form-component-instance" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-current-form-component-instance' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the current form component instance
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-current-livewire-component-instance" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-current-livewire-component-instance' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-the-current-livewire-component-instance" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-current-livewire-component-instance' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the current Livewire component instance
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-current-form-record" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-current-form-record' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-the-current-form-record" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-current-form-record' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the current form record
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-state-of-another-field" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-state-of-another-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-the-state-of-another-field" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-state-of-another-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the state of another field
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-a-function-to-set-the-state-of-another-field" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-a-function-to-set-the-state-of-another-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-a-function-to-set-the-state-of-another-field" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-a-function-to-set-the-state-of-another-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting a function to set the state of another field
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-the-current-form-operation" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-the-current-form-operation' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-the-current-form-operation" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-the-current-form-operation' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting the current form operation
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-multiple-utilities" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-multiple-utilities' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-multiple-utilities" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-multiple-utilities' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting multiple utilities
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#injecting-dependencies-from-laravels-container" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'injecting-dependencies-from-laravels-container' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#injecting-dependencies-from-laravels-container" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'injecting-dependencies-from-laravels-container' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Injecting dependencies from Laravel&#39;s container
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#field-lifecycle" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'field-lifecycle' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#field-lifecycle" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'field-lifecycle' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Field lifecycle
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-7Z3YXXIO">
-                          <li class="astro-7Z3YXXIO">
-                              <a href="#field-hydration" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'field-hydration' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#field-hydration" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'field-hydration' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Field hydration
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#field-updates" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'field-updates' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#field-updates" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'field-updates' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Field updates
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#field-dehydration" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'field-dehydration' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#field-dehydration" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'field-dehydration' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Field dehydration
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#reactive-forms-cookbook" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'reactive-forms-cookbook' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#reactive-forms-cookbook" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'reactive-forms-cookbook' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Reactive forms cookbook
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-7Z3YXXIO">
-                          <li class="astro-7Z3YXXIO">
-                              <a href="#conditionally-hiding-a-field" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'conditionally-hiding-a-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#conditionally-hiding-a-field" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'conditionally-hiding-a-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Conditionally hiding a field
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#conditionally-making-a-field-required" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'conditionally-making-a-field-required' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#conditionally-making-a-field-required" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'conditionally-making-a-field-required' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Conditionally making a field required
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#generating-a-slug-from-a-title" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'generating-a-slug-from-a-title' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#generating-a-slug-from-a-title" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'generating-a-slug-from-a-title' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Generating a slug from a title
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#dependant-select-options" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'dependant-select-options' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#dependant-select-options" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'dependant-select-options' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Dependant select options
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#dynamic-fields-based-on-a-select-option" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'dynamic-fields-based-on-a-select-option' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#dynamic-fields-based-on-a-select-option" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'dynamic-fields-based-on-a-select-option' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Dynamic fields based on a select option
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#auto-hashing-password-field" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'auto-hashing-password-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#auto-hashing-password-field" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'auto-hashing-password-field' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Auto-hashing password field
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#saving-data-to-relationships" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'saving-data-to-relationships' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#saving-data-to-relationships" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'saving-data-to-relationships' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Saving data to relationships
                         </a>
                       </h3>
-                      
-                    </li><li class="astro-7Z3YXXIO">
-                      <h3 class="astro-7Z3YXXIO">
-                        <a href="#inserting-livewire-components-into-a-form" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'inserting-livewire-components-into-a-form' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#saving-data-to-a-belongsto-relationship" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'saving-data-to-a-belongsto-relationship' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Saving data to a BelongsTo relationship
+                              </a>
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#conditionally-saving-data-to-a-relationship" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'conditionally-saving-data-to-a-relationship' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Conditionally saving data to a relationship
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#inserting-livewire-components-into-a-form" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'inserting-livewire-components-into-a-form' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Inserting Livewire components into a form
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-7Z3YXXIO">
-                          <li class="astro-7Z3YXXIO">
-                              <a href="#passing-parameters-to-a-livewire-component" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'passing-parameters-to-a-livewire-component' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#passing-parameters-to-a-livewire-component" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'passing-parameters-to-a-livewire-component' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Passing parameters to a Livewire component
                               </a>
-                            </li><li class="astro-7Z3YXXIO">
-                              <a href="#lazy-loading-a-livewire-component" class="inline-block transition duration-300 ease-out astro-7Z3YXXIO" x-bind:class="current == 'lazy-loading-a-livewire-component' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#lazy-loading-a-livewire-component" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'lazy-loading-a-livewire-component' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Lazy loading a Livewire component
                               </a>
                             </li>
