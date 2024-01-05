@@ -65,7 +65,7 @@ This one's a bit of a stretch goal for us, but a lot of the changes and ideas th
 
 #### Theming API Updates
 
-Currently, most everything that Filament's users are wanting to do in their themes can be done using the new APIs added to Filament components in v3. However, the implementation isn't as technically sound as we'd like. This is mostly down to the fact that, when our default styles are overridden to create themes, the original Tailwind classes are still sticking around in the class string. This has two big issues that we want to address:
+Currently, almost everything that Filament's users are wanting to do in their themes can be done using the new APIs added to Filament components in v3. However, the implementation isn't as technically sound as we'd like. This is mostly down to the fact that, when our default styles are overridden to create themes, the original Tailwind classes are still sticking around in the class string. This has two big issues that we want to address:
 
 1. Specificity – there are ways around this, but it's clunky to write long CSS selector strings or sprinkle `!important` throughout your codebase
 2. Payload size – with Livewire sending HTML over the wire, the more Tailwind classes you have in the DOM, the larger the payload that Livewire has to send, receive, and parse
