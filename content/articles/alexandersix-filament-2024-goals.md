@@ -110,4 +110,6 @@ It's finally happening! In early 2024 (probably after the v3.2 release), Filamen
 
 Last, but certainly not least, thank you! Filament wouldn't be what it is today without the Filament community. We are so humbled and honored that you are on this journey with us, and we are **so** excited to see what 2024 brings for each one of you.
 
+Also, I want to give a huge thank-you to [Ralph](https://github.com/ralphjsmit) for writing up an incredibly detailed summary of the 2024 Kickoff event that helped a lot with writing this article!
+
 As always, we'd love to hear your feedback on our goals for this year! What are you most excited for? Is there anything you'd add? Anything you'd remove? We're always around in the Discord server and on Twitter, so let us know what you think!
