@@ -9,7 +9,7 @@ type_slug: news
 
 ![Filament: What to Expect in 2024 Banner Image](/images/content/articles/alexandersix-filament-what-to-expect-in-2024/filament-what-to-expect-in-2024.webp)
 
-2023 was an incredible year for Filament, and the momentum just keeps on going into 2024! The Filament core team has taken a lot of time over the past couple of months to develop our goals for 2024, and we're excited to share them with you here! This list was originally shared during the Filament 2024 Kickoff event, so if you want to be the first to year about our yearly goals, make sure to tune in to our Filament 2025 Kickoff event next year!
+2023 was an incredible year for Filament, and the momentum just keeps on going into 2024! The Filament core team has taken a lot of time over the past couple of months to develop our goals for 2024, and we're excited to share them with you here! This list was originally shared during the Filament 2024 Kickoff event, so if you want to be the first to hear about our yearly goals, make sure to tune in to our Filament 2025 Kickoff event next year!
 
 ## Recap of 2023
 
