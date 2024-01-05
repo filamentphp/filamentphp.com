@@ -113,7 +113,7 @@ trait CanPaginateViewRecord
     protected function configurePreviousAction(Action $action): void
     {
         if ($this->getPreviousRecord()) {
-            $action->url(fn (): string => static::getResource()::getUrl('view', ['record' => $this->getPreviousRecord()]));
+            $action->url(fn (): string => static::getResource()::getUrl(static::getResourcePageName(), ['record' => $this->getPreviousRecord()]));
         } else {
             $action
                 ->disabled()
@@ -124,7 +124,7 @@ trait CanPaginateViewRecord
     protected function configureNextAction(Action $action): void
     {
         if ($this->getNextRecord()) {
-            $action->url(fn (): string => static::getResource()::getUrl('view', ['record' => $this->getNextRecord()]));
+            $action->url(fn (): string => static::getResource()::getUrl(static::getResourcePageName(), ['record' => $this->getNextRecord()]));
         } else {
             $action
                 ->disabled()
