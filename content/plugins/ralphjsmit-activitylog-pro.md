@@ -49,6 +49,10 @@ Another option would be to place the timeline directly on the page. This makes t
 
 ![Timeline Without Section](https://ralphjsmit.com/storage/media/276/responsive-images/Timeline-Without-Section___responsive_2255_1627.jpg)
 
+All icons & colors in the timeline are fully customizable. You can also add actions to the timeline, including actions that can open modals. The actions will be displayed beneath each item in the timeline:
+
+![Timeline Action](https://ralphjsmit.com/storage/media/278/responsive-images/Timeline-Actions___responsive_1354_1586.jpg)
+
 If you hover over a timestamp, you can see the exact date & time of the activity:
 
 ![Timeline Time](https://ralphjsmit.com/storage/media/275/responsive-images/Timeline-Time___responsive_1466_570.jpg)
