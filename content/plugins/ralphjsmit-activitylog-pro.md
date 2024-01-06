@@ -4,8 +4,8 @@ slug: ralphjsmit-activitylog-pro
 author_slug: ralphjsmit
 categories: [analytics, developer-tool, kit, panel-builder, action, form-builder, form-field, infolist-entry, spatie]
 checkout_url: https://ralphjsmit.com/filament-plugins/filament-activitylog-pro/configure?referer=filament
-price: €49.00
-description: Give your users beautiful Filament-integrated timelines – inside panels or stand-alone. Integrates with Spatie Activitylog.  
+price: €59.00
+description: Easily add beautiful timelines to your Filament apps – inside panels or stand-alone. Integrates with Spatie Activitylog.  
 discord_url: https://discord.com/channels/....
 github_repository: ralphjsmit/laravel-filament-activitylog
 has_dark_theme: true
