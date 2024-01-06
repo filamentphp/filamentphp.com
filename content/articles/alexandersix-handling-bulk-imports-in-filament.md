@@ -25,7 +25,7 @@ same form, that's what. But there's a better way! Enter CSV uploads.
 
 Using a CSV to upload bulk data is a method used by all sorts of applications to give their
 users an easy way to upload lots of data. They're easy to generate from a spreadsheet program
-like Excel and adding data to them is simple, so users love them! The problem is that, even though
+like Excel and adding data to them is simple, so users love them! The problem is that even though
 CSVs are easy to deal with in code, *writing* the code to import specific CSV files into specific database
 tables can be repetitive and time-consuming. Thankfully, Filament now makes that process quick and
 easy with the new “Import Action”.
@@ -41,7 +41,7 @@ easy with the new “Import Action”.
 ### Getting the context
 
 Let's get started by providing a bit of background for the application that we'll be working
-on throughout the course of this article.
+on throughout this article.
 
 We are working on an application that allows users to log into the panel and document all
 the books that they have in their collection. Some users only have a handful of books, but others
@@ -59,7 +59,7 @@ Let's assume that the application has the following `Book` model and that we alr
 
 ### Setting up CSV importer prerequisites
 
-Before we are able to start writing code to implement our importer, we need to set up a few
+Before we can start writing code to implement our importer, we need to set up a few
 prerequisites. Under the hood, Filament's CSV import system uses two underlying Laravel systems:
 job batches and database notifications. In addition, it also uses a new table provided by Filament
 to manage and store information about the imports themselves. We can set these up with four simple
@@ -87,8 +87,8 @@ specific section, each commit message will include the name of the section it co
 
 After the prerequisite steps are taken care of, the first step in setting up CSV imports in Filament
 is to add the `ImportAction` somewhere in your interface. Typically, this button is placed in a page's
-header section or to the header of a table. For our example, we'll add our `ImportAction` to the 
-header of our `ListBooks` page so our users have the option to upload their CSV when in context of
+header section or in the header of a table. For our example, we'll add our `ImportAction` to the 
+header of our `ListBooks` page so our users have the option to upload their CSV when in the context of
 the “Books” section of our panel.
 
 With our `ImportAction` added, our `ListBooks.php` file should look like this:
@@ -121,13 +121,13 @@ class ListBooks extends ListRecords
 If you're following along, and you drop the above code into your editor of choice, you might notice
 that the `->importer()` method is throwing an "Expected 1 argument. Found 0" error. This is because,
 even though we've set up the `ImportAction` to run when the button is interacted with, we haven't
-told the action *how* to actually import the data yet. That is the job of the `Importer` class.
+told the action *how* to import the data yet. That is the job of the `Importer` class.
 
 ### Adding the Importer
 
 First and foremost, what is an `Importer`?
 
-In Filament, `Importer` classes contain the logic that tell Filament what columns to expect from an
+In Filament, `Importer` classes contain the logic that tells Filament what columns to expect from an
 uploaded CSV file and how to handle them. These classes define their column expectations in a very
 similar way to how `Resource` classes define table columns, so as long as you've worked with Filament
 `Resource` classes before, you'll feel right at home here.
@@ -146,7 +146,7 @@ php artisan make:filament-importer Book --generate
 ```
 
 Once run, these commands will generate and place your `Importer` class in the `app/Filament/Imports`
-directory. If we run the `make:filament-importer` command (without the `--generate` flag, for sake
+directory. If we run the `make:filament-importer` command (without the `--generate` flag, for the sake
 of example) in our project, we will now have a file called `app/Filament/Imports/BookImporter.php`.
 
 Let's quickly step through the important sections of this file:
@@ -395,7 +395,7 @@ for the `user_id`, `title`, and `author`.
 
 Let's start by just adding the `ImportColumn` objects to the `getColumns()` method. For the rest
 of this section, I'll remove the methods and namespace declarations that aren't relevant, but they
-*are* still present on the actual class.
+*are* still present in the actual class.
 
 ```php
 <?php
@@ -429,7 +429,7 @@ recommend having a single row with data that looks something like this:
 
 When you have that CSV file created, navigate to the `Book` table view within Filament and click on
 the `Import Book` action that we created earlier. You will be greeted by a Filepond file uploader.
-Once the CSV file has processed in the Filepond file uploader, you will see a fieldset of “Columns”
+Once the CSV file has been processed in the Filepond file uploader, you will see a fieldset of “Columns”
 appear in the modal. These select fields are the “mappers” for the import process. Each field's label
 corresponds to one of the `ImportColumn` objects we created earlier. The select field that is alongside
 each label corresponds to which of the uploaded CSV's columns will have its data mapped into the model
@@ -459,7 +459,7 @@ import features you should know about before releasing this feature into the wil
 ### Required Mappings
 
 Currently, with the way we have set up our `ImportColumn` array, none of our columns are *required*
-to be mapped to a column in the CSV. This means that we could leave any and all mappings blank,
+to be mapped to a column in the CSV. This means that we could leave any mappings blank,
 resulting in errors getting thrown when Laravel attempts to save a `Book` model without its three
 required parameters: `user_id`, `title`, and `author`.
 
@@ -588,8 +588,8 @@ need to enter the User's ID into their CSV for every row. In many systems, it's 
 to know their own (and each other's) User IDs. Instead, we should use something more easily known
 and still unique, like an email address!
 
-Right now, if we tried this, we would get an error from Laravel because there is no ID in the `users`
-table that looks like an email address. However, Filament provides a way for us to fix this!
+Right now, if we tried this, we would get an error from Laravel because no ID in the `users`
+table looks like an email address. However, Filament provides a way for us to fix this!
 
 ```php
 <?php
