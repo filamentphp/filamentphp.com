@@ -83,7 +83,7 @@ specific section, each commit message will include the name of the section it co
 
 ## Importing CSVs
 
-### Adding the ImportAction
+### Adding the `ImportAction`
 
 After the prerequisite steps are taken care of, the first step in setting up CSV imports in Filament
 is to add the `ImportAction` somewhere in your interface. Typically, this button is placed in a page's
@@ -123,7 +123,7 @@ that the `->importer()` method is throwing an "Expected 1 argument. Found 0" err
 even though we've set up the `ImportAction` to run when the button is interacted with, we haven't
 told the action *how* to import the data yet. That is the job of the `Importer` class.
 
-### Adding the Importer
+### Adding the `Importer`
 
 First and foremost, what is an `Importer`?
 
@@ -384,7 +384,7 @@ class ListBooks extends ListRecords
 }
 ```
 
-### Defining Importer Columns
+### Defining `Importer` Columns
 
 So far, we have added an Action button to trigger our import, and we've defined a `BookImporter` to
 be used by the `ImportAction`, but we haven't yet told Filament what types of data to expect from
