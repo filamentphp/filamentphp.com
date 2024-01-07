@@ -21,7 +21,7 @@ type_slug: news
 
 ### New Team Members
 
-The core team gained three new members in 2023: [Hassan](https://zahirnia.com/) to lead the UI/UX design for Filament, [Saade](https://github.com/saade) to revamp the plugin submission process, and [Alex](https://alexandersix.com) to head up Filament's developer relations. With the new additions, Filament's core team is now made up of eight members!
+The core team gained three new members in 2023: [Hassan](https://zahirnia.com) to lead the UI/UX design for Filament, [Saade](https://github.com/saade) to revamp the plugin submission process, and [Alex](https://alexandersix.com) to head up Filament's developer relations. With the new additions, Filament's core team is now made up of eight members!
 
 ### Some Stats
 
@@ -47,7 +47,6 @@ We are shooting for Filament v3.2 to be released in early 2024. This version wil
 - **“Wait, Don't Leave!” Functionality** – an alert for the User if they attempt to leave a page before a form is submitted or while a confirmation modal is open
 - **Apply Button for Filters** – defers the processing of filter queries until the button is clicked, instead of running a filter query on each individual filter change
 - **CSV Exports** – companion to the [CSV imports](https://filamentphp.com/docs/3.x/actions/prebuilt-actions/import) introduced in v3.1
-- **Block Groups for Builder Fields** – organization groups for Builder blocks instead of a single dropdown list for easier block discovery
 
 #### Nested Resources
 
@@ -76,7 +75,7 @@ There are a few ideas on the table for how we solve this issue while maintaining
 
 Filament has a *lot* of UI components that can be used in TALL-stack projects, and in 2024, we want to help developers discover, view, and integrate them into their projects!
 
-In the JavaScript world, [Storybook](https://storybook.js.org/) is a fantastic piece of software that helps developers view and use components within their projects. We want to create an experience similar to Storybook for our Filament UI components that allows easy copy/paste usage of the Blade components.
+In the JavaScript world, [Storybook](https://storybook.js.org) is a fantastic piece of software that helps developers view and use components within their projects. We want to create an experience similar to Storybook for our Filament UI components that allows easy copy/paste usage of the Blade components.
 
 #### Integrating Volt
 
