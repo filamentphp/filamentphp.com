@@ -21,7 +21,7 @@ type_slug: news
 
 ### New Team Members
 
-The core team gained three new members in 2023: [Hassan](https://zahirnia.com) to lead the UI/UX design for Filament, [Saade](https://github.com/saade) to revamp the plugin submission process, and [Alex](https://alexandersix.com) to head up Filament's developer relations. With the new additions, Filament's core team is now made up of eight members!
+The core team gained three new members in 2023: [Hassan](https://zahirnia.com) to lead as the UI/UX Marketing Designer for Filament, [Saade](https://github.com/saade) to revamp the plugin submission process, and [Alex](https://alexandersix.com) to head up Filament's developer relations. With the new additions, Filament's core team is now made up of eight members!
 
 ### Some Stats
 
