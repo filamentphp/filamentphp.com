@@ -1,9 +1,10 @@
 ---
 name: Translate Field
-slug: solution-forest/filament-translate-field
+slug: solution-forest-translate-field
 author_slug: solution-forest
 categories: [form-layout, form-field]
 description: Filament Translate Field is a library for Filament CMS that simplifies managing multiple translatable fields in different languages.
+discord_url:
 docs_url: https://raw.githubusercontent.com/solutionforest/filament-translate-field/main/README.md
 github_repository: solutionforest/filament-translate-field
 has_dark_theme: false
