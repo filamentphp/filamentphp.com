@@ -1,8 +1,8 @@
 ---
 title: Navigating Filament Pages with Previous and Next Buttons
-slug: navigating-filament-pages-with-previous-and-next-buttons
+slug: leandrocfe-navigating-filament-pages-with-previous-and-next-buttons
 author_slug: leandrocfe
-publish_date: 2024-05-01
+publish_date: 2024-01-05
 categories: [livewire, panel-builder]
 type_slug: article
 ---
