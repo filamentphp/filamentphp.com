@@ -1,6 +1,6 @@
 ---
 title: Why My Filament slow?
-slug: solutionforest-why-filament-slow
+slug: solution-forest-why-filament-slow
 author_slug: solution-forest
 publish_date: 2023-12-25
 categories: [general, panel-builder]
