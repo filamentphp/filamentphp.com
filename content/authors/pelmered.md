@@ -1,6 +1,6 @@
 ---
 name: Peter Elmered
-slug: peter-elmered
+slug: pelmered
 github_url: https://github.com/pelmered
 twitter_url: https://twitter.com/pelmered
 ---
