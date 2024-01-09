@@ -11,5 +11,5 @@ github_repository: lara-zeus/accordion
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-01-10
+publish_date: 2024-01-08
 ---
