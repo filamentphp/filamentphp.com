@@ -1012,12 +1012,16 @@ FilamentView::registerRenderHook(
 <h2 id="available-render-hooks"><a class="heading-anchor" href="#available-render-hooks"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Available render hooks</h2>
 <h3 id="panel-builder-render-hooks"><a class="heading-anchor" href="#panel-builder-render-hooks"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Panel Builder render hooks</h3>
 <ul>
-<li><code>panels::auth.login.form.before</code> - Before login form</li>
 <li><code>panels::auth.login.form.after</code> - After login form</li>
-<li><code>panels::auth.register.form.before</code> - Before register form</li>
+<li><code>panels::auth.login.form.before</code> - Before login form</li>
+<li><code>panels::auth.password-reset.request.form.after</code> - After password reset request form</li>
+<li><code>panels::auth.password-reset.request.form.before</code> - Before password reset request form</li>
+<li><code>panels::auth.password-reset.reset.form.after</code> - After password reset form</li>
+<li><code>panels::auth.password-reset.reset.form.before</code> - Before password reset form</li>
 <li><code>panels::auth.register.form.after</code> - After register form</li>
-<li><code>panels::body.start</code> - After <code>&lt;body&gt;</code></li>
+<li><code>panels::auth.register.form.before</code> - Before register form</li>
 <li><code>panels::body.end</code> - Before <code>&lt;/body&gt;</code></li>
+<li><code>panels::body.start</code> - After <code>&lt;body&gt;</code></li>
 <li><code>panels::content.end</code> - After page content, inside <code>&lt;main&gt;</code></li>
 <li><code>panels::content.start</code> - Before page content, inside <code>&lt;main&gt;</code></li>
 <li><code>panels::footer</code> - Footer of the page</li>
