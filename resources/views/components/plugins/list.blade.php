@@ -70,7 +70,14 @@
 
         plugins: @js($plugins),
 
-        currentPage: $queryString(1).usePush().as('page'),
+        _currentPage: $queryString(1).usePush().as('page'),
+        get currentPage() {
+            return +this._currentPage
+        },
+        set currentPage(value) {
+            this._currentPage = value
+        },
+
         perPage: 24,
         totalItems: 0,
         get totalPages() {

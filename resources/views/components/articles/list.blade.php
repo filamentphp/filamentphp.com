@@ -61,7 +61,14 @@
         categories: @js($categories),
         types: @js($types),
 
-        currentPage: $queryString(1).usePush().as('page'),
+        _currentPage: $queryString(1).usePush().as('page'),
+        get currentPage() {
+            return +this._currentPage
+        },
+        set currentPage(value) {
+            this._currentPage = value
+        },
+
         perPage: 24,
         totalItems: 0,
         get totalPages() {
