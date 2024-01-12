@@ -14,7 +14,6 @@ import '../../docs/src/styles/docsearch.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import history from './history'
 
 // Swiper
 Swiper.use([Navigation, Pagination])
@@ -44,8 +43,6 @@ window.MiniSearch = MiniSearch
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Tooltip)
-
-Alpine.plugin(history)
 
 // Docsearch
 docsearch({
