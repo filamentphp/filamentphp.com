@@ -4,8 +4,9 @@
     x-ref="section"
     x-init="
         () => {
-            // Reset the page number on search input change
-            $watch('search', (newValue, oldValue) => {
+            // Reset the page number when we do things that change the amount of results
+            // This handles search as well as applying other filters like categories
+            $watch('totalItems', (newValue, oldValue) => {
                 if (newValue !== oldValue) {
                     currentPage = 1
                 }
