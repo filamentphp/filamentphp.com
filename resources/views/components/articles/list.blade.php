@@ -11,6 +11,11 @@
                 }
             })
 
+            // Reset the page number on category, type or version change
+            $watch('[selectedCategories.size, selectedType, selectedVersion]', () => {
+                currentPage = 1
+            })
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['title', 'author.name'],

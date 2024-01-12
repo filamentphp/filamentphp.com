@@ -11,6 +11,14 @@
                 }
             })
 
+            // Reset the page number on category, version, price or sort change
+            $watch(
+                '[selectedCategories.size, selectedVersion, selectedPrice, selectedSort, features]',
+                () => {
+                    currentPage = 1
+                },
+            )
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['name', 'description', 'github_repository', 'author.name'],
