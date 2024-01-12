@@ -55,16 +55,18 @@
     "
     x-data="{
         searchEngine: null,
-        search: '',
+        search: $queryString('').usePush().as('search'),
         showCategories: false,
         selectedCategories: new Set(),
-        selectedVersion: '3',
-        selectedPrice: 'All',
-        selectedSort: 'Newest',
-        features: {
+        selectedVersion: $queryString('3').usePush().as('version'),
+        selectedPrice: $queryString('All').usePush().as('price'),
+        selectedSort: $queryString('Newest').usePush().as('sort'),
+        features: $queryString({
             dark_theme: false,
             translations: false,
-        },
+        })
+            .usePush()
+            .as('features'),
 
         plugins: @js($plugins),
 
