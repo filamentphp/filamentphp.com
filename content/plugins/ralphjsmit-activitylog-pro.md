@@ -87,6 +87,8 @@ If there are no activities logged yet, the timeline will display an empty state.
 
 The package also provides a nice Timeline action that you can use in your tables & pages. For example, the page action can be placed in the `getHeaderActions()` method, on the top-level or in an `ActionGroup`:
 
+![Timeline timeline](https://ralphjsmit.com/storage/media/282/Timeline-Actions.gif)
+
 ![Timeline Page Action](https://ralphjsmit.com/storage/media/271/responsive-images/Timeline-Page-Action-Ligh___responsive_2262_1627.jpg)
 
 ![Timeline Page Action Dark](https://ralphjsmit.com/storage/media/269/responsive-images/Timeline-Page-Action-Dark___responsive_2262_1627.jpg)
