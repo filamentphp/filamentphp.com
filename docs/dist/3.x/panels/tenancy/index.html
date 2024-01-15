@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
             <h2>Multi-tenancy</h2>
           </a>
@@ -1162,7 +1178,7 @@ public function panel(Panel $panel): Panel
 </textarea></code></pre>
 <p>Now, users will be redirected to the billing page if they don&#39;t have an active subscription.</p>
 <h4 id="requiring-a-subscription-for-specific-resources-and-pages"><a class="heading-anchor" href="#requiring-a-subscription-for-specific-resources-and-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Requiring a subscription for specific resources and pages</h4>
-<p>Sometimes, you may wish to only require a subscription for certain <a href="resources/getting-started">resources</a> and <a href="pages">pages</a> in your app. You can do this by returning <code>true</code> from the <code>isTenantSubscriptionRequired()</code> method on the resource or page class:</p>
+<p>Sometimes, you may wish to only require a subscription for certain <a href="resources/getting-started">resources</a> and <a href="pages">custom pages</a> in your app. You can do this by returning <code>true</code> from the <code>isTenantSubscriptionRequired()</code> method on the resource or page class:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">isTenantSubscriptionRequired</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">bool</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function isTenantSubscriptionRequired(Panel $panel): bool
 {
     return true;
@@ -1205,7 +1221,7 @@ public function panel(Panel $panel): Panel
 }
 </textarea></code></pre>
 <h2 id="customizing-the-tenant-menu"><a class="heading-anchor" href="#customizing-the-tenant-menu"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the tenant menu</h2>
-<p>The tenant-switching menu is featured in the sidebar of the admin layout. It&#39;s fully customizable.</p>
+<p>The tenant-switching menu is featured in the admin layout. It&#39;s fully customizable.</p>
 <p>To register new items to the tenant menu, you can use the <a href="configuration">configuration</a>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Settings</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Navigation</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">MenuItem</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">tenantMenuItems</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">MenuItem</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">label</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Settings</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">url</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Settings</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">getUrl</span><span style="color: #89DDFF;">())</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">icon</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">heroicon-m-cog-8-tooth</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Pages\Settings;
 use Filament\Navigation\MenuItem;
@@ -1379,7 +1395,7 @@ class Team extends Model implements HasName
 </textarea></code></pre>
 <p>The <code>getFilamentName()</code> method is used to retrieve the name of the current user.</p>
 <h2 id="setting-the-current-tenant-label"><a class="heading-anchor" href="#setting-the-current-tenant-label"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Setting the current tenant label</h2>
-<p>Inside the tenant switcher on the sidebar, you may wish to add a small label like &quot;Active team&quot; above the name of the current team. You can do this by implementing the <code>HasCurrentTenantLabel</code> method on the tenant model:</p>
+<p>Inside the tenant switcher, you may wish to add a small label like &quot;Active team&quot; above the name of the current team. You can do this by implementing the <code>HasCurrentTenantLabel</code> method on the tenant model:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Models</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Models</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Contracts</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">HasCurrentTenantLabel</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Illuminate</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Database</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Eloquent</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Model</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Team</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Model</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">implements</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">HasCurrentTenantLabel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getCurrentTenantLabel</span><span style="color: #89DDFF;">():</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Active team</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
 
 namespace App\Models;
@@ -1544,7 +1560,7 @@ public function panel(Panel $panel): Panel
             ApplyTenantScopes::class,
         ], isPersistent: true);
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/10-tenancy.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/11-tenancy.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>
@@ -1555,8 +1571,8 @@ public function panel(Panel $panel): Panel
                   Previous
                 </dt>
                 <dd class="mt-1 astro-WSM47DKC">
-                  <a href="/docs/3.x/panels/configuration" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
-                    <span aria-hidden="true" class="astro-WSM47DKC">&larr;</span> Configuration
+                  <a href="/docs/3.x/panels/clusters" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-WSM47DKC">
+                    <span aria-hidden="true" class="astro-WSM47DKC">&larr;</span> Clusters
                   </a>
                 </dd>
               </div>
