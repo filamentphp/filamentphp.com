@@ -1,6 +1,6 @@
 ---
-name: Filament Country Field
-slug: parfaitementweb-filament-country-field
+name: Country Field
+slug: parfaitementweb-country-field
 author_slug: parfaitementweb
 categories: [form-builder, form-field, table-column]
 description: Country dropdown with ISO 3166 options values
