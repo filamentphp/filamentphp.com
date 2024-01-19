@@ -4,7 +4,7 @@ slug: lara-zeus-inline-chart
 author_slug: lara-zeus
 categories: [table-builder, table-layout]
 description: Easily add any chart in table column
-discord_url:
+discord_url: https://discord.com/channels/883083792112300104/1197986417855430820
 docs_url: https://raw.githubusercontent.com/lara-zeus/inline-chart/1.x/docs/filament.md
 url: https://larazeus.com/inline-chart
 github_repository: lara-zeus/inline-chart
