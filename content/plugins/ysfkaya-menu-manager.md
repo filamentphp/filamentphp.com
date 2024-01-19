@@ -6,7 +6,7 @@ author_slug: ysfkaya
 categories: [panel-builder, form-builder]
 description: Empower your users to effortlessly manage their navigation menus right from the front-end interface, enhancing user interaction and simplifying site navigation.
 price: €59.00
-discord_url: #
+discord_url: https://discord.com/channels/883083792112300104/1197977998566105259
 github_repository: ysfkaya/filament-menu-manager
 docs_url: https://raw.githubusercontent.com/ysfkaya/filament-menu-manager-docs/main/README.md
 has_dark_theme: true
