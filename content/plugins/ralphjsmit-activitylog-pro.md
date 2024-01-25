@@ -378,6 +378,28 @@ Timeline::make()
     ]),
 ```
 
+If you are mixing timeline items for multiple Eloquent models and you need access to the current underlying Spatie Activitylog model, you can use the `$arguments['activity_id']` parameter:
+
+```php
+Timeline::make()
+    ->itemActions('published', [
+        Forms\Components\Actions\Action::make('edit')
+            ->fillForm(function (array $arguments) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
+            ->form([
+                Forms\Components\TextInput::make('title')
+            ])
+            ->action(function (array $arguments, array $data) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
+    ]),
+```
+
 ##### Define icons, colors & actions globally
 
 If you want to **globally provide icons, colors and actions**, you can make use of the Filament `configureUsing()` method. When working globally with timelines, it is generally very handy to scope the configuration to specific models:
