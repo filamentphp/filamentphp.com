@@ -380,12 +380,13 @@ class TestNotification extends Notification implements AsFilamentNotification
     
     public function __construct(
         public User $user,
-        public string $message,
+        public string $customMessage,
     ) {}
     
     public static function toFilamentNotification(): FilamentNotification
     {
         return FilamentNotification::make()
+            ->message(fn (self $notification) => $notification->customMessage)
             ->form([
                 \Filament\Forms\Components\TextInput::make('message')
                     ->label('Message')
@@ -396,11 +397,11 @@ class TestNotification extends Notification implements AsFilamentNotification
                     ->label('User'),
             ])
             ->constructUsing(function(array $data) {
-                ['message' => $message, 'user_id_or_something' => $userId] = $data;
+                ['custom_message' => $message, 'user_id_or_something' => $userId] = $data;
 
                 return new static(
                     user: User::find($userId), 
-                    message: $message
+                    customMessage: $message
                 );
             });
     }
@@ -409,7 +410,7 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return [
             'user_id_or_something' => $this->user->id,
-            'message' => $this->message,
+            'custom_message' => $this->message,
             // Some internal properties are required to store in the database. They will be provided by this method. 
             ...$this->getInternalToArray(),
         ];
