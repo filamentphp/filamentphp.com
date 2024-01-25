@@ -482,7 +482,7 @@ return FilamentNotification::make()
     ->actions([
         Action::make('View')
             ->url("https://github.com", true)
-            ->icon('heroicon-o-arrows-expand'),
+            ->icon('heroicon-o-arrows-pointing-out'),
     ]);
 ```
 
@@ -548,7 +548,7 @@ class TestWorkflowFailedNotification extends Notification implements AsFilamentN
             ->actions([
                 Action::make('View')
                     ->url("https://github.com", true)
-                    ->icon('heroicon-o-arrows-expand'),
+                    ->icon('heroicon-o-arrows-pointing-out'),
             ]);
     }
 
