@@ -376,6 +376,8 @@ However, if the `StoresNotificationInDatabase` doesn't work for you, you can alw
 ```php
 class TestNotification extends Notification implements AsFilamentNotification
 {
+    use StoresNotificationInDatabase;
+    
     public function __construct(
         public User $user,
         public string $message,
@@ -408,6 +410,8 @@ class TestNotification extends Notification implements AsFilamentNotification
         return [
             'user_id_or_something' => $this->user->id,
             'message' => $this->message,
+            // Some internal properties are required to store in the database. They will be provided by this method. 
+            ...$this->getInternalToArray(),
         ];
     }
     
@@ -415,6 +419,8 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return ['database', 'mail'];
     }
+    
+    // Implement a `toMail()` method to match the methods in `via()`...
 }
 ```
 
