@@ -1,5 +1,5 @@
 ---
-name: Nullify round corners in filamentphp
+name: Nullify round corners
 slug: filamentphp-unroundify
 author_slug: summonshr
 categories: [form-builder, form-field, spatie, table-builder, table-column]
