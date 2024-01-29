@@ -101,7 +101,7 @@ The action also has a special version for use in tables:
 
 ## Installation guide: Filament Activitylog Pro
 
-Thank you for purchasing the Activitylog Pro plugin for Filament Admin!
+Thank you for purchasing the Activitylog Pro plugin for Filament!
 
 We tried to make the plugin as **easy-to-install** and **versatile** as possible. Nevertheless, if you still have a **question or a feature request**, please send an e-mail to **support@ralphjsmit.com**.
 
