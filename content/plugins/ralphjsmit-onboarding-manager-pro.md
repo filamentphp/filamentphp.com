@@ -100,7 +100,7 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 The package is supported on both Laravel 8 and 9. Please be aware though that support for security fixes for Laravel 8 ends within a few months.
 

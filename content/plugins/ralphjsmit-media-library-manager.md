@@ -122,7 +122,7 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament](https://filamentphp.com) package installed and configured.
 
 The package makes use of the [Spatie MediaLibrary](https://github.com/spatie/laravel-medialibrary) package. If you already have this package installed, you can skip this step.
 
