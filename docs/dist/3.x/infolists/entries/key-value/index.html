@@ -939,13 +939,6 @@ KeyValueEntry::make('meta')
 
 KeyValueEntry::make('meta')
     -&gt;valueLabel('Property value')
-</textarea></code></pre>
-<h2 id="customizing-the-empty-message"><a class="heading-anchor" href="#customizing-the-empty-message"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing the empty message</h2>
-<p>You may customize the message that is displayed when the entry is empty using the <code>emptyMessage()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Infolists</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">KeyValueEntry</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">KeyValueEntry</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">meta</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">emptyMessage</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">No properties added yet</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Infolists\Components\KeyValueEntry;
-
-KeyValueEntry::make('meta')
-    -&gt;emptyMessage('No properties added yet')
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/infolists/docs/03-entries/06-key-value.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
@@ -978,7 +971,7 @@ KeyValueEntry::make('meta')
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-key-columns-label&#34;,&#34;text&#34;:&#34;Customizing the key column's label&#34;,&#34;title&#34;:&#34;Customizing the key column's label&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-value-columns-label&#34;,&#34;text&#34;:&#34;Customizing the value column's label&#34;,&#34;title&#34;:&#34;Customizing the value column's label&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-empty-message&#34;,&#34;text&#34;:&#34;Customizing the empty message&#34;,&#34;title&#34;:&#34;Customizing the empty message&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-key-columns-label&#34;,&#34;text&#34;:&#34;Customizing the key column's label&#34;,&#34;title&#34;:&#34;Customizing the key column's label&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-the-value-columns-label&#34;,&#34;text&#34;:&#34;Customizing the value column's label&#34;,&#34;title&#34;:&#34;Customizing the value column's label&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -997,13 +990,6 @@ KeyValueEntry::make('meta')
                       <h3 class="astro-WSM47DKC">
                         <a href="#customizing-the-value-columns-label" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-value-columns-label' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Customizing the value column&#39;s label
-                        </a>
-                      </h3>
-                      
-                    </li><li class="astro-WSM47DKC">
-                      <h3 class="astro-WSM47DKC">
-                        <a href="#customizing-the-empty-message" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'customizing-the-empty-message' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
-                          Customizing the empty message
                         </a>
                       </h3>
                       
