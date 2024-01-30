@@ -55,6 +55,7 @@ This package allows you to give your users a beautiful way to upload images to y
 - Bulk delete folders including all content **(NEW IN V3)**
 - Open specific folders by default. **(NEW IN V3)**
 - Allow users to only select items from specific folders. **(NEW IN V3)**
+- Full UI support for smaller screens/mobile devices **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -758,6 +759,21 @@ To enable the warning box, set the `->unstoredUploadsWarning()` to `true`:
 ```php
 $plugin->unstoredUploadsWarning();
 ```
+
+### Showing media info when selecting multipleitems (NEW IN V3)
+            
+If you open the MediaPicker to select an item from the library, you will see that the right hand side of the modal shows information about the current selected media item. If you open the MediaPicker to select multiple items from the library, then you won't see this information at the right by default. There is room to only show info about a single media item, so it could be confusing to show info about a single item when the selection is bigger.
+
+However, an alternative approach could be to just allow multiple selection, and at the right show the details of the latest selected item. This type of behaviour is for example visible in the WordPress media library.
+
+You can enable the alternative approach by using the `->mediaInfoOnMultipleSelection()` method:
+
+```php
+$plugin
+    ->mediaInfoOnMultipleSelection()
+```
+
+This will now show the details of the latest selected item at the right, even when selecting multiple items.
 
 ### Adding a custom button label to the media picker (NEW IN V2)
 
