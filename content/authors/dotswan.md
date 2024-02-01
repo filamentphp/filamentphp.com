@@ -2,8 +2,6 @@
 name: DotSwan
 slug: dotswan
 github_url: https://github.com/dotswan
-twitter_url:
-mastodon_url: 
 ---
 
 At Dotswan, we excel in transforming visionary ideas into reality,
