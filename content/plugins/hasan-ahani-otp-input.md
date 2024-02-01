@@ -1,10 +1,10 @@
 ---
-name: Filament otp input
+name: OTP input
 slug: hasan-ahani-otp-input
 author_slug: hasan-ahani
 categories: [form-builder, form-field]
 description: OTP input component for filament.
-discord_url: https://discord.com/channels/1201908029776470117/1201908030279778366
+discord_url: https://discord.com/channels/883083792112300104/1202635007659876363
 docs_url: https://raw.githubusercontent.com/hasan-ahani/filament-otp-input/master/README.md
 github_repository: hasan-ahani/filament-otp-input
 has_dark_theme: true
