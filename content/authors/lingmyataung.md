@@ -1,6 +1,6 @@
 ---
 name: Ling Myat Aung
-slug: ling-myat-aung
+slug: lingmyataung
 github_url: https://github.com/lingmyat
 ---
 
