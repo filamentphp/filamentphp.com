@@ -1,10 +1,10 @@
 ---
-name: Filament Captcha
-slug: dominion-solutions-filament-captcha
+name: Captcha
+slug: dominion-solutions-captcha
 author_slug: dominion-solutions
 categories: [form-field]
-description: Filament support for CAPTCHA providers.
-discord_url:
+description: CAPTCHA support for Filament.
+discord_url: https://discord.com/channels/883083792112300104/1202620651534295080
 docs_url: https://raw.githubusercontent.com/dominion-solutions/filament-captcha/main/README.md
 github_repository: dominion-solutions/filament-captcha
 has_dark_theme: true
