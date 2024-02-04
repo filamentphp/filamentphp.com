@@ -1,9 +1,10 @@
 ---
 name: Onboarding Manager Pro
 slug: ralphjsmit-onboarding-manager-pro
-anystack_id: e543d70c-bd28-4d99-9fda-d5356878789c
 author_slug: ralphjsmit
 categories: [panel-builder, widget]
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-onboarding-manager-pro/configure?referer=filament
+price: €59.00
 description: Beautiful onboarding experiences for Filament Admin.
 discord_url: https://discord.com/channels/883083792112300104/993463038357274635
 github_repository: ralphjsmit/laravel-filament-onboard
@@ -25,11 +26,13 @@ This package allows you to design beautiful and fully integrated onboarding expe
 - Add optional onboarding steps with the beautiful dashboard widget.
 - Guide your users through one or multiple [wizards](https://filamentphp.com/docs/2.x/forms/layout#wizard).💫
 - Redirect users to links (e.g. for an OAuth-process) or guide them through a multi-step wizard.
+- Let users complete actions straight from the dashboard using Filament actions (**NEW**). 
+- Allow users to skip actions (**NEW**).
 - Beautiful design & integration with Filament Admin.
 - Advanced widget design with native support for columns and column spans.
 - Support for dark mode. 🌚
 - Can be easily translated with a language file.
-  – Redirect to custom route after completing onboard flow.
+– Redirect to custom route after completing onboard flow.
 
 [**View changelog**](https://changelog.anystack.sh/filament-onboarding-manager-pro)
 
@@ -97,29 +100,30 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 The package is supported on both Laravel 8 and 9. Please be aware though that support for security fixes for Laravel 8 ends within a few months.
 
 ### Installation via Composer
 
-To install the package you should add the package to your `composer.json` file in the `repositories` key:
+To install the package you should add the following lines to your `composer.json` file in the `repositories` key in order to allow access to the private package:
 
 ```json
 {
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://filament-onboarding-manager-pro.composer.sh"
-        }
-    ]
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.ralphjsmit.com"
+    }
+  ]
 }
-
 ```
 
-Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key plus a colon ':' + the domain on which you activated it, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500:mydomain.com`).
+> If you have one of my other premium packages installed already, then you don't need to repeat these lines.
 
-```shell
+Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500`).
+
+```bash
 composer require ralphjsmit/laravel-filament-onboard
 ```
 
@@ -225,9 +229,15 @@ Track::make([
 ])
 ```
 
+You can also provide a name using a closure:
+
+```php
+Step::make(name: fn () => 'Hello ' . auth()->user()->first_name, identifier: 'greeting')
+```
+
 #### Adding a description
 
-You can add a description for the step by adding the `->description()` method:
+You can add a description for the step by adding the `->description()` method. Provide either a string, an `HtmlString` or a closure.
 
 ```php
 Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
@@ -236,20 +246,50 @@ Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
 
 #### Adding an icon
 
-You can add an icon to the step by using the `->icon()` method:
+You can add an icon (as string or as closure that returns string) to the step by using the `->icon()` method:
 
 ```php
 Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->icon('heroicon-o-check-circle')
 ```
 
-#### Adding a link
+#### Setting a color
 
-You can use the `->link()` method to add a link to the step. This link will be displayed to the user. You can use this to redirect to an OAuth provider or to a specific page in the dashboard:
+You can set the color of the icon using the `->color()` method. The default is `primary`.
 
 ```php
 Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
-    ->link('Add workspace →', route('callbacks.notion.authorize'), shouldOpenInNewTab: true)
+    ->icon('heroicon-o-check-circle')
+    ->color('info')
+```
+
+#### Adding a url or action
+
+Each Step can have a button at the bottom of the page. This button can either be a link/url or an advanced Filament action, including things like modals or forms.
+
+You can use the `->url()` method to add a link to the step. Combine this method with the `performStepActionLabel()` to define the label that should be on the button. 
+
+The link will be displayed to the user. You can use this to redirect to an OAuth provider or to a specific page in the dashboard:
+
+```php
+Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
+    ->performStepActionLabel('Add workspace →')
+    ->url(route('callbacks.notion.authorize'), shouldOpenInNewTab: true)
+```
+
+Alternatively, you can modify the `performStepAction()` to include any advanced code. This can include a modal or a form or any other PHP action that you want to run.
+
+For example, this is an action that would open the "notifications" slide-over using Livewire:
+
+```php
+Step::make(name: 'Notifications overview', identifier: 'open-notifications')
+  ->performStepAction(function (Action $action) {
+      return $action
+        ->label('Open notifications overview')
+        ->action(function (OnboardTrackWidget $livewire) {
+            $livewire->dispatch('open-modal', id: 'database-notifications');
+        });
+  })
 ```
 
 #### Determining if a step is complete
@@ -259,6 +299,40 @@ You can use the `->completeIf()` method to specify a closure that will determine
 ```php
 Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
     ->completeIf(fn () => auth()->user()->workspaces()->exists())
+```
+
+#### Allowing users to skip actions (NEW)
+
+You can now also allow your users to skip a certain step. You can do this by providing a closure to the `skippable()` method. Below is an example of how this logically might work together:
+
+```php
+Step::make(name: 'Notifications overview', identifier: 'open-notifications')
+  ->completeIf(function ()  {
+    return auth()->user()->onboarding_notifications_completed;
+  })
+  ->skippable(function ()  {
+      auth()->user()->onboarding_notifications_completed = true;
+      auth()->user()->save();
+  })
+  ->performStepAction(function (Action $action) {
+      return $action
+        ->label('Open notifications overview')
+        ->action(function (OnboardTrackWidget $livewire) {
+            $livewire->dispatch('open-modal', id: 'database-notifications');
+            
+            auth()->user()->onboarding_notifications_completed = true;
+            auth()->user()->save();
+        });
+  })
+```
+
+By default, a user will be prompted with a model to confirm that they indeed want to skip the test. You can customize the modal details with the `->skipStepActionLabel()`, `->skipStepActionModalHeading()` and `->skipStepActionModalDescription()` methods:
+
+```php
+$step
+    ->skipStepActionLabel('Skip notifications')
+    ->skipStepActionModalHeading('Are you sure you want to skip this step?')
+    ->skipStepActionModalDescription('Your notifications will always still arrive in your overview.')
 ```
 
 #### Adding a column span
@@ -297,7 +371,8 @@ public function panel(Panel $panel): Panel
                     Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
                         ->description('Sign in with Notion and grant access to your workspace.')
                         ->icon('heroicon-o-check-circle')
-                        ->link('Add workspace →', route('callbacks.notion.authorize'))
+                        ->performStepActionLabel('Add workspace →')
+                        ->url(route('callbacks.notion.authorize'))
                         ->completeIf(fn () => auth()->user()->workspaces()->exists())
                         ->columnSpan(1),
                     // Other steps
@@ -341,7 +416,8 @@ Track::make([
     Step::make(name: 'Connect Notion', identifier: 'widget::connect-notion')
         ->description('Sign in with Notion and grant access to your workspace.')
         ->icon('heroicon-o-check-circle')
-        ->link('Add workspace →', route('callbacks.notion.authorize'))
+        ->performStepActionLabel('Add workspace →')
+        ->url(route('callbacks.notion.authorize'))
         ->completeIf(fn () => auth()->user()->workspaces()->exists())
         ->columnSpan(1),
     // Other steps
@@ -378,7 +454,7 @@ $plugin
 
 #### Forcing a user to visit a link
 
-If you want your users to visit a link, e.g. for an OAuth app, you can use the exact same syntax as described earlier, without any changes.
+If you want your users to visit a url, e.g. for an OAuth app, you can use the exact same syntax as described earlier, without any changes.
 
 #### Adding wizards
 
@@ -409,7 +485,7 @@ Step::make('Your title', 'onboard::unique-identifier')
     ])
 ```
 
-> NB. The example import the steps for the wizard using `Filament\Forms\Components\Wizard\Step as WizardStep`. Otherwise it would collide with the `RalphJSmit\Filament\Onboard\Step`. The actual class name is still `Step`.
+> NB. The example import the steps for the wizard using `Filament\Forms\Components\Wizard\Step as WizardStep`. Otherwise, it would collide with the `RalphJSmit\Filament\Onboard\Step`. The actual class name is still `Step`.
 
 For all the `Step` configuration options (adding an icon and description), see the [Filament documentation](https://filamentphp.com/docs/3.x/forms/layout/wizard).
 
@@ -521,25 +597,34 @@ The below code is used to generate the cards in the onboarding widget:
 Track::make([
     Step::make('Create list', 'widget::create-list')
         ->description("Create a list to gather your subscribers.")
-        ->link('Add workspace →', route('callbacks.notion.authorize'))
+        ->performStepActionLabel('Create list')
+        ->url(fn () => ListResource::getUrl('create'))
         ->icon('tabler-list-check')
         ->columnSpan(2)
         ->completeIf(fn () => auth()->user()->workspaces()->exists()),
     Step::make('Connect Notion', 'widget::connect-notion')
         ->description("Sign in with Notion and grant access to your workspace.")
-        ->link('Add workspace →', route('callbacks.notion.authorize'))
+        ->performStepActionLabel('Add workspace →') 
+        ->url(route('callbacks.notion.authorize'))
         ->icon('tabler-brand-notion')
         ->columnSpan(2)
         ->completeIf(fn () => auth()->user()->workspaces()->exists()),
     Step::make('Embed form on site', 'widget::embed-form')
         ->description("Collect subscribers via the form or API. Or import subscribers from other software.")
-        ->link('Copy code', '#')
+        ->performStepActionLabel('Copy code')
+        ->performStepAction(function (Action $action) {
+            return $action
+                ->action(function (OnboardTrackWidget $livewire) {
+                    $livewire->dispatch('copy-code', code: '<div>...</div>')
+                }); 
+        })
         ->icon('tabler-code')
         ->columnSpan(3)
         ->completeIf(fn () => auth()->user()->copied_embed_form !== null),
     Step::make('Tweak the design', 'widget::tweak-design')
         ->description("Make your newsletter completely personal.")
-        ->link('Create a new design', '#')
+        ->performStepActionLabel('Create a new design')
+        ->url(fn () => DesignResource::getUrl('create'))
         ->icon('tabler-color-swatch')
         ->columnSpan(3)
         ->completeIf(fn () => auth()->user()->designs->first->created_at->lt(auth()->user()->designs->first->updated_at)),
@@ -560,7 +645,8 @@ Onboard::make()
     ->addTrack([
         Step::make('Connect to Notion', 'onboard::connect-notion')
             ->description('Click the button below to give Newsly access to your workspace')
-            ->link('Add workspace →', route('callbacks.notion.authorize'))
+            ->performStepActionLabel('Add workspace →')
+            ->url(route('callbacks.notion.authorize'))
             ->icon('tabler-brand-notion')
             ->completeIf(fn () => user()->workspaces()->exists()),
         Step::make('Create email list', 'onboard::create-email-list')

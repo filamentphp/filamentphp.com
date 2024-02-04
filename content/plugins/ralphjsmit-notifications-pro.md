@@ -1,9 +1,10 @@
 ---
 name: Notifications Pro
 slug: ralphjsmit-notifications-pro
-anystack_id: 49b2f23f-cd8f-49f4-a94d-d78c3c26b45d
 author_slug: ralphjsmit
 categories: [panel-builder]
+checkout_url: https://ralphjsmit.com/filament-plugins/filament-notifications-pro/configure?referer=filament
+price: €39.00
 description: Seamlessly integrate Laravel database notifications with Filament.
 discord_url: https://discord.com/channels/883083792112300104/1007359259677294764
 github_repository: ralphjsmit/laravel-filament-notifications
@@ -122,30 +123,31 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 
 The package is supported on both Laravel 8 and 9. Please be aware though that support for security fixes for Laravel 8 ends within a few months.
 
 ### Installation via Composer
 
-To install the package you should add the package to your `composer.json` file in the `repositories` key:
+To install the package you should add the following lines to your `composer.json` file in the `repositories` key in order to allow access to the private package:
 
 ```json
 {
   "repositories": [
     {
       "type": "composer",
-      "url": "https://filament-notifications-pro.composer.sh"
+      "url": "https://satis.ralphjsmit.com"
     }
-  ],
+  ]
 }
-
 ```
 
-Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key plus a colon ':' + the domain on which you activated it, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500:mydomain.com`).
+> If you have one of my other premium packages installed already, then you don't need to repeat these lines.
 
-```shell
+Next, you should require the package via the command line. You will be prompted for your username (which is your e-mail) and your password (which is your license key, e.g. `8c21df8f-6273-4932-b4ba-8bcc723ef500`).
+
+```bash
 composer require ralphjsmit/laravel-filament-notifications
 ```
 
@@ -374,14 +376,17 @@ However, if the `StoresNotificationInDatabase` doesn't work for you, you can alw
 ```php
 class TestNotification extends Notification implements AsFilamentNotification
 {
+    use StoresNotificationInDatabase;
+    
     public function __construct(
         public User $user,
-        public string $message,
+        public string $customMessage,
     ) {}
     
     public static function toFilamentNotification(): FilamentNotification
     {
         return FilamentNotification::make()
+            ->message(fn (self $notification) => $notification->customMessage)
             ->form([
                 \Filament\Forms\Components\TextInput::make('message')
                     ->label('Message')
@@ -392,11 +397,11 @@ class TestNotification extends Notification implements AsFilamentNotification
                     ->label('User'),
             ])
             ->constructUsing(function(array $data) {
-                ['message' => $message, 'user_id_or_something' => $userId] = $data;
+                ['custom_message' => $message, 'user_id_or_something' => $userId] = $data;
 
                 return new static(
                     user: User::find($userId), 
-                    message: $message
+                    customMessage: $message
                 );
             });
     }
@@ -405,7 +410,9 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return [
             'user_id_or_something' => $this->user->id,
-            'message' => $this->message,
+            'custom_message' => $this->message,
+            // Some internal properties are required to store in the database. They will be provided by this method. 
+            ...$this->getInternalToArray(),
         ];
     }
     
@@ -413,6 +420,8 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return ['database', 'mail'];
     }
+    
+    // Implement a `toMail()` method to match the methods in `via()`...
 }
 ```
 
@@ -480,7 +489,7 @@ return FilamentNotification::make()
     ->actions([
         Action::make('View')
             ->url("https://github.com", true)
-            ->icon('heroicon-o-arrows-expand'),
+            ->icon('heroicon-o-arrows-pointing-out'),
     ]);
 ```
 
@@ -546,7 +555,7 @@ class TestWorkflowFailedNotification extends Notification implements AsFilamentN
             ->actions([
                 Action::make('View')
                     ->url("https://github.com", true)
-                    ->icon('heroicon-o-arrows-expand'),
+                    ->icon('heroicon-o-arrows-pointing-out'),
             ]);
     }
 

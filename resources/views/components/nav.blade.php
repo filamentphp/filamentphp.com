@@ -71,12 +71,16 @@
     @php
         $today = \Carbon\Carbon::now();
         $isHalloween = $today->between(\Carbon\Carbon::parse('October 25'), \Carbon\Carbon::parse('November 1'));
+        $isChristmas = $today->between(\Carbon\Carbon::parse('December 01'), \Carbon\Carbon::parse('December 30'));
     @endphp
 
     {{-- Conditionally display the logos --}}
     @if ($isHalloween)
         {{-- Halloween Logo --}}
         <x-nav.halloween-logo />
+    @elseif ($isChristmas)
+        {{-- Christmas Logo --}}
+        <x-nav.christmas-logo />
     @else
         {{-- Normal Logo --}}
         <x-nav.logo />

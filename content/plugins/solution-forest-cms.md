@@ -101,6 +101,17 @@ To get started with the Filament CMS Website Plugin, follow these steps:
         ...
     ];
     ```
+6. Register the plugin in your Panel provider:
+   > **Important:  Register the plugin in your Panel provider after version 2.x**
+   ``` bash
+    use SolutionForest\FilamentCms\FilamentCmsPanel;
+ 
+    public function panel(Panel $panel): Panel
+    {
+        return $panel
+            ->plugin(FilamentCmsPanel::make());
+    }
+   ```
 
 ## Updating the Filament CMS Website Plugin
 --------------------------------------------------------------------------------------------------
@@ -112,6 +123,8 @@ If the update includes any new migration files, they will be automatically publi
 It's important to note that before running any updates, you should always backup your code and database to ensure that you can easily revert to a previous state if any issues arise. Additionally, you should review the release notes for the updated package to understand any potential breaking changes or new features that may impact your application.
 
 # Documentation
+
+>***Please visit [this link](https://filament-cms-website-demo.solutionforest.net/docs/filament-cms) access the most updated document.***
 
 ## General Page
 
@@ -272,7 +285,8 @@ To change the theme, you can modify the theme parameter in the `config/filament-
      ```
 
 ## Data-type Page
-![Example](assets/screenshots/list-data-type-pages.png)
+![Example](https://demo.solutionforest.net/Filament/cms-plugin/list-data-type-pages.png))
+
 The data-type page is a resource that doesn't have an associated route. 
 
 For instance, if you create a 'link' data-type that includes information such as URLs and titles, you can retrieve this information from any page.
@@ -453,10 +467,11 @@ To retrieve records under the content-type page, you can use the following code:
 \SolutionForest\FilamentCms\Support\Utils::getContentType('products')->get();
 ```
 
+
 ## Translation
 This guide assumes that you have already set up your model to be translatable, as per [Spatie's documentation](https://github.com/spatie/laravel-translatable#making-a-model-translatable).
 
-1. To set the `default_locales` for all resources at once, you can publish the [package's configuration file](https://filamentphp.com/docs/2.x/spatie-laravel-translatable-plugin/installation#publishing-configuration).
+1. **[Important] Please install [filament/spatie-laravel-translatable-plugin](https://filamentphp.com/plugins/filament-spatie-translatable) first, and following the instruction of this plugin.**
    
 2. Next, you need to prepare your resource classes and model, and update the settings in the `config/filament-cms.php` file. Here's an example configuration:
     ```bash
@@ -511,7 +526,7 @@ This guide assumes that you have already set up your model to be translatable, a
         ];
     }
     ```
-4. You also need to add the necessary trait to your Filament resource:
+4. You also need to add the necessary trait to your Filament resource, to prepare for resource pages:
     ```php
     namespace App\Filament\Resources;
 
@@ -529,29 +544,24 @@ This guide assumes that you have already set up your model to be translatable, a
                 'edit' => Pages\EditCmsPage::route('/{record}/edit'),
             ];
         }
-
-        public static function getTranslatableLocales(): array
-        {
-            return config('filament-spatie-laravel-translatable-plugin.default_locales') ?? config('filament-cms.locales');
-        }
     }
     ```
-5. Finally, you need to add the necessary trait to your Filament resource pages:
+5. Finally, you need to add the necessary trait to your Filament resource pages, to making resources page translatable after *resource class added necessary trait*. For all resource pages, you must apply the corresponding `Translatable` trait to it, and install a `LocaleSwitcher` header action. Also, you need to install the original actions of the cms resource pages, such as *preview page action* and *view published page action* inside `\SolutionForest\FilamentCms\Concern\CanPublishPage` trait:
     ```php
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Resources\Pages\ListRecords;
 
     class ListCmsPages extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\ListCmsPages
     {
-        use ListRecords\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\ListRecords\Concerns\Translatable;
+        
         protected static string $resource = CmsPageResource::class;
-
-        protected function getActions(): array
+        
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+                \Filament\Actions\CreateAction::make(),
+            ];
         }
     }
     ```
@@ -559,19 +569,19 @@ This guide assumes that you have already set up your model to be translatable, a
     namespace App\Filament\Resources\CmsPageResource\Pages;
 
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Resources\Pages\EditRecord;
 
     class EditCmsPage extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\EditCmsPage
     {
-        use EditRecord\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\EditRecord\Concerns\Translatable;
+        
         protected static string $resource = CmsPageResource::class;
-
-        protected function getActions(): array
+        
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveFormLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+                ...parent::getActions(),
+            ];
         }
     }
 
@@ -580,23 +590,48 @@ This guide assumes that you have already set up your model to be translatable, a
     namespace App\Filament\Resources\CmsPageResource\Pages;
 
     use App\Filament\Resources\CmsPageResource;
-    use Filament\Pages\Actions;
-    use Filament\Resources\Pages\CreateRecord;
 
     class CreateCmsPage extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource\Pages\CreateCmsPage
     {
-        use CreateRecord\Concerns\Translatable;
-
+        use \Filament\Resources\Pages\CreateRecord\Concerns\Translatable;
+    
         protected static string $resource = CmsPageResource::class;
-        protected function getActions(): array
+    
+        protected function getHeaderActions(): array
         {
-            return array_merge([
-                $this->getActiveFormLocaleSelectAction(),
-            ], parent::getActions());
+            return [
+                \Filament\Actions\LocaleSwitcher::make(),
+            ];
         }
     }
 
     ```
+6. Setting the translatable locales for a particular resource
+By default, the translatable locales can be set globally for all resources in the plugin configuration. Alternatively, you can customize the translatable locales for a particular resource by overriding the getTranslatableLocales() method in your resource class:
+
+    ```php
+    
+    class CmsPageResource extends \SolutionForest\FilamentCms\Filament\Resources\CmsPageResource
+    {
+        use \Filament\Resources\Concerns\Translatable;
+    
+        // ...
+    
+        public static function getTranslatableLocales(): array
+        {
+            return ['en', 'fr'];
+        }
+    }
+    ```
+
+7. If you need to make `CmsTagResouce` and `CmsPageNavigationCategoryResource`, follow the same steps as mentioned above for `CmsPageResource`. Add the use `\Filament\Resources\Concerns\Translatable` trait to the respective resource classes and apply the necessary changes to the resource pages.
+
+    > **Special case for EditCmsPageNavigation page:**
+    >
+    > The `EditCmsPageNavigation` page is not a Filament preset resource page, but it already applies the `SolutionForest\FilamentTree\Concern\TreeRecords\Translatable` trait.
+    >
+    >If you want to make any adjustments, you just need to add the `getTranslatableLocales` method to the `CmsPageNavigationCategoryResource` class or override the `getTranslatableLocales` method in the `EditCmsPageNavigation` page.
+    >
 
 ## Tag
 By default, the tagging of cms page is disable. If you wish to enable it, you can update the `enable_page_tags` as true in the `config/filament-cms.php` file.
@@ -632,11 +667,40 @@ Additionally, you need to add the following policies for `AuditRelationManager`:
 Please refer to the official documentation of the Laravel Auditing package at [owen-it/laravel-auditing](https://github.com/owen-it/laravel-auditing) for more detailed information and instructions.
 ![audit-1](https://demo.solutionforest.net/Filament/cms-plugin/audit-1.png)
 
+## Authorizations
+The following abilities are set to **true** by default. You can define them in the `AuthServiceProvider` or use the `registerCmsAuthenticationUsing` method of `SolutionForest\FilamentCms\FilamentCmsPanel`.
+|Name of Ability|Description|
+|---|---|
+|publish|Determine whether the user can publish the page.|
+|unpublish|Determine whether the user can unpublish the page.|
+|schedulePublish|Determine whether the user can schedule publish the page.|
+|audit|Determine whether the user can view the audit logs the page.|
+|rollbackAudit|Determine whether the user can rollback the audit logs the page.|
+
+```php
+FilamentCmsPanel::make()
+    ->registerCmsAuthenticationUsing(function () {
+        \Illuminate\Support\Facades\Gate::define('publish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('unpublish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('schedulePublish', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $resourceClass = null) => true);
+
+        \Illuminate\Support\Facades\Gate::define('audit', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $pageClass = null, ?string $resourceClass = null) => true);
+        \Illuminate\Support\Facades\Gate::define('rollbackAudit', fn ($user, null|string|\Illuminate\Database\Eloquent\Model $model, ?string $pageClass = null, ?string $resourceClass = null) => true);
+    })
+```
+
+You can use the following code to disable the default authentication setup in Filament CMS:
+```
+FilamentCmsPanel::make()
+    ->registerCmsAuthenticationUsing(fn () => false)
+```
+
 # Recommended Plugins
 --------------------------------------------------------
 
 In addition to the core functionality of this project, we recommend the following plugins to extend its capabilities:
 
+*   [Spatie Translatable](https://filamentphp.com/plugins/filament-spatie-translatable) - Filament support for Spatie's Laravel Translatable package.
 *   [Media Library Manager](https://filamentphp.com/plugins/media-library-pro) - A media manager that is compatible with Spatie MediaLibrary.
 *   [Curator](https://github.com/awcodes/filament-curator) - A free media manager designed for use with Filament Admin.
 
@@ -648,7 +712,7 @@ Here are some of the features and improvements we plan to implement in future re
 *   \[OK\] Scheduled Publish Page
 *   \[ \] Asset Manager
 *   \[OK\] Tag Manager
-*   \[  \] Versioning
+*   \[ \] Versioning
 
 Please note that this roadmap is subject to change and may be updated as we receive feedback and new feature requests from our users. We appreciate any suggestions or ideas you may have for improving this project!
 

@@ -10,7 +10,6 @@ github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
 is_lemon_squeezy_embedded: true
-is_presale: true
 price: €49.00
 versions: [3]
 publish_date: 2023-09-05
@@ -18,15 +17,51 @@ publish_date: 2023-09-05
 
 Want your Filament applications to look more streamlined? The official Filament Minimal Theme features a clean design with less rounding, a lighter background and redesigned UI components. No need to hire a designer to make your projects look different from the default Filament style. Simply install our Composer package and you're good to go. Perfect for corporate software.
 
-> This theme covers all Filament packages and can be used standalone. You may choose a license for a single project or unlimited projects, both including free updates.
+> This theme covers all Filament packages and can be used standalone. You may choose a license for a single project (3 activations) or unlimited projects, both including free updates.
+
+## Screenshots
+
+List orders page in light mode using the Filament Minimal Theme:
+![Screenshot of the list orders page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-list-orders.webp)
+
+List orders page in light mode using the default Filament theme:
+![Screenshot of the list orders page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-list-orders-default.webp)
+
+List orders page in dark mode using the Filament Minimal Theme:
+![Screenshot of the list orders page in dark mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders.webp)
+
+List orders page in light mode using the default Filament theme:
+![Screenshot of the list orders page in dark mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-list-orders-default.webp)
+
+Edit post page in light mode using the Filament Minimal Theme:
+![Screenshot of the edit post page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-edit-post.webp)
+
+Edit post page in light mode using the default Filament theme:
+![Screenshot of the edit post page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-edit-post-default.webp)
+
+Edit post page in dark mode using the Filament Minimal Theme:
+![Screenshot of the edit post page in dark mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-edit-post.webp)
+
+Edit post page in dark mode using the default Filament theme:
+![Screenshot of the edit post page in dark mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-edit-post-default.webp)
+
+Registration page in light mode using the Filament Minimal Theme:
+![Screenshot of the registration page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-registration.webp)
+
+Registration page in light mode using the default Filament theme:
+![Screenshot of the registration page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-light-registration-default.webp)
+
+Registration page in dark mode using the Filament Minimal Theme:
+![Screenshot of the registration page in light mode using the Filament Minimal Theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-registration.webp)
+
+Registration page in dark mode using the default Filament theme:
+![Screenshot of the registration page in light mode using the default Filament theme](/images/content/plugins/images/filament-minimal-theme-screenshot-dark-registration-default.webp)
 
 ## Installation
 
 ### Requirements
 
-Filament Minimal Theme alpha requires the latest version of Filament v3, as it depends on new APIs added to Filament's core.
-
-> This plugin is currently in alpha, which means it's not yet ready for use in production environments.
+This plugin requires the latest version of Filament v3, as it depends on new APIs added to Filament's core.
 
 ### Installation
 
@@ -36,7 +71,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 "repositories": [
     {
         "type": "composer",
-        "url": "https://privato.pub/composer/filament"
+        "url": "https://filament.privato.pub/composer"
     }
 ]
 ```
@@ -44,7 +79,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 Now you can install the package using:
 
 ```bash
-composer require filament/minimal-theme:"^3.0@alpha"
+composer require filament/minimal-theme:"^3.0"
 ```
 
 You will be prompted to provide a username and password. Use your order email address as username and the license key you received as password.
@@ -61,6 +96,8 @@ Next, replace the imported Panel Builder stylesheet with the Minimal Theme style
 - @import '/vendor/filament/filament/resources/css/theme.css';
 + @import '/vendor/filament/minimal-theme/resources/css/index.css';
 ```
+
+Now compile your theme stylesheet using `npm run build`.
 
 #### Configuration
 
@@ -165,4 +202,4 @@ MinimalTheme::configure();
 
 ## Issues
 
-If you find a bug in this package, please [create an issue on the main Filament GitHub repository](https://github.com/filamentphp/filament/issues/new?assignees=&labels=bug%2Cunconfirmed%2Clow+priority&projects=&template=bug_report.yml).
+If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
