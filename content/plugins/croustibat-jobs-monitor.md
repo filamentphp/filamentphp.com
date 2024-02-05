@@ -2,7 +2,7 @@
 name: Jobs monitor
 slug: croustibat-jobs-monitor
 author_slug: croustibat
-categories: [developer-tools, panel-builder]
+categories: [developer-tool, panel-builder]
 description: Monitor your queues from a panel
 discord_url: https://discord.com/channels/883083792112300104/1113032991845912646
 docs_url: https://raw.githubusercontent.com/croustibat/filament-jobs-monitor/main/README.md

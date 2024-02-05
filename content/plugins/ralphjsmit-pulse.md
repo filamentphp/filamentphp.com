@@ -50,7 +50,7 @@ We tried to make the plugin as **easy-to-install** and **versatile** as possible
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 Before starting the further installation, you should already have Laravel Pulse installed according to the [Pulse installation guide](https://laravel.com/docs/10.x/pulse#installation).
 
