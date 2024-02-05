@@ -14,11 +14,11 @@ versions: [3]
 publish_date: 2024-01-08
 ---
 
-This packages allows you to easily integrate beautiful timelines into your Filament app, including outside the admin panel, allowing you to display timelines with **minimal effort**. The package integrates [Spatie Activitylog](https://pulse.laravel.com/) into [Filament](https://filamentphp.com/) and it **works out-of-the-box** with the underlying activitylog. Therefore, this package is great way to get a **premium activitylog** in your app for new projects, but also for existing projects that already have recorded events using the Spatie Activitylog.
+This package allows you to easily integrate beautiful timelines into your Filament app, including outside the admin panel, allowing you to display timelines with **minimal effort**. The package integrates [Spatie Activitylog](https://pulse.laravel.com/) into [Filament](https://filamentphp.com/) and it **works out-of-the-box** with the underlying activitylog. Therefore, this package is great way to get a **premium activitylog** in your app for new projects, but also for existing projects that already have recorded events using the Spatie Activitylog.
 
 The package supports both form & infolist components, includes special actions for tables & pages, and allows you to easily extend the timelime with additional actions.
 
-# Features
+## Features
 
 - Form & infolist components for the **activity timeline** with many **configuration** options. 💛
 - Timelines in many beautiful variations.
@@ -33,9 +33,9 @@ The package supports both form & infolist components, includes special actions f
 - Fully & easily translatable.
 - Works out-of-the-box with model events. ⚡️
 
-# Screenshots
+## Screenshots
 
-## Timeline form/infolist component
+### Timeline form/infolist component
 
 The timeline component will work out-of-the-box in any Filament form or infolist, also outside the admin panel. It looks like this:
 
@@ -83,9 +83,11 @@ If there are no activities logged yet, the timeline will display an empty state.
 
 ![Timeline empty state](https://ralphjsmit.com/storage/media/260/responsive-images/Empty-State-Default___responsive_1362_604.jpg)
 
-## Timeline Actions
+### Timeline Actions
 
 The package also provides a nice Timeline action that you can use in your tables & pages. For example, the page action can be placed in the `getHeaderActions()` method, on the top-level or in an `ActionGroup`:
+
+![Timeline timeline](https://ralphjsmit.com/storage/media/282/Timeline-Actions.gif)
 
 ![Timeline Page Action](https://ralphjsmit.com/storage/media/271/responsive-images/Timeline-Page-Action-Ligh___responsive_2262_1627.jpg)
 
@@ -97,13 +99,13 @@ The action also has a special version for use in tables:
 
 ![Timeline Table Action Dark](https://ralphjsmit.com/storage/media/273/responsive-images/Timeline-Table-Action-Dark___responsive_2262_1627.jpg)
 
-# Installation guide: Filament Activitylog Pro
+## Installation guide: Filament Activitylog Pro
 
-Thank you for purchasing the Activitylog Pro plugin for Filament Admin!
+Thank you for purchasing the Activitylog Pro plugin for Filament!
 
 We tried to make the plugin as **easy-to-install** and **versatile** as possible. Nevertheless, if you still have a **question or a feature request**, please send an e-mail to **support@ralphjsmit.com**.
 
-## Prerequisites
+### Prerequisites
 
 Before starting the further installation, you should already have the Spatie Activitylog package installed according to the [Spatie Activitylog installation guide](https://spatie.be/docs/laravel-activitylog/v4/installation-and-setup).
 
@@ -111,7 +113,7 @@ If you already have the Spatie Activitylog installed in your project and already
 
 The package is supported on Laravel 10 or higher and Filament V3.
 
-### Installation via Composer
+#### Installation via Composer
 
 To install the package you should add the following lines to your `composer.json` file in the `repositories` key in order to get access to the private package:
 
@@ -134,7 +136,7 @@ Next, you should require the package via the command line. You will be prompted 
 composer require ralphjsmit/laravel-filament-activitylog
 ```
 
-### Add plugin Blade files to `tailwind.config.js`
+#### Add plugin Blade files to `tailwind.config.js`
 
 For all panels that you want to use the package in, make sure that you have created a [Filament custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme). Next, for each theme, you need to add the following line to the `tailwind.config.js` file:
 
@@ -147,7 +149,7 @@ content: [
 
 If you are using the plugin outside the admin panel, then make sure to include the above line in the `tailwind.config.js`'s that are used to generate the CSS for the Livewire components where you will use the timeline in.
 
-### Configuring the plugin per-panel
+#### Configuring the plugin per-panel
 
 The Filament Activitylog Pro package works in all forms, tables & infolists, irrespective of whether you also have a Filament panel or not. This means that you can nicely include the Activitylog in your app, anywhere you want and wherever you have a form, table or infolist.
 
@@ -162,20 +164,20 @@ $panel
 
 There currently are no configuration methods on the plugin itself. However, it is best practice in Filament V3 to register plugins in the panels that a plugin is used in. Also, if it ever becomes necessary in the future to add per-panel configuration methods to the plugin, then I will be able to do so without needing a breaking change.
 
-# Usage
+## Usage
 
 In general, the underlying `spatie/laravel-activitylog` package allows two things:
 
 1. Automatically **log model events** on Eloquent models.
 2. Log **custom events** & associate them with Eloquent models.
 
-## Logging model events
+### Logging model events
 
 For information about logging model events and how to set it up, see the [Spatie documentation](https://spatie.be/docs/laravel-activitylog/v4/advanced-usage/logging-model-events). I would recommend to enable logging these model events first, and using them as the basis of your timelines.
 
-## Custom events
+### Custom events
 
-### Terminology
+#### Terminology
 
 When logging custom activities, there are four main properties relevant to each activity log:
 
@@ -184,7 +186,7 @@ When logging custom activities, there are four main properties relevant to each 
 3. **Event** - the programmatic name of the event as a verb in the past tense. Examples: `created`, `updated`, `deleted`, `restored`, but can also be custom events like `published`, `unpublished`, `archived`, `verified`, etc.
 4. **Description** – most of the time identical to the event name, but can also be a human-readable description.
 
-### Logging custom events
+#### Logging custom events
 
 It is required to always **include an event name** in the activity. For example, let's say that we want to log a `'published'` event on a `Post` model. We can do this as follows:
 
@@ -205,7 +207,7 @@ By default, this will show an item in the timeline with the following descriptio
 
 > John Doe published the post.
 
-### Displaying the causer name
+#### Displaying the causer name
 
 The name of the causer is automatically inferred from the causer model using following steps:
 
@@ -214,7 +216,7 @@ The name of the causer is automatically inferred from the causer model using fol
 3. If the causer model has an attribute called `first_name` and/or `last_name`, then these attributes will be used.
 4. Otherwise, no name for the causer will be included ("The post was published.").
 
-### Displaying/logging custom descriptions
+#### Displaying/logging custom descriptions
 
 Usually, the description of the activity (the string passed to the `->log('...')` method) will be the **same as the event name**. If that is the case, then the package will automatically construct a nice human-readable string.
 
@@ -231,7 +233,7 @@ Keep in mind though that this description is stored directly in the database and
 
 If you want, you can use inline markdown to apply formatting like bold or italic.
 
-### Logging activity in batches
+#### Logging activity in batches
 
 The Spatie Activitylog package allows you to **log activity in batches**. You can consider a batch as a group of actions that are performed together in one go. Each timeline can display the batches and the linked activities.
 
@@ -257,7 +259,7 @@ LogBatch::withinBatch(function () {
 
 This is the basics about batches, but there are some gotchas relating to e.g. queue jobs. You can read more about that in the [documentation](https://spatie.be/docs/laravel-activitylog/v4/advanced-usage/batch-logs).
 
-## Form component (timeline)
+### Form component (timeline)
 
 The timeline form component can be used in your **forms to display a timeline** of the activities related to the current form record. The timeline will automatically be filled with the activities that happened to the current Eloquent model:
 
@@ -272,9 +274,9 @@ In general, you don't have data yet on pages where you create an item. Therefore
 
 If the timeline is empty (meaning that there are no activities yet displayed), then the timeline will display an empty state, which you can also customize (see below).
 
-### Customizing timeline items
+#### Customizing timeline items
 
-#### Icons & colors
+##### Icons & colors
 
 By default, each item in the timeline will be a small, gray dot. You can **customize the icon and color** of each item using the `->itemIcon()` and `->itemIconColor()` methods.
 
@@ -317,7 +319,18 @@ Timeline::make()
     ->itemIconColor('created', 'success', Post::class)
 ```
 
-#### Actions
+#### Time format
+
+You can customize the time format used in the timestamp tooltip by using the `->itemDateTimeFormat()` method. The default format is `M jS, Y H:i:s`.
+
+```php
+Timeline::make()
+    ->itemDateTimeFormat('Y-m-d H:i')
+```
+
+This is also a great candidate for global configuration (see below).
+
+##### Actions
 
 You can easily **add actions** to the timeline using the `->itemActions()` method. This method allows you to specify the event name and provide an array of actions that will be displayed beneath each item in the timeline.
 
@@ -365,7 +378,29 @@ Timeline::make()
     ]),
 ```
 
-#### Define icons, colors & actions globally
+If you are mixing timeline items for multiple Eloquent models and you need access to the current underlying Spatie Activitylog model, you can use the `$arguments['activity_id']` parameter:
+
+```php
+Timeline::make()
+    ->itemActions('published', [
+        Forms\Components\Actions\Action::make('edit')
+            ->fillForm(function (array $arguments) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
+            ->form([
+                Forms\Components\TextInput::make('title')
+            ])
+            ->action(function (array $arguments, array $data) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
+    ]),
+```
+
+##### Define icons, colors & actions globally
 
 If you want to **globally provide icons, colors and actions**, you can make use of the Filament `configureUsing()` method. When working globally with timelines, it is generally very handy to scope the configuration to specific models:
 
@@ -395,7 +430,7 @@ Timeline::configureUsing(function (Timeline $timeline) {
 
 These globals are kept as defaults. If you provide a custom override on any individual timeline, then that value will override the global defaults.
 
-#### Descriptions
+##### Descriptions
 
 By default, the Filament Activitylog package will **generate a nice description** for you based on the event name and whether or not there's a causer name (see above). If you want to override the description for individual events, you can do so via the `->eventDescription()` method:
 
@@ -428,7 +463,7 @@ Timeline::make()
     )
 ```
 
-#### Formatting attribute values
+##### Formatting attribute values
 
 If you have enabled the logging of changed attributes, the timeline will automatically display changed attributes in the description for the `updated` event. For example, consider the following changed attributes:
 
@@ -446,7 +481,7 @@ The package will automatically generate a description like this:
 
 As you can see, the package automatically formats the values of the attributes in a human-readable way. Strings are kept, booleans are converted to `'true'`/`'false'` in text, arrays are converted to JSON, enums are converted to either their name or to the `getLabel()` method if you implemented the `Filament\Support\Contracts\HasLabel` interface and dates are converted to a better format.
 
-#### Formatting attribute labels
+##### Formatting attribute labels
 
 For getting the human-readable names of the attributes, the package will first automatically and intelligently check whether there is any other form component on the page that has a custom label for this attribute. For example, if you have a `DatePicker::make('some_date')->label('Published at')`, then the package will automatically use the label `'published at'`.
 
@@ -463,7 +498,7 @@ Timeline::make()
 
 Finally, if there is still no attribute label found, the package will automatically try to convert the attribute name to a human-readable label. For example, `some_date` will be converted to `some date`.
 
-### Activity batches
+#### Activity batches
 
 By default, if the package detects that an event belongs to a batch, it will **display the batch** in a compact, **inline timeline**. The inline timeline will be 'connected' to the "main" timeline. This looks nice and can be very useful to your users to view related events together.
 
@@ -474,7 +509,29 @@ Timeline::make()
     ->inlineBatches(),
 ```
 
-### Customizing empty state
+##### Customizing query to get batches
+
+By default, the package will automatically retrieve all activity items from the batch that have a subject. You can however modify the query used to retrieve these items using the `->modifyBatchActivitiesQueryUsing()` using:
+    
+```php
+Timeline::make()
+    ->modifyBatchActivitiesQueryUsing(function (Builder $query, Activity $activity, string $batchUuid) {
+        return $query->whereIn('event', ['deleted', 'restored']);
+    })
+```
+
+##### Overriding query to get batches
+
+You can also choose to override the query entirely:
+
+```php
+Timeline::make()
+    ->getBatchActivitiesUsing(function (Activity $activity, string $batchUuid) {
+        return Activity::forBatch($batchUuid)->get();
+    })
+```
+
+#### Customizing empty state
 
 When the timeline is empty, it will show an empty state (similar to how the empty state looks in Filament tables). You can **customize the empty state** using the following methods:
 
@@ -485,7 +542,7 @@ Timeline::make()
     ->emptyStateIcon('heroicon-o-bars-arrow-down'),  
 ```
 
-### Compact timeline
+#### Compact timeline
 
 By default, the timeline has a very nice design, but with a larger number of activities it can take up a lot of space. To solve this, you can opt to make use of the `->compact()` option, which will provide a **more compact design**:
 
@@ -500,7 +557,7 @@ If you want to make all timelines compact by default, you can configure that glo
 Timeline::configureUsing(fn (Timeline $timeline) => $timeline->compact());
 ```
 
-#### Heroicon Mini icons
+##### Heroicon Mini icons
 
 If you use a compact timeline, it generally looks better to use icons from the `heroicons-m-` set instead of the `heroicons-o-` set, because the [Heroicon Mini](https://heroicons.com/mini) versions are designed for smaller sizes. On compact timelines, the package will automatically convert icons from the `heroicons-o-` set to the `heroicons-m-` set, and vice-versa on non-compact timelines.
 
@@ -514,7 +571,7 @@ Timeline::make()
 Timeline::configureUsing(fn (Timeline $timeline) => $timeline->convertHeroicons(false));
 ```
 
-### Searchable timelines
+#### Searchable timelines
 
 If you have many activities in your timeline, you might want to make the **timeline searchable**:
 
@@ -525,7 +582,7 @@ Timeline::make()
 
 This will display a small text input above the timeline. Whenever a user types a search query in the input, it will look through the descriptions of all activities using JavaScript, and only display the activities that match the search query.
 
-### Maximum height
+#### Maximum height
 
 If you have a timeline with many activities, you might want to define a **maximum height** for the timeline. This will make the timeline scrollable:
 
@@ -536,7 +593,7 @@ Timeline::make()
     ->maxHeight('50vh') // Any CSS value
 ```
 
-### Getting custom activities
+#### Getting custom activities
 
 By default, the timeline will assume that your current Eloquent model has the `LogsActivity` trait. In that case, your model has an `activities()` relationship and the timeline assumes that you want to display these activities. If you want override this or provide different logic for determining which activities to dispay, you can provide a custom callback to the `getActivitiesUsing()` method available on all the components:
 
@@ -547,7 +604,7 @@ Timeline::make()
     }),
 ```
 
-### Tip: hiding label
+#### Tip: hiding label
 
 Usually the design of the timeline will be clear enough to the user what it represents, so hiding the label will make the end result cleaner. You can hide the label using the `->hiddenLabel()` method:
 
@@ -556,7 +613,7 @@ Timeline::make()
     ->hiddenLabel(),
 ```
 
-## Infolist component (timeline)
+### Infolist component (timeline)
 
 The timeline component is also available as an **infolist component**. The `Timeline` infolist component will function exactly the same as the form `Timeline` component, and therefore will also have all the same methods as the timeline in the form:
 
@@ -574,13 +631,13 @@ Timeline::make()
     // ... 
 ```
 
-### Adding actions to infolist timelines
+#### Adding actions to infolist timelines
 
 When adding actions to timelines in infolists, you should logically use `Filament\Infolists\Components\Actions\Action` as action classes instead of the `Filament\Forms\Components\Actions\Action` class.
 
-## Actions
+### Actions
 
-### Page action (timeline)
+#### Page action (timeline)
 
 You can use the `RalphJSmit\Filament\Activitylog\Actions\TimelineAction` action in your pages to display a button that will open the timeline of the record in a modal slideover:
 
@@ -609,7 +666,7 @@ TimelineAction::make()
     }),
 ```
 
-### Table action (timeline)
+#### Table action (timeline)
 
 You can use the `RalphJSmit\Filament\Activitylog\Tables\Actions\TimelineAction` action in your tables to display a button that will open the timeline of the record in a modal slideover:
 
@@ -629,11 +686,11 @@ TimelineAction::make()
     }),
 ```
 
-## Roadmap
+### Roadmap
 
 I hope this package will be useful to you! If you have any ideas or suggestions on how to make it more useful, please let me know (support@ralphjsmit.com).
 
-## Support
+### Support
 
 If you have a question, bug or feature request, please e-mail me at support@ralphjsmit.com or tag @ralphjsmit on [#activitylog-pro](#) on Discord. Love to hear from you!
 

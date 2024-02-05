@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -1398,6 +1414,9 @@ protected static ?string $navigationGroup = 'Shop';
     return __('filament/navigation.groups.shop.items.products');
 }
 </textarea></code></pre>
+<blockquote>
+<p>If you&#39;re reaching for a third level of navigation like this, you should consider using <a href="clusters">clusters</a> instead, which are a logical grouping of resources and <a href="../pages">custom pages</a>, which can share their own separate navigation.</p>
+</blockquote>
 <h2 id="generating-urls-to-resource-pages"><a class="heading-anchor" href="#generating-urls-to-resource-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Generating URLs to resource pages</h2>
 <p>Filament provides <code>getUrl()</code> static method on resource classes to generate URLs to resources and specific pages within them. Traditionally, you would need to construct the URL by hand or by using Laravel&#39;s <code>route()</code> helper, but these methods depend on knowledge of the resource&#39;s slug or route naming conventions.</p>
 <p>The <code>getUrl()</code> method, without any arguments, will generate a URL to the resource&#39;s <a href="listing-records">List page</a>:</p>
@@ -1493,6 +1512,9 @@ public static function getRecordSubNavigation(Page $page): array
 }
 </textarea></code></pre>
 <p>Each item in the sub-navigation can be customized using the <a href="../navigation">same navigation methods as normal pages</a>.</p>
+<blockquote>
+<p>If you&#39;re looking to add sub-navigation to switch <em>between</em> entire resources and <a href="../pages">custom pages</a>, you might be looking for <a href="../clusters">clusters</a>, which are used to group these together. The <code>getRecordSubNavigation()</code> method is intended to construct a navigation between pages that relate to a particular record <em>inside</em> a resource.</p>
+</blockquote>
 <h3 id="sub-navigation-position"><a class="heading-anchor" href="#sub-navigation-position"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Sub-navigation position</h3>
 <p>The sub-navigation is rendered at the start of the page by default. You may change the position by setting the <code>$subNavigationPosition</code> property on the resource. The value may be <code>SubNavigationPosition::Start</code>, <code>SubNavigationPosition::End</code>, or <code>SubNavigationPosition::Top</code> to render the sub-navigation as tabs:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">SubNavigationPosition</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">SubNavigationPosition</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">subNavigationPosition </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">SubNavigationPosition</span><span style="color: #89DDFF;">::</span><span style="color: #A6ACCD;">End</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Pages\SubNavigationPosition;

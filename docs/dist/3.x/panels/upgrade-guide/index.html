@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -963,7 +979,7 @@ The Livewire team have done a great job in making it stable, but it was a comple
 </blockquote>
 <h2 id="upgrading-automatically"><a class="heading-anchor" href="#upgrading-automatically"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Upgrading automatically</h2>
 <p>The easiest way to upgrade your app is to run the automated upgrade script. This script will automatically upgrade your application to the latest version of Filament and make changes to your code, which handles most breaking changes.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/upgrade:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.1</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">vendor/bin/filament-v3</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/upgrade:"^3.1" -W --dev
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/upgrade:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.2</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--dev</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">vendor/bin/filament-v3</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/upgrade:"^3.2" -W --dev
 
 vendor/bin/filament-v3
 </textarea></code></pre>
@@ -1108,7 +1124,7 @@ DateTimePicker::make('published_at')
 <p><code>Typed static property Filament\Resources\Pages\Page::$resource must not be accessed before initialization</code></p>
 <p>You should ensure that the <code>$resource</code> property is set on all resource pages:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resource </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PostResource</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static string $resource = PostResource::class;
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/14-upgrade-guide.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
+</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/15-upgrade-guide.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
 </div>

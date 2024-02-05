@@ -50,7 +50,7 @@ We tried to make the plugin as **easy-to-install** and **versatile** as possible
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 Before starting the further installation, you should already have Laravel Pulse installed according to the [Pulse installation guide](https://laravel.com/docs/10.x/pulse#installation).
 
@@ -98,6 +98,8 @@ This recorder will track frequently visited pages in your Filament panel. The re
 ],
 ```
 
+Make sure to register the plugin for each panel that you want to record the usage of. See the [Configuring the plugin per-panel](#filament-usage-recorder) section for more information.
+
 ### Add plugin Blade files to `tailwind.config.js`
 
 For all panels that you want to use the package in, make sure that you have created a [Filament custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme). Next, for each theme you need to add the following 2 lines to the `tailwind.config.js` file:
@@ -140,6 +142,17 @@ $panel
             ->serverCard(enabled: false)
             ->someOtherMethod()
     )
+```
+
+### Filament Usage Recorder
+
+If you registered the custom Filament Usage Recorder, you will need to add the `->plugin(FilamentPulse::make())` for every panel that you want to record the use of. However, by default, that will also register and display a Pulse page in every panel. If you want to monitor certain panels (like a user-facing panel), but only have the Pulse page in your admin panel, then you can disable the Pulse page on a per-panel basis.
+
+If you want to disable the Pulse page in a panel, pass `false` to the `->pulsePage()` method:
+
+```php
+$plugin
+    ->pulsePage(false);
 ```
 
 # Usage

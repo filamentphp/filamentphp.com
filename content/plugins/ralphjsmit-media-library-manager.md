@@ -53,6 +53,9 @@ This package allows you to give your users a beautiful way to upload images to y
 - Global search for folders and files
 - Integration with [TipTap editor](https://filamentphp.com/plugins/awcodes-tiptap-editor) **(NEW IN V3)**
 - Bulk delete folders including all content **(NEW IN V3)**
+- Open specific folders by default. **(NEW IN V3)**
+- Allow users to only select items from specific folders. **(NEW IN V3)**
+- Full UI support for smaller screens/mobile devices **(NEW IN V3)**
 
 [**View changelog**](https://changelog.anystack.sh/filament-media-library-pro)
 
@@ -122,7 +125,7 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament](https://filamentphp.com) package installed and configured.
 
 The package makes use of the [Spatie MediaLibrary](https://github.com/spatie/laravel-medialibrary) package. If you already have this package installed, you can skip this step.
 
@@ -391,9 +394,29 @@ MediaPicker::make('brochure_id')
 
 The `->acceptedFileTypes()` function accepts the mimetypes of the files that you want to allow. You can use wildcards like `video/*` or `image/*`.
 
+#### Locking the MediaPicker to specific folders
+
+By default, the MediaPicker will open in the root folder. However, in some cases, you might want to only allow your users to select/upload images from and to specific folders. You can do that using the `->folder()` function.
+
+Forcing a specific folder do allow your users to create and select from sub-folder (e.g. go down in the hierarchy), but not to open up parent folders or go up in the hierarchy.
+
+The `folder()` functions accepts a `MediaLibraryFolder` object as parameter. You can also pass a closure, and use that closure to retrieve the folder dynamically from e.g. the current record.
+
+```php
+MediaPicker::make('featured_image_id')
+    ->folder(MediaLibraryFolder::find(99)),
+```
+
+Using a closure:
+
+```php
+MediaPicker::make('featured_image_id')
+    ->folder(fn (Event $event) => $event->mediaLibraryFolder),
+```
+
 #### Opening the MediaPicker in a default folder
 
-By default, the MediaPicker will open in the root folder. However, in some cases, you might want to open the MediaPicker in a specific default folder. You can do that using the `->defaultFolder()` function.
+If you don't want to force your users to use a specific folder, but only nudge them, you can also use the `->defaultFolder()` method. This method allows you to specify a default folder that the MediaPicker will open in. The difference with `->folder()` is that this method will allow your users to open other folders as well, also higher in the hierarchy.
 
 The `defaultFolder()` functions accepts a `MediaLibraryFolder` object as parameter. You can also pass a closure, and use that closure to retrieve the folder dynamically from e.g. the current record.
 
@@ -409,7 +432,7 @@ MediaPicker::make('featured_image_id')
     ->defaultFolder(fn (Event $event) => $event->mediaLibraryFolder),
 ```
 
-NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please let me know via Discord or support@ralphjsmit.com.
+NB.: Please note that the media picker will now open this folder by default. However, users are still able to click to other folders and view them. If you have a need to disable this and only force a specific folder, please use the `->folder()` method (see above).
 
 #### Reordering multiple items in the media picker (V3)
 
@@ -736,6 +759,21 @@ To enable the warning box, set the `->unstoredUploadsWarning()` to `true`:
 ```php
 $plugin->unstoredUploadsWarning();
 ```
+
+### Showing media info when selecting multipleitems (NEW IN V3)
+            
+If you open the MediaPicker to select an item from the library, you will see that the right hand side of the modal shows information about the current selected media item. If you open the MediaPicker to select multiple items from the library, then you won't see this information at the right by default. There is room to only show info about a single media item, so it could be confusing to show info about a single item when the selection is bigger.
+
+However, an alternative approach could be to just allow multiple selection, and at the right show the details of the latest selected item. This type of behaviour is for example visible in the WordPress media library.
+
+You can enable the alternative approach by using the `->mediaInfoOnMultipleSelection()` method:
+
+```php
+$plugin
+    ->mediaInfoOnMultipleSelection()
+```
+
+This will now show the details of the latest selected item at the right, even when selecting multiple items.
 
 ### Adding a custom button label to the media picker (NEW IN V2)
 
