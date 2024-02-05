@@ -1,6 +1,6 @@
 ---
 name: Database Schedule
-slug: husam-database-schedule
+slug: husam-tariq-database-schedule
 author_slug: husam-tariq
 categories: [developer-tool, panel-builder, kit]
 description: Manage your Task Scheduling in a Filament interface and save schedules to the database.
