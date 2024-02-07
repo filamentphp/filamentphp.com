@@ -1042,6 +1042,13 @@ class ListUsers extends Component
     :page-options="[5, 10, 20, 50, 100, 'all']"
     :current-page-option-property="perPage"
 /&gt;
+</textarea></code></pre>
+<h2 id="displaying-links-to-the-first-and-the-last-page"><a class="heading-anchor" href="#displaying-links-to-the-first-and-the-last-page"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Displaying links to the first and the last page</h2>
+<p>Extreme links are the first and last page links. You can add them by passing the <code>extreme-links</code> attribute to the component:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-blade"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">x-filament::pagination</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">:paginator</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">$users</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #C792EA;">extreme-links</span></div><div class='line'><span style="color: #89DDFF;">/&gt;</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;x-filament::pagination
+    :paginator="$users"
+    extreme-links
+/&gt;
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/09-blade-components/02-pagination.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
@@ -1074,7 +1081,7 @@ class ListUsers extends Component
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-user-to-customize-the-number-of-items-per-page&#34;,&#34;text&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;title&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;allowing-the-user-to-customize-the-number-of-items-per-page&#34;,&#34;text&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;title&#34;:&#34;Allowing the user to customize the number of items per page&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;displaying-links-to-the-first-and-the-last-page&#34;,&#34;text&#34;:&#34;Displaying links to the first and the last page&#34;,&#34;title&#34;:&#34;Displaying links to the first and the last page&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -1086,6 +1093,13 @@ class ListUsers extends Component
                       <h3 class="astro-WSM47DKC">
                         <a href="#allowing-the-user-to-customize-the-number-of-items-per-page" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'allowing-the-user-to-customize-the-number-of-items-per-page' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Allowing the user to customize the number of items per page
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#displaying-links-to-the-first-and-the-last-page" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'displaying-links-to-the-first-and-the-last-page' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Displaying links to the first and the last page
                         </a>
                       </h3>
                       

@@ -101,7 +101,7 @@ The action also has a special version for use in tables:
 
 ## Installation guide: Filament Activitylog Pro
 
-Thank you for purchasing the Activitylog Pro plugin for Filament Admin!
+Thank you for purchasing the Activitylog Pro plugin for Filament!
 
 We tried to make the plugin as **easy-to-install** and **versatile** as possible. Nevertheless, if you still have a **question or a feature request**, please send an e-mail to **support@ralphjsmit.com**.
 
@@ -375,6 +375,28 @@ Timeline::make()
                     ->send();
             })
         ])
+    ]),
+```
+
+If you are mixing timeline items for multiple Eloquent models and you need access to the current underlying Spatie Activitylog model, you can use the `$arguments['activity_id']` parameter:
+
+```php
+Timeline::make()
+    ->itemActions('published', [
+        Forms\Components\Actions\Action::make('edit')
+            ->fillForm(function (array $arguments) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
+            ->form([
+                Forms\Components\TextInput::make('title')
+            ])
+            ->action(function (array $arguments, array $data) {
+                $activity = Activity::find($arguments['activity_id']);
+                
+                // ...
+            })
     ]),
 ```
 

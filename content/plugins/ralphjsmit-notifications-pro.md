@@ -123,7 +123,7 @@ In this guide I'll show you **how to install the library**, so you **can start u
 
 ### Prerequisites
 
-For these installation instructions to work, you'll need to have the [Filament Admin](https://filament-admin.com) package installed and configured.
+For these installation instructions to work, you'll need to have the [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) package installed and configured.
 
 
 The package is supported on both Laravel 8 and 9. Please be aware though that support for security fixes for Laravel 8 ends within a few months.
@@ -376,14 +376,17 @@ However, if the `StoresNotificationInDatabase` doesn't work for you, you can alw
 ```php
 class TestNotification extends Notification implements AsFilamentNotification
 {
+    use StoresNotificationInDatabase;
+    
     public function __construct(
         public User $user,
-        public string $message,
+        public string $customMessage,
     ) {}
     
     public static function toFilamentNotification(): FilamentNotification
     {
         return FilamentNotification::make()
+            ->message(fn (self $notification) => $notification->customMessage)
             ->form([
                 \Filament\Forms\Components\TextInput::make('message')
                     ->label('Message')
@@ -394,11 +397,11 @@ class TestNotification extends Notification implements AsFilamentNotification
                     ->label('User'),
             ])
             ->constructUsing(function(array $data) {
-                ['message' => $message, 'user_id_or_something' => $userId] = $data;
+                ['custom_message' => $message, 'user_id_or_something' => $userId] = $data;
 
                 return new static(
                     user: User::find($userId), 
-                    message: $message
+                    customMessage: $message
                 );
             });
     }
@@ -407,7 +410,9 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return [
             'user_id_or_something' => $this->user->id,
-            'message' => $this->message,
+            'custom_message' => $this->message,
+            // Some internal properties are required to store in the database. They will be provided by this method. 
+            ...$this->getInternalToArray(),
         ];
     }
     
@@ -415,6 +420,8 @@ class TestNotification extends Notification implements AsFilamentNotification
     {
         return ['database', 'mail'];
     }
+    
+    // Implement a `toMail()` method to match the methods in `via()`...
 }
 ```
 
@@ -482,7 +489,7 @@ return FilamentNotification::make()
     ->actions([
         Action::make('View')
             ->url("https://github.com", true)
-            ->icon('heroicon-o-arrows-expand'),
+            ->icon('heroicon-o-arrows-pointing-out'),
     ]);
 ```
 
@@ -548,7 +555,7 @@ class TestWorkflowFailedNotification extends Notification implements AsFilamentN
             ->actions([
                 Action::make('View')
                     ->url("https://github.com", true)
-                    ->icon('heroicon-o-arrows-expand'),
+                    ->icon('heroicon-o-arrows-pointing-out'),
             ]);
     }
 
