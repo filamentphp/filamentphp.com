@@ -55,14 +55,14 @@ class Markdown
             '/> \[\!TIP\]\s*\n> /',
             '/> \[\!IMPORTANT\]\s*\n> /',
             '/> \[\!WARNING\]\s*\n> /',
-            '/> \[\!CAUTION\]\s*\n> /'
+            '/> \[\!CAUTION\]\s*\n> /',
         ];
         $replacePatterns = [
-            "> 📝 **Note:** ",
-            "> 💡 **Tip:** ",
-            "> ❗ **Important:** ",
-            "> ⚠️ **Warning:** ",
-            "> ⚠️ **Caution:** "
+            '> 📝 **Note:** ',
+            '> 💡 **Tip:** ',
+            '> ❗ **Important:** ',
+            '> ⚠️ **Warning:** ',
+            '> ⚠️ **Caution:** ',
         ];
 
         // Perform the replacement
