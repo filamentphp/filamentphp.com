@@ -481,23 +481,6 @@ The package will automatically generate a description like this:
 
 As you can see, the package automatically formats the values of the attributes in a human-readable way. Strings are kept, booleans are converted to `'true'`/`'false'` in text, arrays are converted to JSON, enums are converted to either their name or to the `getLabel()` method if you implemented the `Filament\Support\Contracts\HasLabel` interface and dates are converted to a better format.
 
-##### Formatting attribute labels
-
-For getting the human-readable names of the attributes, the package will first automatically and intelligently check whether there is any other form component on the page that has a custom label for this attribute. For example, if you have a `DatePicker::make('some_date')->label('Published at')`, then the package will automatically use the label `'published at'`.
-
-You can also **provide custom labels** for attributes by using the `->attributeLabel()` or `->attributeLabels()` method:
-
-```php
-Timeline::make()
-  ->attributeLabel('some_date', 'published at')
-  ->attributeLabel('some_date', fn () => 'published at')
-  ->attributeLabels([
-      'some_boolean' => 'is hidden from SEO',
-  ]),
-```
-
-Finally, if there is still no attribute label found, the package will automatically try to convert the attribute name to a human-readable label. For example, `some_date` will be converted to `some date`.
-
 #### Using custom casts
 
 If you have custom casts on your Eloquent, then the Spatie Activitylog will automatically log updates to casted attributes. However, the way these values are stored in the database or displayed might not always work immediately satisfactory out-of-the-box. 
@@ -573,6 +556,37 @@ Timeline::make()
         MoneyCast::class => fn (?Money $value) => $value?->formatWithoutZeroes()),
         CurrencyCast::class => fn (?Currency $value) => $value?->code()),
     ]),   
+```
+
+##### Formatting attribute labels
+
+For getting the human-readable names of the attributes, the package will first automatically and intelligently check whether there is any other form component on the page that has a custom label for this attribute. For example, if you have a `DatePicker::make('some_date')->label('Published at')`, then the package will automatically use the label `'published at'`.
+
+You can also **provide custom labels** for attributes by using the `->attributeLabel()` or `->attributeLabels()` method:
+
+```php
+Timeline::make()
+  ->attributeLabel('some_date', 'published at')
+  ->attributeLabel('some_date', fn () => 'published at')
+  ->attributeLabels([
+      'some_boolean' => 'is hidden from SEO',
+  ]),
+```
+
+Finally, if there is still no attribute label found, the package will automatically try to convert the attribute name to a human-readable label. For example, `some_date` will be converted to `some date`.
+
+##### Customizing model labels
+
+By default, when creating descriptions the package will automatically generate model labels based on the Eloquent model. If you use the timeline in a panel, it will also first check if there's an associated resource. If yes, then the `ResourceName::getModelLabel()` method is used as the model label.
+
+The resulting model label is then lower-cased and used inside the automatically generated descriptions. If you want to provide a custom model label, or if the lower-casing doesn't work for you (e.g. in languages like German), then you can use the `->modelLabel()` and `->modelLabels()` method:
+
+```php
+Timeline::make()
+    ->modelLabel(User::class, 'Benutzer')
+    ->modelLabels([
+        Post::class => 'Beitrag',
+    ]),
 ```
 
 #### Activity batches
