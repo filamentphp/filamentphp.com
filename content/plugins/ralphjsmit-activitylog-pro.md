@@ -498,6 +498,83 @@ Timeline::make()
 
 Finally, if there is still no attribute label found, the package will automatically try to convert the attribute name to a human-readable label. For example, `some_date` will be converted to `some date`.
 
+#### Using custom casts
+
+If you have custom casts on your Eloquent, then the Spatie Activitylog will automatically log updates to casted attributes. However, the way these values are stored in the database or displayed might not always work immediately satisfactory out-of-the-box. 
+
+First, in order to make the cast formatting work better, make sure that all attributes with custom casts are in the `useAttributeRawValues()` method in the `getActivityLogOptions()`:
+
+```php
+class Order extends Model
+{
+    use LogsActivity;
+    
+    protected $casts = [
+        'status' => SomeEnum::class,  // Simple enum casts or other native Laravel casts will work right away.
+        'amount' => MoneyCast::class, // Custom casts should be added in the `useAttributeRawValues()` array.
+    ];
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->useAttributeRawValues(['amount'])
+            ->logAll();
+    }
+}
+```
+
+> Explanation: for example, consider that you have an arrayable `Money` object as a cast on your Eloquent model. By default, Spatie Activitylog will store the value from the arrayable Money object as a change (so an array as JSON). However, it could be that the database actually contains just an integer value and not a JSON array. Therefore, it is recommended to store custom casts as raw values in the database.
+
+##### Formatting by attribute
+
+Next, the above should work to automatically cast model values to the correct types. Next, you can provide custom callbacks to format specific attributes in the timeline before they appear:
+
+```php
+Timeline::make()
+  ->attributeLabel('amount', 'purchase amount')
+  ->attributeValue('amount', fn (?Money $value) => $value?->formatWithoutZeroes())
+    // Make sure to also account for `null` values...
+```
+                 
+You can also use the `attributeValues()` to provide an array of formatting callbacks:
+
+```php
+Timeline::make()
+    ->attributeValues([
+        'amount' => fn (?Money $value) => $value?->formatWithoutZeroes(),
+        // ...
+    ]),
+```
+
+These methods can also be scoped to specific Eloquent models if you prefer, similar to the other methods in the package. This can be handy when configuring these callbacks globally.
+
+##### Formatting by cast class
+                                
+Alternatively, it can also be handy sometimes to provide a formatting callback for a specific cast class. For example, if you have a `Money` object in multiple models on different attribute names. You can use the `attributeCast()` method to provide a formatting calback that will receive the value:
+
+```php
+Timeline::make()
+    ->attributeCast(MoneyCast::class, fn (?Money $value) => $value?->formatWithoutZeroes()),
+```
+
+This method can come in handy when globally configuring the timeline:
+
+```php
+Timeline::configureUsing(function (Timeline $timeline) {
+    return $timeline->attributeCast(MoneyCast::class, fn (?Money $value) => $value?->formatWithoutZeroes());   
+})
+```
+
+Again, you may also use the `attributeCasts()` method to provide formatting callbacks using an array:
+
+```php
+Timeline::make()
+    ->attributeCasts([
+        MoneyCast::class => fn (?Money $value) => $value?->formatWithoutZeroes()),
+        CurrencyCast::class => fn (?Currency $value) => $value?->code()),
+    ]),   
+```
+
 #### Activity batches
 
 By default, if the package detects that an event belongs to a batch, it will **display the batch** in a compact, **inline timeline**. The inline timeline will be 'connected' to the "main" timeline. This looks nice and can be very useful to your users to view related events together.
