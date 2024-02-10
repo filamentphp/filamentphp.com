@@ -77,7 +77,7 @@
             and is
             {{-- format-ignore-start --}}
             <a
-                href="mailto:hey@zepfietje.com"
+                href="https://whizzy.dev/app/calls/create?ref=filamentphp.com"
                 target="_blank"
             >available to answer your support questions</a>
             {{-- format-ignore-end --}}
@@ -105,7 +105,7 @@
             {{-- Call Link --}}
             <div class="flex">
                 <a
-                    href="mailto:hey@zepfietje.com"
+                    href="https://whizzy.dev/app/calls/create?ref=filamentphp.com"
                     class="group/call relative z-0 grid h-12 w-60 rounded-full bg-dolphin/20 px-1.5 transition duration-300 hover:bg-dolphin/30"
                     target="_blank"
                     x-on:mouseenter="book_is_hovered = true"
