@@ -68,9 +68,12 @@
             title="Lead UI Designer & Developer"
         >
             <strong>Zep</strong>
-            is a full-stack developer and freelance consultant, specializing in
-            UI design, but also offering a wealth of development experience to
-            the Filament team. He's based in
+            is the lead UI designer of Filament and founder of
+            {{-- format-ignore-start --}}
+            <a href="https://whizzy.dev?ref=filamentphp.com">Whizzy</a>.
+            {{-- format-ignore-end --}}
+            In addition to his design skills, he brings a wealth of development
+            experience to the Filament team. He's based in
             {{-- format-ignore-start --}}
             <strong>Eindhoven, Netherlands</strong>,
             {{-- format-ignore-end --}}
