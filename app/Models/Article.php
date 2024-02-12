@@ -36,6 +36,7 @@ class Article extends Model implements Starrable
         $table->string('title');
         $table->string('type_slug');
         $table->json('versions')->nullable();
+        $table->string('canonical_url')->nullable();
     }
 
     public function author(): BelongsTo
@@ -112,6 +113,7 @@ class Article extends Model implements Starrable
             'categories' => $this->categories,
             'type' => $this->type_slug,
             'versions' => $this->versions,
+            'canonical_url' => $this->canonical_url,
         ];
     }
 }
