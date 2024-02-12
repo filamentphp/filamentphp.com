@@ -12,4 +12,5 @@ has_dark_theme: true
 has_translations: true
 versions: [3]
 publish_date: 2023-12-08
+docs_url: https://ralphjsmit.com/content/products/filament-pulse.md
 ---
