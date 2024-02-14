@@ -13,7 +13,7 @@ has_dark_theme: true
 has_translations: true
 is_lemon_squeezy_embedded: true
 is_presale: false
-price: $79.00
+price: $69.00
 versions: [3]
 publish_date: 2024-02-14
 ---
