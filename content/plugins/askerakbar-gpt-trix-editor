@@ -1,6 +1,6 @@
 ---
 name: GPT Trix Editor
-slug: gpt-trix-editor
+slug: askerakbar-gpt-trix-editor
 author_slug: asker-akbar
 categories: [form-builder, form-field]
 description: The GPT Trix Editor is a form field component for the Filament PHP framework that enhances the Trix editor with OpenAI GPT features.
