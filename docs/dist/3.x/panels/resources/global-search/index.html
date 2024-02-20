@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -1053,6 +1069,17 @@ public function panel(Panel $panel): Panel
         // ...
         -&gt;globalSearchKeyBindings(['command+k', 'ctrl+k']);
 }
+</textarea></code></pre>
+<h2 id="configuring-the-global-search-debounce"><a class="heading-anchor" href="#configuring-the-global-search-debounce"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Configuring the global search debounce</h2>
+<p>Global search has a default debounce time of 500ms, to limit the number of requests that are made while the user is typing. You can alter this by using the <code>globalSearchDebounce()</code> method in the <a href="configuration">configuration</a>:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Panel</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">panel</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Panel</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Panel</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">panel</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">globalSearchDebounce</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">750ms</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Panel;
+
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        // ...
+        -&gt;globalSearchDebounce('750ms');
+}
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/03-resources/08-global-search.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">
               Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-WSM47DKC">GitHub discussion</a>
           </p>
@@ -1085,7 +1112,7 @@ public function panel(Panel $panel): Panel
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-global-search-result-titles&#34;,&#34;text&#34;:&#34;Setting global search result titles&#34;,&#34;title&#34;:&#34;Setting global search result titles&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;globally-searching-across-multiple-columns&#34;,&#34;text&#34;:&#34;Globally searching across multiple columns&#34;,&#34;title&#34;:&#34;Globally searching across multiple columns&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-extra-details-to-global-search-results&#34;,&#34;text&#34;:&#34;Adding extra details to global search results&#34;,&#34;title&#34;:&#34;Adding extra details to global search results&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-global-search-result-urls&#34;,&#34;text&#34;:&#34;Customizing global search result URLs&#34;,&#34;title&#34;:&#34;Customizing global search result URLs&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-actions-to-global-search-results&#34;,&#34;text&#34;:&#34;Adding actions to global search results&#34;,&#34;title&#34;:&#34;Adding actions to global search results&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls-from-global-search-actions&#34;,&#34;text&#34;:&#34;Opening URLs from global search actions&#34;,&#34;title&#34;:&#34;Opening URLs from global search actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dispatching-livewire-events-from-global-search-actions&#34;,&#34;text&#34;:&#34;Dispatching Livewire events from global search actions&#34;,&#34;title&#34;:&#34;Dispatching Livewire events from global search actions&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;limiting-the-number-of-global-search-results&#34;,&#34;text&#34;:&#34;Limiting the number of global search results&#34;,&#34;title&#34;:&#34;Limiting the number of global search results&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;disabling-global-search&#34;,&#34;text&#34;:&#34;Disabling global search&#34;,&#34;title&#34;:&#34;Disabling global search&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-global-search-keybindings&#34;,&#34;text&#34;:&#34;Registering global search keybindings&#34;,&#34;title&#34;:&#34;Registering global search keybindings&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;setting-global-search-result-titles&#34;,&#34;text&#34;:&#34;Setting global search result titles&#34;,&#34;title&#34;:&#34;Setting global search result titles&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;globally-searching-across-multiple-columns&#34;,&#34;text&#34;:&#34;Globally searching across multiple columns&#34;,&#34;title&#34;:&#34;Globally searching across multiple columns&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-extra-details-to-global-search-results&#34;,&#34;text&#34;:&#34;Adding extra details to global search results&#34;,&#34;title&#34;:&#34;Adding extra details to global search results&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;customizing-global-search-result-urls&#34;,&#34;text&#34;:&#34;Customizing global search result URLs&#34;,&#34;title&#34;:&#34;Customizing global search result URLs&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;adding-actions-to-global-search-results&#34;,&#34;text&#34;:&#34;Adding actions to global search results&#34;,&#34;title&#34;:&#34;Adding actions to global search results&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;opening-urls-from-global-search-actions&#34;,&#34;text&#34;:&#34;Opening URLs from global search actions&#34;,&#34;title&#34;:&#34;Opening URLs from global search actions&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;dispatching-livewire-events-from-global-search-actions&#34;,&#34;text&#34;:&#34;Dispatching Livewire events from global search actions&#34;,&#34;title&#34;:&#34;Dispatching Livewire events from global search actions&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;limiting-the-number-of-global-search-results&#34;,&#34;text&#34;:&#34;Limiting the number of global search results&#34;,&#34;title&#34;:&#34;Limiting the number of global search results&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;disabling-global-search&#34;,&#34;text&#34;:&#34;Disabling global search&#34;,&#34;title&#34;:&#34;Disabling global search&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-global-search-keybindings&#34;,&#34;text&#34;:&#34;Registering global search keybindings&#34;,&#34;title&#34;:&#34;Registering global search keybindings&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;configuring-the-global-search-debounce&#34;,&#34;text&#34;:&#34;Configuring the global search debounce&#34;,&#34;title&#34;:&#34;Configuring the global search debounce&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#overview" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -1156,6 +1183,13 @@ public function panel(Panel $panel): Panel
                       <h3 class="astro-WSM47DKC">
                         <a href="#registering-global-search-keybindings" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'registering-global-search-keybindings' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering global search keybindings
+                        </a>
+                      </h3>
+                      
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
+                        <a href="#configuring-the-global-search-debounce" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'configuring-the-global-search-debounce' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Configuring the global search debounce
                         </a>
                       </h3>
                       
