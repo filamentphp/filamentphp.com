@@ -10,7 +10,6 @@ github_repository: naturalGroove/laravel-filament-gallery
 has_dark_theme: true
 has_translations: true
 versions: [2, 3]
-price: $49.00
 anystack_id: 9a322ecd-11a0-4ffc-9bee-2d7ad5ce854b
-publish_date: 2024-01-22
+publish_date: 2024-02-19
 ---
