@@ -92,12 +92,10 @@
     <body
         class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
     >
-        @if ($docSearch)
-            <div
-                id="docsearch"
-                class="hidden"
-            ></div>
-        @endif
+        <div
+            id="docsearch"
+            class="hidden"
+        ></div>
 
         {{ $slot }}
     </body>
