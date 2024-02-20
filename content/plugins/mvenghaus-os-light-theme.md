@@ -11,5 +11,5 @@ github_repository: mvenghaus/filament-theme-os-light
 has_dark_theme: false
 has_translations: true
 versions: [3]
-publish_date: 2024-01-13
+publish_date: 2024-02-19
 ---
