@@ -12,5 +12,5 @@ docs_url: https://raw.githubusercontent.com/ysfkaya/filament-menu-manager-docs/m
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-01-17
+publish_date: 2024-02-19
 ---
