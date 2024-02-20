@@ -220,6 +220,12 @@
                     Import action
                   </div>
                 </a>
+              </li><li class="relative">
+                <a href="/docs/3.x/actions/prebuilt-actions/export" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                  <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">
+                    Export action
+                  </div>
+                </a>
               </li>
           </ul>
         </li><li>
@@ -802,6 +808,12 @@
                     Import action
                   </div>
                 </a>
+              </li><li class="relative">
+                <a href="/docs/3.x/actions/prebuilt-actions/export" class="group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200 text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white">
+                  <div class="transition duration-300 ease-out group-hover/navigation-mini-link:translate-x-1">
+                    Export action
+                  </div>
+                </a>
               </li>
           </ul>
         </li><li>
@@ -955,7 +967,7 @@ it('can send invoices to the primary contact by default', function () {
 });
 </textarea></code></pre>
 <h2 id="action-state"><a class="heading-anchor" href="#action-state"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Action state</h2>
-<p>To ensure that an action exists or doesn&#39;t in a table, you can use the <code>assertActionExists()</code> or  <code>assertActionDoesNotExist()</code> method:</p>
+<p>To ensure that an action exists or doesn&#39;t, you can use the <code>assertActionExists()</code> or  <code>assertActionDoesNotExist()</code> method:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #C792EA;">function</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Pest</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Livewire</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">livewire</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #82AAFF;">it</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">can send but not unsend invoices</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Invoice</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">factory</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">create</span><span style="color: #89DDFF;">();</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">livewire</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">EditInvoice</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">invoice</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">invoice</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionExists</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">send</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">assertActionDoesNotExist</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">unsend</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">use function Pest\Livewire\livewire;
 
 it('can send but not unsend invoices', function () {

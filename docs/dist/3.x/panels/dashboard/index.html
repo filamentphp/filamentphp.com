@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -1143,7 +1159,7 @@ public function panel(Panel $panel): Panel
 <p>You may also customize the title of the dashboard by overriding the <code>$title</code> property:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">string</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Finance dashboard</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?string $title = 'Finance dashboard';
 </textarea></code></pre>
-<p>The primary dashboard shown to a user is the first one they have access to (controlled by <code>canView()</code>, see above), according to the defined sort order.</p>
+<p>The primary dashboard shown to a user is the first one they have access to (controlled by <a href="pages#authorization"><code>canAccess()</code> method</a>), according to the defined navigation sort order.</p>
 <p>The default sort order for dashboards is <code>-2</code>. You can control the sort order of custom dashboards with <code>$navigationSort</code>:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">?</span><span style="color: #F78C6C;">int</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">navigationSort </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">15</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected static ?int $navigationSort = 15;
 </textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/3.x/packages/panels/docs/05-dashboard.md" class="text-sm astro-WSM47DKC" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-WSM47DKC">

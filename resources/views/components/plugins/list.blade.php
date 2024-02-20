@@ -11,6 +11,14 @@
                 }
             })
 
+            // Reset the page number on category, version, price or sort change
+            $watch(
+                '[selectedCategories.size, selectedVersion, selectedPrice, selectedSort, features]',
+                () => {
+                    currentPage = 1
+                },
+            )
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['name', 'description', 'github_repository', 'author.name'],
@@ -47,20 +55,29 @@
     "
     x-data="{
         searchEngine: null,
-        search: '',
+        search: $queryString('').usePush().as('search'),
         showCategories: false,
         selectedCategories: new Set(),
-        selectedVersion: '3',
-        selectedPrice: 'All',
-        selectedSort: 'Newest',
-        features: {
+        selectedVersion: $queryString('3').usePush().as('version'),
+        selectedPrice: $queryString('All').usePush().as('price'),
+        selectedSort: $queryString('Newest').usePush().as('sort'),
+        features: $queryString({
             dark_theme: false,
             translations: false,
-        },
+        })
+            .usePush()
+            .as('features'),
 
         plugins: @js($plugins),
 
-        currentPage: 1,
+        _currentPage: $queryString(1).usePush().as('page'),
+        get currentPage() {
+            return +this._currentPage
+        },
+        set currentPage(value) {
+            this._currentPage = value
+        },
+
         perPage: 24,
         totalItems: 0,
         get totalPages() {

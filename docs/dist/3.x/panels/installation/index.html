@@ -257,6 +257,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -889,6 +897,14 @@
             
           </ul>
         </li><li>
+          <a href="/docs/3.x/panels/clusters" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+            <h2>Clusters</h2>
+          </a>
+
+          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
+            
+          </ul>
+        </li><li>
           <a href="/docs/3.x/panels/tenancy" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
             <h2>Multi-tenancy</h2>
           </a>
@@ -964,7 +980,7 @@ The Livewire team have done a great job in making it stable, but it was a comple
 <p>If you are upgrading from Filament v2, please review the <a href="upgrade-guide">upgrade guide</a>.</p>
 </blockquote>
 <p>Install the Filament Panel Builder by running the following commands in your Laravel project directory:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/filament:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.1</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--panels</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/filament:"^3.1" -W
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">require</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament/filament:</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">^3.2</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-W</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--panels</span></div><textarea data-torchlight-original="true" style="display: none !important;">composer require filament/filament:"^3.2" -W
 
 php artisan filament:install --panels
 </textarea></code></pre>
@@ -980,6 +996,21 @@ php artisan filament:install --panels
 <p>Not sure where to start? Review the <a href="getting-started">Getting Started guide</a> to learn how to build a complete Filament admin panel.</p>
 <h2 id="using-other-filament-packages"><a class="heading-anchor" href="#using-other-filament-packages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Using other Filament packages</h2>
 <p>The Filament Panel Builder pre-installs the <a href="/docs/forms">Form Builder</a>, <a href="/docs/tables">Table Builder</a>, <a href="/docs/notifications">Notifications</a>, <a href="/docs/actions">Actions</a>, <a href="/docs/infolists">Infolists</a>, and <a href="/docs/widgets">Widgets</a> packages. No other installation steps are required to use these packages within a panel.</p>
+<h2 id="improving-filament-panel-performance"><a class="heading-anchor" href="#improving-filament-panel-performance"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Improving Filament panel performance</h2>
+<h3 id="caching-blade-icons"><a class="heading-anchor" href="#caching-blade-icons"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Caching Blade Icons</h3>
+<p>You may wish to consider running <code>php artisan icons:cache</code> locally, and also in your deployment script. This is because Filament uses the <a href="https://blade-ui-kit.com/blade-icons">Blade Icons</a> package, which can be much more performant when cached.</p>
+<h3 id="caching-filament-components"><a class="heading-anchor" href="#caching-filament-components"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Caching Filament components</h3>
+<p>You may also wish to consider running <code>php artisan filament:cache-components</code> in your deployment script, especially if you have large numbers of components (resources, pages, widgets, relation managers, custom Livewire components, etc.). This will create cache files in the <code>bootstrap/cache/filament</code> directory of your application, which contain indexes for each type of component. This can significantly improve the performance of Filament in some apps, as it reduces the number of files that need to be scanned and auto-discovered for components.</p>
+<p>However, if you are actively developing your app locally, you should avoid using this command, as it will prevent any new components from being discovered until the cache is cleared or rebuilt.</p>
+<p>You can clear the cache at any time without rebuilding it by running <code>php artisan filament:clear-cached-components</code>.</p>
+<h3 id="enabling-opcache-on-your-server"><a class="heading-anchor" href="#enabling-opcache-on-your-server"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Enabling OPcache on your server</h3>
+<p>From the <a href="https://forge.laravel.com/docs/servers/php.html#opcache">Laravel Forge documentation</a>:</p>
+<blockquote>
+<p>Optimizing the PHP OPcache for production will configure OPcache to store your compiled PHP code in memory to greatly improve performance.</p>
+</blockquote>
+<p>Please use a search engine to find the relevant OPcache setup instructions for your environment.</p>
+<h3 id="optimizing-your-laravel-app"><a class="heading-anchor" href="#optimizing-your-laravel-app"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Optimizing your Laravel app</h3>
+<p>You should also consider optimizing your Laravel app for production by running <code>php artisan optimize</code> in your deployment script. This will cache the configuration files and routes.</p>
 <h2 id="deploying-to-production"><a class="heading-anchor" href="#deploying-to-production"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Deploying to production</h2>
 <h3 id="allowing-users-to-access-a-panel"><a class="heading-anchor" href="#allowing-users-to-access-a-panel"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Allowing users to access a panel</h3>
 <p>By default, all <code>User</code> models can access Filament locally. However, when deploying to production, you must update your <code>App\Models\User.php</code> to implement the <code>FilamentUser</code> contract — ensuring that only the correct users can access your panel:</p>
@@ -1005,8 +1036,6 @@ class User extends Authenticatable implements FilamentUser
 <p>If you don&#39;t complete these steps, a 403 Forbidden error will be returned when accessing the app in production.</p>
 </blockquote>
 <p>Learn more about <a href="users">users</a>.</p>
-<h3 id="caching-blade-icons"><a class="heading-anchor" href="#caching-blade-icons"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Caching Blade Icons</h3>
-<p>You may wish to consider using <code>php artisan icons:cache</code> in your deployment process, as Filament uses the <a href="https://blade-ui-kit.com/blade-icons">Blade Icons</a> package, which can be much more performant when cached. This is very hardware-dependant though, and many servers do not require this command for Filament to run smoothly.</p>
 <h2 id="publishing-configuration"><a class="heading-anchor" href="#publishing-configuration"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Publishing configuration</h2>
 <p>You can publish the Filament package configuration (if needed) using the following command:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor:publish</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--tag=filament-config</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan vendor:publish --tag=filament-config
@@ -1063,7 +1092,7 @@ php artisan filament:upgrade
         <nav aria-labelledby="on-this-page-title" class="mb-9 w-56 astro-WSM47DKC">
           <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-WSM47DKC">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;requirements&#34;,&#34;text&#34;:&#34;Requirements&#34;,&#34;title&#34;:&#34;Requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;installation&#34;,&#34;text&#34;:&#34;Installation&#34;,&#34;title&#34;:&#34;Installation&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;create-a-user&#34;,&#34;text&#34;:&#34;Create a user&#34;,&#34;title&#34;:&#34;Create a user&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-other-filament-packages&#34;,&#34;text&#34;:&#34;Using other Filament packages&#34;,&#34;title&#34;:&#34;Using other Filament packages&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;deploying-to-production&#34;,&#34;text&#34;:&#34;Deploying to production&#34;,&#34;title&#34;:&#34;Deploying to production&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;allowing-users-to-access-a-panel&#34;,&#34;text&#34;:&#34;Allowing users to access a panel&#34;,&#34;title&#34;:&#34;Allowing users to access a panel&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;caching-blade-icons&#34;,&#34;text&#34;:&#34;Caching Blade Icons&#34;,&#34;title&#34;:&#34;Caching Blade Icons&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;publishing-configuration&#34;,&#34;text&#34;:&#34;Publishing configuration&#34;,&#34;title&#34;:&#34;Publishing configuration&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;publishing-translations&#34;,&#34;text&#34;:&#34;Publishing translations&#34;,&#34;title&#34;:&#34;Publishing translations&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading&#34;,&#34;text&#34;:&#34;Upgrading&#34;,&#34;title&#34;:&#34;Upgrading&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-WSM47DKC" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;requirements&#34;,&#34;text&#34;:&#34;Requirements&#34;,&#34;title&#34;:&#34;Requirements&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;installation&#34;,&#34;text&#34;:&#34;Installation&#34;,&#34;title&#34;:&#34;Installation&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;create-a-user&#34;,&#34;text&#34;:&#34;Create a user&#34;,&#34;title&#34;:&#34;Create a user&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;using-other-filament-packages&#34;,&#34;text&#34;:&#34;Using other Filament packages&#34;,&#34;title&#34;:&#34;Using other Filament packages&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;improving-filament-panel-performance&#34;,&#34;text&#34;:&#34;Improving Filament panel performance&#34;,&#34;title&#34;:&#34;Improving Filament panel performance&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;caching-blade-icons&#34;,&#34;text&#34;:&#34;Caching Blade Icons&#34;,&#34;title&#34;:&#34;Caching Blade Icons&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;caching-filament-components&#34;,&#34;text&#34;:&#34;Caching Filament components&#34;,&#34;title&#34;:&#34;Caching Filament components&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;enabling-opcache-on-your-server&#34;,&#34;text&#34;:&#34;Enabling OPcache on your server&#34;,&#34;title&#34;:&#34;Enabling OPcache on your server&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;optimizing-your-laravel-app&#34;,&#34;text&#34;:&#34;Optimizing your Laravel app&#34;,&#34;title&#34;:&#34;Optimizing your Laravel app&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;deploying-to-production&#34;,&#34;text&#34;:&#34;Deploying to production&#34;,&#34;title&#34;:&#34;Deploying to production&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;allowing-users-to-access-a-panel&#34;,&#34;text&#34;:&#34;Allowing users to access a panel&#34;,&#34;title&#34;:&#34;Allowing users to access a panel&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;publishing-configuration&#34;,&#34;text&#34;:&#34;Publishing configuration&#34;,&#34;title&#34;:&#34;Publishing configuration&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;publishing-translations&#34;,&#34;text&#34;:&#34;Publishing translations&#34;,&#34;title&#34;:&#34;Publishing translations&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;upgrading&#34;,&#34;text&#34;:&#34;Upgrading&#34;,&#34;title&#34;:&#34;Upgrading&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
                   <li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
                         <a href="#requirements" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'requirements' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
@@ -1094,6 +1123,31 @@ php artisan filament:upgrade
                       
                     </li><li class="astro-WSM47DKC">
                       <h3 class="astro-WSM47DKC">
+                        <a href="#improving-filament-panel-performance" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'improving-filament-panel-performance' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                          Improving Filament panel performance
+                        </a>
+                      </h3>
+                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-WSM47DKC">
+                          <li class="astro-WSM47DKC">
+                              <a href="#caching-blade-icons" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'caching-blade-icons' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Caching Blade Icons
+                              </a>
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#caching-filament-components" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'caching-filament-components' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Caching Filament components
+                              </a>
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#enabling-opcache-on-your-server" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'enabling-opcache-on-your-server' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Enabling OPcache on your server
+                              </a>
+                            </li><li class="astro-WSM47DKC">
+                              <a href="#optimizing-your-laravel-app" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'optimizing-your-laravel-app' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                                Optimizing your Laravel app
+                              </a>
+                            </li>
+                        </ol>
+                    </li><li class="astro-WSM47DKC">
+                      <h3 class="astro-WSM47DKC">
                         <a href="#deploying-to-production" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'deploying-to-production' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Deploying to production
                         </a>
@@ -1102,10 +1156,6 @@ php artisan filament:upgrade
                           <li class="astro-WSM47DKC">
                               <a href="#allowing-users-to-access-a-panel" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'allowing-users-to-access-a-panel' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Allowing users to access a panel
-                              </a>
-                            </li><li class="astro-WSM47DKC">
-                              <a href="#caching-blade-icons" class="inline-block transition duration-300 ease-out astro-WSM47DKC" x-bind:class="current == 'caching-blade-icons' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
-                                Caching Blade Icons
                               </a>
                             </li>
                         </ol>
