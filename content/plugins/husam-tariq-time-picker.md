@@ -1,6 +1,6 @@
 ---
 name: Time picker
-slug: husam-time-picker
+slug: husam-tariq-time-picker
 author_slug: husam-tariq
 categories: [form-builder, form-field]
 description: Adds a Time picker field for your panel or form.

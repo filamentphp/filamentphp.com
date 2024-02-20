@@ -243,11 +243,6 @@ class BookImporter extends Importer
 ```
 
 The `getColumns()` method is where you'll be spending most of your time within your `Importer` class.
-This method works similarly to the `form()`, `table()`, and `infolist()` methods on the
-`Resource` class; at its most simple, the `getColumns()` method returns a list of columns to expect
-from the uploaded CSV. When you're developing the import system for a given model's CSV files, 
-
-The `getColumns()` method is where you'll be spending most of your time within your `Importer` class.
 It has a very similar-feeling API to the `form()` and `table()` method on the `Resource` class, but
 instead of defining fields and columns to appear in the Filament interface, it defines the columns to
 *expect* from the uploaded CSV and describes how to handle the data within them. We'll touch more
