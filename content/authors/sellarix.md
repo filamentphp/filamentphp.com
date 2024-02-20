@@ -1,7 +1,7 @@
 ---
 name: Sellarix
 slug: sellarix
-github_url: https://github.com/sellarix/laravel-blog
+github_url: https://github.com/sellarix
 linkedin_url: https://www.linkedin.com/company/sellarix-ltd/
 ---
 
