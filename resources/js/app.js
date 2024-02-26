@@ -9,6 +9,8 @@ import MiniSearch from 'minisearch'
 import * as rive from '@rive-app/canvas'
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
+import docsearch from '@docsearch/js'
+import '../../docs/src/styles/docsearch.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -41,3 +43,15 @@ window.MiniSearch = MiniSearch
 Alpine.store('sidebar', { isOpen: false })
 
 Alpine.plugin(Tooltip)
+
+// Docsearch
+docsearch({
+    container: '#docsearch',
+    appId: 'LMIKXMDI4P',
+    apiKey: '1e3d12b0b9c3a4db16cd896e83b9efa0',
+    indexName: 'filamentadmin',
+    placeholder: 'Search docs',
+    searchParameters: {
+        facetFilters: ['version:3.x'],
+    },
+})

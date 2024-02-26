@@ -30,49 +30,65 @@
             avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
             name="Dan Harrin"
             title="Co-Founder & Lead Developer"
-            website="https://danharrin.com"
+            website="https://danharrin.com?ref=filamentphp.com"
             twitter="https://twitter.com/danjharrin"
             github="https://github.com/danharrin"
-        />
-        <x-team.member
-            avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
-            name="Ryan Chandler"
-            title="Co-Founder"
-            website="https://ryangjchandler.co.uk"
-            twitter="https://twitter.com/ryangjchandler"
-            github="https://github.com/ryangjchandler"
         />
         <x-team.member
             avatar="https://avatars.githubusercontent.com/u/44533235?v=4"
             name="Zep Fietje"
             title="Lead UI Designer & Developer"
-            website="https://zepfietje.com"
+            website="https://zepfietje.com?ref=filamentphp.com"
             twitter="https://twitter.com/zepfietje"
             github="https://github.com/zepfietje"
         />
         <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/41837763?v=4"
+            name="Ryan Chandler"
+            title="Co-Founder"
+            website="https://ryangjchandler.co.uk?ref=filamentphp.com"
+            twitter="https://twitter.com/ryangjchandler"
+            github="https://github.com/ryangjchandler"
+        />
+        <x-team.member
             avatar="https://avatars.githubusercontent.com/u/22632550?v=4"
             name="Dennis Koch"
-            title="Developer & Community Manager"
-            website="https://pixelarbeit.de"
+            title="Community Manager & Developer"
+            website="https://pixelarbeit.de?ref=filamentphp.com"
             twitter="https://twitter.com/pixelarbeit"
             github="https://github.com/pxlrbt"
         />
         <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/11881203?v=4"
+            name="Alex Six"
+            title="Head of Developer Relations"
+            website="https://alexandersix.com?ref=filamentphp.com"
+            twitter="https://twitter.com/alexandersix_"
+            github="https://github.com/alexandersix"
+        />
+        <x-team.member
             avatar="https://avatars.githubusercontent.com/u/3596800?v=4"
             name="Adam Weston"
-            title="Developer & Plugin Support"
-            website="https://aw.codes"
+            title="Head of Plugin Support & Developer"
+            website="https://aw.codes?ref=filamentphp.com"
             twitter="https://twitter.com/awcodes1"
             github="https://github.com/awcodes"
         />
         <x-team.member
             avatar="https://avatars.githubusercontent.com/u/15275787?v=4"
             name="Hassan Zahirnia"
-            title="Lead UI/UX Marketing Designer"
-            website="https://zahirnia.com/"
+            title="Lead Marketing Designer"
+            website="https://zahirnia.com?ref=filamentphp.com"
             twitter="https://twitter.com/HassanZahirnia"
             github="https://github.com/HassanZahirnia"
+        />
+        <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/14329460?v=4"
+            name="Guilherme Saade"
+            title="Plugin Support & Developer"
+            website="https://saade.dev?ref=filamentphp.com"
+            twitter="https://twitter.com/saadeguilherme"
+            github="https://github.com/saade"
         />
     </div>
 </section>
