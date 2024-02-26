@@ -5,8 +5,9 @@ slug: heloufir-timesheet
 author_slug: heloufir
 categories: [widget]
 description: Filament Timesheet is your indispensable companion for seamlessly incorporating advanced timesheet capabilities into your project management toolkit.
-discord_url: 
-docs_url: https://gist.githubusercontent.com/heloufir/e970df4aef9852a2df16007e5b29043a/raw/479b257449503d69a6439fb8e3305e9af52cf0c1/filament-timesheet-docs.md
+discord_url: https://discord.com/channels/883083792112300104/1211662145746374736
+docs_url: https://gist.githubusercontent.com/heloufir/e970df4aef9852a2df16007e5b29043a/raw/filament-timesheet-docs.md
+url: https://filament-timesheet-docs.heloufir.dev
 github_repository: heloufir/filament-timesheet
 has_dark_theme: true
 has_translations: true
