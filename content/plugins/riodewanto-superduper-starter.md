@@ -1,6 +1,6 @@
 ---
 name: SuperDuper Starter Kit
-slug: riodewanto-superduper-filament-starter
+slug: riodewanto-superduper-starter
 author_slug: riodewanto
 categories: [developer-tool, kit, spatie, theme]
 description: A start point to kickstart your next app. Features a Custom Theme, Mail Configuration, Shield and Exception plugin, and more!
