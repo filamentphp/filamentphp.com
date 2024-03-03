@@ -200,6 +200,10 @@ use Filament\MinimalTheme;
 MinimalTheme::configure();
 ```
 
+## Changelog
+
+Release notes of updates to the plugin can be viewed on [Privato](https://filament.privato.pub/minimal-theme/changelog).
+
 ## Issues
 
 If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
