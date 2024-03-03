@@ -1,5 +1,5 @@
 ---
-name: Filament Ace Editor
+name: Ace Editor
 slug: riodewanto-filament-ace-editor
 author_slug: riodewanto
 categories: [developer-tool, kit, form-editor, form-field]
