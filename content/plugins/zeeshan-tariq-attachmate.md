@@ -10,5 +10,5 @@ github_repository: zeeshantariq08/filament-attachmate
 has_dark_theme: true
 has_translations: false
 versions: [2, 3]
-publish_date: 2024-03-02
+publish_date: 2024-03-05
 ---
