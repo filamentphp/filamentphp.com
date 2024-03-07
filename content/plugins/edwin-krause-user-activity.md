@@ -1,5 +1,5 @@
 ---
-name: User activity tracker and currently active users 
+name: User Activity
 slug: edwin-krause-user-activity
 author_slug: edwin-krause
 categories: [developer-tool, panel-builder, kit]
@@ -10,5 +10,5 @@ github_repository: edwink/filament-user-activity
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-02-29
+publish_date: 2024-03-07
 ---
