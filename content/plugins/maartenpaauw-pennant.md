@@ -100,8 +100,9 @@ support, or want to request a feature, please feel free to contact me at maarten
 Pennant for Filament requires the following components:
 
 - PHP `^8.1`
-- Laravel Pennant `^1.4`
-- Filament `^3.0`
+- Laravel `^10.0` or `^11.0`
+- Laravel Pennant `^1.6`
+- Filament `^3.2.39`
 
 Additionally, make sure you have defined at least one feature flag in your project. For more information, refer to the
 official Laravel [documentation](https://laravel.com/docs/10.x/pennant#defining-features).
