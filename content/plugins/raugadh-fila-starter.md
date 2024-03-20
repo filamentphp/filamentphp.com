@@ -10,5 +10,5 @@ github_repository: raugadh/fila-starter
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-03-18
+publish_date: 2024-03-20
 ---
