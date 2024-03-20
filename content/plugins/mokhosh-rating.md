@@ -8,7 +8,7 @@ docs_url: https://raw.githubusercontent.com/mokhosh/filament-rating/main/README.
 github_repository: mokhosh/filament-rating
 has_dark_theme: true
 has_translations: true
-thumbnail: mokhosh-rating.png
+thumbnail: mokhosh-rating.webp
 versions: [3]
-publish_date: 2024-03-18
+publish_date: 2024-03-20
 ---
