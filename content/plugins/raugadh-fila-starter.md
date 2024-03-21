@@ -2,9 +2,9 @@
 name: Fila Starter Kit
 slug: raugadh-fila-starter
 author_slug: raugadh
-categories: [developer-tool, kit, spatie, theme]
+categories: [developer-tool, kit, spatie]
 description: A simple starter kit kickstart your next app.
-discord_url: 
+discord_url:
 docs_url: https://raw.githubusercontent.com/raugadh/fila-starter/master/README.md
 github_repository: raugadh/fila-starter
 has_dark_theme: true
