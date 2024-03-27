@@ -1041,7 +1041,7 @@ it('cannot display trashed posts by default', function () {
 });
 </textarea></code></pre>
 <blockquote>
-<p>If your table uses pagination, <code>assertCanSeeTableRecords()</code> will only check for records on the first page. To switch page, call <code>set(&#39;page&#39;, 2)</code>.</p>
+<p>If your table uses pagination, <code>assertCanSeeTableRecords()</code> will only check for records on the first page. To switch page, call <code>call(&#39;gotoPage&#39;, 2)</code>.</p>
 </blockquote>
 <blockquote>
 <p>If your table uses <code>deferLoading()</code>, you should call <code>loadTable()</code> before <code>assertCanSeeTableRecords()</code>.</p>
