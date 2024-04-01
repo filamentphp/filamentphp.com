@@ -804,7 +804,7 @@ it('can get post author names', function () {
 
 it('has an author column', function () {
     livewire(PostResource\Pages\ListPosts::class)
-        -&gt;assertTableColumnExists(`author`);
+        -&gt;assertTableColumnExists('author');
 });
 </textarea></code></pre>
 <h3 id="authorization"><a class="heading-anchor" href="#authorization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Authorization</h3>
