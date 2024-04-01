@@ -668,8 +668,8 @@ it('has an author column', function () {
 
 it('shows the correct columns', function () {
     livewire(PostResource\Pages\ListPosts::class)
-        -&gt;assertTableColumnVisible(`created_at`)
-        -&gt;assertTableColumnHidden(`author`);
+        -&gt;assertTableColumnVisible('created_at')
+        -&gt;assertTableColumnHidden('author');
 });
 </textarea></code></pre>
 <h3 id="descriptions"><a class="heading-anchor" href="#descriptions"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Descriptions</h3>
