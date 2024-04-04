@@ -11,6 +11,11 @@
                 }
             })
 
+            // Reset the page number on category, type or version change
+            $watch('[selectedCategories.size, selectedType, selectedVersion]', () => {
+                currentPage = 1
+            })
+
             // Initialize the minisearch instance
             searchEngine = new MiniSearch({
                 fields: ['title', 'author.name'],
@@ -47,16 +52,23 @@
     "
     x-data="{
         searchEngine: null,
-        search: '',
+        search: $queryString('').usePush().as('search'),
         selectedCategories: new Set(),
-        selectedType: 'all',
-        selectedVersion: '3',
+        selectedType: $queryString('all').usePush().as('type'),
+        selectedVersion: $queryString('3').usePush().as('version'),
 
         articles: @js($articles),
         categories: @js($categories),
         types: @js($types),
 
-        currentPage: 1,
+        _currentPage: $queryString(1).usePush().as('page'),
+        get currentPage() {
+            return +this._currentPage
+        },
+        set currentPage(value) {
+            this._currentPage = value
+        },
+
         perPage: 24,
         totalItems: 0,
         get totalPages() {
