@@ -1,6 +1,6 @@
 ---
 name: User Manager
-slug: filament-users
+slug: tomato-users
 author_slug: 3x1io
 categories: [panel-authentication]
 description: User Resource For FilamentPHP Admin Dashboard
