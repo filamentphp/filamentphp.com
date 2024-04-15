@@ -1,5 +1,5 @@
 ---
-name: Blog
+name: FBlog
 slug: firefly-blog
 author_slug: firefly
 categories: [panel-builder]
@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/thefireflytech/filament-blog/master/
 github_repository: thefireflytech/filament-blog
 has_dark_theme: true
 has_translations: false
-versions: [2]
+versions: [3]
 publish_date: 2024-04-15
 ---
