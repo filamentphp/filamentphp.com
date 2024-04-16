@@ -4,11 +4,11 @@ slug: 3x1io-tomato-artisan
 author_slug: 3x1io
 categories: [developer-tool]
 description: Simple but yet powerful library for running some artisan commands.
-discord_url: 
+discord_url:
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-artisan/master/README.md
 github_repository: tomatophp/filament-artisan
 has_dark_theme: false
 has_translations: true
 versions: [3]
-publish_date: 2024-04-15
+publish_date: 2024-04-06
 ---
