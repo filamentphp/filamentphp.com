@@ -7,8 +7,8 @@ description: This plugin simplifies managing bulk operations asynchronously in a
 discord_url: 
 docs_url: https://raw.githubusercontent.com/bytexr/filament-queueable-bulk-actions/main/README.md
 github_repository: bytexr/filament-queueable-bulk-actions
-has_dark_theme: false
-has_translations: false
+has_dark_theme: true
+has_translations: true
 versions: [3]
 publish_date: 2024-04-19
 ---
