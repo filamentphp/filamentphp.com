@@ -6,7 +6,7 @@ categories: [developer-tool, panel-authentication]
 description: Add one-click login buttons to your Filament login page.
 discord_url:
 docs_urls:
-  v3: https://github.com/DutchCodingCompany/filament-developer-logins/blob/main/README.md
+  v3: https://raw.githubusercontent.com/DutchCodingCompany/filament-developer-logins/main/README.md
 github_repository: DutchCodingCompany/filament-developer-logins
 has_dark_theme: true
 has_translations: true
