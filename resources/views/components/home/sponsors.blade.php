@@ -281,39 +281,39 @@
         >
             <div class="mx-auto grid w-full max-w-2xl">
                 <div class="col-span-full flex flex-wrap justify-around gap-12">
-                    <x-home.sponsors.lunar />
+                    <x-sponsors.lunar />
 
-                    <x-home.sponsors.ploi />
+                    <x-sponsors.ploi />
 
-                    <x-home.sponsors.kirschbaum />
+                    <x-sponsors.kirschbaum />
 
-                    <x-home.sponsors.whizzy />
+                    <x-sponsors.whizzy />
 
-                    <x-home.sponsors.laradir />
+                    <x-sponsors.laradir />
 
-                    <x-home.sponsors.tapp-network />
+                    <x-sponsors.tapp-network />
 
-                    <x-home.sponsors.agiledrop />
+                    <x-sponsors.agiledrop />
 
-                    <x-home.sponsors.cleavr />
+                    <x-sponsors.cleavr />
 
-                    <x-home.sponsors.creagia />
+                    <x-sponsors.creagia />
 
-                    <x-home.sponsors.datasauce />
+                    <x-sponsors.datasauce />
 
-                    <x-home.sponsors.ecomsoft />
+                    <x-sponsors.ecomsoft />
 
-                    <x-home.sponsors.dutch-coding-company />
+                    <x-sponsors.dutch-coding-company />
 
-                    <x-home.sponsors.locale />
+                    <x-sponsors.locale />
 
-                    <x-home.sponsors.lucky-media />
+                    <x-sponsors.lucky-media />
 
-                    <x-home.sponsors.server-auth />
+                    <x-sponsors.server-auth />
 
-                    <x-home.sponsors.solution-forest />
+                    <x-sponsors.solution-forest />
 
-                    <x-home.sponsors.zeek />
+                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>
