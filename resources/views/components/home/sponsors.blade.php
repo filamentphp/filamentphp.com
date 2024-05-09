@@ -279,8 +279,8 @@
             x-ref="sponsors_list"
             class="mt-16"
         >
-            <div class="mx-auto grid w-full max-w-xl">
-                <div class="mt-6 flex flex-wrap gap-8">
+            <div class="mx-auto grid w-full max-w-2xl">
+                <div class="col-span-full flex flex-wrap justify-around gap-12">
                     <x-home.sponsors.lunar />
 
                     <x-home.sponsors.ploi />
