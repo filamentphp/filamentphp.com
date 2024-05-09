@@ -1,6 +1,6 @@
 ---
 name: Pirsch Dashboard Widget
-slug: develogix-agency-filament-pirsch-dashboard-widget
+slug: develogix-agency-pirsch-dashboard-widget
 author_slug: develogix-agency
 categories: [widget, developer-tool, analytics]
 description: Display the most interesting Pirsch analytics data in your dashboard.
