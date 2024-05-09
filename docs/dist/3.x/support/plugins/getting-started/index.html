@@ -1109,7 +1109,7 @@
 <li><a href="/docs/3.x/support/assets">Filament Asset Management</a></li>
 </ol>
 <h3 id="the-plugin-object"><a class="heading-anchor" href="#the-plugin-object"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>The Plugin object</h3>
-<p>Filament v3 introduces the concept of a Plugin object that is used to configure the plugin. This object is a simple PHP class that extends the <code>Filament\Support\Plugin</code> class. This class is used to configure the plugin and is the main entry point for the plugin. It is also used to register Resources and Icons that might be used by your plugin.</p>
+<p>Filament v3 introduces the concept of a Plugin object that is used to configure the plugin. This object is a simple PHP class that implements the <code>Filament\Contracts\Plugin</code> interface. This class is used to configure the plugin and is the main entry point for the plugin. It is also used to register Resources and Icons that might be used by your plugin.</p>
 <p>While the plugin object is extremely helpful, it is not required to build a plugin. You can still build plugins without using the plugin object as you can see in the <a href="/docs/3.x/support/plugins/build-a-panel-plugin">Building a Panel Plugin</a> tutorial.</p>
 <blockquote>
 <p><strong>Info</strong>

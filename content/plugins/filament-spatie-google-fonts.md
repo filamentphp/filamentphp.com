@@ -1,6 +1,6 @@
 ---
 name: Spatie Google Fonts
-slug: filament-google-fonts
+slug: filament-spatie-google-fonts
 author_slug: filament
 categories: [panel-builder, spatie]
 description: Filament support for Spatie's Laravel Google Fonts package.
