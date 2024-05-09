@@ -10,5 +10,5 @@ github_repository: tomatophp/filament-alerts
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-04-15
+publish_date: 2024-04-07
 ---

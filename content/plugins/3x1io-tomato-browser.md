@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/tomatophp/filament-browser/master/RE
 github_repository: tomatophp/filament-browser
 has_dark_theme: true
 has_translations: true
-versions: [3]
-publish_date: 2024-04-08
+versions: [2,3]
+publish_date: 2022-04-02
 ---
