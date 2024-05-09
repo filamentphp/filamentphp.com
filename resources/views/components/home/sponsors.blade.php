@@ -282,38 +282,38 @@
             <div
                 class="col-span-full flex flex-wrap justify-around gap-x-20 gap-y-12"
             >
-                <x-sponsors.ploi />
+                <x-home.sponsors.ploi />
 
-                <x-sponsors.kirschbaum />
+                <x-home.sponsors.kirschbaum />
 
-                <x-sponsors.whizzy />
+                <x-home.sponsors.whizzy />
             </div>
 
-            <x-sponsors.laradir />
+            <x-home.sponsors.laradir />
 
-            <x-sponsors.tapp-network />
+            <x-home.sponsors.tapp-network />
 
-            <x-sponsors.agiledrop />
+            <x-home.sponsors.agiledrop />
 
-            <x-sponsors.cleavr />
+            <x-home.sponsors.cleavr />
 
-            <x-sponsors.creagi />
+            <x-home.sponsors.creagi />
 
-            <x-sponsors.datasauce />
+            <x-home.sponsors.datasauce />
 
-            <x-sponsors.ecomsoft />
+            <x-home.sponsors.ecomsoft />
 
-            <x-sponsors.dutch-coding-company />
+            <x-home.sponsors.dutch-coding-company />
 
-            <x-sponsors.locale />
+            <x-home.sponsors.locale />
 
-            <x-sponsors.lucky-media />
+            <x-home.sponsors.lucky-media />
 
-            <x-sponsors.server-auth />
+            <x-home.sponsors.server-auth />
 
-            <x-sponsors.solution-forest />
+            <x-home.sponsors.solution-forest />
 
-            <x-sponsors.zeek />
+            <x-home.sponsors.zeek />
         </div>
 
         {{-- Sponsor Button --}}
