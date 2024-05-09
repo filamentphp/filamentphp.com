@@ -277,7 +277,7 @@
 
         <div
             x-ref="sponsors_list"
-            class="grid gap-y-12 mt-16"
+            class="mt-16 grid gap-y-12"
         >
             <x-home.sponsors.tier heading="Partners">
                 <x-home.sponsors.kirschbaum />
@@ -323,7 +323,7 @@
         {{-- Sponsor Button --}}
         <div
             x-ref="sponsor_button"
-            class="flex justify-center pb-20 mt-16"
+            class="mt-16 flex justify-center pb-20"
         >
             <a
                 x-ref="getstarted"
@@ -616,4 +616,4 @@
             class="h-full border-r-[1.5px] border-dashed border-r-black/50"
         ></div>
     </div>
-</div>
+</section>
