@@ -1,14 +1,21 @@
 <footer
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-24 space-y-24"
+    class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24"
 >
     <div class="mx-auto grid w-full">
-        <div class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin">
+        <div
+            class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin"
+        >
             <x-sponsors.lunar footer />
 
-            <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="text-midnight block my-auto font-medium text-sm text-center rounded-xl bg-pink-100 px-8 py-4 transition hover:bg-pink-200">
-                Your logo here? <span class="hover:scale-105">💖</span>
+            <a
+                href="https://github.com/filamentphp/filament?sponsor=1"
+                target="_blank"
+                class="my-auto block rounded-xl bg-pink-100 px-8 py-4 text-center text-sm font-medium text-midnight transition hover:bg-pink-200"
+            >
+                Your logo here?
+                <span class="hover:scale-105">💖</span>
             </a>
 
             <x-sponsors.kirschbaum footer />
@@ -167,7 +174,7 @@
             <div class="text-sm font-medium text-hurricane/50">
                 &copy; {{ date('Y') }} Filament. All rights reserved.
             </div>
-            <div class="flex-wrap flex items-center gap-3.5 text-hurricane">
+            <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
                 <a
                     target="_blank"
                     href="https://twitter.com/filamentphp"
