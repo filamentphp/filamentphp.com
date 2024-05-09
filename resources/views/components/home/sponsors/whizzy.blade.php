@@ -1,6 +1,6 @@
 <a
     class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none min-[850px]:col-span-2"
-    href="https://whizzy.dev"
+    href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=home"
     target="_blank"
     title="Whizzy"
 >

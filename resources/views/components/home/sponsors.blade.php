@@ -1,4 +1,4 @@
-<div
+<section
     x-cloak
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-5 pt-40"
@@ -226,14 +226,14 @@
         "
         class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] px-5 pb-32"
     >
-        {{-- Title --}}
-        <div class="grid place-items-center pt-14">
-            <div
+        <h2 class="grid place-items-center pt-14">
+            <span
                 x-ref="premium"
                 class="relative text-xl font-medium tracking-wider"
             >
                 Our Premium
-                <div
+
+                <span
                     x-ref="premium_heart"
                     class="absolute -left-9 -top-2"
                 >
@@ -249,77 +249,81 @@
                             fill="currentColor"
                         />
                     </svg>
-                </div>
-            </div>
-            <div class="relative z-10 inline-grid">
-                <div
+                </span>
+            </span>
+
+            <span class="relative z-10 inline-grid">
+                <span
                     x-ref="sponsors_header"
                     class="text-2xl font-extrabold [grid-area:1/-1] lg:text-3xl"
                 >
                     Sponsors
-                </div>
-                <div
+                </span>
+
+                <span
                     x-ref="sponsors_header_underline"
                     class="relative -left-1 -z-10 h-5 w-[98%] self-end justify-self-start bg-rose-400/50 [grid-area:1/-1]"
-                ></div>
-            </div>
-        </div>
+                ></span>
+            </span>
+        </h2>
 
-        {{-- Message --}}
-        <div
+        <p
             x-ref="message"
             class="mx-auto max-w-lg pt-10 text-center text-lg text-dolphin"
         >
             Filament is open source at heart. Our sponsors fund new features,
             bug fixes, and our community support.
-        </div>
+        </p>
 
-        {{-- Sponsor List --}}
         <div
             x-ref="sponsors_list"
-            class="mx-auto grid w-full max-w-xl grid-cols-1 gap-x-20 gap-y-12 py-14 min-[500px]:grid-cols-2 min-[850px]:grid-cols-3"
+            class="grid gap-y-12 mt-16"
         >
-            <div
-                class="col-span-full flex flex-wrap justify-around gap-x-20 gap-y-12"
-            >
-                <x-home.sponsors.ploi />
-
+            <x-home.sponsors.tier heading="Partners">
                 <x-home.sponsors.kirschbaum />
 
                 <x-home.sponsors.whizzy />
-            </div>
+            </x-home.sponsors.tier>
 
-            <x-home.sponsors.laradir />
+            <x-home.sponsors.tier heading="Gold">
+                <x-home.sponsors.ploi />
 
-            <x-home.sponsors.tapp-network />
+                <x-home.sponsors.laradir />
 
-            <x-home.sponsors.agiledrop />
+                <x-home.sponsors.lunar />
 
-            <x-home.sponsors.cleavr />
+                <x-home.sponsors.tapp-network />
+            </x-home.sponsors.tier>
 
-            <x-home.sponsors.creagi />
+            <x-home.sponsors.tier heading="Silver">
+                <x-home.sponsors.agiledrop />
 
-            <x-home.sponsors.datasauce />
+                <x-home.sponsors.cleavr />
 
-            <x-home.sponsors.ecomsoft />
+                <x-home.sponsors.creagi />
 
-            <x-home.sponsors.dutch-coding-company />
+                <x-home.sponsors.datasauce />
 
-            <x-home.sponsors.locale />
+                <x-home.sponsors.ecomsoft />
 
-            <x-home.sponsors.lucky-media />
+                <x-home.sponsors.dutch-coding-company />
 
-            <x-home.sponsors.server-auth />
+                <x-home.sponsors.locale />
 
-            <x-home.sponsors.solution-forest />
+                <x-home.sponsors.lucky-media />
 
-            <x-home.sponsors.zeek />
+                <x-home.sponsors.server-auth />
+
+                <x-home.sponsors.solution-forest />
+
+                <x-home.sponsors.zeek />
+            </x-home.sponsors.tier>
         </div>
 
         {{-- Sponsor Button --}}
         <div
             x-ref="sponsor_button"
-            class="flex justify-center pb-20 pt-5"
+            class="flex justify-center pb-20 mt-16"
         >
             <a
                 x-ref="getstarted"
