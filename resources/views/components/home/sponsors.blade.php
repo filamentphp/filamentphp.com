@@ -275,50 +275,48 @@
             bug fixes, and our community support.
         </p>
 
-        <div
+        <section
             x-ref="sponsors_list"
-            class="mt-16 grid gap-y-12"
+            class="mt-16"
         >
-            <x-home.sponsors.tier heading="Partners">
-                <x-home.sponsors.kirschbaum />
+            <div class="mx-auto grid w-full max-w-xl">
+                <div class="mt-6 flex flex-wrap gap-8">
+                    <x-home.sponsors.lunar />
 
-                <x-home.sponsors.whizzy />
-            </x-home.sponsors.tier>
+                    <x-home.sponsors.ploi />
 
-            <x-home.sponsors.tier heading="Gold">
-                <x-home.sponsors.ploi />
+                    <x-home.sponsors.kirschbaum />
 
-                <x-home.sponsors.laradir />
+                    <x-home.sponsors.whizzy />
 
-                <x-home.sponsors.lunar />
+                    <x-home.sponsors.laradir />
 
-                <x-home.sponsors.tapp-network />
-            </x-home.sponsors.tier>
+                    <x-home.sponsors.tapp-network />
 
-            <x-home.sponsors.tier heading="Silver">
-                <x-home.sponsors.agiledrop />
+                    <x-home.sponsors.agiledrop />
 
-                <x-home.sponsors.cleavr />
+                    <x-home.sponsors.cleavr />
 
-                <x-home.sponsors.creagi />
+                    <x-home.sponsors.creagia />
 
-                <x-home.sponsors.datasauce />
+                    <x-home.sponsors.datasauce />
 
-                <x-home.sponsors.ecomsoft />
+                    <x-home.sponsors.ecomsoft />
 
-                <x-home.sponsors.dutch-coding-company />
+                    <x-home.sponsors.dutch-coding-company />
 
-                <x-home.sponsors.locale />
+                    <x-home.sponsors.locale />
 
-                <x-home.sponsors.lucky-media />
+                    <x-home.sponsors.lucky-media />
 
-                <x-home.sponsors.server-auth />
+                    <x-home.sponsors.server-auth />
 
-                <x-home.sponsors.solution-forest />
+                    <x-home.sponsors.solution-forest />
 
-                <x-home.sponsors.zeek />
-            </x-home.sponsors.tier>
-        </div>
+                    <x-home.sponsors.zeek />
+                </div>
+            </div>
+        </section>
 
         {{-- Sponsor Button --}}
         <div
