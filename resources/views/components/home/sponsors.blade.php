@@ -301,9 +301,11 @@
 
                     <x-sponsors.datasauce />
 
+                    <x-sponsors.dutch-coding-company />
+
                     <x-sponsors.ecomsoft />
 
-                    <x-sponsors.dutch-coding-company />
+                    <x-sponsors.lander-systems />
 
                     <x-sponsors.locale />
 
