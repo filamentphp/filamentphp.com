@@ -70,7 +70,7 @@
             <strong>Zep</strong>
             is the lead UI designer of Filament and founder of
             {{-- format-ignore-start --}}
-            <a href="https://whizzy.dev?ref=filamentphp.com">Whizzy</a>.
+            <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=bio">Whizzy</a>.
             {{-- format-ignore-end --}}
             In addition to his design skills, he brings a wealth of development
             experience to the Filament team. He's based in
