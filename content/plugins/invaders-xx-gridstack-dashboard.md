@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/invaders-xx/filament-gridstack-dashb
 github_repository: invaders-xx/filament-gridstack-dashboard
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [1]
 publish_date: 2024-05-13
 ---
