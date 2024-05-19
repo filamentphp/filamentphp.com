@@ -90,5 +90,13 @@
             twitter="https://twitter.com/saadeguilherme"
             github="https://github.com/saade"
         />
+        <x-team.member
+            avatar="https://avatars.githubusercontent.com/u/3833889?v=4"
+            name="Leandro Ferreira"
+            title="Developer"
+            website="https://leandroferreira.dev.br?ref=filamentphp.com"
+            twitter="https://twitter.com/leandrocfe"
+            github="https://github.com/leandrocfe"
+        />
     </div>
 </section>
