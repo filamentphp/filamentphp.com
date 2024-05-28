@@ -1104,6 +1104,15 @@ public function table(Table $table): Table
 }
 </textarea></code></pre>
 <p>In this example, clicking on each post will take you to the <code>posts.edit</code> route.</p>
+<p>You may also open the URL in a new tab:</p>
+<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Table</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">openRecordUrlInNewTab</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Tables\Table;
+
+public function table(Table $table): Table
+{
+    return $table
+        -&gt;openRecordUrlInNewTab();
+}
+</textarea></code></pre>
 <p>If you&#39;d like to <a href="columns/getting-started#opening-urls">override the URL</a> for a specific column, or instead <a href="columns/getting-started#running-actions">run an action</a> when a column is clicked, see the <a href="columns/getting-started#opening-urls">columns documentation</a>.</p>
 <h2 id="reordering-records"><a class="heading-anchor" href="#reordering-records"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Reordering records</h2>
 <p>To allow the user to reorder records using drag and drop in your table, you can use the <code>$table-&gt;reorderable()</code> method:</p>
