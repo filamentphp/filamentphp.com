@@ -1,6 +1,6 @@
 ---
-title: Make components translatable
-slug: codewithdennis-make-components-translatable
+title: Make components globally translatable
+slug: codewithdennis-make-components-globally-translatable
 author_slug: codewithdennis
 publish_date: 2024-05-29
 categories: [general]
