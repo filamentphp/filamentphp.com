@@ -12,7 +12,9 @@ type_slug: trick
 Translating components can often be a repetitive task, requiring you to individually add `translateLabel` or `__()` to each component. Fortunately, there's a neat trick to automate this process, making your components instantly translatable. By modifying your `AppServiceProvider.php`, you can apply a global translation configuration to all relevant components. Here's how to do it:
 
 ## AppServiceProvider
+
 In this example we will make the following components translatable by default if you would like to add more components you can do so by adding them to the array
+
 - **Filament\Forms\Components\Field**
 - **Filament\Tables\Filters\BaseFilter**
 - **Filament\Forms\Components\Placeholder**
@@ -20,7 +22,9 @@ In this example we will make the following components translatable by default if
 - **Filament\Infolists\Components\Entry**
 
 ### Boot
+
 Navigate to your `AppServiceProvider.php` file located in the `app/Providers` directory of your Laravel project and add the following to your boot method:
+
 ```php
 foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
     /* @var Configurable $component */
@@ -31,7 +35,9 @@ foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, En
 ```
 
 ### Imports
+
 Make sure you import the necessary classes at the top of your `AppServiceProvider.php` file:
+
 ```php
 use Filament\Forms\Components\Placeholder;
 use Filament\Support\Components\Component;
