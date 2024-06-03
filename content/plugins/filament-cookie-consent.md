@@ -2,7 +2,7 @@
 name: Filament Cookie Consent
 slug: filament-cookie-consent
 author_slug: marcogermani87
-categories: [spatie]
+categories: [spatie, panel-builder]
 description: A package to easily include cookie consent in Filament.
 docs_url: https://raw.githubusercontent.com/marcogermani87/filament-cookie-consent/main/README.md
 github_repository: marcogermani87/filament-cookie-consent
