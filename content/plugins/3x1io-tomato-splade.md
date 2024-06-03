@@ -4,7 +4,7 @@ slug: 3x1io-tomato-splade
 author_slug: 3x1io
 categories: [developer-tool]
 description: Integration of Splade Vue Components for Filament
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1247230280075313263
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-splade/master/README.md
 github_repository: tomatophp/filament-splade
 has_dark_theme: true

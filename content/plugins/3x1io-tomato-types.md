@@ -3,8 +3,8 @@ name: Types Manager
 slug: 3x1io-tomato-types
 author_slug: 3x1io
 categories: [developer-tool]
-description: Manage any type on your app in Database with easy to use Resource for FilamentPHP
-discord_url: 
+description: Manage any type on your app with an easy to use Resource
+discord_url: https://discord.com/channels/883083792112300104/1247230382793949184
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-types/master/README.md
 github_repository: tomatophp/filament-types
 has_dark_theme: true

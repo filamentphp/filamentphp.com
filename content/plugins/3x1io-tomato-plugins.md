@@ -4,7 +4,7 @@ slug: 3x1io-tomato-plugins
 author_slug: 3x1io
 categories: [developer-tool]
 description: Manage your modules as a plugin system with plugin generator
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1247230194796855329
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-plugins/master/README.md
 github_repository: tomatophp/filament-plugins
 has_dark_theme: true
