@@ -4,6 +4,7 @@ slug: jose-espinal-record-navigation
 author_slug: jose-espinal
 categories: [table-builder, action]
 description: Seamless navigation through records in a Filament resource's view.
+discord_url: 
 docs_url: https://raw.githubusercontent.com/josespinal/filament-record-navigation/main/README.md
 github_repository: josespinal/filament-record-navigation
 has_dark_theme: true
