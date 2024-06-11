@@ -2,9 +2,9 @@
 name: Icons Picker & Provider
 slug: 3x1io-tomato-icons
 author_slug: 3x1io
-categories: [developer-tool]
+categories: [form-builder, form-field, table-builder, table-column]
 description: Picker & Table Column & Icons Provider for FilamentPHP
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1249897365071200337
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-icons/master/README.md
 github_repository: tomatophp/filament-icons
 has_dark_theme: true
