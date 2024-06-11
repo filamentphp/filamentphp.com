@@ -10,5 +10,5 @@ github_repository: xtend-packages/rest-presenter
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2024-06-08
+publish_date: 2024-05-14
 ---
