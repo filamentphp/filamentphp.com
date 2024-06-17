@@ -4,7 +4,7 @@ slug: 3x1io-tomato-helpers
 author_slug: 3x1io
 categories: [developer-tool]
 description: Helper Class Generator to manage your forms and table inside your filament app
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1252370269813739590
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-helpers/master/README.md
 github_repository: tomatophp/filament-helpers
 has_dark_theme: true
