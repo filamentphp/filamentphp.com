@@ -2,7 +2,7 @@
 name: Translations Manager
 slug: 3x1io-tomato-translations
 author_slug: 3x1io
-categories: [developer-tool]
+categories: [developer-tool, spatie]
 description: Manage your translation with DB and cache, you can scan an collect translation strings like `trans()` and `__()`, and translate them using UI
 discord_url: https://discord.com/channels/883083792112300104/1247230325340508171
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-translations/master/README.md
