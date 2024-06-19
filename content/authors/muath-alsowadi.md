@@ -6,6 +6,6 @@ twitter_url: https://twitter.com/mauthye
 mastodon_url: https://phpc.social/@muathye
 ---
 
-I am Muath Alsowadi, a Full-Stack Laravel and VueJs Developer based in Sana'a, Yemen. With over 7 years of experience in the industry, I have worked on various open-source projects and have built packages that have been published on NPM and Composer. My expertise lies in Laravel development, DevOps and project management, and I have been involved in projects that are integrated with technologies such as OpenAI and Whatsapp business.
+I am Muath Alsowadi, a Full-Stack Laravel and VueJs Developer based in Sana'a, Yemen. With over 7 years of experience in the industry, I have worked on various open-source projects and have built packages that have been published on NPM and Composer.
 
 
