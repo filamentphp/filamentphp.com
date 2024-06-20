@@ -206,4 +206,4 @@ Release notes of updates to the plugin can be viewed on [Privato](https://filame
 
 ## Issues
 
-If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
+If you find a bug in this package, please [contact Zep via email](mailto:zep@whizzy.dev).
