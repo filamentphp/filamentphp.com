@@ -1,12 +1,12 @@
 #carbonads {
-    @apply bg-transparent max-w-56 print:hidden;
+    @apply max-w-56 bg-transparent print:hidden;
 
     span {
         @apply block;
     }
 
     img {
-        @apply block mb-3 max-h-16 w-auto;
+        @apply mb-3 block max-h-16 w-auto;
     }
 
     .carbon-text {
