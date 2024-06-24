@@ -6,7 +6,7 @@
     }
 
     img {
-        @apply block mb-3 max-h-16 w-auto;
+        @apply block mb-3;
     }
 
     .carbon-text {
