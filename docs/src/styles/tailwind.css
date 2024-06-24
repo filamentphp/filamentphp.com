@@ -1,4 +1,5 @@
 @import 'tailwindcss/base';
+@import './ads.css';
 @import './fonts.css';
 @import './docsearch.css';
 @import '../../../resources/css/torchlight.css';
