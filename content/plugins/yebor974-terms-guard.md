@@ -4,7 +4,7 @@ slug: yebor974-terms-guard
 author_slug: yebor974
 categories: [panel-builder]
 description: This plugin provides a comprehensive solution for managing the terms of used / services on your panels.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1250199396809703438
 docs_url: https://julienboyer.re/plugins/filament-terms-guard/readme.md
 url: https://julienboyer.re/plugins/filament-terms-guard/readme
 github_repository: yebor974/filament-terms-guard

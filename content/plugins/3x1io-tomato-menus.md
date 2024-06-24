@@ -2,7 +2,7 @@
 name: Menu Generator
 slug: 3x1io-tomato-menus
 author_slug: 3x1io
-categories: [developer-tool]
+categories: [developer-tool, panel-builder]
 description: Menu view generator using view component
 discord_url: https://discord.com/channels/883083792112300104/1247230140359118899
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-menus/master/README.md
