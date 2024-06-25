@@ -2,7 +2,7 @@
 name: Converting between numbers and words.
 slug: ibrahim-bougaoua-words-to-numbers
 author_slug: ibrahim-bougaoua
-categories: [action, form-field]
+categories: [form-field,table-column,action]
 description: NumbersToWords is Converting between numbers and words.
 discord_url: https://discord.com/channels/883083792112300104/1143876931650080768
 docs_url: https://raw.githubusercontent.com/ibrahimBougaoua/numberToWords/main/README.md
