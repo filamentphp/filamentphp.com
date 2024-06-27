@@ -10,5 +10,5 @@ github_repository: YemenOpenSource/filament-excel
 has_dark_theme: false
 has_translations: true
 versions: [3]
-publish_date: 2024-06-11
+publish_date: 2024-06-27
 ---
