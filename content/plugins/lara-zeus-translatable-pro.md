@@ -5,7 +5,7 @@ author_slug: lara-zeus
 categories: [panel-builder]
 checkout_url: https://store.larazeus.com/checkout/buy/7284fb18-893e-488b-92bc-9130f1aca8b6?embed=1&media=0&logo=0&desc=0
 description: Build Advanced, Optimized, High Performance Translatable Apps.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1255967881888399500
 docs_url: http://larazeus.com/storage/docs/translatable-pro/v1/filament.md
 url: https://larazeus.com/translatable-pro
 github_repository: lara-zeus/translatable-pro
@@ -15,5 +15,5 @@ is_lemon_squeezy_embedded: true
 is_presale: false
 price: $99.00
 versions: [3]
-publish_date: 2024-07-01
+publish_date: 2024-06-27
 ---
