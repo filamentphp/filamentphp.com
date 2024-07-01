@@ -4,7 +4,7 @@ slug: 3x1io-tomato-ecommerce
 author_slug: 3x1io
 categories: [developer-tool]
 description: Build your own ecommerce store with FilamentPHP with the Power of Filament CMS
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1257434222973685990
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-ecommerce/master/README.md
 github_repository: tomatophp/filament-ecommerce
 has_dark_theme: true
