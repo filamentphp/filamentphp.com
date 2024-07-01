@@ -1,5 +1,5 @@
 ---
-name: Hexa Effortless role and permission management
+name: Hexa
 slug: hexters-hexa
 author_slug: hexters
 categories: [panel-builder, panel-authentication, developer-tool]
@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/hexters/hexa-lite/main/README.md
 github_repository: hexters/hexa-lite
 has_dark_theme: true
 has_translations: true
-versions: [1]
-publish_date: 2024-06-27
+versions: [3]
+publish_date: 2024-07-01
 ---
