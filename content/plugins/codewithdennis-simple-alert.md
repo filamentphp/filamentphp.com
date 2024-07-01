@@ -10,5 +10,5 @@ github_repository: codewithdennis/filament-simple-alert
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2024-06-28
+publish_date: 2024-07-01
 ---
