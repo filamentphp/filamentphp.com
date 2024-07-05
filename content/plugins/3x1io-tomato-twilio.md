@@ -3,7 +3,7 @@ name: Twilio Integration
 slug: 3x1io-tomato-twilio
 author_slug: 3x1io
 categories: [developer-tool]
-description: Send Whatsapp messages using Twilio and native filament Notification Facade class
+description: Send Whatsapp messages using Twilio and native Filament Notification class
 discord_url: https://discord.com/channels/883083792112300104/1258772240678391808
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-twilio/master/README.md
 github_repository: tomatophp/filament-twilio
