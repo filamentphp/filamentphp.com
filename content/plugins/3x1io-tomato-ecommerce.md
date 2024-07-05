@@ -11,5 +11,5 @@ github_repository: tomatophp/filament-ecommerce
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-07-02
+publish_date: 2024-07-05
 ---
