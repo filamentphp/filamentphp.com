@@ -289,6 +289,8 @@
 
                     <x-sponsors.whizzy />
 
+                    <x-sponsors.laradir />
+
                     <x-sponsors.tapp-network />
 
                     <x-sponsors.agiledrop />
