@@ -273,7 +273,7 @@
                 {{-- Search Input --}}
                 <input
                     type="text"
-                    x-model="search"
+                    x-model.debounce.500ms="search"
                     placeholder="Search ..."
                     class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
