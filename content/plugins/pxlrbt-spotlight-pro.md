@@ -12,7 +12,7 @@ github_repository: pxlrbt/filament-spotlight-pro
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-07-10
+publish_date: 2024-07-12
 ---
 
 ## License
