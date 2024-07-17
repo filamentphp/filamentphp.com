@@ -71,7 +71,7 @@ Filament Minimal Theme can be installed using our private Composer repository. C
 "repositories": [
     {
         "type": "composer",
-        "url": "https://filament.privato.pub/composer"
+        "url": "https://whizzy.dev/composer"
     }
 ]
 ```
@@ -199,10 +199,6 @@ use Filament\MinimalTheme;
 
 MinimalTheme::configure();
 ```
-
-## Changelog
-
-Release notes of updates to the plugin can be viewed on [Privato](https://filament.privato.pub/minimal-theme/changelog).
 
 ## Issues
 
