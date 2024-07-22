@@ -136,9 +136,9 @@ First, make sure you've properly installed any Filament packages. Your project s
 In your app CSS file, import the Minimal Theme stylesheets for the Filament packages you're using:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import '/vendor/filament/minimal-theme/resources/css/actions';
 @import '/vendor/filament/minimal-theme/resources/css/forms';
@@ -200,6 +200,10 @@ use Filament\MinimalTheme;
 MinimalTheme::configure();
 ```
 
+## Changelog
+
+Release notes of updates to the plugin can be viewed on [Privato](https://filament.privato.pub/minimal-theme/changelog).
+
 ## Issues
 
-If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
+If you find a bug in this package, please [contact Zep via email](mailto:zep@whizzy.dev).
