@@ -1479,6 +1479,7 @@ Repeater::make('invitations')
 <p>You are trying to retrieve the value of <code>client_id</code> from inside the repeater item.</p>
 <p><code>$get()</code> is relative to the current repeater item, so <code>$get(&#39;client_id&#39;)</code> is looking for <code>$get(&#39;repeater.item1.client_id&#39;)</code>.</p>
 <p>You can use <code>../</code> to go up a level in the data structure, so <code>$get(&#39;../client_id&#39;)</code> is <code>$get(&#39;repeater.client_id&#39;)</code> and <code>$get(&#39;../../client_id&#39;)</code> is <code>$get(&#39;client_id&#39;)</code>.</p>
+<p>The special case of <code>$get()</code> with no arguments, or <code>$get(&#39;&#39;)</code> or <code>$get(&#39;./&#39;)</code>, will always return the full data array for the current repeater item.</p>
 <h2 id="repeater-validation"><a class="heading-anchor" href="#repeater-validation"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Repeater validation</h2>
 <p>As well as all rules listed on the <a href="../validation">validation</a> page, there are additional rules that are specific to repeaters.</p>
 <h3 id="number-of-items-validation"><a class="heading-anchor" href="#number-of-items-validation"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Number of items validation</h3>
