@@ -1,6 +1,6 @@
 ---
 name: InfinityXTech
-slug: InfinityXTech
+slug: infinityxtech
 github_url: https://github.com/InfinityXTech
 ---
 
