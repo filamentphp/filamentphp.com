@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use App\Http\Controllers\Plugins\RssPluginsController;
 use App\Models\Plugin;
 use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
@@ -31,8 +32,8 @@ Route::get('/use-cases/admin-panel', function () {
     ];
 
     return view('use-cases.admin-panel', [
-        'plugins' => Plugin::query()
-            ->with(['author'])
+        'plugins'     => Plugin::query()
+            ->with([ 'author' ])
             ->whereIn('slug', $pluginSlugs)
             ->get(),
         'pluginStars' => Star::query()
@@ -71,7 +72,7 @@ Route::prefix('/docs')->group(function () {
     Route::redirect('/widgets', '/docs/widgets/installation');
     Route::redirect('/support', '/docs/support/overview');
 
-    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+    Route::get('/{slug?}', function (string $slug = null) : string|RedirectResponse {
         $requestUri = request()->getRequestUri();
 
         if (
@@ -86,7 +87,7 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
+            return redirect()->route('docs', [ 'slug' => "3.x/{$slug}" ]);
         }
 
         $filePath = base_path("docs/dist/{$slug}/index.html");
@@ -98,17 +99,17 @@ Route::prefix('/docs')->group(function () {
         $filePath = base_path("docs/dist/{$slug}/overview/index.html");
 
         if (file_exists($filePath)) {
-            return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
+            return redirect()->route('docs', [ 'slug' => "{$slug}/overview" ]);
         }
 
         $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
 
         if (file_exists($filePath)) {
-            return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
+            return redirect()->route('docs', [ 'slug' => "{$slug}/getting-started" ]);
         }
 
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
-        $version = Str::before($slug, '.x');
+        $version    = Str::before($slug, '.x');
 
         if (! is_numeric($version)) {
             abort(404);
@@ -152,6 +153,8 @@ Route::prefix('/plugins')->group(function () {
         });
     });
 });
+
+Route::get('/feeds/plugins', [ RssPluginsController::class, 'index' ])->name('plugins-rss-feed');
 
 Route::redirect('/blog', '/community');
 Route::redirect('/tricks', '/community');
