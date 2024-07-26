@@ -65,15 +65,10 @@ This plugin requires the latest version of Filament v3, as it depends on new API
 
 ### Installation
 
-Filament Minimal Theme can be installed using our private Composer repository. Configure the repository in your application's `composer.json` file:
+Filament Minimal Theme can be installed using our private Composer repository. Configure the repository in your application's `composer.json` file by running:
 
-```json
-"repositories": [
-    {
-        "type": "composer",
-        "url": "https://whizzy.dev/composer"
-    }
-]
+```bash
+composer config repositories.whizzy composer https://whizzy.dev/composer
 ```
 
 Now you can install the package using:
