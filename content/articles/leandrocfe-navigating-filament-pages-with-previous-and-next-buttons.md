@@ -1,13 +1,13 @@
 ---
 title: Navigating Filament Pages with Previous and Next Buttons
-slug: leandrocfe-navigating-filament-pages-with-previous-and-next-buttons
+slug: navigating-filament-pages-with-previous-and-next-buttons
 author_slug: leandrocfe
-publish_date: 2024-01-05
+publish_date: 2024-07-26
 categories: [livewire, panel-builder]
 type_slug: article
 ---
 
-![example](https://github.com/filament-br/infolist-example/blob/page-actions/screenshots/example-1.gif?raw=true)
+![Example](https://github.com/leandrocfe/article-fi-page-nav/blob/d36b3b7225adaace0aeb386455f6f1420f16f3d8/screenshots/example.gif?raw=true)
 
 
 ## Introduction
@@ -76,17 +76,19 @@ class NextAction extends Action
 
 Next, we extend the capabilities of the ViewRecord and EditRecord classes by adding a `CanPaginateViewRecord` trait. This trait, residing in the `app/Filament/Resources/Pages/Concerns` folder, configures actions for pagination and provides methods to retrieve previous and next records based on the current record.
 
+```bash
+# Laravel 11 and higher
+php artisan make:trait Filament/Resources/Pages/Concerns/CanPaginateViewRecord
+
+# Laravel 10 create it manually
+```
+
 ```php
 namespace App\Filament\Resources\Pages\Concerns;
 
 use App\Filament\Resources\Actions\NextAction;
 use App\Filament\Resources\Actions\PreviousAction;
 use Filament\Actions\Action;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ForceDeleteAction;
-use Filament\Actions\ReplicateAction;
-use Filament\Actions\RestoreAction;
 use Illuminate\Database\Eloquent\Model;
 
 trait CanPaginateViewRecord
@@ -96,17 +98,9 @@ trait CanPaginateViewRecord
         $this->configureActionRecord($action);
 
         match (true) {
-            $action instanceof DeleteAction => $this->configureDeleteAction($action),
-            $action instanceof EditAction => $this->configureEditAction($action),
-            $action instanceof ForceDeleteAction => $this->configureForceDeleteAction($action),
-            $action instanceof ReplicateAction => $this->configureReplicateAction($action),
-            $action instanceof RestoreAction => $this->configureRestoreAction($action),
-
-            //new actions
             $action instanceof PreviousAction => $this->configurePreviousAction($action),
             $action instanceof NextAction => $this->configureNextAction($action),
-            
-            default => null,
+            default => parent::configureAction($action),
         };
     }
 
@@ -152,6 +146,8 @@ trait CanPaginateViewRecord
 }
 ```
 
+> **_NOTE:_** In this example, we use auto-incrementing IDs for the tables. If your tables are configured differently, you’ll need to adjust the `getPreviousRecord` and `getNextRecord` methods accordingly.
+
 ## Usage Example
 
 Now, let's implement these actions in the **ViewRecord** and **EditRecord** pages. By including the `CanPaginateViewRecord` trait and registering the actions in the `getHeaderActions` array, you can enable previous and next navigation buttons. Below is an example using the ViewPost page:
@@ -175,17 +171,15 @@ class ViewPost extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
+            Actions\EditAction::make(),
             PreviousAction::make(),
             NextAction::make(),
-            Actions\EditAction::make(),
         ];
     }
 }
 ```
 ## Conclusion
 
-This project, including all the provided code, is available on [GitHub](https://github.com/filament-br/infolist-example/tree/page-actions).
-
-![example](https://raw.githubusercontent.com/filament-br/infolist-example/page-actions/screenshots/example-1.png)
+This project, including all the provided code, is available on [GitHub](https://github.com/leandrocfe/article-fi-page-nav).
 
 We hope you find this tutorial helpful in enhancing navigation within your Filament pages. Happy coding!
