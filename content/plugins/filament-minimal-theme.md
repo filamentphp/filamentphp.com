@@ -65,15 +65,10 @@ This plugin requires the latest version of Filament v3, as it depends on new API
 
 ### Installation
 
-Filament Minimal Theme can be installed using our private Composer repository. Configure the repository in your application's `composer.json` file:
+Filament Minimal Theme can be installed using our private Composer repository. Configure the repository in your application's `composer.json` file by running:
 
-```json
-"repositories": [
-    {
-        "type": "composer",
-        "url": "https://filament.privato.pub/composer"
-    }
-]
+```bash
+composer config repositories.whizzy composer https://whizzy.dev/composer
 ```
 
 Now you can install the package using:
@@ -136,9 +131,9 @@ First, make sure you've properly installed any Filament packages. Your project s
 In your app CSS file, import the Minimal Theme stylesheets for the Filament packages you're using:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import '/vendor/filament/minimal-theme/resources/css/actions';
 @import '/vendor/filament/minimal-theme/resources/css/forms';
@@ -202,4 +197,4 @@ MinimalTheme::configure();
 
 ## Issues
 
-If you find a bug in this package, please [contact Zep via email](mailto:hey@zepfietje.com).
+If you find a bug in this package, please [contact Zep via email](mailto:zep@whizzy.dev).
