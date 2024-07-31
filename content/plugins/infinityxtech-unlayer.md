@@ -10,5 +10,5 @@ github_repository: InfinityXTech/filament-unlayer
 has_dark_theme: false
 has_translations: false
 versions: [3]
-publish_date: 2024-07-24
+publish_date: 2024-07-31
 ---
