@@ -68,18 +68,18 @@
             title="Lead UI Designer & Developer"
         >
             <strong>Zep</strong>
-            is a full-stack developer and freelance consultant, specializing in
-            UI design, but also offering a wealth of development experience to
-            the Filament team. He's based in
+            is the lead UI designer of Filament and founder of
+            {{-- format-ignore-start --}}
+            <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=bio">Whizzy</a>.
+            {{-- format-ignore-end --}}
+            In addition to his design skills, he brings a wealth of development
+            experience to the Filament team. He's based in
             {{-- format-ignore-start --}}
             <strong>Eindhoven, Netherlands</strong>,
             {{-- format-ignore-end --}}
             and is
             {{-- format-ignore-start --}}
-            <a
-                href="https://zepfietje.com/consultation?ref=filamentphp.com"
-                target="_blank"
-            >available to answer your support questions</a>
+            <a href="https://whizzy.dev/sessions?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=bio">available to answer your support questions</a>
             {{-- format-ignore-end --}}
             about Filament, on a one-off or recurring basis.
         </x-consulting.consultant>
@@ -95,19 +95,19 @@
         >
             <div class="space-y-2 text-center lg:text-left">
                 <div class="text-2xl font-bold text-[#544945]">
-                    Have a quick support question?
+                    Need a private help session?
                 </div>
                 <div class="font-medium text-[#AA8B7C]">
-                    Zep's here to jump on a call and get you back on track.
+                    Zep's here to jump on a call and help you with your Filament
+                    project.
                 </div>
             </div>
 
             {{-- Call Link --}}
             <div class="flex">
                 <a
-                    href="https://zepfietje.com/consultation?ref=filamentphp.com"
+                    href="https://whizzy.dev/sessions?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=button"
                     class="group/call relative z-0 grid h-12 w-60 rounded-full bg-dolphin/20 px-1.5 transition duration-300 hover:bg-dolphin/30"
-                    target="_blank"
                     x-on:mouseenter="book_is_hovered = true"
                     x-on:mouseleave="book_is_hovered = false"
                 >
@@ -159,7 +159,7 @@
                     <div
                         class="self-center justify-self-center font-medium transition duration-300 [grid-area:1/-1] group-hover/call:-translate-x-2"
                     >
-                        Book a call
+                        Book a session
                     </div>
                 </a>
             </div>

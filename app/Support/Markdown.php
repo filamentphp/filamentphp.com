@@ -15,6 +15,8 @@ class Markdown
 {
     public static function parse(string $text): HtmlString
     {
+        $text = self::convertSpecialBlockQuotes($text);
+
         $environment = new Environment([
             'allow_unsafe_links' => false,
             'heading_permalink' => [
@@ -44,5 +46,26 @@ class Markdown
         $converter = new MarkdownConverter($environment);
 
         return new HtmlString($converter->convert($text)->getContent());
+    }
+
+    protected static function convertSpecialBlockQuotes(string $text): string
+    {
+        $searchPatterns = [
+            '/> \[\!NOTE\]\s*\n> /',
+            '/> \[\!TIP\]\s*\n> /',
+            '/> \[\!IMPORTANT\]\s*\n> /',
+            '/> \[\!WARNING\]\s*\n> /',
+            '/> \[\!CAUTION\]\s*\n> /',
+        ];
+        $replacePatterns = [
+            '> 📝 **Note:** ',
+            '> 💡 **Tip:** ',
+            '> ❗ **Important:** ',
+            '> ⚠️ **Warning:** ',
+            '> ⚠️ **Caution:** ',
+        ];
+
+        // Perform the replacement
+        return preg_replace($searchPatterns, $replacePatterns, $text);
     }
 }

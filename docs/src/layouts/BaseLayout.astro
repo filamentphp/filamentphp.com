@@ -1,6 +1,7 @@
 ---
 import { collectHeadings, getAllLinks } from "src/lib/helpers";
 import Navigation from "@components/Navigation.astro";
+import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Prose from "@components/Prose.astro";
 import Hero from "@components/Hero.astro";
@@ -70,11 +71,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Styles -->
     <style>
-        [x-cloak=''],
-        [x-cloak='x-cloak'],
-        [x-cloak='1'] {
-            display: none !important;
-        }
+      [x-cloak] {
+        display: none !important;
+      }
     </style>
 
     <!-- Styles -->
@@ -219,7 +218,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </dl>
       </div>
       <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar">
-        <nav aria-labelledby="on-this-page-title" class="mb-9 w-56">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
+
+        <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
           {
             tableOfContents.length > 0 && (
               <>
@@ -265,5 +266,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </nav>
       </div>
     </div>}
+
+    <Footer />
   </body>
 </html>
