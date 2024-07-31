@@ -10,5 +10,5 @@ github_repository: discoverydesign/filament-gaze
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-07-24
+publish_date: 2024-07-31
 ---
