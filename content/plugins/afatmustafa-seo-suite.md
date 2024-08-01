@@ -1,6 +1,6 @@
 ---
 name: SEO Suite Pro
-slug: afatmustafa-seo-suite
+slug: afatmustafa-seo-suite-pro
 author_slug: afatmustafa
 categories: [form-builder, form-field, form-editor, panel-builder]
 description: This package allows you to seamlessly integrate and manage SEO features, making your project more search engine friendly.
