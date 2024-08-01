@@ -1,0 +1,13 @@
+---
+name: Dropdown Column
+slug: bobimicroweber-dropdown-column
+author_slug: bobimicroweber
+categories: [table-builder, panel-builder, table-column]
+description:  Combine Filament's interactive Dropdown Column with icons and colors to give users another way to interact with their tables.
+docs_url: https://raw.githubusercontent.com/bobimicroweber/filament-dropdown-column/main/README.md
+github_repository: bobimicroweber/filament-dropdown-column
+has_dark_theme: true
+has_translations: true
+versions: [2, 3]
+publish_date: 2024-08-01
+---
