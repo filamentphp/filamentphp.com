@@ -10,5 +10,5 @@ github_repository: eighty9nine/filament-page-alerts
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-07-24
+publish_date: 2024-08-05
 ---
