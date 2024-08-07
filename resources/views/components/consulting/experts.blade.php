@@ -95,10 +95,11 @@
         >
             <div class="space-y-2 text-center lg:text-left">
                 <div class="text-2xl font-bold text-[#544945]">
-                    Have a quick support question?
+                    Need a private help session?
                 </div>
                 <div class="font-medium text-[#AA8B7C]">
-                    Zep's here to jump on a call and get you back on track.
+                    Zep's here to jump on a call and help you with your Filament
+                    project.
                 </div>
             </div>
 
@@ -158,7 +159,7 @@
                     <div
                         class="self-center justify-self-center font-medium transition duration-300 [grid-area:1/-1] group-hover/call:-translate-x-2"
                     >
-                        Book a call
+                        Book a session
                     </div>
                 </a>
             </div>
