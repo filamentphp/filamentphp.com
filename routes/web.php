@@ -120,7 +120,7 @@ Route::prefix('/docs')->group(function () {
             abort(404);
         }
 
-        return redirect($versionNavigation['href']);
+        return redirect($versionNavigation['href'] ?? abort(404));
     })->where('slug', '.*')->name('docs');
 });
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-REJJEKRJ">
+<html lang="en" class="hidden astro-ZQUFDPSV">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Plugin Development - Admin Panel - Filament</title>
+    <title>Plugin Development - undefined - Filament</title>
     <meta name="description" content="">
     
     <link rel="canonical" href="https://filamentphp.com/docs/1.x/admin/plugin-development/">
@@ -26,9 +26,9 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.3dcc0b66.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-REJJEKRJ">
+  <link rel="stylesheet" href="/docs/assets/dashboard.b6efa939.css" />
+<link rel="stylesheet" href="/docs/assets/index.f096b09b.css" /><script type="module" src="/docs/hoisted.d25af953.js"></script></head>
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-ZQUFDPSV">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
   <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -57,92 +57,77 @@
                 </div>
             </div>
             <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
-                <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+                <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li x-init="openSection = 'plugin-development'">
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
             </div>
         </div>
@@ -390,22 +375,16 @@
     </button>
 
     <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '3.x' !== '1.x',
-            }">
+        <a href="/docs/4.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
+            <span>Version&nbsp;</span>
+            <span>4.x</span>
+          </a><a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>3.x</span>
-          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '2.x' !== '1.x',
-            }">
+          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>2.x</span>
-          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '1.x' !== '1.x',
-            }">
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-primary-500 hover:text-primary-500 hover:dark:text-primary-500">
             <span>Version&nbsp;</span>
             <span>1.x</span>
           </a>
@@ -514,12 +493,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-REJJEKRJ">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-REJJEKRJ">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-REJJEKRJ"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-REJJEKRJ" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 astro-ZQUFDPSV">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-ZQUFDPSV">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-ZQUFDPSV"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="sticky top-16 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-6 pb-24 pl-0.5 navigation-custom-scrollbar astro-ZQUFDPSV" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -534,149 +513,134 @@
             });
           }
         }">
-          <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+          <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li x-init="openSection = 'plugin-development'">
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-REJJEKRJ">
-        <article class="astro-REJJEKRJ">
-          <header class="mb-9 space-y-1 astro-REJJEKRJ">
-              <p class="font-display font-bold text-butter astro-REJJEKRJ">
-                    <span id="current-package" class="astro-REJJEKRJ">
-                        Admin Panel
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10 astro-ZQUFDPSV">
+        <article class="astro-ZQUFDPSV">
+          <header class="mb-9 space-y-1 astro-ZQUFDPSV">
+              <p class="font-display font-bold text-butter astro-ZQUFDPSV">
+                    <span id="current-package" class="astro-ZQUFDPSV">
+                        
                     </span>
 
                     
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-REJJEKRJ">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-ZQUFDPSV">
                   Plugin Development
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <p>Plugins can be used to extend Filament&#39;s default behaviour and create reusable modules for use in multiple applications.</p>
 <p>To create a new plugin, extend the <code>Filament\PluginServiceProvider</code> class provided by Filament:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">PluginServiceProvider</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\PluginServiceProvider;
+<pre><code class="language-php">use Filament\PluginServiceProvider;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
     // ...
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="registering-plugins"><a class="heading-anchor" href="#registering-plugins"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Registering Plugins</h2>
 <h3 id="application-plugins"><a class="heading-anchor" href="#application-plugins"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Application Plugins</h3>
 <p>If you&#39;re developing a plugin for a specific application, you should register the new service provider in your <code>config/app.php</code> file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">providers</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Providers</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">]</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">];</span></div><textarea data-torchlight-original="true" style="display: none !important;">return [
+<pre><code class="language-php">return [
 
-    'providers' =&gt; [
+    &#39;providers&#39; =&gt; [
         // ...
 
         \App\Providers\ExampleServiceProvider::class,
     ]
 
 ];
-</textarea></code></pre>
+</code></pre>
 <p>Laravel will load your service provider when bootstrapping and your plugin will be initialised.</p>
 <h3 id="distributed-plugins"><a class="heading-anchor" href="#distributed-plugins"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Distributed Plugins</h3>
 <p>Much like a normal Laravel package, you should add your service provider&#39;s fully qualified class name to the <code>extra.laravel.providers</code> array in your package&#39;s <code>composer.json</code> file:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-json"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C792EA;">extra</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&quot;</span><span style="color: #FFCB6B;">laravel</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&quot;</span><span style="color: #F78C6C;">providers</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">                </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Vendor</span><span style="color: #A6ACCD;">\\</span><span style="color: #C3E88D;">Package</span><span style="color: #A6ACCD;">\\</span><span style="color: #C3E88D;">ExampleServiceProvider</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">]</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">{
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Vendor\\Package\\ExampleServiceProvider"
+<pre><code class="language-json">{
+    &quot;extra&quot;: {
+        &quot;laravel&quot;: {
+            &quot;providers&quot;: [
+                &quot;Vendor\\Package\\ExampleServiceProvider&quot;
             ]
         }
     }
 }
-</textarea></code></pre>
+</code></pre>
 <p>This will ensure your service provider is automatically loaded by Laravel when the package is installed.</p>
 <h2 id="resources"><a class="heading-anchor" href="#resources"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Resources</h2>
 <p>To register a custom resource, add the fully qualified class name to the <code>protected $resources</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomResource</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">resources </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomResource</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Resources\CustomResource;
+<pre><code class="language-php">use Vendor\Package\Resources\CustomResource;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -684,11 +648,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomResource::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Resource</code> and ensure that Livewire can discover it.</p>
 <h2 id="pages"><a class="heading-anchor" href="#pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Pages</h2>
 <p>To register a custom page, add the fully qualified class name to the <code>protected $pages</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomPage</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">pages </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomPage</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Pages\CustomPage;
+<pre><code class="language-php">use Vendor\Package\Pages\CustomPage;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -696,11 +660,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomPage::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Page</code> and ensure that Livewire can discover it.</p>
 <h2 id="widgets"><a class="heading-anchor" href="#widgets"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Widgets</h2>
 <p>To register a custom widget, add the fully qualified class name to the <code>protected $widgets</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Widgers</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomWidget</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">widgets </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomWidget</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Widgers\CustomWidget;
+<pre><code class="language-php">use Vendor\Package\Widgers\CustomWidget;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -708,11 +672,11 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomWidget::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Widget</code> and ensure that Livewire can discover it.</p>
 <h2 id="roles"><a class="heading-anchor" href="#roles"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Roles</h2>
 <p>To register a custom role, add the fully qualified class name to the <code>protected $roles</code> array in your service provider.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Vendor</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Package</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CustomRole</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">roles </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">CustomRole</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Vendor\Package\Roles\CustomRole;
+<pre><code class="language-php">use Vendor\Package\Roles\CustomRole;
 
 class ExampleServiceProvider extends PluginServiceProvider
 {
@@ -720,153 +684,173 @@ class ExampleServiceProvider extends PluginServiceProvider
         CustomRole::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Filament will automatically register your <code>Role</code> and ensure it&#39;s available for use throughout your application.</p>
 <h2 id="frontend-assets"><a class="heading-anchor" href="#frontend-assets"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Frontend Assets</h2>
 <p>Filament plugins can also register their own frontend assets. These assets will be included on all Filament related pages, allowing you to use your own CSS and JavaScript.</p>
 <h3 id="stylesheets"><a class="heading-anchor" href="#stylesheets"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Stylesheets</h3>
 <p>To include a custom stylesheet, add it to the <code>protected $styles</code> property in your service provider. You should use a unique name as the key and the URL to the stylesheet as the value.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">styles </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-styles</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/css/style.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected $styles = [
-        'my-package-styles' =&gt; '/vendor/my-package/css/style.css',
+        &#39;my-package-styles&#39; =&gt; &#39;/vendor/my-package/css/style.css&#39;,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>If you need to dynamically generate the key or value, you can overwrite the <code>protected styles()</code> method and return an <code>array</code> of key/value pairs, just like the <code>$styles</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">styles</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-styles</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/css/style.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function styles()
     {
         return [
-            'my-package-styles' =&gt; asset('/vendor/my-package/css/style.css'),
+            &#39;my-package-styles&#39; =&gt; asset(&#39;/vendor/my-package/css/style.css&#39;),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="scripts"><a class="heading-anchor" href="#scripts"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Scripts</h3>
 <p>To include a custom script, add it to the <code>protected $scripts</code> property in your service provider. You should use a unique name as the key and the URL to the script as the value.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">scripts </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-scripts</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/js/main.js</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected $scripts = [
-        'my-package-scripts' =&gt; '/vendor/my-package/js/main.js'
+        &#39;my-package-scripts&#39; =&gt; &#39;/vendor/my-package/js/main.js&#39;
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>If you need to dynamically generate the key or value, you can overwrite the <code>protected scripts()</code> method and return an <code>array</code> of key/value pairs, just like the <code>$scripts</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">scripts</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-package-scripts</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">asset</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/vendor/my-package/js/main.js</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function scripts()
     {
         return [
-            'my-package-scripts' =&gt; asset('/vendor/my-package/js/main.js'),
+            &#39;my-package-scripts&#39; =&gt; asset(&#39;/vendor/my-package/js/main.js&#39;),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="providing-data-to-the-frontend"><a class="heading-anchor" href="#providing-data-to-the-frontend"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Providing Data to the Frontend</h3>
 <p>Whilst building your plugin, you might find the need to generate some data on the server and access it on the client.</p>
 <p>To do this, add a new <code>protected function scriptData()</code> to your service provider and return an array of <code>string</code> keys and values that can be passed to converted into JSON.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ExampleServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">PluginServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">scriptData</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">user</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Auth</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">user</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">class ExampleServiceProvider extends PluginServiceProvider
+<pre><code class="language-php">class ExampleServiceProvider extends PluginServiceProvider
 {
     protected function scriptData()
     {
         return [
-            'user' =&gt; Auth::user(),
+            &#39;user&#39; =&gt; Auth::user(),
         ];
     }
 }
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Filament uses the <code>@json</code> Blade directive to convert your script data into a valid JavaScript object. You can find out more about this directive in the <a href="https://laravel.com/docs/blade#rendering-json">official Laravel documentation</a>.</p>
-</blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/09-plugin-development.md&#34;" class="text-sm astro-REJJEKRJ" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-REJJEKRJ">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">GitHub discussion</a>
+</blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/09-plugin-development.md&#34;" class="text-sm astro-ZQUFDPSV" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-ZQUFDPSV">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-REJJEKRJ">
-          <div class="astro-REJJEKRJ">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
-                  Previous
-                </dt>
-                <dd class="mt-1 astro-REJJEKRJ">
-                  <a href="/docs/1.x/admin/theming" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-REJJEKRJ">
-                    <span aria-hidden="true" class="astro-REJJEKRJ">&larr;</span> Theming
-                  </a>
-                </dd>
-              </div>
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-ZQUFDPSV">
+          
             
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-REJJEKRJ">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
+      <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar astro-ZQUFDPSV">
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-        <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-REJJEKRJ">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
+          <div x-data="{ numberOfExtraLinks: 0, isExpanded: false, isVisible: false }" x-init="
+                setTimeout(() => {
+                    isVisible = true
+                }, 550)
+
+                setInterval(() => {
+                      numberOfExtraLinks = $el.querySelectorAll('li').length - 1
+                  }, 500)
+              " x-collapse x-cloak x-show="isVisible" id="context-stack" class="hidden rounded-lg max-w-64 px-4 py-3 -mx-4 mt-6 z-10 bg-merino/70 flex-col gap-3 dark:bg-dolphin/20 flex-when-contains-context astro-ZQUFDPSV">
+              <div x-bind:style="(isExpanded || (numberOfExtraLinks <= 0)) || 'mask-image: linear-gradient(to bottom, white 50%, transparent)'" class="astro-ZQUFDPSV">
+                  <div x-show="isExpanded || (numberOfExtraLinks <= 0)" x-collapse.min.100px class="astro-ZQUFDPSV">
+                      <p class="font-medium text-base mb-1 text-stone-900 dark:text-white astro-ZQUFDPSV">
+                          Useful links
+                      </p>
+
+                      <div id="global-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+
+                      <div id="local-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+                  </div>
+              </div>
+
+              <button type="button" x-show="numberOfExtraLinks > 0" x-on:click="isExpanded = (! isExpanded)" class="flex gap-1 items-center justify-center w-full text-sm text-stone-900 dark:text-white astro-ZQUFDPSV">
+                  <span x-text="numberOfExtraLinks" class="bg-peach-orange/80 dark:bg-transparent text-black dark:text-butter rounded-md flex items-center justify-center w-6 h-6 astro-ZQUFDPSV"></span>
+                  <span class="astro-ZQUFDPSV">more</span>
+                  <span x-text="(numberOfExtraLinks > 1) ? 'links' : 'link'" class="astro-ZQUFDPSV"></span>
+                  <span x-html="isExpanded ? '↑' : '↓'" class="astro-ZQUFDPSV"></span>
+              </button>
+          </div>
+
+          <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-ZQUFDPSV">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-ZQUFDPSV">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-REJJEKRJ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-plugins&#34;,&#34;text&#34;:&#34;Registering Plugins&#34;,&#34;title&#34;:&#34;Registering Plugins&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;application-plugins&#34;,&#34;text&#34;:&#34;Application Plugins&#34;,&#34;title&#34;:&#34;Application Plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;distributed-plugins&#34;,&#34;text&#34;:&#34;Distributed Plugins&#34;,&#34;title&#34;:&#34;Distributed Plugins&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resources&#34;,&#34;text&#34;:&#34;Resources&#34;,&#34;title&#34;:&#34;Resources&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;widgets&#34;,&#34;text&#34;:&#34;Widgets&#34;,&#34;title&#34;:&#34;Widgets&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;roles&#34;,&#34;text&#34;:&#34;Roles&#34;,&#34;title&#34;:&#34;Roles&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;frontend-assets&#34;,&#34;text&#34;:&#34;Frontend Assets&#34;,&#34;title&#34;:&#34;Frontend Assets&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;stylesheets&#34;,&#34;text&#34;:&#34;Stylesheets&#34;,&#34;title&#34;:&#34;Stylesheets&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scripts&#34;,&#34;text&#34;:&#34;Scripts&#34;,&#34;title&#34;:&#34;Scripts&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;providing-data-to-the-frontend&#34;,&#34;text&#34;:&#34;Providing Data to the Frontend&#34;,&#34;title&#34;:&#34;Providing Data to the Frontend&#34;}]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#registering-plugins" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'registering-plugins' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-2 space-y-2 text-sm astro-ZQUFDPSV" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-plugins&#34;,&#34;text&#34;:&#34;Registering Plugins&#34;,&#34;title&#34;:&#34;Registering Plugins&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;application-plugins&#34;,&#34;text&#34;:&#34;Application Plugins&#34;,&#34;title&#34;:&#34;Application Plugins&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;distributed-plugins&#34;,&#34;text&#34;:&#34;Distributed Plugins&#34;,&#34;title&#34;:&#34;Distributed Plugins&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;resources&#34;,&#34;text&#34;:&#34;Resources&#34;,&#34;title&#34;:&#34;Resources&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;widgets&#34;,&#34;text&#34;:&#34;Widgets&#34;,&#34;title&#34;:&#34;Widgets&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;roles&#34;,&#34;text&#34;:&#34;Roles&#34;,&#34;title&#34;:&#34;Roles&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;frontend-assets&#34;,&#34;text&#34;:&#34;Frontend Assets&#34;,&#34;title&#34;:&#34;Frontend Assets&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;stylesheets&#34;,&#34;text&#34;:&#34;Stylesheets&#34;,&#34;title&#34;:&#34;Stylesheets&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;scripts&#34;,&#34;text&#34;:&#34;Scripts&#34;,&#34;title&#34;:&#34;Scripts&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;providing-data-to-the-frontend&#34;,&#34;text&#34;:&#34;Providing Data to the Frontend&#34;,&#34;title&#34;:&#34;Providing Data to the Frontend&#34;}]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#registering-plugins" x-on:click="$nextTick(() => current = 'registering-plugins')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'registering-plugins' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering Plugins
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-REJJEKRJ">
-                          <li class="astro-REJJEKRJ">
-                              <a href="#application-plugins" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'application-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300 astro-ZQUFDPSV">
+                          <li class="astro-ZQUFDPSV">
+                              <a href="#application-plugins" x-on:click="$nextTick(() => current = 'application-plugins')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'application-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Application Plugins
                               </a>
-                            </li><li class="astro-REJJEKRJ">
-                              <a href="#distributed-plugins" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'distributed-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-ZQUFDPSV">
+                              <a href="#distributed-plugins" x-on:click="$nextTick(() => current = 'distributed-plugins')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'distributed-plugins' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Distributed Plugins
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#resources" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'resources' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#resources" x-on:click="$nextTick(() => current = 'resources')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'resources' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Resources
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#pages" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#pages" x-on:click="$nextTick(() => current = 'pages')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Pages
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#widgets" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'widgets' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#widgets" x-on:click="$nextTick(() => current = 'widgets')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'widgets' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Widgets
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#roles" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'roles' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#roles" x-on:click="$nextTick(() => current = 'roles')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'roles' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Roles
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#frontend-assets" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'frontend-assets' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#frontend-assets" x-on:click="$nextTick(() => current = 'frontend-assets')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'frontend-assets' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Frontend Assets
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-REJJEKRJ">
-                          <li class="astro-REJJEKRJ">
-                              <a href="#stylesheets" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'stylesheets' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300 astro-ZQUFDPSV">
+                          <li class="astro-ZQUFDPSV">
+                              <a href="#stylesheets" x-on:click="$nextTick(() => current = 'stylesheets')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'stylesheets' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Stylesheets
                               </a>
-                            </li><li class="astro-REJJEKRJ">
-                              <a href="#scripts" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'scripts' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-ZQUFDPSV">
+                              <a href="#scripts" x-on:click="$nextTick(() => current = 'scripts')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'scripts' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Scripts
                               </a>
-                            </li><li class="astro-REJJEKRJ">
-                              <a href="#providing-data-to-the-frontend" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'providing-data-to-the-frontend' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-ZQUFDPSV">
+                              <a href="#providing-data-to-the-frontend" x-on:click="$nextTick(() => current = 'providing-data-to-the-frontend')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'providing-data-to-the-frontend' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Providing Data to the Frontend
                               </a>
                             </li>

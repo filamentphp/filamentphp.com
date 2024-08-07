@@ -27,9 +27,12 @@
         "rehype-autolink-headings": "^6.1.1"
     },
     "devDependencies": {
+        "@alpinejs/collapse": "^3.10.5",
         "@alpinejs/focus": "^3.10.5",
+        "@alpinejs/intersect": "^3.14.1",
         "@awcodes/alpine-floating-ui": "^3.4.0",
         "@fontsource/be-vietnam-pro": "^5.0.5",
+        "@formkit/auto-animate": "^0.8.2",
         "@grafite/helpers": "^1.0.2",
         "@tailwindcss/typography": "^0.5.8",
         "@torchlight-api/torchlight-cli": "^0.1.7",
@@ -44,6 +47,7 @@
         "prettier": "^3.0.0",
         "prettier-plugin-astro": "^0.11.0",
         "prettier-plugin-tailwindcss": "^0.4.1",
+        "probe-image-size": "^7.2.3",
         "tailwindcss": "^3.2.4"
     }
 }

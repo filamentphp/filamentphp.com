@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-REJJEKRJ">
+<html lang="en" class="hidden astro-ZQUFDPSV">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Theming - Admin Panel - Filament</title>
+    <title>Theming - undefined - Filament</title>
     <meta name="description" content="">
     
     <link rel="canonical" href="https://filamentphp.com/docs/1.x/admin/theming/">
@@ -26,9 +26,9 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.3dcc0b66.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-REJJEKRJ">
+  <link rel="stylesheet" href="/docs/assets/dashboard.b6efa939.css" />
+<link rel="stylesheet" href="/docs/assets/index.f096b09b.css" /><script type="module" src="/docs/hoisted.d25af953.js"></script></head>
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-ZQUFDPSV">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
   <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -57,92 +57,77 @@
                 </div>
             </div>
             <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
-                <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+                <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li x-init="openSection = 'theming'">
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
             </div>
         </div>
@@ -390,22 +375,16 @@
     </button>
 
     <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '3.x' !== '1.x',
-            }">
+        <a href="/docs/4.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
+            <span>Version&nbsp;</span>
+            <span>4.x</span>
+          </a><a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>3.x</span>
-          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '2.x' !== '1.x',
-            }">
+          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>2.x</span>
-          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '1.x' !== '1.x',
-            }">
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-primary-500 hover:text-primary-500 hover:dark:text-primary-500">
             <span>Version&nbsp;</span>
             <span>1.x</span>
           </a>
@@ -514,12 +493,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-REJJEKRJ">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-REJJEKRJ">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-REJJEKRJ"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-REJJEKRJ" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 astro-ZQUFDPSV">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-ZQUFDPSV">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-ZQUFDPSV"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="sticky top-16 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-6 pb-24 pl-0.5 navigation-custom-scrollbar astro-ZQUFDPSV" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -534,114 +513,99 @@
             });
           }
         }">
-          <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+          <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li x-init="openSection = 'theming'">
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-REJJEKRJ">
-        <article class="astro-REJJEKRJ">
-          <header class="mb-9 space-y-1 astro-REJJEKRJ">
-              <p class="font-display font-bold text-butter astro-REJJEKRJ">
-                    <span id="current-package" class="astro-REJJEKRJ">
-                        Admin Panel
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10 astro-ZQUFDPSV">
+        <article class="astro-ZQUFDPSV">
+          <header class="mb-9 space-y-1 astro-ZQUFDPSV">
+              <p class="font-display font-bold text-butter astro-ZQUFDPSV">
+                    <span id="current-package" class="astro-ZQUFDPSV">
+                        
                     </span>
 
                     
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-REJJEKRJ">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-ZQUFDPSV">
                   Theming
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <p>Filament makes it incredibly simple to customise the look and feel of the panel through &quot;themes&quot;.</p>
 <p>To create your first theme, run the following command:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-theme</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">name-of-theme</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-theme name-of-theme
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-theme name-of-theme
+</code></pre>
 <p>This command will create a new file in <code>resources/css/filament</code> called <code>name-of-theme.css</code>.</p>
 <p>All of the colors used by Filament can be customised using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. This means you can change a color in a single place and it will be used throughout the entire panel.</p>
 <p>Filament uses 6 different colors:</p>
@@ -654,7 +618,7 @@
 <li><code>white</code></li>
 </ul>
 <p>The default theme stylesheet should look like this:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">:</span><span style="color: #C792EA;">root</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #676E95;">/*</span></div><div class='line'><span style="color: #676E95;">    --f-primary-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-primary-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-success-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-danger-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-gray-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-100: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-200: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-300: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-400: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-500: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-600: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-700: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-800: #;</span></div><div class='line'><span style="color: #676E95;">    --f-blue-900: #;</span></div><div class='line'><span style="color: #676E95;">    --f-white: #;</span></div><div class='line'><span style="color: #676E95;">    */</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">:root {
+<pre><code class="language-css">:root {
     /*
     --f-primary-100: #;
     --f-primary-200: #;
@@ -704,69 +668,80 @@
     --f-white: #;
     */
 }
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Filament uses <a href="https://tailwindcss.com">Tailwind CSS</a> for styling, therefore each color has 9 different scales.</p>
 </blockquote>
 <p>To customise a color, uncomment the appropriate line in the CSS file and replace the <code>#</code> placeholder with any valid CSS color (hex, RGB, HSL, etc):</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-css"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">:</span><span style="color: #C792EA;">root</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    --f-primary-600</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">#</span><span style="color: #A6ACCD;">339E8B</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">:root {
+<pre><code class="language-css">:root {
     --f-primary-600: #339E8B;
 }
-</textarea></code></pre>
+</code></pre>
 <h2 id="registering-a-theme"><a class="heading-anchor" href="#registering-a-theme"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Registering a Theme</h2>
 <p>Once you&#39;ve created your theme, you should register it using the <code>Filament::serving</code> and <code>Filament::registerStyle</code> methods inside the <code>boot</code> method of a service provider:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">AppServiceProvider</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">ServiceProvider</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">serving</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">()</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">registerStyle</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">my-custom-theme</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">resource_path</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">css/filament/name-of-theme.css</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">));</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">});</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Filament;
+<pre><code class="language-php">use Filament\Filament;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         Filament::serving(function () {
-            Filament::registerStyle('my-custom-theme', resource_path('css/filament/name-of-theme.css'));
+            Filament::registerStyle(&#39;my-custom-theme&#39;, resource_path(&#39;css/filament/name-of-theme.css&#39;));
         });
     }
 }
-</textarea></code></pre>
+</code></pre>
 <blockquote>
 <p>Wrapping your style, script and script data related calls in <code>Filament::serving</code> ensures that they will only be run when Filament is being used.</p>
-</blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/08-theming.md&#34;" class="text-sm astro-REJJEKRJ" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-REJJEKRJ">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">GitHub discussion</a>
+</blockquote><a href="https://github.com/filamentphp/filament/edit/1.x/docs/08-theming.md&#34;" class="text-sm astro-ZQUFDPSV" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-ZQUFDPSV">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-REJJEKRJ">
-          <div class="astro-REJJEKRJ">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
-                  Previous
-                </dt>
-                <dd class="mt-1 astro-REJJEKRJ">
-                  <a href="/docs/1.x/admin/navigation" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-REJJEKRJ">
-                    <span aria-hidden="true" class="astro-REJJEKRJ">&larr;</span> Navigation
-                  </a>
-                </dd>
-              </div>
-            <div class="ml-auto text-right astro-REJJEKRJ">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
-                  Next
-                </dt>
-                <dd class="mt-1 astro-REJJEKRJ">
-                  <a href="/docs/1.x/admin/plugin-development" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-REJJEKRJ">
-                    Plugin Development <span aria-hidden="true" class="astro-REJJEKRJ">&rarr;</span>
-                  </a>
-                </dd>
-              </div>
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-ZQUFDPSV">
+          
+            
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-REJJEKRJ">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
+      <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar astro-ZQUFDPSV">
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-        <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-REJJEKRJ">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
+          <div x-data="{ numberOfExtraLinks: 0, isExpanded: false, isVisible: false }" x-init="
+                setTimeout(() => {
+                    isVisible = true
+                }, 550)
+
+                setInterval(() => {
+                      numberOfExtraLinks = $el.querySelectorAll('li').length - 1
+                  }, 500)
+              " x-collapse x-cloak x-show="isVisible" id="context-stack" class="hidden rounded-lg max-w-64 px-4 py-3 -mx-4 mt-6 z-10 bg-merino/70 flex-col gap-3 dark:bg-dolphin/20 flex-when-contains-context astro-ZQUFDPSV">
+              <div x-bind:style="(isExpanded || (numberOfExtraLinks <= 0)) || 'mask-image: linear-gradient(to bottom, white 50%, transparent)'" class="astro-ZQUFDPSV">
+                  <div x-show="isExpanded || (numberOfExtraLinks <= 0)" x-collapse.min.100px class="astro-ZQUFDPSV">
+                      <p class="font-medium text-base mb-1 text-stone-900 dark:text-white astro-ZQUFDPSV">
+                          Useful links
+                      </p>
+
+                      <div id="global-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+
+                      <div id="local-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+                  </div>
+              </div>
+
+              <button type="button" x-show="numberOfExtraLinks > 0" x-on:click="isExpanded = (! isExpanded)" class="flex gap-1 items-center justify-center w-full text-sm text-stone-900 dark:text-white astro-ZQUFDPSV">
+                  <span x-text="numberOfExtraLinks" class="bg-peach-orange/80 dark:bg-transparent text-black dark:text-butter rounded-md flex items-center justify-center w-6 h-6 astro-ZQUFDPSV"></span>
+                  <span class="astro-ZQUFDPSV">more</span>
+                  <span x-text="(numberOfExtraLinks > 1) ? 'links' : 'link'" class="astro-ZQUFDPSV"></span>
+                  <span x-html="isExpanded ? '↑' : '↓'" class="astro-ZQUFDPSV"></span>
+              </button>
+          </div>
+
+          <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-ZQUFDPSV">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-ZQUFDPSV">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-REJJEKRJ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-a-theme&#34;,&#34;text&#34;:&#34;Registering a Theme&#34;,&#34;title&#34;:&#34;Registering a Theme&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#registering-a-theme" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'registering-a-theme' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-2 space-y-2 text-sm astro-ZQUFDPSV" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;registering-a-theme&#34;,&#34;text&#34;:&#34;Registering a Theme&#34;,&#34;title&#34;:&#34;Registering a Theme&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#registering-a-theme" x-on:click="$nextTick(() => current = 'registering-a-theme')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'registering-a-theme' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Registering a Theme
                         </a>
                       </h3>

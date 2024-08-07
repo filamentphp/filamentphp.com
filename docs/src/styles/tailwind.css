@@ -129,3 +129,7 @@
 .dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
     background: #373355;
 }
+
+.flex-when-contains-context:has(.context) {
+    @apply flex;
+}

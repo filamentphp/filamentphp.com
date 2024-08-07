@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-REJJEKRJ">
+<html lang="en" class="hidden astro-ZQUFDPSV">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/docs/favicon.ico">
-    <title>Resources - Admin Panel - Filament</title>
+    <title>Resources - undefined - Filament</title>
     <meta name="description" content="">
     
     <link rel="canonical" href="https://filamentphp.com/docs/1.x/admin/resources/">
@@ -26,9 +26,9 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.3dcc0b66.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-REJJEKRJ">
+  <link rel="stylesheet" href="/docs/assets/dashboard.b6efa939.css" />
+<link rel="stylesheet" href="/docs/assets/index.f096b09b.css" /><script type="module" src="/docs/hoisted.d25af953.js"></script></head>
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-ZQUFDPSV">
     <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
   <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
@@ -57,92 +57,77 @@
                 </div>
             </div>
             <div class="mt-5 px-1" x-on:click.away="$refs.panel.toggle; document.querySelector('body').classList.toggle('overflow-hidden');">
-                <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+                <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li x-init="openSection = 'resources'">
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
             </div>
         </div>
@@ -390,22 +375,16 @@
     </button>
 
     <div x-ref="panel" x-cloak x-float.shift.offset.trap="{shift: {padding: 12}}" class="hidden absolute space-y-1 rounded-lg bg-white p-3 text-sm shadow-md shadow-black/5 ring-1 ring-merino dark:bg-[#1f1c36] dark:ring-white/5" aria-label="Version options">
-        <a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '3.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '3.x' !== '1.x',
-            }">
+        <a href="/docs/4.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
+            <span>Version&nbsp;</span>
+            <span>4.x</span>
+          </a><a href="/docs/3.x/panels/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>3.x</span>
-          </a><a href="/docs/2.x/admin/installation" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '2.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '2.x' !== '1.x',
-            }">
+          </a><a href="/docs/2.x/admin/resources/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-gray-700 dark:text-gray-300 hover:dark:text-white">
             <span>Version&nbsp;</span>
             <span>2.x</span>
-          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" x-bind:class="{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '1.x' === '1.x',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '1.x' !== '1.x',
-            }">
+          </a><a href="/docs/1.x/admin/getting-started" class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200" class="text-primary-500 hover:text-primary-500 hover:dark:text-primary-500">
             <span>Version&nbsp;</span>
             <span>1.x</span>
           </a>
@@ -514,12 +493,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-REJJEKRJ">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-REJJEKRJ">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-REJJEKRJ"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-REJJEKRJ"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-REJJEKRJ" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 astro-ZQUFDPSV">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-ZQUFDPSV">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-ZQUFDPSV"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-ZQUFDPSV"></div>
+        <div class="sticky top-16 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-6 pb-24 pl-0.5 navigation-custom-scrollbar astro-ZQUFDPSV" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -534,134 +513,119 @@
             });
           }
         }">
-          <nav class="text-base lg:text-sm w-60 pr-5">
-  <ul role="list" class="mb-9 space-y-2.5">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20 text-black dark:text-butter bg-peach-orange/80 font-bold">
-            <h2 class="flex items-center gap-4 transition-transform duration-300">
-              <svg fill="currentColor" aria-hidden="true" data-slot="icon" viewBox="0 0 20 20" class="h-5 w-5 transition duration-300" astro-icon="heroicons:window"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM3.5 8v7.75c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75V8h-13ZM5 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H5ZM7.25 5A.75.75 0 0 1 8 4.25h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75V5ZM11 4.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V5a.75.75 0 0 0-.75-.75H11Z" clip-rule="evenodd"/></svg>
-              <span>Admin Panel</span>
-            </h2>
-          </a>
-        </li>
-  </ul>
-  <ul role="list" class="space-y-4">
-    <li>
-          <a href="/docs/1.x/admin/getting-started" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Getting Started</h2>
-          </a>
+          <nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/resources" class="block font-display font-bold transition duration-300 ease-out text-base text-butter before:bg-butter">
-            <h2>Resources</h2>
-          </a>
+        const html = document.documentElement;
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/forms" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Forms</h2>
-          </a>
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul x-data="{ openSection: null }" role="list" class="space-y-3">
+        <li>
+                    <a href="/docs/1.x/admin/getting-started" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Getting Started</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/tables" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Tables</h2>
-          </a>
+                    
+                </li><li x-init="openSection = 'resources'">
+                    <a href="/docs/1.x/admin/resources" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-butter before:bg-butter">
+                        <h2>Resources</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/pages" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Pages</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/forms" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Forms</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/dashboard" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Dashboard</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/tables" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Tables</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/navigation" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Navigation</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/pages" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Pages</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/theming" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Theming</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/dashboard" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Dashboard</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li><li>
-          <a href="/docs/1.x/admin/plugin-development" class="block font-display font-bold transition duration-300 ease-out text-base text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
-            <h2>Plugin Development</h2>
-          </a>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/navigation" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Navigation</h2>
+                    </a>
 
-          <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-            
-          </ul>
-        </li>
-  </ul>
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/theming" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Theming</h2>
+                    </a>
+
+                    
+                </li><li>
+                    <a href="/docs/1.x/admin/plugin-development" class="block font-display cursor-pointer font-semibold transition duration-300 ease-out text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1">
+                        <h2>Plugin Development</h2>
+                    </a>
+
+                    
+                </li>
+    </ul>
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-REJJEKRJ">
-        <article class="astro-REJJEKRJ">
-          <header class="mb-9 space-y-1 astro-REJJEKRJ">
-              <p class="font-display font-bold text-butter astro-REJJEKRJ">
-                    <span id="current-package" class="astro-REJJEKRJ">
-                        Admin Panel
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10 astro-ZQUFDPSV">
+        <article class="astro-ZQUFDPSV">
+          <header class="mb-9 space-y-1 astro-ZQUFDPSV">
+              <p class="font-display font-bold text-butter astro-ZQUFDPSV">
+                    <span id="current-package" class="astro-ZQUFDPSV">
+                        
                     </span>
 
                     
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-REJJEKRJ">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-ZQUFDPSV">
                   Resources
                 </h1>
             </header>
           <div class="prose prose-slate max-w-none dark:prose-invert dark:text-gray-300 prose-headings:scroll-mt-16 prose-headings:font-display prose-headings:font-bold prose-lead:text-gray-500 dark:prose-lead:text-gray-300 dark:prose-a:text-butter prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.peach-orange))] prose-a:transition hover:prose-a:[--tw-prose-underline-size:6px] dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.hurricane))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg dark:prose-pre:bg-gray-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-gray-300/10 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-blockquote:not-italic [&#38;_p]:before:hidden [&#38;_p]:after:hidden dark:prose-hr:border-gray-800">
   <p>Resources are static classes that describe how administrators should be able to interact with data from your app. They are associated with Eloquent models from your app.</p>
 <p>To create a resource for the <code>App\Models\Customer</code> model:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-resource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Customer</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-resource Customer
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-resource Customer
+</code></pre>
 <p>This will create several files in the <code>app/Filament/Resources</code> directory:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">.</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource.php</span></div><div class='line'><span style="color: #A6ACCD;">+-- CustomerResource</span></div><div class='line'><span style="color: #A6ACCD;">|   +-- Pages</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- CreateCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- EditCustomer.php</span></div><div class='line'><span style="color: #A6ACCD;">|   |   +-- ListCustomers.php</span></div><textarea data-torchlight-original="true" style="display: none !important;">.
+<pre><code>.
 +-- CustomerResource.php
 +-- CustomerResource
 |   +-- Pages
 |   |   +-- CreateCustomer.php
 |   |   +-- EditCustomer.php
 |   |   +-- ListCustomers.php
-</textarea></code></pre>
+</code></pre>
 <p>Your new resource class lives in <code>CustomerResource.php</code>. Resource classes register <a href="#forms">forms</a>, <a href="#tables">tables</a>, <a href="#authorization">authorization settings</a>, and <a href="#pages">pages</a> associated with that model.</p>
 <p>The classes in the <code>Pages</code> directory are used to customize the pages in the admin panel that interact with your resource.</p>
 <p>By default, the model associated with your resource is guessed based on the class name of the resource. You may set the static <code>$model</code> property to disable this behaviour:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">model </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">Customer</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $model = Customer::class;
-</textarea></code></pre>
+<pre><code class="language-php">public static $model = Customer::class;
+</code></pre>
 <p>A label for this resource is generated based on the name of the resource&#39;s model. It&#39;s used the navigation menu and to display breadcrumbs. You may customize it using the static <code>$label</code> property:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">label </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">customer</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $label = 'customer';
-</textarea></code></pre>
+<pre><code class="language-php">public static $label = &#39;customer&#39;;
+</code></pre>
 <h2 id="forms"><a class="heading-anchor" href="#forms"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Forms</h2>
 <p>Resource classes contain a static <code>form()</code> method that is used to customize the forms to create and update resource records.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Forms</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Form</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">form</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Form</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">form</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">schema</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Forms\Form;
+<pre><code class="language-php">use Filament\Resources\Forms\Form;
 
 public static function form(Form $form)
 {
@@ -670,15 +634,15 @@ public static function form(Form $form)
             // ...
         ]);
 }
-</textarea></code></pre>
+</code></pre>
 <p>The <code>schema()</code> method is used to define the structure of your form. It is an array of components, in the order they should appear in your form.</p>
 <p>For more information, please see the page on <a href="forms">Building Forms</a>.</p>
 <h2 id="relations"><a class="heading-anchor" href="#relations"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Relations</h2>
 <h3 id="managing-single-related-records"><a class="heading-anchor" href="#managing-single-related-records"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Managing Single Related Records</h3>
 <p>The <code>Filament\Resources\Forms\Components\BelongsToSelect</code> field can be used in resource form schemas to create a select element with options to search and select a related record. It has the same methods available as <a href="forms#select"><code>Filament\Resources\Forms\Components\Select</code></a>, and others to define the relationship and column name that should be used:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
-    -&gt;relationship('category', 'name');
-</textarea></code></pre>
+<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
+    -&gt;relationship(&#39;category&#39;, &#39;name&#39;);
+</code></pre>
 <p>This example assumes the following:</p>
 <ul>
 <li>A <code>category_id</code> foreign key column exists on your parent model.</li>
@@ -686,25 +650,25 @@ public static function form(Form $form)
 <li>A <code>name</code> column on your category model that can be used to render the list of categories to select from.</li>
 </ul>
 <p>Sometimes, having a lot of related records as options can cause strain on your web browser. By default, options will only load when you start typing a search. To change this, you may <code>preload()</code> a select field with options. Please only do this if you are certain that there are only a few related records to choose from:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">preload</span><span style="color: #89DDFF;">();</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
-    -&gt;relationship('category', 'name')
+<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
+    -&gt;relationship(&#39;category&#39;, &#39;name&#39;)
     -&gt;preload();
-</textarea></code></pre>
+</code></pre>
 <p>You may also customize the <a href="https://laravel.com/docs/queries">Query Builder</a> used to get search results by specifying a callback in the third parameter of the <code>relationship()</code> method.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">Components</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">BelongsToSelect</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category_id</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">relationship</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">category</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">query</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">where</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">is_featured</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">});</span></div><textarea data-torchlight-original="true" style="display: none !important;">Components\BelongsToSelect::make('category_id')
-    -&gt;relationship('category', 'name', function ($query) {
-        return $query-&gt;where('is_featured', true);
+<pre><code class="language-php">Components\BelongsToSelect::make(&#39;category_id&#39;)
+    -&gt;relationship(&#39;category&#39;, &#39;name&#39;, function ($query) {
+        return $query-&gt;where(&#39;is_featured&#39;, true);
     });
-</textarea></code></pre>
+</code></pre>
 <p>This example will only include featured categories in search results.</p>
 <h3 id="managing-multiple-related-records"><a class="heading-anchor" href="#managing-multiple-related-records"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Managing Multiple Related Records</h3>
 <p>Relation managers are components that allow administrators to list, create, attach, edit, detach and delete related records without leaving the parent record&#39;s edit page. Resource classes contain a static <code>relations()</code> method that is used to register relation managers for your resource.</p>
 <p>To create a relation manager, you can use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-relation-manager</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">CustomerResource</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">orders</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-relation-manager CustomerResource orders
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-relation-manager CustomerResource orders
+</code></pre>
 <p>This will create a <code>CustomerResource/RelationManagers/OrdersRelationManager.php</code> file. This contains a class where you are able to define a <a href="forms">form</a> and <a href="tables">table</a> for your relation manager. The relation manager will interact with the <code>orders</code> relationship on your parent model.</p>
 <p>You must set the primary column of related records using the static <code>$primaryColumn</code> property on your new relation manager class. The primary column is used to identify related records quickly. This could be a user&#39;s <code>name</code>, or a blog post&#39;s <code>title</code>.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;?php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">namespace</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">App</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">CustomerResource</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">RelationManagers</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RelationManager</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">OrdersRelationManager</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">RelationManager</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">primaryColumn </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">relationship </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">orders</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">&lt;?php
+<pre><code class="language-php">&lt;?php
 
 namespace App\Filament\Resources\CustomerResource\RelationManagers;
 
@@ -712,27 +676,27 @@ use Filament\Resources\RelationManager;
 
 class OrdersRelationManager extends RelationManager
 {
-    public static $primaryColumn = 'name';
+    public static $primaryColumn = &#39;name&#39;;
 
-    public static $relationship = 'orders';
+    public static $relationship = &#39;orders&#39;;
 }
-</textarea></code></pre>
+</code></pre>
 <p>You must register the new relation manager in your resource&#39;s <code>relations()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">relations</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        RelationManagers</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">OrdersRelationManager</span><span style="color: #89DDFF;">::</span><span style="color: #F78C6C;">class</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function relations()
+<pre><code class="language-php">public static function relations()
 {
     return [
         RelationManagers\OrdersRelationManager::class,
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>Once a table and form have been defined for the relation manager, visit the edit page of your resource to see it in action.</p>
 <p><code>HasMany</code>, <code>BelongsToMany</code> and <code>MorphMany</code> relationships are currently fully supported by relation managers.</p>
 <p><code>BelongsToMany</code> relation managers require an extra static <code>$inverseRelationship</code> property set on the class if the existing relationships deviate from traditional naming conventions:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">inverseRelationship </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">products</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $inverseRelationship = 'products';
-</textarea></code></pre>
+<pre><code class="language-php">public static $inverseRelationship = &#39;products&#39;;
+</code></pre>
 <h2 id="tables"><a class="heading-anchor" href="#tables"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Tables</h2>
 <p>Resource classes contain a static <code>table()</code> method that is used to customize the table to list resource records.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">columns</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">])</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">filters</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #89DDFF;">            </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Tables\Table;
+<pre><code class="language-php">use Filament\Resources\Tables\Table;
 
 public static function table(Table $table)
 {
@@ -744,7 +708,7 @@ public static function table(Table $table)
             // ...
         ]);
 }
-</textarea></code></pre>
+</code></pre>
 <p>The <code>columns()</code> method is used to define the columns in your table. It is an array of column objects, in the order they should appear in your table.</p>
 <p>Filters are predefined scopes that administrators can use to filter records in your table. The <code>filters()</code> method is used to register these.</p>
 <p>For more information, please see the page on <a href="tables">Building Tables</a>.</p>
@@ -760,26 +724,26 @@ public static function table(Table $table)
 <h3 id="customizing-default-pages"><a class="heading-anchor" href="#customizing-default-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing Default Pages</h3>
 <p>You are able to customize text used in the default pages by overriding properties on the page class. To see the options available, check the static properties defined in the parent class of each default page.</p>
 <p>For further customization opportunities, you can override the static <code>$view</code> property on your page to a custom view in your app:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">view </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">customers.list-records</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">;</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static $view = 'customers.list-records';
-</textarea></code></pre>
+<pre><code class="language-php">public static $view = &#39;customers.list-records&#39;;
+</code></pre>
 <h4 id="customizing-form-redirects"><a class="heading-anchor" href="#customizing-form-redirects"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Customizing Form Redirects</h4>
 <p>You may specify a custom redirect URL for the Create and Edit pages by overriding the <code>getRedirectUrl()</code> method.</p>
 <p>For example, the Create form can redirect back to the List page when it is submitted:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">getRedirectUrl</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Model</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">):</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">string</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$this-&gt;</span><span style="color: #82AAFF;">getResource</span><span style="color: #89DDFF;">()::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function getRedirectUrl(Model $record): string
+<pre><code class="language-php">protected function getRedirectUrl(Model $record): string
 {
-    return $this-&gt;getResource()::generateUrl('index');
+    return $this-&gt;getResource()::generateUrl(&#39;index&#39;);
 }
-</textarea></code></pre>
+</code></pre>
 <h4 id="hooks"><a class="heading-anchor" href="#hooks"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Hooks</h4>
 <p>Hooks may be used to customize the behaviour of a default page. To set up a hook, create a protected method on the page class with the name of the hook:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">protected function beforeSave()
+<pre><code class="language-php">protected function beforeSave()
 {
     // ...
 }
-</textarea></code></pre>
+</code></pre>
 <p>In this example, the code in the <code>beforeSave()</code> method will be called before the data in the form is saved to the database.</p>
 <p>There are several available hooks for the create and edit pages:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">CreateRecord</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateCustomer</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">CreateRecord</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are populated with their default values.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are populated with their default values.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are validated when the form is submitted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are validated when the form is submitted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeCreate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterCreate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Pages\CreateRecord;
+<pre><code class="language-php">use Filament\Resources\Pages\CreateRecord;
 
 class CreateCustomer extends CreateRecord
 {
@@ -815,8 +779,8 @@ class CreateCustomer extends CreateRecord
         // Runs after the form fields are saved to the database.
     }
 }
-</textarea></code></pre>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Pages</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">EditRecord</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">EditCustomer</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">extends</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">EditRecord</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">    </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are populated from the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterFill</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are populated from the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are validated when the form is saved.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterValidate</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are validated when the form is saved.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterSave</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the form fields are saved to the database.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">beforeDelete</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs before the record is deleted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #A6ACCD;">    </span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #C792EA;">protected</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">afterDelete</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// Runs after the record is deleted.</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">}</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Pages\EditRecord;
+</code></pre>
+<pre><code class="language-php">use Filament\Resources\Pages\EditRecord;
 
 class EditCustomer extends EditRecord
 {
@@ -862,27 +826,27 @@ class EditCustomer extends EditRecord
         // Runs after the record is deleted.
     }
 }
-</textarea></code></pre>
+</code></pre>
 <h3 id="custom-pages"><a class="heading-anchor" href="#custom-pages"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Custom Pages</h3>
 <p>Filament allows you to create completely custom pages for resources. To create a new page, you can use:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:filament-page</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">SortCustomers</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--resource=CustomerResource</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-page SortCustomers --resource=CustomerResource
-</textarea></code></pre>
+<pre><code class="language-bash">php artisan make:filament-page SortCustomers --resource=CustomerResource
+</code></pre>
 <p>This command will create two files - a page class in the <code>/Pages</code> directory of your resource directory, and a view in the <code>/pages</code> directory of the resource views directory.</p>
 <p>You must register custom pages to a route in the static <code>routes()</code> method of your resource:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">routes</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        Pages</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">SortCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">routeTo</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/sort</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">sort</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">public static function routes()
+<pre><code class="language-php">public static function routes()
 {
     return [
         // ...
-        Pages\SortCustomers::routeTo('/sort', 'sort'),
+        Pages\SortCustomers::routeTo(&#39;/sort&#39;, &#39;sort&#39;),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>The first parameter of the <code>routeTo()</code> method is the path of the route, and the second is its <a href="https://laravel.com/docs/routing#named-routes">name</a>. Any <a href="https://laravel.com/docs/routing#route-parameters">parameters</a> defined in the route&#39;s path will be available to the page class, in an identical way to <a href="https://laravel-livewire.com/docs/rendering-components#route-params">Livewire</a>.</p>
 <p>To generate a URL for a resource route, you may call the static <code>generateUrl()</code> method on the page class:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">SortCustomers</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">parameters </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[],</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">absolute </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true);</span></div><textarea data-torchlight-original="true" style="display: none !important;">SortCustomers::generateUrl($parameters = [], $absolute = true);
-</textarea></code></pre>
+<pre><code class="language-php">SortCustomers::generateUrl($parameters = [], $absolute = true);
+</code></pre>
 <p>To access a custom page, such as a &quot;show&quot; route, from the table, you can define a new action:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Resources</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Table</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Tables</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">RecordActions</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Link</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">table</span><span style="color: #89DDFF;">(</span><span style="color: #FFCB6B;">Table</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span><span style="color: #89DDFF;">)</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">table</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #676E95;">// ...</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">prependRecordActions</span><span style="color: #89DDFF;">([</span></div><div class='line'><span style="color: #A6ACCD;">            </span><span style="color: #FFCB6B;">Link</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">view</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">)-&gt;</span><span style="color: #82AAFF;">url</span><span style="color: #89DDFF;">(</span><span style="color: #C792EA;">fn</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">($</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">)</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">generateUrl</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">show</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">record</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">record</span><span style="color: #89DDFF;">])),</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">]);</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use Filament\Resources\Tables\Table;
+<pre><code class="language-php">use Filament\Resources\Tables\Table;
 use Filament\Tables\RecordActions\Link;
 
 public static function table(Table $table)
@@ -890,20 +854,20 @@ public static function table(Table $table)
     return $table
         // ...
         -&gt;prependRecordActions([
-            Link::make('view')-&gt;url(fn ($record) =&gt; static::generateUrl('show', ['record' =&gt; $record])),
+            Link::make(&#39;view&#39;)-&gt;url(fn ($record) =&gt; static::generateUrl(&#39;show&#39;, [&#39;record&#39; =&gt; $record])),
         ]);
 }
-</textarea></code></pre>
+</code></pre>
 <p>By passing a callback to the <code>url()</code> method, you can get access to each row&#39;s record.</p>
 <h2 id="authorization"><a class="heading-anchor" href="#authorization"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Authorization</h2>
 <p>For authorization, Filament will observe any <a href="https://laravel.com/docs/authorization#creating-policies">model policies</a> that are registered in your app. The <code>viewAny</code> action may be used to completely disable resources and remove them from the navigation menu.</p>
 <p>Filament also includes a powerful role-based authorization system, which is set up out of the box with the default users table. You may also implement roles functionality in a <a href="#users">custom users table</a>.</p>
 <p>You may create roles, such as <code>Manager</code>, using:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">php artisan make</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">filament</span><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;">role Manager</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan make:filament-role Manager
-</textarea></code></pre>
+<pre><code class="language-php">php artisan make:filament-role Manager
+</code></pre>
 <p>Administrators will now be able to assign this role to any Filament user through the admin panel.</p>
 <p>To only allow users with the <code>Manager</code> role to access a resource, declare so in the static <code>authorization()</code> method:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -911,13 +875,13 @@ public static function authorization()
         Roles\Manager::allow(),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>You may authorize as many roles as you wish.</p>
 <blockquote>
 <p>Please note: administrators will always have full access to every resource in your admin panel.</p>
 </blockquote>
 <p>You may want to only deny users with the <code>Manager</code> role from accessing this resource. To do this, you may use the static <code>deny()</code> method instead:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">deny</span><span style="color: #89DDFF;">(),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
@@ -925,112 +889,123 @@ public static function authorization()
         Roles\Manager::deny(),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>You may specify <code>only()</code> certain actions that roles have access to. These follow the same naming conventions as methods in a <a href="https://laravel.com/docs/authorization#policy-methods">policy</a>.</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">only</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">viewAny</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">create</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
     return [
-        Roles\Manager::allow()-&gt;only(['viewAny', 'create']),
+        Roles\Manager::allow()-&gt;only([&#39;viewAny&#39;, &#39;create&#39;]),
     ];
 }
-</textarea></code></pre>
+</code></pre>
 <p>There is also the possibility to allow access to all actions <code>except()</code> those specified:</p>
-<pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-php"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #F78C6C;">use</span><span style="color: #FFCB6B;"> </span><span style="color: #A6ACCD;">App</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Filament</span><span style="color: #89DDFF;">\</span><span style="color: #A6ACCD;">Roles</span><span style="color: #89DDFF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">static</span><span style="color: #A6ACCD;"> </span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">authorization</span><span style="color: #89DDFF;">()</span></div><div class='line'><span style="color: #89DDFF;">{</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        Roles</span><span style="color: #89DDFF;">\</span><span style="color: #FFCB6B;">Manager</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">allow</span><span style="color: #89DDFF;">()-&gt;</span><span style="color: #82AAFF;">except</span><span style="color: #89DDFF;">([</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">delete</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">]),</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">];</span></div><div class='line'><span style="color: #89DDFF;">}</span></div><textarea data-torchlight-original="true" style="display: none !important;">use App\Filament\Roles;
+<pre><code class="language-php">use App\Filament\Roles;
 
 public static function authorization()
 {
     return [
-        Roles\Manager::allow()-&gt;except(['delete']),
+        Roles\Manager::allow()-&gt;except([&#39;delete&#39;]),
     ];
 }
-</textarea></code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/02-resources.md&#34;" class="text-sm astro-REJJEKRJ" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-REJJEKRJ">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-REJJEKRJ">GitHub discussion</a>
+</code></pre><a href="https://github.com/filamentphp/filament/edit/1.x/docs/02-resources.md&#34;" class="text-sm astro-ZQUFDPSV" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-ZQUFDPSV">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-ZQUFDPSV">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-REJJEKRJ">
-          <div class="astro-REJJEKRJ">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
-                  Previous
-                </dt>
-                <dd class="mt-1 astro-REJJEKRJ">
-                  <a href="/docs/1.x/admin/getting-started" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-REJJEKRJ">
-                    <span aria-hidden="true" class="astro-REJJEKRJ">&larr;</span> Getting Started
-                  </a>
-                </dd>
-              </div>
-            <div class="ml-auto text-right astro-REJJEKRJ">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
-                  Next
-                </dt>
-                <dd class="mt-1 astro-REJJEKRJ">
-                  <a href="/docs/1.x/admin/forms" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-REJJEKRJ">
-                    Forms <span aria-hidden="true" class="astro-REJJEKRJ">&rarr;</span>
-                  </a>
-                </dd>
-              </div>
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-ZQUFDPSV">
+          
+            
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-REJJEKRJ">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
+      <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar astro-ZQUFDPSV">
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-        <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-REJJEKRJ">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-REJJEKRJ">
+          <div x-data="{ numberOfExtraLinks: 0, isExpanded: false, isVisible: false }" x-init="
+                setTimeout(() => {
+                    isVisible = true
+                }, 550)
+
+                setInterval(() => {
+                      numberOfExtraLinks = $el.querySelectorAll('li').length - 1
+                  }, 500)
+              " x-collapse x-cloak x-show="isVisible" id="context-stack" class="hidden rounded-lg max-w-64 px-4 py-3 -mx-4 mt-6 z-10 bg-merino/70 flex-col gap-3 dark:bg-dolphin/20 flex-when-contains-context astro-ZQUFDPSV">
+              <div x-bind:style="(isExpanded || (numberOfExtraLinks <= 0)) || 'mask-image: linear-gradient(to bottom, white 50%, transparent)'" class="astro-ZQUFDPSV">
+                  <div x-show="isExpanded || (numberOfExtraLinks <= 0)" x-collapse.min.100px class="astro-ZQUFDPSV">
+                      <p class="font-medium text-base mb-1 text-stone-900 dark:text-white astro-ZQUFDPSV">
+                          Useful links
+                      </p>
+
+                      <div id="global-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+
+                      <div id="local-context-stack" class="context-stack text-sm text-hurricane dark:text-merino astro-ZQUFDPSV"></div>
+                  </div>
+              </div>
+
+              <button type="button" x-show="numberOfExtraLinks > 0" x-on:click="isExpanded = (! isExpanded)" class="flex gap-1 items-center justify-center w-full text-sm text-stone-900 dark:text-white astro-ZQUFDPSV">
+                  <span x-text="numberOfExtraLinks" class="bg-peach-orange/80 dark:bg-transparent text-black dark:text-butter rounded-md flex items-center justify-center w-6 h-6 astro-ZQUFDPSV"></span>
+                  <span class="astro-ZQUFDPSV">more</span>
+                  <span x-text="(numberOfExtraLinks > 1) ? 'links' : 'link'" class="astro-ZQUFDPSV"></span>
+                  <span x-html="isExpanded ? '↑' : '↓'" class="astro-ZQUFDPSV"></span>
+              </button>
+          </div>
+
+          <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-ZQUFDPSV">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-ZQUFDPSV">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-REJJEKRJ" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;forms&#34;,&#34;text&#34;:&#34;Forms&#34;,&#34;title&#34;:&#34;Forms&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;relations&#34;,&#34;text&#34;:&#34;Relations&#34;,&#34;title&#34;:&#34;Relations&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;managing-single-related-records&#34;,&#34;text&#34;:&#34;Managing Single Related Records&#34;,&#34;title&#34;:&#34;Managing Single Related Records&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;managing-multiple-related-records&#34;,&#34;text&#34;:&#34;Managing Multiple Related Records&#34;,&#34;title&#34;:&#34;Managing Multiple Related Records&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;tables&#34;,&#34;text&#34;:&#34;Tables&#34;,&#34;title&#34;:&#34;Tables&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-default-pages&#34;,&#34;text&#34;:&#34;Customizing Default Pages&#34;,&#34;title&#34;:&#34;Customizing Default Pages&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;custom-pages&#34;,&#34;text&#34;:&#34;Custom Pages&#34;,&#34;title&#34;:&#34;Custom Pages&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorization&#34;,&#34;text&#34;:&#34;Authorization&#34;,&#34;title&#34;:&#34;Authorization&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#forms" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'forms' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-2 space-y-2 text-sm astro-ZQUFDPSV" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;forms&#34;,&#34;text&#34;:&#34;Forms&#34;,&#34;title&#34;:&#34;Forms&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;relations&#34;,&#34;text&#34;:&#34;Relations&#34;,&#34;title&#34;:&#34;Relations&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;managing-single-related-records&#34;,&#34;text&#34;:&#34;Managing Single Related Records&#34;,&#34;title&#34;:&#34;Managing Single Related Records&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;managing-multiple-related-records&#34;,&#34;text&#34;:&#34;Managing Multiple Related Records&#34;,&#34;title&#34;:&#34;Managing Multiple Related Records&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;tables&#34;,&#34;text&#34;:&#34;Tables&#34;,&#34;title&#34;:&#34;Tables&#34;,&#34;children&#34;:[]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;pages&#34;,&#34;text&#34;:&#34;Pages&#34;,&#34;title&#34;:&#34;Pages&#34;,&#34;children&#34;:[{&#34;depth&#34;:3,&#34;slug&#34;:&#34;customizing-default-pages&#34;,&#34;text&#34;:&#34;Customizing Default Pages&#34;,&#34;title&#34;:&#34;Customizing Default Pages&#34;},{&#34;depth&#34;:3,&#34;slug&#34;:&#34;custom-pages&#34;,&#34;text&#34;:&#34;Custom Pages&#34;,&#34;title&#34;:&#34;Custom Pages&#34;}]},{&#34;depth&#34;:2,&#34;slug&#34;:&#34;authorization&#34;,&#34;text&#34;:&#34;Authorization&#34;,&#34;title&#34;:&#34;Authorization&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#forms" x-on:click="$nextTick(() => current = 'forms')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'forms' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Forms
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#relations" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'relations' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#relations" x-on:click="$nextTick(() => current = 'relations')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'relations' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Relations
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-REJJEKRJ">
-                          <li class="astro-REJJEKRJ">
-                              <a href="#managing-single-related-records" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'managing-single-related-records' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300 astro-ZQUFDPSV">
+                          <li class="astro-ZQUFDPSV">
+                              <a href="#managing-single-related-records" x-on:click="$nextTick(() => current = 'managing-single-related-records')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'managing-single-related-records' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Managing Single Related Records
                               </a>
-                            </li><li class="astro-REJJEKRJ">
-                              <a href="#managing-multiple-related-records" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'managing-multiple-related-records' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-ZQUFDPSV">
+                              <a href="#managing-multiple-related-records" x-on:click="$nextTick(() => current = 'managing-multiple-related-records')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'managing-multiple-related-records' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Managing Multiple Related Records
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#tables" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'tables' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#tables" x-on:click="$nextTick(() => current = 'tables')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'tables' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Tables
                         </a>
                       </h3>
                       
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#pages" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#pages" x-on:click="$nextTick(() => current = 'pages')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'pages' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Pages
                         </a>
                       </h3>
-                      <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300 astro-REJJEKRJ">
-                          <li class="astro-REJJEKRJ">
-                              <a href="#customizing-default-pages" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'customizing-default-pages' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                      <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300 astro-ZQUFDPSV">
+                          <li class="astro-ZQUFDPSV">
+                              <a href="#customizing-default-pages" x-on:click="$nextTick(() => current = 'customizing-default-pages')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'customizing-default-pages' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Customizing Default Pages
                               </a>
-                            </li><li class="astro-REJJEKRJ">
-                              <a href="#custom-pages" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'custom-pages' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
+                            </li><li class="astro-ZQUFDPSV">
+                              <a href="#custom-pages" x-on:click="$nextTick(() => current = 'custom-pages')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'custom-pages' ? &#34;text-butter translate-x-1&#34; : &#34;hover:text-gray-600 dark:hover:text-white hover:translate-x-1&#34;">
                                 Custom Pages
                               </a>
                             </li>
                         </ol>
-                    </li><li class="astro-REJJEKRJ">
-                      <h3 class="astro-REJJEKRJ">
-                        <a href="#authorization" class="inline-block transition duration-300 ease-out astro-REJJEKRJ" x-bind:class="current == 'authorization' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                    </li><li class="astro-ZQUFDPSV">
+                      <h3 class="astro-ZQUFDPSV">
+                        <a href="#authorization" x-on:click="$nextTick(() => current = 'authorization')" class="inline-block transition duration-300 ease-out astro-ZQUFDPSV" x-bind:class="current == 'authorization' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Authorization
                         </a>
                       </h3>
