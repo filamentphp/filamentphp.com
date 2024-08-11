@@ -261,15 +261,11 @@ versions.forEach((version) => {
             }
         })
 
-        if (! fs.existsSync(
-            `./filament/${version}/docs`,
-        )) {
+        if (!fs.existsSync(`./filament/${version}/docs`)) {
             return
         }
 
-        const sourceFiles = getDirContents(
-            `./filament/${version}/docs`,
-        )
+        const sourceFiles = getDirContents(`./filament/${version}/docs`)
 
         const dirStructure = sourceFiles.map((file) => {
             return {
@@ -298,39 +294,46 @@ versions.forEach((version) => {
             const split = file.split('/')
 
             if (split.length === 1) {
-                (insertLinksBeforePackages ? linksToInsertBeforePackages : structure.find((item) => item.version === version).links).push({
+                ;(insertLinksBeforePackages
+                    ? linksToInsertBeforePackages
+                    : structure.find((item) => item.version === version).links
+                ).push({
                     title: title || docSlugToTitle(file),
                     slug: filenameToSlug(file),
-                    href: `/docs/${version}/${filenameToSlug(
-                        file,
-                    )}`,
+                    href: `/docs/${version}/${filenameToSlug(file)}`,
                     links: [],
                 })
             } else {
-                let parent = (insertLinksBeforePackages ? linksToInsertBeforePackages : structure.find((item) => item.version === version).links).find(
-                    (item) => item.slug === split[0],
-                )
+                let parent = (
+                    insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                ).find((item) => item.slug === split[0])
 
                 if (!parent) {
-                    (insertLinksBeforePackages ? linksToInsertBeforePackages : structure.find((item) => item.version === version).links).push({
+                    ;(insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                    ).push({
                         title: docSlugToTitle(split[0]),
                         slug: filenameToSlug(split[0]),
-                        href: `/docs/${version}/${filenameToSlug(
-                            file,
-                        )}`,
+                        href: `/docs/${version}/${filenameToSlug(file)}`,
                         links: [],
                     })
                 }
 
-                parent = (insertLinksBeforePackages ? linksToInsertBeforePackages : structure.find((item) => item.version === version).links).find(
-                    (item) => item.slug === split[0],
-                )
+                parent = (
+                    insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                ).find((item) => item.slug === split[0])
                 parent.links.push({
                     title: title || docSlugToTitle(split[1]),
                     slug: filenameToSlug(split[1]),
-                    href: `/docs/${version}/${filenameToSlug(
-                        file,
-                    )}`,
+                    href: `/docs/${version}/${filenameToSlug(file)}`,
                     links: [],
                 })
             }
@@ -343,10 +346,7 @@ versions.forEach((version) => {
                 .replaceAll(/(\d+\-)/g, '')
                 .replace('.md', '.mdx')
 
-            copy(
-                file,
-                `src/pages/${version}/${destination}`,
-            ).then((res) => {
+            copy(file, `src/pages/${version}/${destination}`).then((res) => {
                 if (destination === 'PACKAGES') {
                     return
                 }
