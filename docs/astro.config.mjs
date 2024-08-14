@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import react from '@astrojs/react'
 import mdx from '@astrojs/mdx'
+import icon from 'astro-icon'
 import { h } from 'hastscript'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
@@ -18,6 +19,7 @@ export default defineConfig({
         }),
         react(),
         mdx(),
+        icon(),
     ],
     markdown: {
         syntaxHighlight: false,

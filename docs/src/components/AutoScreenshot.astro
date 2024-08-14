@@ -4,7 +4,10 @@ import probe from 'probe-image-size';
 
 const { name, alt, version } = Astro.props;
 
-const image = fs.readFileSync(new URL(`../filament/${version}/docs-assets/screenshots/images/light/${name}.jpg`, import.meta.url));
+const image = fs.readFileSync(new URL(
+    `../../filament/${version}/docs-assets/screenshots/images/light/${name}.jpg`,
+    import.meta.url,
+));
 const dimensions = probe.sync(image);
 ---
 
@@ -13,6 +16,7 @@ const dimensions = probe.sync(image);
     src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/light/${name}.jpg?raw=true`}
     alt={alt}
     loading="lazy"
+    decoding="async"
     class="rounded-xl dark:hidden"
   />
 
@@ -20,6 +24,7 @@ const dimensions = probe.sync(image);
     src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/dark/${name}.jpg?raw=true`}
     alt={alt}
     loading="lazy"
+    decoding="async"
     class="rounded-xl hidden dark:block"
   />
 </div>

@@ -17,16 +17,8 @@ const packageSlugToTitle = (slug) => {
     switch (slug) {
         case 'admin':
             return 'Admin Panel'
-        case 'forms':
-            return 'Forms'
-        case 'infolists':
-            return 'Infolists'
-        case 'panels':
-            return 'Panels'
         case 'support':
             return 'Core Concepts'
-        case 'tables':
-            return 'Tables'
         default:
             return GrafiteHelper(slug.replace('-', ' ')).title()
     }
@@ -59,6 +51,10 @@ let structure = []
 let versions = fs.readdirSync('./filament')
 
 versions.forEach((version) => {
+    if (fs.existsSync(`./src/pages/${version}`)) {
+        fs.rmSync(`./src/pages/${version}`, { recursive: true })
+    }
+
     structure.push({ version: version, href: null, links: [] })
 
     if (version === '1.x') {
@@ -122,11 +118,12 @@ versions.forEach((version) => {
         const packagesOrder = [
             'panels',
             'admin',
+            'schema',
             'forms',
-            'tables',
-            'notifications',
-            'actions',
             'infolists',
+            'tables',
+            'actions',
+            'notifications',
             'widgets',
             'support',
         ]
@@ -285,7 +282,7 @@ versions.forEach((version) => {
         const linksToInsertBeforePackages = []
 
         dirStructure.map(({ file, title }) => {
-            if (file === 'PACKAGES') {
+            if (file === '_PACKAGES') {
                 insertLinksBeforePackages = false
                 structure.find((item) => item.version === version).links = [
                     ...linksToInsertBeforePackages,
@@ -313,7 +310,16 @@ versions.forEach((version) => {
 
                 if (!parent) {
                     (insertLinksBeforePackages ? linksToInsertBeforePackages : structure.find((item) => item.version === version).links).push({
-                        title: docSlugToTitle(split[0]),
+                        title: ((slug) => { switch (slug) {
+                            case 'about':
+                                return 'About Filament'
+                            case 'styling':
+                                return 'Customizing Styling'
+                            case 'ui':
+                                return 'Blade UI Components'
+                            default:
+                                return GrafiteHelper(slug.replace('-', ' ')).title()
+                        } })(filenameToSlug(split[0])),
                         slug: filenameToSlug(split[0]),
                         href: `/docs/${version}/${filenameToSlug(
                             file,
@@ -347,7 +353,7 @@ versions.forEach((version) => {
                 file,
                 `src/pages/${version}/${destination}`,
             ).then((res) => {
-                if (destination === 'PACKAGES') {
+                if (destination === '_PACKAGES') {
                     return
                 }
 

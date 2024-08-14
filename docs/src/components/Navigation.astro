@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || [
   '/4.x/quickstart/',
   '4.x',
@@ -44,7 +46,14 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '')
                             },
                         ]}
                     >
-                        <h2>{section.title}</h2>
+                        <h2>
+                            {section.title}
+
+                            {(section.links.length > 0) && <Icon
+                                name="chevron-right"
+                                class="h-4 w-4 -mt-0.5 inline-block"
+                            />}
+                        </h2>
                     </a>
 
                     {(section.links.length > 0) && (<ul
@@ -85,6 +94,11 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '')
                                         ]}
                                     >
                                         {link.title}
+
+                                        {(link.links.length > 0) && <Icon
+                                            name="chevron-right"
+                                            class="h-4 w-4 -mt-0.5 inline-block"
+                                        />}
                                     </div>
                                 </a>
 
