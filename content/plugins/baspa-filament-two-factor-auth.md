@@ -2,7 +2,7 @@
 name: Filament Two Factor Auth
 slug: filament-two-factor-auth
 author_slug: baspa
-categories: [form-builder, form-field, spatie, table-builder, table-column]
+categories: [panel-authentication, 'panel-builder']
 description: Integrate Laravel Fortify in minutes in your Filament apps. The package offers two factor authentication with authenicator apps, email and SMS.
 discord_url: 
 docs_url: https://github.com/vormkracht10/filament-two-factor-auth
