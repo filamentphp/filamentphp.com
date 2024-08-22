@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Article;
 use App\Models\Plugin;
 use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
@@ -125,6 +126,20 @@ Route::prefix('/docs')->group(function () {
 });
 
 Route::prefix('/community')->group(function () {
+    Route::get('/', function () {
+        return redirect(status: 301)->route('articles');
+    });
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', function (Article $article) {
+                return redirect(status: 301)->route('articles.view', ['article' => $article->slug]);
+            });
+        });
+    });
+});
+
+Route::prefix('/content')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
 
     Route::name('articles.')->group(function () {

@@ -114,7 +114,7 @@
                         href="{{ route('articles') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Community
+                        Content
                     </a>
                     <a
                         href="{{ route('consulting') }}"
