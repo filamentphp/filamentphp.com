@@ -34,6 +34,7 @@
         "@fontsource/be-vietnam-pro": "^5.0.5",
         "@formkit/auto-animate": "^0.8.2",
         "@grafite/helpers": "^1.0.2",
+        "@tailwindcss/forms": "^0.5.7",
         "@tailwindcss/typography": "^0.5.8",
         "@torchlight-api/torchlight-cli": "^0.1.7",
         "alpinejs": "^3.10.5",

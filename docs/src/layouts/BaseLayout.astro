@@ -16,7 +16,7 @@ function buildTitle(title, packageNavigation) {
   return `${title} - Filament`;
 }
 
-let { title = "Filament", description = "", pageTitle = null, githubUrl = null } = Astro.props.frontmatter || Astro.props;
+let { title = "Filament", description = "", pageTitle = null, githubUrl = null, contents = true } = Astro.props.frontmatter || Astro.props;
 
 let { headings = [] } = Astro.props;
 
@@ -274,7 +274,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               </button>
           </div>
 
-          <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
+          {contents && <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
           {
             tableOfContents.length > 0 && (
               <>
@@ -319,7 +319,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               </>
             )
           }
-        </nav>
+        </nav>}
       </div>
     </div>}
 
