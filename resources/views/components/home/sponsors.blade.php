@@ -305,8 +305,6 @@
 
                     <x-sponsors.lander-systems />
 
-                    <x-sponsors.locale />
-
                     <x-sponsors.lucky-media />
 
                     <x-sponsors.server-auth />
