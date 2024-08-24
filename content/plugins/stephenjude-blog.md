@@ -9,6 +9,7 @@ docs_url: https://raw.githubusercontent.com/stephenjude/filament-blog/main/READM
 github_repository: stephenjude/filament-blog
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+image: stephenjude-blog.jpg
+versions: [3]
 publish_date: 2022-02-19
 ---
