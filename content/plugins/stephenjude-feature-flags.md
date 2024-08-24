@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/stephenjude/filament-feature-flags/m
 github_repository: stephenjude/filament-feature-flags
 has_dark_theme: true
 has_translations: true
-image: stephenjude-feature-flags.png
+image: stephenjude-feature-flags.jpg
 versions: [3]
 publish_date: 2023-11-16
 ---
