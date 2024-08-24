@@ -36,6 +36,7 @@ class Article extends Model implements Starrable
         $table->string('title');
         $table->string('type_slug');
         $table->json('versions')->nullable();
+        $table->string('canonical_url')->nullable();
     }
 
     public function author(): BelongsTo
@@ -96,5 +97,23 @@ class Article extends Model implements Starrable
     public function scopePublished(Builder $query): Builder
     {
         return $query->where('publish_date', '<=', now());
+    }
+
+    public function getDataArray(): array
+    {
+        return [
+            'id' => $this->slug,
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'publish_date' => $this->publish_date->diffForHumans(),
+            'author' => [
+                'name' => $this->author->name,
+                'avatar' => $this->author->getAvatarUrl(),
+            ],
+            'categories' => $this->categories,
+            'type' => $this->type_slug,
+            'versions' => $this->versions,
+            'canonical_url' => $this->canonical_url,
+        ];
     }
 }

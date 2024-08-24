@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/pxlrbt/filament-environment-indicato
 github_repository: pxlrbt/filament-environment-indicator
 has_dark_theme: true
 has_translations: true
-image: pxlrbt-environment-indicator.png
 versions: [2, 3]
 publish_date: 2022-07-15
 ---

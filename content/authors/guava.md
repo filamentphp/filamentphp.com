@@ -1,7 +1,6 @@
 ---
 name: Guava
 slug: guava
-avatar: guava.jpg
 github_url: https://github.com/GuavaCZ
 ---
 

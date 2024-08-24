@@ -16,7 +16,9 @@ class ViewArticleController extends Controller
             ->tag('previewlinks:title', $article->title)
             ->tag('previewlinks:subtitle', "By {$article->author->name}")
             ->tag('previewlinks:image', 'https://filamentphp.com/images/icon.png')
-            ->tag('previewlinks:repository', 'filament/filament');
+            ->tag('previewlinks:repository', 'filament/filament')
+            ->withUrl()
+            ->url($article->canonical_url ?? request()->url());
 
         return view('articles.view-article', ['article' => $article]);
     }

@@ -1,83 +1,129 @@
 ---
 import { Icon } from 'astro-icon'
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/3.x/panels/", "3.x", "panels"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || [
+  '/3.x/panels/',
+  '3.x',
+  'panels',
+]
 
-let currentPackage = segments[2].replaceAll("/", "");
+let currentPackage = segments[2].replaceAll('/', '')
 
-const { navigation } = Astro.props;
+const { navigation } = Astro.props
 
-let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage);
+let packageNavigation = navigation.links?.find(
+  (item) => item.slug === currentPackage,
+)
 
-const pathName = Astro.url.pathname.replace(/\/+$/, '');
+const pathName = Astro.url.pathname.replace(/\/+$/, '')
 ---
 
-<nav
-  class="text-base lg:text-sm w-60 pr-5"
->
-  <ul role="list" class="mb-9 space-y-2.5">
-    {navigation?.links.map((section) => (
-      <li>
-        <a
-          href={section.href}
-          class:list={[
-            "group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20",
-            { "text-black dark:text-butter bg-peach-orange/80 font-bold": pathName.includes(`/${section.slug}/`) },
-            { "font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30": ! pathName.includes(`/${section.slug}/`) },
-          ]}
-        >
-          <h2
+<nav class="text-base lg:text-sm w-60 pr-5">
+  <ul
+    role="list"
+    class="mb-9 space-y-2.5"
+  >
+    {
+      navigation?.links.map((section) => (
+        <li>
+          <a
+            href={section.href}
             class:list={[
-            "flex items-center gap-4 transition duration-300",
-            { "group-hover/navigation-section-link:translate-x-1": ! pathName.includes(`/${section.slug}/`) },
-          ]}
+              'group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20',
+              {
+                'text-black dark:text-butter bg-peach-orange/80 font-bold':
+                  pathName.includes(`/${section.slug}/`),
+              },
+              {
+                'font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30 dark:hover:text-white':
+                  !pathName.includes(`/${section.slug}/`),
+              },
+            ]}
           >
-            <Icon name={section.icon} class=""
+            <h2
               class:list={[
-            "h-5 w-5 transition duration-300",
-            { "dark:group-hover/navigation-section-link:text-purple-400": ! pathName.includes(`/${section.slug}/`) },
-          ]}
-          />
-            <span>{section.title}</span>
-          </h2>
-        </a>
-      </li>
-    ))}
-  </ul>
-  <ul role="list" class="space-y-4">
-    {packageNavigation?.links.map((section) => (
-      <li>
-        <a
-          href={section.href}
-          class:list={[
-            "block font-display font-bold transition duration-300 ease-out text-base",
-            { "text-butter before:bg-butter": section.href === pathName },
-            { "text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1": section.href !== pathName },
-          ]}
-        >
-          <h2 class="">{section.title}</h2>
-        </a>
-
-        <ul role="list" class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink">
-          {section.links.map((link) => (
-            <li class="relative">
-              <a
-                href={link.href}
+                'flex items-center gap-4 transition-transform duration-300',
+                {
+                  'group-hover/navigation-section-link:translate-x-1':
+                    !pathName.includes(`/${section.slug}/`),
+                },
+              ]}
+            >
+              <Icon
+                name={section.icon}
                 class:list={[
-                  "group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200",
-                  { "font-semibold text-butter before:bg-butter": link.href === pathName },
-                  { "text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white": link.href !== pathName },
+                  'h-5 w-5 transition duration-300',
+                  {
+                    'dark:group-hover/navigation-section-link:text-purple-400':
+                      !pathName.includes(`/${section.slug}/`),
+                  },
                 ]}
-              >
-                <div class:list={[
-                  "transition duration-300 ease-out",
-                  { "group-hover/navigation-mini-link:translate-x-1": link.href !== pathName },
-                  ]}>{link.title}</div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </li>
-    ))}
+              />
+              <span>{section.title}</span>
+            </h2>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul
+    role="list"
+    class="space-y-4"
+  >
+    {
+      packageNavigation?.links.map((section) => (
+        <li>
+          <a
+            href={section.href}
+            class:list={[
+              'block font-display font-bold transition duration-300 ease-out text-base',
+              { 'text-butter before:bg-butter': section.href === pathName },
+              {
+                'text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1':
+                  section.href !== pathName,
+              },
+            ]}
+          >
+            <h2>{section.title}</h2>
+          </a>
+
+          <ul
+            role="list"
+            class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink"
+          >
+            {section.links.map((link) => (
+              <li class="relative">
+                <a
+                  href={link.href}
+                  class:list={[
+                    'group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200',
+                    {
+                      'font-semibold text-butter before:bg-butter':
+                        link.href === pathName,
+                    },
+                    {
+                      'text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white':
+                        link.href !== pathName,
+                    },
+                  ]}
+                >
+                  <div
+                    class:list={[
+                      'transition duration-300 ease-out',
+                      {
+                        'group-hover/navigation-mini-link:translate-x-1':
+                          link.href !== pathName,
+                      },
+                    ]}
+                  >
+                    {link.title}
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
   </ul>
 </nav>

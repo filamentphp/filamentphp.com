@@ -1,7 +1,6 @@
 ---
 name: Mustafa Afat
 slug: afatmustafa
-avatar: afatmustafa.jpg
 github_url: https://github.com/afatmustafa
 twitter_url: https://twitter.com/afatm
 mastodon_url: https://phpc.social/@afatmustafa

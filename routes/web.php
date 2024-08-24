@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Article;
+use App\Models\Plugin;
+use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -17,6 +20,33 @@ use Illuminate\Support\Str;
 */
 
 Route::view('/', 'home')->name('home');
+
+Route::get('/use-cases/admin-panel', function () {
+    $pluginSlugs = [
+        'bezhansalleh-shield',
+        'joseph-szobody-impersonate',
+        'awcodes-curator',
+        'pxlrbt-excel',
+        'saade-fullcalendar',
+        'cheesegrits-google-maps',
+    ];
+
+    return view('use-cases.admin-panel', [
+        'plugins' => Plugin::query()
+            ->with(['author'])
+            ->whereIn('slug', $pluginSlugs)
+            ->get(),
+        'pluginStars' => Star::query()
+            ->toBase()
+            ->where('starrable_type', 'plugin')
+            ->whereIn('starrable_id', $pluginSlugs)
+            ->groupBy('starrable_id')
+            ->selectRaw('count(stars.id) as count, starrable_id')
+            ->leftJoin('plugins', 'plugins.slug', '=', 'starrable_id')
+            ->get()
+            ->pluck('count', 'starrable_id'),
+    ]);
+})->name('use-cases.admin-panel');
 
 Route::view('/consulting', 'consulting')->name('consulting');
 
@@ -66,6 +96,18 @@ Route::prefix('/docs')->group(function () {
             return file_get_contents($filePath);
         }
 
+        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
+        }
+
+        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+
+        if (file_exists($filePath)) {
+            return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
+        }
+
         $navigation = json_decode(file_get_contents(base_path('docs/src/navigation.json')), associative: true);
         $version = Str::before($slug, '.x');
 
@@ -73,13 +115,31 @@ Route::prefix('/docs')->group(function () {
             abort(404);
         }
 
-        $versionNavigation = $navigation[$version - 1];
+        $versionNavigation = $navigation[$version - 1] ?? null;
+
+        if ($versionNavigation === null) {
+            abort(404);
+        }
 
         return redirect($versionNavigation['href']);
     })->where('slug', '.*')->name('docs');
 });
 
 Route::prefix('/community')->group(function () {
+    Route::get('/', function () {
+        return redirect(status: 301)->route('articles');
+    });
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', function (Article $article) {
+                return redirect(status: 301)->route('articles.view', ['article' => $article->slug]);
+            });
+        });
+    });
+});
+
+Route::prefix('/content')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
 
     Route::name('articles.')->group(function () {
@@ -99,6 +159,8 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/notifications-pro', '/plugins/ralphjsmit-notifications-pro');
         Route::redirect('/onboarding-manager-pro', '/plugins/ralphjsmit-onboarding-manager-pro');
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
+        Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
+        Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');

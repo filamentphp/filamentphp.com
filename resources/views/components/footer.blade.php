@@ -1,8 +1,29 @@
 <footer
     x-cloak
     x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-10"
+    class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24"
 >
+    <div class="mx-auto grid w-full">
+        <div
+            class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin"
+        >
+            <x-sponsors.lunar footer />
+
+            <a
+                href="https://github.com/filamentphp/filament?sponsor=1"
+                target="_blank"
+                class="my-auto block rounded-xl bg-pink-100 px-8 py-4 text-center text-sm font-medium text-midnight transition hover:bg-pink-200"
+            >
+                Your logo here?
+                <span class="hover:scale-105">💖</span>
+            </a>
+
+            <x-sponsors.kirschbaum footer />
+
+            <x-sponsors.whizzy footer />
+        </div>
+    </div>
+
     <div
         x-data="{}"
         x-ref="footer"
@@ -93,7 +114,7 @@
                         href="{{ route('articles') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Community
+                        Content
                     </a>
                     <a
                         href="{{ route('consulting') }}"
@@ -102,15 +123,21 @@
                         Consulting
                     </a>
                     <a
-                        href="https://shop.filamentphp.com"
+                        href="{{ route('use-cases.admin-panel') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        Shop
+                        Build an Admin Panel
                     </a>
                 </div>
                 <div
                     class="flex flex-col items-start gap-3 text-sm font-medium"
                 >
+                    <a
+                        href="https://shop.filamentphp.com"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        Shop
+                    </a>
                     <a
                         href="{{ route('team') }}"
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
@@ -147,7 +174,7 @@
             <div class="text-sm font-medium text-hurricane/50">
                 &copy; {{ date('Y') }} Filament. All rights reserved.
             </div>
-            <div class="flexx-wrap flex items-center gap-3.5 text-hurricane">
+            <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
                 <a
                     target="_blank"
                     href="https://twitter.com/filamentphp"

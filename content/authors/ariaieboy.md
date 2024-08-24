@@ -1,7 +1,6 @@
 ---
 name: AriaieBOY
 slug: ariaieboy
-avatar: ariaieboy.jpg
 github_url: https://github.com/ariaieboy
 twitter_url: https://twitter.com/ariaieboy_ir
 ---
