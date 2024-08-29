@@ -27,10 +27,22 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.01c506a2.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
+<link rel="stylesheet" href="/docs/assets/dashboard.139d687e.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
   <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-O5REK573">
-    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]">
-  <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap">
+    <header x-data="{ isScrolled: false }" x-on:scroll.window="isScrolled = window.scrollY > 0" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 z-50 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 bg-cream dark:bg-[#171527]">
+  <div class="bg-butter hidden md:block">
+    <div x-data="{
+        partner: null,
+      }" x-init="partner = (Math.random() < 0.5) ? 'kirschbaum' : 'whizzy'" class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9">
+      <span x-cloak x-show="partner === 'kirschbaum'">
+        Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the Filament development agency.
+      </span>
+      <span x-cloak x-show="partner === 'whizzy'">
+        Build with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=header" target="_blank" class="underline">Whizzy</a>, the Filament development platform.
+      </span>
+    </div>
+  </div>
+  <div class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap px-4 py-3 sm:px-6 lg:px-8">
     <div class="relative flex flex-grow basis-0 items-center gap-3">
       <div class="flex lg:hidden">
         <div x-data class="flex items-center">
