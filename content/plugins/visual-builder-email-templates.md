@@ -5,10 +5,10 @@ author_slug: visual-builder
 categories: [developer-tool, form-editor]
 description: This package offers comprehensive email template management providing authorized editing, token replacement, multilingual support, mail class creation, and customizable theme options.
 discord_url: 
-docs_url: https://github.com/visualbuilder/email-templates/blob/3.x/README.md
+docs_url: https://raw.githubusercontent.com/visualbuilder/email-templates/3.x/README.md
 github_repository: visualbuilder/email-templates
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-08-26
+publish_date: 2024-08-30
 ---
