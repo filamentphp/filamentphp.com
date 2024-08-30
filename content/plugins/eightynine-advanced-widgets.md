@@ -10,5 +10,5 @@ github_repository: eighty9nine/filament-advanced-widgets
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date:
+publish_date: 2024-08-30
 ---
