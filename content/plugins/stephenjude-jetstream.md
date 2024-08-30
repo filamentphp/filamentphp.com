@@ -9,7 +9,6 @@ docs_url: https://raw.githubusercontent.com/stephenjude/filament-jetstream/main/
 github_repository: stephenjude/filament-jetstream
 has_dark_theme: true
 has_translations: true
-image: stephenjude-jetstream.jpg
 versions: [3]
-publish_date: 2024-02-29
+publish_date: 2024-08-30
 ---
