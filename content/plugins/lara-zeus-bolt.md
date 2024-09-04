@@ -2,7 +2,7 @@
 name: Bolt ⚡️ Form builder with UI
 slug: lara-zeus-bolt
 author_slug: lara-zeus
-categories: [panel-builder]
+categories: [panel-builder, kit, developer-tool]
 description: Form builder for your users, with so many use cases.
 discord_url: https://discord.com/channels/883083792112300104/1121563279668555897
 docs_url: https://raw.githubusercontent.com/lara-zeus/bolt/3.x/docs/filament.md

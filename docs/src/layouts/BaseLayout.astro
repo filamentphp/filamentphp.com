@@ -9,14 +9,14 @@ import rawNavigation from '../navigation.json';
 import "../styles/tailwind.css";
 
 function buildTitle(title, packageNavigation) {
-  if (packageNavigation && (title !== packageNavigation.title)) {
+  if (packageNavigation) {
     return `${title} - ${packageNavigation.title} - Filament`;
   }
 
   return `${title} - Filament`;
 }
 
-let { title = "Filament", description = "", pageTitle = null, githubUrl = null, contents = true } = Astro.props.frontmatter || Astro.props;
+let { title = "Filament", description = "", pageTitle = null, githubUrl = null } = Astro.props.frontmatter || Astro.props;
 
 let { headings = [] } = Astro.props;
 
@@ -24,21 +24,21 @@ let isHomePage = Astro.url.pathname === "/docs/";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/quickstart/", "4.x", "quickstart", ""];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/", "3.x", "panels", ""];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
 let currentSection = segments[3].replaceAll("/", "");
 
 let navigation = rawNavigation.find((item) => item.version === currentVersion);
-let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage) ?? [];
+let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage);
 
-let allLinks = getAllLinks(packageNavigation.links ?? [])
+let allLinks = getAllLinks(packageNavigation.links)
 let linkIndex = allLinks.findIndex((link) => link.href === Astro.url.pathname.replace(/\/+$/, ''))
 let previousPage = allLinks[linkIndex - 1]
 let nextPage = allLinks[linkIndex + 1]
 
-let section = packageNavigation.links?.find((item) => item.slug === currentSection) ?? null;
+let section = packageNavigation.links.find((item) => item.slug === currentSection);
 
 pageTitle = pageTitle ?? buildTitle(title, packageNavigation);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -120,17 +120,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         content="#ffffff"
     />
   </head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] text-gray-600 dark:text-gray-300">
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527]">
+    <div class="bg-burnt-butter hidden md:block">
+      <div
+        x-data="{
+          partner: null,
+        }"
+        x-init="partner = (Math.random() < 0.3333) ? 'kirschbaum' : (Math.random() < 0.5) ? 'whizzy' : 'sponsor'"
+        class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9"
+      >
+        <span x-cloak x-show="partner === 'kirschbaum'">
+          Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the official Filament-partnered development agency.
+        </span>
+        <span x-cloak x-show="partner === 'whizzy'">
+          Build with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=header" target="_blank" class="underline">Whizzy</a>, the Filament development platform.
+        </span>
+          <span x-cloak x-show="partner === 'sponsor'">
+          Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.
+        </span>
+      </div>
+    </div>
+
     <Header navigation={navigation} />
 
     {isHomePage && <Hero getStartedLink={navigation.href} />}
 
-    {isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8">
+    {isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12">
       <div class="hidden lg:relative lg:block lg:flex-none">
         <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden"></div>
         <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
         <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
-        <div class="sticky top-16 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-6 pb-24 pl-0.5 navigation-custom-scrollbar" x-data={`{
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar" x-data={`{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -148,11 +168,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <Navigation navigation={navigation} />
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
         <article>
           {(title || section) && (
             <header class="mb-9 space-y-1">
-              {(! isHomePage && (title !== packageNavigation.title)) && (
+              {! isHomePage && (
                 <p class="font-display font-bold text-butter">
                     <span id="current-package">
                         {packageNavigation.title}
@@ -217,71 +237,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             )}
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar">
-          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-          <div
-              x-data="{ numberOfExtraLinks: 0, isExpanded: false, isVisible: false }"
-              x-init="
-                setTimeout(() => {
-                    isVisible = true
-                }, 550)
-
-                setInterval(() => {
-                      numberOfExtraLinks = $el.querySelectorAll('li').length - 1
-                  }, 500)
-              "
-              x-collapse
-              x-cloak
-              x-show="isVisible"
-              id="context-stack"
-              class="hidden rounded-lg max-w-64 px-4 py-3 -mx-4 mt-6 z-10 bg-merino/70 flex-col gap-3 dark:bg-dolphin/20 flex-when-contains-context"
-          >
-              <div x-bind:style="(isExpanded || (numberOfExtraLinks <= 0)) || 'mask-image: linear-gradient(to bottom, white 50%, transparent)'">
-                  <div
-                      x-show="isExpanded || (numberOfExtraLinks <= 0)"
-                      x-collapse.min.100px
-                  >
-                      <p class="font-medium text-base mb-1 text-stone-900 dark:text-white">
-                          Useful links
-                      </p>
-
-                      <div
-                          id="global-context-stack"
-                          class="context-stack text-sm text-hurricane dark:text-merino"
-                      ></div>
-
-                      <div
-                          id="local-context-stack"
-                          class="context-stack text-sm text-hurricane dark:text-merino"
-                      ></div>
-                  </div>
-              </div>
-
-              <button
-                  type="button"
-                  x-show="numberOfExtraLinks > 0"
-                  x-on:click="isExpanded = (! isExpanded)"
-                  class="flex gap-1 items-center justify-center w-full text-sm text-stone-900 dark:text-white"
-              >
-                  <span
-                      x-text="numberOfExtraLinks"
-                      class="bg-peach-orange/80 dark:bg-transparent text-black dark:text-butter rounded-md flex items-center justify-center w-6 h-6"
-                  ></span>
-                  <span>more</span>
-                  <span x-text="(numberOfExtraLinks > 1) ? 'links' : 'link'"></span>
-                  <span x-html="isExpanded ? '&uarr;' : '&darr;'"></span>
-              </button>
-          </div>
-
-          {contents && <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
+        <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
           {
             tableOfContents.length > 0 && (
               <>
                 <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white">
                   On this page
                 </h2>
-                <ol role="list" class="mt-2 space-y-2 text-sm"
+                <ol role="list" class="mt-4 space-y-3 text-sm"
                   x-data={`tableOfContents(${JSON.stringify(tableOfContents)})`}
                   x-on:scroll.window="updateCurrentSection"
                 >
@@ -290,7 +256,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                       <h3>
                         <a
                           href={`#${section.slug}`}
-                          x-on:click={`$nextTick(() => current = '${section.slug}')`}
                           class="inline-block transition duration-300 ease-out"
                           x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'`}
                         >
@@ -298,12 +263,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                         </a>
                       </h3>
                       {section.children.length > 0 && (
-                        <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300">
+                        <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
                           {section.children.map((subSection) => (
                             <li>
                               <a
                                 href={`#${subSection.slug}`}
-                                x-on:click={`$nextTick(() => current = '${subSection.slug}')`}
                                 class="inline-block transition duration-300 ease-out"
                                 x-bind:class={`current == '${subSection.slug}' ? "text-butter translate-x-1" : "hover:text-gray-600 dark:hover:text-white hover:translate-x-1"`}
                               >
@@ -319,7 +283,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               </>
             )
           }
-        </nav>}
+        </nav>
       </div>
     </div>}
 

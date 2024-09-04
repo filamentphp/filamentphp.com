@@ -7,6 +7,8 @@
         <div
             class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin"
         >
+            <x-sponsors.sevalla footer />
+
             <x-sponsors.lunar footer />
 
             <a
