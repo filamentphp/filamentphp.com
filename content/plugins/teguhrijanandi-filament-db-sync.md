@@ -1,6 +1,6 @@
 ---
 name: Database Sync
-slug: teguh02-filament-db-sync
+slug: teguhrijanandi-filament-db-sync
 author_slug: teguhrijanandi
 categories: [developer-tool]
 description: This package allow sync two different laravel filament app db.
