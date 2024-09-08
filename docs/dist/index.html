@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-CU5JHS6Y">
+<html lang="en" class="hidden astro-MDSAD7BS">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,21 +27,36 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.f0c83b8b.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-CU5JHS6Y">
-    <div class="bg-burnt-butter hidden md:block astro-CU5JHS6Y">
+<link rel="stylesheet" href="/docs/assets/dashboard.82d0a5de.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-MDSAD7BS">
+    <div class="bg-burnt-butter hidden lg:block astro-MDSAD7BS">
       <div x-data="{
-          partner: null,
-        }" x-init="partner = (Math.random() < 0.3333) ? 'kirschbaum' : (Math.random() < 0.5) ? 'whizzy' : 'sponsor'" class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9 astro-CU5JHS6Y">
-        <span x-cloak x-show="partner === 'kirschbaum'" class="astro-CU5JHS6Y">
-          Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline astro-CU5JHS6Y">Kirschbaum</a>, the official Filament-partnered development agency.
-        </span>
-        <span x-cloak x-show="partner === 'whizzy'" class="astro-CU5JHS6Y">
-          Build with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=header" target="_blank" class="underline astro-CU5JHS6Y">Whizzy</a>, the Filament development platform.
-        </span>
-          <span x-cloak x-show="partner === 'sponsor'" class="astro-CU5JHS6Y">
-          Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline astro-CU5JHS6Y">sponsorship</a> to fund the maintenance and support of the project.
-        </span>
+          banner: null,
+        }" x-init="banner = Math.floor(Math.random() * 3)" class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9 astro-MDSAD7BS">
+        <template x-if="banner === 0" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline astro-MDSAD7BS">Kirschbaum</a>, the official Filament-partnered development agency.
+          </span>
+        </template>
+        <template x-if="banner === 1" x-data="{ variant: null }" x-init="variant = Math.floor(Math.random() * 2)" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            <template x-if="variant === 0" class="astro-MDSAD7BS">
+              <span class="astro-MDSAD7BS">
+                Build faster with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=banner+short" target="_blank" class="underline astro-MDSAD7BS">Whizzy</a>.
+              </span>
+            </template>
+            <template x-if="variant === 1" class="astro-MDSAD7BS">
+              <span class="astro-MDSAD7BS">
+                Build faster with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=banner+long" target="_blank" class="underline astro-MDSAD7BS">Whizzy</a>, the development platform for Laravel and Filament.
+              </span>
+            </template>
+          </span>
+        </template>
+        <template x-if="banner === 2" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline astro-MDSAD7BS">sponsorship</a> to fund the maintenance and support of the project.
+          </span>
+        </template>
       </div>
     </div>
 

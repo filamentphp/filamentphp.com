@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="hidden astro-CU5JHS6Y">
+<html lang="en" class="hidden astro-MDSAD7BS">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,21 +27,36 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg">
     <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/docs/assets/index.5b0ae27c.css" />
-<link rel="stylesheet" href="/docs/assets/dashboard.f0c83b8b.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
-  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-CU5JHS6Y">
-    <div class="bg-burnt-butter hidden md:block astro-CU5JHS6Y">
+<link rel="stylesheet" href="/docs/assets/dashboard.82d0a5de.css" /><script type="module" src="/docs/hoisted.779873f3.js"></script></head>
+  <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527] astro-MDSAD7BS">
+    <div class="bg-burnt-butter hidden lg:block astro-MDSAD7BS">
       <div x-data="{
-          partner: null,
-        }" x-init="partner = (Math.random() < 0.3333) ? 'kirschbaum' : (Math.random() < 0.5) ? 'whizzy' : 'sponsor'" class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9 astro-CU5JHS6Y">
-        <span x-cloak x-show="partner === 'kirschbaum'" class="astro-CU5JHS6Y">
-          Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline astro-CU5JHS6Y">Kirschbaum</a>, the official Filament-partnered development agency.
-        </span>
-        <span x-cloak x-show="partner === 'whizzy'" class="astro-CU5JHS6Y">
-          Build with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=header" target="_blank" class="underline astro-CU5JHS6Y">Whizzy</a>, the Filament development platform.
-        </span>
-          <span x-cloak x-show="partner === 'sponsor'" class="astro-CU5JHS6Y">
-          Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline astro-CU5JHS6Y">sponsorship</a> to fund the maintenance and support of the project.
-        </span>
+          banner: null,
+        }" x-init="banner = Math.floor(Math.random() * 3)" class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9 astro-MDSAD7BS">
+        <template x-if="banner === 0" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline astro-MDSAD7BS">Kirschbaum</a>, the official Filament-partnered development agency.
+          </span>
+        </template>
+        <template x-if="banner === 1" x-data="{ variant: null }" x-init="variant = Math.floor(Math.random() * 2)" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            <template x-if="variant === 0" class="astro-MDSAD7BS">
+              <span class="astro-MDSAD7BS">
+                Build faster with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=banner+short" target="_blank" class="underline astro-MDSAD7BS">Whizzy</a>.
+              </span>
+            </template>
+            <template x-if="variant === 1" class="astro-MDSAD7BS">
+              <span class="astro-MDSAD7BS">
+                Build faster with <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=partner&utm_content=banner+long" target="_blank" class="underline astro-MDSAD7BS">Whizzy</a>, the development platform for Laravel and Filament.
+              </span>
+            </template>
+          </span>
+        </template>
+        <template x-if="banner === 2" class="astro-MDSAD7BS">
+          <span class="astro-MDSAD7BS">
+            Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline astro-MDSAD7BS">sponsorship</a> to fund the maintenance and support of the project.
+          </span>
+        </template>
       </div>
     </div>
 
@@ -729,12 +744,12 @@
 
     
 
-    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-CU5JHS6Y">
-      <div class="hidden lg:relative lg:block lg:flex-none astro-CU5JHS6Y">
-        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-CU5JHS6Y"></div>
-        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-CU5JHS6Y"></div>
-        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-CU5JHS6Y"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-CU5JHS6Y" x-data="{
+    <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12 astro-MDSAD7BS">
+      <div class="hidden lg:relative lg:block lg:flex-none astro-MDSAD7BS">
+        <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden astro-MDSAD7BS"></div>
+        <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block astro-MDSAD7BS"></div>
+        <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block astro-MDSAD7BS"></div>
+        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar astro-MDSAD7BS" x-data="{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -1037,20 +1052,20 @@
 </nav>
         </div>
       </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-CU5JHS6Y">
-        <article class="astro-CU5JHS6Y">
-          <header class="mb-9 space-y-1 astro-CU5JHS6Y">
-              <p class="font-display font-bold text-butter astro-CU5JHS6Y">
-                    <span id="current-package" class="astro-CU5JHS6Y">
+      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 astro-MDSAD7BS">
+        <article class="astro-MDSAD7BS">
+          <header class="mb-9 space-y-1 astro-MDSAD7BS">
+              <p class="font-display font-bold text-butter astro-MDSAD7BS">
+                    <span id="current-package" class="astro-MDSAD7BS">
                         Core Concepts
                     </span>
 
                     
-                            - <span id="current-section" class="astro-CU5JHS6Y">
+                            - <span id="current-section" class="astro-MDSAD7BS">
                                 Blade Components
                             </span>
                 </p>
-              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-CU5JHS6Y">
+              <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white astro-MDSAD7BS">
                   Select Blade component
                 </h1>
             </header>
@@ -1065,44 +1080,44 @@
     &lt;/x-filament::input.select&gt;
 &lt;/x-filament::input.wrapper&gt;
 </textarea></code></pre>
-<p>To use the select component, you must wrap it in an &quot;input wrapper&quot; component, which provides a border and other elements such as a prefix or suffix. You can learn more about customizing the input wrapper component <a href="input-wrapper">here</a>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/09-blade-components/02-select.md" class="text-sm astro-CU5JHS6Y" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-CU5JHS6Y">
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-CU5JHS6Y">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-CU5JHS6Y">GitHub discussion</a>
+<p>To use the select component, you must wrap it in an &quot;input wrapper&quot; component, which provides a border and other elements such as a prefix or suffix. You can learn more about customizing the input wrapper component <a href="input-wrapper">here</a>.</p><a href="https://github.com/filamentphp/filament/edit/3.x/packages/support/docs/09-blade-components/02-select.md" class="text-sm astro-MDSAD7BS" target="_blank" rel="noopener">Edit on GitHub</a><p class="astro-MDSAD7BS">
+              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600 astro-MDSAD7BS">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600 astro-MDSAD7BS">GitHub discussion</a>
           </p>
 </div>
         </article>
-        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-CU5JHS6Y">
-          <div class="astro-CU5JHS6Y">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-CU5JHS6Y">
+        <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 astro-MDSAD7BS">
+          <div class="astro-MDSAD7BS">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-MDSAD7BS">
                   Previous
                 </dt>
-                <dd class="mt-1 astro-CU5JHS6Y">
-                  <a href="/docs/3.x/support/blade-components/section" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-CU5JHS6Y">
-                    <span aria-hidden="true" class="astro-CU5JHS6Y">&larr;</span> Section Blade component
+                <dd class="mt-1 astro-MDSAD7BS">
+                  <a href="/docs/3.x/support/blade-components/section" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-MDSAD7BS">
+                    <span aria-hidden="true" class="astro-MDSAD7BS">&larr;</span> Section Blade component
                   </a>
                 </dd>
               </div>
-            <div class="ml-auto text-right astro-CU5JHS6Y">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-CU5JHS6Y">
+            <div class="ml-auto text-right astro-MDSAD7BS">
+                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white astro-MDSAD7BS">
                   Next
                 </dt>
-                <dd class="mt-1 astro-CU5JHS6Y">
-                  <a href="/docs/3.x/support/blade-components/tabs" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-CU5JHS6Y">
-                    Tabs Blade component <span aria-hidden="true" class="astro-CU5JHS6Y">&rarr;</span>
+                <dd class="mt-1 astro-MDSAD7BS">
+                  <a href="/docs/3.x/support/blade-components/tabs" class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300 astro-MDSAD7BS">
+                    Tabs Blade component <span aria-hidden="true" class="astro-MDSAD7BS">&rarr;</span>
                   </a>
                 </dd>
               </div>
         </dl>
       </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-CU5JHS6Y">
+      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar astro-MDSAD7BS">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-        <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-CU5JHS6Y">
-          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-CU5JHS6Y">
+        <nav aria-labelledby="on-this-page-title" class="my-6 w-56 astro-MDSAD7BS">
+          <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white astro-MDSAD7BS">
                   On this page
-                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-CU5JHS6Y" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
-                  <li class="astro-CU5JHS6Y">
-                      <h3 class="astro-CU5JHS6Y">
-                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-CU5JHS6Y" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
+                </h2><ol role="list" class="mt-4 space-y-3 text-sm astro-MDSAD7BS" x-data="tableOfContents([{&#34;depth&#34;:2,&#34;slug&#34;:&#34;overview&#34;,&#34;text&#34;:&#34;Overview&#34;,&#34;title&#34;:&#34;Overview&#34;,&#34;children&#34;:[]}])" x-on:scroll.window="updateCurrentSection">
+                  <li class="astro-MDSAD7BS">
+                      <h3 class="astro-MDSAD7BS">
+                        <a href="#overview" class="inline-block transition duration-300 ease-out astro-MDSAD7BS" x-bind:class="current == 'overview' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'">
                           Overview
                         </a>
                       </h3>
