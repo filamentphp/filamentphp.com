@@ -3,9 +3,8 @@ name: Minimal Theme
 slug: filament-minimal-theme
 author_slug: filament
 categories: [form-builder, panel-builder, table-builder, theme]
-checkout_url: https://filamentthemes.lemonsqueezy.com/checkout/buy/58c32592-f76a-4685-aba2-65487cbcd3cc?embed=1&logo=0
+checkout_url: https://filamentthemes.lemonsqueezy.com/buy/6f82d347-e136-468f-8ee4-02c0f04e3aec?embed=1&logo=0&discount=0
 description: Featuring a clean design with less rounding, a lighter background and redesigned UI components.
-discord_url: https://discord.com/channels/883083792112300104/1080807837833384017
 github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
