@@ -10,5 +10,5 @@ github_repository: CharrafiMed/global-search-modal
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-09-07
+publish_date: 2024-09-09
 ---
