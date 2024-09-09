@@ -10,5 +10,5 @@ github_repository: solutionforest/filament-access-management
 has_dark_theme: false
 has_translations: false
 versions: [2, 3]
-publish_date: 2024-09-06
+publish_date: 2024-09-09
 ---
