@@ -281,13 +281,15 @@
         >
             <div class="mx-auto grid w-full max-w-2xl">
                 <div class="col-span-full flex flex-wrap justify-around gap-12">
-                    <x-sponsors.lunar />
-
-                    <x-sponsors.ploi />
+                    <x-sponsors.sevalla />
 
                     <x-sponsors.kirschbaum />
 
                     <x-sponsors.whizzy />
+
+                    <x-sponsors.lunar />
+
+                    <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
 
@@ -304,8 +306,6 @@
                     <x-sponsors.ecomsoft />
 
                     <x-sponsors.lander-systems />
-
-                    <x-sponsors.locale />
 
                     <x-sponsors.lucky-media />
 
