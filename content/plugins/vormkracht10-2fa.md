@@ -1,7 +1,7 @@
 ---
 name: 2FA
-slug: baspa-2fa
-author_slug: baspa
+slug: vormkracht10-2fa
+author_slug: vormkracht10
 categories: [panel-authentication, panel-builder]
 description: Integrate Laravel Fortify in minutes in your Filament apps. The package offers two factor authentication with authenicator apps, email and SMS.
 discord_url: https://discord.com/channels/883083792112300104/1281621952641105940
