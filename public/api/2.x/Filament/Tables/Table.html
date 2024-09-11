@@ -1,0 +1,3818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Tables\Table | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Tables_Table" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../2.x/index.html"
+                            data-version="2.x" selected>Filament 2.x</option>
+                                            <option
+                            value="../../../3.x/index.html"
+                            data-version="3.x" >Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li class="active"><a href="../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li ><a href="../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../Filament/Tables.html">Tables</a></li><li class="backslash">\</li><li>Table</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Table    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Table</strong>        extends <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>        (<a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Tables/Concerns/BelongsToLivewire.html"><abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/EvaluatesClosures.html"><abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/EvaluatesClosures.html"><abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        LOADING_TARGETS
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_configurations">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$configurations</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#property_configurations">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_importantConfigurations">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$importantConfigurations</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#property_importantConfigurations">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_evaluationIdentifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$evaluationIdentifier</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#property_evaluationIdentifier">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_evaluationParametersToRemove">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$evaluationParametersToRemove</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#property_evaluationParametersToRemove">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewData">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$viewData</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewIdentifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$viewIdentifier</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_propertyCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$propertyCache</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_propertyCache">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_methodCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$methodCache</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_methodCache">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_livewire">
+                                        protected                                        <a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a>
+                                                                                
+                                    </td>
+                <td>$livewire</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Tables/Concerns/BelongsToLivewire.html#property_livewire">
+<abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureUsing">configureUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configure">configure</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_evaluate">evaluate</a>($value, array $parameters = [], array $exceptParameters = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultEvaluationParameters">getDefaultEvaluationParameters</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_getDefaultEvaluationParameters">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveEvaluationParameter">resolveEvaluationParameter</a>(string $parameter, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveEvaluationParameter">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isEvaluationParameterRemoved">isEvaluationParameterRemoved</a>(string $parameter)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_isEvaluationParameterRemoved">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_view">view</a>(string $view, array $viewData = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_view">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractPublicProperties">extractPublicProperties</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicProperties">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractPublicMethods">extractPublicMethods</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicMethods">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_viewData">viewData</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getView">getView</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_getView">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_toHtml">toHtml</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_toHtml">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_render">render</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_render">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Tables/Concerns/BelongsToLivewire.html"><abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_livewire">livewire</a>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Tables/Concerns/BelongsToLivewire.html#method_livewire">
+<abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLivewire">getLivewire</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Tables/Concerns/BelongsToLivewire.html#method_getLivewire">
+<abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_make">make</a>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActions">getActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActionsPosition">getActionsPosition</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActionsColumnLabel">getActionsColumnLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllSelectableRecordsCount">getAllSelectableRecordsCount</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBulkActions">getBulkActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumns">getColumns</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnsLayout">getColumnsLayout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filament\Tables\Columns\Layout\Component">Component</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollapsibleColumnsLayout">getCollapsibleColumnsLayout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasColumnsLayout">hasColumnsLayout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContent">getContent</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContentGrid">getContentGrid</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContentFooter">getContentFooter</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDescription">getDescription</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmptyState">getEmptyState</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmptyStateActions">getEmptyStateActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmptyStateDescription">getEmptyStateDescription</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmptyStateHeading">getEmptyStateHeading</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmptyStateIcon">getEmptyStateIcon</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilters">getFilters</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFiltersForm">getFiltersForm</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFiltersFormMaxHeight">getFiltersFormMaxHeight</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFiltersFormWidth">getFiltersFormWidth</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFiltersLayout">getFiltersLayout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnToggleForm">getColumnToggleForm</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnToggleFormMaxHeight">getColumnToggleFormMaxHeight</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnToggleFormWidth">getColumnToggleFormWidth</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeader">getHeader</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeaderActions">getHeaderActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeading">getHeading</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModel">getModel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filament\Tables\Actions\Action">Action</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedAction">getMountedAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedActionRecordKey">getMountedActionRecordKey</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedActionForm">getMountedActionForm</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedBulkAction">getMountedBulkAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedBulkActionForm">getMountedBulkActionForm</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Contracts\Pagination\Paginator">Paginator</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecords">getRecords</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordsPerPageSelectOptions">getRecordsPerPageSelectOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordAction">getRecordAction</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordClasses">getRecordClasses</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordUrl">getRecordUrl</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isRecordSelectable">isRecordSelectable</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getReorderColumn">getReorderColumn</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isReorderable">isReorderable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isReordering">isReordering</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSortColumn">getSortColumn</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSortDirection">getSortDirection</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isFilterable">isFilterable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isPaginationEnabled">isPaginationEnabled</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSelectionEnabled">isSelectionEnabled</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSearchable">isSearchable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordCheckboxPosition">getRecordCheckboxPosition</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSearchableByColumn">isSearchableByColumn</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasToggleableColumns">hasToggleableColumns</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordKey">getRecordKey</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPollingInterval">getPollingInterval</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isStriped">isStriped</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isLoaded">isLoaded</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasColumnSearches">hasColumnSearches</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_configureUsing">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L13">at line 13</a></div>
+        <code>        static            
+    <strong>configureUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$during</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isImportant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configure">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L38">at line 38</a></div>
+        <code>                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+    <strong>configure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L65">at line 65</a></div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluate">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L13">at line 13</a></div>
+        <code>                    
+    <strong>evaluate</strong>($value, array $parameters = [], array $exceptParameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$exceptParameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultEvaluationParameters">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_getDefaultEvaluationParameters">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L31">at line 31</a></div>
+        <code>            protected        array
+    <strong>getDefaultEvaluationParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveEvaluationParameter">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveEvaluationParameter">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L36">at line 36</a></div>
+        <code>            protected        
+    <strong>resolveEvaluationParameter</strong>(string $parameter, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEvaluationParameterRemoved">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_isEvaluationParameterRemoved">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L45">at line 45</a></div>
+        <code>            protected        bool
+    <strong>isEvaluationParameterRemoved</strong>(string $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_view">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L35">at line 35</a></div>
+        <code>                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+    <strong>view</strong>(string $view, array $viewData = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$viewData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractPublicProperties">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicProperties">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L46">at line 46</a></div>
+        <code>            protected        array
+    <strong>extractPublicProperties</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractPublicMethods">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicMethods">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L68">at line 68</a></div>
+        <code>            protected        array
+    <strong>extractPublicMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewData">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L90">at line 90</a></div>
+        <code>                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+    <strong>viewData</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getView">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_getView">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L97">at line 97</a></div>
+        <code>                    string
+    <strong>getView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toHtml">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_toHtml">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L106">at line 106</a></div>
+        <code>                    string
+    <strong>toHtml</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_render">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L111">at line 111</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\View\View">View</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_livewire">
+        <div class="location">in <a href="../../Filament/Tables/Concerns/BelongsToLivewire.html#method_livewire">
+<abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Concerns/BelongsToLivewire.php#L11">at line 11</a></div>
+        <code>                    <a href="../../Filament/Tables/Concerns/BelongsToLivewire.html"><abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a>
+    <strong>livewire</strong>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a></td>
+                <td>$livewire</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Tables/Concerns/BelongsToLivewire.html"><abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLivewire">
+        <div class="location">in <a href="../../Filament/Tables/Concerns/BelongsToLivewire.html#method_getLivewire">
+<abbr title="Filament\Tables\Concerns\BelongsToLivewire">BelongsToLivewire</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Concerns/BelongsToLivewire.php#L18">at line 18</a></div>
+        <code>                    <a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a>
+    <strong>getLivewire</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L32">at line 32</a></div>
+        <code>final                    
+    <strong>__construct</strong>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a></td>
+                <td>$livewire</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L37">at line 37</a></div>
+        <code>        static            <a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a>
+    <strong>make</strong>(<a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a> $livewire)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Tables/Contracts/HasTable.html"><abbr title="Filament\Tables\Contracts\HasTable">HasTable</abbr></a></td>
+                <td>$livewire</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L42">at line 42</a></div>
+        <code>                    array
+    <strong>getActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionsPosition">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L47">at line 47</a></div>
+        <code>                    string
+    <strong>getActionsPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionsColumnLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L75">at line 75</a></div>
+        <code>                    string|null
+    <strong>getActionsColumnLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllSelectableRecordsCount">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L83">at line 83</a></div>
+        <code>                    int
+    <strong>getAllSelectableRecordsCount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBulkActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L88">at line 88</a></div>
+        <code>                    array
+    <strong>getBulkActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumns">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L96">at line 96</a></div>
+        <code>                    array
+    <strong>getColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnsLayout">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L104">at line 104</a></div>
+        <code>                    array
+    <strong>getColumnsLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollapsibleColumnsLayout">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L109">at line 109</a></div>
+        <code>                    <abbr title="Filament\Tables\Filament\Tables\Columns\Layout\Component">Component</abbr>|null
+    <strong>getCollapsibleColumnsLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filament\Tables\Columns\Layout\Component">Component</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasColumnsLayout">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L114">at line 114</a></div>
+        <code>                    bool
+    <strong>hasColumnsLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContent">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L119">at line 119</a></div>
+        <code>                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+    <strong>getContent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContentGrid">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L127">at line 127</a></div>
+        <code>                    array|null
+    <strong>getContentGrid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContentFooter">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L135">at line 135</a></div>
+        <code>                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+    <strong>getContentFooter</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L143">at line 143</a></div>
+        <code>                    <abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyState">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L151">at line 151</a></div>
+        <code>                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null
+    <strong>getEmptyState</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Illuminate\Contracts\View\View">View</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyStateActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L159">at line 159</a></div>
+        <code>                    array
+    <strong>getEmptyStateActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyStateDescription">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L167">at line 167</a></div>
+        <code>                    string|null
+    <strong>getEmptyStateDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyStateHeading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L175">at line 175</a></div>
+        <code>                    string
+    <strong>getEmptyStateHeading</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyStateIcon">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L183">at line 183</a></div>
+        <code>                    string
+    <strong>getEmptyStateIcon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilters">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L191">at line 191</a></div>
+        <code>                    array
+    <strong>getFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFiltersForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L196">at line 196</a></div>
+        <code>                    <a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a>
+    <strong>getFiltersForm</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFiltersFormMaxHeight">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L201">at line 201</a></div>
+        <code>                    string|null
+    <strong>getFiltersFormMaxHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFiltersFormWidth">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L209">at line 209</a></div>
+        <code>                    string|null
+    <strong>getFiltersFormWidth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFiltersLayout">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L217">at line 217</a></div>
+        <code>                    string
+    <strong>getFiltersLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnToggleForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L225">at line 225</a></div>
+        <code>                    <a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a>
+    <strong>getColumnToggleForm</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Forms/ComponentContainer.html"><abbr title="Filament\Forms\ComponentContainer">ComponentContainer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnToggleFormMaxHeight">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L230">at line 230</a></div>
+        <code>                    string|null
+    <strong>getColumnToggleFormMaxHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnToggleFormWidth">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L238">at line 238</a></div>
+        <code>                    string|null
+    <strong>getColumnToggleFormWidth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeader">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L246">at line 246</a></div>
+        <code>                    <abbr title="Filament\Tables\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getHeader</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaderActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L254">at line 254</a></div>
+        <code>                    array
+    <strong>getHeaderActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L262">at line 262</a></div>
+        <code>                    <abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getHeading</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L270">at line 270</a></div>
+        <code>                    string
+    <strong>getModel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L278">at line 278</a></div>
+        <code>                    <abbr title="Filament\Tables\Filament\Tables\Actions\Action">Action</abbr>|null
+    <strong>getMountedAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filament\Tables\Actions\Action">Action</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedActionRecordKey">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L283">at line 283</a></div>
+        <code>                    
+    <strong>getMountedActionRecordKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedActionForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L288">at line 288</a></div>
+        <code>                    <abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null
+    <strong>getMountedActionForm</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L293">at line 293</a></div>
+        <code>                    <abbr title="Filament\Tables\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null
+    <strong>getMountedBulkAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedBulkActionForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L298">at line 298</a></div>
+        <code>                    <abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null
+    <strong>getMountedBulkActionForm</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filament\Forms\ComponentContainer">ComponentContainer</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecords">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L303">at line 303</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Contracts\Pagination\Paginator">Paginator</abbr>
+    <strong>getRecords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Contracts\Pagination\Paginator">Paginator</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordsPerPageSelectOptions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L308">at line 308</a></div>
+        <code>                    array
+    <strong>getRecordsPerPageSelectOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L316">at line 316</a></div>
+        <code>                    string|null
+    <strong>getRecordAction</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordClasses">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L330">at line 330</a></div>
+        <code>                    array
+    <strong>getRecordClasses</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordUrl">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L344">at line 344</a></div>
+        <code>                    string|null
+    <strong>getRecordUrl</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRecordSelectable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L358">at line 358</a></div>
+        <code>                    bool
+    <strong>isRecordSelectable</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReorderColumn">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L372">at line 372</a></div>
+        <code>                    string|null
+    <strong>getReorderColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReorderable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L380">at line 380</a></div>
+        <code>                    bool
+    <strong>isReorderable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReordering">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L388">at line 388</a></div>
+        <code>                    bool
+    <strong>isReordering</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSortColumn">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L393">at line 393</a></div>
+        <code>                    string|null
+    <strong>getSortColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSortDirection">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L398">at line 398</a></div>
+        <code>                    string|null
+    <strong>getSortDirection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFilterable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L403">at line 403</a></div>
+        <code>                    bool
+    <strong>isFilterable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPaginationEnabled">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L408">at line 408</a></div>
+        <code>                    bool
+    <strong>isPaginationEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSelectionEnabled">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L416">at line 416</a></div>
+        <code>                    bool
+    <strong>isSelectionEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSearchable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L421">at line 421</a></div>
+        <code>                    bool
+    <strong>isSearchable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordCheckboxPosition">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L426">at line 426</a></div>
+        <code>                    string
+    <strong>getRecordCheckboxPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSearchableByColumn">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L431">at line 431</a></div>
+        <code>                    bool
+    <strong>isSearchableByColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasToggleableColumns">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L436">at line 436</a></div>
+        <code>                    bool
+    <strong>hasToggleableColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordKey">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L441">at line 441</a></div>
+        <code>                    string
+    <strong>getRecordKey</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPollingInterval">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L446">at line 446</a></div>
+        <code>                    string|null
+    <strong>getPollingInterval</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isStriped">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L454">at line 454</a></div>
+        <code>                    bool
+    <strong>isStriped</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isLoaded">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L462">at line 462</a></div>
+        <code>                    bool
+    <strong>isLoaded</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasColumnSearches">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/tables/src/Table.php#L467">at line 467</a></div>
+        <code>                    bool
+    <strong>hasColumnSearches</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

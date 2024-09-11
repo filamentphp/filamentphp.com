@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Infolists\Components\Concerns\CanFormatState | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Infolists_Components_Concerns_CanFormatState" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Infolists.html">Infolists</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Infolists/Components.html">Components</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Infolists/Components/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>CanFormatState</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CanFormatState    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>CanFormatState</strong>        (<a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_formatStateUsing">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                                                                                
+                                    </td>
+                <td>$formatStateUsing</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_characterLimit">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$characterLimit</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_characterLimitEnd">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$characterLimitEnd</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wordLimit">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$wordLimit</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wordLimitEnd">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$wordLimitEnd</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_prefix">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$prefix</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_suffix">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$suffix</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timezone">
+                                        protected                                        <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$timezone</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isHtml">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$isHtml</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isMarkdown">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$isMarkdown</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isDate">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isDate</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isDateTime">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isDateTime</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isMoney">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isMoney</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isNumeric">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isNumeric</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isTime">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isTime</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_markdown">markdown</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_date">date</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_dateTime">dateTime</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_since">since</a>(string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_dateTooltip">dateTooltip</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_dateTimeTooltip">dateTimeTooltip</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_timeTooltip">timeTooltip</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sinceTooltip">sinceTooltip</a>(string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_money">money</a>(<abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $currency = null, int $divideBy = 0, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $locale = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_numeric">numeric</a>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $decimalPlaces = null, <abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr> $decimalSeparator = ArgumentValue::Default, <abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr> $thousandsSeparator = ArgumentValue::Default, <abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $maxDecimalPlaces = null, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $locale = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_time">time</a>(string|null $format = null, string|null $timezone = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_timezone">timezone</a>(<abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $timezone)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_limit">limit</a>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $length = 100, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $end = &#039;...&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_words">words</a>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $words = 100, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $end = &#039;...&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_prefix">prefix</a>(<abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $prefix)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_suffix">suffix</a>(<abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $suffix)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_html">html</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatStateUsing">formatStateUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $callback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatState">formatState</a>(mixed $state)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCharacterLimit">getCharacterLimit</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCharacterLimitEnd">getCharacterLimitEnd</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWordLimit">getWordLimit</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWordLimitEnd">getWordLimitEnd</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTimezone">getTimezone</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isHtml">isHtml</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPrefix">getPrefix</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSuffix">getSuffix</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isMarkdown">isMarkdown</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDate">isDate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDateTime">isDateTime</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isMoney">isMoney</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isNumeric">isNumeric</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isTime">isTime</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_markdown">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L48">at line 48</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>markdown</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_date">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L55">at line 55</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>date</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateTime">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L74">at line 74</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>dateTime</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_since">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L85">at line 85</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>since</strong>(string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateTooltip">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L102">at line 102</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>dateTooltip</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateTimeTooltip">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L119">at line 119</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>dateTimeTooltip</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timeTooltip">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L128">at line 128</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>timeTooltip</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sinceTooltip">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L137">at line 137</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>sinceTooltip</strong>(string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_money">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L152">at line 152</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>money</strong>(<abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $currency = null, int $divideBy = 0, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $locale = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$currency</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$divideBy</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_numeric">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L178">at line 178</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>numeric</strong>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $decimalPlaces = null, <abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr> $decimalSeparator = ArgumentValue::Default, <abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr> $thousandsSeparator = ArgumentValue::Default, <abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $maxDecimalPlaces = null, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $locale = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr></td>
+                <td>$decimalPlaces</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr></td>
+                <td>$decimalSeparator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="string|Closure|null|Filament\Support\Enums\ArgumentValue">ArgumentValue</abbr></td>
+                <td>$thousandsSeparator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr></td>
+                <td>$maxDecimalPlaces</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_time">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L215">at line 215</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>time</strong>(string|null $format = null, string|null $timezone = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timezone">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L226">at line 226</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>timezone</strong>(<abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $timezone)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L233">at line 233</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>limit</strong>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $length = 100, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $end = &#039;...&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr></td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_words">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L241">at line 241</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>words</strong>(<abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr> $words = 100, <abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr> $end = &#039;...&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\int|Closure|null">int|Closure|null</abbr></td>
+                <td>$words</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prefix">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L249">at line 249</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>prefix</strong>(<abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $prefix)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_suffix">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L256">at line 256</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>suffix</strong>(<abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $suffix)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$suffix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_html">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L263">at line 263</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>html</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatStateUsing">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L270">at line 270</a></div>
+        <code>                    <a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a>
+    <strong>formatStateUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Infolists/Components/Concerns/CanFormatState.html"><abbr title="Filament\Infolists\Components\Concerns\CanFormatState">CanFormatState</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatState">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L277">at line 277</a></div>
+        <code>                    mixed
+    <strong>formatState</strong>(mixed $state)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCharacterLimit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L344">at line 344</a></div>
+        <code>                    int|null
+    <strong>getCharacterLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCharacterLimitEnd">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L349">at line 349</a></div>
+        <code>                    string|null
+    <strong>getCharacterLimitEnd</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWordLimit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L354">at line 354</a></div>
+        <code>                    int|null
+    <strong>getWordLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWordLimitEnd">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L359">at line 359</a></div>
+        <code>                    string|null
+    <strong>getWordLimitEnd</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTimezone">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L364">at line 364</a></div>
+        <code>                    string
+    <strong>getTimezone</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isHtml">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L369">at line 369</a></div>
+        <code>                    bool
+    <strong>isHtml</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrefix">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L374">at line 374</a></div>
+        <code>                    <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getPrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSuffix">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L379">at line 379</a></div>
+        <code>                    <abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getSuffix</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Infolists\Components\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMarkdown">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L384">at line 384</a></div>
+        <code>                    bool
+    <strong>isMarkdown</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDate">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L389">at line 389</a></div>
+        <code>                    bool
+    <strong>isDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDateTime">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L394">at line 394</a></div>
+        <code>                    bool
+    <strong>isDateTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMoney">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L399">at line 399</a></div>
+        <code>                    bool
+    <strong>isMoney</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNumeric">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L404">at line 404</a></div>
+        <code>                    bool
+    <strong>isNumeric</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTime">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/infolists/src/Components/Concerns/CanFormatState.php#L409">at line 409</a></div>
+        <code>                    bool
+    <strong>isTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

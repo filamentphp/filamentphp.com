@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Support\Actions\Concerns\CanOpenModal | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Support_Actions_Concerns_CanOpenModal" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../../2.x/index.html"
+                            data-version="2.x" selected>Filament 2.x</option>
+                                            <option
+                            value="../../../../../3.x/index.html"
+                            data-version="3.x" >Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li class="active"><a href="../../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li ><a href="../../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Support.html">Support</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Support/Actions.html">Actions</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Support/Actions/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>CanOpenModal</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CanOpenModal    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>CanOpenModal</strong>        (<a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_extraModalActions">
+                                        protected                                        array|Closure
+                                                                                
+                                    </td>
+                <td>$extraModalActions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isModalCentered">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$isModalCentered</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isModalSlideOver">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$isModalSlideOver</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalActions">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\array|Closure|null">array|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalActions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalCancelAction">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalCancelAction</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalSubmitAction">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalSubmitAction</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalButtonLabel">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalButtonLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalContent">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalContent</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalFooter">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalFooter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalHeading">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalHeading</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalSubheading">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalSubheading</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modalWidth">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$modalWidth</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isModalHidden">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$isModalHidden</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isModalClosedByClickingAway">
+                                        protected                                        <abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$isModalClosedByClickingAway</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_closeModalByClickingAway">closeModalByClickingAway</a>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_centerModal">centerModal</a>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_slideOver">slideOver</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalActions">modalActions</a>(<abbr title="Filament\Support\Actions\Concerns\array|Closure|null">array|Closure|null</abbr> $actions = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extraModalActions">extraModalActions</a>(array|Closure $actions)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalSubmitAction">modalSubmitAction</a>(<abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr> $action = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalCancelAction">modalCancelAction</a>(<abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr> $action = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalButton">modalButton</a>(<abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr> $label = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalContent">modalContent</a>(<abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalFooter">modalFooter</a>(<abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalHeading">modalHeading</a>(<abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $heading = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalSubheading">modalSubheading</a>(<abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $subheading = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalWidth">modalWidth</a>(<abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr> $width = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modalHidden">modalHidden</a>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLivewireCallActionName">getLivewireCallActionName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalActions">getModalActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_filterHiddenModalActions">filterHiddenModalActions</a>(array $actions)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalSubmitAction">getModalSubmitAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalCancelAction">getModalCancelAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExtraModalActions">getExtraModalActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalButtonLabel">getModalButtonLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalContent">getModalContent</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalFooter">getModalFooter</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalHeading">getModalHeading</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalSubheading">getModalSubheading</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalWidth">getModalWidth</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isModalCentered">isModalCentered</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isModalSlideOver">isModalSlideOver</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isModalHidden">isModalHidden</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isModalClosedByClickingAway">isModalClosedByClickingAway</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldOpenModal">shouldOpenModal</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_makeExtraModalAction">makeExtraModalAction</a>(string $name, array|null $arguments = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModalActionClass">getModalActionClass</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_makeModalAction">makeModalAction</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_closeModalByClickingAway">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L40">at line 40</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>closeModalByClickingAway</strong>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_centerModal">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L47">at line 47</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>centerModal</strong>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_slideOver">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L54">at line 54</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>slideOver</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L61">at line 61</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalActions</strong>(<abbr title="Filament\Support\Actions\Concerns\array|Closure|null">array|Closure|null</abbr> $actions = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\array|Closure|null">array|Closure|null</abbr></td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extraModalActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L68">at line 68</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>extraModalActions</strong>(array|Closure $actions)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|Closure</td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalSubmitAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L75">at line 75</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalSubmitAction</strong>(<abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr> $action = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalCancelAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L82">at line 82</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalCancelAction</strong>(<abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr> $action = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\Filament\Support\Actions\Modal\Actions\Action|Closure|null">Action|Closure|null</abbr></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalButton">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L89">at line 89</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalButton</strong>(<abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr> $label = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalContent">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L96">at line 96</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalContent</strong>(<abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $content = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalFooter">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L103">at line 103</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalFooter</strong>(<abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $content = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalHeading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L110">at line 110</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalHeading</strong>(<abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $heading = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$heading</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalSubheading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L117">at line 117</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalSubheading</strong>(<abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $subheading = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$subheading</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalWidth">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L124">at line 124</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalWidth</strong>(<abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr> $width = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modalHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L131">at line 131</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a>
+    <strong>modalHidden</strong>(<abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr> $condition = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Actions\Concerns\bool|Closure|null">bool|Closure|null</abbr></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Concerns/CanOpenModal.html"><abbr title="Filament\Support\Actions\Concerns\CanOpenModal">CanOpenModal</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLivewireCallActionName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L138">at line 138</a></div>
+        <code>    abstract        protected        string
+    <strong>getLivewireCallActionName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L140">at line 140</a></div>
+        <code>                    array
+    <strong>getModalActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filterHiddenModalActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L165">at line 165</a></div>
+        <code>            protected        array
+    <strong>filterHiddenModalActions</strong>(array $actions)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalSubmitAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L173">at line 173</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+    <strong>getModalSubmitAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalCancelAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L188">at line 188</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+    <strong>getModalCancelAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtraModalActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L200">at line 200</a></div>
+        <code>                    array
+    <strong>getExtraModalActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalButtonLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L205">at line 205</a></div>
+        <code>                    string
+    <strong>getModalButtonLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalContent">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L210">at line 210</a></div>
+        <code>                    <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getModalContent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalFooter">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L215">at line 215</a></div>
+        <code>                    <abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getModalFooter</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Actions\Concerns\Illuminate\Contracts\View\View|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalHeading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L220">at line 220</a></div>
+        <code>                    <abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr>
+    <strong>getModalHeading</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalSubheading">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L225">at line 225</a></div>
+        <code>                    <abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getModalSubheading</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Actions\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalWidth">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L230">at line 230</a></div>
+        <code>                    string
+    <strong>getModalWidth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModalCentered">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L235">at line 235</a></div>
+        <code>                    bool
+    <strong>isModalCentered</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModalSlideOver">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L240">at line 240</a></div>
+        <code>                    bool
+    <strong>isModalSlideOver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModalHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L245">at line 245</a></div>
+        <code>                    bool
+    <strong>isModalHidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModalClosedByClickingAway">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L250">at line 250</a></div>
+        <code>                    bool
+    <strong>isModalClosedByClickingAway</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldOpenModal">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L255">at line 255</a></div>
+        <code>                    bool
+    <strong>shouldOpenModal</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeExtraModalAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L260">at line 260</a></div>
+        <code>                    <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+    <strong>makeExtraModalAction</strong>(string $name, array|null $arguments = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModalActionClass">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L267">at line 267</a></div>
+        <code>        static    protected        string
+    <strong>getModalActionClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeModalAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Actions/Concerns/CanOpenModal.php#L272">at line 272</a></div>
+        <code>        static            <a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a>
+    <strong>makeModalAction</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Support/Actions/Modal/Actions/Action.html"><abbr title="Filament\Support\Actions\Modal\Actions\Action">Action</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

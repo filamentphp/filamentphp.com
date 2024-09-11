@@ -1,0 +1,2980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Tables\Filters\QueryBuilder\Constraints\Constraint | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../doctum.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Tables_Filters_QueryBuilder_Constraints_Constraint" data-root-path="../../../../../" data-search-index-url="../../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../../../Filament/Tables.html">Tables</a></li><li class="backslash">\</li><li><a href="../../../../../Filament/Tables/Filters.html">Filters</a></li><li class="backslash">\</li><li><a href="../../../../../Filament/Tables/Filters/QueryBuilder.html">QueryBuilder</a></li><li class="backslash">\</li><li><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints.html">Constraints</a></li><li class="backslash">\</li><li>Constraint</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Constraint    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Constraint</strong>        extends <a href="../../../../../Filament/Support/Components/Component.html"><abbr title="Filament\Support\Components\Component">Component</abbr></a>        (<a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html"><abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../Filament/Support/Concerns/Macroable.html"><abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        OPERATOR_SELECT_NAME
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_evaluationIdentifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$evaluationIdentifier</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        <abbr title="Filament\Support\Concerns\array&lt;string,array&lt;class-string,\Closure&gt;&gt;">Closure&gt;&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$macros</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#property_macros">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_label">
+                                        protected                                        <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$label</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#property_label">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldTranslateLabel">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$shouldTranslateLabel</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#property_shouldTranslateLabel">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$name</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html#property_name">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_operators">
+                                        protected                                        <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Operators/Operator.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Operators\Operator">Operator</abbr></a>[]
+                                                                                
+                                    </td>
+                <td>$operators</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#property_operators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_icon">
+                                        protected                                        <abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$icon</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#property_icon">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iconPosition">
+                                        protected                                        <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string|Closure|null">IconPosition|string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$iconPosition</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#property_iconPosition">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iconSize">
+                                        protected                                        <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|Closure|null">IconSize|string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$iconSize</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#property_iconSize">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attribute">
+                                        protected                                        <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$attribute</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attributeLabel">
+                                        protected                                        <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$attributeLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_relationship">
+                                        protected                                        <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$relationship</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifyRelationshipQueryUsing">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                                                                                
+                                    </td>
+                <td>$modifyRelationshipQueryUsing</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_settings">
+                                        protected                                        <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$settings</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isInverse">
+                                        protected                                        bool|null
+                                                                                
+                                    </td>
+                <td>$isInverse</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filter">
+                                        protected                                        <a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a>
+                                                                                
+                                    </td>
+                <td>$filter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureUsing">configureUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $modifyUsing, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configure">configure</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_evaluate">evaluate</a>(mixed $value, array $namedInjections = [], array $typedInjections = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveClosureDependencyForEvaluation">resolveClosureDependencyForEvaluation</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter, array $namedInjections, array $typedInjections)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveClosureDependencyForEvaluation">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveDefaultClosureDependencyForEvaluationByName">resolveDefaultClosureDependencyForEvaluationByName</a>(string $parameterName)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveDefaultClosureDependencyForEvaluationByType">resolveDefaultClosureDependencyForEvaluationByType</a>(string $parameterType)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveDefaultClosureDependencyForEvaluationByType">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTypedReflectionParameterClassName">getTypedReflectionParameterClassName</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_getTypedReflectionParameterClassName">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_macro">macro</a>(string $name, callable $macro)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method_macro">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mixin">mixin</a>(object $mixin, bool $replace = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method_mixin">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_flushMacros">flushMacros</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method_flushMacros">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method___callStatic">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method___call">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;callable|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMacro">getMacro</a>(string $method)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/Macroable.html#method_getMacro">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_label">label</a>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\string|Closure|null">string|Closure|null</abbr> $label)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_label">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateLabel">translateLabel</a>(bool $shouldTranslateLabel = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_translateLabel">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLabel">getLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_getLabel">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_name">name</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html#method_name">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html#method_getName">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_unshiftOperators">unshiftOperators</a>(array $operators)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_unshiftOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_operators">operators</a>(array $operators)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_operators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_pushOperators">pushOperators</a>(array $operators)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_pushOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOperators">getOperators</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_getOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\Filament\Tables\Filters\QueryBuilder\Constraints\Operators\Operator">Operator</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOperator">getOperator</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_getOperator">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_icon">icon</a>(<abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $icon)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_icon">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_iconPosition">iconPosition</a>(<abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string|Closure|null">IconPosition|string|Closure|null</abbr> $position)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_iconPosition">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_iconSize">iconSize</a>(<abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|Closure|null">IconSize|string|Closure|null</abbr> $size)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_iconSize">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIcon">getIcon</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIcon">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string">IconPosition|string</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIconPosition">getIconPosition</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIconPosition">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|null">IconSize|string|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIconSize">getIconSize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIconSize">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_make">make</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Forms/Components/Builder/Block.html"><abbr title="Filament\Forms\Components\Builder\Block">Block</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBuilderBlock">getBuilderBlock</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOperatorSelectOptions">getOperatorSelectOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseOperatorString">parseOperatorString</a>(string $operator)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attribute">attribute</a>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr> $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attributeLabel">attributeLabel</a>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr> $label)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_relationship">relationship</a>(string $name, string $titleAttribute, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $modifyQueryUsing = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_filter">filter</a>(<a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a> $filter)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilter">getFilter</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAttribute">getAttribute</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAttributeLabel">getAttributeLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_queriesRelationships">queriesRelationships</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRelationshipName">getRelationshipName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAttributeForQuery">getAttributeForQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModifyRelationshipQueryUsing">getModifyRelationshipQueryUsing</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_settings">settings</a>(array|null $settings)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_inverse">inverse</a>(bool|null $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSettings">getSettings</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isInverse">isInverse</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_configureUsing">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Configurable.php#L10">at line 10</a></div>
+        <code>        static            mixed
+    <strong>configureUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $modifyUsing, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$modifyUsing</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$during</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isImportant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configure">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Configurable.php#L20">at line 20</a></div>
+        <code>                    <a href="../../../../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+    <strong>configure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Configurable.php#L30">at line 30</a></div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluate">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/EvaluatesClosures.php#L23">at line 23</a></div>
+        <code>                    mixed
+    <strong>evaluate</strong>(mixed $value, array $namedInjections = [], array $typedInjections = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$namedInjections</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$typedInjections</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveClosureDependencyForEvaluation">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveClosureDependencyForEvaluation">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/EvaluatesClosures.php#L42">at line 42</a></div>
+        <code>            protected        mixed
+    <strong>resolveClosureDependencyForEvaluation</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter, array $namedInjections, array $typedInjections)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$namedInjections</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$typedInjections</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveDefaultClosureDependencyForEvaluationByName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L279">at line 279</a></div>
+        <code>            protected        array
+    <strong>resolveDefaultClosureDependencyForEvaluationByName</strong>(string $parameterName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveDefaultClosureDependencyForEvaluationByType">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveDefaultClosureDependencyForEvaluationByType">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/EvaluatesClosures.php#L112">at line 112</a></div>
+        <code>            protected        array
+    <strong>resolveDefaultClosureDependencyForEvaluationByType</strong>(string $parameterType)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameterType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTypedReflectionParameterClassName">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/EvaluatesClosures.html#method_getTypedReflectionParameterClassName">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/EvaluatesClosures.php#L117">at line 117</a></div>
+        <code>            protected        string|null
+    <strong>getTypedReflectionParameterClassName</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method_macro">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L17">at line 17</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, callable $macro)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method_mixin">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L22">at line 22</a></div>
+        <code>        static            void
+    <strong>mixin</strong>(object $mixin, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$mixin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushMacros">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method_flushMacros">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L37">at line 37</a></div>
+        <code>        static            void
+    <strong>flushMacros</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method___callStatic">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L45">at line 45</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method___call">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L67">at line 67</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMacro">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/Macroable.html#method_getMacro">
+<abbr title="Filament\Support\Concerns\Macroable">Macroable</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/Macroable.php#L86">at line 86</a></div>
+        <code>        static    protected        callable|null
+    <strong>getMacro</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_label">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_label">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasLabel.php#L13">at line 13</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a>
+    <strong>label</strong>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\string|Closure|null">string|Closure|null</abbr> $label)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateLabel">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_translateLabel">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasLabel.php#L20">at line 20</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a>
+    <strong>translateLabel</strong>(bool $shouldTranslateLabel = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$shouldTranslateLabel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabel">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasLabel.html#method_getLabel">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasLabel">HasLabel</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasLabel.php#L27">at line 27</a></div>
+        <code>                    string
+    <strong>getLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_name">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html#method_name">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasName.php#L9">at line 9</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a>
+    <strong>name</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasName.html#method_getName">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasName">HasName</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasName.php#L16">at line 16</a></div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unshiftOperators">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_unshiftOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasOperators.php#L15">at line 15</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+    <strong>unshiftOperators</strong>(array $operators)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$operators</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_operators">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_operators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasOperators.php#L40">at line 40</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+    <strong>operators</strong>(array $operators)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$operators</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushOperators">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_pushOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasOperators.php#L51">at line 51</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a>
+    <strong>pushOperators</strong>(array $operators)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$operators</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOperators">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_getOperators">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasOperators.php#L67">at line 67</a></div>
+        <code>                    array
+    <strong>getOperators</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOperator">
+        <div class="location">in <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Concerns/HasOperators.html#method_getOperator">
+<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\HasOperators">HasOperators</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Concerns/HasOperators.php#L75">at line 75</a></div>
+        <code>                    <abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\Filament\Tables\Filters\QueryBuilder\Constraints\Operators\Operator">Operator</abbr>|null
+    <strong>getOperator</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Concerns\Filament\Tables\Filters\QueryBuilder\Constraints\Operators\Operator">Operator</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_icon">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_icon">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L20">at line 20</a></div>
+        <code>                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+    <strong>icon</strong>(<abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $icon)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$icon</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iconPosition">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_iconPosition">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L27">at line 27</a></div>
+        <code>                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+    <strong>iconPosition</strong>(<abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string|Closure|null">IconPosition|string|Closure|null</abbr> $position)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string|Closure|null">IconPosition|string|Closure|null</abbr></td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iconSize">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_iconSize">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L34">at line 34</a></div>
+        <code>                    <a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a>
+    <strong>iconSize</strong>(<abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|Closure|null">IconSize|string|Closure|null</abbr> $size)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|Closure|null">IconSize|string|Closure|null</abbr></td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Support/Concerns/HasIcon.html"><abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIcon">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIcon">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L41">at line 41</a></div>
+        <code>                    <abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getIcon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIconPosition">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIconPosition">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L53">at line 53</a></div>
+        <code>                    <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string">IconPosition|string</abbr>
+    <strong>getIconPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconPosition|string">IconPosition|string</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIconSize">
+        <div class="location">in <a href="../../../../../Filament/Support/Concerns/HasIcon.html#method_getIconSize">
+<abbr title="Filament\Support\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/HasIcon.php#L58">at line 58</a></div>
+        <code>                    <abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|null">IconSize|string|null</abbr>
+    <strong>getIconSize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Support\Concerns\Filament\Support\Enums\IconSize|string|null">IconSize|string|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L43">at line 43</a></div>
+        <code>final                    
+    <strong>__construct</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L48">at line 48</a></div>
+        <code>        static            <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>make</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuilderBlock">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L56">at line 56</a></div>
+        <code>                    <a href="../../../../../Filament/Forms/Components/Builder/Block.html"><abbr title="Filament\Forms\Components\Builder\Block">Block</abbr></a>
+    <strong>getBuilderBlock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Forms/Components/Builder/Block.html"><abbr title="Filament\Forms\Components\Builder\Block">Block</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOperatorSelectOptions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L154">at line 154</a></div>
+        <code>                    array
+    <strong>getOperatorSelectOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseOperatorString">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L175">at line 175</a></div>
+        <code>                    array
+    <strong>parseOperatorString</strong>(string $operator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attribute">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L184">at line 184</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>attribute</strong>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr> $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attributeLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L191">at line 191</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>attributeLabel</strong>(<abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr> $label)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_relationship">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L198">at line 198</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>relationship</strong>(string $name, string $titleAttribute, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $modifyQueryUsing = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$titleAttribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$modifyQueryUsing</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filter">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L207">at line 207</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>filter</strong>(<a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a> $filter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilter">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L214">at line 214</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a>
+    <strong>getFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder.html"><abbr title="Filament\Tables\Filters\QueryBuilder">QueryBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L219">at line 219</a></div>
+        <code>                    string
+    <strong>getAttribute</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L224">at line 224</a></div>
+        <code>                    string
+    <strong>getAttributeLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queriesRelationships">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L229">at line 229</a></div>
+        <code>                    bool
+    <strong>queriesRelationships</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationshipName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L234">at line 234</a></div>
+        <code>                    string
+    <strong>getRelationshipName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeForQuery">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L239">at line 239</a></div>
+        <code>                    string
+    <strong>getAttributeForQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModifyRelationshipQueryUsing">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L244">at line 244</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+    <strong>getModifyRelationshipQueryUsing</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_settings">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L252">at line 252</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>settings</strong>(array|null $settings)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inverse">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L259">at line 259</a></div>
+        <code>                    <a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a>
+    <strong>inverse</strong>(bool|null $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|null</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Filament/Tables/Filters/QueryBuilder/Constraints/Constraint.html"><abbr title="Filament\Tables\Filters\QueryBuilder\Constraints\Constraint">Constraint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSettings">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L269">at line 269</a></div>
+        <code>                    array|null
+    <strong>getSettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>| null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInverse">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Filters/QueryBuilder/Constraints/Constraint.php#L274">at line 274</a></div>
+        <code>                    bool|null
+    <strong>isInverse</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

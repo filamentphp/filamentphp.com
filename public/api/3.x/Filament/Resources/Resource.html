@@ -1,0 +1,5443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Resources\Resource | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Resources_Resource" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../Filament/Resources.html">Resources</a></li><li class="backslash">\</li><li>Resource</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Resource    
+            </h1>
+    </div>
+
+    
+    <p>    abstract     class
+    <strong>Resource</strong>        (<a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_breadcrumb">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$breadcrumb</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cluster">
+                    static                    protected                                        <abbr title="Filament\Resources\class-string&lt;\Filament\Clusters\Cluster&gt;">Cluster&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$cluster</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isDiscovered">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isDiscovered</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isGloballySearchable">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isGloballySearchable</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_label">
+                    static                    protected                                        string|null
+                                        <span class="label label-danger">deprecated</span>                                        
+                                    </td>
+                <td>$label</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modelLabel">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$modelLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_model">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$model</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationBadgeTooltip">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$navigationBadgeTooltip</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationGroup">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$navigationGroup</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationParentItem">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$navigationParentItem</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationIcon">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$navigationIcon</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_activeNavigationIcon">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$activeNavigationIcon</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationLabel">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$navigationLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_navigationSort">
+                    static                    protected                                        int|null
+                                                                                
+                                    </td>
+                <td>$navigationSort</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordRouteKeyName">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$recordRouteKeyName</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldRegisterNavigation">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$shouldRegisterNavigation</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluralLabel">
+                    static                    protected                                        string|null
+                                        <span class="label label-danger">deprecated</span>                                        
+                                    </td>
+                <td>$pluralLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluralModelLabel">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$pluralModelLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordTitleAttribute">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$recordTitleAttribute</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_slug">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$slug</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isScopedToTenant">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isScopedToTenant</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tenantOwnershipRelationshipName">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$tenantOwnershipRelationshipName</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tenantRelationshipName">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$tenantRelationshipName</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_routeMiddleware">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$routeMiddleware</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_withoutRouteMiddleware">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$withoutRouteMiddleware</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalSearchResultsLimit">
+                    static                    protected                                        int
+                                                                                
+                                    </td>
+                <td>$globalSearchResultsLimit</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldCheckPolicyExistence">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$shouldCheckPolicyExistence</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldSkipAuthorization">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$shouldSkipAuthorization</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isGlobalSearchForcedCaseInsensitive">
+                    static                    protected                                        bool|null
+                                                                                
+                                    </td>
+                <td>$isGlobalSearchForcedCaseInsensitive</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_subNavigationPosition">
+                    static                    protected                                        <abbr title="Filament\Pages\SubNavigationPosition">SubNavigationPosition</abbr>
+                                                                                
+                                    </td>
+                <td>$subNavigationPosition</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasTitleCaseModelLabel">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$hasTitleCaseModelLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_form">form</a>(<a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a> $form)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_infolist">infolist</a>(<a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a> $infolist)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canAccess">canAccess</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_registerNavigationItems">registerNavigationItems</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationItems">getNavigationItems</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Pages\SubNavigationPosition">SubNavigationPosition</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSubNavigationPosition">getSubNavigationPosition</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_table">table</a>(<a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a> $table)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveRecordRouteBinding">resolveRecordRouteBinding</a>(<abbr title="Filament\Resources\int|string">int|string</abbr> $key)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_can">can</a>(string $action, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\Illuminate\Auth\Access\Response">Response</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authorize">authorize</a>(string $action, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkPolicyExistence">checkPolicyExistence</a>(bool $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_skipAuthorization">skipAuthorization</a>(bool $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldCheckPolicyExistence">shouldCheckPolicyExistence</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldSkipAuthorization">shouldSkipAuthorization</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canViewAny">canViewAny</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canCreate">canCreate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canEdit">canEdit</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canDelete">canDelete</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canDeleteAny">canDeleteAny</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canForceDelete">canForceDelete</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canForceDeleteAny">canForceDeleteAny</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canReorder">canReorder</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canReplicate">canReplicate</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canRestore">canRestore</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canRestoreAny">canRestoreAny</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canView">canView</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authorizeViewAny">authorizeViewAny</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authorizeCreate">authorizeCreate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authorizeEdit">authorizeEdit</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authorizeView">authorizeView</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canGloballySearch">canGloballySearch</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBreadcrumb">getBreadcrumb</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEloquentQuery">getEloquentQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scopeEloquentQueryToTenant">scopeEloquentQueryToTenant</a>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $tenant)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGloballySearchableAttributes">getGloballySearchableAttributes</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResultActions">getGlobalSearchResultActions</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResultDetails">getGlobalSearchResultDetails</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResultTitle">getGlobalSearchResultTitle</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResultUrl">getGlobalSearchResultUrl</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResultsLimit">getGlobalSearchResultsLimit</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_modifyGlobalSearchQuery">modifyGlobalSearchQuery</a>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Support\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchResults">getGlobalSearchResults</a>(string $search)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLabel">getLabel</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModelLabel">getModelLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleCaseModelLabel">getTitleCaseModelLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getModel">getModel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPages">getPages</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPluralLabel">getPluralLabel</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPluralModelLabel">getPluralModelLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleCasePluralModelLabel">getTitleCasePluralModelLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_titleCaseModelLabel">titleCaseModelLabel</a>(bool $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasTitleCaseModelLabel">hasTitleCaseModelLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordTitleAttribute">getRecordTitleAttribute</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordTitle">getRecordTitle</a>(<abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRelations">getRelations</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWidgets">getWidgets</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRouteBaseName">getRouteBaseName</a>(string|null $panel = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordRouteKeyName">getRecordRouteKeyName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_registerRoutes">registerRoutes</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_routes">routes</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRelativeRouteName">getRelativeRouteName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRoutePrefix">getRoutePrefix</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|array">string|array</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRouteMiddleware">getRouteMiddleware</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|array">string|array</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWithoutRouteMiddleware">getWithoutRouteMiddleware</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEmailVerifiedMiddleware">getEmailVerifiedMiddleware</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isEmailVerificationRequired">isEmailVerificationRequired</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTenantSubscribedMiddleware">getTenantSubscribedMiddleware</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isTenantSubscriptionRequired">isTenantSubscriptionRequired</a>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSlug">getSlug</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrl">getUrl</a>(string $name = &#039;index&#039;, array $parameters = [], bool $isAbsolute = true, string|null $panel = null, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $tenant = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasPage">hasPage</a>(string $page)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasRecordTitle">hasRecordTitle</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isGlobalSearchForcedCaseInsensitive">isGlobalSearchForcedCaseInsensitive</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_applyGlobalSearchAttributeConstraints">applyGlobalSearchAttributeConstraints</a>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_applyGlobalSearchAttributeConstraint">applyGlobalSearchAttributeConstraint</a>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search, array $searchAttributes, bool $isFirst)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGlobalSearchEloquentQuery">getGlobalSearchEloquentQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationGroup">getNavigationGroup</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationParentItem">getNavigationParentItem</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_navigationGroup">navigationGroup</a>(string|null $group)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_navigationParentItem">navigationParentItem</a>(string|null $item)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationIcon">getNavigationIcon</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_navigationIcon">navigationIcon</a>(string|null $icon)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActiveNavigationIcon">getActiveNavigationIcon</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationLabel">getNavigationLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationBadge">getNavigationBadge</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationBadgeTooltip">getNavigationBadgeTooltip</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Filament\Resources\string|array|null">string|array|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationBadgeColor">getNavigationBadgeColor</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationSort">getNavigationSort</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_navigationLabel">navigationLabel</a>(string|null $label)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_navigationSort">navigationSort</a>(int|null $sort)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNavigationUrl">getNavigationUrl</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldRegisterNavigation">shouldRegisterNavigation</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDiscovered">isDiscovered</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scopeToTenant">scopeToTenant</a>(bool $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isScopedToTenant">isScopedToTenant</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTenantOwnershipRelationshipName">getTenantOwnershipRelationshipName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTenantOwnershipRelationship">getTenantOwnershipRelationship</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTenantRelationshipName">getTenantRelationshipName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTenantRelationship">getTenantRelationship</a>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $tenant)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordSubNavigation">getRecordSubNavigation</a>(<a href="../../Filament/Resources/Pages/Page.html"><abbr title="Filament\Resources\Pages\Page">Page</abbr></a> $page)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCluster">getCluster</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_form">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L126">at line 126</a></div>
+        <code>        static            <a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a>
+    <strong>form</strong>(<a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a> $form)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a></td>
+                <td>$form</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_infolist">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L131">at line 131</a></div>
+        <code>        static            <a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a>
+    <strong>infolist</strong>(<a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a> $infolist)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a></td>
+                <td>$infolist</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canAccess">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L136">at line 136</a></div>
+        <code>        static            bool
+    <strong>canAccess</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerNavigationItems">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L141">at line 141</a></div>
+        <code>        static            void
+    <strong>registerNavigationItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationItems">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L162">at line 162</a></div>
+        <code>        static            array
+    <strong>getNavigationItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubNavigationPosition">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L178">at line 178</a></div>
+        <code>        static            <abbr title="Filament\Pages\SubNavigationPosition">SubNavigationPosition</abbr>
+    <strong>getSubNavigationPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Pages\SubNavigationPosition">SubNavigationPosition</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_table">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L183">at line 183</a></div>
+        <code>        static            <a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a>
+    <strong>table</strong>(<a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a> $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Tables/Table.html"><abbr title="Filament\Tables\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveRecordRouteBinding">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L188">at line 188</a></div>
+        <code>        static            <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null
+    <strong>resolveRecordRouteBinding</strong>(<abbr title="Filament\Resources\int|string">int|string</abbr> $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Resources\int|string">int|string</abbr></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_can">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L195">at line 195</a></div>
+        <code>        static            bool
+    <strong>can</strong>(string $action, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorize">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L213">at line 213</a></div>
+        <code>        static            <abbr title="Filament\Resources\Illuminate\Auth\Access\Response">Response</abbr>|null
+    <strong>authorize</strong>(string $action, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\Illuminate\Auth\Access\Response">Response</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Auth\Access\AuthorizationException">AuthorizationException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkPolicyExistence">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L228">at line 228</a></div>
+        <code>        static            void
+    <strong>checkPolicyExistence</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_skipAuthorization">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L233">at line 233</a></div>
+        <code>        static            void
+    <strong>skipAuthorization</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldCheckPolicyExistence">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L238">at line 238</a></div>
+        <code>        static            bool
+    <strong>shouldCheckPolicyExistence</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldSkipAuthorization">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L243">at line 243</a></div>
+        <code>        static            bool
+    <strong>shouldSkipAuthorization</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canViewAny">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L248">at line 248</a></div>
+        <code>        static            bool
+    <strong>canViewAny</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canCreate">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L253">at line 253</a></div>
+        <code>        static            bool
+    <strong>canCreate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canEdit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L258">at line 258</a></div>
+        <code>        static            bool
+    <strong>canEdit</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canDelete">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L263">at line 263</a></div>
+        <code>        static            bool
+    <strong>canDelete</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canDeleteAny">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L268">at line 268</a></div>
+        <code>        static            bool
+    <strong>canDeleteAny</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canForceDelete">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L273">at line 273</a></div>
+        <code>        static            bool
+    <strong>canForceDelete</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canForceDeleteAny">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L278">at line 278</a></div>
+        <code>        static            bool
+    <strong>canForceDeleteAny</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canReorder">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L283">at line 283</a></div>
+        <code>        static            bool
+    <strong>canReorder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canReplicate">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L288">at line 288</a></div>
+        <code>        static            bool
+    <strong>canReplicate</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canRestore">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L293">at line 293</a></div>
+        <code>        static            bool
+    <strong>canRestore</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canRestoreAny">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L298">at line 298</a></div>
+        <code>        static            bool
+    <strong>canRestoreAny</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canView">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L303">at line 303</a></div>
+        <code>        static            bool
+    <strong>canView</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorizeViewAny">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L308">at line 308</a></div>
+        <code>        static            void
+    <strong>authorizeViewAny</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorizeCreate">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L313">at line 313</a></div>
+        <code>        static            void
+    <strong>authorizeCreate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorizeEdit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L318">at line 318</a></div>
+        <code>        static            void
+    <strong>authorizeEdit</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorizeView">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L323">at line 323</a></div>
+        <code>        static            void
+    <strong>authorizeView</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canGloballySearch">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L328">at line 328</a></div>
+        <code>        static            bool
+    <strong>canGloballySearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBreadcrumb">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L333">at line 333</a></div>
+        <code>        static            string
+    <strong>getBreadcrumb</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEloquentQuery">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L338">at line 338</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+    <strong>getEloquentQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scopeEloquentQueryToTenant">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L352">at line 352</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+    <strong>scopeEloquentQueryToTenant</strong>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $tenant)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$tenant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGloballySearchableAttributes">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L378">at line 378</a></div>
+        <code>        static            array
+    <strong>getGloballySearchableAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResultActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L392">at line 392</a></div>
+        <code>        static            array
+    <strong>getGlobalSearchResultActions</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResultDetails">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L400">at line 400</a></div>
+        <code>        static            array
+    <strong>getGlobalSearchResultDetails</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResultTitle">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L405">at line 405</a></div>
+        <code>        static            <abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr>
+    <strong>getGlobalSearchResultTitle</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="string|Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResultUrl">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L410">at line 410</a></div>
+        <code>        static            string|null
+    <strong>getGlobalSearchResultUrl</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResultsLimit">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L441">at line 441</a></div>
+        <code>        static            int
+    <strong>getGlobalSearchResultsLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGlobalSearchQuery">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L446">at line 446</a></div>
+        <code>        static            void
+    <strong>modifyGlobalSearchQuery</strong>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchResults">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L448">at line 448</a></div>
+        <code>        static            <abbr title="Illuminate\Support\Collection">Collection</abbr>
+    <strong>getGlobalSearchResults</strong>(string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L479">at line 479</a></div>
+        <code>        static            string|null
+    <strong>getLabel</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>`getModelLabel()` instead.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L484">at line 484</a></div>
+        <code>        static            string
+    <strong>getModelLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleCaseModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L489">at line 489</a></div>
+        <code>        static            string
+    <strong>getTitleCaseModelLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L498">at line 498</a></div>
+        <code>        static            string
+    <strong>getModel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPages">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L508">at line 508</a></div>
+        <code>        static            array
+    <strong>getPages</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluralLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L516">at line 516</a></div>
+        <code>        static            string|null
+    <strong>getPluralLabel</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>`getPluralModelLabel()` instead.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluralModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L521">at line 521</a></div>
+        <code>        static            string
+    <strong>getPluralModelLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleCasePluralModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L534">at line 534</a></div>
+        <code>        static            string
+    <strong>getTitleCasePluralModelLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_titleCaseModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L543">at line 543</a></div>
+        <code>        static            void
+    <strong>titleCaseModelLabel</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasTitleCaseModelLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L548">at line 548</a></div>
+        <code>        static            bool
+    <strong>hasTitleCaseModelLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordTitleAttribute">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L553">at line 553</a></div>
+        <code>        static            string|null
+    <strong>getRecordTitleAttribute</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordTitle">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L558">at line 558</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getRecordTitle</strong>(<abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelations">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L566">at line 566</a></div>
+        <code>        static            array
+    <strong>getRelations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWidgets">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L574">at line 574</a></div>
+        <code>        static            array
+    <strong>getWidgets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteBaseName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L579">at line 579</a></div>
+        <code>        static            string
+    <strong>getRouteBaseName</strong>(string|null $panel = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordRouteKeyName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L594">at line 594</a></div>
+        <code>        static            string|null
+    <strong>getRecordRouteKeyName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerRoutes">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L599">at line 599</a></div>
+        <code>        static            void
+    <strong>registerRoutes</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_routes">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L612">at line 612</a></div>
+        <code>        static            void
+    <strong>routes</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelativeRouteName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L625">at line 625</a></div>
+        <code>        static            string
+    <strong>getRelativeRouteName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRoutePrefix">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L630">at line 630</a></div>
+        <code>        static            string
+    <strong>getRoutePrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteMiddleware">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L638">at line 638</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|array">string|array</abbr>
+    <strong>getRouteMiddleware</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|array">string|array</abbr></td>
+            <td><p>| array<string></p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWithoutRouteMiddleware">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L646">at line 646</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|array">string|array</abbr>
+    <strong>getWithoutRouteMiddleware</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|array">string|array</abbr></td>
+            <td><p>| array<string></p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmailVerifiedMiddleware">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L651">at line 651</a></div>
+        <code>        static            string
+    <strong>getEmailVerifiedMiddleware</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmailVerificationRequired">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L656">at line 656</a></div>
+        <code>        static            bool
+    <strong>isEmailVerificationRequired</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTenantSubscribedMiddleware">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L661">at line 661</a></div>
+        <code>        static            string
+    <strong>getTenantSubscribedMiddleware</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTenantSubscriptionRequired">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L666">at line 666</a></div>
+        <code>        static            bool
+    <strong>isTenantSubscriptionRequired</strong>(<a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a> $panel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Panel.html"><abbr title="Filament\Panel">Panel</abbr></a></td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlug">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L671">at line 671</a></div>
+        <code>        static            string
+    <strong>getSlug</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrl">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L693">at line 693</a></div>
+        <code>        static            string
+    <strong>getUrl</strong>(string $name = &#039;index&#039;, array $parameters = [], bool $isAbsolute = true, string|null $panel = null, <abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null $tenant = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAbsolute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$panel</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Resources\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$tenant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasPage">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L704">at line 704</a></div>
+        <code>        static            bool
+    <strong>hasPage</strong>(string $page)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasRecordTitle">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L709">at line 709</a></div>
+        <code>        static            bool
+    <strong>hasRecordTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGlobalSearchForcedCaseInsensitive">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L714">at line 714</a></div>
+        <code>        static            bool|null
+    <strong>isGlobalSearchForcedCaseInsensitive</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyGlobalSearchAttributeConstraints">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L719">at line 719</a></div>
+        <code>        static    protected        void
+    <strong>applyGlobalSearchAttributeConstraints</strong>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyGlobalSearchAttributeConstraint">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L745">at line 745</a></div>
+        <code>        static    protected        <abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+    <strong>applyGlobalSearchAttributeConstraint</strong>(<abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr> $query, string $search, array $searchAttributes, bool $isFirst)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$searchAttributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isFirst</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGlobalSearchEloquentQuery">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L780">at line 780</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr>
+    <strong>getGlobalSearchEloquentQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationGroup">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L785">at line 785</a></div>
+        <code>        static            string|null
+    <strong>getNavigationGroup</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationParentItem">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L790">at line 790</a></div>
+        <code>        static            string|null
+    <strong>getNavigationParentItem</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigationGroup">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L795">at line 795</a></div>
+        <code>        static            void
+    <strong>navigationGroup</strong>(string|null $group)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigationParentItem">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L800">at line 800</a></div>
+        <code>        static            void
+    <strong>navigationParentItem</strong>(string|null $item)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationIcon">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L805">at line 805</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getNavigationIcon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigationIcon">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L810">at line 810</a></div>
+        <code>        static            void
+    <strong>navigationIcon</strong>(string|null $icon)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$icon</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActiveNavigationIcon">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L815">at line 815</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getActiveNavigationIcon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L820">at line 820</a></div>
+        <code>        static            string
+    <strong>getNavigationLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationBadge">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L825">at line 825</a></div>
+        <code>        static            string|null
+    <strong>getNavigationBadge</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationBadgeTooltip">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L830">at line 830</a></div>
+        <code>        static            string|null
+    <strong>getNavigationBadgeTooltip</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationBadgeColor">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L838">at line 838</a></div>
+        <code>        static            <abbr title="Filament\Resources\string|array|null">string|array|null</abbr>
+    <strong>getNavigationBadgeColor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Resources\string|array|null">string|array|null</abbr></td>
+            <td><p>| array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string} | null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationSort">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L843">at line 843</a></div>
+        <code>        static            int|null
+    <strong>getNavigationSort</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigationLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L848">at line 848</a></div>
+        <code>        static            void
+    <strong>navigationLabel</strong>(string|null $label)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigationSort">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L853">at line 853</a></div>
+        <code>        static            void
+    <strong>navigationSort</strong>(int|null $sort)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$sort</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNavigationUrl">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L858">at line 858</a></div>
+        <code>        static            string
+    <strong>getNavigationUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldRegisterNavigation">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L863">at line 863</a></div>
+        <code>        static            bool
+    <strong>shouldRegisterNavigation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDiscovered">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L868">at line 868</a></div>
+        <code>        static            bool
+    <strong>isDiscovered</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scopeToTenant">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L873">at line 873</a></div>
+        <code>        static            void
+    <strong>scopeToTenant</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isScopedToTenant">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L878">at line 878</a></div>
+        <code>        static            bool
+    <strong>isScopedToTenant</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTenantOwnershipRelationshipName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L883">at line 883</a></div>
+        <code>        static            string
+    <strong>getTenantOwnershipRelationshipName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTenantOwnershipRelationship">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L888">at line 888</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr>
+    <strong>getTenantOwnershipRelationship</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $record)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTenantRelationshipName">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L902">at line 902</a></div>
+        <code>        static            string
+    <strong>getTenantRelationshipName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTenantRelationship">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L910">at line 910</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr>
+    <strong>getTenantRelationship</strong>(<abbr title="Illuminate\Database\Eloquent\Model">Model</abbr> $tenant)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></td>
+                <td>$tenant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordSubNavigation">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L927">at line 927</a></div>
+        <code>        static            array
+    <strong>getRecordSubNavigation</strong>(<a href="../../Filament/Resources/Pages/Page.html"><abbr title="Filament\Resources\Pages\Page">Page</abbr></a> $page)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Filament/Resources/Pages/Page.html"><abbr title="Filament\Resources\Pages\Page">Page</abbr></a></td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCluster">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/panels/src/Resources/Resource.php#L935">at line 935</a></div>
+        <code>        static            string|null
+    <strong>getCluster</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>| null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

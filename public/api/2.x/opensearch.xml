@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/">
+    <ShortName>Filament API (2.x)</ShortName>
+    <Description>Searches Filament API (2.x)</Description>
+    <Tags>Filament API</Tags>
+    <Url type="text/html" method="GET" template="https://filamentphp.com/api/2.x/search.html?search={searchTerms}&amp;utm_source={referrer:source?}"/>
+    <InputEncoding>UTF-8</InputEncoding>
+    <AdultContent>false</AdultContent>
+</OpenSearchDescription>

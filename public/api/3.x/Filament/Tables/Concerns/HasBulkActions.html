@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Tables\Concerns\HasBulkActions | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Tables_Concerns_HasBulkActions" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../Filament/Tables.html">Tables</a></li><li class="backslash">\</li><li><a href="../../../Filament/Tables/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>HasBulkActions</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>HasBulkActions    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>HasBulkActions</strong>        (<a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_selectedTableRecords">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$selectedTableRecords</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mountedTableBulkAction">
+                                                                                string|null
+                                                                                
+                                    </td>
+                <td>$mountedTableBulkAction</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mountedTableBulkActionData">
+                                                                                <abbr title="Filament\Tables\Concerns\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$mountedTableBulkActionData</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachedSelectedTableRecords">
+                                        protected                                        <abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Support\Collection">Collection</abbr>
+                                                                                
+                                    </td>
+                <td>$cachedSelectedTableRecords</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mountedTableBulkActionForm">
+                                                                                <a href="../../../Filament/Forms/Form.html"><abbr title="Filament\Forms\Form">Form</abbr></a>
+                                                                                
+                                    </td>
+                <td>$mountedTableBulkActionForm</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureTableBulkAction">configureTableBulkAction</a>(<a href="../../../Filament/Tables/Actions/BulkAction.html"><abbr title="Filament\Tables\Actions\BulkAction">BulkAction</abbr></a> $action)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callMountedTableBulkAction">callMountedTableBulkAction</a>(array $arguments = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mountTableBulkAction">mountTableBulkAction</a>(string $name, array|null $selectedRecords = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cacheMountedTableBulkActionForm">cacheMountedTableBulkActionForm</a>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_replaceMountedTableBulkAction">replaceMountedTableBulkAction</a>(string $name, array|null $selectedRecords = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetMountedTableBulkActionProperties">resetMountedTableBulkActionProperties</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mountedTableBulkActionShouldOpenModal">mountedTableBulkActionShouldOpenModal</a>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_unmountTableBulkAction">unmountTableBulkAction</a>(bool $shouldCloseModal = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mountedTableBulkActionHasForm">mountedTableBulkActionHasForm</a>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deselectAllTableRecords">deselectAllTableRecords</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllSelectableTableRecordKeys">getAllSelectableTableRecordKeys</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGroupedSelectableTableRecordKeys">getGroupedSelectableTableRecordKeys</a>(string $group)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllSelectableTableRecordsCount">getAllSelectableTableRecordsCount</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Support\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSelectedTableRecords">getSelectedTableRecords</a>(bool $shouldFetchSelectedRecords = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_closeTableBulkActionModal">closeTableBulkActionModal</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_openTableBulkActionModal">openTableBulkActionModal</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldSelectCurrentPageOnly">shouldSelectCurrentPageOnly</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shouldDeselectAllRecordsWhenTableFiltered">shouldDeselectAllRecordsWhenTableFiltered</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedTableBulkAction">getMountedTableBulkAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Concerns\Filament\Forms\Form">Form</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountedTableBulkActionForm">getMountedTableBulkActionForm</a>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTableBulkActions">getTableBulkActions</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isTableRecordSelectable">isTableRecordSelectable</a>()
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mountedTableBulkActionInfolist">mountedTableBulkActionInfolist</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_configureTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L40">at line 40</a></div>
+        <code>            protected        void
+    <strong>configureTableBulkAction</strong>(<a href="../../../Filament/Tables/Actions/BulkAction.html"><abbr title="Filament\Tables\Actions\BulkAction">BulkAction</abbr></a> $action)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Filament/Tables/Actions/BulkAction.html"><abbr title="Filament\Tables\Actions\BulkAction">BulkAction</abbr></a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callMountedTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L45">at line 45</a></div>
+        <code>                    mixed
+    <strong>callMountedTableBulkAction</strong>(array $arguments = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mountTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L137">at line 137</a></div>
+        <code>                    mixed
+    <strong>mountTableBulkAction</strong>(string $name, array|null $selectedRecords = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$selectedRecords</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cacheMountedTableBulkActionForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L190">at line 190</a></div>
+        <code>            protected        void
+    <strong>cacheMountedTableBulkActionForm</strong>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+                <td>$mountedBulkAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceMountedTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L201">at line 201</a></div>
+        <code>                    void
+    <strong>replaceMountedTableBulkAction</strong>(string $name, array|null $selectedRecords = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$selectedRecords</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetMountedTableBulkActionProperties">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L209">at line 209</a></div>
+        <code>            protected        void
+    <strong>resetMountedTableBulkActionProperties</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mountedTableBulkActionShouldOpenModal">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L215">at line 215</a></div>
+        <code>                    bool
+    <strong>mountedTableBulkActionShouldOpenModal</strong>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+                <td>$mountedBulkAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unmountTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L222">at line 222</a></div>
+        <code>                    void
+    <strong>unmountTableBulkAction</strong>(bool $shouldCloseModal = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$shouldCloseModal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mountedTableBulkActionHasForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L231">at line 231</a></div>
+        <code>                    bool
+    <strong>mountedTableBulkActionHasForm</strong>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+                <td>$mountedBulkAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deselectAllTableRecords">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L236">at line 236</a></div>
+        <code>                    void
+    <strong>deselectAllTableRecords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllSelectableTableRecordKeys">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L244">at line 244</a></div>
+        <code>                    array
+    <strong>getAllSelectableTableRecordKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroupedSelectableTableRecordKeys">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L279">at line 279</a></div>
+        <code>                    array
+    <strong>getGroupedSelectableTableRecordKeys</strong>(string $group)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllSelectableTableRecordsCount">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L320">at line 320</a></div>
+        <code>                    int
+    <strong>getAllSelectableTableRecordsCount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectedTableRecords">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L344">at line 344</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Support\Collection">Collection</abbr>
+    <strong>getSelectedTableRecords</strong>(bool $shouldFetchSelectedRecords = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$shouldFetchSelectedRecords</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection|Illuminate\Support\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeTableBulkActionModal">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L393">at line 393</a></div>
+        <code>            protected        void
+    <strong>closeTableBulkActionModal</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_openTableBulkActionModal">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L398">at line 398</a></div>
+        <code>            protected        void
+    <strong>openTableBulkActionModal</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldSelectCurrentPageOnly">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L406">at line 406</a></div>
+        <code>                    bool
+    <strong>shouldSelectCurrentPageOnly</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Override</td>
+                    <td>the `table()` method to configure the table.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldDeselectAllRecordsWhenTableFiltered">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L414">at line 414</a></div>
+        <code>                    bool
+    <strong>shouldDeselectAllRecordsWhenTableFiltered</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Override</td>
+                    <td>the `table()` method to configure the table.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedTableBulkAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L419">at line 419</a></div>
+        <code>                    <abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null
+    <strong>getMountedTableBulkAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountedTableBulkActionForm">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L428">at line 428</a></div>
+        <code>                    <abbr title="Filament\Tables\Concerns\Filament\Forms\Form">Form</abbr>|null
+    <strong>getMountedTableBulkActionForm</strong>(<abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null $mountedBulkAction = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Concerns\Filament\Tables\Actions\BulkAction">BulkAction</abbr>|null</td>
+                <td>$mountedBulkAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Concerns\Filament\Forms\Form">Form</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTableBulkActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L453">at line 453</a></div>
+        <code>            protected        array
+    <strong>getTableBulkActions</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Override</td>
+                    <td>the `table()` method to configure the table.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTableRecordSelectable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L461">at line 461</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+    <strong>isTableRecordSelectable</strong>()
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Override</td>
+                    <td>the `table()` method to configure the table.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mountedTableBulkActionInfolist">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Concerns/HasBulkActions.php#L466">at line 466</a></div>
+        <code>                    <a href="../../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a>
+    <strong>mountedTableBulkActionInfolist</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Filament/Infolists/Infolist.html"><abbr title="Filament\Infolists\Infolist">Infolist</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

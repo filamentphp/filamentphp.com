@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Tables\Table\Concerns\HasActions | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Tables_Table_Concerns_HasActions" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables.html">Tables</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables/Table.html">Table</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables/Table/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>HasActions</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>HasActions    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>HasActions</strong>        (<a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_actions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$actions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flatActions">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\array&lt;string,\Filament\Tables\Actions\Action&gt;">Action&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$flatActions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actionsColumnLabel">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$actionsColumnLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actionsAlignment">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$actionsAlignment</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actionsPosition">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|Closure|null">ActionsPosition|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$actionsPosition</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_actions">actions</a>(<abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr> $actions, <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|string|Closure|null">ActionsPosition|string|Closure|null</abbr> $position = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_pushActions">pushActions</a>(<abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr> $actions)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_actionsColumnLabel">actionsColumnLabel</a>(<abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $label)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_actionsAlignment">actionsAlignment</a>(<abbr title="Filament\Tables\Table\Concerns\string|Closure|null">string|Closure|null</abbr> $alignment = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_actionsPosition">actionsPosition</a>(<abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|Closure|null">ActionsPosition|Closure|null</abbr> $position = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActions">getActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAction">getAction</a>(<abbr title="Filament\Tables\Table\Concerns\string|array">string|array</abbr> $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFlatActions">getFlatActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasAction">hasAction</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cacheAction">cacheAction</a>(<a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a> $action, bool $shouldOverwriteExistingAction = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mergeCachedFlatActions">mergeCachedFlatActions</a>(array $actions, bool $shouldOverwriteExistingActions = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMountableModalActionFromAction">getMountableModalActionFromAction</a>(<a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a> $action, array $modalActionNames, <abbr title="Filament\Tables\Table\Concerns\Illuminate\Database\Eloquent\Model">Model</abbr>|null $mountedRecord = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Enums\ActionsPosition">ActionsPosition</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActionsPosition">getActionsPosition</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActionsAlignment">getActionsAlignment</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActionsColumnLabel">getActionsColumnLabel</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_actions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L37">at line 37</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+    <strong>actions</strong>(<abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr> $actions, <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|string|Closure|null">ActionsPosition|string|Closure|null</abbr> $position = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr></td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|string|Closure|null">ActionsPosition|string|Closure|null</abbr></td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L52">at line 52</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+    <strong>pushActions</strong>(<abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr> $actions)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="array|Filament\Tables\Actions\ActionGroup">ActionGroup</abbr></td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_actionsColumnLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L81">at line 81</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+    <strong>actionsColumnLabel</strong>(<abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr> $label)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|Closure|null">Htmlable|Closure|null</abbr></td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_actionsAlignment">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L88">at line 88</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+    <strong>actionsAlignment</strong>(<abbr title="Filament\Tables\Table\Concerns\string|Closure|null">string|Closure|null</abbr> $alignment = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$alignment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_actionsPosition">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L95">at line 95</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a>
+    <strong>actionsPosition</strong>(<abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|Closure|null">ActionsPosition|Closure|null</abbr> $position = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Enums\ActionsPosition|Closure|null">ActionsPosition|Closure|null</abbr></td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/HasActions.html"><abbr title="Filament\Tables\Table\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L105">at line 105</a></div>
+        <code>                    array
+    <strong>getActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L113">at line 113</a></div>
+        <code>                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null
+    <strong>getAction</strong>(<abbr title="Filament\Tables\Table\Concerns\string|array">string|array</abbr> $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\string|array">string|array</abbr></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFlatActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L148">at line 148</a></div>
+        <code>                    array
+    <strong>getFlatActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L153">at line 153</a></div>
+        <code>                    bool
+    <strong>hasAction</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cacheAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L158">at line 158</a></div>
+        <code>            protected        void
+    <strong>cacheAction</strong>(<a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a> $action, bool $shouldOverwriteExistingAction = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shouldOverwriteExistingAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeCachedFlatActions">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L170">at line 170</a></div>
+        <code>            protected        void
+    <strong>mergeCachedFlatActions</strong>(array $actions, bool $shouldOverwriteExistingActions = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shouldOverwriteExistingActions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMountableModalActionFromAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L188">at line 188</a></div>
+        <code>            protected        <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null
+    <strong>getMountableModalActionFromAction</strong>(<a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a> $action, array $modalActionNames, <abbr title="Filament\Tables\Table\Concerns\Illuminate\Database\Eloquent\Model">Model</abbr>|null $mountedRecord = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$modalActionNames</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$mountedRecord</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Actions\Action">Action</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionsPosition">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L225">at line 225</a></div>
+        <code>                    <abbr title="Filament\Tables\Enums\ActionsPosition">ActionsPosition</abbr>
+    <strong>getActionsPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Enums\ActionsPosition">ActionsPosition</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionsAlignment">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L240">at line 240</a></div>
+        <code>                    string|null
+    <strong>getActionsAlignment</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionsColumnLabel">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/HasActions.php#L245">at line 245</a></div>
+        <code>                    <abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getActionsColumnLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

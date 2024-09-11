@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Tables\Table\Concerns\CanGroupRecords | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Tables_Table_Concerns_CanGroupRecords" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables.html">Tables</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables/Table.html">Table</a></li><li class="backslash">\</li><li><a href="../../../../Filament/Tables/Table/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>CanGroupRecords</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CanGroupRecords    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>CanGroupRecords</strong>        (<a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_defaultGroup">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\string|Filament\Tables\Grouping\Group|null">Group|null</abbr>
+                                                                                
+                                    </td>
+                <td>$defaultGroup</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachedGroups">
+                                        protected                                        <abbr title="Filament\Tables\Table\Concerns\array&lt;string,\Filament\Tables\Grouping\Group&gt;">Group&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$cachedGroups</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groups">
+                                        protected                                        array|Closure
+                                                                                
+                                    </td>
+                <td>$groups</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isGroupsOnly">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$isGroupsOnly</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_areGroupingSettingsInDropdownOnDesktop">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$areGroupingSettingsInDropdownOnDesktop</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_areGroupingSettingsHidden">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$areGroupingSettingsHidden</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isGroupingDirectionSettingHidden">
+                                        protected                                        bool|Closure
+                                                                                
+                                    </td>
+                <td>$isGroupingDirectionSettingHidden</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifyGroupRecordsTriggerActionUsing">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                                                                                
+                                    </td>
+                <td>$modifyGroupRecordsTriggerActionUsing</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupRecordsTriggerAction">groupRecordsTriggerAction</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $callback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupingSettingsInDropdownOnDesktop">groupingSettingsInDropdownOnDesktop</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupsInDropdownOnDesktop">groupsInDropdownOnDesktop</a>(bool|Closure $condition = true)
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupingSettingsHidden">groupingSettingsHidden</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupingDirectionSettingHidden">groupingDirectionSettingHidden</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_defaultGroup">defaultGroup</a>(<abbr title="Filament\Tables\Table\Concerns\string|Filament\Tables\Grouping\Group|null">Group|null</abbr> $group)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groups">groups</a>(array|Closure $groups)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_groupsOnly">groupsOnly</a>(bool|Closure $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGroupRecordsTriggerAction">getGroupRecordsTriggerAction</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDefaultGroupSelectable">isDefaultGroupSelectable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_areGroupingSettingsInDropdownOnDesktop">areGroupingSettingsInDropdownOnDesktop</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_areGroupingSettingsHidden">areGroupingSettingsHidden</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isGroupingDirectionSettingHidden">isGroupingDirectionSettingHidden</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultGroup">getDefaultGroup</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGroups">getGroups</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGroup">getGroup</a>(string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGrouping">getGrouping</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isGroupsOnly">isGroupsOnly</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_groupRecordsTriggerAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L35">at line 35</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupRecordsTriggerAction</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupingSettingsInDropdownOnDesktop">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L42">at line 42</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupingSettingsInDropdownOnDesktop</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupsInDropdownOnDesktop">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L52">at line 52</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupsInDropdownOnDesktop</strong>(bool|Closure $condition = true)
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>the `groupingSettingsInDropdownOnDesktop()` method instead.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupingSettingsHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L59">at line 59</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupingSettingsHidden</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupingDirectionSettingHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L66">at line 66</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupingDirectionSettingHidden</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultGroup">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L73">at line 73</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>defaultGroup</strong>(<abbr title="Filament\Tables\Table\Concerns\string|Filament\Tables\Grouping\Group|null">Group|null</abbr> $group)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Tables\Table\Concerns\string|Filament\Tables\Grouping\Group|null">Group|null</abbr></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groups">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L83">at line 83</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groups</strong>(array|Closure $groups)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|Closure</td>
+                <td>$groups</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupsOnly">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L90">at line 90</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a>
+    <strong>groupsOnly</strong>(bool|Closure $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|Closure</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Table/Concerns/CanGroupRecords.html"><abbr title="Filament\Tables\Table\Concerns\CanGroupRecords">CanGroupRecords</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroupRecordsTriggerAction">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L97">at line 97</a></div>
+        <code>                    <a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a>
+    <strong>getGroupRecordsTriggerAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Filament/Tables/Actions/Action.html"><abbr title="Filament\Tables\Actions\Action">Action</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDefaultGroupSelectable">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L120">at line 120</a></div>
+        <code>                    bool
+    <strong>isDefaultGroupSelectable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_areGroupingSettingsInDropdownOnDesktop">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L131">at line 131</a></div>
+        <code>                    bool
+    <strong>areGroupingSettingsInDropdownOnDesktop</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_areGroupingSettingsHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L136">at line 136</a></div>
+        <code>                    bool
+    <strong>areGroupingSettingsHidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGroupingDirectionSettingHidden">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L141">at line 141</a></div>
+        <code>                    bool
+    <strong>isGroupingDirectionSettingHidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultGroup">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L146">at line 146</a></div>
+        <code>                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+    <strong>getDefaultGroup</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroups">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L168">at line 168</a></div>
+        <code>                    array
+    <strong>getGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroup">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L185">at line 185</a></div>
+        <code>                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+    <strong>getGroup</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGrouping">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L190">at line 190</a></div>
+        <code>                    <abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null
+    <strong>getGrouping</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Tables\Table\Concerns\Filament\Tables\Grouping\Group">Group</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGroupsOnly">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/tables/src/Table/Concerns/CanGroupRecords.php#L195">at line 195</a></div>
+        <code>                    bool
+    <strong>isGroupsOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Widgets\ScatterChartWidget | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Widgets_ScatterChartWidget" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../2.x/index.html"
+                            data-version="2.x" >Filament 2.x</option>
+                                            <option
+                            value="../../../3.x/index.html"
+                            data-version="3.x" selected>Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li ><a href="../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li class="active"><a href="../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../Filament/Widgets.html">Widgets</a></li><li class="backslash">\</li><li>ScatterChartWidget</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ScatterChartWidget    <small><span class="label label-danger">deprecated</span></small>
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ScatterChartWidget</strong>        extends <a href="../../Filament/Widgets/ChartWidget.html"><abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a>        (<a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ScatterChartWidget.php">View source</a>)
+</p>
+
+        
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Extend</td>
+                    <td>`ChartWidget` instead and define the `getType()` method.</td>
+                </tr>
+                    </p>
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Widgets/Concerns/CanPoll.html"><abbr title="Filament\Widgets\Concerns\CanPoll">CanPoll</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/CanBeLazy.html"><abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_isLazy">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isLazy</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#property_isLazy">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_placeholderHeight">
+                                        protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$placeholderHeight</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#property_placeholderHeight">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isDiscovered">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isDiscovered</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#property_isDiscovered">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sort">
+                    static                    protected                                        int|null
+                                                                                
+                                    </td>
+                <td>$sort</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#property_sort">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_view">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_columnSpan">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$columnSpan</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#property_columnSpan">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_columnStart">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$columnStart</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#property_columnStart">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pollingInterval">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$pollingInterval</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/Concerns/CanPoll.html#property_pollingInterval">
+<abbr title="Filament\Widgets\Concerns\CanPoll">CanPoll</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachedData">
+                                        protected                                        <abbr title="Filament\Widgets\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$cachedData</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_cachedData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dataChecksum">
+                                                                                string|null
+                                                                                
+                                    </td>
+                <td>$dataChecksum</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_dataChecksum">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filter">
+                                                                                string|null
+                                                                                
+                                    </td>
+                <td>$filter</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_filter">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_color">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_color">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_heading">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$heading</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_heading">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_description">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$description</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_description">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxHeight">
+                    static                    protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$maxHeight</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_maxHeight">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                    static                    protected                                        <abbr title="Filament\Widgets\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$options</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#property_options">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isLazy">isLazy</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#method_isLazy">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeholder">placeholder</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#method_placeholder">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlaceholderData">getPlaceholderData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#method_getPlaceholderData">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlaceholderHeight">getPlaceholderHeight</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/CanBeLazy.html#method_getPlaceholderHeight">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canView">canView</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_canView">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSort">getSort</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_getSort">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Widgets\int|string|array">int|string|array</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnSpan">getColumnSpan</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_getColumnSpan">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Widgets\int|string|array">int|string|array</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColumnStart">getColumnStart</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_getColumnStart">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getViewData">getViewData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_getViewData">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDiscovered">isDiscovered</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_isDiscovered">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_render">render</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_render">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Widgets/WidgetConfiguration.html"><abbr title="Filament\Widgets\WidgetConfiguration">WidgetConfiguration</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_make">make</a>(array $properties = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_make">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultProperties">getDefaultProperties</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Widget.html#method_getDefaultProperties">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPollingInterval">getPollingInterval</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/Concerns/CanPoll.html#method_getPollingInterval">
+<abbr title="Filament\Widgets\Concerns\CanPoll">CanPoll</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mount">mount</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_mount">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateDataChecksum">generateDataChecksum</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_generateDataChecksum">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getCachedData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getData">getData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilters">getFilters</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getFilters">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeading">getHeading</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getHeading">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDescription">getDescription</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getDescription">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMaxHeight">getMaxHeight</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getMaxHeight">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Widgets\array|Filament\Support\RawJs|null">RawJs|null</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getOptions">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateChartData">updateChartData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_updateChartData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rendering">rendering</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_rendering">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getColor">getColor</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Widgets/ChartWidget.html#method_getColor">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_isLazy">
+        <div class="location">in <a href="../../Filament/Support/Concerns/CanBeLazy.html#method_isLazy">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/CanBeLazy.php#L13">at line 13</a></div>
+        <code>        static            bool
+    <strong>isLazy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeholder">
+        <div class="location">in <a href="../../Filament/Support/Concerns/CanBeLazy.html#method_placeholder">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/CanBeLazy.php#L18">at line 18</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+    <strong>placeholder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\View\View">View</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlaceholderData">
+        <div class="location">in <a href="../../Filament/Support/Concerns/CanBeLazy.html#method_getPlaceholderData">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/CanBeLazy.php#L32">at line 32</a></div>
+        <code>                    array
+    <strong>getPlaceholderData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlaceholderHeight">
+        <div class="location">in <a href="../../Filament/Support/Concerns/CanBeLazy.html#method_getPlaceholderHeight">
+<abbr title="Filament\Support\Concerns\CanBeLazy">CanBeLazy</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/support/src/Concerns/CanBeLazy.php#L39">at line 39</a></div>
+        <code>                    string|null
+    <strong>getPlaceholderHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canView">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_canView">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L32">at line 32</a></div>
+        <code>        static            bool
+    <strong>canView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSort">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_getSort">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L37">at line 37</a></div>
+        <code>        static            int
+    <strong>getSort</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnSpan">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_getColumnSpan">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L45">at line 45</a></div>
+        <code>                    <abbr title="Filament\Widgets\int|string|array">int|string|array</abbr>
+    <strong>getColumnSpan</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Widgets\int|string|array">int|string|array</abbr></td>
+            <td><p>| string | array&lt;string, int | null&gt;</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnStart">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_getColumnStart">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L53">at line 53</a></div>
+        <code>                    <abbr title="Filament\Widgets\int|string|array">int|string|array</abbr>
+    <strong>getColumnStart</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Widgets\int|string|array">int|string|array</abbr></td>
+            <td><p>| string | array&lt;string, int | null&gt;</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewData">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_getViewData">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L61">at line 61</a></div>
+        <code>            protected        array
+    <strong>getViewData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDiscovered">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_isDiscovered">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L66">at line 66</a></div>
+        <code>        static            bool
+    <strong>isDiscovered</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_render">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L71">at line 71</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\View\View">View</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_make">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L79">at line 79</a></div>
+        <code>        static            <a href="../../Filament/Widgets/WidgetConfiguration.html"><abbr title="Filament\Widgets\WidgetConfiguration">WidgetConfiguration</abbr></a>
+    <strong>make</strong>(array $properties = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$properties</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Widgets/WidgetConfiguration.html"><abbr title="Filament\Widgets\WidgetConfiguration">WidgetConfiguration</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultProperties">
+        <div class="location">in <a href="../../Filament/Widgets/Widget.html#method_getDefaultProperties">
+<abbr title="Filament\Widgets\Widget">Widget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Widget.php#L98">at line 98</a></div>
+        <code>        static            array
+    <strong>getDefaultProperties</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPollingInterval">
+        <div class="location">in <a href="../../Filament/Widgets/Concerns/CanPoll.html#method_getPollingInterval">
+<abbr title="Filament\Widgets\Concerns\CanPoll">CanPoll</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/Concerns/CanPoll.php#L9">at line 9</a></div>
+        <code>            protected        string|null
+    <strong>getPollingInterval</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mount">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_mount">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L41">at line 41</a></div>
+        <code>                    void
+    <strong>mount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location"><a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ScatterChartWidget.php#L10">at line 10</a></div>
+        <code>            protected        string
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateDataChecksum">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_generateDataChecksum">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L48">at line 48</a></div>
+        <code>            protected        string
+    <strong>generateDataChecksum</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getCachedData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L56">at line 56</a></div>
+        <code>            protected        array
+    <strong>getCachedData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L64">at line 64</a></div>
+        <code>            protected        array
+    <strong>getData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilters">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getFilters">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L72">at line 72</a></div>
+        <code>            protected        array|null
+    <strong>getFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeading">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getHeading">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L77">at line 77</a></div>
+        <code>                    <abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getHeading</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getDescription">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L82">at line 82</a></div>
+        <code>                    <abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr>
+    <strong>getDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Widgets\string|Illuminate\Contracts\Support\Htmlable|null">Htmlable|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxHeight">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getMaxHeight">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L87">at line 87</a></div>
+        <code>            protected        string|null
+    <strong>getMaxHeight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getOptions">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L95">at line 95</a></div>
+        <code>            protected        <abbr title="Filament\Widgets\array|Filament\Support\RawJs|null">RawJs|null</abbr>
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Widgets\array|Filament\Support\RawJs|null">RawJs|null</abbr></td>
+            <td><p>| RawJs | null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateChartData">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_updateChartData">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L100">at line 100</a></div>
+        <code>                    void
+    <strong>updateChartData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rendering">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_rendering">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L111">at line 111</a></div>
+        <code>                    void
+    <strong>rendering</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColor">
+        <div class="location">in <a href="../../Filament/Widgets/ChartWidget.html#method_getColor">
+<abbr title="Filament\Widgets\ChartWidget">ChartWidget</abbr></a> <a href="https://github.com/filament/filament/blob/3.x/packages/widgets/src/ChartWidget.php#L116">at line 116</a></div>
+        <code>                    string
+    <strong>getColor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

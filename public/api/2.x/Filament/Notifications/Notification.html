@@ -1,0 +1,3132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Filament\Notifications\Notification | Filament API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/1.x/opensearch.xml"
+          title="Filament API (1.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/2.x/opensearch.xml"
+          title="Filament API (2.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="https://filamentphp.com/api/3.x/opensearch.xml"
+          title="Filament API (3.x)" />
+    </head>
+
+    <body id="class" data-name="class:Filament_Notifications_Notification" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../1.x/index.html"
+                            data-version="1.x" >Filament 1.x</option>
+                                            <option
+                            value="../../../2.x/index.html"
+                            data-version="2.x" selected>Filament 2.x</option>
+                                            <option
+                            value="../../../3.x/index.html"
+                            data-version="3.x" >Filament 3.x</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Filament API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../1.x/index.html" data-version="1.x">Filament 1.x</a></li>
+                        <li class="active"><a href="../../../2.x/index.html" data-version="2.x">Filament 2.x</a></li>
+                        <li ><a href="../../../3.x/index.html" data-version="3.x">Filament 3.x</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Filament.html">Filament</a></li><li class="backslash">\</li><li><a href="../../Filament/Notifications.html">Notifications</a></li><li class="backslash">\</li><li>Notification</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Notification    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Notification</strong>        extends <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>        implements        <abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr>        (<a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/CanBeInline.html"><abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasActions.html"><abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasBody.html"><abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasDate.html"><abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasId.html"><abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Notifications/Concerns/HasTitle.html"><abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/EvaluatesClosures.html"><abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Filament/Support/Concerns/EvaluatesClosures.html"><abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_configurations">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$configurations</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#property_configurations">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_importantConfigurations">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$importantConfigurations</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#property_importantConfigurations">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_evaluationIdentifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$evaluationIdentifier</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#property_evaluationIdentifier">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_evaluationParametersToRemove">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$evaluationParametersToRemove</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#property_evaluationParametersToRemove">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewData">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$viewData</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewIdentifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$viewIdentifier</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_propertyCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$propertyCache</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_propertyCache">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_methodCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$methodCache</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#property_methodCache">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isInline">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isInline</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/CanBeInline.html#property_isInline">
+<abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actions">
+                                        protected                                        <abbr title="array|Filament\Notifications\Actions\ActionGroup|Closure">ActionGroup|Closure</abbr>
+                                                                                
+                                    </td>
+                <td>$actions</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasActions.html#property_actions">
+<abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_body">
+                                        protected                                        <abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$body</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasBody.html#property_body">
+<abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_date">
+                                        protected                                        <abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$date</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDate.html#property_date">
+<abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_duration">
+                                        protected                                        int|string|Closure
+                                                                                
+                                    </td>
+                <td>$duration</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDuration.html#property_duration">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_icon">
+                                        protected                                        <abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$icon</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#property_icon">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iconColor">
+                                        protected                                        <abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$iconColor</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#property_iconColor">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_id">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$id</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasId.html#property_id">
+<abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_title">
+                                        protected                                        <abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr>
+                                                                                
+                                    </td>
+                <td>$title</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasTitle.html#property_title">
+<abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_safeViews">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$safeViews</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureUsing">configureUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configure">configure</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_evaluate">evaluate</a>($value, array $parameters = [], array $exceptParameters = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultEvaluationParameters">getDefaultEvaluationParameters</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_getDefaultEvaluationParameters">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveEvaluationParameter">resolveEvaluationParameter</a>(string $parameter, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveEvaluationParameter">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isEvaluationParameterRemoved">isEvaluationParameterRemoved</a>(string $parameter)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_isEvaluationParameterRemoved">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_view">view</a>(string $view, array $viewData = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_view">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractPublicProperties">extractPublicProperties</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicProperties">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractPublicMethods">extractPublicMethods</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicMethods">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_viewData">viewData</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getView">getView</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_getView">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_toHtml">toHtml</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_toHtml">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_render">render</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Support/Components/ViewComponent.html#method_render">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/CanBeInline.html"><abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_inline">inline</a>(bool $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/CanBeInline.html#method_inline">
+<abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isInline">isInline</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/CanBeInline.html#method_isInline">
+<abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasActions.html"><abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_actions">actions</a>(<abbr title="array|Filament\Notifications\Actions\ActionGroup|Closure">ActionGroup|Closure</abbr> $actions)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasActions.html#method_actions">
+<abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActions">getActions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasActions.html#method_getActions">
+<abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasBody.html"><abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_body">body</a>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $body)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasBody.html#method_body">
+<abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBody">getBody</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasBody.html#method_getBody">
+<abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasDate.html"><abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_date">date</a>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $date)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDate.html#method_date">
+<abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDate">getDate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDate.html#method_getDate">
+<abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_duration">duration</a>(<abbr title="Filament\Notifications\Concerns\int|string|Closure|null">int|string|Closure|null</abbr> $duration)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDuration.html#method_duration">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Filament\Notifications\Concerns\int|string">int|string</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDuration">getDuration</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDuration.html#method_getDuration">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_seconds">seconds</a>(float $seconds)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDuration.html#method_seconds">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_persistent">persistent</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasDuration.html#method_persistent">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_icon">icon</a>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $icon)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#method_icon">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_iconColor">iconColor</a>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $color)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#method_iconColor">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIcon">getIcon</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#method_getIcon">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIconColor">getIconColor</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasIcon.html#method_getIconColor">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasId.html"><abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_id">id</a>(string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasId.html#method_id">
+<abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasId.html#method_getId">
+<abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Concerns/HasTitle.html"><abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_title">title</a>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $title)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasTitle.html#method_title">
+<abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitle">getTitle</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Filament/Notifications/Concerns/HasTitle.html#method_getTitle">
+<abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_make">make</a>(string|null $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getViewData">getViewData</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_toArray">toArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fromArray">fromArray</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isViewSafe">isViewSafe</a>(string $view)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_safeViews">safeViews</a>(<abbr title="Filament\Notifications\string|array">string|array</abbr> $safeViews)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_send">send</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_broadcast">broadcast</a>(<abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr> $users)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendToDatabase">sendToDatabase</a>(<abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr> $users, bool $isEventDispatched = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/BroadcastNotification.html"><abbr title="Filament\Notifications\BroadcastNotification">BroadcastNotification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_toBroadcast">toBroadcast</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/DatabaseNotification.html"><abbr title="Filament\Notifications\DatabaseNotification">DatabaseNotification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_toDatabase">toDatabase</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\BroadcastMessage">BroadcastMessage</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBroadcastMessage">getBroadcastMessage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDatabaseMessage">getDatabaseMessage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_status">status</a>(string $status)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_success">success</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_warning">warning</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_danger">danger</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fromDatabase">fromDatabase</a>(<abbr title="Illuminate\Notifications\DatabaseNotification">DatabaseNotification</abbr> $notification)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertNotified">assertNotified</a>(<abbr title="Filament\Notifications\Filament\Notifications\Notification|string">Notification|string</abbr> $notification = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_configureUsing">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_configureUsing">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L13">at line 13</a></div>
+        <code>        static            
+    <strong>configureUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $during = null, bool $isImportant = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$during</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isImportant</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configure">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_configure">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L38">at line 38</a></div>
+        <code>                    <a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a>
+    <strong>configure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Concerns/Configurable.html"><abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../Filament/Support/Concerns/Configurable.html#method_setUp">
+<abbr title="Filament\Support\Concerns\Configurable">Configurable</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/Configurable.php#L65">at line 65</a></div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluate">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_evaluate">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L13">at line 13</a></div>
+        <code>                    
+    <strong>evaluate</strong>($value, array $parameters = [], array $exceptParameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$exceptParameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultEvaluationParameters">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_getDefaultEvaluationParameters">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L31">at line 31</a></div>
+        <code>            protected        array
+    <strong>getDefaultEvaluationParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveEvaluationParameter">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_resolveEvaluationParameter">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L36">at line 36</a></div>
+        <code>            protected        
+    <strong>resolveEvaluationParameter</strong>(string $parameter, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEvaluationParameterRemoved">
+        <div class="location">in <a href="../../Filament/Support/Concerns/EvaluatesClosures.html#method_isEvaluationParameterRemoved">
+<abbr title="Filament\Support\Concerns\EvaluatesClosures">EvaluatesClosures</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Concerns/EvaluatesClosures.php#L45">at line 45</a></div>
+        <code>            protected        bool
+    <strong>isEvaluationParameterRemoved</strong>(string $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_view">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L35">at line 35</a></div>
+        <code>                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+    <strong>view</strong>(string $view, array $viewData = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$viewData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractPublicProperties">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicProperties">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L46">at line 46</a></div>
+        <code>            protected        array
+    <strong>extractPublicProperties</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractPublicMethods">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_extractPublicMethods">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L68">at line 68</a></div>
+        <code>            protected        array
+    <strong>extractPublicMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewData">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_viewData">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L90">at line 90</a></div>
+        <code>                    <a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a>
+    <strong>viewData</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Support/Components/ViewComponent.html"><abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getView">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_getView">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L97">at line 97</a></div>
+        <code>                    string
+    <strong>getView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toHtml">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_toHtml">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L106">at line 106</a></div>
+        <code>                    string
+    <strong>toHtml</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">in <a href="../../Filament/Support/Components/ViewComponent.html#method_render">
+<abbr title="Filament\Support\Components\ViewComponent">ViewComponent</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/support/src/Components/ViewComponent.php#L111">at line 111</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\View\View">View</abbr>
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\View\View">View</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inline">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/CanBeInline.html#method_inline">
+<abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/CanBeInline.php#L9">at line 9</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/CanBeInline.html"><abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a>
+    <strong>inline</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/CanBeInline.html"><abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInline">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/CanBeInline.html#method_isInline">
+<abbr title="Filament\Notifications\Concerns\CanBeInline">CanBeInline</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/CanBeInline.php#L16">at line 16</a></div>
+        <code>                    bool
+    <strong>isInline</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_actions">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasActions.html#method_actions">
+<abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasActions.php#L13">at line 13</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasActions.html"><abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a>
+    <strong>actions</strong>(<abbr title="array|Filament\Notifications\Actions\ActionGroup|Closure">ActionGroup|Closure</abbr> $actions)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="array|Filament\Notifications\Actions\ActionGroup|Closure">ActionGroup|Closure</abbr></td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasActions.html"><abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActions">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasActions.html#method_getActions">
+<abbr title="Filament\Notifications\Concerns\HasActions">HasActions</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasActions.php#L20">at line 20</a></div>
+        <code>                    array
+    <strong>getActions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_body">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasBody.html#method_body">
+<abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasBody.php#L11">at line 11</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasBody.html"><abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a>
+    <strong>body</strong>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $body)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$body</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasBody.html"><abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBody">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasBody.html#method_getBody">
+<abbr title="Filament\Notifications\Concerns\HasBody">HasBody</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasBody.php#L18">at line 18</a></div>
+        <code>                    string|null
+    <strong>getBody</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_date">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDate.html#method_date">
+<abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDate.php#L11">at line 11</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasDate.html"><abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a>
+    <strong>date</strong>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $date)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasDate.html"><abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDate">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDate.html#method_getDate">
+<abbr title="Filament\Notifications\Concerns\HasDate">HasDate</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDate.php#L18">at line 18</a></div>
+        <code>                    string|null
+    <strong>getDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_duration">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDuration.html#method_duration">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDuration.php#L11">at line 11</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+    <strong>duration</strong>(<abbr title="Filament\Notifications\Concerns\int|string|Closure|null">int|string|Closure|null</abbr> $duration)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\int|string|Closure|null">int|string|Closure|null</abbr></td>
+                <td>$duration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDuration">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDuration.html#method_getDuration">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDuration.php#L18">at line 18</a></div>
+        <code>                    <abbr title="Filament\Notifications\Concerns\int|string">int|string</abbr>
+    <strong>getDuration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Filament\Notifications\Concerns\int|string">int|string</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seconds">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDuration.html#method_seconds">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDuration.php#L23">at line 23</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+    <strong>seconds</strong>(float $seconds)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_persistent">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasDuration.html#method_persistent">
+<abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasDuration.php#L30">at line 30</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a>
+    <strong>persistent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasDuration.html"><abbr title="Filament\Notifications\Concerns\HasDuration">HasDuration</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_icon">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasIcon.html#method_icon">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasIcon.php#L13">at line 13</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a>
+    <strong>icon</strong>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $icon)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$icon</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iconColor">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasIcon.html#method_iconColor">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasIcon.php#L20">at line 20</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a>
+    <strong>iconColor</strong>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $color)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$color</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasIcon.html"><abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIcon">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasIcon.html#method_getIcon">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasIcon.php#L27">at line 27</a></div>
+        <code>                    string|null
+    <strong>getIcon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIconColor">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasIcon.html#method_getIconColor">
+<abbr title="Filament\Notifications\Concerns\HasIcon">HasIcon</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasIcon.php#L32">at line 32</a></div>
+        <code>                    string|null
+    <strong>getIconColor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_id">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasId.html#method_id">
+<abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasId.php#L9">at line 9</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasId.html"><abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a>
+    <strong>id</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasId.html"><abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasId.html#method_getId">
+<abbr title="Filament\Notifications\Concerns\HasId">HasId</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasId.php#L16">at line 16</a></div>
+        <code>                    string
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_title">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasTitle.html#method_title">
+<abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasTitle.php#L11">at line 11</a></div>
+        <code>                    <a href="../../Filament/Notifications/Concerns/HasTitle.html"><abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a>
+    <strong>title</strong>(<abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr> $title)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Concerns\string|Closure|null">string|Closure|null</abbr></td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Concerns/HasTitle.html"><abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">in <a href="../../Filament/Notifications/Concerns/HasTitle.html#method_getTitle">
+<abbr title="Filament\Notifications\Concerns\HasTitle">HasTitle</abbr></a> <a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Concerns/HasTitle.php#L18">at line 18</a></div>
+        <code>                    string|null
+    <strong>getTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L45">at line 45</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L50">at line 50</a></div>
+        <code>        static            <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>make</strong>(string|null $id = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewData">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L58">at line 58</a></div>
+        <code>                    array
+    <strong>getViewData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L63">at line 63</a></div>
+        <code>                    array
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromArray">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L78">at line 78</a></div>
+        <code>        static            <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>fromArray</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isViewSafe">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L107">at line 107</a></div>
+        <code>            protected        bool
+    <strong>isViewSafe</strong>(string $view)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_safeViews">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L112">at line 112</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>safeViews</strong>(<abbr title="Filament\Notifications\string|array">string|array</abbr> $safeViews)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\string|array">string|array</abbr></td>
+                <td>$safeViews</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L122">at line 122</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>send</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_broadcast">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L132">at line 132</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>broadcast</strong>(<abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr> $users)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr></td>
+                <td>$users</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendToDatabase">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L145">at line 145</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>sendToDatabase</strong>(<abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr> $users, bool $isEventDispatched = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Illuminate\Database\Eloquent\Model|Illuminate\Contracts\Auth\Authenticatable|Illuminate\Support\Collection|array">Collection|array</abbr></td>
+                <td>$users</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isEventDispatched</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBroadcast">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L162">at line 162</a></div>
+        <code>                    <a href="../../Filament/Notifications/BroadcastNotification.html"><abbr title="Filament\Notifications\BroadcastNotification">BroadcastNotification</abbr></a>
+    <strong>toBroadcast</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/BroadcastNotification.html"><abbr title="Filament\Notifications\BroadcastNotification">BroadcastNotification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toDatabase">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L170">at line 170</a></div>
+        <code>                    <a href="../../Filament/Notifications/DatabaseNotification.html"><abbr title="Filament\Notifications\DatabaseNotification">DatabaseNotification</abbr></a>
+    <strong>toDatabase</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/DatabaseNotification.html"><abbr title="Filament\Notifications\DatabaseNotification">DatabaseNotification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBroadcastMessage">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L175">at line 175</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\BroadcastMessage">BroadcastMessage</abbr>
+    <strong>getBroadcastMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\BroadcastMessage">BroadcastMessage</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDatabaseMessage">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L183">at line 183</a></div>
+        <code>                    array
+    <strong>getDatabaseMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_status">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L193">at line 193</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>status</strong>(string $status)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L203">at line 203</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>success</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_warning">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L211">at line 211</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>warning</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_danger">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L219">at line 219</a></div>
+        <code>                    <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>danger</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromDatabase">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L227">at line 227</a></div>
+        <code>        static            <a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a>
+    <strong>fromDatabase</strong>(<abbr title="Illuminate\Notifications\DatabaseNotification">DatabaseNotification</abbr> $notification)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Notifications\DatabaseNotification">DatabaseNotification</abbr></td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Filament/Notifications/Notification.html"><abbr title="Filament\Notifications\Notification">Notification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNotified">
+        <div class="location"><a href="https://github.com/filament/filament/blob/2.x/packages/notifications/src/Notification.php#L236">at line 236</a></div>
+        <code>        static            void
+    <strong>assertNotified</strong>(<abbr title="Filament\Notifications\Filament\Notifications\Notification|string">Notification|string</abbr> $notification = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Filament\Notifications\Filament\Notifications\Notification|string">Notification|string</abbr></td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
