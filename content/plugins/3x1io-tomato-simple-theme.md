@@ -3,7 +3,7 @@ name: Simple Theme
 slug: 3x1io-tomato-simple-theme
 author_slug: 3x1io
 categories: [developer-tool]
-description: A simple theme for FilamentPHP
+description: A simple theme for FilamentPHP with custom user menu in sidebar
 discord_url: 
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-simple-theme/master/README.md
 github_repository: tomatophp/filament-simple-theme
