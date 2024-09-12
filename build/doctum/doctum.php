@@ -24,6 +24,6 @@ return new Doctum($iterator, [
 	'build_dir' => __DIR__.'/build/%version%',
 	'cache_dir' => __DIR__.'/cache/%version%',
 	'default_opened_level' => 2,
-    'remote_repository' => new GitHubRemoteRepository('filament/filament', dirname($dir)),
+    'remote_repository' => new GitHubRemoteRepository('filamentphp/filament', dirname($dir)),
     'base_url' => 'https://filamentphp.com/api/%version%/',
 ]);
