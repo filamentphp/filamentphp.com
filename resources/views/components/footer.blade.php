@@ -5,9 +5,11 @@
 >
     <div class="mx-auto grid w-full">
         <div
-            class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin"
+            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
         >
             <x-sponsors.sevalla footer />
+
+            <x-sponsors.vormkracht10 footer />
 
             <x-sponsors.lunar footer />
 
