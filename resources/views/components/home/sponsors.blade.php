@@ -283,6 +283,8 @@
                 <div
                     class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12"
                 >
+                    <x-sponsors.cms-max />
+
                     <x-sponsors.sevalla />
 
                     <x-sponsors.vormkracht10 />
