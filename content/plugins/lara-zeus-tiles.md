@@ -5,7 +5,7 @@ author_slug: lara-zeus
 categories: [table-builder, table-column, infolist-entry, form-builder, form-field]
 checkout_url: https://store.larazeus.com/checkout/buy/c8142db8-f2ea-43dc-adf8-21af024cfb7d?embed=1&media=0&logo=0&desc=0
 description: Collection of components to present your data in an elegant way.
-discord_url: https://discord.com/channels/883083792112300104/1282733625485295749
+discord_url: https://discord.com/channels/883083792112300104/1282763077611421829
 docs_url: http://larazeus.com/storage/docs/tiles/v1/filament.md
 url: https://larazeus.com/tiles
 github_repository: lara-zeus/tiles
