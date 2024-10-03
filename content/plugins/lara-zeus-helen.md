@@ -5,7 +5,7 @@ author_slug: lara-zeus
 categories: [panel-builder, kit, developer-tool]
 checkout_url: https://store.larazeus.com/checkout/buy/da5e7c95-f9a7-4502-b494-5b2152df1949?embed=1&media=0&logo=0&desc=0
 description: Short URLs management with QR code generator, statistics and custom actions
-discord_url: https://discord.com/channels/883083792112300104/1184785048210264125
+discord_url: https://discord.com/channels/883083792112300104/1282752586046378086
 docs_url: http://larazeus.com/storage/docs/helen/v2/filament.md
 url: https://larazeus.com/helen
 github_repository: lara-zeus/helen
