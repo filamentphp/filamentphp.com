@@ -293,6 +293,8 @@
 
                     <x-sponsors.whizzy />
 
+                    <x-sponsors.larafast />
+
                     <x-sponsors.lunar />
 
                     <x-sponsors.ploi />
