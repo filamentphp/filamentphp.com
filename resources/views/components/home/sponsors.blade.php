@@ -320,8 +320,6 @@
                     <x-sponsors.server-auth />
 
                     <x-sponsors.solution-forest />
-
-                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>
