@@ -1,6 +1,6 @@
 ---
 title: How to write tests for Filament admin panels
-slug: how-to-write-tests-for-filament-admin-panels
+slug: leandrocfe-how-to-write-tests-for-filament-admin-panels
 author_slug: leandrocfe
 publish_date: 2022-11-06
 categories: [laravel, livewire, panel-builder, table-builder, form-builder]
