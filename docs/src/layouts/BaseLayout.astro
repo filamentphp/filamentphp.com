@@ -129,34 +129,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         x-init="banner = Math.floor(Math.random() * 3)"
         class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9"
       >
-        <template x-if="banner === 0">
-          <span>
-            Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the official Filament-partnered development agency.
-          </span>
-        </template>
-        <template
-          x-if="banner === 1"
-          x-data="{ variant: null }"
-          x-init="variant = Math.floor(Math.random() * 2)"
+        <span x-show="banner === 0">
+          Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the official Filament-partnered development agency.
+        </span>
+        <span
+          x-show="banner === 1"
         >
-          <span>
-            <template x-if="variant === 0">
-              <span>
-                Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner+short" target="_blank" class="underline">Whizzy</a>.
-              </span>
-            </template>
-            <template x-if="variant === 1">
-              <span>
-                Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner+long" target="_blank" class="underline">Whizzy</a>, the development platform for Laravel and Filament.
-              </span>
-            </template>
-          </span>
-        </template>
-        <template x-if="banner === 2">
-          <span>
-            Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.
-          </span>
-        </template>
+            Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner" target="_blank" class="underline">Whizzy</a>.
+        </span>
+        <span x-show="banner === 2">
+          Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.
+        </span>
       </div>
     </div>
 

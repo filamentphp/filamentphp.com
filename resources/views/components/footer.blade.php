@@ -5,16 +5,20 @@
 >
     <div class="mx-auto grid w-full">
         <div
-            class="col-span-full flex flex-wrap justify-around gap-12 text-dolphin"
+            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
         >
+            <x-sponsors.cms-max footer />
+
             <x-sponsors.sevalla footer />
+
+            <x-sponsors.vormkracht10 footer />
 
             <x-sponsors.lunar footer />
 
             <a
                 href="https://github.com/filamentphp/filament?sponsor=1"
                 target="_blank"
-                class="my-auto block rounded-xl bg-pink-100 px-8 py-4 text-center text-sm font-medium text-midnight transition hover:bg-pink-200"
+                class="my-auto block rounded-xl bg-pink-100 px-4 py-3 text-center text-xs font-medium text-midnight transition hover:bg-pink-200"
             >
                 Your logo here?
                 <span class="hover:scale-105">💖</span>
@@ -105,6 +109,12 @@
                         class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         Documentation
+                    </a>
+                    <a
+                        href="{{ route('api-docs') }}"
+                        class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    >
+                        PHP API Documentation
                     </a>
                     <a
                         href="{{ route('plugins') }}"
