@@ -15,5 +15,5 @@ is_lemon_squeezy_embedded: true
 is_presale: false
 price: $9.00
 versions: [3]
-publish_date: 2024-09-17
+publish_date: 2024-10-20
 ---
