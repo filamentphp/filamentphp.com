@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers;
+use App\Models\Article;
 use App\Models\Plugin;
 use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
@@ -52,6 +53,10 @@ Route::view('/consulting', 'consulting')->name('consulting');
 Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
+
+Route::get('/api/{version?}', function (string $version = '3.x'): RedirectResponse {
+    return redirect('/api/' . $version . '/index.html');
+})->where('version', '[1-3]+\.x')->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
     Route::redirect('/getting-started', '/docs/panels/getting-started');
@@ -125,6 +130,20 @@ Route::prefix('/docs')->group(function () {
 });
 
 Route::prefix('/community')->group(function () {
+    Route::get('/', function () {
+        return redirect(status: 301)->route('articles');
+    });
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', function (Article $article) {
+                return redirect(status: 301)->route('articles.view', ['article' => $article->slug]);
+            });
+        });
+    });
+});
+
+Route::prefix('/content')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
 
     Route::name('articles.')->group(function () {

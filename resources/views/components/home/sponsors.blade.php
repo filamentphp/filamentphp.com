@@ -280,14 +280,24 @@
             class="mt-16"
         >
             <div class="mx-auto grid w-full max-w-2xl">
-                <div class="col-span-full flex flex-wrap justify-around gap-12">
-                    <x-sponsors.lunar />
+                <div
+                    class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12"
+                >
+                    <x-sponsors.cms-max />
 
-                    <x-sponsors.ploi />
+                    <x-sponsors.sevalla />
+
+                    <x-sponsors.vormkracht10 />
 
                     <x-sponsors.kirschbaum />
 
                     <x-sponsors.whizzy />
+
+                    <x-sponsors.larafast />
+
+                    <x-sponsors.lunar />
+
+                    <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
 
@@ -305,15 +315,11 @@
 
                     <x-sponsors.lander-systems />
 
-                    <x-sponsors.locale />
-
                     <x-sponsors.lucky-media />
 
                     <x-sponsors.server-auth />
 
                     <x-sponsors.solution-forest />
-
-                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>

@@ -1,6 +1,6 @@
 ---
 title: How to Refresh Widgets When Table Actions Are Fired
-slug: how-to-refresh-widgets-when-table-actions-are-fired
+slug: leandrocfe-how-to-refresh-widgets-when-table-actions-are-fired
 author_slug: leandrocfe
 publish_date: 2023-03-04
 categories: [livewire, panel-builder, table-builder]
