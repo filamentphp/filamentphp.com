@@ -3,15 +3,25 @@
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24"
 >
-    <div class="mx-auto grid w-full">
+    <div class="mx-auto grid gap-y-12 w-full">
         <div
             class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
         >
             <x-sponsors.cms-max footer />
 
+            <x-sponsors.kettner-edelmetalle footer />
+
             <x-sponsors.sevalla footer />
 
             <x-sponsors.vormkracht10 footer />
+        </div>
+
+        <div
+            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
+        >
+            <x-sponsors.kirschbaum footer />
+
+            <x-sponsors.whizzy footer />
 
             <x-sponsors.lunar footer />
 
@@ -23,10 +33,6 @@
                 Your logo here?
                 <span class="hover:scale-105">💖</span>
             </a>
-
-            <x-sponsors.kirschbaum footer />
-
-            <x-sponsors.whizzy footer />
         </div>
     </div>
 

@@ -285,6 +285,8 @@
                 >
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.kettner-edelmetalle />
+
                     <x-sponsors.sevalla />
 
                     <x-sponsors.vormkracht10 />
