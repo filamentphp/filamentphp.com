@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/ariaieboy/filament-jalali-datetime/m
 github_repository: ariaieboy/filament-jalali-datetime
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2]
 publish_date: 2023-07-22
 ---
