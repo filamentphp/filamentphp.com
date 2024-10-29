@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\AuthorController;
 use App\Http\Controllers\Api\ArticleController;
+use App\Http\Controllers\Api\AuthorController;
 use App\Http\Controllers\Api\PluginController;
 use Illuminate\Support\Facades\Route;
 
