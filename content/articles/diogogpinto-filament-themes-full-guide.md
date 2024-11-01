@@ -39,7 +39,7 @@ In your project's root directory, run:
 php artisan make:filament-theme
 ```
 
-It will scan your app for all the panels you have installed and let you select which panel this themes applies to. Select the panel which you wish to customize. In this particular case, we will select the panel `admin`.
+It will scan your app for all the panels you have installed and let you select which panel this theme applies to. Select the panel you wish to customize. In this particular case, we will select the panel `admin`.
 
 ![Create Theme Terminal Command](/images/content/articles/diogogpinto-filament-themes-full-guide/create-theme.webp)
 
