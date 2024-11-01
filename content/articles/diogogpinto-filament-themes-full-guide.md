@@ -62,7 +62,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 // Add the following line of code
-                'resources/css/filament/admin/theme.css'
+                'resources/css/filament/admin/theme.css' // [tl! add]
             ],
             refresh: [
                 ...refreshPaths,
