@@ -245,7 +245,7 @@ Sometimes there are some things your theme requires that go behind CSS. You may 
 - [Render Hooks on the Official Docs](https://filamentphp.com/docs/3.x/support/render-hooks) - check how you can render custom views almost anywhere in your panels
 - [Registering Assets](https://filamentphp.com/docs/3.x/support/assets#registering-javascript-files) - check how you can register custom JS/CSS into your Filament panels
 
-### The ~wrong~ unrecommended way to customize your theme
+### The non-recommended way to customize your theme
 
 Another way of doing things, is publishing all the views of the Filament panels package. Why isn't this recommended? The docs say exactly why:
 
