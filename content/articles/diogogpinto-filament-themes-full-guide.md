@@ -26,7 +26,7 @@ I am assuming you already have a Filament Panel setup. If you don't have one, pl
 
 ## Creating a theme
 
-In this example, we will be creating a custom theme for Filament's default panel, the `admin`panel.
+In this example, we will be creating a custom theme for Filament's default panel, the `admin` panel.
 
 > [!note]
 > The same steps apply for any other panel you may have in your Filament project
