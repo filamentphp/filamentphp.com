@@ -93,13 +93,13 @@ return $panel
     ->viteTheme('resources/css/filament/admin/theme.css') // [tl! add]
 ```
 
-Our panel now knows we are using a custom theme and what our theme path is.
+Our panel now knows we are using a custom theme and where in the filesystem to find it.
 
 #### Running the build process
 
 ![Build Process](/images/content/articles/diogogpinto-filament-themes-full-guide/npm-run-build.webp)
 
-At last, we shall run the build process with the terminal in our project's root directory:
+At last, we shall run the build process with the terminal in our Laravel project's root directory:
 
 ```bash
 npm run build
@@ -118,9 +118,9 @@ Sometimes, when installing plugins like [Auth UI Enhancer](https://www.github.co
 
 #### What does this mean?
 
-We need to make sure that - when we start the building process - `vite` will check the files in the paths specified in the `content`array and collect all used CSS classes in the plugin views. It will then compile all used CSS classes into the one single CSS file in your Filament panel.
+We need to make sure that, when we start the build process, `vite` will check the files in the paths specified in our `content` array, instructing `vite` to collect all CSS classes in the plugin views. It will then compile all used CSS classes into the one single CSS file for your Filament panel.
 
-So, in our case, installing `Auth UI Enhancer` and `Curator`plugin in our panel, we will go to `resources/css/filament/admin/tailwind.config.js`and edit it like the code below:
+So in our case, when installing the `Auth UI Enhancer` and `Curator` plugins in our panel, we will go to `resources/css/filament/admin/tailwind.config.js` and edit it like the code below:
 
 ```js
 import preset from '../../../../vendor/filament/filament/tailwind.config.preset'
@@ -131,24 +131,23 @@ export default {
         './app/Filament/Clusters/Products/**/*.php',
         './resources/views/filament/clusters/products/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
-        // Added the following lines of code
-        './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
-        './vendor/awcodes/filament-curator/resources/**/*.blade.php',
+        './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php', // [tl! add]
+        './vendor/awcodes/filament-curator/resources/**/*.blade.php', // [tl! add]
     ],
 }
 ```
 
-Additionally, in the case of the `Curator` plugin, the author requires you to import some CSS files in your `theme.css`. This can be done, by editing the file `resources/css/filament/admin/theme.css` and making it look like below:
+Additionally, in the case of the `Curator` plugin, the author requires you to import some CSS files in your `theme.css`. This can be done, by editing the file `resources/css/filament/admin/theme.css` and making it look like the snippet below:
 
 ```css
 @import '/vendor/filament/filament/resources/css/theme.css';
-@import '/node_modules/cropperjs/dist/cropper.css';
-@import '/vendor/awcodes/filament-curator/resources/css/plugin.css';
+@import '/node_modules/cropperjs/dist/cropper.css'; // [tl! add]
+@import '/vendor/awcodes/filament-curator/resources/css/plugin.css'; // [tl! add]
 
 @config 'tailwind.config.js';
 ```
 
-This last step imports all custom classes needed by the plugin to render correctly. It imports the class, puts into our panel's unique CSS file and minimizes it all for greater performance.
+This last step imports all custom classes needed by the plugin to render correctly. It imports the classes, puts them into our panel's unique CSS file, and minimizes the CSS for greater performance.
 
 #### Running the build process
 
@@ -156,32 +155,32 @@ When installing plugins and editing any theme related files, always remember to 
 
 ## Customizing the theme
 
-Laravel, and Filament being Laravel based, offer multiple solutions to the same problem. So, we will address two ways of building your own Filament look and feel, the recommended way and the not-so-recommended way. Let's start with the latter.
+Both Laravel and Filament (being Laravel based), offer multiple solutions to the same problem. Because of that, we will look at two ways of building your own Filament look and feel: the recommended way and the not-so-recommended way.
 
 ### Before starting the customization process
 
-You should start the `npm run dev` process in the root of your project. This process watches for changes in the files registered in the `vite.config.js` (and `tailwind.config.js` by extension) and automatically builds a temporary CSS file to render the changes on file save.
+While you develop your theme, you should run `npm run dev` in the root of your project. This process watches for changes in the files registered in the `vite.config.js` (and `tailwind.config.js`, by extension) and automatically renders any changes on file save.
 
 > [!note]
-> You still need to run `npm run build` when you're done customizing your theme
+> You still need to run `npm run build` when you're finished customizing your theme
 
 ### The recommended way to customize your theme
 
-The Filament panels core offers you a list of classes. Every component of the panel layout, including forms, infolists and tables, were wrapped in custom classes to make it possible, for any developer, to customize the panel look and feel. Let's look at the following example:
+Every component in the Panel Builder package, including the layout, forms, infolists and tables, are wrapped in custom classes to make it possible to customize the panel's look and feel. Let's look at the following example:
 
 ![Breadcrumb Example](/images/content/articles/diogogpinto-filament-themes-full-guide/breadcrumb-example.webp)
 
-Looking at the breadcrumb component with Chrome's builtin Developer Tools > Inspect Element, you can see that the `<nav>`na tag contains the following classes:
+Looking at the breadcrumb component with Chrome's built-in Developer Tools > Inspect Element, you can see that the `<nav>` tag contains the following classes:
 
 ```html
 <nav class="fi-breadcrumbs mb-2 hidden sm:block">
 ```
 
-The `.fi-breadcrumbs` class is inserted to allow developers to further optimize the breadcrumbs' look and feel. By default, the class has no CSS properties defined in itself, it's only there for the developer to apply custom styles.
+The `.fi-breadcrumbs` class allows us to further optimize the breadcrumbs' look and feel. By default, the class has no CSS properties defined–it only exists for us to apply custom styles.
 
 #### Customizing the CSS
 
-Picking up in the above example of `.fi-breadcrumbs`, we can now apply custom CSS classes on our `theme.css`. You can either use Tailwind utility classes or just write vanilla CSS. Let's say you want to override the default margin `mb-2`. Inputting the below CSS will yield the exact same results:
+Using the above example of `.fi-breadcrumbs`, we now apply custom CSS classes in our `theme.css` file to change the styling of the breadcrumbs. You can either use Tailwind utility classes or vanilla CSS. Let's say you want to override the default margin `mb-2`. Either option in the below CSS will yield the exact same results:
 
 ```css
 .fi-breadcrumbs {
@@ -233,17 +232,17 @@ span.fi-breadcrumbs-item-label {
 
 ![Breadcrumbs Final Example](/images/content/articles/diogogpinto-filament-themes-full-guide/breadcrumbs-final.webp)
 
-There are a lot of classes around every Filament component. You can go through each one and apply your custom CSS, so you can create a unique design for your Panel.
+There are many classes within each Filament component. You can go through each one and apply your custom CSS to create a unique design for your Panel.
 
 > [!TIP]
-> There's a useful Filament Plugin ([Theme Inspector](https://filamentphp.com/plugins/codewithdennis-theme-inspector)) that lets you inspect all the classes in your panel in your dev environment. You can even copy to clipboard! It really smoothes the development process.
+> There's a useful Filament Plugin ([Theme Inspector](https://filamentphp.com/plugins/codewithdennis-theme-inspector)) that lets you inspect all the classes in your panel in your dev environment. You can even copy to clipboard! It really smoothes out the theme development process.
 
-### Going behind CSS
+### Going beyond CSS
 
-Sometimes there are some things your theme requires that go behind CSS. You may want to add a custom Livewire component, Blade View or JS script. As these modifications are outside the scope of this guide, I would advise you to check the following resources:
+Sometimes there are some things your theme requires that go beyond CSS. You may want to add a custom Livewire component, Blade View, or JS script. All of this is possible, but as these modifications are outside the scope of this guide, I would advise you to check the following resources:
 
-- [Render Hooks on the Official Docs](https://filamentphp.com/docs/3.x/support/render-hooks) - check how you can render custom views almost anywhere in your panels
-- [Registering Assets](https://filamentphp.com/docs/3.x/support/assets#registering-javascript-files) - check how you can register custom JS/CSS into your Filament panels
+- [Render Hooks on the Official Docs](https://filamentphp.com/docs/3.x/support/render-hooks) - Render custom views almost anywhere in your panels
+- [Registering Assets](https://filamentphp.com/docs/3.x/support/assets#registering-javascript-files) - Register custom CSS/JS in your Filament panels
 
 ### The non-recommended way to customize your theme
 
@@ -313,14 +312,14 @@ And change the `<header>` tag to make it look like:
 >
 ```
 
-And there it is. We were able to customize the theme file in the unrecommended way. We shouldn't really do this, unless we want to add complex logic to the code. If this is the case, you can delete all the files except the ones you are directly going to modify.
+And there it is. We were able to customize the theme file in the unrecommended way. We shouldn't really do this, unless we want to add complex logic to our code and take on the burden of updating these files every single time Filament updates. If this is the case, you can delete all the files except the ones you are directly going to modify.
 
 ![Blade editing adding backdrop](/images/content/articles/diogogpinto-filament-themes-full-guide/blade-backdrop-blur.webp)
 
 > [!note]
 > All the changes you make to these files will render on ALL of your Filament panels in the project, unless you use some kind of conditional statements in your blade files.
 
-Remember to the things the right way whenever possible.
+Remember to do the things the right way whenever possible.
 
 ## Support
 
