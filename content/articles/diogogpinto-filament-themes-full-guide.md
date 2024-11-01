@@ -2,7 +2,7 @@
 title: "Filament Custom Themes - The Full Guide"
 slug: diogogpinto-filament-themes-full-guide
 author_slug: diogogpinto
-publish_date: 2024-29-10
+publish_date: 2024-10-29
 categories: [panel-builder]
 type_slug: article
 ---
