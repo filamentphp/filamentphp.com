@@ -261,7 +261,7 @@ So, if you were to do this, you could run the following command in your terminal
 php artisan vendor:publish --tag=filament-panels-views
 ```
 
-Now, inside your `resources/views/vendor/filament-panels` folder are a bunch of files - these are the original view files you can (but shouldn't) customize.
+Now, you will find a bunch of files inside your `resources/views/vendor/filament-panels` folder. These are the original view files you can (but shouldn't) customize.
 
 ![Vendor Files](/images/content/articles/diogogpinto-filament-themes-full-guide/vendor-publish.webp)
 
