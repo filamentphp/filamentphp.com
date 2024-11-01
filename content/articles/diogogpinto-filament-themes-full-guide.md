@@ -90,7 +90,7 @@ Now we shall edit the `AdminPanelProvider.php` file and add the viteTheme method
 ```php
 return $panel
     ->id('admin')
-    ->viteTheme('resources/css/filament/admin/theme.css') // Added this line of code
+    ->viteTheme('resources/css/filament/admin/theme.css') // [tl! add]
 ```
 
 Our panel now knows we are using a custom theme and what our theme path is.
