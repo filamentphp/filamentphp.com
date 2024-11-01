@@ -49,7 +49,7 @@ After you've selected the panel, the terminal will give you all further instruct
 
 #### Editing vite.config.js
 
-Go to the `vite.config.js` file in your project's root directory and set the input array like below:
+Go to the `vite.config.js` file in your Laravel project's root directory and set the input array like below:
 
 ```javascript
 import { defineConfig } from 'vite'
