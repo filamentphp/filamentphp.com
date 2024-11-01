@@ -278,8 +278,7 @@ export default {
         './vendor/filament/**/*.blade.php',
         './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
         './vendor/awcodes/filament-curator/resources/**/*.blade.php',
-        // Added the following line of code
-        './resources/views/filament-panels/**/*.blade.php',
+        './resources/views/filament-panels/**/*.blade.php', // [tl! add]
     ],
 }
 ```
