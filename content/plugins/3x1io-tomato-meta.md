@@ -1,7 +1,7 @@
 ---
 name: Meta Manager
 slug: 3x1io-tomato-meta
-author_slug: io3x1
+author_slug: 3x1io
 categories: [developer-tools]
 description: Convert any model on your app to pluggable model using Meta and get ready to use relation manager on FilamentPHP panel
 discord_url:
