@@ -285,6 +285,8 @@
                 >
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.kettner-edelmetalle />
+
                     <x-sponsors.sevalla />
 
                     <x-sponsors.vormkracht10 />
@@ -293,11 +295,15 @@
 
                     <x-sponsors.whizzy />
 
+                    <x-sponsors.larafast />
+
                     <x-sponsors.lunar />
 
                     <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
+
+                    <x-sponsors.wave />
 
                     <x-sponsors.agiledrop />
 
@@ -318,8 +324,6 @@
                     <x-sponsors.server-auth />
 
                     <x-sponsors.solution-forest />
-
-                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>

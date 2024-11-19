@@ -4,7 +4,7 @@ slug: lara-zeus-delia
 author_slug: lara-zeus
 categories: [panel-builder]
 description: Bookmark manager for your filament resources
-discord_url: https://discord.com/channels/883083792112300104/1282126652284866641
+discord_url: https://discord.com/channels/883083792112300104/1282762546134384640
 docs_url: https://raw.githubusercontent.com/lara-zeus/delia/1.x/docs/filament.md
 url: https://larazeus.com/delia
 github_repository: lara-zeus/delia

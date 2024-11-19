@@ -134,15 +134,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </span>
         <span
           x-show="banner === 1"
-          x-data="{ variant: null }"
-          x-init="variant = Math.floor(Math.random() * 2)"
         >
-          <span x-show="variant === 0">
-            Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner+short" target="_blank" class="underline">Whizzy</a>.
-          </span>
-          <span x-show="variant === 1">
-            Build faster with the <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner+long" target="_blank" class="underline">Filament development platform</a>.
-          </span>
+            Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner" target="_blank" class="underline">Whizzy</a>.
         </span>
         <span x-show="banner === 2">
           Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.

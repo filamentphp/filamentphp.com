@@ -8,7 +8,7 @@ description: Featuring a clean design with less rounding, lighter backgrounds, a
 github_repository: filamentphp/minimal-theme
 has_dark_theme: true
 has_translations: true
-price: €49.00
+price: €59.00
 versions: [3]
 publish_date: 2023-09-05
 ---

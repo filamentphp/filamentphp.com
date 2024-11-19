@@ -5,7 +5,7 @@ author_slug: lara-zeus
 categories: [panel-builder, kit, developer-tool]
 checkout_url: https://store.larazeus.com/checkout/buy/7284fb18-893e-488b-92bc-9130f1aca8b6?embed=1&media=0&logo=0&desc=0
 description: Build Advanced, Optimized, High Performance Translatable Apps.
-discord_url: https://discord.com/channels/883083792112300104/1255967881888399500
+discord_url: https://discord.com/channels/883083792112300104/1282750611586154516
 docs_url: http://larazeus.com/storage/docs/translatable-pro/v1/filament.md
 url: https://larazeus.com/translatable-pro
 github_repository: lara-zeus/translatable-pro
