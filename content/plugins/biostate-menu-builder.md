@@ -2,7 +2,7 @@
 name: Menu Builder
 slug: biostate-menu-builder
 author_slug: ozgur-ozarpaci
-categories: [panel-builder]
+categories: [panel-builder, form-builder]
 description: An Elegant Menu Builder for FilamentPHP
 discord_url: 
 docs_url: https://raw.githubusercontent.com/Biostate/filament-menu-builder/refs/heads/main/README.md
