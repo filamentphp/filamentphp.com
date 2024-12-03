@@ -11,7 +11,7 @@ github_repository: solutionforest/filaletter
 has_dark_theme: true
 has_translations: true
 is_presale: false
-price: $99.00
+price: $69.00
 versions: [3]
 publish_date: 2024-11-15
 ---
