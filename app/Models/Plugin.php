@@ -171,14 +171,7 @@ class Plugin extends Model implements Starrable
 
     public function getStarsCountCacheKey(): string
     {
-        $slug = $this->slug;
-
-        $slug = match ($slug) {
-            'filament-themes' => 'filament-minimal-theme',
-            default => $slug,
-        };
-
-        return "plugin:{$slug}:stars_count";
+        return "plugin:{$this->slug}:stars_count";
     }
 
     public function getPriceCacheKey(): string
