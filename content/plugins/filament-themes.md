@@ -1,6 +1,6 @@
 ---
 name: Themes
-slug: filament-minimal-theme
+slug: filament-themes
 author_slug: filament
 categories: [form-builder, panel-builder, table-builder, theme]
 url: https://whizzy.dev/themes?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
