@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/datlechin/filament-menu-builder/main
 github_repository: datlechin/filament-menu-builder
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [3]
 publish_date: 2024-09-06
 ---
