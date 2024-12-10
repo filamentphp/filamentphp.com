@@ -7,7 +7,7 @@
         href="https://www.cmsmax.com/careers/expert-laravel-developer-ecommerce-specialist"
         target="_blank"
         title="CMS Max"
-        class="my-auto flex flex-col gap-3 items-center rounded-xl bg-peach-orange px-4 py-3 text-midnight transition hover:bg-butter"
+        class="my-auto flex flex-col items-center gap-3 rounded-xl bg-peach-orange px-4 py-3 text-midnight transition hover:bg-butter"
     >
         <div class="text-center text-xs font-bold">
             Looking for a job using Filament?
@@ -15,7 +15,7 @@
 
         <svg
             viewBox="0 0 1199.341311 206.635059"
-            class="block fill-current h-5"
+            class="block h-5 fill-current"
         >
             <g
                 transform="translate(-0.654992,206.693484) scale(0.100000,-0.100000)"
