@@ -15,7 +15,7 @@ Our team actively contributes to the open-source community, particularly in the 
 
 ### Featured Packages
 
-- **[Package Name 1](https://github.com/appslanka/laravel-bug-fix)**: Laravel bug tracking for laravelbugfix.com
+- **[Laravel Bug Fix](https://github.com/appslanka/laravel-bug-fix)**: Laravel bug tracking for laravelbugfix.com
 
 ## Connect with Us
 
