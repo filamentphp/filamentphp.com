@@ -2,7 +2,7 @@
 name: Apps Lanka
 slug: apps-lanka
 github_url: https://github.com/appslanka
-twitter_url: https://twitter.com/appslanka
+twitter_url: https://twitter.com/apps_lanka
 ---
 
 # About Apps Lanka
