@@ -17,4 +17,4 @@ Does your Filament application need a different look than the default style?
 No need to hire a designer to create a custom Filament theme.
 Simply install a Composer package and you’re good to go.
 
-[Browse all themes on the Whizzy website.](https://whizzy.dev/themes/minimal?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=introduction)
+[Browse all themes on the Whizzy website.](https://whizzy.dev/themes?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=introduction)
