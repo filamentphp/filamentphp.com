@@ -15,13 +15,12 @@ Our team actively contributes to the open-source community, particularly in the 
 
 ### Featured Packages
 
-- **[Package Name 1](#)**: A brief description of the package's functionality and its benefits.
-- **[Package Name 2](#)**: Another package description with unique features highlighted.
+- **[Package Name 1](https://github.com/appslanka/laravel-bug-fix)**: Laravel bug tracking for laravelbugfix.com
 
 ## Connect with Us
 
 - Follow us on [GitHub](https://github.com/appslanka) to stay updated with our latest projects.
-- Join the conversation on [Twitter](https://twitter.com/appslanka) and share your feedback.
+- Join the conversation on [Twitter](https://twitter.com/apps_lanka) and share your feedback.
 
 ---
 
