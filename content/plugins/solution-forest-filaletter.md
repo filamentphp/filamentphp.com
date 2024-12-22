@@ -5,15 +5,15 @@ author_slug: solution-forest
 categories: [kit, developer-tool]
 checkout_url: https://filaletter.solutionforest.net/
 description: This is an email marketing plugin built specifically for Filament Admin Panel. It aims to bring the distribution of content by email into the admin panel, where we believe it should be, along with the same ethos of flexibility and user-friendliness that FilamentPHP provides. This package is based on the open-source project SendPortal Core.
-discord_url: 
-docs_url: https://filaletter.solutionforest.net/documentation/1-getting-started/1-introduction
+discord_url: https://discord.com/channels/883083792112300104/1320505683778736218
+url: https://filaletter.solutionforest.net/documentation/1-getting-started/1-introduction
 github_repository: solutionforest/filaletter
 has_dark_theme: true
 has_translations: true
 is_presale: false
 price: $69.00
 versions: [3]
-publish_date: 2024-11-15
+publish_date: 2024-12-22
 ---
 
 Official site and Documents: [https://filaletter.solutionforest.net/](https://filaletter.solutionforest.net/)
