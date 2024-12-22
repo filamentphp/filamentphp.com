@@ -10,5 +10,5 @@ github_repository: GuavaCZ/filament-icon-select-column
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-12-02
+publish_date: 2024-12-22
 ---
