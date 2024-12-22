@@ -1,6 +1,6 @@
 ---
 name: Özgür Özarpacı
-slug: ozgur-ozarpaci
+slug: biostate
 github_url: https://github.com/Biostate
 twitter_url: https://twitter.com/Biostate56
 ---
