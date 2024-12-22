@@ -2,7 +2,7 @@
 name: Cristian Iosif
 slug: cristian-iosif
 github_url: https://github.com/lartisan
-twitter_url: https://twitter.com/@ciosif
+twitter_url: https://twitter.com/ciosif
 sponsor_url: https://github.com/sponsors/lartisan
 ---
 
