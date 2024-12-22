@@ -9,8 +9,6 @@
         >
             <x-sponsors.cms-max footer />
 
-            <x-sponsors.kettner-edelmetalle footer />
-
             <x-sponsors.sevalla footer />
 
             <x-sponsors.vormkracht10 footer />
