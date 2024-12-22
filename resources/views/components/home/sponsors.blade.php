@@ -285,8 +285,6 @@
                 >
                     <x-sponsors.cms-max />
 
-                    <x-sponsors.kettner-edelmetalle />
-
                     <x-sponsors.sevalla />
 
                     <x-sponsors.vormkracht10 />
@@ -308,6 +306,8 @@
                     <x-sponsors.agiledrop />
 
                     <x-sponsors.cleavr />
+
+                    <x-sponsors.codecourse />
 
                     <x-sponsors.creagia />
 
