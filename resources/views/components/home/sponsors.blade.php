@@ -307,6 +307,8 @@
 
                     <x-sponsors.cleavr />
 
+                    <x-sponsors.codecourse />
+
                     <x-sponsors.creagia />
 
                     <x-sponsors.datasauce />
