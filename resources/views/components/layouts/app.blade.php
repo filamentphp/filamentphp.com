@@ -129,7 +129,7 @@
                             'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('articles*'),
                         ])
                     >
-                        Community
+                        Content
                     </div>
                 </a>
             </li>

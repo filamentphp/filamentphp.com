@@ -301,9 +301,13 @@
 
                     <x-sponsors.tapp-network />
 
+                    <x-sponsors.wave />
+
                     <x-sponsors.agiledrop />
 
                     <x-sponsors.cleavr />
+
+                    <x-sponsors.codecourse />
 
                     <x-sponsors.creagia />
 
