@@ -283,15 +283,15 @@
                 <div
                     class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12"
                 >
+                    <x-sponsors.kirschbaum />
+
+                    <x-sponsors.whizzy />
+
                     <x-sponsors.cms-max />
 
                     <x-sponsors.sevalla />
 
                     <x-sponsors.vormkracht10 />
-
-                    <x-sponsors.kirschbaum />
-
-                    <x-sponsors.whizzy />
 
                     <x-sponsors.larafast />
 
