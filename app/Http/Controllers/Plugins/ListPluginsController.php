@@ -40,6 +40,7 @@ class ListPluginsController extends Controller
             ]),
             'starsCount' => Star::query()
                 ->where('starrable_type', 'plugin')
+                ->whereNot('is_vpn_ip', true)
                 ->count(),
         ]);
     }

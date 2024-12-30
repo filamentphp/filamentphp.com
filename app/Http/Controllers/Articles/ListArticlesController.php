@@ -31,6 +31,7 @@ class ListArticlesController extends Controller
                     $stars = Star::query()
                         ->toBase()
                         ->where('starrable_type', 'article')
+                        ->whereNot('is_vpn_ip', true)
                         ->groupBy('starrable_id')
                         ->selectRaw('count(id) as count, starrable_id')
                         ->get()

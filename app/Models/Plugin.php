@@ -129,7 +129,7 @@ class Plugin extends Model implements Starrable
         return cache()->remember(
             $this->getStarsCountCacheKey(),
             now()->addDay(),
-            fn (): int => $this->stars()->count(),
+            fn (): int => $this->stars()->whereNot('is_vpn_ip', true)->count(),
         );
     }
 
