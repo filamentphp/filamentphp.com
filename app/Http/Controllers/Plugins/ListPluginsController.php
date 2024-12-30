@@ -8,6 +8,7 @@ use App\Models\Author;
 use App\Models\Plugin;
 use App\Models\PluginCategory;
 use App\Models\Star;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListPluginsController extends Controller
 {
@@ -40,7 +41,7 @@ class ListPluginsController extends Controller
             ]),
             'starsCount' => Star::query()
                 ->where('starrable_type', 'plugin')
-                ->whereNot('is_vpn_ip', true)
+                ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                 ->count(),
         ]);
     }

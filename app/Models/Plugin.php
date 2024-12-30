@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Contracts\Starrable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -129,7 +130,7 @@ class Plugin extends Model implements Starrable
         return cache()->remember(
             $this->getStarsCountCacheKey(),
             now()->addDay(),
-            fn (): int => $this->stars()->whereNot('is_vpn_ip', true)->count(),
+            fn (): int => $this->stars()->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))->count(),
         );
     }
 

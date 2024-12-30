@@ -22,7 +22,7 @@ class GetPluginsListData
                         fn (Builder $query) => $query->whereIn('starrable_id', $plugins),
                     )
                     ->where('starrable_type', 'plugin')
-                    ->whereNot('is_vpn_ip', true)
+                    ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                     ->groupBy('starrable_id')
                     ->selectRaw('count(id) as count, starrable_id')
                     ->get()
