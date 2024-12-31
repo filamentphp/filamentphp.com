@@ -46,7 +46,7 @@ class CheckIfIpIsVpn implements ShouldQueue
 
         $isVpn = Http::retry(10)
             ->throw()
-            ->get('https://vpnapi.io/api/' . request()->ip() . '?key=' . config('services.vpn_api.token'))
+            ->get('https://vpnapi.io/api/' . $this->ip . '?key=' . config('services.vpn_api.token'))
             ->json('security.vpn');
 
         if (blank($isVpn)) {
