@@ -10,5 +10,5 @@ github_repository: niladam/filament-auto-logout
 has_dark_theme: false
 has_translations: false
 versions: [3]
-publish_date: 2024-12-22
+publish_date: 2025-01-05
 ---
