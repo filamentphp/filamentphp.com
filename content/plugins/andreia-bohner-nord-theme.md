@@ -10,5 +10,5 @@ github_repository: andreia/filament-nord-theme
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2024-12-22
+publish_date: 2025-01-05
 ---
