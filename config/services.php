@@ -34,4 +34,8 @@ return [
         'token' => env('ANYSTACK_TOKEN'),
     ],
 
+    'vpn_api' => [
+        'token' => env('VPN_API_TOKEN'),
+    ],
+
 ];
