@@ -36,7 +36,7 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
 - The `mastodon_url` should be a link to your Mastodon profile. It is optional.
-- The `sponsors_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
+- The `sponsor_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
 
 ### Submitting a plugin
 
