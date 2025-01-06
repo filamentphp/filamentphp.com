@@ -52,7 +52,7 @@ class Markdown implements Htmlable, Stringable
 
         $static->convert();
         $static->removeH1Tags();
-        $static->convertSpecialBlockQuotes();
+        $static->convertSpecialBlockquotes();
 
         return $static;
     }
@@ -77,7 +77,7 @@ class Markdown implements Htmlable, Stringable
         return $this;
     }
 
-    protected function convertSpecialBlockQuotes(): static
+    protected function convertSpecialBlockquotes(): static
     {
         $this->content = preg_replace(
             pattern: [
@@ -105,6 +105,33 @@ class Markdown implements Htmlable, Stringable
         $this->content = preg_replace(
             pattern: '/src=["\'](?!https?:\/\/)([^"\']+)["\'][^>]/i',
             replacement: 'src="' . $baseUrl . '$1" ',
+            subject: $this->content
+        );
+
+        return $this;
+    }
+
+    public function convertVideoToHtml(): static
+    {
+        $this->content = preg_replace_callback(
+            pattern: '/(?<!src=["\'])https:\/\/github\.com\/user-attachments\/assets\/[a-f0-9\-]+/i',
+            callback: function (array $matches): string {
+                [$url] = $matches;
+
+                /**
+                 * If the asset is already present elsewhere, replace it with an empty string to avoid duplication.
+                 * Some authors kept both the asset and the video tag in the markdown file ¯\_(ツ)_/¯.
+                 */
+                if (substr_count($this->content, $url) > 1) {
+                    return '';
+                }
+
+                return <<<HTML
+                    <video width="320" height="240" controls>
+                        <source src="$url" type="video/mp4">
+                    </video>
+                HTML;
+            },
             subject: $this->content
         );
 
