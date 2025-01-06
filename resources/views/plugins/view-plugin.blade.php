@@ -344,11 +344,13 @@
                             class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
                             {!!
-                                \App\Support\Markdown::parse($docs)->absoluteImageUrls(
-                                    baseUrl: str($plugin->getDocUrl(request()->query('v')))
-                                        ->lower()
-                                        ->before('readme.md'),
-                                )
+                                \App\Support\Markdown::parse($docs)
+                                    ->convertVideoToHtml()
+                                    ->absoluteImageUrls(
+                                        baseUrl: str($plugin->getDocUrl(request()->query('v')))
+                                            ->lower()
+                                            ->before('readme.md'),
+                                    )
                             !!}
                         </div>
                     </div>
