@@ -47,9 +47,9 @@ class Plugin extends Model implements Starrable
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
         $table->string('image')->nullable();
+        $table->boolean('is_draft')->nullable()->default(false);
         $table->boolean('is_lemon_squeezy_embedded')->nullable()->default(false);
         $table->boolean('is_presale')->nullable()->default(false);
-        $table->boolean('is_draft')->nullable()->default(false);
         $table->string('name');
         $table->string('price')->nullable();
         $table->string('slug');
