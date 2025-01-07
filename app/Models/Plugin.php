@@ -69,6 +69,15 @@ class Plugin extends Model implements Starrable
         return $this->morphMany(Star::class, 'starrable');
     }
 
+    public function scopeDraft(Builder $query, bool $condition = true): Builder
+    {
+        if (! $condition) {
+            return $query->whereNull('is_draft')->orWhere('is_draft', false);
+        }
+
+        return $query->where('is_draft', true);
+    }
+
     public function getDocUrl(string $version = null): ?string
     {
         if (filled($this->docs_url)) {

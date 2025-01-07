@@ -28,16 +28,13 @@ class GetPluginsListData
                     ->get()
                     ->pluck('count', 'starrable_id');
 
-                return Plugin::query()
+                return Plugin::with(['author'])
+                    ->draft(false)
                     ->when(
                         $plugins,
                         fn (EloquentBuilder $query) => $query->whereKey($plugins),
                     )
-                    ->where(
-                        fn (EloquentBuilder $query) => $query->whereNull('is_draft')->orWhere('is_draft', false)
-                    )
                     ->orderByDesc('publish_date')
-                    ->with(['author'])
                     ->get()
                     ->map(fn (Plugin $plugin): array => [
                         ...$plugin->getDataArray(),
