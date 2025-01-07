@@ -27,6 +27,7 @@ class Plugin extends Model implements Starrable
         'has_translations' => 'boolean',
         'is_lemon_squeezy_embedded' => 'boolean',
         'is_presale' => 'boolean',
+        'is_draft' => 'boolean',
         'versions' => 'array',
         'publish_date' => 'date',
         'docs_urls' => 'array',
@@ -48,6 +49,7 @@ class Plugin extends Model implements Starrable
         $table->string('image')->nullable();
         $table->boolean('is_lemon_squeezy_embedded')->nullable()->default(false);
         $table->boolean('is_presale')->nullable()->default(false);
+        $table->boolean('is_draft')->nullable()->default(false);
         $table->string('name');
         $table->string('price')->nullable();
         $table->string('slug');
@@ -104,6 +106,11 @@ class Plugin extends Model implements Starrable
     public function isFree(): bool
     {
         return blank($this->price) && blank($this->anystack_id);
+    }
+
+    public function isDraft(): bool
+    {
+        return (bool) $this->is_draft;
     }
 
     public function getCheckoutUrl(): ?string

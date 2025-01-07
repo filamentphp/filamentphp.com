@@ -33,6 +33,9 @@ class GetPluginsListData
                         $plugins,
                         fn (EloquentBuilder $query) => $query->whereKey($plugins),
                     )
+                    ->where(
+                        fn (EloquentBuilder $query) => $query->whereNull('is_draft')->orWhere('is_draft', false)
+                    )
                     ->orderByDesc('publish_date')
                     ->with(['author'])
                     ->get()
