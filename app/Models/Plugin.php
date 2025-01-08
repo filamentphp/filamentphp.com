@@ -67,23 +67,26 @@ class Plugin extends Model implements Starrable
         return $this->morphMany(Star::class, 'starrable');
     }
 
+    public function getDocUrl(string $version = null): ?string
+    {
+        if (filled($this->docs_url)) {
+            return $this->docs_url;
+        }
+
+        if (filled($this->docs_urls)) {
+            return $this->docs_urls[$version ?? key($this->docs_urls)] ?? null;
+        }
+
+        return null;
+    }
+
     public function getDocs(string $version = null): ?string
     {
         if (filled($this->content)) {
             return $this->content;
         }
 
-        $docs_url = $this->docs_url;
-
-        if (filled($this->docs_urls)) {
-            if ($version !== null) {
-                $docs_url = $this->docs_urls[$version];
-            } else {
-                $docs_url = $this->docs_urls[key($this->docs_urls)];
-            }
-        }
-
-        if (blank($docs_url)) {
+        if (blank($url = $this->getDocUrl($version))) {
             return null;
         }
 
@@ -91,7 +94,7 @@ class Plugin extends Model implements Starrable
             return cache()->remember(
                 "plugin:{$this->slug}:docs:{$version}",
                 now()->addHour(),
-                fn (): string => file_get_contents($docs_url),
+                fn (): string => file_get_contents($url),
             );
         } catch (\Throwable) {
             return null;
