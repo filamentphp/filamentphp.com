@@ -545,7 +545,7 @@
                     </div>
                 </div>
 
-                @if (count($otherPlugins = $plugin->author->plugins()->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherPlugins = $plugin->author->plugins()->draft(false)->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div>
                         <div class="text-lg font-extrabold">
