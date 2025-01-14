@@ -5,7 +5,7 @@ anystack_id: 9deb5739-8811-4ffd-bc15-948bc2b77834
 author_slug: afsakar
 categories: [form-builder]
 description: It streamlines multi-language management in FilamentPHP projects, enabling developers to build immersive, multilingual applications with ease.
-price: €34.99
+price: €40.00
 discord_url: 
 github_repository: afsakar/filament-translatable-pro
 docs_url: https://raw.githubusercontent.com/afsakar/filament-translatable-pro-docs/main/README.md
