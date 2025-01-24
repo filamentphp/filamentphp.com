@@ -5,6 +5,7 @@ author_slug: faizananwerali
 categories: [table-builder]
 description: A plugin that adds refresh functionality to tables.
 docs_url: https://raw.githubusercontent.com/faizananwerali/filament-refresh-table/refs/heads/master/README.md
+discord_url:
 github_repository: faizananwerali/filament-refresh-table
 has_dark_theme: false
 has_translations: false
