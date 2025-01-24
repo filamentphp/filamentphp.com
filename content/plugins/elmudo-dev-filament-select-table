@@ -1,0 +1,14 @@
+---
+name: Select Table
+slug: filament-select-table
+author_slug: elmudometal
+categories: [form-builder, form-field]
+description: This package is an extension of select to allow selecting from a table.
+discord_url: https://discord.com/channels/883083792112300104
+docs_url: https://raw.githubusercontent.com/elmudometal/filament-select-table/main/README.md
+github_repository: elmudometal/filament-select-table
+has_dark_theme: true
+has_translations: true
+versions: [3]
+publish_date: 2024-12-12
+---
