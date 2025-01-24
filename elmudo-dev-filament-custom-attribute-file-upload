@@ -1,0 +1,14 @@
+---
+name: Custom Attribute File Upload
+slug: filament-custom-attribute-file-upload
+author_slug: elmudometal
+categories: [form-builder, form-field]
+description: This component adds a custom field to save a caption attribute to the images. It has two versions: one to work with the native FileUpload component and another to work with the SpatieMediaLibraryFileUpload component..
+discord_url: https://discord.com/channels/883083792112300104
+docs_url: https://raw.githubusercontent.com/elmudometal/filament-custom-attribute-file-upload/main/README.md
+github_repository: elmudometal/filament-custom-attribute-file-upload
+has_dark_theme: true
+has_translations: true
+versions: [3]
+publish_date: 2025-01-09
+---
