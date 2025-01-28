@@ -1,5 +1,5 @@
 <section
-    x-data="{}"
+    x-data
     id="kirschbaum"
     x-init="
         () => {

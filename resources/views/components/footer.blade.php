@@ -25,7 +25,7 @@
     </div>
 
     <div
-        x-data="{}"
+        x-data
         x-ref="footer"
         x-init="
             () => {

@@ -2,7 +2,7 @@
     class="mx-auto w-full max-w-screen-lg px-5 pt-40"
 >
     <div
-        x-data="{}"
+        x-data
         x-ref="sponsors_section"
         x-init="
             () => {
@@ -583,7 +583,7 @@
 
     {{-- Dashed Separator --}}
     <div
-        x-data="{}"
+        x-data
         x-ref="separator"
         x-init="
             () => {

@@ -9,7 +9,7 @@
             {{-- Accelerated --}}
             <div
                 class="relative translate-x-10 text-3xl font-black italic min-[500px]:translate-x-0 lg:text-4xl"
-                x-data="{}"
+                x-data
                 x-init="
                     () => {
                         if (reducedMotion) return
@@ -154,7 +154,7 @@
             {{-- Header --}}
             <div
                 class="group/header pt-3"
-                x-data="{}"
+                x-data
                 x-init="
                     () => {
                         if (reducedMotion) return
@@ -323,7 +323,7 @@
 
             {{-- Links --}}
             <div
-                x-data="{}"
+                x-data
                 x-init="
                     () => {
                         if (reducedMotion) return
@@ -432,7 +432,7 @@
 
             {{-- Decoration Arrow --}}
             <div
-                x-data="{}"
+                x-data
                 x-init="
                     () => {
                         if (reducedMotion) return
@@ -468,7 +468,7 @@
             class="absolute -top-10 right-10 -z-10 hidden min-[500px]:block md:relative md:right-auto md:top-auto"
         >
             <div
-                x-data="{}"
+                x-data
                 x-init="
                     () => {
                         if (reducedMotion) return

@@ -6,7 +6,7 @@
     >
         {{-- Left Side --}}
         <div
-            x-data="{}"
+            x-data
             x-init="
                 () => {
                     if (reducedMotion) return
@@ -160,7 +160,7 @@
 
         {{-- Right Side --}}
         <div
-            x-data="{}"
+            x-data
             x-init="
                 () => {
                     if (reducedMotion) return

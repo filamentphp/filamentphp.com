@@ -6,7 +6,7 @@
 >
     {{-- Tweets Section --}}
     <div
-        x-data="{}"
+        x-data
         x-ref="tweets_section"
         x-init="
             () => {

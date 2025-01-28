@@ -2,7 +2,7 @@
     class="mx-auto w-full max-w-screen-lg pt-60"
 >
     <div
-        x-data="{}"
+        x-data
         x-ref="sunset_section"
         x-init="
             () => {

@@ -1,6 +1,6 @@
 <a
     @if ($url ?? null) href="{{ $url }}" @endif
-    x-data="{}"
+    x-data
     x-ref="testimonial"
     x-init="
         () => {

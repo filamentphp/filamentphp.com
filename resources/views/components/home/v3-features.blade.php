@@ -1,9 +1,9 @@
 <div
-    x-data="{}"
+    x-data
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div
-        x-data="{}"
+        x-data
         x-init="
             $nextTick(() => {
                 if (reducedMotion) return

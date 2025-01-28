@@ -2,7 +2,7 @@
     class="mx-auto w-full max-w-screen-lg px-5 pt-20"
 >
     <div
-        x-data="{}"
+        x-data
         x-init="
             () => {
                 if (reducedMotion) return
