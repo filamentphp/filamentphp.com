@@ -4,7 +4,7 @@ slug: abdulmajeed-jamaan-translatable-tabs
 author_slug: abdulmajeed-jamaan
 categories: [form-field, spatie]
 description: Automatically generate tabs for translations.
-docs_url: https://github.com/Abdulmajeed-Jamaan/filament-translatable-tabs/blob/main/README.md
+docs_url: https://raw.githubusercontent.com/Abdulmajeed-Jamaan/filament-translatable-tabs/main/README.md
 github_repository: Abdulmajeed-Jamaan/filament-translatable-tabs
 has_dark_theme: true
 has_translations: true
