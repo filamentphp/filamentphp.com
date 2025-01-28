@@ -1,7 +1,8 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
-module.exports = {
+export default {
     content: [
         './config/markdown.php',
         './resources/**/*.{js,blade.php}',
