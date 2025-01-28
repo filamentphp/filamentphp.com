@@ -1,6 +1,5 @@
 <x-layouts.app>
     <section
-        x-cloak
         x-data="{
             back_button_is_hovering: false,
         }"

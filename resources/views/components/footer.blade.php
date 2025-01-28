@@ -1,6 +1,4 @@
 <footer
-    x-cloak
-    x-data="{}"
     class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24"
 >
     <div class="mx-auto grid w-full">

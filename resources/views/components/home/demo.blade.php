@@ -1,5 +1,4 @@
 <div
-    x-cloak
     x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-10 pt-40 lg:px-5"
 >

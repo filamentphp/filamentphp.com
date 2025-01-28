@@ -1,5 +1,4 @@
 <section
-    x-cloak
     x-data="{}"
     id="kirschbaum"
     x-init="

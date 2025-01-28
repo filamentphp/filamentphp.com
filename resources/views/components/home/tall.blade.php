@@ -1,5 +1,4 @@
 <div
-    x-cloak
     x-data="{
         downloadCounterTarget: @js(app('package-download-stats')()),
         githubStarsCounterTarget: @js(app('package-github-stars-stats')()),

@@ -1,6 +1,5 @@
 <section
     class="mx-auto w-full max-w-8xl px-5 sm:px-10"
-    x-cloak
     x-ref="section"
     x-init="
         () => {

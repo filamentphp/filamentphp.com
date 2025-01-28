@@ -1,6 +1,5 @@
 <nav
-    x-cloak
-    x-data="{}"
+    x-data
     x-ref="nav"
     x-init="
         () => {
@@ -56,7 +55,7 @@
 
     {{-- Mobile Menu Button --}}
     <button
-        x-data="{}"
+        x-data
         aria-controls="main-menu"
         aria-haspopup="true"
         x-on:click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"

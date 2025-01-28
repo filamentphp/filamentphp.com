@@ -1,6 +1,4 @@
 <section
-    x-cloak
-    x-data="{}"
     class="mx-auto w-full max-w-screen-lg px-5 pt-40"
 >
     <div

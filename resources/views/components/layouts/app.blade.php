@@ -6,19 +6,17 @@
     <x-nav />
 
     <button
-        x-data="{}"
+        x-data
         x-show="$store.sidebar.isOpen"
         x-transition.opacity
         x-on:click="$store.sidebar.isOpen = false"
-        x-cloak
         type="button"
         aria-hidden="true"
         class="fixed inset-0 z-[999] h-full w-full bg-black/50 focus:outline-none lg:hidden"
     ></button>
 
     <aside
-        x-data="{}"
-        x-cloak
+        x-data
         :aria-hidden="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
         class="fixed inset-y-0 left-0 z-[1000] w-full max-w-[19rem] transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"

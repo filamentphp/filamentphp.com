@@ -3,7 +3,6 @@
 ])
 
 <div
-    x-cloak
     x-data="{
         plugins: @js($featuredPlugins),
     }"

@@ -1,5 +1,4 @@
 <section
-    x-cloak
     x-data
     x-init="
         () => {
