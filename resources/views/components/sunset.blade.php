@@ -1,6 +1,4 @@
-<div
-    class="mx-auto w-full max-w-screen-lg pt-60"
->
+<div class="mx-auto w-full max-w-screen-lg pt-60">
     <div
         x-data
         x-ref="sunset_section"

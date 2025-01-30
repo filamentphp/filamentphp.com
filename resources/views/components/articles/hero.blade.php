@@ -1,6 +1,4 @@
-<div
-    class="mx-auto w-full max-w-8xl px-10 pt-20"
->
+<div class="mx-auto w-full max-w-8xl px-10 pt-20">
     <div
         class="relative flex max-w-screen-lg items-start justify-center gap-10 md:gap-20 min-[840px]:justify-between"
     >

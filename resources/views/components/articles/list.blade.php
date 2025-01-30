@@ -153,11 +153,13 @@
                     class="relative z-20 flex w-20 items-center gap-2 text-center transition duration-300"
                     :class="{
                         'cursor-pointer text-evening/70 hover:text-evening': selectedType !== @js($type['slug']),
-                        @js(match ($type['color']) {
-                            'amber' => 'text-amber-600',
-                            'blue' => 'text-blue-600',
-                            'violet' => 'text-violet-600',
-                        }): selectedType === @js($type['slug']),
+                        @js(
+                            match ($type['color']) {
+                                'amber' => 'text-amber-600',
+                                'blue' => 'text-blue-600',
+                                'violet' => 'text-violet-600',
+                            }
+                        ): selectedType === @js($type['slug']),
                     }"
                 >
                     {!! $type['icon'] !!}

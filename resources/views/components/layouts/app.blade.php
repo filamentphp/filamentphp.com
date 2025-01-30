@@ -124,7 +124,9 @@
                     <div
                         @class([
                             'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('articles*'),
+                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
+                                'articles*',
+                            ),
                         ])
                     >
                         Community
@@ -143,7 +145,9 @@
                     <div
                         @class([
                             'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('consulting*'),
+                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
+                                'consulting*',
+                            ),
                         ])
                     >
                         Consulting
