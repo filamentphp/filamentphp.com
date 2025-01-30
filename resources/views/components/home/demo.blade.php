@@ -36,7 +36,7 @@
         {{-- Button --}}
         <a
             href="https://demo.filamentphp.com"
-            class="group relative z-20 inline-flex items-center gap-3 self-center justify-self-center rounded-3xl bg-[#ffe8ce] py-2 pl-5 pr-2 text-lg font-medium transition duration-300 ease-in-out [grid-area:1/-1]"
+            class="group relative z-20 inline-flex items-center gap-3 self-center justify-self-center rounded-2xl bg-[#ffe8ce] py-2 pl-5 pr-2 font-medium transition duration-300 ease-in-out [grid-area:1/-1]"
         >
             <div
                 class="transition duration-300 ease-in-out will-change-transform group-hover:-translate-x-px"
@@ -44,13 +44,13 @@
                 Visit the demo
             </div>
             <div
-                class="isolate grid size-12 place-items-center rounded-2xl bg-[#ffdeb3] transition duration-300 ease-in-out"
+                class="isolate grid size-11 place-items-center rounded-xl bg-[#ffdeb3] transition duration-300 ease-in-out"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 14 12"
                     fill="none"
-                    class="h-3.5 transition duration-300 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="h-3 transition duration-300 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     <path
                         fill-rule="evenodd"
