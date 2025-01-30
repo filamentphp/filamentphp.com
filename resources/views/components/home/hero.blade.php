@@ -6,7 +6,24 @@
     >
         {{-- Version --}}
         <div
-            x-ref="version"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            y: -10,
+                        },
+                        {
+                            autoAlpha: 0.3,
+                            y: 0,
+                            duration: 0.8,
+                            ease: 'power1.in',
+                        },
+                    )
+                }
+            "
             class="relative -z-10 -my-3 self-center justify-self-center truncate bg-gradient-to-r from-[#DCEED8] via-[#E9E4C4] to-[#DDDBD1] bg-clip-text text-[16cqw] font-semibold tracking-wide text-transparent opacity-30 [grid-area:1/-1]"
         >
             Version 4
@@ -14,7 +31,26 @@
 
         {{-- Hummingbird --}}
         <img
-            x-ref="hummingbird"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            x: -10,
+                            y: -5,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power1.out',
+                        },
+                    )
+                }
+            "
             src="{{ Vite::asset('resources/images/home/hummingbird.webp') }}"
             alt=""
             class="relative z-10 w-44 self-center justify-self-center [grid-area:1/-1] sm:w-[14rem]"
@@ -23,7 +59,22 @@
     <header class="relative isolate z-0 grid place-items-center pt-14 sm:pt-10">
         {{-- Accelerated Laravel Development --}}
         <img
-            x-ref="hero-header"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            duration: 0.3,
+                            ease: 'power1.in',
+                        },
+                    )
+                }
+            "
             src="{{ Vite::asset('resources/images/home/hero-header.webp') }}"
             alt="Filament"
             class="w-[32rem] self-center justify-self-center [grid-area:1/-1]"
@@ -31,7 +82,22 @@
 
         {{-- Watercolor --}}
         <img
-            x-ref="hero-header"
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            duration: 0.5,
+                            ease: 'power1.in',
+                        },
+                    )
+                }
+            "
             src="{{ Vite::asset('resources/images/home/hero-watercolor.webp') }}"
             alt=""
             class="relative -z-50 -mb-5 w-[45rem] self-center justify-self-center [grid-area:1/-1]"
@@ -39,6 +105,24 @@
 
         {{-- Admin panel --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            scale: 0.9,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out(1.7)',
+                        },
+                    )
+                }
+            "
             class="relative left-5 -mt-8 hidden self-start justify-self-start [grid-area:1/-1] md:block"
         >
             <img
@@ -70,6 +154,25 @@
 
         {{-- UI Components --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            scale: 0.9,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out(1.7)',
+                            delay: 0.2,
+                        },
+                    )
+                }
+            "
             class="relative -mt-8 hidden self-start justify-self-end [grid-area:1/-1] md:block"
         >
             <h3
@@ -103,6 +206,25 @@
 
         {{-- Form builder --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            scale: 0.9,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out(1.7)',
+                            delay: 0.1,
+                        },
+                    )
+                }
+            "
             class="relative -mb-8 hidden self-end justify-self-start [grid-area:1/-1] md:block"
         >
             <img
@@ -134,6 +256,25 @@
 
         {{-- Table builder --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            scale: 0.9,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            ease: 'back.out(1.7)',
+                            delay: 0.3,
+                        },
+                    )
+                }
+            "
             class="relative -mb-8 hidden self-end justify-self-end [grid-area:1/-1] md:block"
         >
             <div class="flex justify-end">
@@ -167,6 +308,26 @@
 
         {{-- Left leaf --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            x: -10,
+                            y: -5,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power1.out',
+                        },
+                    )
+                }
+            "
             class="relative -left-5 -top-10 -z-40 hidden self-center justify-self-start [grid-area:1/-1] md:block"
         >
             <svg
@@ -244,6 +405,26 @@
 
         {{-- Right leaf --}}
         <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            x: 10,
+                            y: 5,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power1.out',
+                        },
+                    )
+                }
+            "
             class="relative -left-10 -z-40 hidden self-center justify-self-end [grid-area:1/-1] md:block"
         >
             <svg
@@ -322,6 +503,24 @@
 
     {{-- Tagline --}}
     <h2
+        x-init="
+            () => {
+                if (reducedMotion) return
+                gsap.fromTo(
+                    $el,
+                    {
+                        autoAlpha: 0,
+                        y: 10,
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.5,
+                        ease: 'power1.out',
+                    },
+                )
+            }
+        "
         class="mx-auto max-w-xl pt-5 text-center font-afacad text-2xl leading-normal text-[#49485F]"
     >
         Shape your apps with beautiful, powerful and intuitive, TALL stack
