@@ -281,7 +281,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/purple-butterfly.svg') }}"
                     alt=""
-                    class="relative top-2.5 z-10 -my-5 -mr-3"
+                    class="relative top-3 z-10 -my-5 -mr-3"
                 />
             </div>
             <div class="relative -left-3 top-2 flex justify-start">
