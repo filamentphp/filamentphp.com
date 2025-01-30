@@ -131,7 +131,7 @@
                 class="relative -top-0.5 z-10 -my-5 -ml-4"
             />
             <h3
-                class="rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
+                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
             >
                 Admin panel
             </h3>
@@ -176,7 +176,7 @@
             class="relative -mt-8 hidden self-start justify-self-end [grid-area:1/-1] md:block"
         >
             <h3
-                class="rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
+                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
             >
                 UI Components
             </h3>
@@ -248,7 +248,7 @@
                 </svg>
             </div>
             <h3
-                class="rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
+                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
             >
                 Form builder
             </h3>
@@ -300,7 +300,7 @@
                 </svg>
             </div>
             <h3
-                class="rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
+                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
             >
                 Table builder
             </h3>
