@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
+<section class="mx-auto w-full max-w-screen-lg px-5 pt-32">
     <div class="isolate grid place-items-center">
         <div class="grid self-center justify-self-center [grid-area:1/-1]">
             <h2
@@ -114,7 +114,7 @@
         />
     </div>
     <h3
-        class="mx-auto max-w-2xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
+        class="mx-auto max-w-3xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
     >
         Discover the enhancements and features in Filament V3, designed to
         elevate your development experience.

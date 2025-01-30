@@ -7,6 +7,7 @@
     <x-home.demo />
     <x-home.stats />
     <x-home.tall />
+    <x-home.v4-features />
     <x-home.v3-features />
     <x-home.sponsors />
     <x-home.tweets />
