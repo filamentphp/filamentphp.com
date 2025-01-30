@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-10 pt-10 lg:px-5">
+<section class="mx-auto w-full max-w-screen-lg px-10 pt-14 lg:px-5">
     <div
         class="grid grid-cols-[repeat(auto-fill,minmax(18rem,1fr))] place-items-center gap-7 text-slate-700"
     >

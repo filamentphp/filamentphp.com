@@ -1,4 +1,6 @@
-<div class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20">
+<section
+    class="isolate mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20 min-[630px]:pb-60 min-[700px]:pb-0"
+>
     <div
         x-init="
             () => {
@@ -133,7 +135,7 @@
                         '<0.3',
                     )
                     .fromTo(
-                        $refs.orange_speed_decoration,
+                        $refs.leaf_deocration_1,
                         {
                             autoAlpha: 0,
                             x: -30,
@@ -147,10 +149,10 @@
                         '<0.3',
                     )
                     .fromTo(
-                        $refs.gray_speed_decoration,
+                        $refs.leaf_deocration_2,
                         {
                             autoAlpha: 0,
-                            x: -50,
+                            x: 30,
                         },
                         {
                             autoAlpha: 1,
@@ -158,7 +160,39 @@
                             duration: 0.7,
                             ease: 'circ.out',
                         },
+                        '<',
+                    )
+                    .fromTo(
+                        $refs.leaf_deocration_3,
+                        {
+                            autoAlpha: 0,
+                            x: 10,
+                            y: 10,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
                         '<0.2',
+                    )
+                    .fromTo(
+                        $refs.dragonfly_decoration,
+                        {
+                            autoAlpha: 0,
+                            x: -10,
+                            y: 10,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'circ.out',
+                        },
+                        '<',
                     )
             }
         "
@@ -818,62 +852,202 @@
                     </div>
                 </div>
             </div>
-            {{-- Orange Speed Decoration --}}
+            {{-- Leaf decoration --}}
             <div
-                x-ref="orange_speed_decoration"
-                class="relative top-10 hidden self-start justify-self-start [grid-area:1/-1] min-[700px]:block md:-top-32 md:self-end"
+                class="relative left-32 top-32 hidden self-start justify-self-start [grid-area:1/-1] min-[700px]:block"
             >
-                <svg
-                    width="129"
-                    height="102"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <rect
-                        x="27"
-                        y="26.161"
-                        width="80"
-                        height="80"
-                        rx="20"
-                        transform="rotate(-19 27 26.161)"
-                        fill="#FFF0E8"
-                    />
-                    <path
-                        d="M2 38h76M55 51.115h33"
-                        stroke="#FFD1BB"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                    />
-                </svg>
+                <div class="flex flex-col items-center gap-20">
+                    <svg
+                        x-ref="leaf_deocration_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="49"
+                        height="28"
+                        viewBox="0 0 49 28"
+                        fill="none"
+                    >
+                        <path
+                            opacity="0.5"
+                            d="M6.13379 8.09327C6.13379 8.09327 17.8115 -7.55783 37.0105 6.74613C44.4714 12.3077 47.762 18.2763 49 23.5011C49 23.5011 11.6538 38.5207 6.13379 8.09327Z"
+                            fill="#D6856E"
+                        />
+                        <path
+                            d="M37.8808 18.0565C37.8808 18.0565 19.3566 7.95298 1 7.77991"
+                            stroke="#3C252F"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <svg
+                        x-ref="leaf_deocration_2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="37"
+                        height="28"
+                        viewBox="0 0 37 28"
+                        fill="none"
+                        class="-ml-32"
+                    >
+                        <path
+                            opacity="0.3"
+                            d="M31.778 24.8012C31.778 24.8012 17.6461 34.6078 5.49924 17.3422C0.778316 10.6332 -0.332489 4.73593 0.0789204 0.0406773C0.0789204 0.0406773 35.5732 -2.10661 31.778 24.8012Z"
+                            fill="#D6856E"
+                        />
+                        <path
+                            d="M7.90077 7.67432C7.90077 7.67432 20.6442 21.2464 36 26.4913"
+                            stroke="#3C252F"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
             </div>
-            {{-- Gray Speed Decoration --}}
+            {{-- Dragonfly decoration --}}
             <div
-                x-ref="gray_speed_decoration"
-                class="relative hidden self-end justify-self-end [grid-area:1/-1] min-[700px]:block md:-top-10"
+                class="relative hidden self-end justify-self-end [grid-area:1/-1] min-[700px]:block md:right-20 min-[800px]:-top-10"
             >
-                <svg
-                    width="105"
-                    height="102"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <rect
-                        x="3"
-                        y="26.161"
-                        width="80"
-                        height="80"
-                        rx="20"
-                        transform="rotate(-19 3 26.161)"
-                        fill="#FAF4F4"
-                    />
-                    <path
-                        d="M2 59.115h60M44 72.115h27"
-                        stroke="#E6D1D1"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                    />
-                </svg>
+                <div class="flex flex-col items-center gap-20">
+                    <svg
+                        x-ref="leaf_deocration_3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="39"
+                        height="25"
+                        viewBox="0 0 39 25"
+                        fill="none"
+                    >
+                        <path
+                            opacity="0.5"
+                            d="M34.7916 4.53376C34.7916 4.53376 37.7557 20.5285 17.532 24.1658C9.67324 25.5803 3.99747 24.2124 0 22.0129C0 22.0129 12.4811 -9.3159 34.7916 4.53376Z"
+                            fill="#D6796E"
+                        />
+                        <path
+                            d="M9.93359 18.3018C9.93359 18.3018 27.1251 12.6982 38 1.57263"
+                            stroke="#3C252F"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <svg
+                        x-ref="dragonfly_decoration"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="36"
+                        viewBox="0 0 40 36"
+                        fill="none"
+                        class="-ml-32"
+                    >
+                        <g clip-path="url(#clip0_299_29361)">
+                            <path
+                                d="M23.7738 11.2155C23.7116 11.3135 23.5624 11.338 23.3883 11.3135C24.1095 11.9019 24.4701 12.576 24.2214 12.9438C23.9603 13.3237 23.1397 13.2379 22.2942 12.7722C22.3439 12.8089 22.3812 12.8335 22.4309 12.8825C22.4309 12.8825 23.0651 14.1327 22.5677 14.954C22.0703 15.7752 19.397 18.8764 18.6634 19.3299C18.3153 19.5505 18.0417 19.6363 17.8428 19.6363C17.5817 20.1143 16.7984 21.5485 16.4502 22.0633C16.0399 22.6761 8.81576 32.9233 7.82104 33.9897C6.83876 35.0684 5.98082 36.0122 5.85648 35.5709C5.73214 35.1297 6.8885 33.3278 7.70914 32.0408C8.52978 30.7538 14.9706 22.1368 15.555 21.5852C16.1394 21.0337 17.4449 19.3299 17.4449 19.3299C17.3703 18.9744 17.1962 17.6506 17.9671 15.812C18.7381 13.9734 19.3846 13.0909 19.9193 12.7599C20.3669 12.4902 20.7772 11.9509 21.7471 12.4412C20.914 11.8283 20.4664 11.0684 20.7399 10.6761C20.9513 10.3575 21.5854 10.3697 22.2942 10.6639C22.145 10.4678 22.0828 10.2839 22.1698 10.1613C22.3066 9.96522 22.7791 10.0388 23.2267 10.3329C23.6743 10.6271 23.923 11.0194 23.7862 11.2277L23.7738 11.2155Z"
+                                fill="#263238"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M18.999 16.2411C18.999 16.2411 14.5601 14.3412 12.2971 13.5444C10.0341 12.7477 5.91848 9.73239 3.25761 9.53627C0.596746 9.3279 0.161558 9.73239 0.534576 10.9336C0.907595 12.1348 5.63249 17.6752 9.87247 19.0725C14.1124 20.4699 15.6418 19.8693 16.2138 19.3422C16.7857 18.8151 16.6117 18.7538 17.1712 17.8468C17.7307 16.9397 18.141 16.7314 18.5638 16.7436C18.9866 16.7436 19.459 16.5353 19.0114 16.2411H18.999Z"
+                                fill="white"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M19.4217 15.763C19.4217 15.763 16.4376 14.5986 13.5653 13.0909C10.6931 11.5832 7.98248 9.37691 6.62718 5.78549C5.27187 2.19407 5.43352 1.23799 6.14225 1.22573C6.85099 1.21347 8.69121 1.04187 10.5563 3.1624C12.409 5.28293 12.9436 6.90091 15.2812 9.18079C17.6188 11.4607 18.9368 13.4341 19.2601 14.2308C19.5833 15.0276 20.0061 15.8366 19.4093 15.763H19.4217Z"
+                                fill="white"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M20.2425 15.5056C20.2425 15.5056 23.5872 14.7824 26.4594 15.481C29.3192 16.192 29.4187 16.0449 31.3833 16.2655C33.3354 16.4862 36.0211 15.052 38.595 16.8416C41.1688 18.6312 39.055 19.4279 34.4669 20.0898C29.8788 20.7517 29.17 20.5066 26.7952 19.7957C24.4203 19.0847 20.9761 16.8294 20.3419 16.4126C19.7078 15.9959 20.2549 15.5056 20.2549 15.5056H20.2425Z"
+                                fill="white"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M19.7699 17.0133C19.7699 17.0133 20.1056 17.0746 23.5995 19.0971C27.0935 21.1195 26.3599 21.1686 29.543 22.3575C32.7261 23.5465 34.7155 24.6864 35.648 26.2554C36.5806 27.8243 36.0459 28.6946 33.5591 28.2288C31.0723 27.7631 23.4752 26.4025 21.5106 24.5884C19.5585 22.7743 18.5389 21.3157 18.6633 20.4944C18.7876 19.6732 19.6331 19.857 19.658 19.1829C19.6828 18.5087 19.5585 17.8958 19.3969 17.4178C19.2352 16.9398 19.3098 16.8295 19.7699 17.0256V17.0133Z"
+                                fill="white"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M26.7329 28.192C26.7329 28.192 23.4255 26.8683 21.9334 25.9857"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M23.2141 27.763C23.2141 27.763 21.4112 27.0521 20.3046 25.5812"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M38.6819 15.8365C38.6819 15.8365 36.0583 14.5005 33.5591 14.8191"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M35.8967 14.1941C35.8967 14.1941 34.1808 14.1941 32.4401 14.378"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M7.58472 19.3054C7.58472 19.3054 3.41934 16.5842 1.9397 14.3901"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M3.4939 17.4668C3.4939 17.4668 1.06928 15.4076 0.323241 13.6915"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M15.1321 6.41067C15.1321 6.41067 13.3665 3.08891 11.8247 1.98575C10.2828 0.88258 8.98971 0.404541 8.98971 0.404541"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M13.9136 2.99077C13.9136 2.99077 12.4091 0.980554 10.6807 0.306396"
+                                stroke="#263238"
+                                stroke-width="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_299_29361">
+                                <rect
+                                    width="40"
+                                    height="36"
+                                    fill="white"
+                                    transform="matrix(-1 0 0 1 40 0)"
+                                />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
