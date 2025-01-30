@@ -9,6 +9,7 @@
     },
     "devDependencies": {
         "@docsearch/js": "^3.8.3",
+        "@fontsource-variable/afacad": "^5.1.1",
         "@formkit/auto-animate": "^0.8.2",
         "@rive-app/canvas": "^2.25.7",
         "@ryangjchandler/alpine-tooltip": "^1.3.1",
