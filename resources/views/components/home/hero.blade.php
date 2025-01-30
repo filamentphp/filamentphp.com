@@ -529,7 +529,6 @@
 
     <div class="grid place-items-center pt-7">
         <a
-            x-ref="getstarted"
             href="{{ route('docs') }}"
             class="group inline-flex items-center gap-3 rounded-3xl bg-[#F4E7E2] py-2 pl-2 pr-5 text-lg font-medium transition duration-300 ease-in-out hover:bg-[#ffe8ce]"
         >
