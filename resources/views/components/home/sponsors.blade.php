@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-5 pt-40">
+<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
     <div
         x-data
         x-ref="sponsors_section"

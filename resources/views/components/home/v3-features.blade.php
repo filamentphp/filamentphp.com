@@ -1,614 +1,506 @@
-<div
-    x-data
-    class="mx-auto w-full max-w-screen-lg px-5 pt-20"
->
-    <div
-        x-data
-        x-init="
-            $nextTick(() => {
-                if (reducedMotion) return
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: $refs.header,
-                        start: 'top bottom-=150px',
-                    },
-                })
-                    .fromTo(
-                        $refs.header_introducing,
-                        {
-                            autoAlpha: 0,
-                            y: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                    )
-                    .fromTo(
-                        $refs.header_new,
-                        {
-                            autoAlpha: 0,
-                            x: -30,
-                            y: 30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            x: 0,
-                            y: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '>-0.6',
-                    )
-                    .fromTo(
-                        $refs.header_version3,
-                        {
-                            autoAlpha: 0,
-                            y: 30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            y: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '>-0.6',
-                    )
-                    .fromTo(
-                        $refs.header_features,
-                        {
-                            autoAlpha: 0,
-                            x: 30,
-                            y: 30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            x: 0,
-                            y: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '>-0.6',
-                    )
-                gsap.fromTo(
-                    $refs.feature_1,
-                    {
-                        autoAlpha: 0,
-                        x: -20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_1,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.fromTo(
-                    $refs.feature_2,
-                    {
-                        autoAlpha: 0,
-                        x: 20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_2,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.fromTo(
-                    $refs.feature_3,
-                    {
-                        autoAlpha: 0,
-                        x: -20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_3,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.fromTo(
-                    $refs.feature_4,
-                    {
-                        autoAlpha: 0,
-                        x: 20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_4,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.fromTo(
-                    $refs.feature_5,
-                    {
-                        autoAlpha: 0,
-                        x: -20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_5,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.fromTo(
-                    $refs.feature_6,
-                    {
-                        autoAlpha: 0,
-                        x: 20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_6,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
-                gsap.to($refs.geometric_shape_1, {
-                    yPercent: -100,
-                    rotate: 100,
-                    scrollTrigger: {
-                        trigger: $refs.feature_1,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
-                    },
-                })
-                gsap.to($refs.geometric_shape_2, {
-                    yPercent: -100,
-                    xPercent: -50,
-                    rotate: 180,
-                    scrollTrigger: {
-                        trigger: $refs.feature_2,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
-                    },
-                })
-                gsap.to($refs.geometric_shape_3, {
-                    yPercent: -100,
-                    xPercent: -30,
-                    rotate: 100,
-                    scrollTrigger: {
-                        trigger: $refs.feature_3,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
-                    },
-                })
-                gsap.to($refs.geometric_shape_4, {
-                    yPercent: -100,
-                    xPercent: -30,
-                    rotate: 100,
-                    scrollTrigger: {
-                        trigger: $refs.feature_4,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
-                    },
-                })
-                gsap.to($refs.geometric_shape_5, {
-                    yPercent: -100,
-                    xPercent: -50,
-                    rotate: 100,
-                    scrollTrigger: {
-                        trigger: $refs.feature_5,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=300px center',
-                    },
-                })
-                gsap.to($refs.geometric_shape_6, {
-                    yPercent: -100,
-                    xPercent: -50,
-                    rotate: 45,
-                    scrollTrigger: {
-                        trigger: $refs.feature_6,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=500px center',
-                    },
-                })
-            })
-        "
-    >
-        <div
-            x-ref="header"
-            class="text-center"
-        >
-            <div
-                x-ref="header_introducing"
-                class="font-medium text-dolphin"
+<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
+    <div class="isolate grid place-items-center">
+        <div class="grid self-center justify-self-center [grid-area:1/-1]">
+            <h2
+                class="self-center justify-self-center font-afacad text-6xl font-bold text-slate-800 [grid-area:1/-1]"
             >
-                Introducing some
+                V3 Features
+            </h2>
+
+            {{-- Star --}}
+            <div
+                class="-ml-10 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="19"
+                    viewBox="0 0 21 22"
+                    fill="none"
+                >
+                    <path
+                        d="M11.852 20.3562L13.8954 14.5101L19.6908 12.3268C19.9685 12.2199 20.2068 12.0306 20.3737 11.7843C20.5407 11.538 20.6282 11.2465 20.6247 10.949C20.6211 10.6515 20.5265 10.3622 20.3537 10.12C20.1809 9.87774 19.9381 9.69422 19.6579 9.59403L13.8118 7.55066L11.6285 1.7553C11.5216 1.47762 11.3323 1.2393 11.086 1.07236C10.8397 0.905419 10.5482 0.817855 10.2507 0.82143C9.9532 0.825006 9.6639 0.919549 9.42168 1.09236C9.17947 1.26517 8.99594 1.50797 8.89576 1.78814L6.85239 7.63429L1.05703 9.81757C0.779345 9.92446 0.541025 10.1138 0.374085 10.3601C0.207145 10.6064 0.119581 10.8978 0.123157 11.1954C0.126732 11.4929 0.221276 11.7822 0.394086 12.0244C0.566897 12.2666 0.809698 12.4501 1.08987 12.5503L6.93602 14.5937L9.1193 20.3891C9.22618 20.6667 9.41549 20.9051 9.66179 21.072C9.90808 21.2389 10.1996 21.3265 10.4971 21.3229C10.7946 21.3194 11.0839 21.2248 11.3261 21.052C11.5683 20.8792 11.7519 20.6364 11.852 20.3562ZM8.29648 14.0854C8.22303 13.8843 8.10538 13.7023 7.95221 13.5528C7.79904 13.4033 7.61426 13.29 7.4115 13.2214L1.57445 11.1779L7.3607 8.99476C7.56176 8.9213 7.74376 8.80365 7.89329 8.65048C8.04282 8.49731 8.15607 8.31253 8.22467 8.10977L10.2682 2.27272L12.4513 8.05897C12.5248 8.26003 12.6424 8.44203 12.7956 8.59157C12.9488 8.7411 13.1336 8.85434 13.3363 8.92295L19.1734 10.9664L13.3871 13.1496C13.1861 13.2231 13.004 13.3407 12.8545 13.4939C12.705 13.647 12.5917 13.8318 12.5231 14.0346L10.4797 19.8716L8.29648 14.0854Z"
+                        fill="#0F033A"
+                    />
+                </svg>
             </div>
-            <div class="pt-2 text-2xl sm:text-3xl">
-                <span
-                    x-ref="header_new"
-                    class="inline-block"
+
+            {{-- Plus --}}
+            <div
+                class="-ml-14 mt-7 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 13 13"
+                    fill="none"
                 >
-                    New
-                </span>
-                <span
-                    x-ref="header_version3"
-                    class="inline-block font-black"
+                    <path
+                        d="M6.0708 1.51538L7.10285 11.6571"
+                        stroke="#FFB36B"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    />
+                    <path
+                        d="M1.51587 7.10254L11.6576 6.07049"
+                        stroke="#FFB36B"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    />
+                </svg>
+            </div>
+
+            {{-- Rocket --}}
+            <div
+                class="-mr-[4.5rem] hidden self-end justify-self-end [grid-area:1/-1] sm:block"
+            >
+                <img
+                    src="{{ Vite::asset('resources/images/home/rocket.webp') }}"
+                    alt=""
+                    loading="lazy"
+                    class="w-16"
+                />
+            </div>
+
+            {{-- Circles --}}
+            <div
+                class="-mr-24 mt-5 hidden self-end justify-self-end [grid-area:1/-1] sm:block"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 32 32"
+                    fill="none"
                 >
-                    Version 3
-                </span>
-                <span
-                    x-ref="header_features"
-                    class="inline-block"
-                >
-                    Features!
-                </span>
+                    <circle
+                        cx="28.7178"
+                        cy="3.28181"
+                        r="3.28205"
+                        fill="#FFCEA0"
+                    />
+                    <circle
+                        cx="4.92308"
+                        cy="27.0766"
+                        r="4.92308"
+                        fill="#FFE69A"
+                    />
+                </svg>
             </div>
         </div>
-        <div
-            x-ref="features"
-            class="space-y-32 pt-20"
-        >
-            {{-- Feature 1 --}}
-            <div
-                x-ref="feature_1"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+
+        {{-- Watercolor --}}
+        <img
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                        },
+                        {
+                            autoAlpha: 1,
+                            duration: 0.5,
+                            ease: 'power1.in',
+                        },
+                    )
+                }
+            "
+            src="{{ Vite::asset('resources/images/home/v3_orange_watercolor.webp') }}"
+            alt=""
+            class="relative -z-50 w-[22rem] self-center justify-self-center [grid-area:1/-1]"
+        />
+    </div>
+    <h3
+        class="mx-auto max-w-2xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
+    >
+        Discover the enhancements and features in Filament V3, designed to
+        elevate your development experience.
+    </h3>
+    <div
+        class="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-center gap-5 pt-10 *:flex *:items-center *:gap-5 *:rounded-2xl *:bg-white *:px-5 *:py-7 *:ring-1 *:ring-black/5"
+    >
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute -left-10 top-40 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_1"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
-                        alt="Shape"
-                        class="block w-14"
-                    />
-                </div>
+                <path
+                    d="M19.5 9.5a1 1 0 0 1 -1 1h-13a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h13a1 1 0 0 1 1 1Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M7 12.5H5.5a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h13a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3H17"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="m9.654 23.5 -3.807 -4.582A1.5 1.5 0 1 1 8.154 17l2.346 2.824V10a1.5 1.5 0 0 1 3 0v6.5h3a4 4 0 0 1 4 4v3"
+                    fill="#ffeedf"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/action-modals.webp') }}"
-                            alt="Action modals"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/handpoint.webp') }}"
-                            alt="Hand pointing"
-                            class="w-12"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Action modals, everywhere.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Open modals and slide-overs from any button on the page.
-                        Even nest modals within other modals with full state
-                        preservation.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Action modals, everywhere.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Open modals and slide-overs from any button, even nest them
+                    with full state preservation.
+                </p>
             </div>
-
-            {{-- Feature 2 --}}
-            <div
-                x-ref="feature_2"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+        </div>
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute -right-16 top-40 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_2"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
-                        alt="Shape"
-                        class="block w-14"
-                    />
-                </div>
+                <path
+                    d="M21.207 4.5a1 1 0 0 1 0.293 0.707V22.5a1 1 0 0 1 -1 1h-17a1 1 0 0 1 -1 -1v-21a1 1 0 0 1 1 -1h13.293a1 1 0 0 1 0.707 0.291Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M19.321 2.613 17.5 0.791A1 1 0 0 0 16.793 0.5H3.5a1 1 0 0 0 -1 1v17.933Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15.522 16.72A5.495 5.495 0 0 1 6.5 12.5H12Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M17.5 12.5a5.46 5.46 0 0 1 -1.98 4.22L12 12.5l3.1 -4.54a5.481 5.481 0 0 1 2.4 4.54Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M12 14.882A5.492 5.492 0 0 1 7.472 12.5H6.5a5.495 5.495 0 0 0 9.02 4.22l-1.779 -2.134a5.423 5.423 0 0 1 -1.741 0.296Z"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15.522 13.6a5.524 5.524 0 0 1 -1.779 0.984l1.779 2.134a5.455 5.455 0 0 0 1.748 -5.779 5.449 5.449 0 0 1 -1.748 2.661Z"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15.522 16.72A5.495 5.495 0 0 1 6.5 12.5H12Z"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M17.5 12.5a5.46 5.46 0 0 1 -1.98 4.22L12 12.5l3.1 -4.54a5.481 5.481 0 0 1 2.4 4.54Z"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15.1 7.96 12 12.5H6.5a5.5 5.5 0 0 1 8.6 -4.54Z"
+                    fill="#ffd19f"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M21.207 4.5a1 1 0 0 1 0.293 0.707V22.5a1 1 0 0 1 -1 1h-17a1 1 0 0 1 -1 -1v-21a1 1 0 0 1 1 -1h13.293a1 1 0 0 1 0.707 0.291Z"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/table-report.webp') }}"
-                            alt="Table report"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/report.webp') }}"
-                            alt="Report"
-                            class="w-16"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Powerful table reporting.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Summarize table builder rows with a suite of aggregate
-                        functions to calculate statistics and provide an
-                        analytical overview of your data. Group rows together by
-                        common attributes and summarize that data too.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Powerful table reporting.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Summarize table rows with aggregates, calculate statistics,
+                    and group data by attributes.
+                </p>
             </div>
-
-            {{-- Feature 3 --}}
-            <div
-                x-ref="feature_3"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+        </div>
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute -left-5 top-40 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_3"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-3.webp') }}"
-                        alt="Shape"
-                        class="block w-16"
-                    />
-                </div>
+                <path
+                    d="M21.207 4.5a1 1 0 0 1 0.293 0.707V22.5a1 1 0 0 1 -1 1h-17a1 1 0 0 1 -1 -1v-21a1 1 0 0 1 1 -1h13.293a1 1 0 0 1 0.707 0.3Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M19.352 2.648 17.5 0.8a1 1 0 0 0 -0.707 -0.3H3.5a1 1 0 0 0 -1 1v18Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="m10 9.004 -3.5 3.5 3.5 3.5"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="m14 9.004 3.5 3.5 -3.5 3.5"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M21.207 4.5a1 1 0 0 1 0.293 0.707V22.5a1 1 0 0 1 -1 1h-17a1 1 0 0 1 -1 -1v-21a1 1 0 0 1 1 -1h13.293a1 1 0 0 1 0.707 0.3Z"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/tenancy.webp') }}"
-                            alt="Tenant switcher"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/cloud.webp') }}"
-                            alt="Cloud"
-                            class="w-20"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Multi-tenancy built for SaaS.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Use the panel builder to build multi-tenant
-                        applications, with subscription billing, at record
-                        speed. Switch between tenants without leaving the panel.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Multi-tenancy built for SaaS.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Build multi-tenant apps with subscription billing quickly.
+                    Switch tenants without leaving the panel.
+                </p>
             </div>
-
-            {{-- Feature 4 --}}
-            <div
-                x-ref="feature_4"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+        </div>
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute -right-10 top-40 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_4"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
-                        alt="Shape"
-                        class="block w-12"
-                    />
-                </div>
+                <path
+                    d="M6.5 0.5h16s1 0 1 1v12s0 1 -1 1h-16s-1 0 -1 -1v-12s0 -1 1 -1"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M6.5 0.5a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h0.249l14 -14Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M13 14.5h9.5a1 1 0 0 0 1 -1v-12a1 1 0 0 0 -1 -1h-12"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M19 4.5h1s0.5 0 0.5 0.5v6s0 0.5 -0.5 0.5h-1s-0.5 0 -0.5 -0.5V5s0 -0.5 0.5 -0.5"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15 6.5h1s0.5 0 0.5 0.5v4s0 0.5 -0.5 0.5h-1s-0.5 0 -0.5 -0.5V7s0 -0.5 0.5 -0.5"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="m7.5 23.5 0.5 -6h2.5V14a5 5 0 0 0 -10 0v3.5H3l0.5 6Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M5.5 9a5 5 0 0 0 -5 5v2.5a5 5 0 0 1 10 0V14a5 5 0 0 0 -5 -5Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="m7.5 23.5 0.5 -6h2.5V14a5 5 0 0 0 -10 0v3.5H3l0.5 6Z"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M2 4a3.5 3.5 0 1 0 7 0 3.5 3.5 0 1 0 -7 0"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M5.5 2.5A3.488 3.488 0 0 1 8.837 5 3.444 3.444 0 0 0 9 4a3.5 3.5 0 0 0 -7 0 3.444 3.444 0 0 0 0.163 1A3.488 3.488 0 0 1 5.5 2.5Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M2 4a3.5 3.5 0 1 0 7 0 3.5 3.5 0 1 0 -7 0"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M19 4.5h1s0.5 0 0.5 0.5v6s0 0.5 -0.5 0.5h-1s-0.5 0 -0.5 -0.5V5s0 -0.5 0.5 -0.5"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M15 6.5h1s0.5 0 0.5 0.5v4s0 0.5 -0.5 0.5h-1s-0.5 0 -0.5 -0.5V7s0 -0.5 0.5 -0.5"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/infolist.webp') }}"
-                            alt="Infolist"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/featherpaper.webp') }}"
-                            alt="Quill on paper"
-                            class="w-16"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Beautiful read-only "View" pages.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Embed infolists in your apps for flexible responsive
-                        layouts to render read-only data. Completely
-                        customizable with your own components.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Beautiful read-only "View" pages.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Embed infolists for flexible, responsive read-only data
+                    layouts. Customizable with your components.
+                </p>
             </div>
-
-            {{-- Feature 5 --}}
-            <div
-                x-ref="feature_5"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+        </div>
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute bottom-0 left-0 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_5"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-5.webp') }}"
-                        alt="Shape"
-                        class="block w-14"
-                    />
-                </div>
+                <path
+                    d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0 -20 0"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M13 14.5s2 3 5 3a5.5 5.5 0 0 0 0 -11c-5 0 -7 11 -12 11a5.5 5.5 0 0 1 0 -11c3 0 4.5 3.5 4.5 3.5"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/panels.webp') }}"
-                            alt="Multiple panels"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/infinity.webp') }}"
-                            alt="Infinity"
-                            class="w-16"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Unlimited panels in one app.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Build multiple completely separate Filament-powered
-                        panels with their own resources, dashboards, custom
-                        pages and configuration. Ship an entire panel in a
-                        Composer package with ease.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Unlimited panels in one app.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Create multiple Filament panels with unique configurations,
+                    dashboards, and resources.
+                </p>
             </div>
-
-            {{-- Feature 6 --}}
-            <div
-                x-ref="feature_6"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+        </div>
+        <div>
+            {{-- Icon --}}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-12 shrink-0"
+                viewBox="0 0 24 24"
             >
-                <div class="absolute -bottom-20 -right-10 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_6"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-6.webp') }}"
-                        alt="Shape"
-                        class="block w-14"
-                    />
-                </div>
+                <path
+                    d="M12.347 16.084c-3.247 -0.156 -7.717 -1.051 -8.622 -4.077a1.8 1.8 0 0 0 -1.71 -1.284 1.494 1.494 0 0 0 -1.481 1.7A11.19 11.19 0 0 0 9.605 22c2.495 0.548 5.175 -2.032 3.129 -5.9Z"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M16.843 13.529 23.3 3.707a1.16 1.16 0 0 0 -1.884 -1.348l-7.26 9.374"
+                    fill="#ffd19f"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M8.715 15.594c-2.294 -0.547 -4.4 -1.614 -4.99 -3.587a1.8 1.8 0 0 0 -1.71 -1.284 1.494 1.494 0 0 0 -1.481 1.7A11.19 11.19 0 0 0 9.605 22a3.142 3.142 0 0 0 3.2 -1.2"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M9.374 17.688a0.59 0.59 0 0 0 0.067 1.112c3.932 1.131 6.965 -1.417 7.514 -3.382a2.9 2.9 0 0 0 -5.587 -1.56c-0.505 1.805 -0.263 3.096 -1.994 3.83Z"
+                    fill="#ffffff"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M16.234 12.605a2.814 2.814 0 0 0 -0.288 -0.224 2.851 2.851 0 0 1 -0.073 1.034 5.856 5.856 0 0 1 -5.57 3.654 2.683 2.683 0 0 1 -0.929 0.619 0.59 0.59 0 0 0 0.067 1.112c3.932 1.131 6.965 -1.417 7.514 -3.382a2.9 2.9 0 0 0 -0.721 -2.813Z"
+                    fill="#ffeedf"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M16.843 13.529 23.3 3.707a1.16 1.16 0 0 0 -1.884 -1.348l-7.26 9.374"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+                <path
+                    d="M9.374 17.688a0.59 0.59 0 0 0 0.067 1.112c3.932 1.131 6.965 -1.417 7.514 -3.382a2.9 2.9 0 0 0 -5.587 -1.56c-0.505 1.805 -0.263 3.096 -1.994 3.83Z"
+                    fill="none"
+                    stroke="#00303e"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                ></path>
+            </svg>
 
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/theme.webp') }}"
-                            alt="Theme"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/colorpalette.webp') }}"
-                            alt="Color palette"
-                            class="w-16"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Improved theme customization.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Customize the color palette and typography of your panel
-                        without having to compile any Tailwind. Easily hook in
-                        to our suite of CSS classes to characterize a panel with
-                        your own branding - it's all yours.
-                    </div>
-                </div>
+            <div class="space-y-1">
+                {{-- Title --}}
+                <h4 class="text-lg font-bold text-gray-700">
+                    Improved theme customization.
+                </h4>
+                {{-- Description --}}
+                <p class="font-afacad text-lg leading-snug text-gray-500">
+                    Customize panel colors and typography without compiling
+                    Tailwind. Integrate your branding easily.
+                </p>
             </div>
         </div>
     </div>
-</div>
+</section>

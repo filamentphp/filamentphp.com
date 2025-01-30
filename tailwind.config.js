@@ -37,7 +37,7 @@ export default {
                 sans: ['DM Sans', ...fontFamily.sans],
                 vietnam: ['Be Vietnam Pro', ...fontFamily.sans],
                 'roboto-mono': ['Roboto Mono', ...fontFamily.sans],
-                afacad: ['Afacad Variable', ...fontFamily.sans],
+                afacad: ['Afacad', ...fontFamily.sans],
             },
             maxWidth: {
                 '8xl': '88rem',

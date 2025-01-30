@@ -41,7 +41,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Join our server
                 </div>
@@ -116,7 +116,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Star us now
                 </div>
@@ -203,7 +203,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Install guide
                 </div>

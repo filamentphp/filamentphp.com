@@ -521,7 +521,7 @@
                 )
             }
         "
-        class="mx-auto max-w-xl pt-5 text-center font-afacad text-2xl leading-normal text-[#49485F]"
+        class="mx-auto max-w-2xl pt-5 text-center font-afacad text-3xl leading-normal text-[#49485F]"
     >
         Shape your apps with beautiful, powerful and intuitive, TALL stack
         components.
