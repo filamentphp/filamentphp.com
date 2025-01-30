@@ -335,14 +335,151 @@
             class="group inline-flex items-center gap-3 rounded-3xl bg-[#F4E7E2] py-2 pl-2 pr-5 text-lg font-medium transition duration-300 ease-in-out hover:bg-[#ffe8ce]"
         >
             <div
-                class="grid size-12 place-items-center rounded-2xl bg-[#E6DAD6] transition duration-300 ease-in-out group-hover:bg-[#ffdeb3]"
+                class="relative isolate grid size-12 place-items-center overflow-hidden rounded-2xl bg-[#E6DAD6] transition duration-300 ease-in-out group-hover:bg-[#ffdeb3]"
             >
+                {{-- Left meteor 1 --}}
+                <div
+                    x-init="
+                        () => {
+                            gsap.to($el, {
+                                duration: 1.5,
+                                x: -80,
+                                y: 80,
+                                ease: 'power1.in',
+                                repeat: -1,
+                                repeatDelay: 0.5,
+                            })
+                        }
+                    "
+                    class="absolute -right-5 -top-9 -z-10"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                    >
+                        <path
+                            d="M17.4801 0L0.610057 15.82C0.610057 15.82 0.280057 16.27 0.700057 16.71C1.11006 17.15 1.65006 16.77 1.65006 16.77L17.4801 0Z"
+                            fill="black"
+                        />
+                    </svg>
+                </div>
+
+                {{-- Left meteor 2 --}}
+                <div
+                    x-init="
+                        () => {
+                            gsap.to($el, {
+                                duration: 1.5,
+                                x: -80,
+                                y: 80,
+                                ease: 'power1.in',
+                                repeat: -1,
+                                repeatDelay: 0.5,
+                                delay: 1,
+                            })
+                        }
+                    "
+                    class="absolute -right-5 -top-7 -z-10"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        class="scale-75 opacity-50"
+                    >
+                        <path
+                            d="M17.4801 0L0.610057 15.82C0.610057 15.82 0.280057 16.27 0.700057 16.71C1.11006 17.15 1.65006 16.77 1.65006 16.77L17.4801 0Z"
+                            fill="black"
+                        />
+                    </svg>
+                </div>
+                {{-- Right meteor 1 --}}
+                <div
+                    x-init="
+                        () => {
+                            gsap.to($el, {
+                                duration: 1.5,
+                                x: -80,
+                                y: 80,
+                                ease: 'power1.in',
+                                repeat: -1,
+                                repeatDelay: 0.5,
+                            })
+                        }
+                    "
+                    class="absolute -right-5 top-0 -z-10"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                    >
+                        <path
+                            d="M17.4801 0L0.610057 15.82C0.610057 15.82 0.280057 16.27 0.700057 16.71C1.11006 17.15 1.65006 16.77 1.65006 16.77L17.4801 0Z"
+                            fill="black"
+                        />
+                    </svg>
+                </div>
+                {{-- Right meteor 2 --}}
+                <div
+                    x-init="
+                        () => {
+                            gsap.to($el, {
+                                duration: 1.5,
+                                x: -80,
+                                y: 80,
+                                ease: 'power1.in',
+                                repeat: -1,
+                                repeatDelay: 0.5,
+                                delay: 1,
+                            })
+                        }
+                    "
+                    class="absolute -right-5 top-3 -z-10"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        class="scale-75 opacity-50"
+                    >
+                        <path
+                            d="M17.4801 0L0.610057 15.82C0.610057 15.82 0.280057 16.27 0.700057 16.71C1.11006 17.15 1.65006 16.77 1.65006 16.77L17.4801 0Z"
+                            fill="black"
+                        />
+                    </svg>
+                </div>
+                {{-- Rocket --}}
                 <svg
+                    x-init="
+                        () => {
+                            gsap.to($el, {
+                                duration: 1.5,
+                                x: 3,
+                                y: 3,
+                                rotate: 2,
+                                scale: 1.02,
+                                ease: 'power1.inOut',
+                                repeat: -1,
+                                yoyo: true,
+                            })
+                        }
+                    "
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
                     height="25"
                     viewBox="0 0 25 25"
                     fill="none"
+                    class="will-change-transform"
                 >
                     <path
                         d="M17.627 11.7676V17.4118C17.6269 17.6058 17.5498 17.7918 17.4127 17.9291L14.2679 21.0739C14.1717 21.17 14.0507 21.2372 13.9183 21.2684C13.786 21.2995 13.6476 21.2932 13.5186 21.2502C13.3897 21.2071 13.2753 21.129 13.1882 21.0247C13.1012 20.9203 13.0448 20.7938 13.0255 20.6592L12.5 16.8945L17.627 11.7676ZM13.2324 7.37305H7.58822C7.39423 7.37314 7.20819 7.45018 7.07095 7.58728L3.92611 10.7321C3.83009 10.8283 3.76275 10.9494 3.73163 11.0818C3.70049 11.2141 3.70681 11.3524 3.74984 11.4814C3.79289 11.6103 3.87097 11.7247 3.97535 11.8118C4.07973 11.899 4.20628 11.9553 4.34084 11.9745L8.10549 12.5L13.2324 7.37305ZM4.44338 20.5566C7.89034 20.5566 9.08419 18.754 9.4385 17.9767L7.02334 15.5615C6.24606 15.9158 4.44338 17.1097 4.44338 20.5566Z"
@@ -354,7 +491,11 @@
                     />
                 </svg>
             </div>
-            <div>Get Started</div>
+            <div
+                class="transition duration-300 ease-in-out will-change-transform group-hover:translate-x-px"
+            >
+                Get Started
+            </div>
         </a>
     </div>
 </section>
