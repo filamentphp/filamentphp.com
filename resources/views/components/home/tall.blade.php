@@ -1,17 +1,5 @@
-<div
-    x-data="{
-        downloadCounterTarget: @js(app('package-download-stats')()),
-        githubStarsCounterTarget: @js(app('package-github-stars-stats')()),
-    }"
-    class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20"
->
+<div class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20">
     <div
-        x-data="{
-            downloadCounter: { val: reducedMotion ? downloadCounterTarget : 1 },
-            githubStarsCounter: {
-                val: reducedMotion ? githubStarsCounterTarget : 1,
-            },
-        }"
         x-init="
             () => {
                 if (reducedMotion) return
@@ -143,52 +131,6 @@
                             ease: 'circ.out',
                         },
                         '<0.3',
-                    )
-                    .fromTo(
-                        $refs.downloads,
-                        {
-                            autoAlpha: 0,
-                            x: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            x: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '<0.3',
-                    )
-                    .to(
-                        downloadCounter,
-                        {
-                            val: downloadCounterTarget,
-                            duration: 1.5,
-                            roundProps: 'val',
-                        },
-                        '<',
-                    )
-                    .fromTo(
-                        $refs.github_stars,
-                        {
-                            autoAlpha: 0,
-                            x: -30,
-                        },
-                        {
-                            autoAlpha: 1,
-                            x: 0,
-                            duration: 0.7,
-                            ease: 'circ.out',
-                        },
-                        '<0.2',
-                    )
-                    .to(
-                        githubStarsCounter,
-                        {
-                            val: githubStarsCounterTarget,
-                            duration: 1.5,
-                            roundProps: 'val',
-                        },
-                        '<',
                     )
                     .fromTo(
                         $refs.orange_speed_decoration,
@@ -931,79 +873,6 @@
                         stroke-linecap="round"
                     />
                 </svg>
-            </div>
-            {{-- Stats --}}
-            <div
-                class="relative flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-7 self-start justify-self-start pt-14 min-[600px]:pt-60 min-[700px]:pt-0 md:top-20 md:w-auto md:flex-col md:[grid-area:1/-1]"
-            >
-                {{-- Downloads --}}
-                <div
-                    x-ref="downloads"
-                    class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
-                >
-                    <div
-                        x-text="downloadCounter.val.toLocaleString('en-US') + '+'"
-                        class="text-center font-roboto-mono text-2xl font-medium"
-                    ></div>
-                    <div
-                        class="flex items-center justify-center gap-3 text-butter"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                        >
-                            <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-width="1.5"
-                            >
-                                <path
-                                    d="M6.286 19C3.919 19 2 17.104 2 14.765c0-2.34 1.919-4.236 4.286-4.236c.284 0 .562.028.83.08m7.265-2.582a5.765 5.765 0 0 1 1.905-.321c.654 0 1.283.109 1.87.309m-11.04 2.594a5.577 5.577 0 0 1-.354-1.962C6.762 5.528 9.32 3 12.476 3c2.94 0 5.361 2.194 5.68 5.015m-11.04 2.594a4.29 4.29 0 0 1 1.55.634m9.49-3.228C20.392 8.78 22 10.881 22 13.353c0 2.707-1.927 4.97-4.5 5.52"
-                                />
-                                <path
-                                    stroke-linejoin="round"
-                                    d="M12 22v-6m0 6l2-2m-2 2l-2-2"
-                                />
-                            </g>
-                        </svg>
-                        <div class="min-w-[5.5rem] text-sm font-medium">
-                            Downloads
-                        </div>
-                    </div>
-                </div>
-                {{-- Github Stars --}}
-                <div
-                    x-ref="github_stars"
-                    class="min-w-[12rem] space-y-3 rounded-2xl bg-seashell-peach p-5"
-                >
-                    <div
-                        x-text="githubStarsCounter.val.toLocaleString('en-US') + '+'"
-                        class="text-center font-roboto-mono text-2xl font-medium"
-                    ></div>
-                    <div
-                        class="flex items-center justify-center gap-3 text-butter"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
-                            />
-                        </svg>
-                        <div class="min-w-[5.5rem] text-sm font-medium">
-                            Github Stars
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
 <x-layouts.app>
     <x-home.hero />
     <x-home.demo />
-    <x-home.packages />
+    <x-home.stats />
     <x-home.tall />
     <x-home.v3-features />
     <x-home.sponsors />
