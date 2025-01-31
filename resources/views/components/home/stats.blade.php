@@ -96,10 +96,10 @@
                 {{-- Header --}}
                 <div>
                     <h2 class="text-4xl font-extrabold">
-                        {{ new \NumberFormatter(
+                        {{ (new \NumberFormatter(
                                 app()->getLocale(),
                                 \NumberFormatter::PADDING_POSITION,
-                            )->format(
+                            ))->format(
                                 app('package-github-stars-stats')(),
                             ) . '+' }}
                     </h2>
@@ -185,10 +185,10 @@
                 {{-- Header --}}
                 <div>
                     <h2 class="text-4xl font-extrabold">
-                        {{ new \NumberFormatter(
+                        {{ (new \NumberFormatter(
                                 app()->getLocale(),
                                 \NumberFormatter::PADDING_POSITION,
-                            )->format(
+                            ))->format(
                                 app('package-download-stats')(),
                             ) . '+' }}
                     </h2>
