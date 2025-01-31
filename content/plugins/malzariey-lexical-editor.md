@@ -10,5 +10,5 @@ github_repository: malzariey/filament-lexical-editor
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-01-05
+publish_date: 2025-01-31
 ---
