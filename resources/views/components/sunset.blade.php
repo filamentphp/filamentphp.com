@@ -138,10 +138,10 @@
                         '<',
                     )
                     .fromTo(
-                        $refs.supercar,
+                        $refs.cheetah,
                         {
                             autoAlpha: 0,
-                            x: -500,
+                            x: -10,
                         },
                         {
                             autoAlpha: 1,
@@ -349,36 +349,41 @@
             </div>
         </div>
 
-        {{-- Supercar --}}
+        {{-- Cheetah --}}
         <div class="relative z-50 grid place-items-center pt-10">
             <img
-                x-ref="supercar"
-                src="{{ Vite::asset('resources/images/home/supercar.webp') }}"
-                alt="Car"
-                class="w-44"
+                x-ref="cheetah"
+                src="{{ Vite::asset('resources/images/home/cheetah.webp') }}"
+                alt="Cheetah"
+                class="w-52"
             />
         </div>
 
         {{-- Takeoff --}}
-        <div
+        <h3
             x-ref="take_off"
             class="px-4 pt-3 text-3xl font-extrabold"
         >
             Ready to take off?
-        </div>
-        <div
+        </h3>
+        <p
             x-ref="take_off_message"
             class="mx-auto max-w-md px-4 pt-2 text-dolphin"
         >
             Give Filament a try, and we bet that you'll be amazed in the first
             few minutes.
-        </div>
+        </p>
 
         {{-- Get Started Link --}}
         <div
             x-ref="getstarted"
             class="px-4 pt-10"
         >
+            <img
+                src="{{ Vite::asset('resources/images/home/pink_bird_on_branch.webp') }}"
+                alt=""
+                class="-mb-[.7rem] ml-8 w-20 sm:-mb-[.9rem] sm:ml-14 sm:w-28"
+            />
             <a
                 href="{{ route('docs', ['slug' => 'panels/getting-started']) }}"
                 class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40 motion-reduce:transition-none sm:py-10"
