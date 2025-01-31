@@ -283,7 +283,7 @@
                     </defs>
                 </svg>
             </div>
-            <div
+            <h4
                 x-ref="community"
                 class="relative mt-3 text-xl font-medium tracking-wider"
             >
@@ -317,8 +317,8 @@
                         </defs>
                     </svg>
                 </div>
-            </div>
-            <div class="relative z-10 inline-grid">
+            </h4>
+            <h3 class="relative z-10 inline-grid">
                 <div
                     x-ref="feedback_header"
                     class="text-2xl font-extrabold [grid-area:1/-1] lg:text-3xl"
@@ -329,7 +329,7 @@
                     x-ref="feedback_header_underline"
                     class="relative -left-1 -z-10 h-5 w-[98%] self-end justify-self-start bg-[#A1B0FF]/70 [grid-area:1/-1]"
                 ></div>
-            </div>
+            </h3>
         </div>
 
         {{-- Testimonial Tweets --}}
