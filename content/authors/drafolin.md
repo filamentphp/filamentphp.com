@@ -6,8 +6,6 @@ mastodon_url: https://derg.social/@drafolin
 sponsor_url: https://github.com/sponsors/drafolin
 ---
 
-# Rawr! Dråfølin here!
-
 I'm a dragon who loves to code websites! 
 
 I've discovered filament through my internship in 2024, and I've used it now and then when I needed an administration panel for my websites.
