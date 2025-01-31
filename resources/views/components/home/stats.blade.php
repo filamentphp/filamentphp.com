@@ -1,9 +1,36 @@
 <section class="mx-auto w-full max-w-screen-lg px-10 pt-14 lg:px-5">
     <div
+        x-init="
+            () => {
+                if (reducedMotion) return
+                const timeline = gsap
+                    .timeline({
+                        paused: true,
+                    })
+                    .fromTo(
+                        $refAll('pop-in'),
+                        {
+                            autoAlpha: 0,
+                            scale: 0.5,
+                        },
+                        {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: 0.7,
+                            stagger: 0.1,
+                            ease: 'back.out(1.3)',
+                        },
+                    )
+                motion.inView($el, (element) => {
+                    timeline.play()
+                })
+            }
+        "
         class="grid grid-cols-[repeat(auto-fill,minmax(18rem,1fr))] place-items-center gap-7 text-slate-700"
     >
         {{-- Discord --}}
         <div
+            x-ref="pop-in"
             class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#E2E2F7] to-[#EBECFF] p-7"
         >
             <div class="flex items-center gap-4">
@@ -72,6 +99,7 @@
 
         {{-- GitHub --}}
         <div
+            x-ref="pop-in"
             class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#FFEAD1] to-[#FFEFDD] p-7"
         >
             <div class="flex items-center gap-4">
@@ -161,6 +189,7 @@
 
         {{-- Downloads --}}
         <div
+            x-ref="pop-in"
             class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#E5F1ED] to-[#ECF8F4] p-7"
         >
             <div class="flex items-center gap-4">
