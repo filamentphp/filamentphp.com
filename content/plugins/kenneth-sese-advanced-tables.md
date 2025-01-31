@@ -2,6 +2,7 @@
 name: Advanced Tables (formerly Filter Sets)
 slug: kenneth-sese-advanced-tables
 anystack_id: 98d460ab-17ca-432b-b287-087e8f1a8ec7
+checkout_url: https://checkout.anystack.sh/filament-filter-sets
 author_slug: kenneth-sese
 categories: [table-builder, panel-builder]
 description: Supercharge your tables with powerful features like user customizable views, enhanced filter tabs, reorderable columns, convenient view management, and more. Compatible with Resource Panel Tables, Relation Managers, Table Widgets, and Table Builder!
