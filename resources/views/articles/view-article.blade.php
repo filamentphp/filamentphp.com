@@ -72,9 +72,9 @@
 
                 {{-- Title --}}
                 <div class="pt-5">
-                    <div class="text-3xl font-extrabold">
+                    <h1 class="text-3xl font-extrabold">
                         {{ $article->title }}
-                    </div>
+                    </h1>
                 </div>
 
                 <div class="pt-2">
