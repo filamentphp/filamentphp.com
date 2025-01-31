@@ -14,7 +14,20 @@ import '../../docs/src/styles/docsearch.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { animate, inView } from 'motion'
+import {
+    animate,
+    inView,
+    easeIn,
+    easeOut,
+    easeInOut,
+    backIn,
+    backOut,
+    backInOut,
+    circIn,
+    circOut,
+    circInOut,
+    anticipate,
+} from 'motion'
 
 // Swiper
 Swiper.use([Navigation, Pagination])
@@ -44,6 +57,16 @@ window.MiniSearch = MiniSearch
 window.motion = {
     animate: animate,
     inView: inView,
+    easeIn: easeIn,
+    easeOut: easeOut,
+    easeInOut: easeInOut,
+    backOut: backOut,
+    backIn: backIn,
+    backInOut: backInOut,
+    circIn: circIn,
+    circOut: circOut,
+    circInOut: circInOut,
+    anticipate: anticipate,
 }
 
 // Alpine

@@ -1,5 +1,38 @@
 <section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
-    <div class="isolate grid place-items-center">
+    <div
+        x-init="
+            () => {
+                if (reducedMotion) return
+                const timeline = gsap
+                    .timeline({
+                        paused: true,
+                    })
+                    .fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            y: -20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power2.out',
+                        },
+                    )
+                motion.inView(
+                    $el,
+                    (element) => {
+                        timeline.play()
+                    },
+                    {
+                        amount: 1,
+                    },
+                )
+            }
+        "
+        class="isolate grid place-items-center"
+    >
         <div
             class="isolate grid self-center justify-self-center [grid-area:1/-1]"
         >
@@ -136,6 +169,37 @@
         />
     </div>
     <h3
+        x-init="
+            () => {
+                if (reducedMotion) return
+                const timeline = gsap
+                    .timeline({
+                        paused: true,
+                    })
+                    .fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            y: 20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: 'power2.out',
+                        },
+                    )
+                motion.inView(
+                    $el,
+                    (element) => {
+                        timeline.play()
+                    },
+                    {
+                        amount: 1,
+                    },
+                )
+            }
+        "
         class="mx-auto max-w-3xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
     >
         Filament 4 brings powerful new tools and flexibility, simplifying
@@ -143,9 +207,41 @@
         applications.
     </h3>
     <div
+        x-init="
+            () => {
+                if (reducedMotion) return
+                const timeline = gsap
+                    .timeline({
+                        paused: true,
+                    })
+                    .fromTo(
+                        $refAll('slide-in-left'),
+                        {
+                            autoAlpha: 0,
+                            x: -20,
+                        },
+                        {
+                            autoAlpha: 1,
+                            x: 0,
+                            duration: 0.7,
+                            stagger: 0.1,
+                            ease: 'power2.out',
+                        },
+                    )
+                motion.inView(
+                    $el,
+                    (element) => {
+                        timeline.play()
+                    },
+                    {
+                        amount: 0.25,
+                    },
+                )
+            }
+        "
         class="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-center gap-5 pt-10 *:flex *:items-center *:gap-5 *:rounded-2xl *:bg-white *:px-5 *:py-7 *:ring-1 *:ring-black/5"
     >
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -240,13 +336,14 @@
                     Nested resources
                 </h4>
                 {{-- Description --}}
+
                 <p class="font-afacad text-lg leading-snug text-gray-500">
                     Open modals and slide-overs from any button, even nest them
                     with full state preservation.
                 </p>
             </div>
         </div>
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +472,7 @@
                 </p>
             </div>
         </div>
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -569,7 +666,7 @@
                 </p>
             </div>
         </div>
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -637,7 +734,7 @@
                 </p>
             </div>
         </div>
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -745,7 +842,7 @@
                 </p>
             </div>
         </div>
-        <div>
+        <div x-ref="slide-in-left">
             {{-- Icon --}}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
