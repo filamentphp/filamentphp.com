@@ -31,6 +31,8 @@
             alt="Filament demo"
             class="relative z-0 w-full rounded-xl [grid-area:1/-1]"
             loading="lazy"
+            width="2984"
+            height="1610"
         />
 
         {{-- Button --}}
