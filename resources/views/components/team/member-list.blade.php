@@ -98,5 +98,13 @@
             twitter="https://twitter.com/leandrocfe"
             github="https://github.com/leandrocfe"
         />
+        <x-team.member
+            avatar="/images/kenneth-hq.jpeg"
+            name="Kenneth Sese"
+            title="Developer"
+            website="https://www.padmission.com/kenneth-sese/?ref=filamentphp.com"
+            twitter="https://twitter.com/archilex"
+            github="https://github.com/archilex"
+        />
     </div>
 </section>
