@@ -1,6 +1,6 @@
 ---
-name: Filament Error Pages
-slug: cmsmax-filament-error-pages
+name: Error Pages
+slug: cmsmax-error-pages
 author_slug: cmsmax
 categories: [developer-tool]
 description: Provides a more user-friendly error page for Filament panels when an error occurs.
