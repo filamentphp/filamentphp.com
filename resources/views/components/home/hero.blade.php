@@ -660,16 +660,21 @@
                 <svg
                     x-init="
                         () => {
-                            gsap.to($el, {
-                                duration: 1.5,
-                                x: 3,
-                                y: 3,
-                                rotate: 2,
-                                scale: 1.02,
-                                ease: 'power1.inOut',
-                                repeat: -1,
-                                yoyo: true,
-                            })
+                            motion.animate(
+                                $el,
+                                {
+                                    x: 3,
+                                    y: 3,
+                                    rotate: -3,
+                                    transformPerspective: 600,
+                                },
+                                {
+                                    duration: 1.5,
+                                    repeat: Infinity,
+                                    repeatType: 'mirror',
+                                    ease: motion.easeInOut,
+                                },
+                            )
                         }
                     "
                     xmlns="http://www.w3.org/2000/svg"
