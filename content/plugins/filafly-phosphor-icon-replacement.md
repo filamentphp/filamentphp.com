@@ -10,5 +10,5 @@ github_repository: filafly/phosphor-icon-replacement
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2025-01-15
+publish_date: 2025-01-31
 ---
