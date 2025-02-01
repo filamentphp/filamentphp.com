@@ -16,6 +16,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import {
     animate,
+    hover,
     inView,
     easeIn,
     easeOut,
@@ -27,6 +28,7 @@ import {
     circOut,
     circInOut,
     anticipate,
+    spring,
 } from 'motion'
 
 // Swiper
@@ -56,6 +58,7 @@ window.MiniSearch = MiniSearch
 // Motion
 window.motion = {
     animate: animate,
+    hover: hover,
     inView: inView,
     easeIn: easeIn,
     easeOut: easeOut,
@@ -67,6 +70,7 @@ window.motion = {
     circOut: circOut,
     circInOut: circInOut,
     anticipate: anticipate,
+    spring: spring,
 }
 
 // Alpine
