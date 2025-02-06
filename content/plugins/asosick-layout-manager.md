@@ -5,7 +5,7 @@ author_slug: asosick
 categories: [form-builder, form-editor, widget]
 description: Enables users to create and customize their own widget layouts.
 discord_url: 
-docs_url: https://raw.githubusercontent.com/asosick/filament-layout-manager/refs/heads/main/README.md
+docs_url: https://raw.githubusercontent.com/asosick/filament-layout-manager/main/README.md
 github_repository: asosick/filament-layout-manager
 has_dark_theme: true
 has_translations: true
