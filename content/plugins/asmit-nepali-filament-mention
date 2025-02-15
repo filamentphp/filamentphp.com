@@ -1,0 +1,14 @@
+---
+name: Asmit Filament Mention
+slug: asmit-nepali-filament-mention
+author_slug: firefly
+categories: [form-field]
+description: The Mention plugin lets you mention users in Filament's RichText editor, supporting both static and dynamic searches. It can extract user details like username and ID for a seamless mention experience.
+discord_url: https://discord.com/channels/883083792112300104/1229451531368009768
+docs_url: https://raw.githubusercontent.com/thefireflytech/filament-blog/master/README.md
+github_repository: thefireflytech/filament-blog
+has_dark_theme: true
+has_translations: false
+versions: [3]
+publish_date: 2024-04-15
+---
