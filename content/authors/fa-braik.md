@@ -1,8 +1,8 @@
 ---
 name: Farouk Braik
-slug: farouk-braik
-github_url: https://github.com/fa-braik
-sponsor_url: https://github.com/sponsors/fa-braik
+slug: fa-braik
+github_url: https://github.com/Fa-BRAIK
+sponsor_url: https://github.com/sponsors/Fa-BRAIK
 ---
 
 I am a Full-Stack web developer with over 4 years of experience specializing in Back-end. 
