@@ -343,7 +343,15 @@
                         <div
                             class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
+                            {!!
+                                \App\Support\Markdown::parse($docs)
+                                    ->convertVideoToHtml()
+                                    ->absoluteImageUrls(
+                                        baseUrl: str($plugin->getDocUrl(request()->query('v')))
+                                            ->lower()
+                                            ->before('readme.md'),
+                                    )
+                            !!}
                         </div>
                     </div>
                 @endif
@@ -537,7 +545,7 @@
                     </div>
                 </div>
 
-                @if (count($otherPlugins = $plugin->author->plugins()->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherPlugins = $plugin->author->plugins()->draft(false)->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div>
                         <div class="text-lg font-extrabold">

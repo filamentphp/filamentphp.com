@@ -22,18 +22,19 @@ class GetPluginsListData
                         fn (Builder $query) => $query->whereIn('starrable_id', $plugins),
                     )
                     ->where('starrable_type', 'plugin')
+                    ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                     ->groupBy('starrable_id')
                     ->selectRaw('count(id) as count, starrable_id')
                     ->get()
                     ->pluck('count', 'starrable_id');
 
-                return Plugin::query()
+                return Plugin::with(['author'])
+                    ->draft(false)
                     ->when(
                         $plugins,
                         fn (EloquentBuilder $query) => $query->whereKey($plugins),
                     )
                     ->orderByDesc('publish_date')
-                    ->with(['author'])
                     ->get()
                     ->map(fn (Plugin $plugin): array => [
                         ...$plugin->getDataArray(),

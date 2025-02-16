@@ -12,6 +12,8 @@
             <x-sponsors.whizzy footer />
 
             <x-sponsors.cms-max footer />
+
+            <x-sponsors.netstudio footer />
         </div>
 
         <div
