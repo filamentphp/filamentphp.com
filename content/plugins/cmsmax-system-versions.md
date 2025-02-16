@@ -10,5 +10,5 @@ github_repository: cmsmaxinc/filament-system-versions
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 
+publish_date: 2025-02-16
 ---
