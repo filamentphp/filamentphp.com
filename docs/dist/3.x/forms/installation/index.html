@@ -1123,6 +1123,7 @@
 <li>PHP 8.1+</li>
 <li>Laravel v10.0+</li>
 <li>Livewire v3.0+</li>
+<li>Tailwind v3.0+ <a href="#installing-tailwind-css">(Using Tailwind v4?)</a></li>
 </ul>
 <h2 id="installation"><a class="heading-anchor" href="#installation"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Installation</h2>
 <p>Require the Form Builder package using Composer:</p>
@@ -1144,6 +1145,9 @@ npm run dev
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">artisan</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">filament:install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--forms</span></div><textarea data-torchlight-original="true" style="display: none !important;">php artisan filament:install --forms
 </textarea></code></pre>
 <h3 id="installing-tailwind-css"><a class="heading-anchor" href="#installing-tailwind-css"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Installing Tailwind CSS</h3>
+<blockquote>
+<p>Filament uses Tailwind CSS v3 for styling. If your project uses Tailwind CSS v4, you will unfortunately need to downgrade it to v3 to use Filament. Filament v3 can&#39;t support Tailwind CSS v4 since it introduces breaking changes. Filament v4 will support Tailwind CSS v4.</p>
+</blockquote>
 <p>Run the following command to install Tailwind CSS with the Tailwind Forms and Typography plugins:</p>
 <pre class="torchlight" style="background-color: #292D3E; --theme-selection-background: #00000080;" data-torchlight-processed="3449c9e5e332f1dbb81505cd739fbf3f"><code class="language-bash"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">npm</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">tailwindcss@3</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">@tailwindcss/forms</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">@tailwindcss/typography</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">postcss</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">postcss-nesting</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">autoprefixer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--save-dev</span></div><textarea data-torchlight-original="true" style="display: none !important;">npm install tailwindcss@3 @tailwindcss/forms @tailwindcss/typography postcss postcss-nesting autoprefixer --save-dev
 </textarea></code></pre>
