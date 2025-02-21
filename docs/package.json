@@ -6,14 +6,12 @@
     "scripts": {
         "checkout": "bin/checkout-latest-filament",
         "sync": "node sync.mjs",
-        "torchlight": "npx torchlight --config torchlight.config.cjs",
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro build",
         "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x",
-        "generate": "npm run checkout && npm run sync && npm run build && npm run torchlight && npm run publicize-assets",
+        "generate": "npm run checkout && npm run sync && npm run build && npm run publicize-assets",
         "generate-dev": "npm run sync && npm run build && npm run publicize-assets",
-        "generate-dev-highlight": "npm run sync && npm run build && npm run torchlight && npm run publicize-assets",
         "preview": "astro preview",
         "astro": "astro"
     },
@@ -36,7 +34,6 @@
         "@grafite/helpers": "^1.0.2",
         "@tailwindcss/forms": "^0.5.7",
         "@tailwindcss/typography": "^0.5.8",
-        "@torchlight-api/torchlight-cli": "^0.1.7",
         "alpinejs": "^3.10.5",
         "autoprefixer": "^10.4.13",
         "clipboard": "^2.0.11",

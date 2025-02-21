@@ -22,9 +22,8 @@ export default defineConfig({
         icon(),
     ],
     markdown: {
-        syntaxHighlight: false,
         shikiConfig: {
-            theme: 'material-palenight',
+            theme: 'material-theme-palenight',
         },
         rehypePlugins: [
             // Automatically add links to headings (@see https://github.com/rehypejs/rehype-autolink-headings)
