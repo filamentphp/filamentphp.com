@@ -9,11 +9,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 export default defineConfig({
     base: '/docs',
     site: 'https://filamentphp.com',
-    integrations: [
-        react(),
-        mdx(),
-        icon(),
-    ],
+    integrations: [react(), mdx(), icon()],
     markdown: {
         shikiConfig: {
             theme: 'material-theme-palenight',
