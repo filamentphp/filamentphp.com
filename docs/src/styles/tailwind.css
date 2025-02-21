@@ -1,10 +1,147 @@
-@import 'tailwindcss/base';
-@import './ads.css';
-@import './fonts.css';
-@import './docsearch.css';
-@import '../../../resources/css/torchlight.css';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+@import './fonts.css' layer(base);
+@import './ads.css' layer(components);
+@import './docsearch.css' layer(components);
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-cream: #FFF9F5;
+    --color-butter: #FDAE4B;
+    --color-burnt-butter: #f2911b;
+    --color-midnight: #0F033A;
+    --color-evening: #251A4D;
+    --color-merino: #F2E7DD;
+    --color-hurricane: #807575;
+    --color-dolphin: #6C6489;
+    --color-peach-orange: #FFC497;
+    --color-seashell-peach: #FFF0E8;
+    --color-dawn-pink: #F1E5E4;
+    --color-salmon: #F89377;
+    --color-fair-pink: #FFEAE4;
+
+    --font-sans: "Be Vietnam Pro", "sans-serif";
+    --font-display: "Be Vietnam Pro", "sans-serif";
+    --font-mono: "Jetbrains Mono", "sans-serif";
+
+    --spacing-8xl: 88rem;
+}
+
+@theme inline {
+    --color-primary-50: var(--color-amber-50);
+    --color-primary-100: var(--color-amber-100);
+    --color-primary-200: var(--color-amber-200);
+    --color-primary-300: var(--color-amber-300);
+    --color-primary-400: var(--color-amber-400);
+    --color-primary-500: var(--color-amber-500);
+    --color-primary-600: var(--color-amber-600);
+    --color-primary-700: var(--color-amber-700);
+    --color-primary-800: var(--color-amber-800);
+    --color-primary-900: var(--color-amber-900);
+    --color-primary-950: var(--color-amber-950);
+}
+
+@utility prose {
+  & h2 {
+    @apply lg:relative;
+  }
+
+  & h3 {
+    @apply lg:relative;
+  }
+
+  & h4 {
+    @apply lg:relative;
+  }
+
+  & h5 {
+    @apply lg:relative;
+  }
+
+  & h6 {
+    @apply lg:relative;
+  }
+
+  & .heading-anchor {
+    @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+    @apply lg:absolute lg:-left-7 lg:top-0;
+  }
+
+  /* All `.prose` elements except `code` */
+  & *:not(code)::selection {
+    @apply bg-primary-500/20;
+  }
+
+  /* All `code` elements and their children */
+  & code::selection {
+    @apply bg-cream/20;
+  }
+  & code *::selection {
+    @apply bg-cream/20;
+  }
+
+  /* All `.prose` elements except `code` */
+  .dark & *:not(code)::selection {
+    @apply bg-slate-500/50;
+  }
+
+  /* All `code` elements and their children */
+  .dark & code::selection {
+    @apply bg-slate-500/50;
+  }
+
+  .dark & code *::selection {
+    @apply bg-slate-500/50;
+  }
+}
+
+@utility heading-anchor {
+  .prose & {
+    @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+    @apply lg:absolute lg:-left-7 lg:top-0;
+  }
+}
+
+@utility dark {
+  /* Dark Theme */
+
+  /* All elements except `.prose` and `code` */
+  & *::selection {
+    @apply bg-slate-500/50;
+  }
+
+  /* All `.prose` elements except `code` */
+  & .prose *:not(code)::selection {
+    @apply bg-slate-500/50;
+  }
+
+  /* All `code` elements and their children */
+  & .prose code::selection {
+    @apply bg-slate-500/50;
+  }
+  & .prose code *::selection {
+    @apply bg-slate-500/50;
+  }
+
+  & p code {
+    @apply bg-dolphin/40;
+  }
+
+  & ul code {
+    @apply bg-dolphin/40;
+  }
+
+  & p code::selection {
+    @apply !bg-slate-500/50;
+  }
+
+  & ul code::selection {
+    @apply !bg-slate-500/50;
+  }
+}
 
 @layer base {
     html {
@@ -25,35 +162,11 @@
         margin-block: 0.75em !important;
     }
 
-    .prose h2,
-    .prose h3,
-    .prose h4,
-    .prose h5,
-    .prose h6 {
-        @apply lg:relative;
-    }
-
-    .prose .heading-anchor {
-        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
-        @apply lg:absolute lg:-left-7 lg:top-0;
-    }
-
     /* Light Theme */
 
     /* All elements except `.prose` and `code` */
     *:not(.prose):not(code)::selection {
         @apply bg-stone-500/10;
-    }
-
-    /* All `.prose` elements except `code` */
-    .prose *:not(code)::selection {
-        @apply bg-primary-500/20;
-    }
-
-    /* All `code` elements and their children */
-    .prose code::selection,
-    .prose code *::selection {
-        @apply bg-cream/20;
     }
 
     p code,
@@ -64,34 +177,6 @@
     p code::selection,
     ul code::selection {
         @apply !bg-primary-500/20;
-    }
-
-    /* Dark Theme */
-
-    /* All elements except `.prose` and `code` */
-    .dark *::selection {
-        @apply bg-slate-500/50;
-    }
-
-    /* All `.prose` elements except `code` */
-    .dark .prose *:not(code)::selection {
-        @apply bg-slate-500/50;
-    }
-
-    /* All `code` elements and their children */
-    .dark .prose code::selection,
-    .dark .prose code *::selection {
-        @apply bg-slate-500/50;
-    }
-
-    .dark p code,
-    .dark ul code {
-        @apply bg-dolphin/40;
-    }
-
-    .dark p code::selection,
-    .dark ul code::selection {
-        @apply !bg-slate-500/50;
     }
 }
 

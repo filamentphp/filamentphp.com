@@ -92,11 +92,11 @@
 
 .DocSearch-Input,
 .DocSearch-Input:focus {
-    @apply flex-1 appearance-none border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none ring-0 dark:text-slate-100 !important;
+    @apply flex-1 appearance-none border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none ring-0 dark:text-slate-100;
 }
 
 .DocSearch-Input::placeholder {
-    @apply text-slate-400 opacity-100 !important;
+    @apply text-slate-400 opacity-100;
 }
 
 .DocSearch-Input::-webkit-search-cancel-button,
@@ -121,6 +121,10 @@
 .DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
 .DocSearch-LoadingIndicator {
     display: none;
+}
+
+.DocSearch-VisuallyHiddenForAccessibility {
+    @apply sr-only;
 }
 
 .DocSearch-Container--Stalled .DocSearch-MagnifierLabel,

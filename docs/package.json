@@ -9,7 +9,7 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro build",
-        "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x",
+        "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x && rm -rf ../public/docs/4.x",
         "generate": "npm run checkout && npm run sync && npm run build && npm run publicize-assets",
         "generate-dev": "npm run sync && npm run build && npm run publicize-assets",
         "preview": "astro preview",
@@ -18,7 +18,6 @@
     "dependencies": {
         "@astrojs/mdx": "^3.1.3",
         "@astrojs/react": "^3.6.2",
-        "@astrojs/tailwind": "^5.1.0",
         "@docsearch/js": "^3.3.1",
         "astro": "^4.13.3",
         "astro-icon": "^1.0.0",
@@ -33,19 +32,18 @@
         "@formkit/auto-animate": "^0.8.2",
         "@grafite/helpers": "^1.0.2",
         "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/postcss": "^4.0.8",
         "@tailwindcss/typography": "^0.5.8",
         "alpinejs": "^3.10.5",
-        "autoprefixer": "^10.4.13",
         "clipboard": "^2.0.11",
         "fs-extra": "^11.1.0",
         "gray-matter": "^4.0.3",
         "postcss-focus-visible": "^7.1.0",
-        "postcss-import": "^15.1.0",
         "prettier": "^3.0.0",
         "prettier-plugin-astro": "^0.11.0",
-        "prettier-plugin-tailwindcss": "^0.4.1",
+        "prettier-plugin-tailwindcss": "^0.6.11",
         "probe-image-size": "^7.2.3",
-        "tailwindcss": "^3.2.4"
+        "tailwindcss": "^4.0.8"
     },
     "overrides": {
         "astro-icon": {
