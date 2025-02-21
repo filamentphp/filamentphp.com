@@ -9,6 +9,10 @@ import rawNavigation from '../navigation.json';
 import "../styles/tailwind.css";
 
 function buildTitle(title, packageNavigation) {
+    if (packageNavigation && (! packageNavigation.title)) {
+        return `${title} - Filament`;
+    }
+
     if (packageNavigation && (title !== packageNavigation.title)) {
         return `${title} - ${packageNavigation.title} - Filament`;
     }
