@@ -118,10 +118,10 @@ versions.forEach((version) => {
         const packagesOrder = [
             'panels',
             'admin',
-            'schema',
             'forms',
             'infolists',
             'tables',
+            'schemas',
             'actions',
             'notifications',
             'widgets',
