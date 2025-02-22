@@ -4,7 +4,7 @@ slug: 3x1io-tomato-discord
 author_slug: 3x1io
 categories: [developer-tool]
 description: Send notifications to a Discord channel using the native FilamentPHP Notification Facade class
-discord_url: https://discord.com/channels/883083792112300104/1261329352524693544
+discord_url: https://discord.com/channels/883083792112300104/1265002822605344871
 docs_url: https://raw.githubusercontent.com/tomatophp/filament-discord/master/README.md
 url: https://docs.tomatophp.com/filament/filament-discord
 github_repository: tomatophp/filament-discord

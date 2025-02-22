@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -57,9 +58,17 @@ class Author extends Model
             $this->getStarsCountCacheKey(),
             now()->addDay(),
             fn (): int => Star::query()
+                ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                 ->where(fn (Builder $query) => $query->where('starrable_type', 'article')->whereIn('starrable_id', $this->articles()->pluck('slug')))
                 ->orWhere(fn (Builder $query) => $query->where('starrable_type', 'plugin')->whereIn('starrable_id', $this->plugins()->pluck('slug')))
                 ->count(),
+        );
+    }
+
+    protected function starsCount(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->getStarsCount(),
         );
     }
 

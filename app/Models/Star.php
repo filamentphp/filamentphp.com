@@ -11,6 +11,10 @@ class Star extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'is_vpn_ip' => 'boolean',
+    ];
+
     public function starrable(): MorphTo
     {
         return $this->morphTo();
