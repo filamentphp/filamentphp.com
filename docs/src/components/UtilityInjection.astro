@@ -4,7 +4,7 @@ const { set } = Astro.props;
 const utilities = {
     formFields: [
         {
-            name: 'Get',
+            name: 'Get function',
             type: 'Filament\\Schemas\\Components\\Utilities\\Get',
             parameter: '$get',
             description: 'A function for retrieving values from the current form data.',
@@ -46,7 +46,7 @@ const utilities = {
             description: 'The Eloquent record for the current schema.',
         },
         {
-            name: 'Set',
+            name: 'Set function',
             type: 'Filament\\Schemas\\Components\\Utilities\\Set',
             parameter: '$set',
             description: 'A function for setting values in the current form data.',
@@ -56,7 +56,7 @@ const utilities = {
 ---
 
 <details class="rounded-lg bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
-    <summary>
+    <summary class="font-medium">
         <slot />
     </summary>
 
