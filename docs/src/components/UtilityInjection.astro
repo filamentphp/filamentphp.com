@@ -4,6 +4,12 @@ const { set } = Astro.props;
 const utilities = {
     formFields: [
         {
+            name: 'Field',
+            type: 'Filament\\Forms\\Components\\Field',
+            parameter: '$component',
+            description: 'The current field component instance.',
+        },
+        {
             name: 'Get function',
             type: 'Filament\\Schemas\\Components\\Utilities\\Get',
             parameter: '$get',
