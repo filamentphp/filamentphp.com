@@ -1,0 +1,82 @@
+---
+let { utilities } = Astro.props;
+
+utilities = {
+    formFields: [
+        {
+            name: 'Get',
+            type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+            variable: '$get',
+            description: 'A function for retrieving values from the current form data.',
+        },
+        {
+            name: 'Eloquent model FQN',
+            type: 'string<Illuminate\\Database\\Eloquent\\Model> | null',
+            variable: '$model',
+            description: 'The Eloquent model FQN for the current schema.',
+        },
+        {
+            name: 'Livewire',
+            type: 'Livewire\\Component',
+            variable: '$livewire',
+            description: 'The Livewire component instance.',
+        },
+        {
+            name: 'Raw state',
+            type: 'mixed',
+            variable: '$rawState',
+            description: 'The current value of the field, before state casts were applied.',
+        },
+        {
+            name: 'State',
+            type: 'mixed',
+            variable: '$state',
+            description: 'The current value of the field.',
+        },
+        {
+            name: 'Operation',
+            type: 'string',
+            variable: '$operation',
+            description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+        },
+        {
+            name: 'Eloquent record',
+            type: 'Illuminate\\Database\\Eloquent\\Model | null',
+            variable: '$record',
+            description: 'The Eloquent record for the current schema.',
+        },
+        {
+            name: 'Set',
+            type: 'Filament\\Schemas\\Components\\Utilities\\Set',
+            variable: '$set',
+            description: 'A function for setting values in the current form data.',
+        },
+    ],
+}[utilities]
+---
+
+<details class="rounded-lg bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
+    <summary>
+        <slot />
+    </summary>
+
+    <table class="block overflow-x-auto whitespace-nowrap mt-3 mb-0">
+        <thead>
+            <tr class="border-b-2 border-[#ffd6b6] dark:border-[#282732]">
+                <th class="py-2 ps-2 pe-4 sticky start-0 z-2 bg-[#ffede0] dark:bg-[#100f1b] after:content-['_'] after:bg-[#ffd6b6] dark:after:bg-[#282732] after:w-[2px] after:h-full after:absolute after:end-0 after:-my-2">Utility</th>
+                <th class="p-2">Type</th>
+                <th class="p-2">Variable</th>
+                <th class="p-2">Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {utilities.map((utility) => <tr class="border-[#ffd6b6] dark:border-[#282732]">
+                <th class="py-2 ps-2 pe-4 sticky start-0 z-1 bg-[#ffede0] dark:bg-[#100f1b] after:content-['_'] after:bg-[#ffd6b6] dark:after:bg-[#282732] after:w-[2px] after:h-full after:absolute after:end-0 after:-my-2">{utility.name}</th>
+                <td class="p-2"><code>{utility.type}</code></td>
+                <td class="p-2"><code>{utility.variable}</code></td>
+                <td class="p-2" set:html={utility.description}></td>
+            </tr>)}
+        </tbody>
+    </table>
+</details>
