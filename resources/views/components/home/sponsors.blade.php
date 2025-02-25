@@ -297,8 +297,6 @@
 
                     <x-sponsors.larafast />
 
-                    <x-sponsors.lunar />
-
                     <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
