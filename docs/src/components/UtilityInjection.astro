@@ -1,63 +1,75 @@
 ---
-const { set } = Astro.props;
+let { extras, set, version } = Astro.props;
 
-const utilities = {
-    formFields: [
-        {
-            name: 'Field',
-            type: 'Filament\\Forms\\Components\\Field',
-            parameter: '$component',
-            description: 'The current field component instance.',
+extras = (extras ?? '').split('|').filter((extra) => extra !== '').map((extra) => {
+    const [name, type, parameter, description] = extra.split(';')
+
+    return { name, type, parameter, description }
+})
+
+let utilities = [
+    ...extras,
+    ...{
+        '4.x': {
+            formFields: [
+                {
+                    name: 'Field',
+                    type: 'Filament\\Forms\\Components\\Field',
+                    parameter: '$component',
+                    description: 'The current field component instance.',
+                },
+                {
+                    name: 'Get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$get',
+                    description: 'A function for retrieving values from the current form data.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current schema.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Raw state',
+                    type: 'mixed',
+                    parameter: '$rawState',
+                    description: 'The current value of the field, before state casts were applied.',
+                },
+                {
+                    name: 'State',
+                    type: 'mixed',
+                    parameter: '$state',
+                    description: 'The current value of the field.',
+                },
+                {
+                    name: 'Operation',
+                    type: 'string',
+                    parameter: '$operation',
+                    description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current schema.',
+                },
+            ],
         },
-        {
-            name: 'Get function',
-            type: 'Filament\\Schemas\\Components\\Utilities\\Get',
-            parameter: '$get',
-            description: 'A function for retrieving values from the current form data.',
-        },
-        {
-            name: 'Eloquent model FQN',
-            type: '?string<Illuminate\\Database\\Eloquent\\Model>',
-            parameter: '$model',
-            description: 'The Eloquent model FQN for the current schema.',
-        },
-        {
-            name: 'Livewire',
-            type: 'Livewire\\Component',
-            parameter: '$livewire',
-            description: 'The Livewire component instance.',
-        },
-        {
-            name: 'Raw state',
-            type: 'mixed',
-            parameter: '$rawState',
-            description: 'The current value of the field, before state casts were applied.',
-        },
-        {
-            name: 'State',
-            type: 'mixed',
-            parameter: '$state',
-            description: 'The current value of the field.',
-        },
-        {
-            name: 'Operation',
-            type: 'string',
-            parameter: '$operation',
-            description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
-        },
-        {
-            name: 'Eloquent record',
-            type: '?Illuminate\\Database\\Eloquent\\Model',
-            parameter: '$record',
-            description: 'The Eloquent record for the current schema.',
-        },
-        {
-            name: 'Set function',
-            type: 'Filament\\Schemas\\Components\\Utilities\\Set',
-            parameter: '$set',
-            description: 'A function for setting values in the current form data.',
-        },
-    ],
+    }[version][set],
+].sort((a, b) => a.name > b.name ? 1 : -1)
+
+// Remove duplicate utilities with the same parameter and preserve the last utility, allowing for overrides.
+utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, utility])).values())
+
+const link = {
+    formFields: `/docs/${version}/schemas/forms/overview#field-utility-injection`,
 }[set]
 ---
 
@@ -65,6 +77,10 @@ const utilities = {
     <summary class="font-medium">
         <slot />
     </summary>
+
+    <a href={link} target="_blank" class="mt-3">
+        Click here to learn about utility injection.
+    </a>
 
     <table class="block overflow-x-auto whitespace-nowrap mt-3 mb-0">
         <thead>
