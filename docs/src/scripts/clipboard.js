@@ -20,9 +20,14 @@ export default (Alpine) => {
                 let copyToClipboardButton = document.createElement('button')
                 copyToClipboardButton.innerHTML = this.clipboardIcon
                 copyToClipboardButton.id = `code-block-copy-button-${key}`
-                ;['md:block', 'hidden', 'absolute', 'top-3', 'end-3', 'text-white/50'].forEach(
-                    (value) => copyToClipboardButton.classList.add(value),
-                )
+                ;[
+                    'md:block',
+                    'hidden',
+                    'absolute',
+                    'top-3',
+                    'end-3',
+                    'text-white/50',
+                ].forEach((value) => copyToClipboardButton.classList.add(value))
 
                 copyToClipboardButton.setAttribute(
                     'aria-label',
