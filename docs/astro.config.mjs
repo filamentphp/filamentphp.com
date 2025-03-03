@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx'
 import icon from 'astro-icon'
 import { h } from 'hastscript'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
             theme: 'material-theme-palenight',
         },
         rehypePlugins: [
+            rehypeSlug,
             // Automatically add links to headings (@ref https://github.com/rehypejs/rehype-autolink-headings)
             [
                 rehypeAutolinkHeadings,
