@@ -1,8 +1,8 @@
 ---
 let { extras, set, version } = Astro.props;
 
-extras = (extras ?? '').split('|').filter((extra) => extra !== '').map((extra) => {
-    const [name, type, parameter, description] = extra.split(';')
+extras = (extras ?? '').split('||').filter((extra) => extra !== '').map((extra) => {
+    const [name, type, parameter, description] = extra.split(';;')
 
     return { name, type, parameter, description }
 })

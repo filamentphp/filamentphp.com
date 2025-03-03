@@ -15,7 +15,7 @@ export default defineConfig({
             theme: 'material-theme-palenight',
         },
         rehypePlugins: [
-            // Automatically add links to headings (@see https://github.com/rehypejs/rehype-autolink-headings)
+            // Automatically add links to headings (@ref https://github.com/rehypejs/rehype-autolink-headings)
             [
                 rehypeAutolinkHeadings,
                 {

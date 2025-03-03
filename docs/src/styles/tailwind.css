@@ -126,18 +126,12 @@
         @apply bg-slate-500/50;
     }
 
-    & p code {
-        @apply bg-dolphin/40;
-    }
-
+    & p code,
     & ul code {
-        @apply bg-dolphin/40;
+        @apply bg-white/20;
     }
 
-    & p code::selection {
-        @apply !bg-slate-500/50;
-    }
-
+    & p code::selection,
     & ul code::selection {
         @apply !bg-slate-500/50;
     }
