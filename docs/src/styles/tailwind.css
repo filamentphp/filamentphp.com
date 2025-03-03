@@ -42,6 +42,18 @@
     --color-primary-800: var(--color-amber-800);
     --color-primary-900: var(--color-amber-900);
     --color-primary-950: var(--color-amber-950);
+
+    --color-gray-50: var(--color-zinc-50);
+    --color-gray-100: var(--color-zinc-100);
+    --color-gray-200: var(--color-zinc-200);
+    --color-gray-300: var(--color-zinc-300);
+    --color-gray-400: var(--color-zinc-400);
+    --color-gray-500: var(--color-zinc-500);
+    --color-gray-600: var(--color-zinc-600);
+    --color-gray-700: var(--color-zinc-700);
+    --color-gray-800: var(--color-zinc-800);
+    --color-gray-900: var(--color-zinc-900);
+    --color-gray-950: var(--color-zinc-950);
 }
 
 @utility prose {
@@ -85,16 +97,16 @@
 
     /* All `.prose` elements except `code` */
     .dark & *:not(code)::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 
     /* All `code` elements and their children */
     .dark & code::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 
     .dark & code *::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 }
 
@@ -110,20 +122,20 @@
 
     /* All elements except `.prose` and `code` */
     & *::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 
     /* All `.prose` elements except `code` */
     & .prose *:not(code)::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 
     /* All `code` elements and their children */
     & .prose code::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
     & .prose code *::selection {
-        @apply bg-slate-500/50;
+        @apply bg-gray-500/50;
     }
 
     & p code,
@@ -133,7 +145,7 @@
 
     & p code::selection,
     & ul code::selection {
-        @apply !bg-slate-500/50;
+        @apply !bg-gray-500/50;
     }
 }
 
