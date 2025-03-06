@@ -22,7 +22,7 @@ let utilities = [
                     name: 'Get function',
                     type: 'Filament\\Schemas\\Components\\Utilities\\Get',
                     parameter: '$get',
-                    description: 'A function for retrieving values from the current form data.',
+                    description: 'A function for retrieving values from the current form data. Validation is not run.',
                 },
                 {
                     name: 'Eloquent model FQN',
@@ -40,13 +40,13 @@ let utilities = [
                     name: 'Raw state',
                     type: 'mixed',
                     parameter: '$rawState',
-                    description: 'The current value of the field, before state casts were applied.',
+                    description: 'The current value of the field, before state casts were applied. Validation is not run.',
                 },
                 {
                     name: 'State',
                     type: 'mixed',
                     parameter: '$state',
-                    description: 'The current value of the field.',
+                    description: 'The current value of the field. Validation is not run.',
                 },
                 {
                     name: 'Operation',

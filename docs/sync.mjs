@@ -320,6 +320,8 @@ versions.forEach((version) => {
                                     return 'About Filament'
                                 case 'styling':
                                     return 'Customizing Styling'
+                                case 'tenancy':
+                                    return 'Multi-Tenancy'
                                 case 'ui':
                                     return 'Blade UI Components'
                                 default:

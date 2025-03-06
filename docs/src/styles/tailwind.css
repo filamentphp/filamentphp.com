@@ -186,6 +186,10 @@
     }
 }
 
+.navigation-custom-scrollbar {
+    scrollbar-gutter: stable;
+}
+
 .navigation-custom-scrollbar::-webkit-scrollbar {
     height: 10px;
     width: 10px;
