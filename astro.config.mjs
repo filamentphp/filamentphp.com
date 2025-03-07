@@ -1,10 +1,10 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-import tailwind from '@astrojs/tailwind';
+import { defineConfig } from 'astro/config'
+import starlight from '@astrojs/starlight'
+import tailwind from '@astrojs/tailwind'
 
-// https://astro.build/config
 export default defineConfig({
+    site: 'https://filamentphp.com',
     base: '/docs',
     publicDir: './docs/public',
     outDir: './public/docs',
@@ -12,7 +12,7 @@ export default defineConfig({
     trailingSlash: 'never',
     integrations: [
         starlight({
-            title: 'Docs with Tailwind',
+            title: 'Filament',
             social: {
                 github: 'https://github.com/withastro/starlight',
             },
@@ -20,7 +20,6 @@ export default defineConfig({
                 {
                     label: 'Guides',
                     items: [
-                        // Each item here is one entry in the navigation menu.
                         { label: 'Example Guide', slug: 'guides/example' },
                     ],
                 },
@@ -33,4 +32,4 @@ export default defineConfig({
         }),
         tailwind({ applyBaseStyles: false, configFile: './docs/tailwind.config.mjs' }),
     ],
-});
+})
