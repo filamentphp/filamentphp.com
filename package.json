@@ -2,11 +2,18 @@
     "private": true,
     "scripts": {
         "dev": "vite",
+        "docs:astro": "astro",
+        "docs:build": "astro build",
+        "docs:dev": "astro dev",
+        "docs:preview": "astro preview",
+        "docs:start": "astro dev",
         "build": "vite build",
-        "prettier": "npx prettier --write .",
-        "generate-docs": "cd docs && npm run generate && cd ../"
+        "prettier": "npx prettier --write ."
     },
     "devDependencies": {
+        "@astrojs/starlight": "^0.32.2",
+        "@astrojs/starlight-tailwind": "^3.0.0",
+        "@astrojs/tailwind": "^5.1.4",
         "@docsearch/js": "^3.5.2",
         "@formkit/auto-animate": "^0.8.1",
         "@rive-app/canvas": "^2.7.4",
@@ -15,6 +22,7 @@
         "@tailwindcss/forms": "^0.5.7",
         "@tailwindcss/typography": "^0.5.10",
         "alpinejs": "^3.13.3",
+        "astro": "^5.1.5",
         "autoprefixer": "^10.4.16",
         "gsap": "^3.12.2",
         "laravel-vite-plugin": "^0.8.1",
@@ -24,15 +32,10 @@
         "prettier": "^2.8.8",
         "prettier-plugin-blade": "^1.6.16",
         "prettier-plugin-tailwindcss": "^0.3.0",
+        "sharp": "^0.32.5",
         "swiper": "^11.0.5",
-        "tailwindcss": "^3.3.5",
+        "tailwindcss": "^3.4.4",
         "tippy.js": "^6.3.7",
         "vite": "^4.5.0"
-    },
-    "postcss": {
-        "plugins": {
-            "tailwindcss": {},
-            "autoprefixer": {}
-        }
     }
 }

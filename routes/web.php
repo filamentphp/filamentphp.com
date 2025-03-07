@@ -91,9 +91,10 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
         }
 
+        abort(404);
         $filePath = base_path("docs/dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {

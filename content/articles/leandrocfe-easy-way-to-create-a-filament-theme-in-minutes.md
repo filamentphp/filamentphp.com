@@ -175,7 +175,7 @@ npx tailwindcss init
 Configure the Tailwind Resource:
 
 ```javascript
-//tailwind.config.js
+//tailwind-site.config.js
 const colors = require("tailwindcss/colors");
  
 module.exports = {

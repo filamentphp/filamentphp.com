@@ -48,7 +48,7 @@ Tailwind CSS compiles only classes explicitly referenced in scanned files. Class
     - _First, add a new item to the `input` array of `vite.config.js`: `resources/css/filament/admin/theme.css`_
     - _Next, register the theme in the admin panel provider using `->viteTheme('resources/css/filament/admin/theme.css')`_
 
-- Update the content array in your `tailwind.config.js` to include the relevant directory:
+- Update the content array in your `tailwind-site.config.js` to include the relevant directory:
 ```js
 export default {
     presets: [preset],
