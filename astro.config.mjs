@@ -30,6 +30,9 @@ export default defineConfig({
             ],
             customCss: ['./docs/tailwind.css'],
         }),
-        tailwind({ applyBaseStyles: false, configFile: './docs/tailwind.config.mjs' }),
+        tailwind({
+            applyBaseStyles: false,
+            configFile: './docs/tailwind.config.mjs',
+        }),
     ],
 })
