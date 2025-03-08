@@ -1,0 +1,18 @@
+---
+import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter'
+import SidebarPersister from '@astrojs/starlight/components/SidebarPersister.astro'
+import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro'
+import { getVersionFromId } from '../utilities/versioning'
+
+const { id, sidebar } = Astro.locals.starlightRoute
+
+const sublist = sidebar.find((group) => group.label === getVersionFromId(id))?.entries ?? []
+---
+
+<SidebarPersister>
+    <SidebarSublist sublist={sublist} />
+</SidebarPersister>
+
+<div class="md:sl-hidden">
+    <MobileMenuFooter />
+</div>

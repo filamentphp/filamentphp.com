@@ -18,16 +18,26 @@ export default defineConfig({
             },
             sidebar: [
                 {
-                    label: 'Guides',
-                    items: [
-                        { label: 'Example Guide', slug: 'guides/example' },
-                    ],
+                    label: '1.x',
+                    autogenerate: { directory: '1.x' },
                 },
                 {
-                    label: 'Reference',
-                    autogenerate: { directory: 'reference' },
+                    label: '2.x',
+                    autogenerate: { directory: '2.x' },
+                },
+                {
+                    label: '3.x',
+                    autogenerate: { directory: '3.x' },
+                },
+                {
+                    label: '4.x',
+                    autogenerate: { directory: '4.x' },
                 },
             ],
+            components: {
+                Footer: './docs/components/Footer.astro',
+                Sidebar: './docs/components/Sidebar.astro',
+            },
             customCss: ['./docs/tailwind.css'],
         }),
         tailwind({
