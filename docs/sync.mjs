@@ -18,7 +18,7 @@ const packageSlugToTitle = (slug) => {
         case 'admin':
             return 'Admin Panel'
         case 'schemas':
-            return 'Forms, Infolists & Schemas'
+            return 'Schemas (Forms & Infolists)'
         case 'support':
             return 'Core Concepts'
         default:
