@@ -105,6 +105,44 @@ let utilities = [
                     description: 'The Eloquent record for the current schema.',
                 },
             ],
+            layoutComponents: [
+                {
+                    name: 'Component',
+                    type: 'Filament\\Schemas\\Components\\Component',
+                    parameter: '$component',
+                    description: 'The current component instance.',
+                },
+                {
+                    name: 'Get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$get',
+                    description: 'A function for retrieving values from the current schema data. Validation is not run on form fields.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current schema.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Operation',
+                    type: 'string',
+                    parameter: '$operation',
+                    description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current schema.',
+                },
+            ],
         },
     }[version][set],
 ].sort((a, b) => a.name > b.name ? 1 : -1)
@@ -115,6 +153,7 @@ utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, ut
 const link = {
     formFields: `/docs/${version}/schemas/forms/overview#field-utility-injection`,
     infolistEntries: `/docs/${version}/schemas/infolists/overview#entry-utility-injection`,
+    layoutComponents: `/docs/${version}/schemas/layouts/overview#component-utility-injection`,
 }[set]
 ---
 
