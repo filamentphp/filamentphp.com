@@ -17,8 +17,6 @@ const packageSlugToTitle = (slug) => {
     switch (slug) {
         case 'admin':
             return 'Admin Panel'
-        case 'schemas':
-            return 'Schemas (Forms & Infolists)'
         case 'support':
             return 'Core Concepts'
         default:
@@ -120,10 +118,10 @@ versions.forEach((version) => {
         const packagesOrder = [
             'panels',
             'admin',
-            'forms',
-            'infolists',
             'tables',
             'schemas',
+            'forms',
+            'infolists',
             'actions',
             'notifications',
             'widgets',
