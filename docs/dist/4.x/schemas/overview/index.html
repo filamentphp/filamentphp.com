@@ -189,10 +189,10 @@ DOCS
 </ul>
 <p>For displaying arbitrary content, Filament includes <a href="primes">prime</a> components:</p>
 <ul>
-<li><a href="primes#text">Text</a></li>
-<li><a href="primes#icon">Icon</a></li>
-<li><a href="primes#image">Image</a></li>
-<li><a href="primes#unordered-list">Unordered list</a></li>
+<li><a href="primes#text-component">Text</a></li>
+<li><a href="primes#icon-component">Icon</a></li>
+<li><a href="primes#image-component">Image</a></li>
+<li><a href="primes#unordered-list-component">Unordered list</a></li>
 </ul>
 <p>You can also insert “action” buttons into schemas. These can run PHP functions, and even open modals. For more information, see the <a href="../actions">actions documentation</a>.</p>
 <p>You can learn more about building custom components to render your own Blade views in the <a href="custom-components">custom components documentation</a>.</p>
@@ -316,7 +316,7 @@ DOCS
 <span class="line"><span style="color:#89DDFF">}</span></span>
 <span class="line"></span></code></pre>
 <h2 id="global-settings"><a class="heading-anchor" href="#global-settings"><span class="heading-anchor-icon" aria-hidden="true">#</span></a>Global settings</h2>
-<p>If you wish to change the default behavior of a component globally, then you can call the static <code>configureUsing()</code> method inside a service provider’s <code>boot()</code> method, to which you pass a Closure to modify the component using. For example, if you wish to make all section components have <a href="grid">2 columns</a> by default, you can do it like so:</p>
+<p>If you wish to change the default behavior of a component globally, then you can call the static <code>configureUsing()</code> method inside a service provider’s <code>boot()</code> method, to which you pass a Closure to modify the component using. For example, if you wish to make all section components have <a href="sections#using-grid-columns-within-a-section">2 columns</a> by default, you can do it like so:</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8;overflow-x:auto" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F78C6C">use</span><span style="color:#BABED8"> Filament</span><span style="color:#89DDFF">\</span><span style="color:#BABED8">Schemas</span><span style="color:#89DDFF">\</span><span style="color:#BABED8">Components</span><span style="color:#89DDFF">\</span><span style="color:#BABED8">Section</span><span style="color:#89DDFF">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFCB6B">Section</span><span style="color:#89DDFF">::</span><span style="color:#82AAFF">configureUsing</span><span style="color:#89DDFF">(</span><span style="color:#C792EA">function</span><span style="color:#89DDFF"> (</span><span style="color:#FFCB6B">Section</span><span style="color:#89DDFF"> $</span><span style="color:#BABED8">section</span><span style="color:#89DDFF">):</span><span style="color:#F78C6C"> void</span><span style="color:#89DDFF"> {</span></span>
