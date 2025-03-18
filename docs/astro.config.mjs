@@ -13,7 +13,10 @@ export default defineConfig({
     integrations: [react(), mdx(), icon()],
     markdown: {
         shikiConfig: {
-            theme: 'material-theme-palenight',
+            themes: {
+                light: 'catppuccin-latte',
+                dark: 'catppuccin-mocha',
+            },
         },
         rehypePlugins: [
             rehypeSlug,

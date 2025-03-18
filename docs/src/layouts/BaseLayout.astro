@@ -24,7 +24,7 @@ let { title = "Filament", description = "", pageTitle = null, githubUrl = null, 
 
 let { headings = [] } = Astro.props;
 
-let isHomePage = Astro.url.pathname === "/docs/";
+let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
@@ -245,60 +245,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </div>
     <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
-
-        <div
-            x-data="{ numberOfExtraLinks: 0, isExpanded: false, isVisible: false }"
-            x-init="
-                setTimeout(() => {
-                    isVisible = true
-                }, 550)
-
-                setInterval(() => {
-                      numberOfExtraLinks = $el.querySelectorAll('li').length - 1
-                  }, 500)
-              "
-            x-collapse
-            x-cloak
-            x-show="isVisible"
-            id="context-stack"
-            class="hidden rounded-lg max-w-64 px-4 py-3 -mx-4 mt-6 z-10 bg-merino/70 flex-col gap-3 dark:bg-dolphin/20 flex-when-contains-context"
-        >
-            <div x-bind:style="(isExpanded || (numberOfExtraLinks <= 0)) || 'mask-image: linear-gradient(to bottom, white 50%, transparent)'">
-                <div
-                    x-show="isExpanded || (numberOfExtraLinks <= 0)"
-                    x-collapse.min.100px
-                >
-                    <p class="font-medium text-base mb-1 text-stone-900 dark:text-white">
-                        Useful links
-                    </p>
-
-                    <div
-                        id="global-context-stack"
-                        class="context-stack text-sm text-hurricane dark:text-merino"
-                    ></div>
-
-                    <div
-                        id="local-context-stack"
-                        class="context-stack text-sm text-hurricane dark:text-merino"
-                    ></div>
-                </div>
-            </div>
-
-            <button
-                type="button"
-                x-show="numberOfExtraLinks > 0"
-                x-on:click="isExpanded = (! isExpanded)"
-                class="flex gap-1 items-center justify-center w-full text-sm text-stone-900 dark:text-white"
-            >
-                  <span
-                      x-text="numberOfExtraLinks"
-                      class="bg-peach-orange/80 dark:bg-transparent text-black dark:text-butter rounded-md flex items-center justify-center w-6 h-6"
-                  ></span>
-                <span>more</span>
-                <span x-text="(numberOfExtraLinks > 1) ? 'links' : 'link'"></span>
-                <span x-html="isExpanded ? '&uarr;' : '&darr;'"></span>
-            </button>
-        </div>
 
         {contents && <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
             {
