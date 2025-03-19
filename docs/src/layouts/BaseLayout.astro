@@ -28,7 +28,7 @@ let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/quickstart/", "4.x", "quickstart", ""];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/quickstart/", "3.x", "quickstart", ""];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");

@@ -91,22 +91,22 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/overview/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/getting-started/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);

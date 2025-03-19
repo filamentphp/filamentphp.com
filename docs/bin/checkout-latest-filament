@@ -4,7 +4,6 @@ DOCS_VERSIONS=(
     1.x
     2.x
     3.x
-    4.x
 )
 
 for v in "${DOCS_VERSIONS[@]}"; do
