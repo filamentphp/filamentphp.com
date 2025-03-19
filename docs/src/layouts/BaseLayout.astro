@@ -130,7 +130,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         x-data="{
           banner: null,
         }"
-        x-init="banner = Math.floor(Math.random() * 3)"
+        x-init="banner = Math.floor(Math.random() * 4)"
         class="max-w-8xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9"
       >
         <span x-show="banner === 0">
@@ -139,9 +139,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <span
           x-show="banner === 1"
         >
-            Build faster with <a href="https://whizzy.dev/?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner" target="_blank" class="underline">Whizzy</a>.
+            Build faster with <a href="https://whizzy.dev/projects?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner" target="_blank" class="underline">Whizzy</a>.
         </span>
-        <span x-show="banner === 2">
+        <span
+          x-show="banner === 2"
+        >
+            Customize your design with <a href="https://whizzy.dev/themes?utm_source=filament&amp;utm_medium=referral&amp;utm_campaign=partner&amp;utm_content=banner" target="_blank" class="underline">Filament Themes</a>.
+        </span>
+        <span x-show="banner === 3">
           Love Filament? We'd really appreciate your <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.
         </span>
       </div>
