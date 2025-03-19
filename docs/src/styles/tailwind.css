@@ -28,6 +28,7 @@
     --font-mono: 'Jetbrains Mono', 'sans-serif';
 
     --spacing-8xl: 88rem;
+    --spacing-9xl: 92rem;
 }
 
 @theme inline {
