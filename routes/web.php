@@ -59,23 +59,6 @@ Route::get('/api/{version?}', function (string $version = '4.x'): RedirectRespon
 })->where('version', '[1-3]+\.x')->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/panels/getting-started');
-    Route::redirect('/resources', '/docs/panels/resources/getting-started');
-    Route::redirect('/pages', '/docs/panels/pages');
-    Route::redirect('/dashboard', '/docs/panels/dashboard');
-    Route::redirect('/navigation', '/docs/panels/navigation');
-    Route::redirect('/plugin-development', '/docs/panels/plugins');
-
-    Route::redirect('/admin', '/docs/panels/installation');
-    Route::redirect('/panels', '/docs/panels/installation');
-    Route::redirect('/forms', '/docs/forms/installation');
-    Route::redirect('/tables', '/docs/tables/installation');
-    Route::redirect('/notifications', '/docs/notifications/installation');
-    Route::redirect('/actions', '/docs/actions/installation');
-    Route::redirect('/infolists', '/docs/infolists/installation');
-    Route::redirect('/widgets', '/docs/widgets/installation');
-    Route::redirect('/support', '/docs/support/overview');
-
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 

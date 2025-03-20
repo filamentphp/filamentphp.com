@@ -70,8 +70,6 @@ versions.forEach((version) => {
             }
         })
 
-        versionEntry.href = versionEntry.links[0].href
-
         fs.mkdir(`src/pages/1.x/admin`, { recursive: true }, () => {
             const sourceFiles = getDirContents(`./filament/1.x/docs`)
 
@@ -207,8 +205,6 @@ versions.forEach((version) => {
                     href: docStructure[0].href,
                     links: docStructure,
                 })
-
-                versionEntry.href = versionEntry.links[0].links[0].href
 
                 fs.mkdir(
                     `src/pages/${version}/${packageName}`,
@@ -392,6 +388,8 @@ versions.forEach((version) => {
             })
         })
     }
+
+    structure.find((item) => item.version === version).href = structure.find((item) => item.version === version).links[0].href
 })
 
 // write the navigation structure to a file
