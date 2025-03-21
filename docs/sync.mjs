@@ -5,8 +5,7 @@ import { copy } from 'fs-extra'
 import matter from 'gray-matter'
 
 const getDirContents = (dir, filelist = []) => {
-    fs
-        .readdirSync(dir)
+    fs.readdirSync(dir)
         .filter((name) => name !== '.DS_Store')
         .forEach((file) => {
             filelist = fs.statSync(path.join(dir, file)).isDirectory()
@@ -51,7 +50,9 @@ const getTitleFromMarkdown = (file) => {
 console.log('Processing docs...')
 
 let structure = []
-let versions = fs.readdirSync('./filament').filter((name) => name !== '.DS_Store')
+let versions = fs
+    .readdirSync('./filament')
+    .filter((name) => name !== '.DS_Store')
 
 versions.forEach((version) => {
     if (fs.existsSync(`./src/pages/${version}`)) {
@@ -261,7 +262,8 @@ versions.forEach((version) => {
         })
 
         if (!fs.existsSync(`./filament/${version}/docs`)) {
-            structure.find((item) => item.version === version).href = structure.find((item) => item.version === version).links[0].href
+            structure.find((item) => item.version === version).href =
+                structure.find((item) => item.version === version).links[0].href
 
             return
         }
