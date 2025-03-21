@@ -7,13 +7,11 @@ DOCS_VERSIONS=(
 )
 
 for v in "${DOCS_VERSIONS[@]}"; do
-    if [ -d "filament/$v" ]; then
-        echo "Pulling latest documentation updates for $v..."
-        (cd filament/$v && git pull)
-    else
+    if [ ! -d "filament/$v" ]; then
         echo "Cloning $v..."
         git clone --single-branch --branch "$v" git@github.com:filamentphp/filament.git "filament/$v"
     fi;
 done
 
+rm -rf filament/4.x
 ln -sf ../../../filament filament/4.x
