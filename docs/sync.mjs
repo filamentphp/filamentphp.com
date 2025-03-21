@@ -5,11 +5,14 @@ import { copy } from 'fs-extra'
 import matter from 'gray-matter'
 
 const getDirContents = (dir, filelist = []) => {
-    fs.readdirSync(dir).forEach((file) => {
-        filelist = fs.statSync(path.join(dir, file)).isDirectory()
-            ? getDirContents(path.join(dir, file), filelist)
-            : filelist.concat(path.join(dir, file))
-    })
+    fs
+        .readdirSync(dir)
+        .filter((name) => name !== '.DS_Store')
+        .forEach((file) => {
+            filelist = fs.statSync(path.join(dir, file)).isDirectory()
+                ? getDirContents(path.join(dir, file), filelist)
+                : filelist.concat(path.join(dir, file))
+        })
     return filelist
 }
 
@@ -48,7 +51,7 @@ const getTitleFromMarkdown = (file) => {
 console.log('Processing docs...')
 
 let structure = []
-let versions = fs.readdirSync('./filament')
+let versions = fs.readdirSync('./filament').filter((name) => name !== '.DS_Store')
 
 versions.forEach((version) => {
     if (fs.existsSync(`./src/pages/${version}`)) {
@@ -59,7 +62,9 @@ versions.forEach((version) => {
 
     if (version === '1.x') {
         const versionEntry = structure.find((item) => item.version === version)
-        const files = fs.readdirSync(`./filament/${version}/docs`)
+        const files = fs
+            .readdirSync(`./filament/${version}/docs`)
+            .filter((name) => name !== '.DS_Store')
 
         versionEntry.links = files.map((file) => {
             return {
@@ -256,6 +261,8 @@ versions.forEach((version) => {
         })
 
         if (!fs.existsSync(`./filament/${version}/docs`)) {
+            structure.find((item) => item.version === version).href = structure.find((item) => item.version === version).links[0].href
+
             return
         }
 
