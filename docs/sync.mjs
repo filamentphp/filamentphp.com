@@ -397,7 +397,9 @@ versions.forEach((version) => {
         })
     }
 
-    structure.find((item) => item.version === version).href = structure.find((item) => item.version === version).links[0].href
+    structure.find((item) => item.version === version).href = structure.find(
+        (item) => item.version === version,
+    ).links[0].href
 })
 
 // write the navigation structure to a file
