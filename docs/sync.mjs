@@ -131,6 +131,7 @@ versions.forEach((version) => {
             .sort(function (a, b) {
                 return packagesOrder.indexOf(a) - packagesOrder.indexOf(b)
             })
+            .filter((name) => name !== '.DS_Store')
 
         packages.forEach((packageName) => {
             if (
