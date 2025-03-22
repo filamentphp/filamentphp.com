@@ -23,6 +23,8 @@
 
             <x-sponsors.vormkracht10 footer />
 
+            <x-sponsors.lunar footer />
+
             <a
                 href="https://github.com/filamentphp/filament?sponsor=1"
                 target="_blank"
