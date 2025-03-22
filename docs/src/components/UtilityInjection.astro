@@ -1,0 +1,188 @@
+---
+let { extras, set, version } = Astro.props;
+
+extras = (extras ?? '').split('||').filter((extra) => extra !== '').map((extra) => {
+    const [name, type, parameter, description] = extra.split(';;')
+
+    return { name, type, parameter, description }
+})
+
+let utilities = [
+    ...extras,
+    ...{
+        '4.x': {
+            formFields: [
+                {
+                    name: 'Field',
+                    type: 'Filament\\Forms\\Components\\Field',
+                    parameter: '$component',
+                    description: 'The current field component instance.',
+                },
+                {
+                    name: 'Get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$get',
+                    description: 'A function for retrieving values from the current form data. Validation is not run.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current schema.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Raw state',
+                    type: 'mixed',
+                    parameter: '$rawState',
+                    description: 'The current value of the field, before state casts were applied. Validation is not run.',
+                },
+                {
+                    name: 'State',
+                    type: 'mixed',
+                    parameter: '$state',
+                    description: 'The current value of the field. Validation is not run.',
+                },
+                {
+                    name: 'Operation',
+                    type: 'string',
+                    parameter: '$operation',
+                    description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current schema.',
+                },
+            ],
+            infolistEntries: [
+                {
+                    name: 'Entry',
+                    type: 'Filament\\Infolists\\Components\\Entry',
+                    parameter: '$component',
+                    description: 'The current entry component instance.',
+                },
+                {
+                    name: 'Get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$get',
+                    description: 'A function for retrieving values from the current schema data. Validation is not run on form fields.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current schema.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'State',
+                    type: 'mixed',
+                    parameter: '$state',
+                    description: 'The current value of the entry.',
+                },
+                {
+                    name: 'Operation',
+                    type: 'string',
+                    parameter: '$operation',
+                    description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current schema.',
+                },
+            ],
+            schemaComponents: [
+                {
+                    name: 'Component',
+                    type: 'Filament\\Schemas\\Components\\Component',
+                    parameter: '$component',
+                    description: 'The current component instance.',
+                },
+                {
+                    name: 'Get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$get',
+                    description: 'A function for retrieving values from the current schema data. Validation is not run on form fields.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current schema.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Operation',
+                    type: 'string',
+                    parameter: '$operation',
+                    description: 'The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current schema.',
+                },
+            ],
+        },
+    }[version][set],
+].sort((a, b) => a.name > b.name ? 1 : -1)
+
+// Remove duplicate utilities with the same parameter and preserve the last utility, allowing for overrides.
+utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, utility])).values())
+
+const link = {
+    formFields: `/docs/${version}/forms/overview#field-utility-injection`,
+    infolistEntries: `/docs/${version}/infolists/overview#entry-utility-injection`,
+    schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
+}[set]
+---
+
+<details class="rounded-lg bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
+    <summary class="font-medium">
+        <slot />
+    </summary>
+
+    <a href={link} target="_blank" class="mt-3">
+        Click here to learn about utility injection.
+    </a>
+
+    <table class="block overflow-x-auto whitespace-nowrap mt-3 mb-0">
+        <thead>
+            <tr class="border-b-2 border-[#ffd6b6] dark:border-[#282732]">
+                <th class="py-2 ps-2 pe-4 sticky start-0 z-2 bg-[#ffede0] dark:bg-[#100f1b] after:content-['_'] after:bg-[#ffd6b6] dark:after:bg-[#282732] after:w-[2px] after:h-full after:absolute after:end-0 after:-my-2">Utility</th>
+                <th class="p-2">Type</th>
+                <th class="p-2">Parameter</th>
+                <th class="p-2">Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {utilities.map((utility) => <tr class="border-[#ffd6b6] dark:border-[#282732]">
+                <th class="py-2 ps-2 pe-4 sticky start-0 z-1 bg-[#ffede0] dark:bg-[#100f1b] after:content-['_'] after:bg-[#ffd6b6] dark:after:bg-[#282732] after:w-[2px] after:h-full after:absolute after:end-0 after:-my-2">{utility.name}</th>
+                <td class="p-2"><code>{utility.type}</code></td>
+                <td class="p-2"><code>{utility.parameter}</code></td>
+                <td class="p-2" set:html={utility.description}></td>
+            </tr>)}
+        </tbody>
+    </table>
+</details>

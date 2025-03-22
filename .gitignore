@@ -3,6 +3,7 @@
 /node_modules.nosync
 /public/build
 /public/api
+/public/docs
 /public/hot
 /public/storage
 /storage/*.key
