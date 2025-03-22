@@ -34,19 +34,19 @@ const { getStartedLink } = Astro.props
             <div class="grid relative w-80 h-56">
                 <!-- Bulb Light -->
                 <img
-                    src={bulbLight}
+                    src={bulbLight.src}
                     alt=""
                     class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden z-10"
                 />
                 <!-- Bulb Dark -->
                 <img
-                    src={bulbDark}
+                    src={bulbDark.src}
                     alt=""
                     class="[grid-area:1/-1] self-start mix-blend-lighten relative -left-1 -top-10 justify-self-center w-40 -z-10 hidden dark:block"
                 />
                 <!-- Book -->
                 <img
-                    src={book}
+                    src={book.src}
                     alt=""
                     class="[grid-area:1/-1] self-end justify-self-center w-64"
                 />
@@ -757,10 +757,6 @@ const { getStartedLink } = Astro.props
                 <img src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png" alt="Ploi" class="block rounded-xl">
             </a>
 
-            <a href="https://larafast.com?ref=filament" target="_blank" class="block my-auto">
-                <img src="https://github.com/user-attachments/assets/5d2fe13a-cd0e-4bf6-ae62-9477510ddc66" alt="Larafast" class="block rounded-xl">
-            </a>
-
             <a href="https://tappnetwork.com" target="_blank" class="block bg-white rounded-xl my-auto">
                 <img src="https://github.com/filamentphp/filament/assets/44533235/cd8be68b-59f3-4b93-8b25-f82c6f2d7864" alt="Tapp Network" class="block">
             </a>
@@ -972,6 +968,10 @@ const { getStartedLink } = Astro.props
                         </clipPath>
                     </defs>
                 </svg>
+            </a>
+
+            <a href="https://pingniner.com/?utm_source=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/efecfa02-9d6e-409e-90be-ab741efc29f8" alt="Pingniner" class="block rounded-xl">
             </a>
 
             <a href="https://saasykit.com/?utm_source=filament" target="_blank" class="block my-auto">
