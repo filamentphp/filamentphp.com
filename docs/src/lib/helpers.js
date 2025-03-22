@@ -3,7 +3,7 @@ export function collectHeadings(headings = []) {
 
     for (let heading of headings) {
         if (heading.depth === 2 || heading.depth === 3) {
-            let title = heading.text
+            let title = heading.text.replace(/^#/, '')
             if (title) {
                 if (heading.depth === 3) {
                     if (!sections[sections.length - 1]) {

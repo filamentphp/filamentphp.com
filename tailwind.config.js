@@ -39,6 +39,7 @@ module.exports = {
             },
             maxWidth: {
                 '8xl': '88rem',
+                '9xl': '92rem',
             },
             typography: (theme) => ({
                 DEFAULT: {
