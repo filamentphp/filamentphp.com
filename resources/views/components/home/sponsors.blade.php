@@ -295,8 +295,6 @@
 
                     <x-sponsors.vormkracht10 />
 
-                    <x-sponsors.larafast />
-
                     <x-sponsors.lunar />
 
                     <x-sponsors.ploi />
