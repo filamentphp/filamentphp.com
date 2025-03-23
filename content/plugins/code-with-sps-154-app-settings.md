@@ -9,5 +9,5 @@ github_repository: CWSPS154/app-settings
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-03-22
+publish_date: 2025-03-23
 ---
