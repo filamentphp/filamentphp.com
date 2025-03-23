@@ -5,11 +5,11 @@ slug: devaslan-fluent
 author_slug: devaslan
 categories: [widget, form-builder, form-field, table-column]
 description: Simplify the creation and automation of workflows.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1353168295314067498
 docs_url: https://fluent.heloufir.dev/docs.md
 github_repository: devaslanca/filament-fluent
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-03-17
+publish_date: 2025-03-22
 ---
