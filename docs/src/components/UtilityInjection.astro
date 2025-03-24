@@ -143,6 +143,44 @@ let utilities = [
                     description: 'The Eloquent record for the current schema.',
                 },
             ],
+            tableColumns: [
+                {
+                    name: 'Column',
+                    type: 'Filament\\Tables\\Columns\\Column',
+                    parameter: '$column',
+                    description: 'The current column instance.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Row loop',
+                    type: 'stdClass',
+                    parameter: '$rowLoop',
+                    description: 'The <a href="https://laravel.com/docs/blade#the-loop-variable" target="_blank">row loop</a> object for the current table row.',
+                },
+                {
+                    name: 'State',
+                    type: 'mixed',
+                    parameter: '$state',
+                    description: 'The current value of the column, based on the current table row.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current table row.',
+                },
+                {
+                    name: 'Table',
+                    type: 'Filament\\Tables\\Table',
+                    parameter: '$table',
+                    description: 'The current table instance.',
+                },
+            ],
         },
     }[version][set],
 ].sort((a, b) => a.name > b.name ? 1 : -1)
@@ -154,6 +192,7 @@ const link = {
     formFields: `/docs/${version}/forms/overview#field-utility-injection`,
     infolistEntries: `/docs/${version}/infolists/overview#entry-utility-injection`,
     schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
+    tableColumns: `/docs/${version}/tables/columns/overview#column-utility-injection`,
 }[set]
 ---
 
