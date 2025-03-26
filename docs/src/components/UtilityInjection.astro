@@ -181,6 +181,26 @@ let utilities = [
                     description: 'The current table instance.',
                 },
             ],
+            tableFilters: [
+                {
+                    name: 'Filter',
+                    type: 'Filament\\Tables\\Filters\\BaseFilter',
+                    parameter: '$filter',
+                    description: 'The current filter instance.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Table',
+                    type: 'Filament\\Tables\\Table',
+                    parameter: '$table',
+                    description: 'The current table instance.',
+                },
+            ],
         },
     }[version][set],
 ].sort((a, b) => a.name > b.name ? 1 : -1)
@@ -193,6 +213,7 @@ const link = {
     infolistEntries: `/docs/${version}/infolists/overview#entry-utility-injection`,
     schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
     tableColumns: `/docs/${version}/tables/columns/overview#column-utility-injection`,
+    tableFilters: `/docs/${version}/tables/filters/overview#filter-utility-injection`,
 }[set]
 ---
 
