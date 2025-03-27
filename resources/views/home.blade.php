@@ -1,5 +1,5 @@
 @php
-    seo()->image(asset('images/og.jpg'));
+    seo()->image(asset('images/og.png'));
 @endphp
 
 <x-layouts.app>
