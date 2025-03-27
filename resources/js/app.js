@@ -29,6 +29,7 @@ import {
     circInOut,
     anticipate,
     spring,
+    stagger,
 } from 'motion'
 
 // Swiper
@@ -71,6 +72,7 @@ window.motion = {
     circInOut: circInOut,
     anticipate: anticipate,
     spring: spring,
+    stagger: stagger,
 }
 
 // Alpine
