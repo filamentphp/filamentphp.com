@@ -71,9 +71,9 @@
 
                 {{-- Title --}}
                 <div class="pt-5">
-                    <div class="text-3xl font-extrabold">
+                    <h1 class="text-3xl font-extrabold">
                         {{ $article->title }}
-                    </div>
+                    </h1>
                 </div>
 
                 <div class="pt-2">
@@ -159,7 +159,7 @@
                     <div
                         class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                     >
-                        {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($article->content))->sanitizeHtml()) !!}
+                        {!! \App\Support\Markdown::parse($article->content) !!}
                     </div>
                 </div>
             </div>

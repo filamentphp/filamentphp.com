@@ -129,7 +129,7 @@
                             ),
                         ])
                     >
-                        Community
+                        Content
                     </div>
                 </a>
             </li>

@@ -54,24 +54,11 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
+Route::get('/api/{version?}', function (string $version = '4.x'): RedirectResponse {
+    return redirect('/api/' . $version . '/index.html');
+})->where('version', '[1-3]+\.x')->name('api-docs');
+
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/panels/getting-started');
-    Route::redirect('/resources', '/docs/panels/resources/getting-started');
-    Route::redirect('/pages', '/docs/panels/pages');
-    Route::redirect('/dashboard', '/docs/panels/dashboard');
-    Route::redirect('/navigation', '/docs/panels/navigation');
-    Route::redirect('/plugin-development', '/docs/panels/plugins');
-
-    Route::redirect('/admin', '/docs/panels/installation');
-    Route::redirect('/panels', '/docs/panels/installation');
-    Route::redirect('/forms', '/docs/forms/installation');
-    Route::redirect('/tables', '/docs/tables/installation');
-    Route::redirect('/notifications', '/docs/notifications/installation');
-    Route::redirect('/actions', '/docs/actions/installation');
-    Route::redirect('/infolists', '/docs/infolists/installation');
-    Route::redirect('/widgets', '/docs/widgets/installation');
-    Route::redirect('/support', '/docs/support/overview');
-
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
@@ -87,22 +74,22 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/overview/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/getting-started/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
@@ -161,6 +148,7 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
         Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
+        Route::redirect('/filament-minimal-theme', '/plugins/filament-themes');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
@@ -175,4 +163,4 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
-Route::redirect('/themes', '/plugins/filament-minimal-theme');
+Route::redirect('/themes', '/plugins/filament-themes');

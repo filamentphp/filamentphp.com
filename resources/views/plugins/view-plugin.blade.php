@@ -97,10 +97,10 @@
                     >
                         Visit GitHub
                     </a>
-                @else
+                @elseif ($checkoutUrl = $plugin->getCheckoutUrl())
                     {{-- Price --}}
                     <a
-                        href="{{ $plugin->getCheckoutUrl() }}"
+                        href="{{ $checkoutUrl }}"
                         target="_blank"
                         @class([
                             'block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]',
@@ -342,7 +342,15 @@
                         <div
                             class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
+                            {!!
+                                \App\Support\Markdown::parse($docs)
+                                    ->convertVideoToHtml()
+                                    ->absoluteImageUrls(
+                                        baseUrl: str($plugin->getDocUrl(request()->query('v')))
+                                            ->lower()
+                                            ->before('readme.md'),
+                                    )
+                            !!}
                         </div>
                     </div>
                 @endif
@@ -536,7 +544,7 @@
                     </div>
                 </div>
 
-                @if (count($otherPlugins = $plugin->author->plugins()->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherPlugins = $plugin->author->plugins()->draft(false)->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div>
                         <div class="text-lg font-extrabold">

@@ -276,12 +276,20 @@
             class="mt-16"
         >
             <div class="mx-auto grid w-full max-w-2xl">
-                <div class="col-span-full flex flex-wrap justify-around gap-12">
-                    <x-sponsors.sevalla />
-
+                <div
+                    class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12"
+                >
                     <x-sponsors.kirschbaum />
 
                     <x-sponsors.whizzy />
+
+                    <x-sponsors.cms-max />
+
+                    <x-sponsors.netstudio />
+
+                    <x-sponsors.sevalla />
+
+                    <x-sponsors.vormkracht10 />
 
                     <x-sponsors.lunar />
 
@@ -289,9 +297,13 @@
 
                     <x-sponsors.tapp-network />
 
+                    <x-sponsors.wave />
+
                     <x-sponsors.agiledrop />
 
                     <x-sponsors.cleavr />
+
+                    <x-sponsors.codecourse />
 
                     <x-sponsors.creagia />
 
@@ -308,8 +320,6 @@
                     <x-sponsors.server-auth />
 
                     <x-sponsors.solution-forest />
-
-                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>
