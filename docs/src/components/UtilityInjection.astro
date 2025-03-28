@@ -28,7 +28,7 @@ let utilities = [
                     name: 'Data',
                     type: 'array<string, mixed>',
                     parameter: '$data',
-                    description: 'The array of data submitted from form fields in the action\'s modal.',
+                    description: 'The array of data submitted from form fields in the action\'s modal. It will be empty before the modal form is submitted.',
                 },
                 {
                     name: 'Livewire',
@@ -295,7 +295,7 @@ let utilities = [
             ],
         },
     }[version][set],
-].sort((a, b) => a.name > b.name ? 1 : -1)
+].sort((a, b) => a.parameter > b.parameter ? 1 : -1)
 
 // Remove duplicate utilities with the same parameter and preserve the last utility, allowing for overrides.
 utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, utility])).values())
