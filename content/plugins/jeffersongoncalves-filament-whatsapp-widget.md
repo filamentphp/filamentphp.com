@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/jeffersongoncalves/filament-whatsapp
 github_repository: jeffersongoncalves/filament-whatsapp-widget
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [3]
 publish_date: 2025-03-03
 ---
