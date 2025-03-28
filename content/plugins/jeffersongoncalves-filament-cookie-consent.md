@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/jeffersongoncalves/filament-cookie-c
 github_repository: jeffersongoncalves/filament-cookie-consent
 has_dark_theme: true
 has_translations: true
-versions: [5]
+versions: [3]
 publish_date: 2025-03-03
 ---
