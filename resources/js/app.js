@@ -14,6 +14,23 @@ import '../../docs/src/styles/docsearch.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import {
+    animate,
+    hover,
+    inView,
+    easeIn,
+    easeOut,
+    easeInOut,
+    backIn,
+    backOut,
+    backInOut,
+    circIn,
+    circOut,
+    circInOut,
+    anticipate,
+    spring,
+    stagger,
+} from 'motion'
 
 // Swiper
 Swiper.use([Navigation, Pagination])
@@ -39,9 +56,32 @@ window.reducedMotion = window.matchMedia(
 // Minisearch
 window.MiniSearch = MiniSearch
 
-// Alpine
-Alpine.store('sidebar', { isOpen: false })
+// Motion
+window.motion = {
+    animate: animate,
+    hover: hover,
+    inView: inView,
+    easeIn: easeIn,
+    easeOut: easeOut,
+    easeInOut: easeInOut,
+    backOut: backOut,
+    backIn: backIn,
+    backInOut: backInOut,
+    circIn: circIn,
+    circOut: circOut,
+    circInOut: circInOut,
+    anticipate: anticipate,
+    spring: spring,
+    stagger: stagger,
+}
 
+// Alpine
+Alpine.magic('refAll', (el) => {
+    return (refName) => {
+        return Array.from(el.querySelectorAll(`[x-ref="${refName}"]`))
+    }
+})
+Alpine.store('sidebar', { isOpen: false })
 Alpine.plugin(Tooltip)
 
 // Docsearch

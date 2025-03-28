@@ -1,7 +1,7 @@
 @php
     seo()
-    ->title('Team')
-    ->description('Meet the team behind Filament.')
+        ->title('Team')
+        ->description('Meet the team behind Filament.');
 @endphp
 
 <x-layouts.app>

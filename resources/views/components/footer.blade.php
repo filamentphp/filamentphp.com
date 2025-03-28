@@ -1,9 +1,5 @@
-<footer
-    x-cloak
-    x-data="{}"
-    class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24"
->
-    <div class="mx-auto grid w-full gap-y-12">
+<footer class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24">
+    <div class="mx-auto grid w-full">
         <div
             class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
         >
@@ -37,7 +33,7 @@
     </div>
 
     <div
-        x-data="{}"
+        x-data
         x-ref="footer"
         x-init="
             () => {

@@ -90,6 +90,8 @@
     </head>
 
     <body
+        x-cloak
+        x-data
         class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
     >
         <div

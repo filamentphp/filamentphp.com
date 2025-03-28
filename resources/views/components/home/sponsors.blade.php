@@ -1,10 +1,6 @@
-<section
-    x-cloak
-    x-data="{}"
-    class="mx-auto w-full max-w-screen-lg px-5 pt-40"
->
+<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
     <div
-        x-data="{}"
+        x-data
         x-ref="sponsors_section"
         x-init="
             () => {
@@ -226,8 +222,8 @@
         "
         class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] px-5 pb-32"
     >
-        <h2 class="grid place-items-center pt-14">
-            <span
+        <div class="grid place-items-center pt-14">
+            <h4
                 x-ref="premium"
                 class="relative text-xl font-medium tracking-wider"
             >
@@ -250,9 +246,9 @@
                         />
                     </svg>
                 </span>
-            </span>
+            </h4>
 
-            <span class="relative z-10 inline-grid">
+            <h3 class="relative z-10 inline-grid">
                 <span
                     x-ref="sponsors_header"
                     class="text-2xl font-extrabold [grid-area:1/-1] lg:text-3xl"
@@ -264,8 +260,8 @@
                     x-ref="sponsors_header_underline"
                     class="relative -left-1 -z-10 h-5 w-[98%] self-end justify-self-start bg-rose-400/50 [grid-area:1/-1]"
                 ></span>
-            </span>
-        </h2>
+            </h3>
+        </div>
 
         <p
             x-ref="message"
@@ -595,7 +591,7 @@
 
     {{-- Dashed Separator --}}
     <div
-        x-data="{}"
+        x-data
         x-ref="separator"
         x-init="
             () => {

@@ -1,6 +1,5 @@
 <section
-    x-cloak
-    x-data="{}"
+    x-data
     x-init="
         () => {
             if (reducedMotion) return

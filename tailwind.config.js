@@ -1,7 +1,8 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
-module.exports = {
+export default {
     content: [
         './config/markdown.php',
         './resources/**/*.{js,blade.php}',
@@ -36,6 +37,7 @@ module.exports = {
                 sans: ['DM Sans', ...fontFamily.sans],
                 vietnam: ['Be Vietnam Pro', ...fontFamily.sans],
                 'roboto-mono': ['Roboto Mono', ...fontFamily.sans],
+                afacad: ['Afacad', ...fontFamily.sans],
             },
             maxWidth: {
                 '8xl': '88rem',

@@ -64,7 +64,7 @@
 @if ($tag === "button")
     <button
         @if ($tooltip)
-            x-data="{}"
+            x-data
             x-tooltip.raw="{{ $tooltip }}"
         @endif
         type="{{ $type }}"
@@ -106,7 +106,7 @@
 @elseif ($tag === "a")
     <a
         @if ($tooltip)
-            x-data="{}"
+            x-data
             x-tooltip.raw="{{ $tooltip }}"
         @endif
         wire:loading.attr="disabled"

@@ -1,6 +1,5 @@
 <x-layouts.app>
     <div
-        x-cloak
         x-data
         class="grid place-items-center px-5 pt-20 text-center"
     >
