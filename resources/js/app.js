@@ -30,6 +30,7 @@ import {
     anticipate,
     spring,
     stagger,
+    cubicBezier,
 } from 'motion'
 
 // Swiper
@@ -73,6 +74,7 @@ window.motion = {
     anticipate: anticipate,
     spring: spring,
     stagger: stagger,
+    cubicBezier: cubicBezier,
 }
 
 // Alpine
