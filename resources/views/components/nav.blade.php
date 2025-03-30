@@ -1,54 +1,29 @@
 <nav
-    x-data
     x-ref="nav"
     x-init="
         () => {
             if (reducedMotion) return
-            const navTimeline = gsap
-                .timeline({
-                    paused: true,
-                })
-                .fromTo(
-                    $refs.nav.querySelectorAll('.gsap-fadein'),
+
+            motion.inView($el, (element) => {
+                motion.animate(
+                    $refAll('navItem'),
                     {
-                        autoAlpha: 0,
-                        y: -10,
+                        y: [-10, 0],
+                        opacity: [0, 1],
                     },
                     {
-                        autoAlpha: 1,
-                        y: 0,
-                        duration: 0.5,
-                        stagger: 0.05,
+                        duration: 0.7,
+                        ease: motion.circOut,
+                        delay: motion.stagger(0.05),
                     },
                 )
-
-            if ($refs.nav.querySelectorAll('.gsap-popout').length) {
-                navTimeline.fromTo(
-                    $refs.nav.querySelectorAll('.gsap-popout'),
-                    {
-                        autoAlpha: 0,
-                        y: -30,
-                        rotate: 360,
-                    },
-                    {
-                        autoAlpha: 1,
-                        y: 0,
-                        rotate: -45,
-                        duration: 0.6,
-                        ease: 'back.out(1.5)',
-                    },
-                    '<0.2',
-                )
-            }
-
-            navTimeline.play()
+            })
         }
     "
-    class="relative mx-auto flex max-w-8xl items-center justify-between overflow-x-clip px-8 py-10 sm:overflow-x-visible"
+    class="relative mx-auto flex max-w-8xl items-center justify-between overflow-x-clip px-8 pb-12 pt-5 sm:overflow-x-visible"
 >
     {{-- Mobile Menu Button --}}
     <button
-        x-data
         aria-controls="main-menu"
         aria-haspopup="true"
         x-on:click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"
@@ -79,86 +54,113 @@
     @endif
 
     {{-- Nav Links --}}
-    <div class="flex items-center justify-end gap-8 font-semibold sm:gap-14">
+    <div class="flex items-center justify-end gap-8 text-sm">
+        <a
+            href="{{ route('home') }}"
+            @class([
+                'group relative hidden text-evening transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block',
+                'opacity-80' => ! request()->routeIs('home*'),
+                'font-semibold' => request()->routeIs('home*'),
+            ])
+        >
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Home
+            </div>
+
+            @if (request()->routeIs('home*'))
+                <x-nav.indicator />
+            @endif
+        </a>
+
         <a
             href="{{ route('docs') }}"
             @class([
-                'hidden transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'hidden transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block',
                 'text-evening opacity-80' => ! request()->routeIs('docs*'),
                 'text-butter' => request()->routeIs('docs*'),
             ])
         >
-            <div class="gsap-fadein">Documentation</div>
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Documentation
+            </div>
         </a>
 
         <a
             href="{{ route('plugins') }}"
             @class([
-                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group relative hidden text-evening transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('plugins*'),
-                'font-bold' => request()->routeIs('plugins*'),
+                'font-semibold' => request()->routeIs('plugins*'),
             ])
         >
-            <div class="gsap-fadein">Plugins</div>
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Plugins
+            </div>
 
             @if (request()->routeIs('plugins*'))
-                <div
-                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
-                >
-                    <div
-                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
-                    ></div>
-                </div>
+                <x-nav.indicator />
             @endif
         </a>
 
         <a
             href="{{ route('articles') }}"
             @class([
-                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group relative hidden text-evening transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('articles*'),
-                'font-bold' => request()->routeIs('articles*'),
+                'font-semibold' => request()->routeIs('articles*'),
             ])
         >
-            <div class="gsap-fadein">Content</div>
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Content
+            </div>
 
             @if (request()->routeIs('articles*'))
-                <div
-                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
-                >
-                    <div
-                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
-                    ></div>
-                </div>
+                <x-nav.indicator />
             @endif
         </a>
 
         <a
             href="{{ route('consulting') }}"
             @class([
-                'group/nav-link relative hidden text-evening transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block',
+                'group relative hidden text-evening transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block',
                 'opacity-80' => ! request()->routeIs('consulting*'),
-                'font-bold' => request()->routeIs('consulting*'),
+                'font-semibold' => request()->routeIs('consulting*'),
             ])
         >
-            <div class="gsap-fadein">Consulting</div>
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Consulting
+            </div>
 
             @if (request()->routeIs('consulting*'))
-                <div
-                    class="gsap-popout absolute -bottom-4 right-1/2 translate-x-1/2"
-                >
-                    <div
-                        class="h-2 w-2 bg-butter transition duration-300 group-hover/nav-link:rotate-90 group-hover/nav-link:bg-purple-400 motion-reduce:transition-none"
-                    ></div>
-                </div>
+                <x-nav.indicator />
             @endif
         </a>
 
         <a
             href="https://shop.filamentphp.com"
-            class="group/nav-link relative hidden text-evening opacity-80 transition duration-300 hover:opacity-100 focus:text-butter motion-reduce:transition-none lg:block"
+            class="group relative hidden text-evening opacity-80 transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block"
         >
-            <div class="gsap-fadein">Shop</div>
+            <div
+                x-ref="navItem"
+                :class="{'opacity-0': !reducedMotion}"
+            >
+                Shop
+            </div>
         </a>
 
         {{-- Github --}}
@@ -169,7 +171,10 @@
                 target="_blank"
                 class="peer text-evening opacity-80 transition delay-75 duration-300 group-hover/github:opacity-100 motion-reduce:transition-none"
             >
-                <div class="gsap-fadein">
+                <div
+                    x-ref="navItem"
+                    :class="{'opacity-0': !reducedMotion}"
+                >
                     <svg
                         fill="currentColor"
                         viewBox="0 0 29 29"

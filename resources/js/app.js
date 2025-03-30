@@ -32,6 +32,7 @@ import {
     stagger,
     cubicBezier,
 } from 'motion'
+import.meta.glob(['../images/**', '../svg/**'])
 
 // Swiper
 Swiper.use([Navigation, Pagination])
@@ -42,9 +43,6 @@ window.rive = rive
 
 // AutoAnimate
 window.autoAnimate = autoAnimate
-
-// Asset loading
-import.meta.glob(['../images/**', '../svg/**'])
 
 // GSAP
 gsap.registerPlugin(ScrollTrigger)

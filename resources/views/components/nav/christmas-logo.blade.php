@@ -1,6 +1,8 @@
 <a
+    x-ref="navItem"
     href="/"
-    class="group/filament gsap-fadein relative"
+    class="group/filament relative"
+    :class="{'opacity-0': !reducedMotion}"
 >
     <div class="text-black">
         <svg
