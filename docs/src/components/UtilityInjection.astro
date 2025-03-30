@@ -103,6 +103,74 @@ let utilities = [
                     description: '[Actions in tables only] The table object that this action belongs to.',
                 },
             ],
+            actionGroups: [
+                {
+                    name: 'Action group',
+                    type: 'Filament\\Actions\\ActionGroup',
+                    parameter: '$group',
+                    description: 'The current action group instance.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current action group, if one is attached.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current action group, if one is attached.',
+                },
+                {
+                    name: 'Mounted actions',
+                    type: 'array<Filament\\Actions\\Action>',
+                    parameter: '$mountedActions',
+                    description: 'The array of actions that are currently mounted in the Livewire component. This is useful for accessing data from parent actions.',
+                },
+                {
+                    name: 'Schema',
+                    type: 'Filament\\Schemas\\Schema',
+                    parameter: '$schema',
+                    description: '[Action groups in schemas only] The schema object that this action belongs to.',
+                },
+                {
+                    name: 'Schema component',
+                    type: 'Filament\\Schemas\\Components\\Component',
+                    parameter: '$schemaComponent',
+                    description: '[Action groups in schemas only] The schema component that this action belongs to.',
+                },
+                {
+                    name: 'Schema get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$schemaGet',
+                    description: '[Action groups in schemas only] A function for retrieving values from the schema data. Validation is not run on form fields.',
+                },
+                {
+                    name: 'Schema component state',
+                    type: 'mixed',
+                    parameter: '$schemaComponentState',
+                    description: '[Action groups in schemas only] The current value of the schema component.',
+                },
+                {
+                    name: 'Schema operation',
+                    type: 'string',
+                    parameter: '$schemaOperation',
+                    description: '[Action groups in schemas only] The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Table',
+                    type: 'Filament\\Tables\\Table',
+                    parameter: '$table',
+                    description: '[Action groups in tables only] The table object that this action belongs to.',
+                },
+            ],
             formFields: [
                 {
                     name: 'Field',
@@ -302,6 +370,7 @@ utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, ut
 
 const link = {
     actions: `/docs/${version}/actions/overview#action-utility-injection`,
+    actionGroups: `/docs/${version}/actions/overview#action-utility-injection`,
     formFields: `/docs/${version}/forms/overview#field-utility-injection`,
     infolistEntries: `/docs/${version}/infolists/overview#entry-utility-injection`,
     schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
