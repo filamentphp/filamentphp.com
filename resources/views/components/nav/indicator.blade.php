@@ -2,6 +2,8 @@
     <div
         x-init="
             () => {
+                if (reducedMotion) return
+
                 motion.inView($el, (element) => {
                     motion.animate(
                         $el,
@@ -22,8 +24,27 @@
         "
         :class="{'opacity-0': !reducedMotion}"
     >
-        <x-icons.nexus-flower
-            class="size-[10px] transition duration-300 group-hover:rotate-90 motion-reduce:transition-none"
-        />
+        <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+
+                    motion.animate(
+                        $el,
+                        {
+                            rotate: [0, 360],
+                        },
+                        {
+                            duration: 3,
+                            repeat: Infinity,
+                            repeatType: 'loop',
+                            ease: 'linear',
+                        },
+                    )
+                }
+            "
+        >
+            <x-icons.nexus-flower class="size-[10px]" />
+        </div>
     </div>
 </div>
