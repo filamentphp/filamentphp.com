@@ -30,13 +30,7 @@
             Site Navigation
         </h2>
 
-        <a
-            href="/"
-            class="inline-block p-2 transition duration-300 will-change-transform hover:scale-105 motion-reduce:transition-none"
-            aria-label="Go to homepage"
-        >
-            <x-nav.logo aria-label="Filament Logo" />
-        </a>
+        <x-nav.logo aria-label="Filament Logo" />
 
         <nav aria-label="Main navigation">
             <ul class="-mx-3 select-none space-y-2">
