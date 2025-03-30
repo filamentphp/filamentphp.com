@@ -21,12 +21,12 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             'package-github-stars-stats',
-            fn () => new PackageGitHubStarsStats(),
+            fn () => new PackageGitHubStarsStats,
         );
 
         $this->app->bind(
             'package-download-stats',
-            fn () => new PackageDownloadStats(),
+            fn () => new PackageDownloadStats,
         );
     }
 

@@ -59,7 +59,7 @@ Route::get('/api/{version?}', function (string $version = '4.x'): RedirectRespon
 })->where('version', '[1-3]+\.x')->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
-    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+    Route::get('/{slug?}', function (?string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
         if (
