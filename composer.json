@@ -13,7 +13,7 @@
         "blade-ui-kit/blade-heroicons": "^2.1",
         "doctrine/dbal": "^3.3",
         "embed/embed": "^4.4",
-        "filament/filament": "^3.0@beta",
+        "filament/filament": "^3.3",
         "flowframe/laravel-drift": "^0.2.0",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.0",
