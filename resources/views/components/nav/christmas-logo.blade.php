@@ -8,7 +8,7 @@
         <svg
             fill="currentColor"
             viewBox="0 0 128 26"
-            class="h-auto w-24 overflow-visible min-[400px]:w-28 md:w-36"
+            class="h-auto w-28 overflow-visible"
         >
             {{-- F --}}
             <path
@@ -42,7 +42,7 @@
         height="39"
         viewBox="0 0 27 39"
         fill="none"
-        class="absolute -top-4 right-[-2rem] transition duration-300 will-change-transform motion-reduce:transition-none md:-top-2.5 md:group-hover/filament:-translate-x-3"
+        class="absolute -top-4 right-[-2rem] transition duration-300 will-change-transform motion-reduce:transition-none"
     >
         <path
             fill-rule="evenodd"
@@ -349,11 +349,9 @@
     {{-- Hat --}}
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="31"
         viewBox="0 0 32 31"
         fill="none"
-        class="absolute -left-3.5 -top-6 min-[400px]:-left-2.5 min-[400px]:top-[-1.4rem]"
+        class="absolute -left-[8px] -top-[17px] h-6"
     >
         <g clip-path="url(#clip0_1285_417)">
             <path
@@ -432,7 +430,7 @@
         height="40"
         viewBox="0 0 101 40"
         fill="none"
-        class="absolute bottom-[-2.4rem] left-[.4rem] md:left-[.68rem]"
+        class="absolute bottom-[-2.4rem] left-[.4rem]"
     >
         <path
             d="M100.732 0.638136C100.652 0.638136 100.572 0.634211 100.496 0.626361C98.787 2.86753 91.8159 11.4907 81.0631 18.2417C69.634 25.4165 51.4619 31.8692 29.8163 21.9076C17.8069 16.3773 10.1315 8.59015 5.2373 0.571411C5.08923 0.622436 4.93716 0.657761 4.7851 0.681311C5.41338 1.72143 6.07767 2.738 6.77798 3.73102C12.3205 11.5967 20.0159 17.8296 29.6442 22.2648C30.6166 22.7122 31.5931 23.1322 32.5695 23.5247C41.2494 26.9983 50.0093 28.1797 58.6531 27.0336C66.3446 26.0171 73.9599 23.1675 81.2872 18.5674C92.5162 11.5143 99.6394 2.43185 101 0.622436C100.916 0.630286 100.828 0.638136 100.732 0.638136Z"
@@ -617,17 +615,15 @@
     <img
         src="{{ Vite::asset('resources/images/nav/christmas/santa-and-friends.webp') }}"
         alt="Santa and Friends"
-        class="min-[400px]:sw-24 absolute -bottom-1 right-[-0.3rem] z-10 w-20 opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none min-[400px]:bottom-[-0.4rem] md:right-[0.4rem] md:w-28"
+        class="absolute -bottom-[5px] right-2 z-10 h-[28px] opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none"
     />
 
     {{-- Merry Christmas --}}
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="67"
-        height="25"
         viewBox="0 0 67 25"
         fill="none"
-        class="absolute -top-8 right-2 translate-y-1 opacity-0 transition duration-300 will-change-transform group-hover/filament:translate-y-0 group-hover/filament:opacity-100 motion-reduce:transition-none min-[400px]:right-5 md:right-7"
+        class="absolute -top-5 right-5 h-5 translate-y-1 opacity-0 transition duration-300 will-change-transform group-hover/filament:translate-y-0 group-hover/filament:opacity-100 motion-reduce:transition-none"
     >
         <path
             fill-rule="evenodd"

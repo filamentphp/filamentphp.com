@@ -8,7 +8,7 @@
         <svg
             fill="currentColor"
             viewBox="0 0 128 26"
-            class="h-auto w-24 overflow-visible min-[400px]:w-28 md:w-36"
+            class="h-auto w-28 overflow-visible"
         >
             {{-- F --}}
             <path
@@ -38,12 +38,12 @@
 
         {{-- Bulb --}}
         <div
-            class="absolute -left-2 -top-3.5 -z-10 opacity-0 transition duration-300 will-change-transform group-hover/filament:opacity-100 motion-reduce:transition-none min-[400px]:-left-1 md:-left-px md:-top-2.5"
+            class="absolute -left-1 -top-3.5 -z-10 opacity-0 transition duration-300 will-change-transform group-hover/filament:opacity-100 motion-reduce:transition-none"
         >
             <svg
                 width="37"
                 height="52"
-                class="scale-[.65] min-[400px]:scale-75 md:scale-100"
+                class="scale-75"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
