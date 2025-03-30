@@ -883,7 +883,7 @@
                     if (! show_more) document.getElementById('tweets').scrollIntoView()
                 }
             "
-            class="relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full bg-sky-500 py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-sky-400 motion-reduce:transition-none"
+            class="relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full bg-evening py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-indigo-900 motion-reduce:transition-none"
             :class="{
                 'w-48': !show_more,
                 'xl:translate-x-[34rem] -translate-y-10 w-16 rotate-180': show_more,

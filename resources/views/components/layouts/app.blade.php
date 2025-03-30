@@ -11,198 +11,236 @@
         x-transition.opacity
         x-on:click="$store.sidebar.isOpen = false"
         type="button"
-        aria-hidden="true"
+        aria-label="Close sidebar menu"
         class="fixed inset-0 z-[999] h-full w-full bg-black/50 focus:outline-none lg:hidden"
     ></button>
 
     <aside
         x-data
-        :aria-hidden="$store.sidebar.isOpen.toString()"
+        aria-labelledby="sidebar-title"
+        :aria-expanded="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
         class="fixed inset-y-0 left-0 z-[1000] w-full max-w-[19rem] transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
     >
+        <!-- Hidden title for screen readers -->
+        <h2
+            id="sidebar-title"
+            class="sr-only"
+        >
+            Site Navigation
+        </h2>
+
         <a
             href="/"
             class="inline-block p-2 transition duration-300 will-change-transform hover:scale-105 motion-reduce:transition-none"
+            aria-label="Go to homepage"
         >
             <x-nav.logo aria-label="Filament Logo" />
         </a>
-        <ul class="-mx-3 select-none space-y-2">
-            <li>
-                <a
-                    href="{{ route('home') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('home*'),
-                        'bg-merino font-black' => request()->routeIs('home*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('home*'),
-                        ])
-                    >
-                        Home
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('docs') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('docs*'),
-                        'bg-merino font-black' => request()->routeIs('docs*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('docs*'),
-                        ])
-                    >
-                        Documentation
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('plugins') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('plugins*'),
-                        'bg-merino font-black' => request()->routeIs('plugins*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('plugins*'),
-                        ])
-                    >
-                        Plugins
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('articles') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('articles*'),
-                        'bg-merino font-black' => request()->routeIs('articles*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
-                                'articles*',
-                            ),
-                        ])
-                    >
-                        Content
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('consulting') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('consulting*'),
-                        'bg-merino font-black' => request()->routeIs('consulting*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
-                                'consulting*',
-                            ),
-                        ])
-                    >
-                        Consulting
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://shop.filamentphp.com"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
-                >
-                    <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
-                    >
-                        Shop
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('team') }}"
-                    @class([
-                        'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                        'font-medium hover:bg-merino' => ! request()->routeIs('team*'),
-                        'bg-merino font-black' => request()->routeIs('team*'),
-                    ])
-                >
-                    <div
-                        @class([
-                            'transition duration-300',
-                            'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('team*'),
-                        ])
-                    >
-                        Meet Our Team
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    target="_blank"
-                    href="https://status.filamentphp.com"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
-                >
-                    <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
-                    >
-                        Status
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    target="_blank"
-                    href="https://github.com/filamentphp/filament/discussions/new"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
-                >
-                    <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
-                    >
-                        Help
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://github.com/filamentphp/filament?sponsor=1"
-                    class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
-                >
-                    <div
-                        class="transition duration-300 group-hover/sidebar-link:translate-x-1"
-                    >
-                        Sponsor
-                    </div>
-                </a>
-            </li>
-        </ul>
 
-        <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
+        <nav aria-label="Main navigation">
+            <ul class="-mx-3 select-none space-y-2">
+                <li>
+                    <a
+                        href="{{ route('home') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('home*'),
+                            'bg-merino font-black' => request()->routeIs('home*'),
+                        ])
+                        @if(request()->routeIs('home*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('home*'),
+                            ])
+                        >
+                            Home
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('docs') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('docs*'),
+                            'bg-merino font-black' => request()->routeIs('docs*'),
+                        ])
+                        @if(request()->routeIs('docs*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('docs*'),
+                            ])
+                        >
+                            Documentation
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('plugins') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('plugins*'),
+                            'bg-merino font-black' => request()->routeIs('plugins*'),
+                        ])
+                        @if(request()->routeIs('plugins*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('plugins*'),
+                            ])
+                        >
+                            Plugins
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('articles') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('articles*'),
+                            'bg-merino font-black' => request()->routeIs('articles*'),
+                        ])
+                        @if(request()->routeIs('articles*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
+                                    'articles*',
+                                ),
+                            ])
+                        >
+                            Content
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('consulting') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('consulting*'),
+                            'bg-merino font-black' => request()->routeIs('consulting*'),
+                        ])
+                        @if(request()->routeIs('consulting*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs(
+                                    'consulting*',
+                                ),
+                            ])
+                        >
+                            Consulting
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://shop.filamentphp.com"
+                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        rel="noopener"
+                        aria-label="Visit Filament shop"
+                    >
+                        <div
+                            class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                        >
+                            Shop
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('team') }}"
+                        @class([
+                            'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
+                            'font-medium hover:bg-merino' => ! request()->routeIs('team*'),
+                            'bg-merino font-black' => request()->routeIs('team*'),
+                        ])
+                        @if(request()->routeIs('team*')) aria-current="page" @endif
+                    >
+                        <div
+                            @class([
+                                'transition duration-300',
+                                'group-hover/sidebar-link:translate-x-1' => ! request()->routeIs('team*'),
+                            ])
+                        >
+                            Meet Our Team
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        href="https://status.filamentphp.com"
+                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        rel="noopener"
+                        aria-label="Check Filament system status"
+                    >
+                        <div
+                            class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                        >
+                            Status
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        href="https://github.com/filamentphp/filament/discussions/new"
+                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        rel="noopener"
+                        aria-label="Get help with Filament"
+                    >
+                        <div
+                            class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                        >
+                            Help
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/filamentphp/filament?sponsor=1"
+                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        rel="noopener"
+                        aria-label="Sponsor Filament on GitHub"
+                    >
+                        <div
+                            class="transition duration-300 group-hover/sidebar-link:translate-x-1"
+                        >
+                            Sponsor
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section
+            aria-labelledby="social-heading"
+            class="flex flex-wrap items-center gap-3.5 text-hurricane"
+        >
+            <h3
+                id="social-heading"
+                class="sr-only"
+            >
+                Social Media Links
+            </h3>
             <a
                 target="_blank"
                 href="https://twitter.com/filamentphp"
                 class="group/twitter-link relative grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino hover:text-black motion-reduce:transition-none"
+                rel="noopener"
+                aria-label="Filament on Twitter/X"
             >
                 <svg
                     width="40"
@@ -210,6 +248,7 @@
                     class="scale-[.6] transition duration-300 group-hover/twitter-link:scale-0 group-hover/twitter-link:opacity-0"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                 >
                     <path
                         d="M37.02 9.427c-1.272.562-2.62.932-4.002 1.096a6.991 6.991 0 0 0 3.064-3.856 13.935 13.935 0 0 1-4.425 1.691 6.97 6.97 0 0 0-11.877 6.357A19.79 19.79 0 0 1 5.412 7.432a6.947 6.947 0 0 0-.944 3.505 6.973 6.973 0 0 0 3.1 5.801 6.947 6.947 0 0 1-3.156-.871v.084a6.975 6.975 0 0 0 5.591 6.837 7.008 7.008 0 0 1-3.15.12 6.975 6.975 0 0 0 6.514 4.842 13.99 13.99 0 0 1-10.32 2.887A19.719 19.719 0 0 0 13.73 33.77c12.823 0 19.833-10.622 19.833-19.834 0-.3-.006-.603-.02-.901a14.17 14.17 0 0 0 3.477-3.608Z"
@@ -224,6 +263,7 @@
                     viewBox="0 0 16 16"
                     class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
                     fill="none"
+                    aria-hidden="true"
                 >
                     <path
                         d="M12.6182 0.80542H15.0592L9.72628 6.90056L16 15.1947H11.0877L7.24026 10.1643L2.83789 15.1947H0.395405L6.09945 8.67524L0.0810547 0.80542H5.11803L8.5958 5.40334L12.6182 0.80542ZM11.7614 13.7336H13.114L4.38307 2.18974H2.9316L11.7614 13.7336Z"
@@ -235,6 +275,8 @@
                 target="_blank"
                 href="https://filamentphp.com/discord"
                 class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                rel="noopener"
+                aria-label="Join Filament Discord community"
             >
                 <svg
                     class="w-[1.3rem]"
@@ -254,6 +296,8 @@
                 target="_blank"
                 href="https://github.com/filamentphp/filament"
                 class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                rel="noopener"
+                aria-label="Filament on GitHub"
             >
                 <svg
                     class="w-[1.6rem]"
@@ -268,10 +312,12 @@
                     />
                 </svg>
             </a>
-        </div>
+        </section>
     </aside>
 
-    {{ $slot }}
+    <main id="main-content">
+        {{ $slot }}
+    </main>
 
     <x-footer />
 </x-layouts.base>
