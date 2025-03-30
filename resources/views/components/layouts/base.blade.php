@@ -80,18 +80,18 @@
                 display: none !important;
             }
         </style>
+        {{-- Livewire --}}
         @livewireStyles
-        @vite('resources/css/app.css')
 
-        <!-- Scripts -->
-        @livewireScripts
-        @vite('resources/js/app.js')
+        {{-- Vite --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('scripts')
     </head>
 
     <body
         x-cloak
-        x-data
+        x-data="{ width: 0 }"
+        x-resize="width = $width;"
         class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
     >
         <div
@@ -100,5 +100,7 @@
         ></div>
 
         {{ $slot }}
+
+        @livewireScripts
     </body>
 </html>

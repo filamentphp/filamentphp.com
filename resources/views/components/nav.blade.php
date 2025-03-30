@@ -1,3 +1,4 @@
+<!-- Main site navigation -->
 <nav
     x-ref="nav"
     x-init="
@@ -21,18 +22,23 @@
         }
     "
     class="relative mx-auto flex max-w-8xl items-center justify-between overflow-x-clip px-8 pb-12 pt-5 sm:overflow-x-visible"
+    aria-label="Primary navigation"
 >
     {{-- Mobile Menu Button --}}
     <button
         aria-controls="main-menu"
+        aria-expanded="false"
         aria-haspopup="true"
         x-on:click.prevent="$store.sidebar.isOpen = ! $store.sidebar.isOpen"
         x-on:click.away="$store.sidebar.isOpen = false"
         class="transition duration-300 hover:scale-110 lg:hidden"
+        id="mobile-menu-button"
     >
-        <x-heroicon-o-bars-3 class="h-7 w-7" />
-
-        <span class="sr-only">Toggle Menu</span>
+        <x-heroicon-o-bars-3
+            class="size-7"
+            aria-hidden="true"
+        />
+        <span class="sr-only">Toggle Main Navigation Menu</span>
     </button>
 
     @php
@@ -62,6 +68,7 @@
                 'opacity-80' => ! request()->routeIs('home*'),
                 'font-semibold' => request()->routeIs('home*'),
             ])
+            @if(request()->routeIs('home*')) aria-current="page" @endif
         >
             <div
                 x-ref="navItem"
@@ -82,6 +89,7 @@
                 'text-evening opacity-80' => ! request()->routeIs('docs*'),
                 'text-butter' => request()->routeIs('docs*'),
             ])
+            @if(request()->routeIs('docs*')) aria-current="page" @endif
         >
             <div
                 x-ref="navItem"
@@ -98,6 +106,7 @@
                 'opacity-80' => ! request()->routeIs('plugins*'),
                 'font-semibold' => request()->routeIs('plugins*'),
             ])
+            @if(request()->routeIs('plugins*')) aria-current="page" @endif
         >
             <div
                 x-ref="navItem"
@@ -118,6 +127,7 @@
                 'opacity-80' => ! request()->routeIs('articles*'),
                 'font-semibold' => request()->routeIs('articles*'),
             ])
+            @if(request()->routeIs('articles*')) aria-current="page" @endif
         >
             <div
                 x-ref="navItem"
@@ -138,6 +148,7 @@
                 'opacity-80' => ! request()->routeIs('consulting*'),
                 'font-semibold' => request()->routeIs('consulting*'),
             ])
+            @if(request()->routeIs('consulting*')) aria-current="page" @endif
         >
             <div
                 x-ref="navItem"
@@ -154,6 +165,7 @@
         <a
             href="https://shop.filamentphp.com"
             class="group relative hidden text-evening opacity-80 transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block"
+            aria-label="Filament Shop"
         >
             <div
                 x-ref="navItem"
@@ -169,19 +181,26 @@
             <a
                 href="https://github.com/filamentphp/filament"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="peer text-evening opacity-80 transition delay-75 duration-300 group-hover/github:opacity-100 motion-reduce:transition-none"
+                aria-label="Filament GitHub repository"
             >
                 <div
                     x-ref="navItem"
                     :class="{'opacity-0': !reducedMotion}"
                 >
-                    <x-icons.github class="size-6" />
+                    <x-icons.github
+                        class="size-6"
+                        aria-hidden="true"
+                    />
+                    <span class="sr-only">GitHub</span>
                 </div>
             </a>
 
             {{-- Star Count --}}
             <div
                 class="invisible absolute right-1/2 top-6 -translate-y-2 translate-x-1/3 p-3 opacity-0 transition delay-75 duration-300 hover:visible hover:translate-y-0 hover:opacity-100 peer-hover:visible peer-hover:translate-y-0 peer-hover:opacity-100 motion-reduce:transition-none min-[1400px]:translate-x-1/2"
+                aria-hidden="true"
             >
                 <div
                     class="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-black/5 py-3 pl-3 pr-4 backdrop-blur-md"
@@ -190,6 +209,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         class="-mt-0.5 size-5 text-butter"
                         viewBox="0 0 24 24"
+                        aria-hidden="true"
                     >
                         <path
                             fill="currentColor"
