@@ -181,16 +181,14 @@
 
             {{-- Star Count --}}
             <div
-                class="invisible absolute right-1/2 top-7 -translate-y-2 translate-x-1/3 p-3 opacity-0 transition delay-75 duration-300 hover:visible hover:translate-y-0 hover:opacity-100 peer-hover:visible peer-hover:translate-y-0 peer-hover:opacity-100 motion-reduce:transition-none min-[1400px]:translate-x-1/2"
+                class="invisible absolute right-1/2 top-6 -translate-y-2 translate-x-1/3 p-3 opacity-0 transition delay-75 duration-300 hover:visible hover:translate-y-0 hover:opacity-100 peer-hover:visible peer-hover:translate-y-0 peer-hover:opacity-100 motion-reduce:transition-none min-[1400px]:translate-x-1/2"
             >
                 <div
-                    class="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-cream py-2.5 pl-2.5 pr-4 shadow-xl shadow-black/5"
+                    class="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-black/5 py-3 pl-3 pr-4 backdrop-blur-md"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="scale-90 text-butter"
-                        width="24"
-                        height="24"
+                        class="-mt-0.5 size-5 text-butter"
                         viewBox="0 0 24 24"
                     >
                         <path
@@ -198,7 +196,7 @@
                             d="M9.153 5.408C10.42 3.136 11.053 2 12 2c.947 0 1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182c.28.213.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506c-.766.582-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452c-.347 0-.674.15-1.329.452l-.595.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882c.293-.941 1.523-1.22 3.983-1.776l.636-.144c.699-.158 1.048-.237 1.329-.45c.28-.213.46-.536.82-1.182l.328-.588Z"
                         />
                     </svg>
-                    <div class="text-sm text-evening">
+                    <div class="font-medium text-evening">
                         {{ number_format(floor(app('package-github-stars-stats')() / 100) / 10, 1) }}k
                         Stars
                     </div>
