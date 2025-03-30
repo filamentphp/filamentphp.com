@@ -1,39 +1,174 @@
-<footer class="mx-auto w-full max-w-screen-lg space-y-24 px-5 pt-24">
-    <div class="mx-auto grid w-full">
+<footer class="mx-auto w-full max-w-screen-lg px-5 pt-14">
+    <div
+        x-init="
+            () => {
+                if (reducedMotion) return
+                motion.inView($el, (element) => {
+                    motion.animate(
+                        Array.from($el.children),
+                        {
+                            y: [10, 0],
+                            opacity: [0, 1],
+                        },
+                        {
+                            duration: 0.7,
+                            ease: motion.backOut,
+                            delay: motion.stagger(0.1),
+                        },
+                    )
+                })
+            }
+        "
+        class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-5 text-dolphin"
+    >
         <div
-            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
+            class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
         >
             <x-sponsors.kirschbaum footer />
-
+        </div>
+        <div
+            class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
+        >
             <x-sponsors.whizzy footer />
-
+        </div>
+        <div
+            class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
+        >
             <x-sponsors.cms-max footer />
-
+        </div>
+        <div
+            class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
+        >
             <x-sponsors.netstudio footer />
         </div>
-
         <div
-            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
+            class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
         >
             <x-sponsors.sevalla footer />
-
+        </div>
+        <div
+            class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
+        >
             <x-sponsors.vormkracht10 footer />
-
+        </div>
+        <div
+            class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
+        >
             <x-sponsors.lunar footer />
-
-            <a
-                href="https://github.com/filamentphp/filament?sponsor=1"
-                target="_blank"
-                class="my-auto block rounded-xl bg-pink-100 px-4 py-3 text-center text-xs font-medium text-midnight transition hover:bg-pink-200"
+        </div>
+        <div>
+            <div
+                class="transition duration-300 will-change-transform hover:scale-105 motion-reduce:transition-none"
             >
-                Your logo here?
-                <span class="hover:scale-105">💖</span>
-            </a>
+                <a
+                    href="https://github.com/filamentphp/filament?sponsor=1"
+                    target="_blank"
+                    x-init="
+                        () => {
+                            if (reducedMotion) return
+                            motion.animate(
+                                $el,
+                                {
+                                    backgroundColor: ['#ede9fe', '#fbcfe8'],
+                                },
+                                {
+                                    duration: 1.5,
+                                    repeat: Infinity,
+                                    repeatType: 'mirror',
+                                    ease: 'linear',
+                                },
+                            )
+                        }
+                    "
+                    class="flex h-24 flex-col items-center justify-center gap-2 rounded-xl px-5"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="size-6"
+                        viewBox="0 0 14 14"
+                        overflow="visible"
+                    >
+                        <path
+                            x-init="
+                                () => {
+                                    if (reducedMotion) return
+                                    motion.animate(
+                                        $el,
+                                        {
+                                            scale: [1, 1.25, 1],
+                                        },
+                                        {
+                                            duration: 1.5,
+                                            repeat: Infinity,
+                                            times: [0, 0.2, 1],
+                                            ease: motion.easeOut,
+                                        },
+                                    )
+                                }
+                            "
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M0.5 4.99946C0.543629 2.23201 3.85949 -0.335259 6.99999 3.27784 10.1405 -0.335259 13.4564 2.23201 13.5 4.99946c0 4.11997 -5.25729 7.50164 -6.50001 7.50164 -0.83621 0 -3.49008 -1.5311 -5.13686 -3.78804"
+                            stroke-width="0.9"
+                        ></path>
+                        <path
+                            x-init="
+                                () => {
+                                    if (reducedMotion) return
+                                    motion.animate(
+                                        $el,
+                                        {
+                                            pathLength: [1, 0],
+                                            pathOffset: [1, 0],
+                                        },
+                                        {
+                                            duration: 1.5,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: motion.easeOut,
+                                        },
+                                    )
+                                }
+                            "
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9.5 6.5H8l-1.5 2 -2 -3.5L3 7H0.5625"
+                            stroke-width="1"
+                        ></path>
+                    </svg>
+                    <div
+                        x-init="
+                            () => {
+                                if (reducedMotion) return
+                                motion.animate(
+                                    $el,
+                                    {
+                                        y: -2,
+                                    },
+                                    {
+                                        duration: 1.2,
+                                        repeat: Infinity,
+                                        repeatType: 'reverse',
+                                        ease: motion.easeOut,
+                                    },
+                                )
+                            }
+                        "
+                        class="text-sm will-change-transform"
+                    >
+                        Your logo here?
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
     <div
-        x-data
         x-ref="footer"
         x-init="
             () => {
