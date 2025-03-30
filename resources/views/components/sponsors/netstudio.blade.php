@@ -132,4 +132,5 @@
             />
         </g>
     </svg>
+    <span class="sr-only">Netstudio sponsor logo</span>
 </a>

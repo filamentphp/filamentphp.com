@@ -20,6 +20,8 @@
             }
         "
         class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-5 text-dolphin"
+        aria-label="Our sponsors"
+        role="region"
     >
         <div
             class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5"
@@ -81,6 +83,8 @@
                         }
                     "
                     class="flex h-24 flex-col items-center justify-center gap-2 rounded-xl px-5"
+                    aria-label="Become a sponsor"
+                    rel="noopener"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +92,7 @@
                         class="size-6"
                         viewBox="0 0 14 14"
                         overflow="visible"
+                        aria-hidden="true"
                     >
                         <path
                             x-init="

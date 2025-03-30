@@ -21,4 +21,5 @@
             transform="translate(-116.64 -170.82)"
         ></path>
     </svg>
+    <span class="sr-only">Kirschbaum sponsor logo</span>
 </a>

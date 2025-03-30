@@ -56,4 +56,5 @@
             />
         </g>
     </svg>
+    <span class="sr-only">Vormkracht10 sponsor logo</span>
 </a>
