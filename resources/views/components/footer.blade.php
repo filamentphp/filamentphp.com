@@ -198,7 +198,7 @@
                 )
             }
         "
-        class="py-10"
+        class="pb-5 pt-12"
     >
         <div
             class="flex flex-wrap items-start justify-between gap-x-40 gap-y-10"
@@ -322,8 +322,71 @@
                 </div>
             </div>
         </div>
+
+        {{-- Divider --}}
         <div
-            class="mt-7 flex flex-wrap items-start justify-between gap-10 border-t border-slate-200 pt-5"
+            class="flex items-center pb-3 pt-3 text-hurricane/20"
+            aria-hidden="true"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8"
+                viewBox="0 0 22 31"
+                fill="none"
+            >
+                <path
+                    d="M20.98 14.9902C21.49 15.1602 20.12 5.13023 7.05005 0.740234C7.05005 0.740234 8.76005 10.8102 20.98 14.9902Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M13.2401 14.9703C13.6201 14.9803 10.5801 8.49027 0.830078 8.28027C0.830078 8.28027 4.11008 14.7203 13.2401 14.9703Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M20.98 15.5505C21.49 15.3805 20.12 25.4105 7.05005 29.8005C7.05005 29.8005 8.76005 19.7305 20.98 15.5505Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M13.2401 14.9902C13.6201 14.9802 10.5801 21.4702 0.830078 21.6802C0.830078 21.6802 4.11008 15.2402 13.2401 14.9902Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+            </svg>
+            <div class="-mx-2 -mt-px h-[1.3px] w-full bg-current"></div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8"
+                viewBox="0 0 23 31"
+                fill="none"
+            >
+                <path
+                    d="M1.23995 14.9902C0.729946 15.1602 2.09994 5.13023 15.1699 0.740234C15.1699 0.740234 13.4599 10.8102 1.23995 14.9902Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M8.97985 14.9703C8.59985 14.9803 11.6399 8.49027 21.3899 8.28027C21.3899 8.28027 18.1099 14.7203 8.97985 14.9703Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M1.23995 15.5505C0.729946 15.3805 2.09994 25.4105 15.1699 29.8005C15.1699 29.8005 13.4599 19.7305 1.23995 15.5505Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+                <path
+                    d="M8.97985 14.9902C8.59985 14.9802 11.6399 21.4702 21.3899 21.6802C21.3899 21.6802 18.1099 15.2402 8.97985 14.9902Z"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                />
+            </svg>
+        </div>
+
+        <div
+            class="flex flex-wrap items-start justify-between gap-10 border-slate-200"
         >
             <div class="text-sm font-medium text-hurricane/50">
                 &copy; {{ date('Y') }} Filament. All rights reserved.
