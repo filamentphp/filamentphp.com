@@ -175,7 +175,7 @@
     </div>
 
     <div
-        class="flex flex-col items-stretch gap-x-20 gap-y-5 pt-12 lg:flex-row lg:items-start lg:justify-between"
+        class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-12 lg:flex-row lg:items-start lg:justify-between"
     >
         {{-- Left side --}}
         <div class="flex flex-col items-center lg:items-start">
@@ -374,7 +374,7 @@
                 })
             }
         "
-        class="flex items-center pt-3 text-hurricane/25 opacity-0 motion-reduce:opacity-100"
+        class="flex items-center pt-1 text-hurricane/25 opacity-0 motion-reduce:opacity-100 lg:pt-2"
         aria-hidden="true"
     >
         {{-- Left flower --}}
@@ -441,7 +441,7 @@
 
     {{-- Copyright --}}
     <section
-        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane/80 sm:px-6 md:flex-row md:justify-between md:text-left"
+        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane/80 sm:flex-row sm:justify-between sm:px-6 sm:text-left"
         aria-label="Credits and copyright information"
     >
         {{-- Left side --}}
