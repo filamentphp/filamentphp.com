@@ -1,6 +1,5 @@
 <a
     x-ref="navItem"
-    :class="{'opacity-0': !reducedMotion && width >= 1024}"
     href="/"
     class="group/filament relative"
     aria-label="Filament Logo"

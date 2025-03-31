@@ -30,7 +30,7 @@
             Site Navigation
         </h2>
 
-        <x-nav.logo aria-label="Filament Logo" />
+        <x-nav.logo />
 
         <nav aria-label="Main navigation">
             <ul class="-mx-3 select-none space-y-2">

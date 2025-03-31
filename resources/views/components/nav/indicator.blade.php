@@ -22,7 +22,7 @@
                 })
             }
         "
-        :class="{'opacity-0': !reducedMotion}"
+        class="opacity-0 motion-reduce:opacity-100"
     >
         <div
             x-init="

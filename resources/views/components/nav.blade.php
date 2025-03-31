@@ -1,4 +1,3 @@
-<!-- Main site navigation -->
 <nav
     x-ref="nav"
     x-init="
@@ -61,6 +60,7 @@
 
     {{-- Nav Links --}}
     <div class="flex items-center justify-end gap-8 text-sm">
+        {{-- Home --}}
         <a
             href="{{ route('home') }}"
             @class([
@@ -72,7 +72,7 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Home
             </div>
@@ -82,6 +82,7 @@
             @endif
         </a>
 
+        {{-- Documentation --}}
         <a
             href="{{ route('docs') }}"
             @class([
@@ -93,12 +94,13 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Documentation
             </div>
         </a>
 
+        {{-- Plugins --}}
         <a
             href="{{ route('plugins') }}"
             @class([
@@ -110,7 +112,7 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Plugins
             </div>
@@ -120,6 +122,7 @@
             @endif
         </a>
 
+        {{-- Content --}}
         <a
             href="{{ route('articles') }}"
             @class([
@@ -131,7 +134,7 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Content
             </div>
@@ -141,6 +144,7 @@
             @endif
         </a>
 
+        {{-- Consulting --}}
         <a
             href="{{ route('consulting') }}"
             @class([
@@ -152,7 +156,7 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Consulting
             </div>
@@ -162,6 +166,7 @@
             @endif
         </a>
 
+        {{-- Shop --}}
         <a
             href="https://shop.filamentphp.com"
             class="group relative hidden text-evening opacity-80 transition duration-300 hover:opacity-100 motion-reduce:transition-none lg:block"
@@ -169,7 +174,7 @@
         >
             <div
                 x-ref="navItem"
-                :class="{'opacity-0': !reducedMotion}"
+                class="opacity-0 motion-reduce:opacity-100"
             >
                 Shop
             </div>
@@ -187,7 +192,7 @@
             >
                 <div
                     x-ref="navItem"
-                    :class="{'opacity-0': !reducedMotion}"
+                    class="opacity-0 motion-reduce:opacity-100"
                 >
                     <x-icons.github
                         class="size-6"

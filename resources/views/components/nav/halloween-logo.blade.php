@@ -2,7 +2,8 @@
     x-ref="navItem"
     href="/"
     class="group/filament relative"
-    :class="{'opacity-0': !reducedMotion}"
+    aria-label="Filament Logo"
+    title="Filament Homepage"
 >
     <div class="text-black">
         <svg
