@@ -302,132 +302,216 @@
 
         {{-- Right side links --}}
         <nav
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    motion.inView($el, (element) => {
+                        motion.animate(
+                            $refAll('linkItem'),
+                            {
+                                x: [-10, 0],
+                                opacity: [0, 1],
+                            },
+                            {
+                                duration: 0.7,
+                                ease: motion.backOut,
+                                delay: motion.stagger(0.05),
+                            },
+                        )
+                    })
+                }
+            "
             class="flex flex-1 flex-wrap justify-center gap-x-10 gap-y-3 lg:justify-around"
             aria-label="Footer navigation"
         >
+            {{-- First column --}}
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <h2 class="font-afacad text-xl font-medium text-midnight">
+                <h2
+                    x-ref="linkItem"
+                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                >
                     Explore
                 </h2>
                 <ul
-                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
+                    x-ref="linkItem"
+                    class="flex flex-col items-start text-sm opacity-0 motion-reduce:opacity-100"
                 >
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('home') }}"
                             aria-label="Go to homepage"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Home
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('docs') }}"
                             aria-label="View documentation"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Documentation
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('api-docs') }}"
                             aria-label="View PHP API documentation"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             PHP API Documentation
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('use-cases.admin-panel') }}"
                             aria-label="Learn how to build an admin panel"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Build an Admin Panel
                         </a>
                     </li>
                 </ul>
             </div>
+
+            {{-- Second column --}}
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <h2 class="font-afacad text-xl font-medium text-midnight">
+                <h2
+                    x-ref="linkItem"
+                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                >
                     Community
                 </h2>
                 <ul
-                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
+                    x-ref="linkItem"
+                    class="flex flex-col items-start text-sm opacity-0 motion-reduce:opacity-100"
                 >
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('plugins') }}"
                             aria-label="Browse available plugins"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Plugins
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('articles') }}"
                             aria-label="Read articles and tutorials"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Content
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('team') }}"
                             aria-label="Learn about the Filament team members"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Meet Our Team
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="https://github.com/filamentphp/filament?sponsor=1"
                             target="_blank"
                             rel="noopener"
                             aria-label="Sponsor Filament on GitHub"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Sponsor
                         </a>
                     </li>
                 </ul>
             </div>
+
+            {{-- Third column --}}
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <h2 class="font-afacad text-xl font-medium text-midnight">
+                <h2
+                    x-ref="linkItem"
+                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                >
                     Support
                 </h2>
                 <ul
-                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
+                    x-ref="linkItem"
+                    class="flex flex-col items-start text-sm opacity-0 motion-reduce:opacity-100"
                 >
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="https://shop.filamentphp.com"
                             aria-label="Visit the Filament shop"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Shop
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="https://status.filamentphp.com"
                             target="_blank"
                             rel="noopener"
                             aria-label="Check Filament service status"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Status
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="https://github.com/filamentphp/filament/discussions/new"
                             target="_blank"
                             rel="noopener"
                             aria-label="Get help with Filament"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Help
                         </a>
                     </li>
-                    <li>
+                    <li
+                        x-ref="linkItem"
+                        class="opacity-0 motion-reduce:opacity-100"
+                    >
                         <a
                             href="{{ route('consulting') }}"
                             aria-label="Learn about consulting services"
+                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Consulting
                         </a>
