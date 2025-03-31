@@ -608,7 +608,7 @@
 
     {{-- Copyright --}}
     <section
-        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane/80 sm:flex-row sm:justify-between sm:px-6 sm:text-left min-[1060px]:px-0"
+        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane sm:flex-row sm:justify-between sm:px-6 sm:text-left min-[1060px]:px-0"
         aria-label="Credits and copyright information"
     >
         {{-- Left side --}}
