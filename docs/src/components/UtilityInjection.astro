@@ -221,6 +221,70 @@ let utilities = [
                     description: 'The Eloquent record for the current schema.',
                 },
             ],
+            exportColumns: [
+                {
+                    name: 'Export column',
+                    type: 'Filament\\Actions\\Exports\\ExportColumn',
+                    parameter: '$column',
+                    description: 'The current export column instance.',
+                },
+                {
+                    name: 'Exporter',
+                    type: '?Filament\\Actions\\Exports\\Exporter',
+                    parameter: '$exporter',
+                    description: 'The instance of the exporter class that is currently being used for exporting data.',
+                },
+                {
+                    name: 'Options',
+                    type: 'array<string, mixed>',
+                    parameter: '$options',
+                    description: 'The options that were defined when the export started.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record that is currently being exported.',
+                },
+            ],
+            importColumns: [
+                {
+                    name: 'Import column',
+                    type: 'Filament\\Actions\\Imports\\ImportColumn',
+                    parameter: '$column',
+                    description: 'The current import column instance.',
+                },
+                {
+                    name: 'Data',
+                    type: 'array<string, mixed>',
+                    parameter: '$data',
+                    description: 'The processed data for the record that is currently being imported.',
+                },
+                {
+                    name: 'Importer',
+                    type: '?Filament\\Actions\\Imports\\Importer',
+                    parameter: '$importer',
+                    description: 'The instance of the importer class that is currently being used for importing data.',
+                },
+                {
+                    name: 'Options',
+                    type: 'array<string, mixed>',
+                    parameter: '$options',
+                    description: 'The options that were defined when the import started.',
+                },
+                {
+                    name: 'Original data',
+                    type: 'array<string, mixed>',
+                    parameter: '$originalData',
+                    description: 'The original data for the record that is currently being imported, before it was processed.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record that is currently being imported.',
+                },
+            ],
             infolistEntries: [
                 {
                     name: 'Entry',
@@ -376,7 +440,7 @@ const link = {
     schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
     tableColumns: `/docs/${version}/tables/columns/overview#column-utility-injection`,
     tableFilters: `/docs/${version}/tables/filters/overview#filter-utility-injection`,
-}[set]
+}[set] ?? null
 ---
 
 <details class="rounded-lg mb-6 bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
@@ -384,9 +448,9 @@ const link = {
         <slot />
     </summary>
 
-    <a href={link} target="_blank" class="mt-3">
+    {link && <a href={link} target="_blank" class="mt-3">
         Learn more about utility injection.
-    </a>
+    </a>}
 
     <table class="block overflow-x-auto whitespace-nowrap mt-3 mb-0">
         <thead>
