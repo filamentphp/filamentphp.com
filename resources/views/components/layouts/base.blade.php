@@ -91,7 +91,10 @@
     <body
         x-cloak
         x-data="{ width: 0 }"
-        x-resize="width = $width;"
+        x-resize="
+            width = $width
+            if (width >= 1024) $store.sidebar.isOpen = false
+        "
         class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
     >
         <div
