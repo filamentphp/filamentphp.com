@@ -1,4 +1,4 @@
-<footer class="mx-auto w-full max-w-screen-lg px-5 pb-5 pt-14">
+<footer class="mx-auto w-full max-w-screen-lg px-5 pb-5 pt-10">
     {{-- Sponsor list --}}
     <div
         x-init="
@@ -175,16 +175,16 @@
     </div>
 
     <div
-        class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-12 lg:flex-row lg:items-start lg:justify-between"
+        class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-10 lg:flex-row lg:items-start lg:justify-between min-[1060px]:px-0"
     >
         {{-- Left side --}}
-        <div class="flex flex-col items-center lg:items-start">
+        <div class="flex flex-col items-center gap-3.5 lg:items-start">
             {{-- Logo --}}
             <x-nav.logo />
 
             {{-- Description --}}
             <p
-                class="pt-4 text-center font-afacad text-lg lg:max-w-[22rem] lg:text-left"
+                class="text-center font-afacad text-lg lg:max-w-[22rem] lg:text-left"
             >
                 A collection of tools for rapidly building beautiful TALL stack
                 applications. It includes a powerful admin panel, dynamic forms,
@@ -212,7 +212,7 @@
                         })
                     }
                 "
-                class="flex flex-wrap items-center gap-3.5 pt-3 text-hurricane"
+                class="flex flex-wrap items-center gap-3.5 text-hurricane"
             >
                 <div class="opacity-0 motion-reduce:opacity-100">
                     <a
@@ -374,7 +374,7 @@
                 })
             }
         "
-        class="flex items-center pt-1 text-hurricane/25 opacity-0 motion-reduce:opacity-100 lg:pt-2"
+        class="flex items-center py-1 text-hurricane/25 opacity-0 motion-reduce:opacity-100 lg:pt-2 min-[1060px]:-mx-7"
         aria-hidden="true"
     >
         {{-- Left flower --}}
@@ -441,7 +441,7 @@
 
     {{-- Copyright --}}
     <section
-        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane/80 sm:flex-row sm:justify-between sm:px-6 sm:text-left"
+        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane/80 sm:flex-row sm:justify-between sm:px-6 sm:text-left min-[1060px]:px-0"
         aria-label="Credits and copyright information"
     >
         {{-- Left side --}}
