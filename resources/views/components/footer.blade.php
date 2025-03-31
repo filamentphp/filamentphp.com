@@ -638,10 +638,13 @@
                 <a
                     href="https://zahirnia.com"
                     target="_blank"
-                    class="font-medium text-black/80 transition duration-200 hover:text-black"
+                    class="group relative font-medium text-black/80 transition duration-200 hover:text-black"
                     aria-label="Hassan's website"
                 >
                     Hassan Zahirnia
+                    <div
+                        class="absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-black transition duration-300 ease-out will-change-transform group-hover:origin-left group-hover:scale-x-100"
+                    ></div>
                 </a>
             </div>
         </div>
