@@ -1,6 +1,6 @@
 <footer class="mx-auto w-full max-w-screen-lg px-5 pb-5 pt-10">
     {{-- Sponsor list --}}
-    <div
+    <section
         x-init="
             () => {
                 if (reducedMotion) return
@@ -21,9 +21,16 @@
             }
         "
         class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-5 text-dolphin"
-        aria-label="Our sponsors"
-        role="region"
+        aria-labelledby="sponsors-heading"
     >
+        <!-- Added visually hidden heading for better document structure -->
+        <h2
+            id="sponsors-heading"
+            class="sr-only"
+        >
+            Our Sponsors
+        </h2>
+
         <div
             class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
         >
@@ -56,6 +63,7 @@
         </div>
         <div
             class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
+            aria-label="Lunar - Sponsor"
         >
             <x-sponsors.lunar footer />
         </div>
@@ -84,8 +92,9 @@
                         }
                     "
                     class="flex h-24 flex-col items-center justify-center gap-2 rounded-xl px-5"
-                    aria-label="Become a sponsor"
-                    rel="noopener"
+                    aria-label="Become a sponsor of Filament"
+                    rel="noopener noreferrer"
+                    title="Support Filament by becoming a sponsor"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +181,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <div
         class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-10 lg:flex-row lg:items-start lg:justify-between min-[1060px]:px-0"
@@ -292,66 +301,140 @@
         </div>
 
         {{-- Right side links --}}
-        <div
+        <nav
             class="flex flex-1 flex-wrap justify-center gap-x-10 gap-y-3 lg:justify-around"
+            aria-label="Footer navigation"
         >
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <div class="font-afacad text-xl font-medium text-midnight">
+                <h2 class="font-afacad text-xl font-medium text-midnight">
                     Explore
-                </div>
-                <div
+                </h2>
+                <ul
                     class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    <a href="{{ route('home') }}">Home</a>
-                    <a href="{{ route('docs') }}">Documentation</a>
-                    <a href="{{ route('api-docs') }}">PHP API Documentation</a>
-                    <a href="{{ route('use-cases.admin-panel') }}">
-                        Build an Admin Panel
-                    </a>
-                </div>
+                    <li>
+                        <a
+                            href="{{ route('home') }}"
+                            aria-label="Go to homepage"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('docs') }}"
+                            aria-label="View documentation"
+                        >
+                            Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('api-docs') }}"
+                            aria-label="View PHP API documentation"
+                        >
+                            PHP API Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('use-cases.admin-panel') }}"
+                            aria-label="Learn how to build an admin panel"
+                        >
+                            Build an Admin Panel
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <div class="font-afacad text-xl font-medium text-midnight">
+                <h2 class="font-afacad text-xl font-medium text-midnight">
                     Community
-                </div>
-                <div
+                </h2>
+                <ul
                     class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    <a href="{{ route('plugins') }}">Plugins</a>
-                    <a href="{{ route('articles') }}">Content</a>
-                    <a href="{{ route('team') }}">Meet Our Team</a>
-                    <a
-                        href="https://github.com/filamentphp/filament?sponsor=1"
-                        target="_blank"
-                    >
-                        Sponsor
-                    </a>
-                </div>
+                    <li>
+                        <a
+                            href="{{ route('plugins') }}"
+                            aria-label="Browse available plugins"
+                        >
+                            Plugins
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('articles') }}"
+                            aria-label="Read articles and tutorials"
+                        >
+                            Content
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('team') }}"
+                            aria-label="Learn about the Filament team members"
+                        >
+                            Meet Our Team
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/filamentphp/filament?sponsor=1"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Sponsor Filament on GitHub"
+                        >
+                            Sponsor
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
-                <div class="font-afacad text-xl font-medium text-midnight">
+                <h2 class="font-afacad text-xl font-medium text-midnight">
                     Support
-                </div>
-                <div
+                </h2>
+                <ul
                     class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    <a href="https://shop.filamentphp.com">Shop</a>
-                    <a
-                        href="https://status.filamentphp.com"
-                        target="_blank"
-                    >
-                        Status
-                    </a>
-                    <a
-                        href="https://github.com/filamentphp/filament/discussions/new"
-                        target="_blank"
-                    >
-                        Help
-                    </a>
-                    <a href="{{ route('consulting') }}">Consulting</a>
-                </div>
+                    <li>
+                        <a
+                            href="https://shop.filamentphp.com"
+                            aria-label="Visit the Filament shop"
+                        >
+                            Shop
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://status.filamentphp.com"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Check Filament service status"
+                        >
+                            Status
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/filamentphp/filament/discussions/new"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Get help with Filament"
+                        >
+                            Help
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('consulting') }}"
+                            aria-label="Learn about consulting services"
+                        >
+                            Consulting
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </div>
 
     {{-- Divider --}}
