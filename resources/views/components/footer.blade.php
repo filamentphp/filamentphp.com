@@ -175,12 +175,21 @@
     </div>
 
     <div
-        class="flex flex-wrap items-start justify-between gap-x-40 gap-y-10 pt-12"
+        class="flex flex-col items-stretch gap-x-20 gap-y-5 pt-12 lg:flex-row lg:items-start lg:justify-between"
     >
         {{-- Left side --}}
-        <div>
+        <div class="flex flex-col items-center lg:items-start">
             {{-- Logo --}}
             <x-nav.logo />
+
+            {{-- Description --}}
+            <p
+                class="pt-4 text-center font-afacad text-lg lg:max-w-[22rem] lg:text-left"
+            >
+                A collection of tools for rapidly building beautiful TALL stack
+                applications. It includes a powerful admin panel, dynamic forms,
+                tables, and more.
+            </p>
 
             {{-- Social links --}}
             <div
@@ -203,7 +212,7 @@
                         })
                     }
                 "
-                class="flex flex-wrap items-center gap-3.5 pt-5 text-hurricane"
+                class="flex flex-wrap items-center gap-3.5 pt-3 text-hurricane"
             >
                 <div class="opacity-0 motion-reduce:opacity-100">
                     <a
@@ -282,86 +291,65 @@
             </div>
         </div>
 
-        {{-- Links --}}
-        <div class="flex flex-1 flex-wrap justify-start gap-x-40 gap-y-3">
-            <div class="flex flex-col items-start gap-3 text-sm font-medium">
-                <a
-                    href="{{ route('home') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+        {{-- Right side links --}}
+        <div
+            class="flex flex-1 flex-wrap justify-center gap-x-10 gap-y-3 lg:justify-around"
+        >
+            <div class="flex grow flex-col items-start gap-1 sm:grow-0">
+                <div class="font-afacad text-xl font-medium text-midnight">
+                    Explore
+                </div>
+                <div
+                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    Home
-                </a>
-                <a
-                    href="{{ route('docs') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Documentation
-                </a>
-                <a
-                    href="{{ route('api-docs') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    PHP API Documentation
-                </a>
-                <a
-                    href="{{ route('plugins') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Plugins
-                </a>
-                <a
-                    href="{{ route('articles') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Content
-                </a>
-                <a
-                    href="{{ route('consulting') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Consulting
-                </a>
-                <a
-                    href="{{ route('use-cases.admin-panel') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Build an Admin Panel
-                </a>
+                    <a href="{{ route('home') }}">Home</a>
+                    <a href="{{ route('docs') }}">Documentation</a>
+                    <a href="{{ route('api-docs') }}">PHP API Documentation</a>
+                    <a href="{{ route('use-cases.admin-panel') }}">
+                        Build an Admin Panel
+                    </a>
+                </div>
             </div>
-            <div class="flex flex-col items-start gap-3 text-sm font-medium">
-                <a
-                    href="https://shop.filamentphp.com"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+            <div class="flex grow flex-col items-start gap-1 sm:grow-0">
+                <div class="font-afacad text-xl font-medium text-midnight">
+                    Community
+                </div>
+                <div
+                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    Shop
-                </a>
-                <a
-                    href="{{ route('team') }}"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                    <a href="{{ route('plugins') }}">Plugins</a>
+                    <a href="{{ route('articles') }}">Content</a>
+                    <a href="{{ route('team') }}">Meet Our Team</a>
+                    <a
+                        href="https://github.com/filamentphp/filament?sponsor=1"
+                        target="_blank"
+                    >
+                        Sponsor
+                    </a>
+                </div>
+            </div>
+            <div class="flex grow flex-col items-start gap-1 sm:grow-0">
+                <div class="font-afacad text-xl font-medium text-midnight">
+                    Support
+                </div>
+                <div
+                    class="flex flex-col items-start text-sm *:inline-block *:px-px *:py-1.5 *:text-hurricane *:transition *:duration-300 *:will-change-transform hover:*:translate-x-1 hover:*:text-black motion-reduce:*:transition-none motion-reduce:*:hover:transform-none"
                 >
-                    Meet Our Team
-                </a>
-                <a
-                    target="_blank"
-                    href="https://status.filamentphp.com"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Status
-                </a>
-                <a
-                    target="_blank"
-                    href="https://github.com/filamentphp/filament/discussions/new"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Help
-                </a>
-                <a
-                    target="_blank"
-                    href="https://github.com/filamentphp/filament?sponsor=1"
-                    class="p-2 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
-                >
-                    Sponsor
-                </a>
+                    <a href="https://shop.filamentphp.com">Shop</a>
+                    <a
+                        href="https://status.filamentphp.com"
+                        target="_blank"
+                    >
+                        Status
+                    </a>
+                    <a
+                        href="https://github.com/filamentphp/filament/discussions/new"
+                        target="_blank"
+                    >
+                        Help
+                    </a>
+                    <a href="{{ route('consulting') }}">Consulting</a>
+                </div>
             </div>
         </div>
     </div>
@@ -386,7 +374,7 @@
                 })
             }
         "
-        class="flex items-center pt-2 text-hurricane/25 opacity-0 motion-reduce:opacity-100"
+        class="flex items-center pt-3 text-hurricane/25 opacity-0 motion-reduce:opacity-100"
         aria-hidden="true"
     >
         {{-- Left flower --}}
