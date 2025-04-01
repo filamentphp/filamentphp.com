@@ -208,6 +208,7 @@
                 }
             "
             class="flex flex-col items-center gap-3.5 lg:items-start"
+            aria-labelledby="footer-about-heading"
         >
             {{-- Logo --}}
             <div class="opacity-0 motion-reduce:opacity-100">
@@ -215,6 +216,12 @@
             </div>
 
             {{-- Description --}}
+            <h2
+                id="footer-about-heading"
+                class="sr-only"
+            >
+                About Filament
+            </h2>
             <p
                 class="text-center font-afacad text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-[22rem] lg:text-left"
             >
@@ -245,6 +252,7 @@
                     }
                 "
                 class="flex flex-wrap items-center gap-3.5 text-hurricane opacity-0 motion-reduce:opacity-100"
+                aria-label="Social media links"
             >
                 <div class="opacity-0 motion-reduce:opacity-100">
                     <a
@@ -253,6 +261,7 @@
                         class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="Follow Filament on Twitter"
                         title="Filament on Twitter/X"
+                        rel="noopener"
                     >
                         <x-icons.twitter-x class="size-4" />
                     </a>
@@ -264,6 +273,7 @@
                         class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="Join the Filament Discord community"
                         title="Filament on Discord"
+                        rel="noopener"
                     >
                         <x-icons.discord class="size-5" />
                     </a>
@@ -275,6 +285,7 @@
                         class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="View Filament on GitHub"
                         title="Filament on GitHub"
+                        rel="noopener"
                     >
                         <x-icons.github class="size-5" />
                     </a>
