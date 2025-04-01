@@ -14,7 +14,7 @@
                         {
                             duration: 0.7,
                             ease: motion.backOut,
-                            delay: motion.stagger(0.1),
+                            delay: motion.stagger(0.05),
                         },
                     )
                 })
