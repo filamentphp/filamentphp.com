@@ -187,13 +187,36 @@
         class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-10 lg:flex-row lg:items-start lg:justify-between min-[1060px]:px-0"
     >
         {{-- Left side --}}
-        <div class="flex flex-col items-center gap-3.5 lg:items-start">
+        <div
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    motion.inView($el, (element) => {
+                        motion.animate(
+                            Array.from($el.children),
+                            {
+                                x: [-10, 0],
+                                opacity: [0, 1],
+                            },
+                            {
+                                duration: 0.7,
+                                ease: motion.backOut,
+                                delay: motion.stagger(0.1),
+                            },
+                        )
+                    })
+                }
+            "
+            class="flex flex-col items-center gap-3.5 lg:items-start"
+        >
             {{-- Logo --}}
-            <x-nav.logo />
+            <div class="opacity-0 motion-reduce:opacity-100">
+                <x-nav.logo />
+            </div>
 
             {{-- Description --}}
             <p
-                class="text-center font-afacad text-lg lg:max-w-[22rem] lg:text-left"
+                class="text-center font-afacad text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-[22rem] lg:text-left"
             >
                 A collection of tools for rapidly building beautiful TALL stack
                 applications. It includes a powerful admin panel, dynamic forms,
@@ -221,7 +244,7 @@
                         })
                     }
                 "
-                class="flex flex-wrap items-center gap-3.5 text-hurricane"
+                class="flex flex-wrap items-center gap-3.5 text-hurricane opacity-0 motion-reduce:opacity-100"
             >
                 <div class="opacity-0 motion-reduce:opacity-100">
                     <a
