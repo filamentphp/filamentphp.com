@@ -103,6 +103,74 @@ let utilities = [
                     description: '[Actions in tables only] The table object that this action belongs to.',
                 },
             ],
+            actionGroups: [
+                {
+                    name: 'Action group',
+                    type: 'Filament\\Actions\\ActionGroup',
+                    parameter: '$group',
+                    description: 'The current action group instance.',
+                },
+                {
+                    name: 'Livewire',
+                    type: 'Livewire\\Component',
+                    parameter: '$livewire',
+                    description: 'The Livewire component instance.',
+                },
+                {
+                    name: 'Eloquent model FQN',
+                    type: '?string<Illuminate\\Database\\Eloquent\\Model>',
+                    parameter: '$model',
+                    description: 'The Eloquent model FQN for the current action group, if one is attached.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record for the current action group, if one is attached.',
+                },
+                {
+                    name: 'Mounted actions',
+                    type: 'array<Filament\\Actions\\Action>',
+                    parameter: '$mountedActions',
+                    description: 'The array of actions that are currently mounted in the Livewire component. This is useful for accessing data from parent actions.',
+                },
+                {
+                    name: 'Schema',
+                    type: 'Filament\\Schemas\\Schema',
+                    parameter: '$schema',
+                    description: '[Action groups in schemas only] The schema object that this action group belongs to.',
+                },
+                {
+                    name: 'Schema component',
+                    type: 'Filament\\Schemas\\Components\\Component',
+                    parameter: '$schemaComponent',
+                    description: '[Action groups in schemas only] The schema component that this action group belongs to.',
+                },
+                {
+                    name: 'Schema get function',
+                    type: 'Filament\\Schemas\\Components\\Utilities\\Get',
+                    parameter: '$schemaGet',
+                    description: '[Action groups in schemas only] A function for retrieving values from the schema data. Validation is not run on form fields.',
+                },
+                {
+                    name: 'Schema component state',
+                    type: 'mixed',
+                    parameter: '$schemaComponentState',
+                    description: '[Action groups in schemas only] The current value of the schema component.',
+                },
+                {
+                    name: 'Schema operation',
+                    type: 'string',
+                    parameter: '$schemaOperation',
+                    description: '[Action groups in schemas only] The current operation being performed by the schema. Usually <code>create</code>, <code>edit</code>, or <code>view</code>.',
+                },
+                {
+                    name: 'Table',
+                    type: 'Filament\\Tables\\Table',
+                    parameter: '$table',
+                    description: '[Action groups in tables only] The table object that this action group belongs to.',
+                },
+            ],
             formFields: [
                 {
                     name: 'Field',
@@ -151,6 +219,70 @@ let utilities = [
                     type: '?Illuminate\\Database\\Eloquent\\Model',
                     parameter: '$record',
                     description: 'The Eloquent record for the current schema.',
+                },
+            ],
+            exportColumns: [
+                {
+                    name: 'Export column',
+                    type: 'Filament\\Actions\\Exports\\ExportColumn',
+                    parameter: '$column',
+                    description: 'The current export column instance.',
+                },
+                {
+                    name: 'Exporter',
+                    type: '?Filament\\Actions\\Exports\\Exporter',
+                    parameter: '$exporter',
+                    description: 'The instance of the exporter class that is currently being used for exporting data.',
+                },
+                {
+                    name: 'Options',
+                    type: 'array<string, mixed>',
+                    parameter: '$options',
+                    description: 'The options that were defined when the export started.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record that is currently being exported.',
+                },
+            ],
+            importColumns: [
+                {
+                    name: 'Import column',
+                    type: 'Filament\\Actions\\Imports\\ImportColumn',
+                    parameter: '$column',
+                    description: 'The current import column instance.',
+                },
+                {
+                    name: 'Data',
+                    type: 'array<string, mixed>',
+                    parameter: '$data',
+                    description: 'The processed data for the record that is currently being imported.',
+                },
+                {
+                    name: 'Importer',
+                    type: '?Filament\\Actions\\Imports\\Importer',
+                    parameter: '$importer',
+                    description: 'The instance of the importer class that is currently being used for importing data.',
+                },
+                {
+                    name: 'Options',
+                    type: 'array<string, mixed>',
+                    parameter: '$options',
+                    description: 'The options that were defined when the import started.',
+                },
+                {
+                    name: 'Original data',
+                    type: 'array<string, mixed>',
+                    parameter: '$originalData',
+                    description: 'The original data for the record that is currently being imported, before it was processed.',
+                },
+                {
+                    name: 'Eloquent record',
+                    type: '?Illuminate\\Database\\Eloquent\\Model',
+                    parameter: '$record',
+                    description: 'The Eloquent record that is currently being imported.',
                 },
             ],
             infolistEntries: [
@@ -302,22 +434,23 @@ utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, ut
 
 const link = {
     actions: `/docs/${version}/actions/overview#action-utility-injection`,
+    actionGroups: `/docs/${version}/actions/overview#action-utility-injection`,
     formFields: `/docs/${version}/forms/overview#field-utility-injection`,
     infolistEntries: `/docs/${version}/infolists/overview#entry-utility-injection`,
     schemaComponents: `/docs/${version}/schemas/overview#component-utility-injection`,
     tableColumns: `/docs/${version}/tables/columns/overview#column-utility-injection`,
     tableFilters: `/docs/${version}/tables/filters/overview#filter-utility-injection`,
-}[set]
+}[set] ?? null
 ---
 
-<details class="rounded-lg bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
+<details class="rounded-lg mb-6 bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2">
     <summary class="font-medium">
         <slot />
     </summary>
 
-    <a href={link} target="_blank" class="mt-3">
+    {link && <a href={link} target="_blank" class="mt-3">
         Learn more about utility injection.
-    </a>
+    </a>}
 
     <table class="block overflow-x-auto whitespace-nowrap mt-3 mb-0">
         <thead>
