@@ -3,7 +3,7 @@ name: Abrar Ahmad
 slug: abrardev99
 github_url: https://github.com/abrardev99
 twitter_url: https://x.com/abrardev99
-sponsor_url: https://github.com/sponsors/abrardev99
+sponsor_url: 
 ---
 
 Thanks for looking into my Plugin. I'm a Senior TALL (TailwindCSS, AlpineJS, Livewire, Laravel) developer with 5+ years of experience specializing in Laravel, Livewire, and AlpineJS. Extensive experience in building modern web
