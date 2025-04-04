@@ -51,8 +51,8 @@
             {{-- format-ignore-start --}}
             <strong>official development agency</strong>
             {{-- format-ignore-end --}}
-            trusted by Filament. They are a team full of
-            Filament and Laravel experts,
+            trusted by Filament. They are a team full of Filament and Laravel
+            experts,
             {{-- format-ignore-start --}}
             <a href="#kirschbaum">ready to take on your projects</a>,
             {{-- format-ignore-end --}}
