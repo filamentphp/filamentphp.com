@@ -56,7 +56,7 @@
             {{-- format-ignore-start --}}
             <a href="#kirschbaum">ready to take on your projects</a>,
             {{-- format-ignore-end --}}
-            whatever the size!
+            whatever the size. With Kirschbaum, you're not just hiring developers. You're gaining a long-term partner committed to your success.
         </x-consulting.consultant>
 
         <x-consulting.consultant
