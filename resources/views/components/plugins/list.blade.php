@@ -402,7 +402,7 @@
                 class="text-sm transition duration-300"
                 :class="{
                     'text-salmon': features.translations,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.translations,
+                    'opacity-70 text-dolphin group-hover/multi-language-toggle:opacity-100': ! features.translations,
                 }"
             >
                 Multi language
