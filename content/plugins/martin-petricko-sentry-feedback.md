@@ -1,5 +1,5 @@
 ---
-name: Sentry Feedback
+name: Sentry User Feedback
 slug: martin-petricko-sentry-feedback
 author_slug: martin-petricko
 categories: [analytics, developer-tool]
