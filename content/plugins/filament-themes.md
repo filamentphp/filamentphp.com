@@ -3,8 +3,8 @@ name: Themes
 slug: filament-themes
 author_slug: filament
 categories: [form-builder, panel-builder, table-builder, theme]
-url: https://whizzy.dev/themes?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
-description: Beautiful themes to give your app the look it needs. Carefully crafted by the designer of Filament.
+url: https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
+description: Style your Filament applications without hiring a designer or learning CSS
 github_repository: empty
 has_dark_theme: true
 has_translations: true
@@ -13,8 +13,6 @@ versions: [3]
 publish_date: 2023-09-05
 ---
 
-Does your Filament application need a different look than the default style?
-No need to hire a designer to create a custom Filament theme.
-Simply install a Composer package and you’re good to go.
+The design of your applications should reflect their brand. Give your Filament applications the right look with custom themes handcrafted by the designer of Filament.
 
-[Browse all themes on the Whizzy website.](https://whizzy.dev/themes?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=introduction)
+[Browse all themes on the Filament Themes website](https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=introduction)
