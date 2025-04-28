@@ -150,8 +150,7 @@ through this post (I _know_ you didn't just skip down here, right?), I think
 you've earned the right to know that the Filament team has officially settled
 on a v4 Beta release date.
 
-You won't have to wait much longer, because we will be releasing the Filament
-v4 Beta on June 10, 2025!
+You won't have to wait much longer, because we will be releasing the Filament v4 Beta on June 10, 2025 at [Laravel Live UK](https://laravellive.uk)!
 
 We're so excited for you all to get your hands on v4 and let us know. Remember
 that this upcoming release **IS STILL JUST A BETA**, so we don't recommend
