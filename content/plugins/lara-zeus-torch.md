@@ -1,6 +1,6 @@
 ---
-name: Torch Filament ⚡️ Infolist Component
-slug: lara-zeus-torch-filament
+name: Torch ⚡️ Infolist Component
+slug: lara-zeus-torch
 author_slug: lara-zeus
 categories: [infolist-entry, panel-builder]
 description: Highlight your code using Torchlight Engine
@@ -11,5 +11,5 @@ github_repository: lara-zeus/torch-filament
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-04-02
+publish_date: 2025-05-02
 ---
