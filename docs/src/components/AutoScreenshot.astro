@@ -11,21 +11,21 @@ const image = fs.readFileSync(new URL(
 const dimensions = probe.sync(image);
 ---
 
-<div style={`aspect-ratio: ${dimensions.width} / ${dimensions.height}`} class="rounded-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
-  <img
-    src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/light/${name}.jpg?raw=true`}
-    alt={alt}
-    loading="lazy"
-    decoding="async"
-    class="rounded-xl dark:hidden"
-  />
+<div style={`aspect-ratio: ${dimensions.width} / ${dimensions.height}`} class="rounded-xl mb-6 ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
+    <img
+        src={`/docs/${version}/images/light/${name}.jpg`}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        class="rounded-xl dark:hidden"
+    />
 
-  <img
-    src={`https://github.com/filamentphp/filament/blob/${version}/docs-assets/screenshots/images/dark/${name}.jpg?raw=true`}
-    alt={alt}
-    loading="lazy"
-    decoding="async"
-    class="rounded-xl hidden dark:block"
-  />
+    <img
+        src={`/docs/${version}/images/dark/${name}.jpg`}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        class="rounded-xl hidden dark:block"
+    />
 </div>
 
