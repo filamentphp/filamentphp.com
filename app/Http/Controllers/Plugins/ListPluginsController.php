@@ -35,7 +35,7 @@ class ListPluginsController extends Controller
             'pluginsCount' => Plugin::count(),
             'plugins' => $getPluginsListData(),
             'featuredPlugins' => $getPluginsListData([
-                'filament-themes',
+                'zepfietje-themes',
                 'kenneth-sese-advanced-tables',
                 'ralphjsmit-media-library-manager',
             ]),
