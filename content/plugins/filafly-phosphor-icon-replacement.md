@@ -4,7 +4,7 @@ slug: filafly-phosphor-icon-replacement
 author_slug: filafly
 categories: [panel-builder, theme]
 description: Quickly swap out all icons used by the Filament framework with Phosphor icons.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1353175810537689098
 docs_url: https://raw.githubusercontent.com/filafly/phosphor-icon-replacement/refs/heads/main/README.md
 github_repository: filafly/phosphor-icon-replacement
 has_dark_theme: true
