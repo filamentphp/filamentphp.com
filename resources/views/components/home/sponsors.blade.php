@@ -289,11 +289,9 @@
 
                     <x-sponsors.cms-max />
 
-                    <x-sponsors.netstudio />
-
                     <x-sponsors.sevalla />
 
-                    <x-sponsors.vormkracht10 />
+                    {{-- <x-sponsors.vormkracht10 /> --}}
 
                     <x-sponsors.lunar />
 
