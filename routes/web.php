@@ -165,7 +165,8 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
         Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
-        Route::redirect('/filament-minimal-theme', '/plugins/filament-themes');
+        Route::redirect('/filament-minimal-theme', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-themes', '/plugins/zepfietje-themes');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
@@ -180,4 +181,4 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
-Route::redirect('/themes', '/plugins/filament-themes');
+Route::redirect('/themes', '/plugins/zepfietje-themes');
