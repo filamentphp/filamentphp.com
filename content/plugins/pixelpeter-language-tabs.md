@@ -3,7 +3,7 @@ name: Language Tabs
 slug: pixelpeter-language-tabs
 author_slug: pixelpeter
 categories: [form-layout, form-field]
-description: This package is a Filament plugin that allows you to group multilingual fields into tabs. It can be configured which languages are required to be filled out.
+description: Group multilingual fields into tabs. It can be configured which languages are required to be filled out.
 discord_url: https://discord.com/channels/883083792112300104/1367718448863514706
 docs_urls: 
     v3: https://raw.githubusercontent.com/pixelpeter/filament-language-tabs/refs/heads/main/README.md
