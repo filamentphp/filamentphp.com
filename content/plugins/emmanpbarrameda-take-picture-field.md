@@ -4,11 +4,11 @@ slug: emmanpbarrameda-take-picture-field
 author_slug: emmanpbarrameda
 categories: [form-field]
 description: A custom form component to capture photos from your device camera.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1369168151178383412
 docs_url: https://raw.githubusercontent.com/emmanpbarrameda/filament-take-picture-field/main/README.md
 github_repository: emmanpbarrameda/filament-take-picture-field
 has_dark_theme: true
 has_translations: false
-versions: [1]
-publish_date: 2023-04-17
+versions: [3]
+publish_date: 2025-05-06
 ---
