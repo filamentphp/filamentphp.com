@@ -285,13 +285,11 @@
                 >
                     <x-sponsors.kirschbaum />
 
-                    <x-sponsors.whizzy />
-
                     <x-sponsors.cms-max />
 
                     <x-sponsors.sevalla />
 
-                    <x-sponsors.vormkracht10 />
+                    {{-- <x-sponsors.vormkracht10 /> --}}
 
                     <x-sponsors.lunar />
 
