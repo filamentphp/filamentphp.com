@@ -1,11 +1,11 @@
 ---
-import MobileNavigation from '@components/MobileNavigation.astro'
-import VersionSelector from '@components/VersionSelector.astro'
-import ThemeSelector from '@components/ThemeSelector.astro'
-import { Icon } from 'astro-icon'
-import Logo from './Logo.astro'
-import HalloweenLogo from './HalloweenLogo.astro'
-import ChristmasLogo from './ChristmasLogo.astro'
+import MobileNavigation from '@components/MobileNavigation.astro';
+import VersionSelector from '@components/VersionSelector.astro';
+import ThemeSelector from '@components/ThemeSelector.astro';
+import { Icon } from 'astro-icon/components';
+import Logo from './Logo.astro';
+import HalloweenLogo from './HalloweenLogo.astro';
+import ChristmasLogo from './ChristmasLogo.astro';
 
 let { navigation = null } = Astro.props
 ---
@@ -14,10 +14,10 @@ let { navigation = null } = Astro.props
   x-data="{ isScrolled: false }"
   x-on:scroll.window="isScrolled = window.scrollY > 0"
   x-init="isScrolled = window.scrollY > 0"
-  class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-slate-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]"
+  class="sticky top-0 z-50 px-4 py-3 border-b border-b-fair-pink dark:border-b-gray-800 transition duration-500 sm:px-6 lg:px-8 bg-cream dark:bg-[#171527]"
 >
   <div
-    class="w-full max-w-8xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap"
+    class="w-full max-w-9xl mx-auto flex flex-wrap gap-5 items-center justify-between sm:flex-nowrap"
   >
     <div class="relative flex flex-grow basis-0 items-center gap-3">
       <div class="flex lg:hidden">
@@ -95,14 +95,14 @@ let { navigation = null } = Astro.props
       <div id="docsearch"></div>
       <a
         href="https://github.com/filamentphp/filament"
-        class="group/github-link block"
+        class="group block"
         aria-label="GitHub"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Icon
           name="github"
-          class="h-7 w-7 transition duration-200 fill-stone-800 group-hover/github-link:fill-black dark:fill-gray-300 dark:group-hover/github-link:fill-white"
+          class="h-7 w-7 transition duration-200 text-stone-800 group-hover:text-black dark:text-gray-300 dark:group-hover:text-white"
         />
       </a>
     </div>

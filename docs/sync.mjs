@@ -17,40 +17,10 @@ const packageSlugToTitle = (slug) => {
     switch (slug) {
         case 'admin':
             return 'Admin Panel'
-        case 'forms':
-            return 'Form Builder'
-        case 'infolists':
-            return 'Infolist Builder'
-        case 'panels':
-            return 'Panel Builder'
         case 'support':
             return 'Core Concepts'
-        case 'tables':
-            return 'Table Builder'
         default:
             return GrafiteHelper(slug.replace('-', ' ')).title()
-    }
-}
-
-const packageSlugToIcon = (slug) => {
-    switch (slug) {
-        case 'actions':
-            return 'heroicons:play'
-        case 'admin':
-        case 'panels':
-            return 'heroicons:window'
-        case 'forms':
-            return 'heroicons:document-text'
-        case 'infolists':
-            return 'heroicons:queue-list'
-        case 'tables':
-            return 'heroicons:table-cells'
-        case 'notifications':
-            return 'heroicons:bell'
-        case 'widgets':
-            return 'heroicons:chart-bar'
-        default:
-            return 'heroicons:cube-transparent'
     }
 }
 
@@ -81,13 +51,17 @@ let structure = []
 let versions = fs.readdirSync('./filament')
 
 versions.forEach((version) => {
+    if (fs.existsSync(`./src/pages/${version}`)) {
+        fs.rmSync(`./src/pages/${version}`, { recursive: true })
+    }
+
     structure.push({ version: version, href: null, links: [] })
 
     if (version === '1.x') {
         const versionEntry = structure.find((item) => item.version === version)
         const files = fs.readdirSync(`./filament/${version}/docs`)
 
-        const links = files.map((file) => {
+        versionEntry.links = files.map((file) => {
             return {
                 title: docSlugToTitle(file),
                 slug: filenameToSlug(file),
@@ -96,15 +70,7 @@ versions.forEach((version) => {
             }
         })
 
-        versionEntry.links.push({
-            title: packageSlugToTitle('admin'),
-            href: links[0].href,
-            slug: 'admin',
-            icon: packageSlugToIcon('admin'),
-            links: links,
-        })
-
-        versionEntry.href = versionEntry.links[0].links[0].href
+        versionEntry.href = versionEntry.links[0].href
 
         fs.mkdir(`src/pages/1.x/admin`, { recursive: true }, () => {
             const sourceFiles = getDirContents(`./filament/1.x/docs`)
@@ -152,11 +118,12 @@ versions.forEach((version) => {
         const packagesOrder = [
             'panels',
             'admin',
-            'forms',
             'tables',
-            'notifications',
-            'actions',
+            'schemas',
+            'forms',
             'infolists',
+            'actions',
+            'notifications',
             'widgets',
             'support',
         ]
@@ -236,9 +203,8 @@ versions.forEach((version) => {
 
                 versionEntry.links.push({
                     title: packageSlugToTitle(packageName),
-                    href: docStructure[0].href,
                     slug: packageName,
-                    icon: packageSlugToIcon(packageName),
+                    href: docStructure[0].href,
                     links: docStructure,
                 })
 
@@ -290,6 +256,140 @@ versions.forEach((version) => {
                     },
                 )
             }
+        })
+
+        if (!fs.existsSync(`./filament/${version}/docs`)) {
+            return
+        }
+
+        const sourceFiles = getDirContents(`./filament/${version}/docs`)
+
+        const dirStructure = sourceFiles.map((file) => {
+            return {
+                file: file
+                    .split('docs/')
+                    .pop()
+                    .replaceAll(/(\d+\-)/g, ''),
+                title: getTitleFromMarkdown(file),
+            }
+        })
+
+        let insertLinksBeforePackages = true
+        const linksToInsertBeforePackages = []
+
+        dirStructure.map(({ file, title }) => {
+            if (file === '_PACKAGES') {
+                insertLinksBeforePackages = false
+                structure.find((item) => item.version === version).links = [
+                    ...linksToInsertBeforePackages,
+                    ...structure.find((item) => item.version === version).links,
+                ]
+
+                return
+            }
+
+            const split = file.split('/')
+
+            if (split.length === 1) {
+                ;(insertLinksBeforePackages
+                    ? linksToInsertBeforePackages
+                    : structure.find((item) => item.version === version).links
+                ).push({
+                    title: title || docSlugToTitle(file),
+                    slug: filenameToSlug(file),
+                    href: `/docs/${version}/${filenameToSlug(file)}`,
+                    links: [],
+                })
+            } else {
+                let parent = (
+                    insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                ).find((item) => item.slug === split[0])
+
+                if (!parent) {
+                    ;(insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                    ).push({
+                        title: ((slug) => {
+                            switch (slug) {
+                                case 'about':
+                                    return 'About Filament'
+                                case 'styling':
+                                    return 'Customizing Styling'
+                                case 'tenancy':
+                                    return 'Multi-Tenancy'
+                                case 'ui':
+                                    return 'Blade UI Components'
+                                default:
+                                    return GrafiteHelper(
+                                        slug.replace('-', ' '),
+                                    ).title()
+                            }
+                        })(filenameToSlug(split[0])),
+                        slug: filenameToSlug(split[0]),
+                        href: `/docs/${version}/${filenameToSlug(file)}`,
+                        links: [],
+                    })
+                }
+
+                parent = (
+                    insertLinksBeforePackages
+                        ? linksToInsertBeforePackages
+                        : structure.find((item) => item.version === version)
+                              .links
+                ).find((item) => item.slug === split[0])
+                parent.links.push({
+                    title: title || docSlugToTitle(split[1]),
+                    slug: filenameToSlug(split[1]),
+                    href: `/docs/${version}/${filenameToSlug(file)}`,
+                    links: [],
+                })
+            }
+        })
+
+        sourceFiles.forEach((file, index) => {
+            const destination = file
+                .split('docs/')
+                .pop()
+                .replaceAll(/(\d+\-)/g, '')
+                .replace('.md', '.mdx')
+
+            copy(file, `src/pages/${version}/${destination}`).then((res) => {
+                if (destination === '_PACKAGES') {
+                    return
+                }
+
+                fs.readFile(
+                    `src/pages/${version}/${destination}`,
+                    'utf8',
+                    (err, data) => {
+                        if (err) {
+                            return console.log(err)
+                        }
+
+                        let result = data.replace(
+                            '---',
+                            `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file.replace(
+                                'filament/',
+                                '',
+                            )}"`,
+                        )
+
+                        fs.writeFile(
+                            `src/pages/${version}/${destination}`,
+                            result,
+                            'utf8',
+                            (err) => {
+                                if (err) return console.log(err)
+                            },
+                        )
+                    },
+                )
+            })
         })
     }
 })
