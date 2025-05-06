@@ -1,7 +1,7 @@
 ---
 name: Themes
-slug: filament-themes
-author_slug: filament
+slug: zepfietje-themes
+author_slug: zepfietje
 categories: [form-builder, panel-builder, table-builder, theme]
 url: https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
 description: Style your Filament applications without hiring a designer or learning CSS
