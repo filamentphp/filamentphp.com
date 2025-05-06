@@ -9,7 +9,7 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro build",
-        "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x && rm -rf ../public/docs/4.x && rm -rf ./preserved-dist && cp -R dist ./preserved-dist",
+        "publicize-assets": "rm -rf ../public/docs && cp -R dist ../public/docs && rm ../public/docs/index.html && rm -rf ../public/docs/1.x && rm -rf ../public/docs/2.x && rm -rf ../public/docs/3.x && rm -rf ../public/docs/4.x && rm -rf ./preserved-dist && cp -R dist ./preserved-dist && mkdir -p ../public/docs/3.x && cp -R filament/3.x/docs-assets/screenshots/images ../public/docs/3.x/images",
         "generate": "npm run checkout && npm run sync && npm run build && npm run publicize-assets",
         "generate-dev": "npm run sync && npm run build && npm run publicize-assets",
         "preview": "astro preview",
