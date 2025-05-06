@@ -1,6 +1,6 @@
 ---
-name: Filament Phosphor Icons
-slug: filafly-filament-phosphor-icons
+name: Phosphor Icons
+slug: filafly-phosphor-icons
 author_slug: filafly
 categories: [panel-builder, theme]
 description: Quickly swap out all icons used by the Filament framework with Phosphor icons.
@@ -10,5 +10,5 @@ github_repository: filafly/filament-phosphor-icons
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2025-05-02
+publish_date: 2025-01-31
 ---
