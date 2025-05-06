@@ -35,7 +35,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '')
             navigation?.links.map((section) => (
                 <li x-init={((section.links.length ? pathName.includes(`/${section.slug}/`) : false) || (section.href === pathName)) ? `openSection = '${section.slug}'` : null}>
                     <a
-                        href={section.links.length ? '#' : section.href}
+                        href={section.links.length ? '#!' : section.href}
                         x-on:click={section.links.length ? `openSection = (openSection === '${section.slug}') ? null : '${section.slug}'; $nextTick(() => isInViewport($el) || $el.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center'}))` : null}
                         class:list={[
                             'block font-display cursor-pointer font-semibold transition duration-300 ease-out',
@@ -70,7 +70,7 @@ const pathName = Astro.url.pathname.replace(/\/+$/, '')
                                 class="relative"
                             >
                                 <a
-                                    href={link.links.length ? '#' : link.href}
+                                    href={link.links.length ? '#!' : link.href}
                                     x-on:click={link.links.length ? `openLink = (openLink === '${link.slug}') ? null : '${link.slug}'; $nextTick(() => isInViewport($el) || $el.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center'}))` : null}
                                     class:list={[
                                         'group/navigation-mini-link block cursor-pointer w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-[6px] before:h-2 before:w-2 before:rounded-sm before:rotate-45 before:transition before:duration-200',
