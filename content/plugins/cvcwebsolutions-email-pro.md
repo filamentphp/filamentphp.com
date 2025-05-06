@@ -5,7 +5,7 @@ author_slug: cvcwebsolutions
 categories: [panel-builder, kit, developer-tool]
 description: Email Pro is a powerful FilamentPHP plugin designed to synchronize and manage emails within your application seamlessly.
 discord_url: https://discord.com/channels/883083792112300104/1367712748611440691
-docs_url:
+docs_url: https://raw.githubusercontent.com/cvcwebsolutions/email-pro-docs/refs/heads/main/README.md
 url: https://filamentemail.com
 github_repository: cvcwebsolutions/email-pro
 has_dark_theme: true
