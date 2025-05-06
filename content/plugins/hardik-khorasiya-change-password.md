@@ -1,6 +1,6 @@
 ---
 name: Change Password
-slug: change-password
+slug: hardik-khorasiya-change-password
 author_slug: hardik-khorasiya
 categories: [developer-tool]
 description: Create change password page quickly and register it in navbar.
