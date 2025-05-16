@@ -287,6 +287,8 @@
 
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.nativephp />
+
                     <x-sponsors.sevalla />
 
                     {{-- <x-sponsors.vormkracht10 /> --}}
