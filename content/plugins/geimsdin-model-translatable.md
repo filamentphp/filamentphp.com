@@ -1,6 +1,6 @@
 ---
 name: Model Translatable
-slug: geimsdin-filament-model-translatable
+slug: geimsdin-model-translatable
 author_slug: geimsdin
 categories: [form-builder, form-field]
 description: Add the capability to handle content translation easily on resources.
@@ -10,5 +10,5 @@ github_repository: geimsdin/filament-model-translatable
 has_dark_theme: false
 has_translations: false
 versions: [3]
-publish_date: 2025-05-06
+publish_date: 2025-05-18
 ---
