@@ -12,13 +12,13 @@
 
 /* Button */
 .DocSearch-Button {
-    @apply flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-64 md:flex-none md:rounded-full md:py-2 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-merino md:hover:ring-slate-300 dark:md:bg-dolphin/10 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500;
+    @apply flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-64 md:flex-none md:rounded-full md:py-2 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-merino md:hover:ring-gray-300 dark:md:bg-dolphin/10 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-gray-700/40 dark:md:hover:ring-gray-500;
 }
 
 .DocSearch-Button:active,
 .DocSearch-Button:focus,
 .DocSearch-Button:hover {
-    @apply border-slate-300;
+    @apply border-gray-300;
 }
 
 .DocSearch-Button-Container {
@@ -43,7 +43,7 @@
 }
 
 .DocSearch-Button-Key {
-    @apply text-slate-400;
+    @apply text-gray-400;
 }
 
 @media (max-width: 768px) {
@@ -78,11 +78,11 @@
 }
 
 .DocSearch-Modal {
-    @apply relative m-auto mt-16 flex max-w-xl flex-col rounded-xl bg-white shadow-lg dark:bg-slate-800;
+    @apply relative m-auto mt-16 flex max-w-xl flex-col rounded-xl bg-white shadow-lg dark:bg-gray-800;
 }
 
 .DocSearch-SearchBar {
-    @apply flex items-center border-b border-slate-200 dark:border-slate-700;
+    @apply flex items-center border-b border-gray-200 dark:border-gray-700;
     height: var(--docsearch-searchbox-height);
 }
 
@@ -92,11 +92,11 @@
 
 .DocSearch-Input,
 .DocSearch-Input:focus {
-    @apply flex-1 appearance-none border-none bg-transparent px-3 py-0 text-sm text-slate-900 outline-none ring-0 dark:text-slate-100 !important;
+    @apply flex-1 appearance-none border-none bg-transparent px-3 py-0 text-sm text-gray-900 outline-none ring-0 dark:text-gray-100;
 }
 
 .DocSearch-Input::placeholder {
-    @apply text-slate-400 opacity-100 !important;
+    @apply text-gray-400 opacity-100;
 }
 
 .DocSearch-Input::-webkit-search-cancel-button,
@@ -121,6 +121,10 @@
 .DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
 .DocSearch-LoadingIndicator {
     display: none;
+}
+
+.DocSearch-VisuallyHiddenForAccessibility {
+    @apply sr-only;
 }
 
 .DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
@@ -150,7 +154,7 @@
 }
 
 .DocSearch-LoadingIndicator circle {
-    @apply stroke-slate-300;
+    @apply stroke-gray-300;
     stroke-opacity: 1;
 }
 
@@ -231,7 +235,7 @@
 
 .DocSearch-Help,
 .DocSearch-Label {
-    @apply text-slate-500 dark:text-slate-400;
+    @apply text-gray-500 dark:text-gray-400;
 }
 
 .DocSearch-Help {
@@ -255,7 +259,7 @@
 }
 
 .DocSearch-HitsFooter {
-    @apply flex justify-center text-sm text-slate-500;
+    @apply flex justify-center text-sm text-gray-500;
     margin-bottom: var(--docsearch-spacing);
     padding: var(--docsearch-spacing);
 }
@@ -293,11 +297,11 @@
 }
 
 .DocSearch-Hit a {
-    @apply block w-full rounded-md p-2 dark:text-slate-100;
+    @apply block w-full rounded-md p-2 dark:text-gray-100;
 }
 
 .DocSearch-Hit-source {
-    @apply sticky top-0 z-10 bg-white px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:bg-slate-800 dark:text-slate-100;
+    @apply sticky top-0 z-10 bg-white px-1 pb-0 pt-2 text-sm font-medium leading-8 dark:bg-gray-800 dark:text-gray-100;
 }
 
 .DocSearch-Hit-Tree {
@@ -305,7 +309,7 @@
 }
 
 .DocSearch-Hit[aria-selected='true'] a {
-    @apply bg-slate-100 text-amber-500 dark:bg-slate-700;
+    @apply bg-gray-100 text-amber-500 dark:bg-gray-700;
 }
 
 .DocSearch-Hit[aria-selected='true'] mark {
@@ -325,7 +329,7 @@
 }
 
 .DocSearch-Hit-action svg {
-    @apply block h-4 w-4 stroke-2 text-slate-500;
+    @apply block h-4 w-4 stroke-2 text-gray-500;
 }
 
 .DocSearch-Hit-action + .DocSearch-Hit-action {
@@ -371,7 +375,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Hit-path {
-    @apply text-slate-500 dark:text-slate-400;
+    @apply text-gray-500 dark:text-gray-400;
     font-size: 0.75em;
 }
 
@@ -406,7 +410,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-NoResults .DocSearch-Title {
-    @apply px-4 py-12 text-center text-sm text-slate-500 dark:text-slate-400;
+    @apply px-4 py-12 text-center text-sm text-gray-500 dark:text-gray-400;
 }
 
 .DocSearch-Prefill {
@@ -414,7 +418,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-NoResults-Prefill-List {
-    @apply -mx-3 block border-t px-4 pb-6 pt-4 text-left dark:border-slate-700;
+    @apply -mx-3 block border-t px-4 pb-6 pt-4 text-left dark:border-gray-700;
 }
 
 .DocSearch-NoResults-Prefill-List ul {
@@ -426,21 +430,21 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Prefill {
-    @apply inline-block cursor-pointer appearance-none rounded-md border-none bg-none p-2 text-left text-sm text-slate-900 dark:text-slate-100;
+    @apply inline-block cursor-pointer appearance-none rounded-md border-none bg-none p-2 text-left text-sm text-gray-900 dark:text-gray-100;
 }
 
 .DocSearch-Prefill:focus,
 .DocSearch-Prefill:hover {
-    @apply bg-slate-100 text-amber-500 outline-none dark:bg-slate-700;
+    @apply bg-gray-100 text-amber-500 outline-none dark:bg-gray-700;
 }
 
 .DocSearch-Footer {
-    @apply relative z-30 flex w-full select-none flex-row-reverse items-center border-t border-slate-200 px-4 py-2 dark:border-slate-700;
+    @apply relative z-30 flex w-full select-none flex-row-reverse items-center border-t border-gray-200 px-4 py-2 dark:border-gray-700;
     height: var(--docsearch-footer-height);
 }
 
 .DocSearch-Commands {
-    @apply m-0 mr-auto flex list-none p-0 text-slate-500 dark:text-slate-400;
+    @apply m-0 mr-auto flex list-none p-0 text-gray-500 dark:text-gray-400;
 }
 
 .DocSearch-Commands li {
@@ -452,7 +456,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Commands-Key {
-    @apply mr-1 flex items-center justify-center rounded border-none bg-slate-100 p-1 dark:bg-slate-700;
+    @apply mr-1 flex items-center justify-center rounded border-none bg-gray-100 p-1 dark:bg-gray-700;
 }
 
 .dark .DocSearch-Logo svg .cls-1,
@@ -507,7 +511,7 @@ svg.DocSearch-Hit-Select-Icon {
     }
 
     .DocSearch-Cancel {
-        @apply mr-3 inline-block cursor-pointer appearance-none rounded-md border-none bg-slate-100 bg-none px-2 py-1.5 text-xs leading-none dark:bg-slate-700 dark:text-slate-400;
+        @apply mr-3 inline-block cursor-pointer appearance-none rounded-md border-none bg-gray-100 bg-none px-2 py-1.5 text-xs leading-none dark:bg-gray-700 dark:text-gray-400;
     }
 
     .DocSearch-Commands,
