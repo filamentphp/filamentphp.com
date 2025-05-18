@@ -285,9 +285,9 @@
                 >
                     <x-sponsors.kirschbaum />
 
-                    <x-sponsors.whizzy />
-
                     <x-sponsors.cms-max />
+
+                    <x-sponsors.nativephp />
 
                     <x-sponsors.sevalla />
 
