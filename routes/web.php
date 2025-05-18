@@ -94,19 +94,19 @@ Route::prefix('/docs')->group(function () {
             return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/overview/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/getting-started/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
@@ -125,7 +125,7 @@ Route::prefix('/docs')->group(function () {
             abort(404);
         }
 
-        return redirect($versionNavigation['href']);
+        return redirect($versionNavigation['href'] ?? abort(404));
     })->where('slug', '.*')->name('docs');
 });
 
@@ -165,7 +165,8 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
         Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
-        Route::redirect('/filament-minimal-theme', '/plugins/filament-themes');
+        Route::redirect('/filament-minimal-theme', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-themes', '/plugins/zepfietje-themes');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
@@ -180,4 +181,4 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
-Route::redirect('/themes', '/plugins/filament-themes');
+Route::redirect('/themes', '/plugins/zepfietje-themes');
