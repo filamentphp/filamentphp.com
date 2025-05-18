@@ -11,6 +11,6 @@ github_repository: cvcwebsolutions/email-pro
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2025-05-02
+publish_date: 2025-05-18
 anystack_id: 9e5f85d0-cb1c-4602-a9d0-f9e42f75f46d
 ---
