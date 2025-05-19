@@ -10,5 +10,5 @@ github_repository: jeffersongoncalves/filament-umami
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-05-02
+publish_date: 2025-05-18
 ---
