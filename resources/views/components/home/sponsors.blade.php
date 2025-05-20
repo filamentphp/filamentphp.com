@@ -291,6 +291,8 @@
 
                     <x-sponsors.sevalla />
 
+                    <x-sponsors.titan />
+
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
                     <x-sponsors.lunar />
