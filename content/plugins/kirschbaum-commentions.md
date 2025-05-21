@@ -9,5 +9,5 @@ github_repository: kirschbaum-development/commentions
 has_dark_theme: true
 has_translations: false
 versions: [1]
-publish_date: 2025-05-01
+publish_date: 2025-05-21
 ---
