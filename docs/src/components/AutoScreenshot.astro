@@ -11,7 +11,7 @@ const image = fs.readFileSync(new URL(
 const dimensions = probe.sync(image);
 ---
 
-<div style={`aspect-ratio: ${dimensions.width} / ${dimensions.height}`} class="rounded-xl mb-6 ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
+<div style={`aspect-ratio: ${dimensions.width} / ${dimensions.height}; max-height: ${dimensions.height};`} class="rounded-xl mb-6 ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
     <img
         src={`/docs/${version}/images/light/${name}.jpg`}
         alt={alt}
