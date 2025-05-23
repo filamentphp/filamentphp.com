@@ -12,7 +12,7 @@ github_repository: jiten14/jitoneai-pro
 has_dark_theme: true
 has_translations: false
 is_presale: false
-price: $49.00
+price: $19.00
 versions: [3]
 publish_date: 2025-02-01
 ---
