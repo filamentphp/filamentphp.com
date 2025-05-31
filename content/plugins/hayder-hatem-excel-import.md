@@ -8,7 +8,7 @@ discord_url:
 docs_url: https://raw.githubusercontent.com/HayderHatem/filament-excel-import/main/README.md
 github_repository: HayderHatem/filament-excel-import
 has_dark_theme: true
-has_translations: false
+has_translations: true
 versions: [3]
 publish_date: 2025-05-27
 ---
