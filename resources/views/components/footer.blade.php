@@ -39,17 +39,12 @@
         <div
             class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
         >
-            <x-sponsors.whizzy footer />
-        </div>
-        <div
-            class="flex h-24 flex-col place-items-center items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
-        >
             <x-sponsors.cms-max footer />
         </div>
         <div
             class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
         >
-            <x-sponsors.netstudio footer />
+            <x-sponsors.nativephp footer />
         </div>
         <div
             class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
@@ -59,7 +54,7 @@
         <div
             class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
         >
-            <x-sponsors.vormkracht10 footer />
+            <x-sponsors.titan footer />
         </div>
         <div
             class="flex h-24 flex-col items-center justify-center rounded-xl bg-[#F4E7E2]/50 px-5 opacity-0 motion-reduce:opacity-100"
