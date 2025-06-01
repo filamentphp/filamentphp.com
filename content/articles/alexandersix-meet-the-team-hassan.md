@@ -55,7 +55,7 @@ Creating designs that genuinely resonate with people and bring smiles to their f
 #### Tell us about your setup: computer, keyboard, editor of choice, etc
 
 - **Computer:** Desktop PC w/ AMD CPU & Nvidia GPU
-- **Keyboard:** NyPhy Air96 v2
+- **Keyboard:** NuPhy Air96 v2
 - **Monitors:** 32" LG Ergo w/ IPS panel & DCI-P3 color space
 - **Editor:** VS Code
 - **Design Software:** Figma, occasionally Photoshop & Illustrator

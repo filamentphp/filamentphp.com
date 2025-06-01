@@ -325,11 +325,11 @@ versions.forEach((version) => {
                                 case 'about':
                                     return 'About Filament'
                                 case 'styling':
-                                    return 'Customizing Styling'
+                                    return 'Customizing styling'
                                 case 'tenancy':
-                                    return 'Multi-Tenancy'
+                                    return 'Multi-tenancy'
                                 case 'ui':
-                                    return 'Blade UI Components'
+                                    return 'Blade UI components'
                                 default:
                                     return GrafiteHelper(
                                         slug.replace('-', ' '),

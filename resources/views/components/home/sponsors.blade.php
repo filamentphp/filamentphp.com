@@ -281,15 +281,15 @@
                 >
                     <x-sponsors.kirschbaum />
 
-                    <x-sponsors.whizzy />
-
                     <x-sponsors.cms-max />
 
-                    <x-sponsors.netstudio />
+                    <x-sponsors.nativephp />
 
                     <x-sponsors.sevalla />
 
-                    <x-sponsors.vormkracht10 />
+                    <x-sponsors.titan />
+
+                    {{-- <x-sponsors.vormkracht10 /> --}}
 
                     <x-sponsors.lunar />
 
