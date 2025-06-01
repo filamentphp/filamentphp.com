@@ -1,5 +1,5 @@
 <section
-    class="isolate mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20 min-[630px]:pb-60 min-[700px]:pb-0"
+    class="isolate mx-auto w-full max-w-(--breakpoint-lg) overflow-x-clip px-5 pt-20 min-[630px]:pb-60 min-[700px]:pb-0"
 >
     <div
         x-init="
@@ -209,22 +209,22 @@
         {{-- Outer Circle --}}
         <div
             x-ref="outer_circle"
-            class="hidden h-[50rem] w-[50rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/40 [grid-area:1/-1] min-[800px]:block"
+            class="hidden h-200 w-200 self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/40 [grid-area:1/-1] min-[800px]:block"
         ></div>
         {{-- Middle Circle --}}
         <div
             x-ref="middle_circle"
-            class="hidden h-[40rem] w-[40rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/60 [grid-area:1/-1] min-[700px]:block"
+            class="hidden h-160 w-160 self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/60 [grid-area:1/-1] min-[700px]:block"
         ></div>
         {{-- Inner Circle --}}
         <div
             x-ref="inner_circle"
-            class="hidden h-[30rem] w-[30rem] self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/80 [grid-area:1/-1] min-[700px]:block"
+            class="hidden h-120 w-120 self-center justify-self-center rounded-full ring-1 ring-[#F1E3E3]/80 [grid-area:1/-1] min-[700px]:block"
         ></div>
         {{-- Speedometer Circle --}}
         <div
             x-ref="speedometer_circle"
-            class="absolute right-1/2 top-32 hidden h-[18rem] w-[18rem] translate-x-1/3 self-center justify-self-center rounded-full bg-gradient-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 min-[630px]:block min-[700px]:relative min-[700px]:right-0 min-[700px]:top-0 min-[700px]:translate-x-0 min-[700px]:[grid-area:1/-1]"
+            class="absolute right-1/2 top-32 hidden h-72 w-[18rem] translate-x-1/3 self-center justify-self-center rounded-full bg-linear-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 min-[630px]:block min-[700px]:relative min-[700px]:right-0 min-[700px]:top-0 min-[700px]:translate-x-0 min-[700px]:[grid-area:1/-1]"
         >
             {{-- Tailwind --}}
             <div
@@ -272,7 +272,7 @@
             </div>
             {{-- Alpine --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-[11.5rem] top-7 z-20"
+                class="tall-link-wrapper group/tall-link absolute -right-46 top-7 z-20"
             >
                 <a
                     href="https://alpinejs.dev"
@@ -313,7 +313,7 @@
             </div>
             {{-- Laravel --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-48 top-[8.5rem] z-20"
+                class="tall-link-wrapper group/tall-link absolute -right-48 top-34 z-20"
             >
                 <a
                     href="https://laravel.com"
@@ -347,7 +347,7 @@
             </div>
             {{-- Livewire --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-[10rem] top-64 z-20"
+                class="tall-link-wrapper group/tall-link absolute -right-40 top-64 z-20"
             >
                 <a
                     href="https://livewire.laravel.com"
@@ -418,7 +418,7 @@
             <svg
                 x-ref="orange_arc"
                 width="64"
-                class="absolute right-[0rem] top-[1.2rem] z-20 -rotate-[3deg]"
+                class="absolute right-[0rem] top-[1.2rem] z-20 -rotate-3"
                 height="204"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@
             <svg
                 x-ref="fade_arc"
                 width="28"
-                class="absolute -top-[3.2rem] right-[7.2rem] -rotate-[92deg]"
+                class="absolute -top-[3.2rem] right-[7.2rem] -rotate-92"
                 height="129"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

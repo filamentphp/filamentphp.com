@@ -173,7 +173,7 @@
 
     <div class="flex flex-wrap items-center gap-3 pt-5">
         {{-- Version Switch --}}
-        <div class="min-[1170px]:min-w-[15rem]">
+        <div class="min-[1170px]:min-w-60">
             <div
                 class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
             >
@@ -274,7 +274,7 @@
                     type="text"
                     x-model="search"
                     placeholder="Search ..."
-                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
+                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-hidden placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
             </div>
         </div>
@@ -316,7 +316,7 @@
             <div
                 class="absolute left-[.35rem] top-[.35rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
                 :class="{
-                    'translate-x-[4rem]': selectedPrice === 'Free',
+                    'translate-x-16': selectedPrice === 'Free',
                     'translate-x-[8.2rem]': selectedPrice === 'Paid',
                 }"
             ></div>
@@ -411,7 +411,7 @@
 
     <div class="items-start gap-5 pt-5 sm:flex">
         {{-- Categories --}}
-        <div class="w-full sm:max-w-[15rem]">
+        <div class="w-full sm:max-w-60">
             <div class="hidden font-semibold sm:block">Categories</div>
             <div
                 class="flex cursor-pointer justify-between gap-5 rounded-lg bg-merino px-3.5 py-2.5 sm:hidden"
@@ -520,7 +520,7 @@
                 </div>
             </div>
 
-            <div class="relative min-h-[16rem]">
+            <div class="relative min-h-64">
                 {{-- Plugins --}}
                 <div
                     x-ref="plugin_cards_wrapper"

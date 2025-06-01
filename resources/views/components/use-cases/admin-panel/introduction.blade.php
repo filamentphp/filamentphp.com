@@ -22,14 +22,14 @@
     {{-- Package Name --}}
     <div class="flex items-center justify-center gap-5">
         <div
-            class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-r from-transparent to-evening"
+            class="h-px max-w-40 grow rounded-full bg-linear-to-r from-transparent to-evening"
         ></div>
         <div class="text-2xl text-evening">
             Introducing
             <span class="font-bold">Filament</span>
         </div>
         <div
-            class="h-px max-w-[10rem] grow rounded-full bg-gradient-to-l from-transparent to-evening"
+            class="h-px max-w-40 grow rounded-full bg-linear-to-l from-transparent to-evening"
         ></div>
     </div>
     <div class="pt-14 text-center">
@@ -37,7 +37,7 @@
         <header class="font-black">
             <div class="text-4xl">Build a</div>
             <div
-                class="inline-block bg-gradient-to-r from-butter/80 to-sky-400/60 bg-clip-text pb-3 pt-4 text-5xl text-transparent"
+                class="inline-block bg-linear-to-r from-butter/80 to-sky-400/60 bg-clip-text pb-3 pt-4 text-5xl text-transparent"
             >
                 Beautiful & Powerful
             </div>
@@ -74,7 +74,7 @@
                 class="w-full [grid-area:1/-1]"
             />
             <div
-                class="h-40 w-full self-end bg-gradient-to-t from-cream to-transparent [grid-area:1/-1]"
+                class="h-40 w-full self-end bg-linear-to-t from-cream to-transparent [grid-area:1/-1]"
             ></div>
             <a
                 href="https://demo.filamentphp.com"

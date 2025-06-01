@@ -41,7 +41,7 @@
 
         {{-- Divider --}}
         <div
-            class="mx-auto my-4 h-px w-full max-w-[23rem] rounded-full bg-dolphin/20"
+            class="mx-auto my-4 h-px w-full max-w-92 rounded-full bg-dolphin/20"
         ></div>
 
         {{-- Description --}}

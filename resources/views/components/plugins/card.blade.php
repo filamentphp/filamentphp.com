@@ -4,7 +4,7 @@
 >
     <div
         x-bind:style="'background-image: url(' + plugin.thumbnail_url + ')'"
-        class="aspect-[16/9] w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
+        class="aspect-16/9 w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
     ></div>
 
     <div class="px-1.5 pb-1 pt-2.5">

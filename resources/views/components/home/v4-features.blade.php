@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
+<section class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-20">
     <div
         x-init="
             () => {
@@ -110,7 +110,7 @@
                     src="{{ Vite::asset('resources/svg/home/blue-butterfly.svg') }}"
                     alt=""
                     loading="lazy"
-                    class="w-7 rotate-[70deg]"
+                    class="w-7 rotate-70"
                 />
             </div>
 
@@ -165,7 +165,7 @@
         <img
             src="{{ Vite::asset('resources/images/home/v4_blue_watercolor.webp') }}"
             alt=""
-            class="relative -z-50 -my-14 -ml-10 w-[28rem] self-center justify-self-center [grid-area:1/-1]"
+            class="relative -z-50 -my-14 -ml-10 w-md self-center justify-self-center [grid-area:1/-1]"
         />
     </div>
     <h3

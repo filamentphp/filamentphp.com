@@ -49,7 +49,7 @@
     {{-- Components List --}}
     <div class="space-y-12 pt-12">
         {{-- <div --}}
-        {{-- class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]" --}}
+        {{-- class="aspect-[1.3/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink min-[500px]:aspect-[1.5/1] md:aspect-[2.1/1]" --}}
         {{-- > --}}
         {{--  --}}
         {{-- Name --}}
@@ -76,7 +76,7 @@
         {{-- </div> --}}
         <div class="grid gap-12 md:grid-cols-2">
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -122,7 +122,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">Actions</div>
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-gradient-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
             >
                 {{-- Name --}}
                 <div class="text-2xl font-extrabold text-evening">Widgets</div>

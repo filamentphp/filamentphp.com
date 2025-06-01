@@ -1,5 +1,5 @@
 @props([
-    'shadow' => 'shadow-2xl shadow-primary-500/30',
+    'shadow-sm' => 'shadow-2xl shadow-primary-500/30',
 ])
 
 <div
@@ -32,14 +32,14 @@
                     'dark:bg-white/10': theme === 'dark',
                 }"
                 type="button"
-                class="relative inline-flex w-14 shrink-0 cursor-pointer rounded-xl border-2 border-gray-300 border-transparent p-0.5 transition-colors duration-200 ease-in-out focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                class="relative inline-flex w-14 shrink-0 cursor-pointer rounded-xl border-2 border-gray-300 border-transparent p-0.5 transition-colors duration-200 ease-in-out focus:border-primary-500 focus:outline-hidden focus:ring-2 focus:ring-primary-500"
             >
                 <span
                     x-bind:class="{
                         'translate-x-6 rtl:-translate-x-6': theme === 'light',
                         'translate-x-0': theme === 'dark',
                     }"
-                    class="pointer-events-none relative inline-block h-6 w-6 transform rounded-lg bg-white px-2 shadow ring-0 transition duration-200 ease-in-out"
+                    class="pointer-events-none relative inline-block h-6 w-6 transform rounded-lg bg-white px-2 shadow-sm ring-0 transition duration-200 ease-in-out"
                 >
                     <span
                         class="absolute inset-0 flex h-full w-full items-center justify-center transition-opacity"
@@ -90,7 +90,7 @@
         </a>
 
         <div
-            class="absolute inset-0 flex items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm transition group-hover:hidden group-hover:opacity-0"
+            class="absolute inset-0 flex items-center justify-center rounded-2xl bg-white/10 backdrop-blur-xs transition group-hover:hidden group-hover:opacity-0"
         >
             <div
                 class="flex items-center rounded-lg bg-gray-900 px-4 py-2 font-medium text-white sm:text-xl"
@@ -102,10 +102,10 @@
         </div>
     </div>
 
-    <div class="absolute -top-[4.5rem] right-16 hidden md:flex">
+    <div class="absolute -top-18 right-16 hidden md:flex">
         <div class="relative">
             <span
-                class="absolute right-[4.5rem] top-1 whitespace-nowrap font-cursive text-2xl"
+                class="absolute right-18 top-1 whitespace-nowrap font-cursive text-2xl"
             >
                 it's open source
             </span>

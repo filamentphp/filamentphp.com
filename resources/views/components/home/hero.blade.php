@@ -1,8 +1,8 @@
 <section
-    class="mx-auto w-full max-w-screen-lg overflow-x-clip px-5 pt-20 min-[550px]:px-10 sm:overflow-x-visible"
+    class="mx-auto w-full max-w-(--breakpoint-lg) overflow-x-clip px-5 pt-20 min-[550px]:px-10 sm:overflow-x-visible"
 >
     <div
-        class="relative isolate z-0 -my-20 grid place-items-center [container-type:inline-size]"
+        class="relative isolate z-0 -my-20 grid place-items-center @container"
     >
         {{-- Version --}}
         <div
@@ -24,7 +24,7 @@
                     )
                 }
             "
-            class="relative -z-10 -my-3 self-center justify-self-center truncate bg-gradient-to-r from-[#DCEED8] via-[#E9E4C4] to-[#DDDBD1] bg-clip-text text-[16cqw] font-semibold tracking-wide text-transparent opacity-30 [grid-area:1/-1]"
+            class="relative -z-10 -my-3 self-center justify-self-center truncate bg-linear-to-r from-[#DCEED8] via-[#E9E4C4] to-[#DDDBD1] bg-clip-text text-[16cqw] font-semibold tracking-wide text-transparent opacity-30 [grid-area:1/-1]"
         >
             Version 4
         </div>
@@ -53,7 +53,7 @@
             "
             src="{{ Vite::asset('resources/images/home/hummingbird.webp') }}"
             alt=""
-            class="relative z-10 w-44 self-center justify-self-center [grid-area:1/-1] sm:w-[14rem]"
+            class="relative z-10 w-44 self-center justify-self-center [grid-area:1/-1] sm:w-56"
         />
     </div>
     <header class="relative isolate z-0 grid place-items-center pt-14 sm:pt-10">
@@ -77,7 +77,7 @@
             "
             src="{{ Vite::asset('resources/images/home/hero-header.webp') }}"
             alt="Filament"
-            class="w-[32rem] self-center justify-self-center [grid-area:1/-1]"
+            class="w-lg self-center justify-self-center [grid-area:1/-1]"
         />
 
         {{-- Watercolor --}}
@@ -100,7 +100,7 @@
             "
             src="{{ Vite::asset('resources/images/home/hero-watercolor.webp') }}"
             alt=""
-            class="relative -z-50 -mb-5 w-[45rem] self-center justify-self-center [grid-area:1/-1]"
+            class="relative -z-50 -mb-5 w-180 self-center justify-self-center [grid-area:1/-1]"
         />
 
         {{-- Admin panel --}}

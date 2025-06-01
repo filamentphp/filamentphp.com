@@ -14,7 +14,7 @@
 @php
     $buttonClasses = array_merge(
         [
-            "inline-flex items-center justify-center font-medium tracking-tight rounded-lg border transition hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset",
+            "inline-flex items-center justify-center font-medium tracking-tight rounded-lg border transition hover:scale-105 hover:-rotate-1 focus:outline-hidden focus:ring-offset-2 focus:ring-2 focus:ring-inset",
             "opacity-70 cursor-not-allowed" => $disabled,
             "h-9 px-4" => $size === "md",
             "h-8 px-3 text-sm" => $size === "sm",
@@ -22,7 +22,7 @@
         ],
         $outlined
             ? [
-                "shadow focus:ring-white" => $color !== "secondary",
+                "shadow-sm focus:ring-white" => $color !== "secondary",
                 "text-primary-500 border-primary-500 hover:bg-primary-500/20 focus:bg-primary-600/20 focus:ring-offset-primary-600" => $color === "primary",
                 "text-success-500 border-success-500 hover:bg-success-500/20 focus:bg-success-600/20 focus:ring-offset-success-600" => $color === "success",
                 "text-danger-500 border-danger-500 hover:bg-danger-500/20 focus:bg-danger-600/20 focus:ring-offset-danger-600" => $color === "danger",
@@ -31,7 +31,7 @@
                 "text-gray-700 border-gray-300 hover:bg-gray-50 focus:ring-primary-500 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-500" => $color === "secondary",
             ]
             : [
-                "text-white shadow focus:ring-white border-transparent" => $color !== "secondary",
+                "text-white shadow-sm focus:ring-white border-transparent" => $color !== "secondary",
                 "bg-primary-500 hover:bg-primary-400 focus:bg-primary-600 focus:ring-offset-primary-600" => $color === "primary",
                 "bg-success-500 hover:bg-success-400 focus:bg-success-600 focus:ring-offset-success-600" => $color === "success",
                 "bg-danger-500 hover:bg-danger-400 focus:bg-danger-600 focus:ring-offset-danger-600" => $color === "danger",

@@ -2,7 +2,7 @@
     x-data="{
         show_more: false,
     }"
-    class="relative mx-auto w-full max-w-screen-lg px-5"
+    class="relative mx-auto w-full max-w-(--breakpoint-lg) px-5"
 >
     {{-- Tweets Section --}}
     <div
@@ -103,7 +103,7 @@
                     )
             }
         "
-        class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-t from-transparent via-[#F1F3FF] to-[#E6EAFF] px-5 pb-5"
+        class="relative z-1 overflow-hidden rounded-3xl bg-linear-to-t from-transparent via-[#F1F3FF] to-[#E6EAFF] px-5 pb-5"
     >
         {{-- Right side decoration --}}
         <div class="absolute right-24 top-14 hidden md:block lg:right-40">
@@ -336,7 +336,7 @@
         <div
             class="overflow-hidden"
             :class="{
-                'max-h-[45rem]': !show_more,
+                'max-h-180': !show_more,
             }"
         >
             <div
@@ -872,7 +872,7 @@
     <div
         class="inset-x-0 bottom-0 z-10 grid w-full select-none"
         :class="{
-            'absolute bg-gradient-to-t from-cream to-transparent h-60': !show_more,
+            'absolute bg-linear-to-t from-cream to-transparent h-60': !show_more,
             'sticky': show_more,
         }"
     >
@@ -886,7 +886,7 @@
             class="relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full bg-evening py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-indigo-900 motion-reduce:transition-none"
             :class="{
                 'w-48': !show_more,
-                'xl:translate-x-[34rem] -translate-y-10 w-16 rotate-180': show_more,
+                'xl:translate-x-136 -translate-y-10 w-16 rotate-180': show_more,
             }"
         >
             <div

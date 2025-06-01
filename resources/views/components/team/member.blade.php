@@ -10,7 +10,7 @@
 <div
     class="flex flex-col items-start gap-x-10 gap-y-5 pt-10 md:flex-row md:items-center"
 >
-    <div class="flex min-w-[15rem] flex-col items-center space-y-5">
+    <div class="flex min-w-60 flex-col items-center space-y-5">
         {{-- Avatar --}}
         <img
             src="{{ $avatar }}"

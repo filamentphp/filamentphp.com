@@ -43,7 +43,7 @@
         height="39"
         viewBox="0 0 27 39"
         fill="none"
-        class="absolute -top-4 right-[-2rem] transition duration-300 will-change-transform motion-reduce:transition-none"
+        class="absolute -top-4 -right-8 transition duration-300 will-change-transform motion-reduce:transition-none"
     >
         <path
             fill-rule="evenodd"

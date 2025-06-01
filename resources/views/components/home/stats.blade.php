@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-10 pt-14 lg:px-5">
+<section class="mx-auto w-full max-w-(--breakpoint-lg) px-10 pt-14 lg:px-5">
     <div
         x-init="
             () => {
@@ -31,7 +31,7 @@
         {{-- Discord --}}
         <div
             x-ref="pop-in"
-            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#E2E2F7] to-[#EBECFF] p-7"
+            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-linear-to-t from-[#E2E2F7] to-[#EBECFF] p-7"
         >
             <div class="flex items-center gap-4">
                 {{-- Icon --}}
@@ -100,7 +100,7 @@
         {{-- GitHub --}}
         <div
             x-ref="pop-in"
-            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#FFEAD1] to-[#FFEFDD] p-7"
+            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-linear-to-t from-[#FFEAD1] to-[#FFEFDD] p-7"
         >
             <div class="flex items-center gap-4">
                 {{-- Icon --}}
@@ -152,7 +152,7 @@
                 {{-- Icon --}}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-4 transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px group-hover:rotate-[70deg]"
+                    class="size-4 transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px group-hover:rotate-70"
                     viewBox="0 0 15 16"
                     fill="none"
                 >
@@ -190,7 +190,7 @@
         {{-- Downloads --}}
         <div
             x-ref="pop-in"
-            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-t from-[#E5F1ED] to-[#ECF8F4] p-7"
+            class="relative isolate z-0 w-full max-w-sm overflow-hidden rounded-2xl bg-linear-to-t from-[#E5F1ED] to-[#ECF8F4] p-7"
         >
             <div class="flex items-center gap-4">
                 {{-- Icon --}}

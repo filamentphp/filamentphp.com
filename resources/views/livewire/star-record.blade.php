@@ -25,7 +25,7 @@
                 class="w-[1.2rem] transition duration-200"
                 :class="{
                     'text-butter': isStarred,
-                    'text-peach-orange group-hover/star-button:text-butter translate-x-2 rotate-[71deg]': ! isStarred,
+                    'text-peach-orange group-hover/star-button:text-butter translate-x-2 rotate-71': ! isStarred,
                 }"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -57,11 +57,11 @@
         </div>
         <div class="ml-3 h-full w-full border-l border-dawn-pink px-3.5">
             <div
-                class="relative top-2.5 grid h-5 w-full min-w-[1rem] overflow-y-hidden text-center font-medium transition"
+                class="relative top-2.5 grid h-5 w-full min-w-4 overflow-y-hidden text-center font-medium transition"
             >
                 {{-- Will Go Down --}}
                 <div
-                    class="self-center justify-self-center transition duration-[400ms] [grid-area:1/-1]"
+                    class="self-center justify-self-center transition duration-400 [grid-area:1/-1]"
                     x-text="delayedStarsCount"
                     :class="{
                         'translate-y-full opacity-0': isStarred,
@@ -71,7 +71,7 @@
 
                 {{-- Will Go Up --}}
                 <div
-                    class="self-center justify-self-center transition duration-[400ms] [grid-area:1/-1]"
+                    class="self-center justify-self-center transition duration-400 [grid-area:1/-1]"
                     x-text="delayedStarsCount"
                     :class="{
                         '-translate-y-full opacity-0': !isStarred,

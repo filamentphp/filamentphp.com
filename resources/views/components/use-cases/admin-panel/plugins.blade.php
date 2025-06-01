@@ -19,7 +19,7 @@
     "
     class="mx-auto w-full max-w-6xl px-5 pt-40"
 >
-    <div class="relative grid min-h-[55rem] lg:min-h-full">
+    <div class="relative grid min-h-220 lg:min-h-full">
         <div class="relative z-50 self-center [grid-area:1/-1]">
             {{-- Title --}}
             <div class="grid place-items-center text-center">

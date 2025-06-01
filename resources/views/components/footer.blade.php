@@ -1,4 +1,4 @@
-<footer class="mx-auto w-full max-w-screen-lg px-5 pb-5 pt-10">
+<footer class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pb-5 pt-10">
     {{-- Sponsor list --}}
     <section
         x-init="
@@ -218,7 +218,7 @@
                 About Filament
             </h2>
             <p
-                class="text-center font-afacad text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-[22rem] lg:text-left"
+                class="text-center font-afacad text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-88 lg:text-left"
             >
                 A collection of tools for rapidly building beautiful TALL stack
                 applications. It includes a powerful admin panel, dynamic forms,

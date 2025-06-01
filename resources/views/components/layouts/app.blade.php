@@ -12,7 +12,7 @@
         x-on:click="$store.sidebar.isOpen = false"
         type="button"
         aria-label="Close sidebar menu"
-        class="fixed inset-0 z-[999] h-full w-full bg-black/50 focus:outline-none lg:hidden"
+        class="fixed inset-0 z-999 h-full w-full bg-black/50 focus:outline-hidden lg:hidden"
     ></button>
 
     <aside
@@ -20,7 +20,7 @@
         aria-labelledby="sidebar-title"
         :aria-expanded="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-        class="fixed inset-y-0 left-0 z-[1000] w-full max-w-[19rem] transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
+        class="fixed inset-y-0 left-0 z-1000 w-full max-w-76 transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
     >
         <!-- Hidden title for screen readers -->
         <h2

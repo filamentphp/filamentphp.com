@@ -164,7 +164,7 @@
                             style="
                                 background-image: url({{ $plugin->getImageUrl() }});
                             "
-                            class="aspect-[16/9] h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
+                            class="aspect-16/9 h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
                         ></div>
                     </div>
                 @endif
@@ -340,7 +340,7 @@
                             @endif
                         </div>
                         <div
-                            class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                            class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded-sm prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
                             {!!
                                 \App\Support\Markdown::parse($docs)
@@ -561,7 +561,7 @@
                                         style="
                                             background-image: url({{ $otherPlugin->getThumbnailUrl() }});
                                         "
-                                        class="aspect-[16/9] w-36 min-w-[9rem] shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
+                                        class="aspect-16/9 w-36 min-w-36 shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
                                     ></div>
 
                                     {{-- Detail --}}
@@ -609,7 +609,7 @@
 
                                     {{-- Arrow --}}
                                     <div
-                                        class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-gradient-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/author-plugin-link:-translate-x-3 group-hover/author-plugin-link:opacity-100"
+                                        class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-linear-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/author-plugin-link:-translate-x-3 group-hover/author-plugin-link:opacity-100"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

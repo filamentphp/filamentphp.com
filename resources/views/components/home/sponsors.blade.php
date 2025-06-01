@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-5 pt-20">
+<section class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-20">
     <div
         x-data
         x-ref="sponsors_section"
@@ -220,7 +220,7 @@
                     )
             }
         "
-        class="relative z-[1] overflow-hidden rounded-3xl bg-gradient-to-tl from-[#CDD0E5] to-[#FFECEF] px-5 pb-32"
+        class="relative z-1 overflow-hidden rounded-3xl bg-linear-to-tl from-[#CDD0E5] to-[#FFECEF] px-5 pb-32"
     >
         <div class="grid place-items-center pt-14">
             <h4
@@ -547,7 +547,7 @@
             <svg
                 width="27"
                 height="24"
-                class="rotate-[20deg] scale-90"
+                class="rotate-20 scale-90"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >

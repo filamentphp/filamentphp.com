@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-10 pt-20 lg:px-5">
+<section class="mx-auto w-full max-w-(--breakpoint-lg) px-10 pt-20 lg:px-5">
     <div
         x-init="
             () => {
@@ -22,7 +22,7 @@
     >
         {{-- Fade --}}
         <div
-            class="z-10 h-60 w-full self-end justify-self-start bg-gradient-to-t from-cream to-transparent [grid-area:1/-1]"
+            class="z-10 h-60 w-full self-end justify-self-start bg-linear-to-t from-cream to-transparent [grid-area:1/-1]"
         ></div>
 
         {{-- Screenshot --}}

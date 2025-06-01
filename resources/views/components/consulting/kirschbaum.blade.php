@@ -23,7 +23,7 @@
 >
     <div
         x-ref="kirschbaum"
-        class="rounded-xl bg-gradient-to-tr from-[#323544] to-[#6B6D92] p-10 text-white"
+        class="rounded-xl bg-linear-to-tr from-[#323544] to-[#6B6D92] p-10 text-white"
     >
         {{-- Title --}}
         <div class="text-lg font-medium">Official development agency</div>
@@ -55,27 +55,27 @@
             class="grid max-w-xl grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-x-20 gap-y-4 pt-10"
         >
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Technical Leadership</div>
             </div>
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Team Augmentation</div>
             </div>
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Support & Training</div>
             </div>
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Ground-up Development</div>
             </div>
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Code Review</div>
             </div>
             <div class="flex items-center gap-4">
-                <div class="h-2 w-2 rotate-45 rounded-sm bg-[#6D72DD]"></div>
+                <div class="h-2 w-2 rotate-45 rounded-xs bg-[#6D72DD]"></div>
                 <div class="font-medium">Rescue Projects</div>
             </div>
         </div>
@@ -85,7 +85,7 @@
             <a
                 href="https://kirschbaumdevelopment.com/contact?ref=filamentphp.com"
                 target="_blank"
-                class="flex rounded-full bg-[#58597E] p-1.5 text-white shadow shadow-black/5 transition duration-300 hover:bg-[#6D72DD]"
+                class="flex rounded-full bg-[#58597E] p-1.5 text-white shadow-sm shadow-black/5 transition duration-300 hover:bg-[#6D72DD]"
             >
                 <img
                     src="{{ Vite::asset('resources/images/consulting/kirschbaum/kirschbaum.webp') }}"

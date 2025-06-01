@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-screen-lg px-5 pt-32">
+<section class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-32">
     <div
         x-init="
             () => {
@@ -86,7 +86,7 @@
 
             {{-- Rocket --}}
             <div
-                class="-mr-[4.5rem] hidden self-end justify-self-end [grid-area:1/-1] sm:block"
+                class="-mr-18 hidden self-end justify-self-end [grid-area:1/-1] sm:block"
             >
                 <img
                     src="{{ Vite::asset('resources/images/home/rocket.webp') }}"
@@ -143,7 +143,7 @@
             "
             src="{{ Vite::asset('resources/images/home/v3_orange_watercolor.webp') }}"
             alt=""
-            class="relative -z-50 w-[22rem] self-center justify-self-center [grid-area:1/-1]"
+            class="relative -z-50 w-88 self-center justify-self-center [grid-area:1/-1]"
         />
     </div>
     <h3

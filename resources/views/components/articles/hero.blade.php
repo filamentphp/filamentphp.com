@@ -1,6 +1,6 @@
 <div class="mx-auto w-full max-w-8xl px-10 pt-20">
     <div
-        class="relative flex max-w-screen-lg items-start justify-center gap-10 md:gap-20 min-[840px]:justify-between"
+        class="relative flex max-w-(--breakpoint-lg) items-start justify-center gap-10 md:gap-20 min-[840px]:justify-between"
     >
         {{-- Left Side --}}
         <div
@@ -104,7 +104,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="w-[23rem] pt-10 text-lg font-medium text-dolphin"
+                class="w-92 pt-10 text-lg font-medium text-dolphin"
             >
                 A collection of articles written by the Filament team and our
                 community.

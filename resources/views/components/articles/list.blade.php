@@ -189,10 +189,10 @@
             <div
                 class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
-                    'bg-fair-pink w-[4.5rem]': selectedType === 'all',
-                    'translate-x-[4.5rem] w-[6.5rem]' : selectedType === 'article',
-                    'translate-x-[10.7rem] w-[6rem]' : selectedType === 'news',
-                    'translate-x-[17rem] w-[6rem]' : selectedType === 'trick',
+                    'bg-fair-pink w-18': selectedType === 'all',
+                    'translate-x-18 w-26' : selectedType === 'article',
+                    'translate-x-[10.7rem] w-24' : selectedType === 'news',
+                    'translate-x-68 w-24' : selectedType === 'trick',
                     {{ $typeConditionalColorClasses }},
                 }"
             ></div>
@@ -303,7 +303,7 @@
                     type="text"
                     x-model="search"
                     placeholder="Search ..."
-                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-none placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
+                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-hidden placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
                 />
             </div>
         </div>
@@ -371,7 +371,7 @@
                 </div>
             </div>
 
-            <div class="relative min-h-[16rem]">
+            <div class="relative min-h-64">
                 {{-- Articles --}}
                 <div
                     x-ref="article_cards_wrapper"

@@ -20,9 +20,9 @@
     class="mx-auto w-full max-w-5xl px-5 pt-14"
 >
     {{-- Download Count --}}
-    <div class="grid text-center [container-type:inline-size]">
+    <div class="grid text-center @container">
         <div
-            class="bg-gradient-to-t from-[#EFEFEF]/20 to-[#ABF4F6] bg-clip-text text-[47cqw] font-black leading-none text-transparent [grid-area:1/-1]"
+            class="bg-linear-to-t from-[#EFEFEF]/20 to-[#ABF4F6] bg-clip-text text-[47cqw] font-black leading-none text-transparent [grid-area:1/-1]"
         >
             10M
         </div>
@@ -34,7 +34,7 @@
                 Filament has served users with over
             </span>
             <span
-                class="bg-gradient-to-r from-[#51D7DB] to-[#B4ABA4] bg-clip-text text-transparent"
+                class="bg-linear-to-r from-[#51D7DB] to-[#B4ABA4] bg-clip-text text-transparent"
             >
                 10 million downloads
             </span>

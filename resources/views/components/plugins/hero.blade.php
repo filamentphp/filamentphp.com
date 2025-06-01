@@ -1,6 +1,6 @@
 <div class="mx-auto w-full max-w-8xl px-10 pt-20">
     <div
-        class="relative flex max-w-screen-lg items-start gap-10 md:gap-20 xl:justify-between"
+        class="relative flex max-w-(--breakpoint-lg) items-start gap-10 md:gap-20 xl:justify-between"
     >
         {{-- Left Side --}}
         <div
@@ -201,7 +201,7 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-full bg-[#7466BC] px-9 py-3 text-white backdrop-blur transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-purple-300/40 motion-reduce:transition-none"
+                        class="flex items-center justify-center gap-3 rounded-full bg-[#7466BC] px-9 py-3 text-white backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-purple-300/40 motion-reduce:transition-none"
                     >
                         <div class="whitespace-nowrap">Submit Plugins</div>
                         <div
@@ -236,7 +236,7 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-full bg-cream px-9 py-3 text-midnight text-purple-950 backdrop-blur transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-opacity-20 motion-reduce:transition-none"
+                        class="flex items-center justify-center gap-3 rounded-full bg-cream px-9 py-3 text-midnight text-purple-950 backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-opacity-20 motion-reduce:transition-none"
                     >
                         <div
                             class="transition duration-300 motion-reduce:transition-none"

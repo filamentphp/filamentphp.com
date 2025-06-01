@@ -1,4 +1,4 @@
-<div class="mx-auto w-full max-w-screen-lg pt-60">
+<div class="mx-auto w-full max-w-(--breakpoint-lg) pt-60">
     <div
         x-data
         x-ref="sunset_section"
@@ -204,7 +204,7 @@
             >
                 <div
                     x-ref="sun"
-                    class="h-40 w-40 rounded-full bg-gradient-to-t from-[#FFBF85]/40 to-[#FF9385]"
+                    class="h-40 w-40 rounded-full bg-linear-to-t from-[#FFBF85]/40 to-[#FF9385]"
                 ></div>
             </div>
 
@@ -225,7 +225,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud1.svg') }}"
                     alt="Cloud"
-                    class="w-[10rem] sm:w-[14rem]"
+                    class="w-40 sm:w-56"
                 />
             </div>
 
@@ -237,7 +237,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud2.svg') }}"
                     alt="Cloud"
-                    class="w-[8rem] sm:w-[12rem]"
+                    class="w-32 sm:w-48"
                 />
             </div>
 
@@ -249,7 +249,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud3.svg') }}"
                     alt="Cloud"
-                    class="w-[8rem]"
+                    class="w-32"
                 />
             </div>
 
@@ -262,19 +262,19 @@
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt="Bird"
-                        class="w-[2rem]"
+                        class="w-8"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt="Bird"
-                        class="w-[2rem]"
+                        class="w-8"
                     />
                 </div>
                 <div class="flex justify-center pt-5">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt="Bird"
-                        class="w-[3rem]"
+                        class="w-12"
                     />
                 </div>
             </div>
@@ -288,14 +288,14 @@
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt="Bird"
-                        class="w-[3rem]"
+                        class="w-12"
                     />
                 </div>
                 <div class="flex justify-start pt-5">
                     <img
                         src="{{ Vite::asset('resources/svg/home/bird.svg') }}"
                         alt="Bird"
-                        class="w-[2rem]"
+                        class="w-8"
                     />
                 </div>
             </div>
@@ -309,17 +309,17 @@
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
                         alt="Giraffes"
-                        class="w-[2rem] -scale-x-100 opacity-80"
+                        class="w-8 -scale-x-100 opacity-80"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
                         alt="Giraffes"
-                        class="w-[2.5rem]"
+                        class="w-10"
                     />
                     <img
                         src="{{ Vite::asset('resources/svg/home/giraffe.svg') }}"
                         alt="Giraffes"
-                        class="w-[1.5rem] opacity-60"
+                        class="w-6 opacity-60"
                     />
                 </div>
             </div>
@@ -332,7 +332,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/mountain1.svg') }}"
                     alt="Mountain"
-                    class="w-[30rem]"
+                    class="w-120"
                 />
             </div>
 
@@ -344,7 +344,7 @@
                 <img
                     src="{{ Vite::asset('resources/svg/home/mountain2.svg') }}"
                     alt="Mountain"
-                    class="w-[30rem]"
+                    class="w-120"
                 />
             </div>
         </div>
@@ -410,7 +410,7 @@
                 </div>
 
                 <div
-                    class="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-[#FFEDE3] to-[#FFEBCC] transition duration-300 group-hover/getstarted:opacity-70 motion-reduce:transition-none"
+                    class="absolute inset-0 -z-10 h-full w-full bg-linear-to-br from-[#FFEDE3] to-[#FFEBCC] transition duration-300 group-hover/getstarted:opacity-70 motion-reduce:transition-none"
                 ></div>
             </a>
         </div>
