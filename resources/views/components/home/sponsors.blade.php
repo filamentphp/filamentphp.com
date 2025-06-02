@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-20">
+<section class="mx-auto mt-20 w-full max-w-(--breakpoint-lg) px-5">
     <div
         x-data
         x-ref="sponsors_section"
@@ -587,37 +587,5 @@
                 />
             </svg>
         </div>
-    </div>
-
-    {{-- Dashed Separator --}}
-    <div
-        x-data
-        x-ref="separator"
-        x-init="
-            () => {
-                if (reducedMotion) return
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: $refs.separator,
-                        start: 'top bottom-=150px',
-                    },
-                }).fromTo(
-                    $refs.separator,
-                    {
-                        clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-                    },
-                    {
-                        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-                        duration: 0.7,
-                        ease: 'circ.out',
-                    },
-                )
-            }
-        "
-        class="bg-red my-8 grid h-24 place-items-center"
-    >
-        <div
-            class="h-full border-r-[1.5px] border-dashed border-r-black/50"
-        ></div>
     </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-20">
+<section class="mx-auto mt-32 w-full max-w-(--breakpoint-lg) px-5">
     <div
         x-init="
             () => {

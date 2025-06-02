@@ -556,10 +556,10 @@
                 }
             "
             href="{{ route('docs') }}"
-            class="group inline-flex items-center gap-3 rounded-3xl bg-purple-200 py-2 pr-5 pl-2 text-lg font-medium transition duration-300 ease-in-out hover:bg-purple-200"
+            class="group inline-flex items-center gap-3 rounded-3xl bg-purple-200 py-2 pr-5 pl-2 text-lg font-medium transition duration-300 ease-in-out hover:bg-blue-200"
         >
             <div
-                class="relative isolate grid size-12 place-items-center overflow-hidden rounded-2xl bg-purple-300/50 transition duration-300 ease-in-out group-hover:bg-purple-300/50"
+                class="relative isolate grid size-12 place-items-center overflow-hidden rounded-2xl bg-purple-300/50 transition duration-300 ease-in-out group-hover:bg-blue-300/50"
             >
                 {{-- Left meteor 1 --}}
                 <div
