@@ -2,33 +2,8 @@
     class="mx-auto w-full max-w-(--breakpoint-lg) overflow-x-clip px-5 pt-20 min-[550px]:px-10 sm:overflow-x-visible"
 >
     <div
-        class="relative isolate z-0 -my-20 grid place-items-center @container"
+        class="@container pointer-events-none relative isolate z-10 -my-20 grid place-items-center"
     >
-        {{-- Version --}}
-        <div
-            x-init="
-                () => {
-                    if (reducedMotion) return
-                    gsap.fromTo(
-                        $el,
-                        {
-                            autoAlpha: 0,
-                            y: -10,
-                        },
-                        {
-                            autoAlpha: 0.3,
-                            y: 0,
-                            duration: 0.8,
-                            ease: 'power1.in',
-                        },
-                    )
-                }
-            "
-            class="relative -z-10 -my-3 self-center justify-self-center truncate bg-linear-to-r from-[#DCEED8] via-[#E9E4C4] to-[#DDDBD1] bg-clip-text text-[16cqw] font-semibold tracking-wide text-transparent opacity-30 [grid-area:1/-1]"
-        >
-            Version 4
-        </div>
-
         {{-- Hummingbird --}}
         <img
             x-init="
@@ -53,9 +28,10 @@
             "
             src="{{ Vite::asset('resources/images/home/hummingbird.webp') }}"
             alt=""
-            class="relative z-10 w-44 self-center justify-self-center [grid-area:1/-1] sm:w-56"
+            class="w-44 self-center justify-self-center [grid-area:1/-1] sm:w-56"
         />
     </div>
+
     <header class="relative isolate z-0 grid place-items-center pt-14 sm:pt-10">
         {{-- Accelerated Laravel Development --}}
         <img
@@ -126,16 +102,16 @@
             class="relative left-5 -mt-8 hidden self-start justify-self-start [grid-area:1/-1] md:block"
         >
             <img
-                src="{{ Vite::asset('resources/svg/home/green-butterfly.svg') }}"
+                src="{{ Vite::asset('resources/images/home/blue_butterfly.webp') }}"
                 alt=""
-                class="relative -top-0.5 z-10 -my-5 -ml-4"
+                class="relative -top-0.5 z-10 -my-5 -ml-4.5 h-10"
             />
             <h3
-                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
+                class="font-afacad rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
             >
                 Admin panel
             </h3>
-            <div class="relative -right-2.5 -top-1.5 flex justify-end">
+            <div class="relative -top-1.5 -right-2.5 flex justify-end">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -176,11 +152,11 @@
             class="relative -mt-8 hidden self-start justify-self-end [grid-area:1/-1] md:block"
         >
             <h3
-                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
+                class="font-afacad rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
             >
                 UI Components
             </h3>
-            <div class="relative -left-2.5 -top-1.5 flex justify-start">
+            <div class="relative -top-1.5 -left-2.5 flex justify-start">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
@@ -197,9 +173,9 @@
             </div>
             <div class="flex justify-end">
                 <img
-                    src="{{ Vite::asset('resources/svg/home/blue-butterfly.svg') }}"
+                    src="{{ Vite::asset('resources/images/home/purple_butterfly.webp') }}"
                     alt=""
-                    class="relative -top-0.5 z-10"
+                    class="relative -top-0.5 z-10 h-10"
                 />
             </div>
         </div>
@@ -228,11 +204,11 @@
             class="relative -mb-8 hidden self-end justify-self-start [grid-area:1/-1] md:block"
         >
             <img
-                src="{{ Vite::asset('resources/svg/home/pink-butterfly.svg') }}"
+                src="{{ Vite::asset('resources/images/home/pink_butterfly.webp') }}"
                 alt=""
-                class="relative -top-0.5 z-10 -my-5 -ml-10"
+                class="relative -top-0.5 z-10 -my-5 -ml-10 h-10"
             />
-            <div class="relative -right-3 top-2 flex justify-end">
+            <div class="relative top-2 -right-3 flex justify-end">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -248,7 +224,7 @@
                 </svg>
             </div>
             <h3
-                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
+                class="font-afacad rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
             >
                 Form builder
             </h3>
@@ -279,12 +255,12 @@
         >
             <div class="flex justify-end">
                 <img
-                    src="{{ Vite::asset('resources/svg/home/purple-butterfly.svg') }}"
+                    src="{{ Vite::asset('resources/images/home/teal_butterfly.webp') }}"
                     alt=""
-                    class="relative top-3 z-10 -my-5 -mr-3"
+                    class="relative top-3 z-10 -my-5 -mr-4 h-10"
                 />
             </div>
-            <div class="relative -left-3 top-2 flex justify-start">
+            <div class="relative top-2 -left-3 flex justify-start">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
@@ -300,7 +276,7 @@
                 </svg>
             </div>
             <h3
-                class="rounded-full bg-white px-4 py-1.5 font-afacad capitalize ring-1 ring-black"
+                class="font-afacad rounded-full bg-white px-4 py-1.5 capitalize ring-1 ring-black"
             >
                 Table builder
             </h3>
@@ -328,7 +304,7 @@
                     )
                 }
             "
-            class="relative -left-5 -top-10 -z-40 hidden self-center justify-self-start [grid-area:1/-1] md:block"
+            class="relative -top-10 -left-5 -z-40 hidden self-center justify-self-start [grid-area:1/-1] md:block"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -499,6 +475,25 @@
                 </defs>
             </svg>
         </div>
+
+        {{-- Mountains top --}}
+        <img
+            src="{{ Vite::asset('resources/images/home/mountains_top.webp') }}"
+            alt=""
+            class="pointer-events-none absolute -top-20 right-0 -z-[60] w-full mask-radial-from-50% mask-radial-closest-side lg:-top-32 lg:scale-115"
+        />
+
+        {{-- Mountains bottom --}}
+        <img
+            src="{{ Vite::asset('resources/images/home/mountains_bottom.webp') }}"
+            alt=""
+            class="pointer-events-none absolute right-0 -bottom-60 -z-[60] w-full mask-radial-from-50% mask-radial-closest-side lg:scale-115"
+        />
+
+        {{-- Sun --}}
+        <div
+            class="pointer-events-none -z-[65] -mt-40 ml-20 size-24 self-start justify-self-start rounded-full bg-gradient-to-tl from-violet-50 to-violet-200/70 [grid-area:1/-1] lg:ml-32 lg:size-32"
+        ></div>
     </header>
 
     {{-- Tagline --}}
@@ -521,13 +516,14 @@
                 )
             }
         "
-        class="mx-auto max-w-2xl pt-5 text-center font-afacad text-3xl leading-normal text-[#49485F]"
+        class="font-afacad mx-auto max-w-2xl pt-5 text-center text-3xl leading-normal text-[#49485F]"
     >
         Shape your apps with beautiful, powerful and intuitive, TALL stack
         components.
     </h2>
 
-    <div class="grid place-items-center pt-7">
+    {{-- CTA button --}}
+    <div class="relative z-[100] grid place-items-center pt-7">
         <a
             x-init="
                 () => {
@@ -560,10 +556,10 @@
                 }
             "
             href="{{ route('docs') }}"
-            class="group inline-flex items-center gap-3 rounded-3xl bg-[#F4E7E2] py-2 pl-2 pr-5 text-lg font-medium transition duration-300 ease-in-out hover:bg-[#ffe8ce]"
+            class="group inline-flex items-center gap-3 rounded-3xl bg-purple-200 py-2 pr-5 pl-2 text-lg font-medium transition duration-300 ease-in-out hover:bg-purple-200"
         >
             <div
-                class="relative isolate grid size-12 place-items-center overflow-hidden rounded-2xl bg-[#E6DAD6] transition duration-300 ease-in-out group-hover:bg-[#ffdeb3]"
+                class="relative isolate grid size-12 place-items-center overflow-hidden rounded-2xl bg-purple-300/50 transition duration-300 ease-in-out group-hover:bg-purple-300/50"
             >
                 {{-- Left meteor 1 --}}
                 <div
@@ -579,7 +575,7 @@
                             })
                         }
                     "
-                    class="absolute -right-5 -top-9 -z-10"
+                    class="absolute -top-9 -right-5 -z-10"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +606,7 @@
                             })
                         }
                     "
-                    class="absolute -right-5 -top-7 -z-10"
+                    class="absolute -top-7 -right-5 -z-10"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -640,7 +636,7 @@
                             })
                         }
                     "
-                    class="absolute -right-5 top-0 -z-10"
+                    class="absolute top-0 -right-5 -z-10"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -670,7 +666,7 @@
                             })
                         }
                     "
-                    class="absolute -right-5 top-3 -z-10"
+                    class="absolute top-3 -right-5 -z-10"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -95,7 +95,7 @@
             width = $width
             if (width >= 1024) $store.sidebar.isOpen = false
         "
-        class="relative min-h-screen overflow-x-clip bg-cream font-vietnam text-midnight antialiased selection:bg-stone-500/10"
+        class="font-vietnam text-midnight relative min-h-screen overflow-x-clip bg-[#F5F5F5] antialiased selection:bg-stone-500/10"
     >
         <div
             id="docsearch"

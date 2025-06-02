@@ -1,4 +1,6 @@
-<section class="mx-auto w-full max-w-(--breakpoint-lg) px-10 pt-20 lg:px-5">
+<section
+    class="mx-auto mt-20 w-full max-w-(--breakpoint-lg) px-10 sm:mt-32 lg:mt-44 lg:px-5"
+>
     <div
         x-init="
             () => {
@@ -18,27 +20,57 @@
                 )
             }
         "
-        class="relative isolate z-0 grid place-items-center"
+        class="@container relative isolate z-0 grid place-items-center"
     >
-        {{-- Fade --}}
+        {{-- Version number --}}
         <div
-            class="z-10 h-60 w-full self-end justify-self-start bg-linear-to-t from-cream to-transparent [grid-area:1/-1]"
-        ></div>
+            x-init="
+                () => {
+                    if (reducedMotion) return
+                    gsap.fromTo(
+                        $el,
+                        {
+                            autoAlpha: 0,
+                            y: -10,
+                        },
+                        {
+                            autoAlpha: 0.3,
+                            y: 0,
+                            duration: 0.8,
+                            ease: 'power1.in',
+                        },
+                    )
+                }
+            "
+            class="relative -z-50 -mt-[18cqw] self-start justify-self-center truncate bg-linear-to-r from-[#D8DBEE] via-[#C4C9E9] to-[#DDDBD1] bg-clip-text text-[16cqw] font-semibold tracking-wide text-transparent opacity-30 [grid-area:1/-1]"
+        >
+            Version 4
+        </div>
 
         {{-- Screenshot --}}
         <img
             src="{{ Vite::asset('resources/images/home/filament-demo.webp') }}"
             alt="Filament demo"
-            class="relative z-0 w-full rounded-xl [grid-area:1/-1]"
             loading="lazy"
             width="2984"
             height="1610"
+            class="relative z-0 w-full rounded-xl mask-b-from-50% [grid-area:1/-1]"
         />
+
+        {{-- White box bottom --}}
+        <div
+            class="relative -z-10 -mt-4 h-1/4 w-[96%] self-start rounded-xl bg-gray-50/80 ring-1 ring-black/[0.025] [grid-area:1/-1]"
+        ></div>
+
+        {{-- White box top --}}
+        <div
+            class="relative -z-20 -mt-8 hidden h-1/4 w-[90%] self-start rounded-xl bg-gray-50/50 ring-1 ring-black/[0.025] [grid-area:1/-1] sm:block"
+        ></div>
 
         {{-- Button --}}
         <a
             href="https://demo.filamentphp.com"
-            class="group relative z-20 inline-flex items-center gap-3 self-center justify-self-center rounded-2xl bg-[#ffe8ce] py-2 pl-5 pr-2 font-medium transition duration-300 ease-in-out [grid-area:1/-1]"
+            class="group relative z-20 inline-flex items-center gap-3 self-center justify-self-center rounded-2xl bg-[#ffe8ce] py-2 pr-2 pl-5 font-medium transition duration-300 ease-in-out [grid-area:1/-1]"
         >
             <div
                 class="transition duration-300 ease-in-out will-change-transform group-hover:-translate-x-px"
