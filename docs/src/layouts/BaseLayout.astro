@@ -1,6 +1,5 @@
 ---
 import { collectHeadings, getAllLinks } from "src/lib/helpers";
-import Aside from "@components/Aside.astro";
 import Navigation from "@components/Navigation.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
@@ -29,7 +28,7 @@ let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "3.x", "panels", "installation"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "4.x", "introduction", "overview"];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
@@ -171,12 +170,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </div>
     </div>
     <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10">
-        {(currentVersion === '4.x') && (
-            <Aside variant="info">
-                Filament v4 is currently in beta and is not stable. Please report any issues you encounter on <a href="https://github.com/filamentphp/filament/issues/new" target="_blank">GitHub</a>.
-            </Aside>
-        )}
-
         <article>
             {(title || section) && (
                 <header class="mb-9 space-y-1">
