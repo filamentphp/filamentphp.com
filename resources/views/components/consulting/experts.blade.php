@@ -105,13 +105,13 @@
             <div class="flex">
                 <a
                     href="https://whizzy.dev/sessions?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=button"
-                    class="group/call relative z-0 grid h-12 w-60 rounded-full bg-dolphin/20 px-1.5 transition duration-300 hover:bg-dolphin/30"
+                    class="group/call bg-dolphin/20 hover:bg-dolphin/30 relative z-0 grid h-12 w-60 rounded-full px-1.5 transition duration-300"
                     x-on:mouseenter="book_is_hovered = true"
                     x-on:mouseleave="book_is_hovered = false"
                 >
                     {{-- Icons --}}
                     <div
-                        class="relative z-10 grid h-10 w-10 place-items-center self-center rounded-full bg-hurricane text-white transition duration-400 [grid-area:1/-1] group-hover/call:translate-x-[11.7rem] group-hover/call:bg-dolphin"
+                        class="bg-hurricane group-hover/call:bg-dolphin relative z-10 grid h-10 w-10 place-items-center self-center rounded-full text-white transition duration-400 [grid-area:1/-1] group-hover/call:translate-x-[11.7rem]"
                     >
                         {{-- Phone Icon --}}
                         <svg

@@ -64,7 +64,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="max-w-lg pt-10 text-lg font-medium text-dolphin"
+                class="text-dolphin max-w-lg pt-10 text-lg font-medium"
             >
                 If you're looking for dedicated help with your Filament project,
                 we're here for you. Whether you're a solo developer or running a

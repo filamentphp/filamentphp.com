@@ -352,7 +352,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 31"
         fill="none"
-        class="absolute -left-[8px] -top-[17px] h-6"
+        class="absolute -top-[17px] -left-[8px] h-6"
     >
         <g clip-path="url(#clip0_1285_417)">
             <path
@@ -616,7 +616,7 @@
     <img
         src="{{ Vite::asset('resources/images/nav/christmas/santa-and-friends.webp') }}"
         alt="Santa and Friends"
-        class="absolute -bottom-[5px] right-2 z-10 h-[28px] opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none"
+        class="absolute right-2 -bottom-[5px] z-10 h-[28px] opacity-0 transition duration-300 will-change-transform group-hover/filament:-translate-x-0.5 group-hover/filament:opacity-100 motion-reduce:transition-none"
     />
 
     {{-- Merry Christmas --}}

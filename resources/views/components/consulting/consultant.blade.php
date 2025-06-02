@@ -8,7 +8,7 @@
     x-data="{
         book_is_hovered: false,
     }"
-    class="flex flex-col items-center rounded-xl bg-merino/50 p-7 text-center"
+    class="bg-merino/50 flex flex-col items-center rounded-xl p-7 text-center"
 >
     {{-- Avatar --}}
     <img
@@ -35,18 +35,18 @@
         </div>
 
         {{-- Title --}}
-        <div class="pt-1 text-base font-medium text-dolphin lg:text-lg">
+        <div class="text-dolphin pt-1 text-base font-medium lg:text-lg">
             {{ $title }}
         </div>
 
         {{-- Divider --}}
         <div
-            class="mx-auto my-4 h-px w-full max-w-92 rounded-full bg-dolphin/20"
+            class="bg-dolphin/20 mx-auto my-4 h-px w-full max-w-92 rounded-full"
         ></div>
 
         {{-- Description --}}
         <div
-            class="prose px-3 text-dolphin prose-a:text-burnt-dolphin prose-strong:text-burnt-dolphin"
+            class="prose text-dolphin prose-a:text-burnt-dolphin prose-strong:text-burnt-dolphin px-3"
         >
             {{ $slot }}
         </div>

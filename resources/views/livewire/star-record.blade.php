@@ -18,7 +18,7 @@
     <button
         wire:click="toggleStar"
         type="button"
-        class="group/star-button flex h-10 select-none rounded-lg bg-fair-pink bg-white text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
+        class="group/star-button bg-fair-pink text-evening flex h-10 rounded-lg bg-white text-center text-sm font-medium shadow-lg shadow-black/[0.01] transition duration-300 select-none hover:-translate-y-0.5 hover:bg-white/80"
     >
         <div class="flex h-full items-center gap-3 pl-4">
             <svg
@@ -55,7 +55,7 @@
                 </span>
             </div>
         </div>
-        <div class="ml-3 h-full w-full border-l border-dawn-pink px-3.5">
+        <div class="border-dawn-pink ml-3 h-full w-full border-l px-3.5">
             <div
                 class="relative top-2.5 grid h-5 w-full min-w-4 overflow-y-hidden text-center font-medium transition"
             >

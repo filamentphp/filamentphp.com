@@ -38,7 +38,7 @@
 
         {{-- Subtitle --}}
         <div
-            class="pt-4 text-lg font-semibold text-dolphin sm:text-xl"
+            class="text-dolphin pt-4 text-lg font-semibold sm:text-xl"
             style="text-wrap: balance"
         >
             Fully featured, simply intuitive and insanely attractive: the
@@ -76,15 +76,15 @@
         {{-- </div> --}}
         <div class="grid gap-12 md:grid-cols-2">
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">
+                <div class="text-evening text-2xl font-extrabold">
                     Form Builder
                 </div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Easily build stunning Livewire-powered forms with over 25
                     components out of the box.
                 </div>
@@ -99,15 +99,15 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">
+                <div class="text-evening text-2xl font-extrabold">
                     Table Builder
                 </div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Craft beautiful, optimized, and interactive Livewire-powered
                     data tables for any situation.
                 </div>
@@ -122,15 +122,15 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">
+                <div class="text-evening text-2xl font-extrabold">
                     Notifications
                 </div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Notify your users of important events by delivering
                     real-time messages using Livewire.
                 </div>
@@ -145,13 +145,13 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">Actions</div>
+                <div class="text-evening text-2xl font-extrabold">Actions</div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Open interactive modals & slide-overs. a great way to keep
                     the user in the flow of the application.
                 </div>
@@ -166,15 +166,15 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">
+                <div class="text-evening text-2xl font-extrabold">
                     Infolist Builder
                 </div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Display read-only information to users about a particular
                     record, with a fully flexible layout.
                 </div>
@@ -189,13 +189,13 @@
                 </div>
             </div>
             <div
-                class="aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg shadow-black/[0.04] ring-1 ring-dawn-pink"
+                class="ring-dawn-pink aspect-[1.2/1] overflow-hidden rounded-2xl bg-linear-to-tr from-[#F2E7DD] to-[#F1F4FF] p-10 shadow-lg ring-1 shadow-black/[0.04]"
             >
                 {{-- Name --}}
-                <div class="text-2xl font-extrabold text-evening">Widgets</div>
+                <div class="text-evening text-2xl font-extrabold">Widgets</div>
 
                 {{-- Description --}}
-                <div class="pt-3 font-medium text-dolphin">
+                <div class="text-dolphin pt-3 font-medium">
                     Build a dashboard for your application, complete with
                     real-time charts and stats.
                 </div>

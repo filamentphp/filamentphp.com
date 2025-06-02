@@ -5,10 +5,10 @@
 
 <div
     @class([
-        'flex select-none items-center justify-center gap-2 rounded-full',
+        'flex items-center justify-center gap-2 rounded-full select-none',
         match ($size) {
-            'md' => 'py-2 pl-4 pr-5',
-            'sm' => 'py-2.5 pl-4 pr-5 text-xs',
+            'md' => 'py-2 pr-5 pl-4',
+            'sm' => 'py-2.5 pr-5 pl-4 text-xs',
         },
         'bg-amber-100/80 text-amber-700' => $type->color === 'amber',
         'bg-blue-100/80 text-blue-700' => $type->color === 'blue',

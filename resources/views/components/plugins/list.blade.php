@@ -1,5 +1,5 @@
 <section
-    class="mx-auto w-full max-w-8xl px-5 sm:px-10"
+    class="max-w-8xl mx-auto w-full px-5 sm:px-10"
     x-ref="section"
     x-init="
         () => {
@@ -175,7 +175,7 @@
         {{-- Version Switch --}}
         <div class="min-[1170px]:min-w-60">
             <div
-                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
+                class="relative z-10 inline-flex items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01] select-none"
             >
                 <div
                     x-on:click="selectedVersion = '1'"
@@ -208,7 +208,7 @@
                     v3.x
                 </div>
                 <div
-                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                    class="bg-fair-pink absolute top-[.31rem] left-[.31rem] -z-10 h-8 w-16 rounded-full transition duration-300 ease-out will-change-transform"
                     :class="{
                             'translate-x-[4.1rem]': selectedVersion === '2',
                             'translate-x-[8.2rem]': selectedVersion === '3',
@@ -218,13 +218,13 @@
         </div>
 
         {{-- Search Bar --}}
-        <div class="w-full sm:w-auto min-[1170px]:flex-1">
+        <div class="w-full min-[1170px]:flex-1 sm:w-auto">
             <div
                 class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs"
             >
                 {{-- Magnify Icon --}}
                 <div
-                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-fair-pink text-salmon"
+                    class="bg-fair-pink text-salmon absolute top-1.5 left-1.5 grid h-8 w-8 place-items-center rounded-full"
                 >
                     <svg
                         class="transition duration-200 will-change-transform"
@@ -246,10 +246,10 @@
 
                 <!-- X icon -->
                 <div
-                    class="absolute right-0 top-0 grid h-full w-14 place-items-center bg-transparent"
+                    class="absolute top-0 right-0 grid h-full w-14 place-items-center bg-transparent"
                 >
                     <svg
-                        class="cursor-pointer text-hurricane transition duration-200 will-change-transform hover:scale-125 hover:text-salmon"
+                        class="text-hurricane hover:text-salmon cursor-pointer transition duration-200 will-change-transform hover:scale-125"
                         x-show="search"
                         x-on:click="search = ''"
                         x-transition:enter="delay-75 ease-out"
@@ -274,14 +274,14 @@
                     type="text"
                     x-model="search"
                     placeholder="Search ..."
-                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-hidden placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
+                    class="w-full appearance-none border-none bg-transparent py-3 pr-10 pl-12 text-sm outline-hidden placeholder:transition placeholder:duration-200 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0 focus:ring-0"
                 />
             </div>
         </div>
 
         {{-- Price Toggle --}}
         <div
-            class="relative z-10 flex h-11 w-[205px] select-none items-center justify-between gap-1 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
+            class="relative z-10 flex h-11 w-[205px] items-center justify-between gap-1 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01] select-none"
         >
             <div
                 x-on:click="selectedPrice = 'All'"
@@ -314,7 +314,7 @@
                 Paid
             </div>
             <div
-                class="absolute left-[.35rem] top-[.35rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                class="bg-fair-pink absolute top-[.35rem] left-[.35rem] -z-10 h-8 w-16 rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
                     'translate-x-16': selectedPrice === 'Free',
                     'translate-x-[8.2rem]': selectedPrice === 'Paid',
@@ -324,13 +324,13 @@
 
         {{-- Vertical Divider --}}
         <div
-            class="hidden h-5 w-px rounded-full bg-hurricane/10 min-[1170px]:block"
+            class="bg-hurricane/10 hidden h-5 w-px rounded-full min-[1170px]:block"
         ></div>
 
         {{-- Dark Mode Toggle --}}
         <div
             x-on:click="features.dark_theme = ! features.dark_theme"
-            class="group/dark-mode-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/dark-mode-toggle flex cursor-pointer items-center gap-3 rounded-full py-3 pr-6 pl-4 transition duration-300 select-none hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
                 'bg-fair-pink': features.dark_theme,
                 'bg-white': ! features.dark_theme,
@@ -366,13 +366,13 @@
 
         {{-- Vertical Divider --}}
         <div
-            class="hidden h-5 w-px rounded-full bg-hurricane/10 min-[1170px]:block"
+            class="bg-hurricane/10 hidden h-5 w-px rounded-full min-[1170px]:block"
         ></div>
 
         {{-- Multi Language Toggle --}}
         <div
             x-on:click="features.translations = ! features.translations"
-            class="group/multi-language-toggle flex cursor-pointer select-none items-center gap-3 rounded-full py-3 pl-4 pr-6 transition duration-300 hover:shadow-lg hover:shadow-black/[0.01]"
+            class="group/multi-language-toggle flex cursor-pointer items-center gap-3 rounded-full py-3 pr-6 pl-4 transition duration-300 select-none hover:shadow-lg hover:shadow-black/[0.01]"
             :class="{
                 'bg-fair-pink': features.translations,
                 'bg-white': ! features.translations,
@@ -414,7 +414,7 @@
         <div class="w-full sm:max-w-60">
             <div class="hidden font-semibold sm:block">Categories</div>
             <div
-                class="flex cursor-pointer justify-between gap-5 rounded-lg bg-merino px-3.5 py-2.5 sm:hidden"
+                class="bg-merino flex cursor-pointer justify-between gap-5 rounded-lg px-3.5 py-2.5 sm:hidden"
                 x-on:click="showCategories = !showCategories"
             >
                 <div class="font-semibold">
@@ -502,7 +502,7 @@
                     {{-- Sort Selectbox --}}
                     <select
                         x-model="selectedSort"
-                        class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
+                        class="focus:border-salmon focus:ring-salmon block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900"
                     >
                         <option>Newest</option>
                         <option>Popular</option>
@@ -529,7 +529,7 @@
                             autoAnimate($refs.plugin_cards_wrapper)
                         }
                     "
-                    class="sticky left-0 top-5 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
+                    class="sticky top-5 left-0 grid w-full grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] items-start justify-center gap-6"
                 >
                     <template
                         x-for="plugin in filteredPlugins"
@@ -548,7 +548,7 @@
                     x-transition:leave="ease-in"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
-                    class="absolute right-1/2 top-0 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
+                    class="absolute top-0 right-1/2 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
                 >
                     <svg
                         class="text-evening/40"
@@ -562,10 +562,10 @@
                             d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z"
                         />
                     </svg>
-                    <div class="pt-2 font-semibold text-evening/70">
+                    <div class="text-evening/70 pt-2 font-semibold">
                         No Results Found
                     </div>
-                    <div class="pt-0.5 text-sm text-evening/50">
+                    <div class="text-evening/50 pt-0.5 text-sm">
                         Sorry we couldn't find any plugins matching your search.
                     </div>
                 </div>

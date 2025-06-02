@@ -1,5 +1,5 @@
 <section
-    class="mx-auto w-full max-w-8xl px-5 sm:px-10"
+    class="max-w-8xl mx-auto w-full px-5 sm:px-10"
     x-ref="section"
     x-init="
         () => {
@@ -135,7 +135,7 @@
     >
         {{-- Type Toggle --}}
         <div
-            class="relative z-10 flex h-11 select-none items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01]"
+            class="relative z-10 flex h-11 items-center justify-start gap-5 rounded-full bg-white px-[.55rem] text-sm font-medium shadow-lg shadow-black/[0.01] select-none"
         >
             <div
                 x-on:click="selectedType = 'all'"
@@ -187,7 +187,7 @@
             @endphp
 
             <div
-                class="absolute left-[.35rem] top-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
+                class="absolute top-[.35rem] left-[.35rem] -z-10 h-[2.1rem] rounded-full transition duration-300 ease-out will-change-transform"
                 :class="{
                     'bg-fair-pink w-18': selectedType === 'all',
                     'translate-x-18 w-26' : selectedType === 'article',
@@ -203,7 +203,7 @@
         >
             {{-- Version Switch --}}
             <div
-                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
+                class="relative z-10 inline-flex items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01] select-none"
             >
                 <div
                     x-on:click="selectedVersion = '1'"
@@ -236,7 +236,7 @@
                     v3.x
                 </div>
                 <div
-                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
+                    class="bg-fair-pink absolute top-[.31rem] left-[.31rem] -z-10 h-8 w-16 rounded-full transition duration-300 ease-out will-change-transform"
                     :class="{
                         'translate-x-[4.1rem]': selectedVersion === '2',
                         'translate-x-[8.2rem]': selectedVersion === '3',
@@ -254,7 +254,7 @@
             >
                 {{-- Magnify Icon --}}
                 <div
-                    class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-fair-pink text-salmon"
+                    class="bg-fair-pink text-salmon absolute top-1.5 left-1.5 grid h-8 w-8 place-items-center rounded-full"
                 >
                     <svg
                         class="transition duration-200 will-change-transform"
@@ -275,10 +275,10 @@
                 </div>
                 <!-- X icon -->
                 <div
-                    class="absolute right-0 top-0 grid h-full w-14 place-items-center bg-transparent"
+                    class="absolute top-0 right-0 grid h-full w-14 place-items-center bg-transparent"
                 >
                     <svg
-                        class="cursor-pointer text-hurricane transition duration-200 will-change-transform hover:scale-125 hover:text-salmon"
+                        class="text-hurricane hover:text-salmon cursor-pointer transition duration-200 will-change-transform hover:scale-125"
                         x-show="search"
                         x-on:click="search = ''"
                         x-transition:enter="delay-75 ease-out"
@@ -303,7 +303,7 @@
                     type="text"
                     x-model="search"
                     placeholder="Search ..."
-                    class="w-full appearance-none border-none bg-transparent py-3 pl-12 pr-10 text-sm outline-hidden placeholder:transition placeholder:duration-200 focus:ring-0 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0"
+                    class="w-full appearance-none border-none bg-transparent py-3 pr-10 pl-12 text-sm outline-hidden placeholder:transition placeholder:duration-200 group-focus-within/search-bar:placeholder:translate-x-1 group-focus-within/search-bar:placeholder:opacity-0 focus:ring-0"
                 />
             </div>
         </div>
@@ -320,7 +320,7 @@
                 :key="index"
             >
                 <div
-                    class="cursor-pointer select-none rounded-full px-5 py-2.5 text-sm transition duration-200"
+                    class="cursor-pointer rounded-full px-5 py-2.5 text-sm transition duration-200 select-none"
                     x-text="category.name"
                     :class="{
                         'bg-salmon text-white': selectedCategories.has(category.slug),
@@ -399,7 +399,7 @@
                     x-transition:leave="ease-in"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
-                    class="absolute right-1/2 top-0 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
+                    class="absolute top-0 right-1/2 grid w-full translate-x-1/2 place-items-center pt-10 transition duration-200"
                 >
                     <svg
                         class="text-evening/40"
@@ -413,10 +413,10 @@
                             d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z"
                         />
                     </svg>
-                    <div class="pt-2 font-semibold text-evening/70">
+                    <div class="text-evening/70 pt-2 font-semibold">
                         No Results Found
                     </div>
-                    <div class="pt-0.5 text-sm text-evening/50">
+                    <div class="text-evening/50 pt-0.5 text-sm">
                         Sorry we couldn't find any articles matching your
                         search.
                     </div>

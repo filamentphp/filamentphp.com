@@ -37,7 +37,7 @@
             class="isolate grid self-center justify-self-center [grid-area:1/-1]"
         >
             <h2
-                class="relative z-10 self-center justify-self-center font-afacad text-5xl font-bold text-slate-800 [grid-area:1/-1] sm:text-6xl"
+                class="font-afacad relative z-10 self-center justify-self-center text-5xl font-bold text-slate-800 [grid-area:1/-1] sm:text-6xl"
             >
                 New V4 Features
             </h2>
@@ -62,7 +62,7 @@
 
             {{-- Right star --}}
             <div
-                class="-mr-10 -mt-5 hidden self-start justify-self-end [grid-area:1/-1] sm:block"
+                class="-mt-5 -mr-10 hidden self-start justify-self-end [grid-area:1/-1] sm:block"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@
 
             {{-- Right leaf --}}
             <div
-                class="-mb-10 -mr-20 hidden self-center justify-self-end [grid-area:1/-1] sm:block"
+                class="-mr-20 -mb-10 hidden self-center justify-self-end [grid-area:1/-1] sm:block"
             >
                 <img
                     src="{{ Vite::asset('resources/images/home/v4_blue_leaf.webp') }}"
@@ -138,7 +138,7 @@
 
             {{-- Left feather --}}
             <div
-                class="-ml-20 -mt-5 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
+                class="-mt-5 -ml-20 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
             >
                 <img
                     src="{{ Vite::asset('resources/images/home/v4_blue_feather.webp') }}"
@@ -200,7 +200,7 @@
                 )
             }
         "
-        class="mx-auto max-w-3xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
+        class="font-afacad mx-auto max-w-3xl pt-3 text-center text-2xl leading-normal text-gray-500"
     >
         Filament 4 brings powerful new tools and flexibility, simplifying
         development and enabling more dynamic, efficient, and customizable web

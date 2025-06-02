@@ -35,7 +35,7 @@
     >
         <div class="grid self-center justify-self-center [grid-area:1/-1]">
             <h2
-                class="self-center justify-self-center font-afacad text-6xl font-bold text-slate-800 [grid-area:1/-1]"
+                class="font-afacad self-center justify-self-center text-6xl font-bold text-slate-800 [grid-area:1/-1]"
             >
                 V3 Features
             </h2>
@@ -60,7 +60,7 @@
 
             {{-- Plus --}}
             <div
-                class="-ml-14 mt-7 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
+                class="mt-7 -ml-14 hidden self-start justify-self-start [grid-area:1/-1] sm:block"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@
 
             {{-- Circles --}}
             <div
-                class="-mr-24 mt-5 hidden self-end justify-self-end [grid-area:1/-1] sm:block"
+                class="mt-5 -mr-24 hidden self-end justify-self-end [grid-area:1/-1] sm:block"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@
                 )
             }
         "
-        class="mx-auto max-w-3xl pt-3 text-center font-afacad text-2xl leading-normal text-gray-500"
+        class="font-afacad mx-auto max-w-3xl pt-3 text-center text-2xl leading-normal text-gray-500"
     >
         Discover the enhancements and features in Filament V3, designed to
         elevate your development experience.

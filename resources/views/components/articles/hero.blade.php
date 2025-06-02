@@ -1,6 +1,6 @@
-<div class="mx-auto w-full max-w-8xl px-10 pt-20">
+<div class="max-w-8xl mx-auto w-full px-10 pt-20">
     <div
-        class="relative flex max-w-(--breakpoint-lg) items-start justify-center gap-10 md:gap-20 min-[840px]:justify-between"
+        class="relative flex max-w-(--breakpoint-lg) items-start justify-center gap-10 min-[840px]:justify-between md:gap-20"
     >
         {{-- Left Side --}}
         <div
@@ -104,7 +104,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="w-92 pt-10 text-lg font-medium text-dolphin"
+                class="text-dolphin w-92 pt-10 text-lg font-medium"
             >
                 A collection of articles written by the Filament team and our
                 community.
@@ -118,40 +118,40 @@
                 {{-- Articles --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($articlesCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Articles</div>
+                    <div class="text-dolphin pt-4 text-sm">Articles</div>
                 </div>
 
                 {{-- Authors --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($authorsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Authors</div>
+                    <div class="text-dolphin pt-4 text-sm">Authors</div>
                 </div>
 
                 {{-- Stars --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($starsCount) }}</span>
                         <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                            class="bg-butter absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Stars</div>
+                    <div class="text-dolphin pt-4 text-sm">Stars</div>
                 </div>
             </div>
         </div>
@@ -206,7 +206,7 @@
                         )
                 }
             "
-            class="absolute -bottom-[1.65rem] -right-5 -z-10 hidden w-72 shrink-0 md:relative md:right-auto md:top-auto md:w-80 min-[840px]:block"
+            class="absolute -right-5 -bottom-[1.65rem] -z-10 hidden w-72 shrink-0 min-[840px]:block md:relative md:top-auto md:right-auto md:w-80"
         >
             {{-- Illustration --}}
             <img
@@ -219,11 +219,11 @@
             {{-- Decoration Circles --}}
             <div
                 x-ref="circle1"
-                class="absolute -right-24 bottom-10 hidden h-3 w-3 rounded-full bg-blue-200 md:-left-40 md:right-auto md:h-3 md:w-3 min-[900px]:block"
+                class="absolute -right-24 bottom-10 hidden h-3 w-3 rounded-full bg-blue-200 min-[900px]:block md:right-auto md:-left-40 md:h-3 md:w-3"
             ></div>
             <div
                 x-ref="circle2"
-                class="absolute -right-14 bottom-32 hidden h-3 w-3 rounded-full bg-emerald-200 md:-left-24 md:right-auto md:h-3 md:w-3 min-[900px]:block"
+                class="absolute -right-14 bottom-32 hidden h-3 w-3 rounded-full bg-emerald-200 min-[900px]:block md:right-auto md:-left-24 md:h-3 md:w-3"
             ></div>
         </div>
     </div>

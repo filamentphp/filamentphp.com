@@ -22,7 +22,7 @@
                 )
             }
         "
-        class="mx-auto w-full max-w-8xl px-5 sm:px-10"
+        class="max-w-8xl mx-auto w-full px-5 sm:px-10"
     >
         <div class="flex flex-wrap items-center justify-between gap-5 pt-20">
             {{-- Back Button --}}
@@ -30,7 +30,7 @@
                 x-on:mouseenter="back_button_is_hovering = true"
                 x-on:mouseleave="back_button_is_hovering = false"
                 href="{{ route('articles') }}"
-                class="flex items-center gap-3 p-1 text-dolphin transition duration-300 hover:-translate-x-2 hover:text-evening"
+                class="text-dolphin hover:text-evening flex items-center gap-3 p-1 transition duration-300 hover:-translate-x-2"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="pt-2">
-                    <div class="text-base text-dolphin">
+                    <div class="text-dolphin text-base">
                         {{ $article->publish_date->toFormattedDateString() }}
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                                     {{ $article->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
                                 </div>
 
-                                <div class="text-xs text-dolphin/80">
+                                <div class="text-dolphin/80 text-xs">
                                     Supported versions:
                                     {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $article->versions)) }}
                                 </div>
@@ -145,7 +145,7 @@
                 <div class="flex flex-wrap items-center gap-3.5 pt-6">
                     @foreach ($article->getCategories() as $category)
                         <div
-                            class="select-none rounded-full bg-stone-200/50 px-5 py-2.5 text-sm"
+                            class="rounded-full bg-stone-200/50 px-5 py-2.5 text-sm select-none"
                         >
                             <div class="text-sm">
                                 {{ $category->name }}
@@ -157,7 +157,7 @@
                 {{-- Content --}}
                 <div class="pt-8">
                     <div
-                        class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded-sm prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                        class="prose prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded-sm prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden selection:bg-stone-500/30 [&_p]:before:hidden [&_p]:after:hidden"
                     >
                         {!! \App\Support\Markdown::parse($article->content) !!}
                     </div>
@@ -169,7 +169,7 @@
                 class="flex w-full flex-wrap items-center gap-12 lg:max-w-sm xl:max-w-md"
             >
                 {{-- Author --}}
-                <div class="w-full pt-10 text-evening">
+                <div class="text-evening w-full pt-10">
                     <div class="grid w-full place-items-center">
                         {{-- Avatar --}}
                         <div
@@ -195,7 +195,7 @@
                                 <a
                                     target="_blank"
                                     href="{{ $article->author->twitter_url }}"
-                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                    class="bg-merino text-hurricane hover:text-salmon grid h-8 w-8 place-items-center rounded-full transition duration-200 hover:scale-110"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -217,7 +217,7 @@
                             <a
                                 target="_blank"
                                 href="{{ $article->author->github_url }}"
-                                class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                class="bg-merino text-hurricane hover:text-salmon grid h-8 w-8 place-items-center rounded-full transition duration-200 hover:scale-110"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@
                         </div>
 
                         <div
-                            class="mt-4 space-y-4 rounded-2xl bg-merino/50 p-6 text-center shadow-lg shadow-black/[0.01]"
+                            class="bg-merino/50 mt-4 space-y-4 rounded-2xl p-6 text-center shadow-lg shadow-black/[0.01]"
                         >
                             {{-- Bio --}}
                             @if ($article->author->getBio())
@@ -260,7 +260,7 @@
                                             {{ number_format($article->author->articles()->published()->count(),) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-hurricane/80"
+                                            class="text-hurricane/80 text-sm font-medium"
                                         >
                                             Articles
                                         </div>
@@ -272,7 +272,7 @@
                                             {{ number_format($article->author->getStarsCount()) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-hurricane/80"
+                                            class="text-hurricane/80 text-sm font-medium"
                                         >
                                             Stars
                                         </div>
@@ -289,7 +289,7 @@
                                     >
                                         {{-- Button --}}
                                         <div
-                                            class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                            class="bg-midnight flex items-center justify-center gap-3 rounded-tr-3xl rounded-bl-3xl px-9 py-4 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                                         >
                                             <div>Sponsor</div>
                                             <div>
@@ -309,7 +309,7 @@
 
                                         {{-- Shadow --}}
                                         <div
-                                            class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                            class="group-hover:bg-butter absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-tr-3xl rounded-bl-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                                         ></div>
                                     </a>
                                 </div>
@@ -329,7 +329,7 @@
                             @foreach ($otherArticles as $otherArticle)
                                 <a
                                     href="{{ route('articles.view', ['article' => $otherArticle]) }}"
-                                    class="relative block w-full rounded-2xl bg-white px-5 py-3 shadow-lg shadow-hurricane/5 transition duration-300 ease-out will-change-transform hover:translate-x-2"
+                                    class="shadow-hurricane/5 relative block w-full rounded-2xl bg-white px-5 py-3 shadow-lg transition duration-300 ease-out will-change-transform hover:translate-x-2"
                                 >
                                     <div
                                         class="flex w-full items-center justify-between gap-5"
@@ -357,7 +357,7 @@
                                                 />
                                             </svg>
                                             <div
-                                                class="pt-0.5 text-sm font-medium text-dolphin"
+                                                class="text-dolphin pt-0.5 text-sm font-medium"
                                             >
                                                 {{ number_format($otherArticle->getStarsCount()) }}
                                             </div>
@@ -365,12 +365,12 @@
                                     </div>
 
                                     {{-- Title --}}
-                                    <div class="px-1 pb-1 pt-4 font-medium">
+                                    <div class="px-1 pt-4 pb-1 font-medium">
                                         <div class="line-clamp-2">
                                             {{ $otherArticle->title }}
                                         </div>
                                         <div
-                                            class="pt-1 text-xs text-dolphin/80"
+                                            class="text-dolphin/80 pt-1 text-xs"
                                         >
                                             {{ $otherArticle->publish_date->diffForHumans() }}
                                         </div>

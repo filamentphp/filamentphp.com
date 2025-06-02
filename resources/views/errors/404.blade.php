@@ -10,17 +10,17 @@
             height="138"
             class="w-96 mix-blend-darken"
         />
-        <div class="pt-10 text-5xl font-black text-evening">Oops!</div>
-        <div class="pt-2 text-2xl font-black text-butter">
+        <div class="text-evening pt-10 text-5xl font-black">Oops!</div>
+        <div class="text-butter pt-2 text-2xl font-black">
             Something went wrong.
         </div>
-        <div class="pt-3 font-medium text-evening">
+        <div class="text-evening pt-3 font-medium">
             The page you are looking for does not exist.
         </div>
         <div class="flex flex-wrap items-center justify-center gap-5 pt-14">
             <a
                 href="{{ route('home') }}"
-                class="group/button flex items-center justify-center gap-3 rounded-xl bg-dawn-pink py-3 pl-5 pr-6 text-hurricane transition duration-200 hover:bg-dawn-pink/70 motion-reduce:transition-none"
+                class="group/button bg-dawn-pink text-hurricane hover:bg-dawn-pink/70 flex items-center justify-center gap-3 rounded-xl py-3 pr-6 pl-5 transition duration-200 motion-reduce:transition-none"
             >
                 <div
                     class="transition duration-300 group-hover/button:-translate-x-1 motion-reduce:transition-none motion-reduce:group-hover/button:transform-none"
@@ -45,7 +45,7 @@
             </a>
             <a
                 href="{{ route('docs') }}"
-                class="group/button flex items-center justify-center gap-3 rounded-xl bg-dawn-pink py-3 pl-6 pr-5 text-hurricane transition duration-200 hover:bg-dawn-pink/70 motion-reduce:transition-none"
+                class="group/button bg-dawn-pink text-hurricane hover:bg-dawn-pink/70 flex items-center justify-center gap-3 rounded-xl py-3 pr-5 pl-6 transition duration-200 motion-reduce:transition-none"
             >
                 <div>Read the documentation</div>
                 <div

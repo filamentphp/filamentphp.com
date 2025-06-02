@@ -213,7 +213,7 @@
                 class="relative top-14 z-20 self-end justify-self-center [grid-area:1/-1]"
             >
                 <div
-                    class="h-28 w-60 bg-cream/10 backdrop-blur-md sm:h-32"
+                    class="bg-cream/10 h-28 w-60 backdrop-blur-md sm:h-32"
                 ></div>
             </div>
 
@@ -232,7 +232,7 @@
             {{-- Cloud 2 --}}
             <div
                 x-ref="cloud2"
-                class="relative -right-20 -top-10 self-start justify-self-center [grid-area:1/-1] sm:-right-40 sm:-top-3"
+                class="relative -top-10 -right-20 self-start justify-self-center [grid-area:1/-1] sm:-top-3 sm:-right-40"
             >
                 <img
                     src="{{ Vite::asset('resources/svg/home/cloud2.svg') }}"
@@ -282,7 +282,7 @@
             {{-- Right Birds --}}
             <div
                 x-ref="right_birds"
-                class="relative z-20 w-32 self-start justify-self-center [grid-area:1/-1] sm:-right-44 sm:top-20"
+                class="relative z-20 w-32 self-start justify-self-center [grid-area:1/-1] sm:top-20 sm:-right-44"
             >
                 <div class="flex justify-center">
                     <img
@@ -303,7 +303,7 @@
             {{-- Giraffes --}}
             <div
                 x-ref="giraffes"
-                class="relative -left-[25vw] top-12 z-20 self-center justify-self-center [grid-area:1/-1] sm:-left-60 sm:top-6"
+                class="relative top-12 -left-[25vw] z-20 self-center justify-self-center [grid-area:1/-1] sm:top-6 sm:-left-60"
             >
                 <div class="flex items-end">
                     <img
@@ -368,7 +368,7 @@
         </h3>
         <p
             x-ref="take_off_message"
-            class="mx-auto max-w-md px-4 pt-2 text-dolphin"
+            class="text-dolphin mx-auto max-w-md px-4 pt-2"
         >
             Give Filament a try, and we bet that you'll be amazed in the first
             few minutes.
@@ -386,7 +386,7 @@
             />
             <a
                 href="{{ route('docs', ['slug' => 'panels/getting-started']) }}"
-                class="group/getstarted relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 hover:ring-peach-orange/40 motion-reduce:transition-none sm:py-10"
+                class="group/getstarted hover:ring-peach-orange/40 relative flex w-full items-center justify-between gap-5 overflow-hidden rounded-2xl px-10 py-8 ring-2 ring-transparent transition duration-300 motion-reduce:transition-none sm:py-10"
             >
                 <div class="text-2xl font-bold sm:text-3xl">
                     {{ $button ?? 'Get Started' }}

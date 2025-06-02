@@ -27,7 +27,7 @@
                     Plugins, plugins, plugins...
                 </div>
                 <div
-                    class="pt-3 text-lg font-medium text-dolphin"
+                    class="text-dolphin pt-3 text-lg font-medium"
                     style="text-wrap: balance"
                 >
                     Filament has an extensive ecosystem of official and third

@@ -6,7 +6,7 @@
     x-data="{
         plugins: @js($featuredPlugins),
     }"
-    {{ $attributes->class(['mx-auto w-full max-w-8xl px-5 pt-10 sm:px-10']) }}
+    {{ $attributes->class(['max-w-8xl mx-auto w-full px-5 pt-10 sm:px-10']) }}
 >
     {{-- Header --}}
     <div class="flex items-center gap-5">

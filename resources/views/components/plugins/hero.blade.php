@@ -1,4 +1,4 @@
-<div class="mx-auto w-full max-w-8xl px-10 pt-20">
+<div class="max-w-8xl mx-auto w-full px-10 pt-20">
     <div
         class="relative flex max-w-(--breakpoint-lg) items-start gap-10 md:gap-20 xl:justify-between"
     >
@@ -142,7 +142,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="max-w-sm pt-10 text-lg font-medium text-dolphin"
+                class="text-dolphin max-w-sm pt-10 text-lg font-medium"
             >
                 Community made packages for Filament projects, which give you
                 access to awesome new features.
@@ -156,40 +156,40 @@
                 {{-- Plugins --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($pluginsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Plugins</div>
+                    <div class="text-dolphin pt-4 text-sm">Plugins</div>
                 </div>
 
                 {{-- Authors --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($authorsCount) }}</span>
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Authors</div>
+                    <div class="text-dolphin pt-4 text-sm">Authors</div>
                 </div>
 
                 {{-- Stars --}}
                 <div class="group/stat gsap-stat will-change-transform">
                     <div
-                        class="relative inline text-3xl font-black text-evening"
+                        class="text-evening relative inline text-3xl font-black"
                     >
                         <span>{{ number_format($starsCount) }}</span>
                         <span
-                            class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-butter transition duration-300 will-change-transform group-hover/stat:scale-x-110"
+                            class="bg-butter absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full transition duration-300 will-change-transform group-hover/stat:scale-x-110"
                         ></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Stars</div>
+                    <div class="text-dolphin pt-4 text-sm">Stars</div>
                 </div>
             </div>
 
@@ -201,7 +201,7 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-full bg-[#7466BC] px-9 py-3 text-white backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-purple-300/40 motion-reduce:transition-none"
+                        class="flex items-center justify-center gap-3 rounded-full bg-[#7466BC] px-9 py-3 text-white backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-2 group-hover/button:bg-purple-300/40 motion-reduce:transition-none"
                     >
                         <div class="whitespace-nowrap">Submit Plugins</div>
                         <div
@@ -236,7 +236,7 @@
                 >
                     {{-- Button --}}
                     <div
-                        class="flex items-center justify-center gap-3 rounded-full bg-cream px-9 py-3 text-midnight text-purple-950 backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:-translate-y-2 group-hover/button:translate-x-1 group-hover/button:bg-opacity-20 motion-reduce:transition-none"
+                        class="bg-cream text-midnight group-hover/button:bg-opacity-20 flex items-center justify-center gap-3 rounded-full px-9 py-3 text-purple-950 backdrop-blur-sm transition duration-300 ease-out will-change-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-2 motion-reduce:transition-none"
                     >
                         <div
                             class="transition duration-300 motion-reduce:transition-none"
@@ -360,7 +360,7 @@
                         )
                 }
             "
-            class="absolute -right-5 -top-10 -z-10 hidden w-60 min-[660px]:block md:relative md:right-auto md:top-auto md:w-72"
+            class="absolute -top-10 -right-5 -z-10 hidden w-60 min-[660px]:block md:relative md:top-auto md:right-auto md:w-72"
         >
             {{-- Idea Puzzle --}}
             <img
@@ -373,11 +373,11 @@
             {{-- Decoration Circles --}}
             <div
                 x-ref="circle1"
-                class="absolute -bottom-24 right-10 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3 lg:-left-14 lg:right-auto"
+                class="absolute right-10 -bottom-24 hidden h-3 w-3 rounded-full bg-blue-200 min-[550px]:block md:h-3 md:w-3 lg:right-auto lg:-left-14"
             ></div>
             <div
                 x-ref="circle2"
-                class="absolute bottom-0 right-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3 lg:-left-4 lg:right-auto"
+                class="absolute right-0 bottom-0 hidden h-3 w-3 rounded-full bg-[#FFCEA0] min-[550px]:block md:h-3 md:w-3 lg:right-auto lg:-left-4"
             ></div>
 
             {{-- Decoration Geometric Shapes --}}
@@ -385,13 +385,13 @@
                 x-ref="geometric_shape_1"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
                 alt="Shape"
-                class="absolute -left-10 -top-5 hidden w-8 md:block lg:-right-16 lg:left-auto"
+                class="absolute -top-5 -left-10 hidden w-8 md:block lg:-right-16 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_2"
                 src="{{ Vite::asset('resources/images/home/geometric-shape-4.webp') }}"
                 alt="Shape"
-                class="absolute -left-20 bottom-20 hidden w-8 md:block lg:-right-32 lg:left-auto"
+                class="absolute bottom-20 -left-20 hidden w-8 md:block lg:-right-32 lg:left-auto"
             />
             <img
                 x-ref="geometric_shape_3"

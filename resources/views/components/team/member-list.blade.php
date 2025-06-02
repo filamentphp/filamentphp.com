@@ -23,7 +23,7 @@
     {{-- Team member List --}}
     <div
         x-ref="list"
-        class="grid grid-cols-1 place-items-center gap-x-10 gap-y-14 pb-20 md:grid-cols-2 min-[1100px]:grid-cols-3"
+        class="grid grid-cols-1 place-items-center gap-x-10 gap-y-14 pb-20 min-[1100px]:grid-cols-3 md:grid-cols-2"
     >
         <x-team.member
             avatar="https://avatars.githubusercontent.com/u/41837763?v=4"

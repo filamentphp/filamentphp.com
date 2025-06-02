@@ -48,7 +48,7 @@
             {{-- Message --}}
             <div
                 x-ref="message"
-                class="max-w-xl pt-5 text-lg font-medium text-dolphin"
+                class="text-dolphin max-w-xl pt-5 text-lg font-medium"
             >
                 Discover the people who are passionately working on Filament.
             </div>

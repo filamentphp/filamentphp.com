@@ -231,7 +231,7 @@
 
                 <span
                     x-ref="premium_heart"
-                    class="absolute -left-9 -top-2"
+                    class="absolute -top-2 -left-9"
                 >
                     <svg
                         width="26"
@@ -265,7 +265,7 @@
 
         <p
             x-ref="message"
-            class="mx-auto max-w-lg pt-10 text-center text-lg text-dolphin"
+            class="text-dolphin mx-auto max-w-lg pt-10 text-center text-lg"
         >
             Filament is open source at heart. Our sponsors fund new features,
             bug fixes, and our community support.
@@ -336,7 +336,7 @@
             >
                 {{-- Button --}}
                 <div
-                    class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                    class="bg-midnight flex items-center justify-center gap-3 rounded-tr-3xl rounded-bl-3xl px-9 py-4 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 >
                     <div>Sponsor Filament</div>
                     <div>
@@ -356,7 +356,7 @@
 
                 {{-- Shadow --}}
                 <div
-                    class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                    class="group-hover:bg-butter absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-tr-3xl rounded-bl-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 ></div>
             </a>
         </div>
@@ -364,7 +364,7 @@
         {{-- Big Heart: Top Right --}}
         <div
             x-ref="big_heart_top_right"
-            class="absolute right-10 top-1/3 -z-30 min-[500px]:top-10 min-[850px]:right-20 min-[850px]:top-32"
+            class="absolute top-1/3 right-10 -z-30 min-[500px]:top-10 min-[850px]:top-32 min-[850px]:right-20"
         >
             <svg
                 width="52"
@@ -402,7 +402,7 @@
         {{-- Big Heart: Top Left --}}
         <div
             x-ref="big_heart_top_left"
-            class="absolute left-10 top-1/2 -z-30 min-[500px]:top-10 min-[850px]:left-20 min-[850px]:top-32"
+            class="absolute top-1/2 left-10 -z-30 min-[500px]:top-10 min-[850px]:top-32 min-[850px]:left-20"
         >
             <svg
                 width="82"
@@ -453,7 +453,7 @@
         {{-- Big Heart: Bottom Right --}}
         <div
             x-ref="big_heart_bottom_right"
-            class="absolute bottom-40 right-10 -z-30 min-[850px]:right-32"
+            class="absolute right-10 bottom-40 -z-30 min-[850px]:right-32"
         >
             <svg
                 width="64"
@@ -509,7 +509,7 @@
             <svg
                 width="27"
                 height="24"
-                class="-rotate-12 scale-110"
+                class="scale-110 -rotate-12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -523,12 +523,12 @@
         {{-- Mini Heart 2 --}}
         <div
             x-ref="mini_heart_2"
-            class="absolute bottom-20 right-20 -z-30 min-[850px]:right-60"
+            class="absolute right-20 bottom-20 -z-30 min-[850px]:right-60"
         >
             <svg
                 width="27"
                 height="24"
-                class="rotate-12 scale-90"
+                class="scale-90 rotate-12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -547,7 +547,7 @@
             <svg
                 width="27"
                 height="24"
-                class="rotate-20 scale-90"
+                class="scale-90 rotate-20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >

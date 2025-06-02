@@ -5,9 +5,7 @@
         :$starsCount
     />
 
-    <div
-        class="mx-auto mt-5 w-full max-w-330 border-t border-merino"
-    ></div>
+    <div class="border-merino mx-auto mt-5 w-full max-w-330 border-t"></div>
 
     <x-articles.list
         :$articles

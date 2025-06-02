@@ -22,14 +22,14 @@
     {{-- Package Name --}}
     <div class="flex items-center justify-center gap-5">
         <div
-            class="h-px max-w-40 grow rounded-full bg-linear-to-r from-transparent to-evening"
+            class="to-evening h-px max-w-40 grow rounded-full bg-linear-to-r from-transparent"
         ></div>
-        <div class="text-2xl text-evening">
+        <div class="text-evening text-2xl">
             Introducing
             <span class="font-bold">Filament</span>
         </div>
         <div
-            class="h-px max-w-40 grow rounded-full bg-linear-to-l from-transparent to-evening"
+            class="to-evening h-px max-w-40 grow rounded-full bg-linear-to-l from-transparent"
         ></div>
     </div>
     <div class="pt-14 text-center">
@@ -37,7 +37,7 @@
         <header class="font-black">
             <div class="text-4xl">Build a</div>
             <div
-                class="inline-block bg-linear-to-r from-butter/80 to-sky-400/60 bg-clip-text pb-3 pt-4 text-5xl text-transparent"
+                class="from-butter/80 inline-block bg-linear-to-r to-sky-400/60 bg-clip-text pt-4 pb-3 text-5xl text-transparent"
             >
                 Beautiful & Powerful
             </div>
@@ -46,7 +46,7 @@
 
         {{-- Description --}}
         <div
-            class="pt-5 text-xl text-dolphin"
+            class="text-dolphin pt-5 text-xl"
             style="text-wrap: balance"
         >
             Filament is a full-stack UI framework built using the TALL stack,
@@ -74,11 +74,11 @@
                 class="w-full [grid-area:1/-1]"
             />
             <div
-                class="h-40 w-full self-end bg-linear-to-t from-cream to-transparent [grid-area:1/-1]"
+                class="from-cream h-40 w-full self-end bg-linear-to-t to-transparent [grid-area:1/-1]"
             ></div>
             <a
                 href="https://demo.filamentphp.com"
-                class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl bg-evening px-7 py-3 text-white transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
+                class="group/button bg-evening z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl px-7 py-3 text-white transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
             >
                 <div>Visit the Demo</div>
                 <div

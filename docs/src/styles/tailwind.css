@@ -79,8 +79,8 @@
     }
 
     & .heading-anchor {
-        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
-        @apply lg:absolute lg:-left-7 lg:top-0;
+        @apply text-butter mr-2 inline-block align-baseline shadow-none dark:shadow-none;
+        @apply lg:absolute lg:top-0 lg:-left-7;
     }
 
     /* All `.prose` elements except `code` */
@@ -105,8 +105,8 @@
 
 @utility heading-anchor {
     .prose & {
-        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
-        @apply lg:absolute lg:-left-7 lg:top-0;
+        @apply text-butter mr-2 inline-block align-baseline shadow-none dark:shadow-none;
+        @apply lg:absolute lg:top-0 lg:-left-7;
     }
 }
 
@@ -170,7 +170,7 @@
 
     p code,
     ul code {
-        @apply rounded bg-merino px-1.5 py-0.5;
+        @apply bg-merino rounded px-1.5 py-0.5;
     }
 
     p code::selection,

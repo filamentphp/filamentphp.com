@@ -224,11 +224,11 @@
         {{-- Speedometer Circle --}}
         <div
             x-ref="speedometer_circle"
-            class="absolute right-1/2 top-32 hidden h-72 w-[18rem] translate-x-1/3 self-center justify-self-center rounded-full bg-linear-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 min-[630px]:block min-[700px]:relative min-[700px]:right-0 min-[700px]:top-0 min-[700px]:translate-x-0 min-[700px]:[grid-area:1/-1]"
+            class="absolute top-32 right-1/2 hidden h-72 w-[18rem] translate-x-1/3 self-center justify-self-center rounded-full bg-linear-to-bl from-[#FFF1E9] to-[#FBF0EF]/0 min-[630px]:block min-[700px]:relative min-[700px]:top-0 min-[700px]:right-0 min-[700px]:translate-x-0 min-[700px]:[grid-area:1/-1]"
         >
             {{-- Tailwind --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-36 -top-16 z-20"
+                class="tall-link-wrapper group/tall-link absolute -top-16 -right-36 z-20"
             >
                 <a
                     href="https://tailwindcss.com"
@@ -272,7 +272,7 @@
             </div>
             {{-- Alpine --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-46 top-7 z-20"
+                class="tall-link-wrapper group/tall-link absolute top-7 -right-46 z-20"
             >
                 <a
                     href="https://alpinejs.dev"
@@ -313,7 +313,7 @@
             </div>
             {{-- Laravel --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-48 top-34 z-20"
+                class="tall-link-wrapper group/tall-link absolute top-34 -right-48 z-20"
             >
                 <a
                     href="https://laravel.com"
@@ -347,7 +347,7 @@
             </div>
             {{-- Livewire --}}
             <div
-                class="tall-link-wrapper group/tall-link absolute -right-40 top-64 z-20"
+                class="tall-link-wrapper group/tall-link absolute top-64 -right-40 z-20"
             >
                 <a
                     href="https://livewire.laravel.com"
@@ -418,7 +418,7 @@
             <svg
                 x-ref="orange_arc"
                 width="64"
-                class="absolute right-[0rem] top-[1.2rem] z-20 -rotate-3"
+                class="absolute top-[1.2rem] right-[0rem] z-20 -rotate-3"
                 height="204"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -466,7 +466,7 @@
             {{-- Speed Lines --}}
             <svg
                 x-ref="speed_lines"
-                class="absolute -right-16 -top-16 w-72 rotate-2"
+                class="absolute -top-16 -right-16 w-72 rotate-2"
                 width="311"
                 height="333"
                 viewBox="0 0 311 333"
@@ -820,7 +820,7 @@
             </div>
             <div
                 x-ref="tall_stack_description"
-                class="relative z-30 w-full min-[600px]:w-auto min-[630px]:top-40 min-[630px]:pl-5 min-[630px]:pt-10 min-[700px]:top-0 min-[700px]:pl-0 min-[700px]:pr-36"
+                class="relative z-30 w-full min-[600px]:w-auto min-[630px]:top-40 min-[630px]:pt-10 min-[630px]:pl-5 min-[700px]:top-0 min-[700px]:pr-36 min-[700px]:pl-0"
             >
                 <div
                     class="flex justify-center min-[600px]:justify-start min-[700px]:justify-end"
@@ -836,18 +836,18 @@
                                 TALL Stack
                             </div>
                             <div
-                                class="-z-10 h-5 w-16 self-end justify-self-start bg-peach-orange [grid-area:1/-1]"
+                                class="bg-peach-orange -z-10 h-5 w-16 self-end justify-self-start [grid-area:1/-1]"
                             ></div>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="pt-5 text-center text-xs text-dolphin min-[600px]:text-left min-[700px]:text-right"
+                    class="text-dolphin pt-5 text-center text-xs min-[600px]:text-left min-[700px]:text-right"
                 >
                     /tɔːl stæk/
                 </div>
                 <div
-                    class="pt-5 text-center font-afacad text-lg text-dolphin min-[600px]:text-left min-[700px]:text-right"
+                    class="font-afacad text-dolphin pt-5 text-center text-lg min-[600px]:text-left min-[700px]:text-right"
                 >
                     A set of frameworks that combine into
                     <br />
@@ -859,7 +859,7 @@
         </div>
         {{-- Leaf decoration --}}
         <div
-            class="relative left-32 top-32 hidden self-start justify-self-start [grid-area:1/-1] min-[700px]:block"
+            class="relative top-32 left-32 hidden self-start justify-self-start [grid-area:1/-1] min-[700px]:block"
         >
             <div class="flex flex-col items-center gap-20">
                 <svg
@@ -909,7 +909,7 @@
         </div>
         {{-- Dragonfly decoration --}}
         <div
-            class="relative hidden self-end justify-self-end [grid-area:1/-1] min-[700px]:block md:right-20 min-[800px]:-top-10"
+            class="relative hidden self-end justify-self-end [grid-area:1/-1] min-[700px]:block min-[800px]:-top-10 md:right-20"
         >
             <div class="flex flex-col items-center gap-20">
                 <svg

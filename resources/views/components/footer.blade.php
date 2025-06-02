@@ -1,4 +1,4 @@
-<footer class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pb-5 pt-10">
+<footer class="mx-auto w-full max-w-(--breakpoint-lg) px-5 pt-10 pb-5">
     {{-- Sponsor list --}}
     <section
         x-init="
@@ -20,7 +20,7 @@
                 })
             }
         "
-        class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-5 text-dolphin"
+        class="text-dolphin grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-5"
         aria-labelledby="sponsors-heading"
     >
         <!-- Added visually hidden heading for better document structure -->
@@ -179,7 +179,7 @@
     </section>
 
     <div
-        class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-10 lg:flex-row lg:items-start lg:justify-between min-[1060px]:px-0"
+        class="flex flex-col items-stretch gap-x-20 gap-y-5 px-6 pt-10 min-[1060px]:px-0 lg:flex-row lg:items-start lg:justify-between"
     >
         {{-- Left side --}}
         <div
@@ -218,7 +218,7 @@
                 About Filament
             </h2>
             <p
-                class="text-center font-afacad text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-88 lg:text-left"
+                class="font-afacad text-center text-lg opacity-0 motion-reduce:opacity-100 lg:max-w-88 lg:text-left"
             >
                 A collection of tools for rapidly building beautiful TALL stack
                 applications. It includes a powerful admin panel, dynamic forms,
@@ -246,14 +246,14 @@
                         })
                     }
                 "
-                class="flex flex-wrap items-center gap-3.5 text-hurricane opacity-0 motion-reduce:opacity-100"
+                class="text-hurricane flex flex-wrap items-center gap-3.5 opacity-0 motion-reduce:opacity-100"
                 aria-label="Social media links"
             >
                 <div class="opacity-0 motion-reduce:opacity-100">
                     <a
                         target="_blank"
                         href="https://twitter.com/filamentphp"
-                        class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
+                        class="bg-merino grid size-10 place-items-center rounded-xl transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="Follow Filament on Twitter"
                         title="Filament on Twitter/X"
                         rel="noopener"
@@ -265,7 +265,7 @@
                     <a
                         target="_blank"
                         href="https://filamentphp.com/discord"
-                        class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
+                        class="bg-merino grid size-10 place-items-center rounded-xl transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="Join the Filament Discord community"
                         title="Filament on Discord"
                         rel="noopener"
@@ -277,7 +277,7 @@
                     <a
                         target="_blank"
                         href="https://github.com/filamentphp/filament"
-                        class="grid size-10 place-items-center rounded-xl bg-merino transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
+                        class="bg-merino grid size-10 place-items-center rounded-xl transition duration-200 hover:bg-[#ffe8ce] hover:text-black motion-reduce:transition-none"
                         aria-label="View Filament on GitHub"
                         title="Filament on GitHub"
                         rel="noopener"
@@ -316,7 +316,7 @@
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
                 <h2
                     x-ref="linkItem"
-                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                    class="font-afacad text-midnight text-xl font-medium opacity-0 motion-reduce:opacity-100"
                 >
                     Explore
                 </h2>
@@ -331,7 +331,7 @@
                         <a
                             href="{{ route('home') }}"
                             aria-label="Go to homepage"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Home
                         </a>
@@ -343,7 +343,7 @@
                         <a
                             href="{{ route('docs') }}"
                             aria-label="View documentation"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Documentation
                         </a>
@@ -355,7 +355,7 @@
                         <a
                             href="{{ route('api-docs') }}"
                             aria-label="View PHP API documentation"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             PHP API Documentation
                         </a>
@@ -367,7 +367,7 @@
                         <a
                             href="{{ route('use-cases.admin-panel') }}"
                             aria-label="Learn how to build an admin panel"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Build an Admin Panel
                         </a>
@@ -379,7 +379,7 @@
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
                 <h2
                     x-ref="linkItem"
-                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                    class="font-afacad text-midnight text-xl font-medium opacity-0 motion-reduce:opacity-100"
                 >
                     Community
                 </h2>
@@ -394,7 +394,7 @@
                         <a
                             href="{{ route('plugins') }}"
                             aria-label="Browse available plugins"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Plugins
                         </a>
@@ -406,7 +406,7 @@
                         <a
                             href="{{ route('articles') }}"
                             aria-label="Read articles and tutorials"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Content
                         </a>
@@ -418,7 +418,7 @@
                         <a
                             href="{{ route('team') }}"
                             aria-label="Learn about the Filament team members"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Meet Our Team
                         </a>
@@ -432,7 +432,7 @@
                             target="_blank"
                             rel="noopener"
                             aria-label="Sponsor Filament on GitHub"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Sponsor
                         </a>
@@ -444,7 +444,7 @@
             <div class="flex grow flex-col items-start gap-1 sm:grow-0">
                 <h2
                     x-ref="linkItem"
-                    class="font-afacad text-xl font-medium text-midnight opacity-0 motion-reduce:opacity-100"
+                    class="font-afacad text-midnight text-xl font-medium opacity-0 motion-reduce:opacity-100"
                 >
                     Support
                 </h2>
@@ -459,7 +459,7 @@
                         <a
                             href="https://shop.filamentphp.com"
                             aria-label="Visit the Filament shop"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Shop
                         </a>
@@ -473,7 +473,7 @@
                             target="_blank"
                             rel="noopener"
                             aria-label="Check Filament service status"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Status
                         </a>
@@ -487,7 +487,7 @@
                             target="_blank"
                             rel="noopener"
                             aria-label="Get help with Filament"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Help
                         </a>
@@ -499,7 +499,7 @@
                         <a
                             href="{{ route('consulting') }}"
                             aria-label="Learn about consulting services"
-                            class="inline-block px-px py-1.5 text-hurricane transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
+                            class="text-hurricane inline-block px-px py-1.5 transition duration-300 will-change-transform hover:translate-x-1 hover:text-black motion-reduce:transition-none motion-reduce:hover:transform-none"
                         >
                             Consulting
                         </a>
@@ -529,7 +529,7 @@
                 })
             }
         "
-        class="flex items-center py-1 text-hurricane/25 opacity-0 motion-reduce:opacity-100 lg:pt-2 min-[1060px]:-mx-7"
+        class="text-hurricane/25 flex items-center py-1 opacity-0 motion-reduce:opacity-100 min-[1060px]:-mx-7 lg:pt-2"
         aria-hidden="true"
     >
         {{-- Left flower --}}
@@ -596,7 +596,7 @@
 
     {{-- Copyright --}}
     <section
-        class="flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm text-hurricane sm:flex-row sm:justify-between sm:px-6 sm:text-left min-[1060px]:px-0"
+        class="text-hurricane flex flex-col flex-wrap items-center gap-x-5 gap-y-3 text-center text-sm min-[1060px]:px-0 sm:flex-row sm:justify-between sm:px-6 sm:text-left"
         aria-label="Credits and copyright information"
     >
         {{-- Left side --}}

@@ -1,4 +1,4 @@
-<div class="absolute -bottom-4 right-1/2 translate-x-1/2">
+<div class="absolute right-1/2 -bottom-4 translate-x-1/2">
     <div
         x-init="
             () => {

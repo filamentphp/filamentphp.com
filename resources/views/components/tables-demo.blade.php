@@ -1,5 +1,5 @@
 @props([
-    'shadow-sm' => 'shadow-2xl shadow-primary-500/30',
+    'shadow-sm' => 'shadow-primary-500/30 shadow-2xl',
 ])
 
 <div
@@ -19,8 +19,8 @@
         >
             <div class="flex space-x-2 py-4">
                 <div class="h-3 w-3 rounded-full bg-red-500"></div>
-                <div class="h-3 w-3 rounded-full bg-primary-300"></div>
-                <div class="h-3 w-3 rounded-full bg-success-400"></div>
+                <div class="bg-primary-300 h-3 w-3 rounded-full"></div>
+                <div class="bg-success-400 h-3 w-3 rounded-full"></div>
             </div>
 
             <button
@@ -32,7 +32,7 @@
                     'dark:bg-white/10': theme === 'dark',
                 }"
                 type="button"
-                class="relative inline-flex w-14 shrink-0 cursor-pointer rounded-xl border-2 border-gray-300 border-transparent p-0.5 transition-colors duration-200 ease-in-out focus:border-primary-500 focus:outline-hidden focus:ring-2 focus:ring-primary-500"
+                class="focus:border-primary-500 focus:ring-primary-500 relative inline-flex w-14 shrink-0 cursor-pointer rounded-xl border-2 border-gray-300 border-transparent p-0.5 transition-colors duration-200 ease-in-out focus:ring-2 focus:outline-hidden"
             >
                 <span
                     x-bind:class="{
@@ -60,7 +60,7 @@
                             'opacity-0 ease-out duration-100': theme === 'dark',
                         }"
                     >
-                        <x-heroicon-s-sun class="h-4 w-4 text-primary-600" />
+                        <x-heroicon-s-sun class="text-primary-600 h-4 w-4" />
                     </span>
                 </span>
             </button>
@@ -105,14 +105,14 @@
     <div class="absolute -top-18 right-16 hidden md:flex">
         <div class="relative">
             <span
-                class="absolute right-18 top-1 whitespace-nowrap font-cursive text-2xl"
+                class="font-cursive absolute top-1 right-18 text-2xl whitespace-nowrap"
             >
                 it's open source
             </span>
 
             <img
                 src="/images/arrow-turn.svg"
-                class="h-20 -rotate-90 -scale-x-100"
+                class="h-20 -scale-x-100 -rotate-90"
             />
         </div>
     </div>

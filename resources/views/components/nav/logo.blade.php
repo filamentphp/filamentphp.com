@@ -39,7 +39,7 @@
 
         {{-- Bulb --}}
         <div
-            class="absolute -left-1 -top-3.5 -z-10 opacity-0 transition duration-300 will-change-transform group-hover/filament:opacity-100 motion-reduce:transition-none"
+            class="absolute -top-3.5 -left-1 -z-10 opacity-0 transition duration-300 will-change-transform group-hover/filament:opacity-100 motion-reduce:transition-none"
         >
             <svg
                 width="37"

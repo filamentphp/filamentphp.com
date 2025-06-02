@@ -1,11 +1,11 @@
 <a
     x-bind:href="'/community/' + article.slug"
-    class="rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
+    class="shadow-hurricane/5 hover:shadow-hurricane/10 rounded-2xl bg-white p-3 shadow-lg transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl"
 >
-    <div class="px-1.5 pb-1 pt-2.5">
+    <div class="px-1.5 pt-2.5 pb-1">
         <div class="flex flex-wrap items-center justify-between gap-5">
             <div
-                class="flex select-none items-center justify-center gap-2 rounded-full py-2.5 pl-4 pr-5 text-xs"
+                class="flex items-center justify-center gap-2 rounded-full py-2.5 pr-5 pl-4 text-xs select-none"
                 x-bind:class="{
                     'bg-amber-100/80 text-amber-700': types[article.type].color === 'amber',
                     'bg-blue-100/80 text-blue-700': types[article.type].color === 'blue',
@@ -41,7 +41,7 @@
                     />
                 </svg>
                 <div
-                    class="pt-0.5 text-sm font-medium text-dolphin"
+                    class="text-dolphin pt-0.5 text-sm font-medium"
                     x-text="article.stars_count"
                 ></div>
             </div>
@@ -50,7 +50,7 @@
         {{-- Title --}}
         <div
             x-text="article.title"
-            class="line-clamp-2 pt-3.5 text-base font-medium text-evening"
+            class="text-evening line-clamp-2 pt-3.5 text-base font-medium"
         ></div>
 
         {{-- Author --}}
@@ -64,7 +64,7 @@
                 </template>
                 <template x-if="! article.author.avatar">
                     <div
-                        class="grid h-full w-full place-items-center bg-fair-pink text-salmon/50"
+                        class="bg-fair-pink text-salmon/50 grid h-full w-full place-items-center"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

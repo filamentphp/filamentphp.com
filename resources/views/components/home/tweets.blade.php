@@ -106,7 +106,7 @@
         class="relative z-1 overflow-hidden rounded-3xl bg-linear-to-t from-transparent via-[#F1F3FF] to-[#E6EAFF] px-5 pb-5"
     >
         {{-- Right side decoration --}}
-        <div class="absolute right-24 top-14 hidden md:block lg:right-40">
+        <div class="absolute top-14 right-24 hidden md:block lg:right-40">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-28 lg:w-32"
@@ -172,7 +172,7 @@
         </div>
 
         {{-- Left side decoration --}}
-        <div class="absolute left-24 top-14 hidden md:block lg:left-40">
+        <div class="absolute top-14 left-24 hidden md:block lg:left-40">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-32 lg:w-36"
@@ -290,7 +290,7 @@
                 Community
                 <div
                     x-ref="community_quote"
-                    class="absolute -right-7 -top-2"
+                    class="absolute -top-2 -right-7"
                 >
                     <svg
                         width="21"
@@ -816,7 +816,7 @@
                 <a
                     href="https://love.filamentphp.com"
                     target="_blank"
-                    class="group/button z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl bg-dawn-pink px-7 py-3 text-hurricane transition duration-200 [grid-area:1/-1] hover:bg-dawn-pink/70 motion-reduce:transition-none"
+                    class="group/button bg-dawn-pink text-hurricane hover:bg-dawn-pink/70 z-10 flex items-center justify-center gap-3 self-center justify-self-center rounded-xl px-7 py-3 transition duration-200 [grid-area:1/-1] motion-reduce:transition-none"
                 >
                     <div>View All Testimonials</div>
                     <div
@@ -883,7 +883,7 @@
                     if (! show_more) document.getElementById('tweets').scrollIntoView()
                 }
             "
-            class="relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full bg-evening py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-indigo-900 motion-reduce:transition-none"
+            class="bg-evening relative grid cursor-pointer self-end justify-self-center overflow-hidden rounded-full py-4 font-medium text-white transition-all duration-500 ease-in-out hover:bg-indigo-900 motion-reduce:transition-none"
             :class="{
                 'w-48': !show_more,
                 'xl:translate-x-136 -translate-y-10 w-16 rotate-180': show_more,
@@ -913,7 +913,7 @@
                 </svg>
             </div>
             <div
-                class="absolute left-16 top-1/2 -translate-y-1/2 truncate transition duration-500"
+                class="absolute top-1/2 left-16 -translate-y-1/2 truncate transition duration-500"
                 :class="{
                     'opacity-0': show_more,
                 }"

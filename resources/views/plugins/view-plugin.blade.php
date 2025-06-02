@@ -22,7 +22,7 @@
                 )
             }
         "
-        class="mx-auto w-full max-w-8xl px-5 sm:px-10"
+        class="max-w-8xl mx-auto w-full px-5 sm:px-10"
     >
         <div class="flex flex-wrap items-center justify-between gap-5 pt-20">
             {{-- Back Button --}}
@@ -30,7 +30,7 @@
                 x-on:mouseenter="back_button_is_hovering = true"
                 x-on:mouseleave="back_button_is_hovering = false"
                 href="/plugins"
-                class="flex items-center gap-3 p-1 text-dolphin transition duration-300 hover:-translate-x-2 hover:text-evening"
+                class="text-dolphin hover:text-evening flex items-center gap-3 p-1 transition duration-300 hover:-translate-x-2"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@
                     <a
                         href="{{ $plugin->discord_url }}"
                         target="_blank"
-                        class="flex select-none items-center gap-2.5 rounded-lg bg-white py-2.5 pl-5 pr-6 text-center text-sm font-medium text-evening shadow-lg shadow-black/[0.01] transition duration-300 hover:-translate-y-0.5 hover:bg-white/80"
+                        class="text-evening flex items-center gap-2.5 rounded-lg bg-white py-2.5 pr-6 pl-5 text-center text-sm font-medium shadow-lg shadow-black/[0.01] transition duration-300 select-none hover:-translate-y-0.5 hover:bg-white/80"
                     >
                         <svg
                             class="w-[1.1rem]"
@@ -82,7 +82,7 @@
                     <a
                         href="{{ $plugin->url }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                        class="bg-salmon block rounded-tl-lg rounded-tr-lg rounded-br-2xl rounded-bl-lg py-2.5 pr-6 pl-5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 select-none hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
                         Visit website
                     </a>
@@ -93,7 +93,7 @@
                     <a
                         href="https://github.com/{{ $plugin->github_repository }}"
                         target="_blank"
-                        class="block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon py-2.5 pl-5 pr-6 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]"
+                        class="bg-salmon block rounded-tl-lg rounded-tr-lg rounded-br-2xl rounded-bl-lg py-2.5 pr-6 pl-5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 select-none hover:-translate-y-0.5 hover:bg-[#ff8868]"
                     >
                         Visit GitHub
                     </a>
@@ -103,7 +103,7 @@
                         href="{{ $checkoutUrl }}"
                         target="_blank"
                         @class([
-                            'block select-none rounded-bl-lg rounded-br-2xl rounded-tl-lg rounded-tr-lg bg-salmon px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff8868]',
+                            'bg-salmon block rounded-tl-lg rounded-tr-lg rounded-br-2xl rounded-bl-lg px-6 py-2.5 text-center text-sm font-medium text-white shadow-xl shadow-black/[0.02] transition duration-300 select-none hover:-translate-y-0.5 hover:bg-[#ff8868]',
                             'lemonsqueezy-button' => $plugin->is_lemon_squeezy_embedded,
                         ])
                     >
@@ -134,7 +134,7 @@
                     <div class="text-3xl font-extrabold">
                         {{ $plugin->name }}
                     </div>
-                    <div class="pt-4 font-medium text-dolphin/80">
+                    <div class="text-dolphin/80 pt-4 font-medium">
                         {{ $plugin->description }}
                     </div>
                 </div>
@@ -143,14 +143,14 @@
                 <div class="flex flex-wrap items-center gap-3.5 pt-10">
                     @foreach ($plugin->getCategories() as $category)
                         <div
-                            class="flex select-none items-center gap-4 rounded-full bg-white py-1.5 pl-1.5 pr-6"
+                            class="flex items-center gap-4 rounded-full bg-white py-1.5 pr-6 pl-1.5 select-none"
                         >
                             <div
-                                class="grid h-8 w-8 place-items-center rounded-full bg-dawn-pink text-hurricane"
+                                class="bg-dawn-pink text-hurricane grid h-8 w-8 place-items-center rounded-full"
                             >
                                 {!! $category->getIcon() !!}
                             </div>
-                            <div class="text-sm text-hurricane">
+                            <div class="text-hurricane text-sm">
                                 {{ $category->name }}
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                             style="
                                 background-image: url({{ $plugin->getImageUrl() }});
                             "
-                            class="aspect-16/9 h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink/70"
+                            class="ring-dawn-pink/70 aspect-16/9 h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ring-1"
                         ></div>
                     </div>
                 @endif
@@ -177,7 +177,7 @@
                     <div class="flex items-center gap-3">
                         <div
                             @class([
-                                'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
+                                'text-salmon grid h-9 w-9 place-items-center rounded-full bg-white shadow-lg shadow-black/[0.02]',
                                 'grayscale' => ! $plugin->has_dark_theme,
                             ])
                         >
@@ -199,7 +199,7 @@
                         </div>
 
                         <div>
-                            <div class="text-xs text-dolphin/80">
+                            <div class="text-dolphin/80 text-xs">
                                 Dark theme support
                             </div>
 
@@ -213,7 +213,7 @@
                     <div class="flex items-center gap-3">
                         <div
                             @class([
-                                'grid h-9 w-9 place-items-center rounded-full bg-white text-salmon shadow-lg shadow-black/[0.02]',
+                                'text-salmon grid h-9 w-9 place-items-center rounded-full bg-white shadow-lg shadow-black/[0.02]',
                                 'grayscale' => ! $plugin->has_translations,
                             ])
                         >
@@ -237,7 +237,7 @@
                         </div>
 
                         <div>
-                            <div class="text-xs text-dolphin/80">
+                            <div class="text-dolphin/80 text-xs">
                                 Multi language support
                             </div>
 
@@ -292,7 +292,7 @@
                                 {{ $plugin->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
                             </div>
 
-                            <div class="text-xs text-dolphin/80">
+                            <div class="text-dolphin/80 text-xs">
                                 Supported versions:
                                 {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $plugin->versions)) }}
                             </div>
@@ -328,7 +328,7 @@
                                             },
                                         }"
                                         x-model="selected"
-                                        class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
+                                        class="focus:border-salmon focus:ring-salmon block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900"
                                     >
                                         @foreach ($plugin->docs_urls as $key => $value)
                                             <option value="{{ $key }}">
@@ -340,7 +340,7 @@
                             @endif
                         </div>
                         <div
-                            class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded-sm prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
+                            class="prose prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded-sm prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden selection:bg-stone-500/30 [&_p]:before:hidden [&_p]:after:hidden"
                         >
                             {!!
                                 \App\Support\Markdown::parse($docs)
@@ -361,7 +361,7 @@
                 class="flex w-full flex-wrap items-center gap-12 lg:max-w-sm xl:max-w-md"
             >
                 {{-- Author --}}
-                <div class="w-full pt-10 text-evening">
+                <div class="text-evening w-full pt-10">
                     <div class="grid w-full place-items-center">
                         {{-- Avatar --}}
                         <div
@@ -387,7 +387,7 @@
                                 <a
                                     target="_blank"
                                     href="{{ $plugin->author->twitter_url }}"
-                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                    class="bg-merino text-hurricane hover:text-salmon grid h-8 w-8 place-items-center rounded-full transition duration-200 hover:scale-110"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -410,7 +410,7 @@
                                 <a
                                     target="_blank"
                                     href="{{ $plugin->author->mastodon_url }}"
-                                    class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                    class="bg-merino text-hurricane hover:text-salmon grid h-8 w-8 place-items-center rounded-full transition duration-200 hover:scale-110"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -443,7 +443,7 @@
                             <a
                                 target="_blank"
                                 href="{{ $plugin->author->github_url }}"
-                                class="grid h-8 w-8 place-items-center rounded-full bg-merino text-hurricane transition duration-200 hover:scale-110 hover:text-salmon"
+                                class="bg-merino text-hurricane hover:text-salmon grid h-8 w-8 place-items-center rounded-full transition duration-200 hover:scale-110"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -468,7 +468,7 @@
                         </div>
 
                         <div
-                            class="mt-4 space-y-4 rounded-2xl bg-merino/50 p-6 text-center shadow-lg shadow-black/[0.01]"
+                            class="bg-merino/50 mt-4 space-y-4 rounded-2xl p-6 text-center shadow-lg shadow-black/[0.01]"
                         >
                             {{-- Bio --}}
                             @if ($plugin->author->getBio())
@@ -486,7 +486,7 @@
                                             {{ number_format($plugin->author->plugins()->count()) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-hurricane/80"
+                                            class="text-hurricane/80 text-sm font-medium"
                                         >
                                             Plugins
                                         </div>
@@ -498,7 +498,7 @@
                                             {{ number_format($plugin->author->getStarsCount()) }}
                                         </div>
                                         <div
-                                            class="text-sm font-medium text-hurricane/80"
+                                            class="text-hurricane/80 text-sm font-medium"
                                         >
                                             Stars
                                         </div>
@@ -515,7 +515,7 @@
                                     >
                                         {{-- Button --}}
                                         <div
-                                            class="flex items-center justify-center gap-3 rounded-bl-3xl rounded-tr-3xl bg-midnight px-9 py-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                            class="bg-midnight flex items-center justify-center gap-3 rounded-tr-3xl rounded-bl-3xl px-9 py-4 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                                         >
                                             <div>Sponsor</div>
                                             <div>
@@ -535,7 +535,7 @@
 
                                         {{-- Shadow --}}
                                         <div
-                                            class="absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-bl-3xl rounded-tr-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:bg-butter motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                                            class="group-hover:bg-butter absolute inset-0 -z-10 h-full w-full -translate-x-1.5 translate-y-1.5 rounded-tr-3xl rounded-bl-3xl bg-rose-300 transition duration-300 group-hover:-translate-x-2 group-hover:translate-y-2 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                                         ></div>
                                     </a>
                                 </div>
@@ -561,7 +561,7 @@
                                         style="
                                             background-image: url({{ $otherPlugin->getThumbnailUrl() }});
                                         "
-                                        class="aspect-16/9 w-36 min-w-36 shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
+                                        class="ring-dawn-pink aspect-16/9 w-36 min-w-36 shrink-0 rounded-xl bg-cover bg-center bg-no-repeat ring-1"
                                     ></div>
 
                                     {{-- Detail --}}
@@ -573,7 +573,7 @@
 
                                         {{-- Description --}}
                                         <div
-                                            class="line-clamp-2 pt-1 text-sm text-dolphin"
+                                            class="text-dolphin line-clamp-2 pt-1 text-sm"
                                         >
                                             {{ $otherPlugin->description }}
                                         </div>
@@ -599,7 +599,7 @@
                                                     />
                                                 </svg>
                                                 <div
-                                                    class="pt-0.5 text-xs font-medium text-dolphin"
+                                                    class="text-dolphin pt-0.5 text-xs font-medium"
                                                 >
                                                     {{ $otherPlugin->getStarsCount() }}
                                                 </div>
@@ -609,7 +609,7 @@
 
                                     {{-- Arrow --}}
                                     <div
-                                        class="absolute -right-3 top-0 grid h-full w-52 items-center justify-end bg-linear-to-r from-transparent to-cream opacity-0 transition duration-200 will-change-transform group-hover/author-plugin-link:-translate-x-3 group-hover/author-plugin-link:opacity-100"
+                                        class="to-cream absolute top-0 -right-3 grid h-full w-52 items-center justify-end bg-linear-to-r from-transparent opacity-0 transition duration-200 will-change-transform group-hover/author-plugin-link:-translate-x-3 group-hover/author-plugin-link:opacity-100"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

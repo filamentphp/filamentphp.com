@@ -68,7 +68,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="font-afacad truncate text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Join our server
                 </div>
@@ -88,7 +88,7 @@
             </a>
 
             {{-- Flower decoration --}}
-            <div class="absolute right-0 top-5">
+            <div class="absolute top-5 right-0">
                 <img
                     src="{{ Vite::asset('resources/svg/home/stat-flower-1.svg') }}"
                     alt=""
@@ -144,7 +144,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="font-afacad truncate text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Star us now
                 </div>
@@ -178,7 +178,7 @@
             </a>
 
             {{-- Flower decoration --}}
-            <div class="absolute right-0 top-5">
+            <div class="absolute top-5 right-0">
                 <img
                     src="{{ Vite::asset('resources/svg/home/stat-flower-2.svg') }}"
                     alt=""
@@ -232,7 +232,7 @@
             >
                 {{-- Text --}}
                 <div
-                    class="truncate font-afacad text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
+                    class="font-afacad truncate text-lg capitalize transition duration-200 ease-in-out will-change-transform group-hover:translate-x-px"
                 >
                     Install guide
                 </div>
@@ -252,7 +252,7 @@
             </a>
 
             {{-- Flower decoration --}}
-            <div class="absolute right-0 top-5">
+            <div class="absolute top-5 right-0">
                 <img
                     src="{{ Vite::asset('resources/svg/home/stat-flower-3.svg') }}"
                     alt=""

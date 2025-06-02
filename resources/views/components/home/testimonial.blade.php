@@ -35,7 +35,7 @@
         class="testimonial-component text-sm transition duration-300 motion-reduce:transition-none"
     >
         <div
-            class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:-translate-y-2 group-hover/testimonial:translate-x-2 group-hover/testimonial:scale-105 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
+            class="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/50 transition duration-300 ease-in-out will-change-transform group-hover/testimonial:translate-x-2 group-hover/testimonial:-translate-y-2 group-hover/testimonial:scale-105 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
         >
             {{-- Quote --}}
             <blockquote>"{{ $slot }}"</blockquote>
@@ -73,7 +73,7 @@
                 <div class="font-bold">
                     {{ $author }}
                 </div>
-                <div class="grid text-xs text-dolphin/80">
+                <div class="text-dolphin/80 grid text-xs">
                     <div
                         class="self-center justify-self-start transition duration-300 will-change-transform [grid-area:1/-1] group-hover/testimonial:translate-x-5 group-hover/testimonial:opacity-0 motion-reduce:transition-none motion-reduce:group-hover/testimonial:transform-none"
                     >

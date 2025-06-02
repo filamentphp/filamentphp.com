@@ -5,7 +5,7 @@
     'website',
 ])
 
-<li class="rounded-xl bg-merino/50 px-10 py-6 text-evening">
+<li class="bg-merino/50 text-evening rounded-xl px-10 py-6">
     <div class="-ml-2 flex justify-start">
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@
             />
         </svg>
     </div>
-    <div class="px-2 pb-2 pt-5 font-medium">
+    <div class="px-2 pt-5 pb-2 font-medium">
         {{ $slot }}
     </div>
     <div class="-mr-2 flex justify-end">
@@ -58,7 +58,7 @@
             <a
                 href="{{ $website }}"
                 target="_blank"
-                class="font-medium text-dolphin"
+                class="text-dolphin font-medium"
             >
                 {{ $company }}
             </a>

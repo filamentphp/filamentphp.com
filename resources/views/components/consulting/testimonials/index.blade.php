@@ -27,7 +27,7 @@
         {{-- Testimonial List --}}
         <ul class="space-y-10 pt-10">
             <li
-                class="flex flex-col items-center gap-4 rounded-xl bg-merino/50 px-10 py-6 text-evening md:flex-row md:gap-8"
+                class="bg-merino/50 text-evening flex flex-col items-center gap-4 rounded-xl px-10 py-6 md:flex-row md:gap-8"
             >
                 <div class="shrink-0">
                     <div
@@ -55,7 +55,7 @@
                             />
                         </svg>
                     </div>
-                    <div class="px-2 pb-2 pt-5 font-medium">
+                    <div class="px-2 pt-5 pb-2 font-medium">
                         Kirschbaum quickly proved what a well-managed web
                         development experience looks like and feels like. Their
                         team has been excellent with communication, time
@@ -79,7 +79,7 @@
                     </div>
                     <div>
                         <div class="font-bold">Michaela Shiloh</div>
-                        <div class="flex items-center font-medium text-dolphin">
+                        <div class="text-dolphin flex items-center font-medium">
                             <span>CEO of</span>
                             <a
                                 href="https://hrdrv.com"

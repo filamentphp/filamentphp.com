@@ -84,7 +84,7 @@
 >
     {{-- Previous Button --}}
     <div
-        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
+        class="mx-0.5 flex h-[36px] min-w-[36px] items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300 select-none"
         :class="{
             'bg-neutral-200/60' : ! whiteBackground,
             'bg-white shadow-lg shadow-black/5' : whiteBackground,
@@ -115,7 +115,7 @@
 
     {{-- Current Page Button --}}
     <div
-        class="absolute left-1/2 top-0 z-10 mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:hidden"
+        class="bg-salmon shadow-salmon/50 absolute top-0 left-1/2 z-10 mx-0.5 flex h-[36px] min-w-[36px] items-center justify-center rounded-xl text-sm text-white shadow-lg transition-all duration-300 select-none md:hidden"
         :class="{
             'scale-110' : moveAnimation,
 
@@ -128,7 +128,7 @@
 
     <template x-if="totalPages <= 8">
         <div
-            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:flex"
+            class="bg-salmon shadow-salmon/50 absolute top-0 left-1/2 z-10 mx-0.5 hidden h-[36px] min-w-[36px] items-center justify-center rounded-xl text-sm text-white shadow-lg transition-all duration-300 select-none md:flex"
             :class="{
                 'scale-110' : moveAnimation,
                 'left-[40px]!' : currentPage === 1,
@@ -146,7 +146,7 @@
 
     <template x-if="totalPages > 8">
         <div
-            class="absolute left-1/2 top-0 z-10 mx-0.5 hidden h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl bg-salmon text-sm text-white shadow-lg shadow-salmon/50 transition-all duration-300 md:flex"
+            class="bg-salmon shadow-salmon/50 absolute top-0 left-1/2 z-10 mx-0.5 hidden h-[36px] min-w-[36px] items-center justify-center rounded-xl text-sm text-white shadow-lg transition-all duration-300 select-none md:flex"
             :class="{
                 'scale-110' : moveAnimation,
                 'left-[40px]!' : currentPage === 1,
@@ -215,7 +215,7 @@
 
             <template x-if="showMiddlePages">
                 <div
-                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer select-none items-center justify-center"
+                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer items-center justify-center select-none"
                     x-on:click="leftArrowMethod"
                 >
                     <div
@@ -228,7 +228,7 @@
                         width="20"
                         height="20"
                         viewBox="0 0 24 24"
-                        class="absolute right-0 top-2 opacity-0 transition-all duration-200 group-hover:right-2! group-hover:opacity-100"
+                        class="absolute top-2 right-0 opacity-0 transition-all duration-200 group-hover:right-2! group-hover:opacity-100"
                     >
                         <g
                             fill="none"
@@ -246,7 +246,7 @@
 
             <template x-if="!showMiddlePages">
                 <div
-                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer select-none items-center justify-center"
+                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer items-center justify-center select-none"
                     x-on:click="middleArrowMethod"
                 >
                     <div
@@ -286,7 +286,7 @@
 
             <template x-if="showMiddlePages">
                 <div
-                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer select-none items-center justify-center"
+                    class="group relative mx-0.5 flex h-[36px] w-[36px] cursor-pointer items-center justify-center select-none"
                     x-on:click="rightArrowMethod"
                 >
                     <div
@@ -299,7 +299,7 @@
                         width="20"
                         height="20"
                         viewBox="0 0 24 24"
-                        class="absolute left-0 top-2 opacity-0 transition-all duration-200 group-hover:left-2! group-hover:opacity-100"
+                        class="absolute top-2 left-0 opacity-0 transition-all duration-200 group-hover:left-2! group-hover:opacity-100"
                     >
                         <g
                             fill="none"
@@ -351,7 +351,7 @@
 
     {{-- Next Arrow --}}
     <div
-        class="mx-0.5 flex h-[36px] min-w-[36px] select-none items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300"
+        class="mx-0.5 flex h-[36px] min-w-[36px] items-center justify-center rounded-xl text-xs text-neutral-700 transition duration-300 select-none"
         :class="{
             'bg-neutral-200/60' : ! whiteBackground,
             'bg-white shadow-lg shadow-black/5' : whiteBackground,

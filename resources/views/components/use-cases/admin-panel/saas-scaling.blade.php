@@ -32,7 +32,7 @@
             <div class="text-3xl font-black">The possibilities are endless</div>
 
             {{-- Description --}}
-            <div class="max-w-lg pt-5 text-lg font-medium text-dolphin">
+            <div class="text-dolphin max-w-lg pt-5 text-lg font-medium">
                 If you’re building something big, whether it’s a SaaS app or an
                 online shop, and you need multiple "admin" panels, with
                 multi-tenant teams and a billing integration, we’ve got
@@ -46,7 +46,7 @@
         <div class="text-2xl font-black sm:text-3xl">
             Turn your panel into a SaaS
         </div>
-        <div class="pt-1 font-medium text-dolphin sm:text-lg">
+        <div class="text-dolphin pt-1 font-medium sm:text-lg">
             You can have as many panels as you want!
         </div>
     </div>
@@ -92,7 +92,7 @@
 
         {{-- SaaS Panel --}}
         <div
-            class="grid place-items-center gap-3 rounded-xl bg-seashell-peach px-14 py-10 text-[#E7A586]"
+            class="bg-seashell-peach grid place-items-center gap-3 rounded-xl px-14 py-10 text-[#E7A586]"
         >
             <div>
                 <svg
@@ -134,11 +134,11 @@
                 <br />
                 and collaborate with others
             </div>
-            <div class="pt-1 font-medium text-dolphin sm:text-lg">
+            <div class="text-dolphin pt-1 font-medium sm:text-lg">
                 Filament has a suite of features for building multi-tenant apps
             </div>
             {{-- Arrow --}}
-            <div class="absolute -right-20 -top-10 hidden md:block">
+            <div class="absolute -top-10 -right-20 hidden md:block">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="37.16"
@@ -160,7 +160,7 @@
     {{-- SaaS Panel Box --}}
     <div class="pt-20">
         <div
-            class="mx-auto max-w-3xl rounded-xl border-2 border-dashed border-dolphin/30 p-7 text-center"
+            class="border-dolphin/30 mx-auto max-w-3xl rounded-xl border-2 border-dashed p-7 text-center"
         >
             <div class="text-[#E7A586]">
                 <div class="text-xl font-semibold">Teams</div>
@@ -168,17 +168,17 @@
                     class="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-7 pt-5"
                 >
                     <div
-                        class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
+                        class="bg-seashell-peach grid place-items-center gap-3 rounded-xl p-10"
                     >
                         <div class="truncate font-medium">Sales</div>
                     </div>
                     <div
-                        class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
+                        class="bg-seashell-peach grid place-items-center gap-3 rounded-xl p-10"
                     >
                         <div class="truncate font-medium">Marketing</div>
                     </div>
                     <div
-                        class="grid place-items-center gap-3 rounded-xl bg-seashell-peach p-10"
+                        class="bg-seashell-peach grid place-items-center gap-3 rounded-xl p-10"
                     >
                         <div class="truncate font-medium">Customer Support</div>
                     </div>

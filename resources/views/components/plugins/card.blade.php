@@ -1,13 +1,13 @@
 <a
     x-bind:href="'/plugins/' + plugin.slug"
-    class="block rounded-2xl bg-white p-3 shadow-lg shadow-hurricane/5 transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-hurricane/10"
+    class="shadow-hurricane/5 hover:shadow-hurricane/10 block rounded-2xl bg-white p-3 shadow-lg transition duration-300 will-change-transform hover:-translate-y-1 hover:shadow-xl"
 >
     <div
         x-bind:style="'background-image: url(' + plugin.thumbnail_url + ')'"
-        class="aspect-16/9 w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
+        class="ring-dawn-pink aspect-16/9 w-full rounded-xl bg-cover bg-center bg-no-repeat ring-1"
     ></div>
 
-    <div class="px-1.5 pb-1 pt-2.5">
+    <div class="px-1.5 pt-2.5 pb-1">
         <div class="flex flex-wrap items-center justify-between gap-5">
             {{-- Stats --}}
             <div class="flex flex-wrap items-center justify-start gap-4">
@@ -26,7 +26,7 @@
                         />
                     </svg>
                     <div
-                        class="pt-0.5 text-xs font-medium text-dolphin"
+                        class="text-dolphin pt-0.5 text-xs font-medium"
                         x-text="plugin.stars_count"
                     ></div>
                 </div>
@@ -42,7 +42,7 @@
                             : 'Does not support dark mode',
                     }"
                     x-tooltip.animation.shift-away-subtle.theme.material="tooltip"
-                    class="grid h-6 w-6 place-items-center rounded-full bg-fair-pink text-salmon"
+                    class="bg-fair-pink text-salmon grid h-6 w-6 place-items-center rounded-full"
                     :class="{
                         'opacity-50 grayscale': ! plugin.features.dark_theme,
                     }"
@@ -72,7 +72,7 @@
                             : 'Does not support multi language',
                     }"
                     x-tooltip.animation.shift-away-subtle.theme.material="tooltip"
-                    class="grid h-6 w-6 place-items-center rounded-full bg-fair-pink text-salmon"
+                    class="bg-fair-pink text-salmon grid h-6 w-6 place-items-center rounded-full"
                     :class="{
                         'opacity-50 grayscale': ! plugin.features.translations,
                     }"
@@ -107,7 +107,7 @@
         {{-- Description --}}
         <div
             x-text="plugin.description"
-            class="line-clamp-2 min-h-[2.9rem] pt-1 text-[.8rem] text-dolphin"
+            class="text-dolphin line-clamp-2 min-h-[2.9rem] pt-1 text-[.8rem]"
         ></div>
 
         {{-- Author and Price --}}
@@ -123,7 +123,7 @@
                     </template>
                     <template x-if="! plugin.author.avatar">
                         <div
-                            class="grid h-full w-full place-items-center bg-fair-pink text-salmon/50"
+                            class="bg-fair-pink text-salmon/50 grid h-full w-full place-items-center"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@
 
             {{-- Link --}}
             <div
-                class="block rounded-bl-md rounded-br-2xl rounded-tl-md rounded-tr-md bg-fair-pink px-10 py-2.5 text-center text-sm text-salmon"
+                class="bg-fair-pink text-salmon block rounded-tl-md rounded-tr-md rounded-br-2xl rounded-bl-md px-10 py-2.5 text-center text-sm"
                 x-text="plugin.price"
                 :class="{
                     'bg-fair-pink text-salmon': plugin.price === 'Free',

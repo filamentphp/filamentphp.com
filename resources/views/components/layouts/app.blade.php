@@ -20,7 +20,7 @@
         aria-labelledby="sidebar-title"
         :aria-expanded="$store.sidebar.isOpen.toString()"
         :class="$store.sidebar.isOpen ? '-translate-x-0' : '-translate-x-full'"
-        class="fixed inset-y-0 left-0 z-1000 w-full max-w-76 transform space-y-8 overflow-y-auto bg-cream p-8 transition-transform duration-500 ease-in-out"
+        class="bg-cream fixed inset-y-0 left-0 z-1000 w-full max-w-76 transform space-y-8 overflow-y-auto p-8 transition-transform duration-500 ease-in-out"
     >
         <!-- Hidden title for screen readers -->
         <h2
@@ -33,13 +33,13 @@
         <x-nav.logo />
 
         <nav aria-label="Main navigation">
-            <ul class="-mx-3 select-none space-y-2">
+            <ul class="-mx-3 space-y-2 select-none">
                 <li>
                     <a
                         href="{{ route('home') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('home*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('home*'),
                             'bg-merino font-black' => request()->routeIs('home*'),
                         ])
                         @if(request()->routeIs('home*')) aria-current="page" @endif
@@ -59,7 +59,7 @@
                         href="{{ route('docs') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('docs*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('docs*'),
                             'bg-merino font-black' => request()->routeIs('docs*'),
                         ])
                         @if(request()->routeIs('docs*')) aria-current="page" @endif
@@ -79,7 +79,7 @@
                         href="{{ route('plugins') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('plugins*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('plugins*'),
                             'bg-merino font-black' => request()->routeIs('plugins*'),
                         ])
                         @if(request()->routeIs('plugins*')) aria-current="page" @endif
@@ -99,7 +99,7 @@
                         href="{{ route('articles') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('articles*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('articles*'),
                             'bg-merino font-black' => request()->routeIs('articles*'),
                         ])
                         @if(request()->routeIs('articles*')) aria-current="page" @endif
@@ -121,7 +121,7 @@
                         href="{{ route('consulting') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('consulting*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('consulting*'),
                             'bg-merino font-black' => request()->routeIs('consulting*'),
                         ])
                         @if(request()->routeIs('consulting*')) aria-current="page" @endif
@@ -141,7 +141,7 @@
                 <li>
                     <a
                         href="https://shop.filamentphp.com"
-                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        class="group/sidebar-link hover:bg-merino block w-full rounded-lg px-4 py-2 font-medium transition duration-300"
                         rel="noopener"
                         aria-label="Visit Filament shop"
                     >
@@ -157,7 +157,7 @@
                         href="{{ route('team') }}"
                         @class([
                             'group/sidebar-link block w-full rounded-lg px-4 py-2 transition duration-300',
-                            'font-medium hover:bg-merino' => ! request()->routeIs('team*'),
+                            'hover:bg-merino font-medium' => ! request()->routeIs('team*'),
                             'bg-merino font-black' => request()->routeIs('team*'),
                         ])
                         @if(request()->routeIs('team*')) aria-current="page" @endif
@@ -176,7 +176,7 @@
                     <a
                         target="_blank"
                         href="https://status.filamentphp.com"
-                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        class="group/sidebar-link hover:bg-merino block w-full rounded-lg px-4 py-2 font-medium transition duration-300"
                         rel="noopener"
                         aria-label="Check Filament system status"
                     >
@@ -191,7 +191,7 @@
                     <a
                         target="_blank"
                         href="https://github.com/filamentphp/filament/discussions/new"
-                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        class="group/sidebar-link hover:bg-merino block w-full rounded-lg px-4 py-2 font-medium transition duration-300"
                         rel="noopener"
                         aria-label="Get help with Filament"
                     >
@@ -205,7 +205,7 @@
                 <li>
                     <a
                         href="https://github.com/filamentphp/filament?sponsor=1"
-                        class="group/sidebar-link block w-full rounded-lg px-4 py-2 font-medium transition duration-300 hover:bg-merino"
+                        class="group/sidebar-link hover:bg-merino block w-full rounded-lg px-4 py-2 font-medium transition duration-300"
                         rel="noopener"
                         aria-label="Sponsor Filament on GitHub"
                     >
@@ -221,7 +221,7 @@
 
         <section
             aria-labelledby="social-heading"
-            class="flex flex-wrap items-center gap-3.5 text-hurricane"
+            class="text-hurricane flex flex-wrap items-center gap-3.5"
         >
             <h3
                 id="social-heading"
@@ -232,7 +232,7 @@
             <a
                 target="_blank"
                 href="https://twitter.com/filamentphp"
-                class="group/twitter-link relative grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino hover:text-black motion-reduce:transition-none"
+                class="group/twitter-link bg-merino relative grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl hover:text-black motion-reduce:transition-none"
                 rel="noopener"
                 aria-label="Filament on Twitter/X"
             >
@@ -255,7 +255,7 @@
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
-                    class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
+                    class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
                     fill="none"
                     aria-hidden="true"
                 >
@@ -268,7 +268,7 @@
             <a
                 target="_blank"
                 href="https://filamentphp.com/discord"
-                class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                class="bg-merino grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl transition duration-300 hover:text-black motion-reduce:transition-none"
                 rel="noopener"
                 aria-label="Join Filament Discord community"
             >
@@ -289,7 +289,7 @@
             <a
                 target="_blank"
                 href="https://github.com/filamentphp/filament"
-                class="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                class="bg-merino grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl transition duration-300 hover:text-black motion-reduce:transition-none"
                 rel="noopener"
                 aria-label="Filament on GitHub"
             >

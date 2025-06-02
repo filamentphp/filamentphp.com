@@ -4,10 +4,10 @@
             ? selectedCategories.delete('{{ $slug }}')
             : selectedCategories.add('{{ $slug }}')
     "
-    class="inline-block select-none py-1 transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 sm:hover:translate-x-1.5 sm:hover:translate-y-0"
+    class="inline-block py-1 transition duration-300 ease-out will-change-transform select-none hover:-translate-y-0.5 sm:hover:translate-x-1.5 sm:hover:translate-y-0"
 >
     <div
-        class="inline-flex cursor-pointer items-center gap-4 rounded-full py-1.5 pl-1.5 pr-6 shadow-lg shadow-black/[0.02] transition duration-200 ease-out"
+        class="inline-flex cursor-pointer items-center gap-4 rounded-full py-1.5 pr-6 pl-1.5 shadow-lg shadow-black/[0.02] transition duration-200 ease-out"
         :class="{
             'bg-fair-pink': selectedCategories.has('{{ $slug }}'),
             'bg-white': !selectedCategories.has('{{ $slug }}'),

@@ -27,16 +27,16 @@
                 {{ $name }}
             </div>
             {{-- Title --}}
-            <div class="text-base font-semibold text-dolphin/90 lg:text-lg">
+            <div class="text-dolphin/90 text-base font-semibold lg:text-lg">
                 {{ $title }}
             </div>
         </div>
         {{-- Links --}}
-        <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
+        <div class="text-hurricane flex flex-wrap items-center gap-3.5">
             <a
                 target="_blank"
                 href="{{ $twitter }}"
-                class="group/twitter-link relative grid h-9 w-9 place-items-center rounded-xl bg-merino hover:text-black motion-reduce:transition-none"
+                class="group/twitter-link bg-merino relative grid h-9 w-9 place-items-center rounded-xl hover:text-black motion-reduce:transition-none"
             >
                 <svg
                     width="40"
@@ -57,7 +57,7 @@
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
-                    class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
+                    class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
                     fill="none"
                 >
                     <path
@@ -69,7 +69,7 @@
             <a
                 target="_blank"
                 href="{{ $website }}"
-                class="grid h-9 w-9 place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                class="bg-merino grid h-9 w-9 place-items-center rounded-xl transition duration-300 hover:text-black motion-reduce:transition-none"
             >
                 <svg
                     class="w-6"
@@ -87,7 +87,7 @@
             <a
                 target="_blank"
                 href="{{ $github }}"
-                class="grid h-9 w-9 place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
+                class="bg-merino grid h-9 w-9 place-items-center rounded-xl transition duration-300 hover:text-black motion-reduce:transition-none"
             >
                 <svg
                     class="w-6"
