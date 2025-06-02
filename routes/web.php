@@ -54,7 +54,7 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/api/{version?}', function (string $version = '4.x'): RedirectResponse {
+Route::get('/api/{version?}', function (string $version = '3.x'): RedirectResponse {
     return redirect('/api/' . $version . '/index.html');
 })->where('version', '[1-4]+\.x')->name('api-docs');
 
@@ -74,7 +74,7 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
         }
 
         $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
