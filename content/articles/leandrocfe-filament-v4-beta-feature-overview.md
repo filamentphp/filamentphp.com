@@ -85,6 +85,12 @@ To keep your Filament code [clean and maintainable](../docs/4.x/resources/code-q
 - Create [dedicated component classes](../docs/4.x/resources/code-quality-tips#using-component-classes) when individual form inputs, table columns, filters, or actions become complex. This keeps each piece of logic focused and reusable.
 - Organize components by `type` and `purpose`, such as putting form inputs under `Schemas/Components` and table actions under `Actions`.
 
+### Preserving data when creating another
+
+By default, the [Create and create another](../docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [preserveFormDataWhenCreatingAnother()](../docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
+
+To preserve all values, you can return the full `$data` array.
+
 ### Customizing page content
 
 Each page in Filament now has its own [schema](../docs/4.x/schemas/overview), which defines its structure and content.
@@ -285,6 +291,10 @@ Bulk actions now support the `chunkSelectedRecords()` method, allowing selected 
 Charts can now be made collapsible by setting the `$isCollapsible` property to `true` on the widget class.
 
 ## Panel Configuration
+
+### Inter font now loaded locally
+
+Filament now loads the [Inter font](https://fonts.google.com/specimen/Inter) locally instead of from a `CDN` by default. You can change the font using the [`font()`](../docs/4.x/styling/overview#changing-the-font) method in the configuration file.
 
 ### Sub-navigation position
 
