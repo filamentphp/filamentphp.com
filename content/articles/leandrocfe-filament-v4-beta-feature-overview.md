@@ -109,7 +109,7 @@ This applies globally to all resources within the panel.
 
 The new `$shouldSplitGlobalSearchTerms` property allows you to disable splitting the global search term into individual words, improving search performance on large datasets.
 
-### Relation Manager
+### Relation manager
 
 #### Customizing the content tab
 
@@ -146,9 +146,9 @@ You can now switch to a [vertical tab](../docs/4.x/schemas/tabs#using-vertical-t
 
 ## Forms
 
-### Rich Editor
+### Rich editor
 
-[Rich Editor](../docs/4.x/forms/rich-editor) is now using [Tiptap](https://tiptap.dev/), a modern, headless, and highly extensible open source editor framework.
+[Rich editor](../docs/4.x/forms/rich-editor) is now using [Tiptap](https://tiptap.dev/), a modern, headless, and highly extensible open source editor framework.
 
 Tiptap gives developers full control over the editing experience. Because it's headless, you decide how it looks — [Tiptap](https://tiptap.dev/) handles the logic.
 
@@ -158,7 +158,7 @@ By default, the rich editor stores content as `HTML`. If you would like to store
 
 #### Custom blocks
 
-[Custom blocks](../docs/4.x/forms/rich-editor#using-custom-blocks) are elements that users can drag and drop into the [rich editor](../docs/4.x/forms/rich-editor).
+[Custom blocks](../docs/4.x/forms/rich-editor#using-custom-blocks) are elements that users can drag and drop into the [Rich editor](../docs/4.x/forms/rich-editor).
 You can define custom blocks that user can insert into the rich editor using the [`customBlocks()` method](../docs/4.x/forms/rich-editor#using-custom-blocks).
 
 #### Merge tags
@@ -170,17 +170,17 @@ To enable [merge tags](../docs/4.x/forms/rich-editor#using-merge-tags), use the 
 
 Users can insert tags by typing `{{` to search, or by using the "merge tags" tool in the toolbar, which opens a panel of available tags for easy insertion.
 
-#### Extending the rich editor
+#### Extending the Rich editor
 
-You can [extend the Rich Editor](../docs/4.x/forms/rich-editor#extending-the-rich-editor) in Filament by creating custom plugins. These plugins let you add your own [TipTap extensions](https://tiptap.dev/docs/editor/core-concepts/extensions), toolbar buttons, and rendering behavior.
+You can [extend the Rich editor](../docs/4.x/forms/rich-editor#extending-the-rich-editor) in Filament by creating custom plugins. These plugins let you add your own [TipTap extensions](https://tiptap.dev/docs/editor/core-concepts/extensions), toolbar buttons, and rendering behavior.
 
 ### Slider
 
-The [slider component](../docs/4.x/forms/slider) lets users select one or more numeric values by dragging a handle along a track — ideal for inputs like ranges, ratings, or percentages.
+The [Slider component](../docs/4.x/forms/slider) lets users select one or more numeric values by dragging a handle along a track — ideal for inputs like ranges, ratings, or percentages.
 
 ### Code editor
 
-The [code editor component](../docs/4.x/forms/code-editor) lets users write and edit code directly in the interface.
+The [Code editor component](../docs/4.x/forms/code-editor) lets users write and edit code directly in the interface.
 It supports common languages including `HTML`, `CSS`, `JavaScript`, `PHP`, and `JSON`.
 
 ### Table repeaters
@@ -229,7 +229,7 @@ In this JavaScript context, you can use `$state`, `$get()`, and `$set()` to inte
 The [FusedGroup](../docs/4.x/forms/overview#fusing-fields-together-into-a-group) component lets you visually combine multiple fields into a single, compact group. 
 It's best used with compatible field types like [text inputs](../docs/4.x/forms/text-input), [selects](../docs/4.x/forms/select), [date-time pickers](../docs/4.x/forms/date-time-picker) and [color pickers](../docs/4.x/forms/color-picker).
 
-### Adding Extra Content to a Field
+### Adding extra content to a field
 
 Fields contain [multiple slots](../docs/4.x/forms/overview#adding-extra-content-to-a-field) where content can be inserted in a child schema. Slots can accept text, [any schema components](../docs/4.x/schemas/overview), [actions](../docs/4.x/actions/overview), or [action groups](../docs/4.x/actions/grouping-actions) — typically with [prime components](../docs/4.x/schemas/primes).
 
@@ -258,7 +258,7 @@ It uses [Phiki](https://github.com/phikiphp/phiki) for code highlighting on the 
 
 ## Tables
 
-### Tables with Static Data
+### Tables with static data
 
 [Filament tables](../docs/4.x/tables) are typically backed by [Eloquent models](), but that's not always ideal. 
 When your data isn't stored in a database — or you want to render external or computed data — you can now use [static data](../docs/4.x/tables/static-data) as the data source.
@@ -361,7 +361,7 @@ Testing actions in v4 is now simpler and more streamlined. See the [testing acti
 
 Charts can now be made collapsible by setting the `$isCollapsible` property to `true` on the widget class.
 
-## Panel Configuration
+## Panel configuration
 
 ### Inter font now loaded locally
 
