@@ -80,13 +80,11 @@ To keep your Filament code [clean and maintainable](../docs/4.x/resources/code-q
 
 - Use [schema and table classes](../docs/4.x/resources/code-quality-tips#using-schema-and-table-classes) to separate large `form()` and `table()` definitions into their own files. This helps avoid bloated methods and improves readability.
 - Create [dedicated component classes](../docs/4.x/resources/code-quality-tips#using-component-classes) when individual form inputs, table columns, filters, or actions become complex. This keeps each piece of logic focused and reusable.
-- Organize components by `type` and `purpose`, such as putting form inputs under `Schemas/Components` and table actions under `Actions`.
+- Organize components by type and purpose, such as putting form inputs under `Schemas/Components` and table actions under `Actions`.
 
 ### Preserving data when creating another
 
 By default, the [Create and create another](../docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [preserveFormDataWhenCreatingAnother()](../docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
-
-To preserve all values, you can return the full `$data` array.
 
 ### Customizing page content
 
@@ -106,7 +104,7 @@ This applies globally to all resources within the panel.
 
 The new `$shouldSplitGlobalSearchTerms` property allows you to disable splitting the global search term into individual words, improving search performance on large datasets.
 
-### Relation manager
+### Relation managers
 
 #### Customizing the content tab
 
@@ -147,8 +145,6 @@ You can now switch to a [vertical tab](../docs/4.x/schemas/tabs#using-vertical-t
 
 [Rich editor](../docs/4.x/forms/rich-editor) is now using [Tiptap](https://tiptap.dev/), a modern, headless, and highly extensible open source editor framework.
 
-Tiptap gives developers full control over the editing experience. Because it's headless, you decide how it looks — [Tiptap](https://tiptap.dev/) handles the logic.
-
 #### Storing content as HTML or JSON
 
 By default, the rich editor stores content as `HTML`. If you would like to store the content as `JSON` instead, you can use the [`json()` method](../docs/4.x/forms/rich-editor#storing-content-as-json).
@@ -177,12 +173,12 @@ The [Slider component](../docs/4.x/forms/slider) lets users select one or more n
 
 ### Code editor
 
-The [Code editor component](../docs/4.x/forms/code-editor) lets users write and edit code directly in the interface.
+The [code editor component](../docs/4.x/forms/code-editor) lets users write and edit code directly in the interface.
 It supports common languages including `HTML`, `CSS`, `JavaScript`, `PHP`, and `JSON`.
 
 ### Table repeaters
 
-[Table repeaters](../docs/4.x/forms/repeater#table-repeaters) display [repeater]() items in a table layout using defined `columns`.
+[Table repeaters](../docs/4.x/forms/repeater#table-repeaters) display [repeater](../docs/4.x/forms/repeater) items in a table layout using defined `columns`.
 You can configure these columns with the `table()` method and `TableColumn` objects, which map to fields in the repeater's schema.
 
 Each column can be customized:
@@ -196,11 +192,11 @@ Each column can be customized:
 
 The [ModalTableSelect](../docs/4.x/forms/select#selecting-options-from-a-table-in-a-modal) component lets users select records from a modal that displays a full [Filament table](../docs/4.x/tables/overview) — ideal for relationships with many records that need advanced [search](../docs/4.x/tables/columns/overview#searching) and [filtering](../docs/4.x/tables/filters/overview).
 
-### Using JavaScript
+### Using JavaScript to minimise network requests
 
 #### `hiddenJs()` and `visibleJs()`
 
-You can conditionally `hide` or `show` fields using the [hidden()]() or [visible()]() methods with a PHP callback.
+You can conditionally hide or show fields using the [hidden()]() or [visible()]() methods with a PHP callback.
 However, this triggers a full schema reload and a network request whenever the reactive field changes — potentially affecting performance.
 
 For better efficiency, use [`hiddenJs()` or `visibleJs()`](../docs/4.x/forms/overview#hiding-a-field-using-javascript) instead. These methods evaluate JavaScript expressions on the client side, allowing you to toggle field visibility instantly without reloading the schema.
