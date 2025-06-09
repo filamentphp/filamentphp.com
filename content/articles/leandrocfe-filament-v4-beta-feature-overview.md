@@ -278,6 +278,14 @@ You can place both regular actions and [bulk actions](../docs/4.x/tables/actions
 
 This is useful for actions like "create", which are not tied to a specific row, or for making bulk actions more visible and accessible in the table’s toolbar.
 
+### Empty relationships with select filters
+
+You can now use the [`hasEmptyOption()`](../docs/4.x/tables/filters/select#filtering-empty-relationships) method to include a "None" option that filters for records without a related model. You can customize the label of this option using `emptyRelationshipOptionLabel()`.
+
+### Column headers now visible on empty tables
+
+Table headers are now shown even when no records are present, enhancing the user experience — especially when using column-based search and filters.
+
 ## Actions
 
 ### Unified actions
