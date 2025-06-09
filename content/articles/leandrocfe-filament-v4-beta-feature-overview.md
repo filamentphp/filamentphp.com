@@ -138,6 +138,12 @@ A schema is represented by a `Filament\Schemas\Schema` object, and you can pass 
 
 For a full list of available components, see the [Schemas documentation](../docs/4.x/schemas/overview#available-components).
 
+### Vertical tabs
+
+[Tabs](../docs/4.x/schemas/tabs#introduction) help organize long or complex schemas by grouping components into separate sections, reducing visual clutter and making forms easier to navigate.
+
+You can now switch to a [vertical tab](../docs/4.x/schemas/tabs#using-vertical-tabs) layout by calling the `vertical()` method.
+
 ## Forms
 
 ### Rich Editor
