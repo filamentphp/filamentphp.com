@@ -12,7 +12,9 @@ versions: [3,4]
 
 **Filament v4 Beta** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. This article highlights what's new and how these changes can improve your workflow.
 
-> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Please report any issues you encounter on [GitHub](https://github.com/filamentphp/filament/issues/new).
+To upgrade your app to Filament v4 beta, please read the [upgrade guide](../docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](../docs/4.x/introduction/installation).
+
+> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Breaking changes may be introduced to releases during the beta period. Please report any issues you encounter on [GitHub](https://github.com/filamentphp/filament/issues/new).
 
 > Looking for the current stable version? Visit the [3.x documentation](../docs/3.x).
 
@@ -88,7 +90,7 @@ To keep your Filament code [clean and maintainable](../docs/4.x/resources/code-q
 
 ### Preserving data when creating another
 
-By default, the [Create and create another](../docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [preserveFormDataWhenCreatingAnother()](../docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
+By default, the [Create and create another](../docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [`preserveFormDataWhenCreatingAnother()`](../docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
 
 When using the Create action, you can use the [`preserveFormDataWhenCreatingAnother()`](../docs/4.x/actions/create#preserving-data-when-creating-another) method.
 
@@ -206,14 +208,14 @@ The [ModalTableSelect](../docs/4.x/forms/select#selecting-options-from-a-table-i
 
 #### `hiddenJs()` and `visibleJs()`
 
-You can conditionally hide or show fields using the [hidden()](../docs/4.x/forms/overview#hiding-a-field) or [visible()](../docs/4.x/forms/overview#hiding-a-field) methods with a PHP callback.
+You can conditionally hide or show fields using the [`hidden()`](../docs/4.x/forms/overview#hiding-a-field) or [`visible()`](../docs/4.x/forms/overview#hiding-a-field) methods with a PHP callback.
 However, this triggers a full schema reload and a network request whenever the reactive field changes — potentially affecting performance.
 
 For better efficiency, use [`hiddenJs()` or `visibleJs()`](../docs/4.x/forms/overview#hiding-a-field-using-javascript) instead. These methods evaluate JavaScript expressions on the client side, allowing you to toggle field visibility instantly without reloading the schema.
 
 #### `JsContent`
 
-You can dynamically set text content — like [labels](../docs/4.x/forms/overview#setting-a-fields-label) or [belowContent](../docs/4.x/forms/overview#adding-extra-content-to-a-field) — using [`JavaScript` by passing a `JsContent` object](../docs/4.x/forms/overview#using-javascript-to-determine-text-content).
+You can dynamically set text content — like [labels](../docs/4.x/forms/overview#setting-a-fields-label) or [`belowContent()`](../docs/4.x/forms/overview#adding-extra-content-to-a-field) — using [`JavaScript` by passing a `JsContent` object](../docs/4.x/forms/overview#using-javascript-to-determine-text-content).
 This allows methods like `label()` and `Text::make()` to render `HTML` based on field values.
 
 Inside the `JsContent`, you can use `$state` and `$get` to access the current field's state or other fields in the schema, enabling real-time, reactive text updates without server interaction.
@@ -229,7 +231,7 @@ In this JavaScript context, you can use `$state`, `$get()`, and `$set()` to inte
 
 ### Fusing fields into a group
 
-The [FusedGroup](../docs/4.x/forms/overview#fusing-fields-together-into-a-group) component lets you visually combine multiple fields into a single, compact group. 
+The [`FusedGroup`](../docs/4.x/forms/overview#fusing-fields-together-into-a-group) component lets you visually combine multiple fields into a single, compact group. 
 It's best used with compatible field types like [text inputs](../docs/4.x/forms/text-input), [selects](../docs/4.x/forms/select), [date-time pickers](../docs/4.x/forms/date-time-picker) and [color pickers](../docs/4.x/forms/color-picker).
 
 ### Adding extra content to a field
@@ -243,7 +245,7 @@ Available slots include:
 
 ### Partial rendering
 
-By default, using [live()](../docs/4.x/forms/overview#the-basics-of-reactivity) on a field re-renders the entire schema when its value changes.
+By default, using [`live()`](../docs/4.x/forms/overview#the-basics-of-reactivity) on a field re-renders the entire schema when its value changes.
 
 Filament now offers [more efficient options](../docs/4.x/forms/overview#field-partial-rendering):
 - `partiallyRenderComponentsAfterStateUpdated()` re-renders only specified fields after state updates.
@@ -347,8 +349,7 @@ You can now use the [`rateLimit()`](../docs/4.x/actions/overview#rate-limiting-a
 
 #### Importing relationships
 
-[BelongsToMany](../docs/4.x/actions/import#importing-relationships) relationships can now be imported via actions.
-
+[`BelongsToMany`](../docs/4.x/actions/import#importing-relationships) relationships can now be imported via actions.
 
 ### Export action
 
@@ -365,7 +366,7 @@ You can now configure the [OpenSpout XLSX writer](https://github.com/openspout/o
 
 ### Tooltips for disabled buttons
 
-You can now display `tooltips` on [disabled buttons](../docs/4.x/actions/overview#disabling-a-button).
+You can now display `tooltip()`s on [disabled buttons](../docs/4.x/actions/overview#disabling-a-button).
 
 ### Testing actions
 
@@ -389,7 +390,7 @@ Dashboard widgets now support the full responsive [grid layout system](../docs/4
 
 [Multi-tenancy](../docs/4.x/users/tenancy) now applies global scopes and lifecycle events automatically.
 
-### unique and exists validation
+### `unique` and `exists` validation
 
 Laravel's default `unique` and `exists` validation rules bypass Eloquent models, meaning they ignore global scopes like those used in multi-tenancy. This can lead to false validation failures across tenants.
 
@@ -421,7 +422,7 @@ This will throw an exception if a policy or method is missing, ensuring all acce
 
 When using the `profile()` feature with [`emailChangeVerification()`](../docs/4.x/users/overview#email-change-verification), users must verify their new email address before it becomes active. A verification link is sent to the new email (valid for 60 minutes), and the address won't update in the database until it's clicked. For added security, a cancellation link is also sent to the user's old email to block unauthorized changes.
 
-### Customizing error notifications
+### Error notifications
 
 You can now customize how [error messages appear](../docs/4.x/panel-configuration#configuring-error-notifications) in your Filament panel.
 
@@ -438,6 +439,8 @@ This gives you full control over the user experience when something goes wrong.
 
 Filament v4 Beta brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain. Since it's still in `beta`, now is the perfect time to explore the new features and share feedback. 
 If you need a `stable` version, refer to the [3.x documentation](../docs/3.x).
+
+To upgrade your app to Filament v4 beta, please read the [upgrade guide](../docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](../docs/4.x/introduction/installation).
 
 Special thanks to [Dan Harrin](https://github.com/danharrin) for his incredible work on Filament v4!
 
