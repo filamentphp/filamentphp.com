@@ -64,14 +64,9 @@ The new `FilamentTimezone` facade lets you set a default timezone for Filament g
 
 ### "ISO" formats
 
-Dates and times now support formatting using standard "ISO" formats.
+Dates and times now support formatting using standard "ISO" formats in the `TextColumn` and `TextEntry` components.
 
 ## Resources
-
-### Singular resources
-
-[Singular resources](../docs/4.x/resources/singular) are ideal when you don't need a full table of records—just a single form for managing one item. If the record doesn't exist, it's created when the form is first submitted. If it does, it's loaded automatically on page load and updated when submitted.
-This approach works well for pages like a `Homepage` editor, `Settings` screen, or a user `Profile.`
 
 ### Nested resources
 
@@ -260,14 +255,14 @@ It uses [Phiki](https://github.com/phikiphp/phiki) for code highlighting on the 
 
 ## Tables
 
-### Tables with static data
+### Tables with custom data
 
 [Filament tables](../docs/4.x/tables) are typically backed by [Eloquent models](), but that's not always ideal. 
-When your data isn't stored in a database — or you want to render external or computed data — you can now use [static data](../docs/4.x/tables/static-data) as the data source.
+When your data isn't stored in a database — or you want to render external or computed data — you can now use [custom data](../docs/4.x/tables/custom-data) as the data source.
 
-To use [static data](../docs/4.x/tables/static-data), pass an `array` to the `records()` method. This lets you render simple datasets without a database, while still supporting features like [columns](../docs/4.x/tables/static-data#columns), [sorting](../docs/4.x/tables/static-data#sorting), [searching](../docs/4.x/tables/static-data#searching), [pagination](../docs/4.x/tables/static-data#pagination), and [actions](../docs/4.x/tables/static-data#actions).
+To use [custom data](../docs/4.x/tables/custom-data), pass an `array` to the `records()` method. This lets you render simple datasets without a database, while still supporting features like [columns](../docs/4.x/tables/custom-data#columns), [sorting](../docs/4.x/tables/custom-data#sorting), [searching](../docs/4.x/tables/custom-data#searching), [pagination](../docs/4.x/tables/custom-data#pagination), and [actions](../docs/4.x/tables/custom-data#actions).
 
-You can also [fetch data from external APIs](../docs/4.x/tables/static-data#using-an-external-api-as-a-table-data-source). For example, use Laravel's HTTP client to pull data from a REST API and return it as an `array` in `records()`.
+You can also [fetch data from external APIs](../docs/4.x/tables/custom-data#using-an-external-api-as-a-table-data-source). For example, use Laravel's HTTP client to pull data from a REST API and return it as an `array` in `records()`.
 This is useful for integrating third-party services or remote backends.
 
 > When working with APIs, make sure to implement proper authentication, error handling, and rate limiting.
