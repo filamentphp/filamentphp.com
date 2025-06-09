@@ -9,10 +9,8 @@ versions: [3,4]
 ---
 
 ## Introduction
-    
-Filament v4 Beta is here — and it's packed with powerful new features that give developers more flexibility, improved architecture, and a smoother UI-building experience.
 
-This article walks you through the key updates and how they can improve your workflow in Filament v4.
+**Filament v4 Beta** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. This article highlights what's new and how these changes can improve your workflow.
 
 > You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Please report any issues you encounter on [GitHub]().
 
