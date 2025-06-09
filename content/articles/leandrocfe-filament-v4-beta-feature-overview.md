@@ -12,7 +12,7 @@ versions: [3,4]
 
 **Filament v4 Beta** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. This article highlights what's new and how these changes can improve your workflow.
 
-> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Please report any issues you encounter on [GitHub]().
+> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Please report any issues you encounter on [GitHub](https://github.com/filamentphp/filament/issues/new).
 
 > Looking for the current stable version? Visit the [3.x documentation](../docs/3.x).
 
