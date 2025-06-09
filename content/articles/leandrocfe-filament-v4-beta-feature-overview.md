@@ -270,14 +270,6 @@ This is useful for integrating third-party services or remote backends.
 
 > When working with APIs, make sure to implement proper authentication, error handling, and rate limiting.
 
-### Toolbar actions
-
-Tables now support a dedicated [toolbar actions](../docs/4.x/tables/actions#toolbar-actions) area.
-
-You can place both regular actions and [bulk actions](../docs/4.x/tables/actions#bulk-actions) in the [`toolbarActions()`](../docs/4.x/tables/actions#toolbar-actions) method.
-
-This is useful for actions like "create", which are not tied to a specific row, or for making bulk actions more visible and accessible in the table’s toolbar.
-
 ### Empty relationships with select filters
 
 You can now use the [`hasEmptyOption()`](../docs/4.x/tables/filters/select#filtering-empty-relationships) method to include a "None" option that filters for records without a related model. You can customize the label of this option using `emptyRelationshipOptionLabel()`.
@@ -285,6 +277,10 @@ You can now use the [`hasEmptyOption()`](../docs/4.x/tables/filters/select#filte
 ### Column headers now visible on empty tables
 
 Table headers are now shown even when no records are present, enhancing the user experience — especially when using column-based search and filters.
+
+### Bulk actions enhancements
+
+See the [bulk actions section](#bulk-actions) of this article.
 
 ## Actions
 
@@ -294,9 +290,70 @@ Table headers are now shown even when no records are present, enhancing the user
 
 Instead of having separate `Action` classes for each context, all actions now use a single `Filament\Actions` namespace.
 
-### Improving bulk action performance
+### Toolbar actions
+
+Tables now support a dedicated [toolbar actions](../docs/4.x/tables/actions#toolbar-actions) area.
+
+You can place both regular actions and [bulk actions](../docs/4.x/tables/actions#bulk-actions) in the [`toolbarActions()`](../docs/4.x/tables/actions#toolbar-actions) method.
+
+This is useful for actions like "create", which are not tied to a specific row, or for making bulk actions more visible and accessible in the table’s toolbar.
+
+### Bulk actions
+
+#### Improving bulk action performance
 
 Bulk actions now support the `chunkSelectedRecords()` method, allowing selected records to be processed in smaller batches instead of loading everything into memory at once — improving performance and reducing memory usage with large datasets.
+
+#### Authorizing bulk actions
+
+You can now use [`authorizeIndividualRecords()`](../docs/4.x/tables/actions#authorizing-bulk-actions) to check a policy method for each selected record in a [bulk action](../docs/4.x/tables/actions#bulk-actions).
+
+Only the records the user is authorized to act on will be included in the `$records` array.
+
+#### Bulk action notifications
+
+You can now [display a notification](../docs/4.x/tables/actions#bulk-action-notifications) after a [bulk action](../docs/4.x/tables/actions#bulk-actions) completes to inform users of the outcome — especially useful when some records are skipped due to authorization.
+
+- Use `successNotificationTitle()` when all records are processed successfully.
+- Use `failureNotificationTitle()` to show a message when some or all records fail.
+
+Both methods can accept a function to display the number of successful and failed records using `$successCount` and `$failureCount`.
+
+### Rate limiting actions
+
+You can now use the [`rateLimit()`](../docs/4.x/actions/overview#rate-limiting-actions) method to limit how often an action can be triggered — per user IP, per minute.
+
+### Authorization
+
+[Authorization messages](../docs/4.x/actions/overview#authorization-using-a-policy) can now be shown in action `tooltips` and `notifications`.
+
+### Import action
+
+#### Importing relationships
+
+[BelongsToMany](../docs/4.x/actions/import#importing-relationships) relationships can now be imported via actions.
+
+
+### Export action
+
+#### Styling XLSX columns
+
+You can now customize the styling of individual cells in `XLSX` exports using the [`makeXlsxRow()` and `makeXlsxHeaderRow()`](..docs/4.x/actions/export#styling-xlsx-columns) methods in your exporter class.
+
+#### Customizing the XLSX writer
+
+You can now configure the [OpenSpout XLSX writer](https://github.com/openspout/openspout/blob/4.x/docs/documentation.md#column-widths) in your exporter class:
+
+- Use [`getXlsxWriterOptions()`](../docs/4.x/actions/export#customizing-the-xlsx-writer) to set export options like column widths.
+- Override [`configureXlsxWriterBeforeClosing()`](../docs/4.x/actions/export#customizing-the-xlsx-writer) to modify the writer instance before it's finalized.
+
+### Tooltips for disabled buttons
+
+You can now display `tooltips` on [disabled buttons](../docs/4.x/actions/overview#disabling-a-button).
+
+### Testing actions
+
+Testing actions in v4 is now simpler and more streamlined. See the [testing actions section](../docs/4.x/testing/testing-actions) for full details.
 
 ## Widgets
 
