@@ -394,6 +394,31 @@ You can:
 
 This gives you full control over the user experience when something goes wrong.
 
+## And there's more…
+
+### Panels
+
+- Email change verification is now built-in.
+- Resource classes are now generated inside their own namespaces for better organisation.
+- Multi-tenancy now uses automatic global scopes and lifecycle events.
+- Dashboard widgets now support the full responsive grid system.
+- Chart widgets can now be filtered using a custom form.
+
+### Schemas
+
+- Container queries can now be used in schema grids.
+
+### Forms
+
+- Form fields now automatically cast state to the correct data format.
+> For example, if you have a Select for an enum field, the state of that select is now an enum object instead of a string — even when using `$state` or `$get()`.
+
+### Actions
+
+- Prebuilt bulk actions can now run without fetching and hydrating all models.
+- Deselected records are now tracked when using "Select all".
+> This improves performance by minimizing how many record keys need to be stored.
+
 ## Conclusion
 
 Filament v4 Beta brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain. Since it's still in `beta`, now is the perfect time to explore the new features and share feedback. 
