@@ -28,6 +28,17 @@ Rendering and interaction performance in Filament has significantly improved, es
 [Tailwind CSS v4](https://tailwindcss.com) is a major update focused on performance, flexibility, and modern web standards. It features a reworked configuration system, improved customization, and faster builds—making it easier to tailor your design system at scale.
 For the latest features and release notes, visit the [Tailwind CSS blog](https://tailwindcss.com/blog).
 
+[Tailwind CSS v4](https://tailwindcss.com) modernizes its color system by [switching from rgb to oklch](https://tailwindcss.com/blog/tailwindcss-v4#modernized-p3-color-palette), using the wider P3 color gamut to produce more vivid, accurate colors beyond the limits of `sRGB`. 
+Since Filament v4 is built on Tailwind v4, it also adopts `oklch` for its theming system.
+
+### Semantic headings and dynamic color systems
+
+Heading levels are now generated dynamically to maintain a proper semantic `HTML` structure and improve accessibility.
+
+Color palettes are now more accurately generated from a single base color.
+
+Text colors are dynamically calculated based on the background color to ensure accessible contrast and improved readability.
+
 ### Authentication
 
 #### [Multi-factor authentication](../docs/4.x/users/multi-factor-authentication)
@@ -48,6 +59,10 @@ Each icon is available in solid and outlined variants (`Heroicon::Star` vs. `Her
 ### Setting a default timezone with FilamentTimezone
 
 The new `FilamentTimezone` facade lets you set a default timezone for Filament globally via the `FilamentTimezone::set()` method, simplifying timezone management across components.
+
+### "ISO" formats
+
+Dates and times now support formatting using standard "ISO" formats.
 
 ## Resources
 
