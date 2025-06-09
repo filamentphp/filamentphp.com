@@ -19,14 +19,16 @@ versions: [3,4]
 ## General
 
 ### Performance
-Rendering and interaction performance in Filament has significantly improved, especially for large tables.
+
+Rendering and interaction performance in Filament has significantly improved, especially for large tables. Internally, many Blade templates have been optimized to reduce the number of views that are being rendered. By utilizing existing PHP objects to render HTML instead of including new files, Filament v4 reduces the number of files that need to be loaded, improving performance. The size of Blade views has also been reduced by extracting Tailwind CSS classes into dedicated classes, which are then used in the Blade templates. This reduces the amount of HTML that needs to be rendered, resulting in faster page loads and a smaller response size.
 
 ### Filament v4 now uses Tailwind CSS v4
 
 [Tailwind CSS v4](https://tailwindcss.com) is a major update focused on performance, flexibility, and modern web standards. It features a reworked configuration system, improved customization, and faster builds—making it easier to tailor your design system at scale.
 For the latest features and release notes, visit the [Tailwind CSS blog](https://tailwindcss.com/blog).
 
-[Tailwind CSS v4](https://tailwindcss.com) modernizes its color system by [switching from rgb to oklch](https://tailwindcss.com/blog/tailwindcss-v4#modernized-p3-color-palette), using the wider P3 color gamut to produce more vivid, accurate colors beyond the limits of `sRGB`. 
+[Tailwind CSS v4](https://tailwindcss.com) modernizes its color system by [switching from `rgb` to `oklch`](https://tailwindcss.com/blog/tailwindcss-v4#modernized-p3-color-palette), using the wider P3 color gamut to produce more vivid, accurate colors beyond the limits of `sRGB`. 
+
 Since Filament v4 is built on Tailwind v4, it also adopts `oklch` for its theming system.
 
 ### Semantic headings and dynamic color systems
