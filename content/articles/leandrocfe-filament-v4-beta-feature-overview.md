@@ -70,9 +70,13 @@ Dates and times now support formatting using standard "ISO" formats in the `Text
 
 ### Nested resources
 
-[Relation managers]() and [relation pages]() make it easy to display and manage related records within a resource.
+[Relation managers](../docs/4.x/resources/managing-relationships#creating-a-relation-manager) and [relation pages](../docs/4.x/resources/managing-relationships#relation-pages) make it easy to display and manage related records within a resource.
 For example, in a `CourseResource`, you might use a relation manager or page to manage the lessons that belong to a course. This lets you create and edit lessons directly from a table using modals.
 But if lessons are more complex, modals might not be enough. In that case, you can give lessons their own resource with full-page create and edit views — this is called a [nested resource](../docs/4.x/resources/nesting).
+
+### Resource class organization
+
+[Resource classes](../docs/4.x/resources/overview#creating-a-resource) are now generated within their own dedicated namespaces, making your codebase more organized.
 
 ### Code quality tips
 
@@ -85,6 +89,8 @@ To keep your Filament code [clean and maintainable](../docs/4.x/resources/code-q
 ### Preserving data when creating another
 
 By default, the [Create and create another](../docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [preserveFormDataWhenCreatingAnother()](../docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
+
+When using the Create action, you can use the [`preserveFormDataWhenCreatingAnother()`](../docs/4.x/actions/create#preserving-data-when-creating-another) method.
 
 ### Customizing page content
 
@@ -138,6 +144,10 @@ For a full list of available components, see the [Schemas documentation](../docs
 [Tabs](../docs/4.x/schemas/tabs#introduction) help organize long or complex schemas by grouping components into separate sections, reducing visual clutter and making forms easier to navigate.
 
 You can now switch to a [vertical tab](../docs/4.x/schemas/tabs#using-vertical-tabs) layout by calling the `vertical()` method.
+
+### Container queries
+
+In addition to traditional breakpoints based on the size of the viewport, you can also use [container queries](../docs/4.x/schemas/layouts#using-container-queries) to create responsive layouts based on the size of a parent container.
 
 ## Forms
 
@@ -196,7 +206,7 @@ The [ModalTableSelect](../docs/4.x/forms/select#selecting-options-from-a-table-i
 
 #### `hiddenJs()` and `visibleJs()`
 
-You can conditionally hide or show fields using the [hidden()]() or [visible()]() methods with a PHP callback.
+You can conditionally hide or show fields using the [hidden()](../docs/4.x/forms/overview#hiding-a-field) or [visible()](../docs/4.x/forms/overview#hiding-a-field) methods with a PHP callback.
 However, this triggers a full schema reload and a network request whenever the reactive field changes — potentially affecting performance.
 
 For better efficiency, use [`hiddenJs()` or `visibleJs()`](../docs/4.x/forms/overview#hiding-a-field-using-javascript) instead. These methods evaluate JavaScript expressions on the client side, allowing you to toggle field visibility instantly without reloading the schema.
@@ -242,6 +252,11 @@ Filament now offers [more efficient options](../docs/4.x/forms/overview#field-pa
 
 These tools help optimize field interactions, especially when only part of the form needs to react to changes.
 
+### Improved type casting for form field state
+
+Form field state is now automatically cast to the correct data type. For example, when using a [Select](../docs/4.x/forms/select) field bound to an enum, the state will return an instance of the enum — rather than a raw string—even when accessed via `$state` or `$get()`.
+This improves type consistency and reduces the need for manual casting in your logic.
+
 ## Infolists
 
 ### Code entry
@@ -253,7 +268,7 @@ It uses [Phiki](https://github.com/phikiphp/phiki) for code highlighting on the 
 
 ### Tables with custom data
 
-[Filament tables](../docs/4.x/tables) are typically backed by [Eloquent models](), but that's not always ideal. 
+[Filament tables](../docs/4.x/tables) are typically backed by [Eloquent models](https://laravel.com/docs/eloquent), but that's not always ideal. 
 When your data isn't stored in a database — or you want to render external or computed data — you can now use [custom data](../docs/4.x/tables/custom-data) as the data source.
 
 To use [custom data](../docs/4.x/tables/custom-data), pass an `array` to the `records()` method. This lets you render simple datasets without a database, while still supporting features like [columns](../docs/4.x/tables/custom-data#columns), [sorting](../docs/4.x/tables/custom-data#sorting), [searching](../docs/4.x/tables/custom-data#searching), [pagination](../docs/4.x/tables/custom-data#pagination), and [actions](../docs/4.x/tables/custom-data#actions).
@@ -312,6 +327,14 @@ You can now [display a notification](../docs/4.x/tables/actions#bulk-action-noti
 
 Both methods can accept a function to display the number of successful and failed records using `$successCount` and `$failureCount`.
 
+#### Prebuilt bulk actions
+
+Prebuilt bulk actions can now run without fetching and hydrating all selected models, significantly boosting performance for large datasets.
+
+#### Deselected records
+
+Deselected records are now tracked when using "Select all". This improves performance by minimizing how many record keys need to be stored.
+
 ### Rate limiting actions
 
 You can now use the [`rateLimit()`](../docs/4.x/actions/overview#rate-limiting-actions) method to limit how often an action can be triggered — per user IP, per minute.
@@ -354,6 +377,24 @@ Testing actions in v4 is now simpler and more streamlined. See the [testing acti
 
 Charts can now be made collapsible by setting the `$isCollapsible` property to `true` on the widget class.
 
+### Custom filters for chart widgets
+
+[Chart widgets](../docs/4.x/widgets/charts) now support custom filter schemas using the `HasFiltersSchema` trait. You can define filters with `filtersSchema()` using [schema components](../docs/4.x/schemas/overview), and access the submitted filter values via the `$this->filters` property.
+
+## Dashboard
+
+Dashboard widgets now support the full responsive [grid layout system](../docs/4.x/widgets/overview#customizing-the-widgets-grid).
+
+## Multi-tenancy
+
+[Multi-tenancy](../docs/4.x/users/tenancy) now applies global scopes and lifecycle events automatically.
+
+### unique and exists validation
+
+Laravel's default `unique` and `exists` validation rules bypass Eloquent models, meaning they ignore global scopes like those used in multi-tenancy. This can lead to false validation failures across tenants.
+
+To ensure proper data isolation between tenants, you can use [`scopedUnique()` and `scopedExists()`](../docs/4.x/users/tenancy#unique-and-exists-validation) methods.
+
 ## Panel configuration
 
 ### Inter font now loaded locally
@@ -376,6 +417,10 @@ By default, Filament allows access to a resource if no policy or policy method e
 To enforce stricter security, you can enable strict authorization mode using [`strictAuthorization()`](../docs/4.x/panel-configuration#strict-authorization-mode).
 This will throw an exception if a policy or method is missing, ensuring all access is explicitly defined.
 
+### Email change verification
+
+When using the `profile()` feature with [`emailChangeVerification()`](../docs/4.x/users/overview#email-change-verification), users must verify their new email address before it becomes active. A verification link is sent to the new email (valid for 60 minutes), and the address won't update in the database until it's clicked. For added security, a cancellation link is also sent to the user's old email to block unauthorized changes.
+
 ### Customizing error notifications
 
 You can now customize how [error messages appear](../docs/4.x/panel-configuration#configuring-error-notifications) in your Filament panel.
@@ -389,31 +434,6 @@ You can:
 
 This gives you full control over the user experience when something goes wrong.
 
-## And there's more…
-
-### Panels
-
-- Email change verification is now built-in.
-- Resource classes are now generated inside their own namespaces for better organisation.
-- Multi-tenancy now uses automatic global scopes and lifecycle events.
-- Dashboard widgets now support the full responsive grid system.
-- Chart widgets can now be filtered using a custom form.
-
-### Schemas
-
-- Container queries can now be used in schema grids.
-
-### Forms
-
-- Form fields now automatically cast state to the correct data format.
-> For example, if you have a Select for an enum field, the state of that select is now an enum object instead of a string — even when using `$state` or `$get()`.
-
-### Actions
-
-- Prebuilt bulk actions can now run without fetching and hydrating all models.
-- Deselected records are now tracked when using "Select all".
-> This improves performance by minimizing how many record keys need to be stored.
-
 ## Conclusion
 
 Filament v4 Beta brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain. Since it's still in `beta`, now is the perfect time to explore the new features and share feedback. 
@@ -421,4 +441,4 @@ If you need a `stable` version, refer to the [3.x documentation](../docs/3.x).
 
 Special thanks to [Dan Harrin](https://github.com/danharrin) for his incredible work on Filament v4!
 
-This article was written by [Leandro Ferreira](https://github.com/leandrocfe), with contributions from [André Domingues](https://github.com/andrefelipe18).
+This article was written by [Leandro Ferreira](https://github.com/leandrocfe), with contributions from [André Domingues](https://github.com/andrefelipe18) and reviewed by [Dan Harrin](https://github.com/danharrin).
