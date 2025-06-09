@@ -37,11 +37,11 @@ Heading levels are now generated dynamically to maintain a proper semantic `HTML
 
 Color palettes are now more accurately generated from a single base color.
 
-Text colors are dynamically calculated based on the background color to ensure accessible contrast and improved readability.
+Text colors are dynamically calculated based on the background color of elements to ensure more accessible contrast ratios and to improve readability.
 
 ### Authentication
 
-#### [Multi-factor authentication](../docs/4.x/users/multi-factor-authentication)
+#### Multi-factor authentication
 
 [Multi-factor authentication (MFA)](../docs/4.x/users/multi-factor-authentication) in Filament adds an extra security step beyond the default email and password login.
 
@@ -49,16 +49,18 @@ Filament supports two built-in MFA methods:
 - [App authentication](../docs/4.x/users/multi-factor-authentication#app-authentication) using a TOTP app like Google Authenticator, Authy, or Microsoft Authenticator apps.
 - [Email authentication](../docs/4.x/users/multi-factor-authentication#email-authentication) which sends a one-time code to the user’s email.
 
+Additional custom MFA providers can be registered to extend Filament's authentication capabilities.
+
 ### Heroicons
 
-Filament includes the [Heroicons](https://heroicons.com/) icon set by default, so you can use icons without installing anything extra.
-The [Heroicon enum class](../docs/4.x/styling/icons#using-heroicons-in-filament) provides IDE autocompletion to help you quickly find the icon you need.
+Filament includes the [Heroicons](https://heroicons.com/) icon set, so you can use icons without installing anything extra.
+The new [Heroicon enum class](../docs/4.x/styling/icons#using-heroicons-in-filament) provides IDE autocompletion to help you quickly find the icon you need.
 
 Each icon is available in solid and outlined variants (`Heroicon::Star` vs. `Heroicon::OutlinedStar`). Filament automatically selects the appropriate size (`16px`, `20px`, or `24px`) based on context.
 
-### Setting a default timezone with FilamentTimezone
+### Setting a default timezone with `FilamentTimezone`
 
-The new `FilamentTimezone` facade lets you set a default timezone for Filament globally via the `FilamentTimezone::set()` method, simplifying timezone management across components.
+The new `FilamentTimezone` facade lets you set a default timezone for Filament globally via the `FilamentTimezone::set()` method, simplifying the default timezone across components. This lets you control multiple components at once, including the `DateTimePicker`, `TextColumn`, and `TextEntry`.
 
 ### "ISO" formats
 
