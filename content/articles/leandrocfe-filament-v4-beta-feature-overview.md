@@ -309,7 +309,7 @@ See the [bulk actions section](#bulk-actions) of this article.
 
 ### Reordering Table Columns
 
-![Reordering Table Columns](https://filamentphp.test/docs/4.x/images/light/tables/columns/column-manager-reorderable.jpg)
+![Reordering Table Columns](https://filamentphp.com/docs/4.x/images/light/tables/columns/column-manager-reorderable.jpg)
 
 Filament now supports [reorderable table columns](https://filamentphp.com/docs/4.x/tables/columns/overview#reordering-columns) using the `reorderableColumns()` method. This allows users to drag and rearrange visible columns for a personalized view.
 
