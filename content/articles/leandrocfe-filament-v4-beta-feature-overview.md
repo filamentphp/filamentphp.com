@@ -145,6 +145,8 @@ If you need to refresh them — for example, after a setting or permission chang
 They let you build user interfaces in PHP using structured configuration objects—no need to write `HTML` or `JavaScript` manually.
 These schemas define how your UI looks and behaves, representing components such as [forms fields](https://filamentphp.com/docs/4.x/forms/overview), [infolist entries](https://filamentphp.com/docs/4.x/infolists/overview), [layout components](https://filamentphp.com/docs/4.x/schemas/layouts) and [prime components](https://filamentphp.com/docs/4.x/schemas/primes).
 
+![Schemas](https://filamentphp.com/docs/4.x/images/light/schemas/overview/example.jpg)
+
 Every Filament UI component — whether it's a form field, a description list, or a static element like text or buttons — is configured through a [schema](https://filamentphp.com/docs/4.x/schemas/overview).
 Components are modular, nestable, and reusable, making your interfaces consistent and easy to maintain.
 
@@ -158,6 +160,8 @@ For a full list of available components, see the [Schemas documentation](https:/
 
 You can now switch to a [vertical tab](https://filamentphp.com/docs/4.x/schemas/tabs#using-vertical-tabs) layout by calling the `vertical()` method.
 
+![Vertical tabs](https://filamentphp.com/docs/4.x/images/light/schemas/layout/tabs/simple.jpg)
+
 ### Container queries
 
 In addition to traditional breakpoints based on the size of the viewport, you can also use [container queries](https://filamentphp.com/docs/4.x/schemas/layouts#using-container-queries) to create responsive layouts based on the size of a parent container.
@@ -167,6 +171,8 @@ In addition to traditional breakpoints based on the size of the viewport, you ca
 ### Rich editor
 
 [Rich editor](https://filamentphp.com/docs/4.x/forms/rich-editor) is now using [Tiptap](https://tiptap.dev/), a modern, headless, and highly extensible open source editor framework.
+
+![Rich editor](https://filamentphp.com/docs/4.x/images/light/forms/fields/rich-editor/simple.jpg)
 
 #### Storing content as HTML or JSON
 
@@ -194,15 +200,21 @@ You can [extend the Rich editor](https://filamentphp.com/docs/4.x/forms/rich-edi
 
 The [Slider component](https://filamentphp.com/docs/4.x/forms/slider) lets users select one or more numeric values by dragging a handle along a track — ideal for inputs like ranges, ratings, or percentages.
 
+![Slider](https://filamentphp.com/docs/4.x/images/light/forms/fields/slider/simple.jpg)
+
 ### Code editor
 
 The [code editor component](https://filamentphp.com/docs/4.x/forms/code-editor) lets users write and edit code directly in the interface.
 It supports common languages including `HTML`, `CSS`, `JavaScript`, `PHP`, and `JSON`.
 
+![Code editor](https://filamentphp.com/docs/4.x/images/light/forms/fields/code-editor/language.jpg)
+
 ### Table repeaters
 
 [Table repeaters](https://filamentphp.com/docs/4.x/forms/repeater#table-repeaters) display [repeater](https://filamentphp.com/docs/4.x/forms/repeater) items in a table layout using defined `columns`.
 You can configure these columns with the `table()` method and `TableColumn` objects, which map to fields in the repeater's schema.
+
+![Table repeaters](https://filamentphp.com/docs/4.x/images/light/forms/fields/repeater/table.jpg)
 
 Each column can be customized:
 
@@ -247,9 +259,13 @@ In this JavaScript context, you can use `$state`, `$get()`, and `$set()` to inte
 The [`FusedGroup`](https://filamentphp.com/docs/4.x/forms/overview#fusing-fields-together-into-a-group) component lets you visually combine multiple fields into a single, compact group.
 It's best used with compatible field types like [text inputs](https://filamentphp.com/docs/4.x/forms/text-input), [selects](https://filamentphp.com/docs/4.x/forms/select), [date-time pickers](https://filamentphp.com/docs/4.x/forms/date-time-picker) and [color pickers](https://filamentphp.com/docs/4.x/forms/color-picker).
 
+![Fused group](https://filamentphp.com/docs/4.x/images/light/forms/fields/fused.jpg)
+
 ### Adding extra content to a field
 
 Fields contain [multiple slots](https://filamentphp.com/docs/4.x/forms/overview#adding-extra-content-to-a-field) where content can be inserted in a child schema. Slots can accept text, [any schema components](https://filamentphp.com/docs/4.x/schemas/overview), [actions](https://filamentphp.com/docs/4.x/actions/overview), or [action groups](https://filamentphp.com/docs/4.x/actions/grouping-actions) — typically with [prime components](https://filamentphp.com/docs/4.x/schemas/primes).
+
+![Below content](https://filamentphp.com/docs/4.x/images/light/forms/fields/below-content/text.jpg)
 
 Available slots include:
 
@@ -280,6 +296,8 @@ This improves type consistency and reduces the need for manual casting in your l
 
 [Code entry](https://filamentphp.com/docs/4.x/infolists/code-entry) allows you to present a highlighted code snippet in your [infolist](https://filamentphp.com/docs/4.x/infolists).
 It uses [Phiki](https://github.com/phikiphp/phiki) for code highlighting on the server.
+
+![Code entry](https://filamentphp.com/docs/4.x/images/light/infolists/entries/code/simple.jpg)
 
 ## Tables
 
@@ -328,6 +346,8 @@ Instead of having separate `Action` classes for each context, all actions now us
 ### Toolbar actions
 
 Tables now support a dedicated [toolbar actions](https://filamentphp.com/docs/4.x/tables/actions#toolbar-actions) area.
+
+![Toolbar actions](https://filamentphp.com/docs/4.x/images/light/tables/actions/toolbar.jpg)
 
 You can place both regular actions and [bulk actions](https://filamentphp.com/docs/4.x/tables/actions#bulk-actions) in the [`toolbarActions()`](https://filamentphp.com/docs/4.x/tables/actions#toolbar-actions) method.
 
@@ -380,7 +400,7 @@ You can now use the [`rateLimit()`](https://filamentphp.com/docs/4.x/actions/ove
 
 #### Styling XLSX columns
 
-You can now customize the styling of individual cells in `XLSX` exports using the [`makeXlsxRow()` and `makeXlsxHeaderRow()`](https://filamentphp.comdocs/4.x/actions/export#styling-xlsx-columns) methods in your exporter class.
+You can now customize the styling of individual cells in `XLSX` exports using the [`makeXlsxRow()` and `makeXlsxHeaderRow()`](https://filamentphp.com/docs/4.x/actions/export#styling-xlsx-columns) methods in your exporter class.
 
 #### Customizing the XLSX writer
 
@@ -429,7 +449,7 @@ Filament now loads the [Inter font](https://fonts.google.com/specimen/Inter) loc
 
 ### Sub-navigation position
 
-By default, sub-navigation appears at the start of each page. You can override this globally for the entire panel using the [`subNavigationPosition()` method](https://filamentphp.com//docs/4.x/panel-configuration#setting-the-default-sub-navigation-position).
+By default, sub-navigation appears at the start of each page. You can override this globally for the entire panel using the [`subNavigationPosition()` method](https://filamentphp.com/docs/4.x/panel-configuration#setting-the-default-sub-navigation-position).
 
 Available options are:
 
