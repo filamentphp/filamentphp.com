@@ -20,6 +20,14 @@ To upgrade your app to Filament v4 beta, please read the [upgrade guide](https:/
 
 > Looking for the current stable version? Visit the [3.x documentation](https://filamentphp.com/docs/3.x).
 
+## Latest updates
+
+> **Updated: June 16, 2025**
+
+- [Reorderable columns](#reordering-table-columns) feature in [v4.0.0-beta5](https://github.com/filamentphp/filament/releases/tag/v4.0.0-beta5)
+
+---
+
 ## General
 
 ### Performance
@@ -298,6 +306,16 @@ Table headers are now shown even when no records are present, enhancing the user
 ### Bulk actions enhancements
 
 See the [bulk actions section](#bulk-actions) of this article.
+
+### Reordering Table Columns
+
+![Reordering Table Columns](https://filamentphp.com/docs/4.x/images/light/tables/columns/column-manager-reorderable.jpg)
+
+Filament now supports [reorderable table columns](https://filamentphp.com/docs/4.x/tables/columns/overview#reordering-columns) using the `reorderableColumns()` method. This allows users to drag and rearrange visible columns for a personalized view.
+
+You can also make the column manager `live`, so changes apply instantly without needing to click "Apply", by using [`deferColumnManager(false)`](https://filamentphp.com/docs/4.x/tables/columns/overview#live-column-manager).
+
+Additionally, the column manager trigger button can be customized via [`columnManagerTriggerAction()`](https://filamentphp.com/docs/4.x/tables/columns/overview#customizing-the-column-manager-dropdown-trigger-action), giving you control over its label, style, and behavior.
 
 ## Actions
 
