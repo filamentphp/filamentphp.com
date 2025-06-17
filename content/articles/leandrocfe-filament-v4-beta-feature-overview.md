@@ -160,7 +160,7 @@ For a full list of available components, see the [Schemas documentation](https:/
 
 You can now switch to a [vertical tab](https://filamentphp.com/docs/4.x/schemas/tabs#using-vertical-tabs) layout by calling the `vertical()` method.
 
-![Vertical tabs](https://filamentphp.com/docs/4.x/images/light/schemas/layout/tabs/simple.jpg)
+![Vertical tabs](https://filamentphp.com/docs/4.x/images/light/schemas/layout/tabs/vertical.jpg)
 
 ### Container queries
 
@@ -200,7 +200,7 @@ You can [extend the Rich editor](https://filamentphp.com/docs/4.x/forms/rich-edi
 
 The [Slider component](https://filamentphp.com/docs/4.x/forms/slider) lets users select one or more numeric values by dragging a handle along a track — ideal for inputs like ranges, ratings, or percentages.
 
-![Slider](https://filamentphp.com/docs/4.x/images/light/forms/fields/slider/simple.jpg)
+![Slider](https://filamentphp.com/docs/4.x/images/light/forms/fields/slider/pips-count.jpg)
 
 ### Code editor
 
@@ -259,13 +259,13 @@ In this JavaScript context, you can use `$state`, `$get()`, and `$set()` to inte
 The [`FusedGroup`](https://filamentphp.com/docs/4.x/forms/overview#fusing-fields-together-into-a-group) component lets you visually combine multiple fields into a single, compact group.
 It's best used with compatible field types like [text inputs](https://filamentphp.com/docs/4.x/forms/text-input), [selects](https://filamentphp.com/docs/4.x/forms/select), [date-time pickers](https://filamentphp.com/docs/4.x/forms/date-time-picker) and [color pickers](https://filamentphp.com/docs/4.x/forms/color-picker).
 
-![Fused group](https://filamentphp.com/docs/4.x/images/light/forms/fields/fused.jpg)
+![Fused group](https://filamentphp.com/docs/4.x/images/light/forms/fields/fused-columns.jpg)
 
 ### Adding extra content to a field
 
 Fields contain [multiple slots](https://filamentphp.com/docs/4.x/forms/overview#adding-extra-content-to-a-field) where content can be inserted in a child schema. Slots can accept text, [any schema components](https://filamentphp.com/docs/4.x/schemas/overview), [actions](https://filamentphp.com/docs/4.x/actions/overview), or [action groups](https://filamentphp.com/docs/4.x/actions/grouping-actions) — typically with [prime components](https://filamentphp.com/docs/4.x/schemas/primes).
 
-![Below content](https://filamentphp.com/docs/4.x/images/light/forms/fields/below-content/text.jpg)
+![Below content](https://filamentphp.com/docs/4.x/images/light/forms/fields/below-content/alignment.jpg)
 
 Available slots include:
 
