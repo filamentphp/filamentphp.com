@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/shkubu18/filament-widget-tabs/main/R
 github_repository: shkubu18/filament-widget-tabs
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-05-30
 ---
