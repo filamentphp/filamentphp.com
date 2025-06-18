@@ -287,7 +287,11 @@
 
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.nativephp />
+
                     <x-sponsors.sevalla />
+
+                    <x-sponsors.titan />
 
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
@@ -296,8 +300,6 @@
                     <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
-
-                    <x-sponsors.wave />
 
                     <x-sponsors.agiledrop />
 
