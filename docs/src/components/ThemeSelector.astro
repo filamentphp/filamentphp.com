@@ -1,10 +1,10 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 const themes = [
-  { name: "Light", value: "light", icon: 'heroicons:sun' },
-  { name: "Dark", value: "dark", icon: 'heroicons:moon' },
-  { name: "System", value: "system", icon: 'heroicons:computer-desktop' },
+  { name: "Light", value: "light", icon: 'sun' },
+  { name: "Dark", value: "dark", icon: 'moon' },
+  { name: "System", value: "system", icon: 'computer-desktop' },
 ];
 ---
 
@@ -73,10 +73,10 @@ const themes = [
     aria-label="Open navigation"
     x-on:click="$refs.panel.toggle"
   >
-    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-butter [[data-theme=light]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-butter [[data-theme=dark]_&]:block" />
-    <Icon name="heroicons:sun" class="hidden h-6 w-6 fill-hurricane [:not(.dark)[data-theme=system]_&]:block" />
-    <Icon name="heroicons:moon" class="hidden h-6 w-6 fill-hurricane [.dark[data-theme=system]_&]:block" />
+    <Icon name="sun" class="hidden h-6 w-6 text-butter [[data-theme=light]_&]:block" />
+    <Icon name="moon" class="hidden h-6 w-6 text-butter [[data-theme=dark]_&]:block" />
+    <Icon name="sun" class="hidden h-6 w-6 text-hurricane [:not(.dark)[data-theme=system]_&]:block" />
+    <Icon name="moon" class="hidden h-6 w-6 text-hurricane [.dark[data-theme=system]_&]:block" />
   </button>
   <div
     x-ref="panel"

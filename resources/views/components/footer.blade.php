@@ -9,19 +9,13 @@
         >
             <x-sponsors.kirschbaum footer />
 
-            <x-sponsors.whizzy footer />
-
             <x-sponsors.cms-max footer />
 
-            <x-sponsors.netstudio footer />
-        </div>
+            <x-sponsors.nativephp footer />
 
-        <div
-            class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12 text-dolphin"
-        >
             <x-sponsors.sevalla footer />
 
-            <x-sponsors.vormkracht10 footer />
+            <x-sponsors.titan footer />
 
             <x-sponsors.lunar footer />
 

@@ -1,0 +1,51 @@
+---
+const { model } = Astro.props;
+---
+
+<div
+    x-data="{
+        value: null,
+        select(option) { this.value = option },
+        isSelected(option) { return this.value === option },
+        hasRovingTabindex(option, el) {
+            // If this is the first option element and no option has been selected, make it focusable.
+            if (this.value === null && Array.from(el.parentElement.children).indexOf(el) === 0) return true
+
+            return this.isSelected(option)
+        },
+        selectNext(e) {
+            let el = e.target
+            let siblings = Array.from(el.parentElement.children)
+            let index = siblings.indexOf(el)
+            let next = siblings[index === siblings.length - 1 ? 0 : index + 1]
+
+            next.click(); next.focus();
+        },
+        selectPrevious(e) {
+            let el = e.target
+            let siblings = Array.from(el.parentElement.children)
+            let index = siblings.indexOf(el)
+            let previous = siblings[index === 0 ? siblings.length - 1 : index - 1]
+
+            previous.click(); previous.focus();
+        },
+    }"
+    x-on:keydown.down.stop.prevent="selectNext"
+    x-on:keydown.right.stop.prevent="selectNext"
+    x-on:keydown.up.stop.prevent="selectPrevious"
+    x-on:keydown.left.stop.prevent="selectPrevious"
+    role="radiogroup"
+    x-bind:aria-labelledby="$id('radio-group-label')"
+    x-id="['radio-group-label']"
+    x-model={model}
+    x-modelable="value"
+    class="not-prose grid gap-3 max-w-lg w-full mb-6"
+>
+    <label x-bind:id="$id('radio-group-label')" role="none" class="sr-only">
+        Selected option: <span x-text="value"></span>
+    </label>
+
+    <div class="grid gap-3">
+        <slot />
+    </div>
+</div>
