@@ -8,7 +8,7 @@ discord_url: https://discord.com/channels/883083792112300104/997955734526496768
 docs_urls:
     v3: https://raw.githubusercontent.com/alperenersoy/filament-export/refs/heads/v3/README.md
     v2: https://raw.githubusercontent.com/alperenersoy/filament-export/refs/heads/main/README.md
-github_repository: https://github.com/alperenersoy/filament-export
+github_repository: alperenersoy/filament-export
 has_dark_theme: true
 has_translations: true
 versions: [2, 3]
