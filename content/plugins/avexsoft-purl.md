@@ -3,12 +3,12 @@ name: Persistent Url
 slug: avexsoft-purl
 author_slug: avexsoft
 categories: [action]
-description: "CRUD permalinks (also known as persistent URLs) to your `filament` project"
-discord_url: 
-docs_url: https://github.com/avexsoft/filament-purl/blob/main/readme.md
+description: CRUD permalinks (also known as persistent URLs) to your Filament project
+discord_url: https://discord.com/channels/883083792112300104/1385329139497701507
+docs_url: https://raw.githubusercontent.com/avexsoft/filament-purl/refs/heads/main/readme.md
 github_repository: avexsoft/filament-purl
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2025-05-31
+publish_date: 2025-06-19
 ---
