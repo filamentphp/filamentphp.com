@@ -1,7 +1,7 @@
 ---
 name: MarcelWeidum
 slug: marcelweidum
-github_url: http://github.com/MarcelWeidum
+github_url: https://github.com/MarcelWeidum
 twitter_url: https://x.com/MarcelWeidum
 ---
 
