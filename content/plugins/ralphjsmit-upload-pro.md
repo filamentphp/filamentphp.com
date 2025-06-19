@@ -12,5 +12,5 @@ github_repository: ralphjsmit/laravel-filament-upload
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-06-19
+publish_date: 2025-06-20
 ---
