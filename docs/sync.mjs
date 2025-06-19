@@ -5,11 +5,13 @@ import { copy } from 'fs-extra'
 import matter from 'gray-matter'
 
 const getDirContents = (dir, filelist = []) => {
-    fs.readdirSync(dir).forEach((file) => {
-        filelist = fs.statSync(path.join(dir, file)).isDirectory()
-            ? getDirContents(path.join(dir, file), filelist)
-            : filelist.concat(path.join(dir, file))
-    })
+    fs.readdirSync(dir)
+        .filter((name) => name !== '.DS_Store')
+        .forEach((file) => {
+            filelist = fs.statSync(path.join(dir, file)).isDirectory()
+                ? getDirContents(path.join(dir, file), filelist)
+                : filelist.concat(path.join(dir, file))
+        })
     return filelist
 }
 
@@ -48,7 +50,9 @@ const getTitleFromMarkdown = (file) => {
 console.log('Processing docs...')
 
 let structure = []
-let versions = fs.readdirSync('./filament')
+let versions = fs
+    .readdirSync('./filament')
+    .filter((name) => name !== '.DS_Store')
 
 versions.forEach((version) => {
     if (fs.existsSync(`./src/pages/${version}`)) {
@@ -59,7 +63,9 @@ versions.forEach((version) => {
 
     if (version === '1.x') {
         const versionEntry = structure.find((item) => item.version === version)
-        const files = fs.readdirSync(`./filament/${version}/docs`)
+        const files = fs
+            .readdirSync(`./filament/${version}/docs`)
+            .filter((name) => name !== '.DS_Store')
 
         versionEntry.links = files.map((file) => {
             return {
@@ -69,8 +75,6 @@ versions.forEach((version) => {
                 links: [],
             }
         })
-
-        versionEntry.href = versionEntry.links[0].href
 
         fs.mkdir(`src/pages/1.x/admin`, { recursive: true }, () => {
             const sourceFiles = getDirContents(`./filament/1.x/docs`)
@@ -133,6 +137,7 @@ versions.forEach((version) => {
             .sort(function (a, b) {
                 return packagesOrder.indexOf(a) - packagesOrder.indexOf(b)
             })
+            .filter((name) => name !== '.DS_Store')
 
         packages.forEach((packageName) => {
             if (
@@ -208,8 +213,6 @@ versions.forEach((version) => {
                     links: docStructure,
                 })
 
-                versionEntry.href = versionEntry.links[0].links[0].href
-
                 fs.mkdir(
                     `src/pages/${version}/${packageName}`,
                     { recursive: true },
@@ -259,6 +262,9 @@ versions.forEach((version) => {
         })
 
         if (!fs.existsSync(`./filament/${version}/docs`)) {
+            structure.find((item) => item.version === version).href =
+                structure.find((item) => item.version === version).links[0].href
+
             return
         }
 
@@ -319,11 +325,11 @@ versions.forEach((version) => {
                                 case 'about':
                                     return 'About Filament'
                                 case 'styling':
-                                    return 'Customizing Styling'
+                                    return 'Customizing styling'
                                 case 'tenancy':
-                                    return 'Multi-Tenancy'
+                                    return 'Multi-tenancy'
                                 case 'ui':
-                                    return 'Blade UI Components'
+                                    return 'Blade UI components'
                                 default:
                                     return GrafiteHelper(
                                         slug.replace('-', ' '),
@@ -392,6 +398,10 @@ versions.forEach((version) => {
             })
         })
     }
+
+    structure.find((item) => item.version === version).href = structure.find(
+        (item) => item.version === version,
+    ).links[0].href
 })
 
 // write the navigation structure to a file
