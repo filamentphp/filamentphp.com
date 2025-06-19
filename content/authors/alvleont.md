@@ -1,6 +1,6 @@
 ---
 name: Álvaro León Torres
-slug: alvaro-leon-torres
+slug: alvleont
 github_url: https://github.com/alvleont
 twitter_url: https://twitter.com/alvleont
 ---
