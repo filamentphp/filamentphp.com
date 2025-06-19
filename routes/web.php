@@ -56,26 +56,9 @@ Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
 Route::get('/api/{version?}', function (string $version = '3.x'): RedirectResponse {
     return redirect('/api/' . $version . '/index.html');
-})->where('version', '[1-3]+\.x')->name('api-docs');
+})->where('version', '[1-4]+\.x')->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/panels/getting-started');
-    Route::redirect('/resources', '/docs/panels/resources/getting-started');
-    Route::redirect('/pages', '/docs/panels/pages');
-    Route::redirect('/dashboard', '/docs/panels/dashboard');
-    Route::redirect('/navigation', '/docs/panels/navigation');
-    Route::redirect('/plugin-development', '/docs/panels/plugins');
-
-    Route::redirect('/admin', '/docs/panels/installation');
-    Route::redirect('/panels', '/docs/panels/installation');
-    Route::redirect('/forms', '/docs/forms/installation');
-    Route::redirect('/tables', '/docs/tables/installation');
-    Route::redirect('/notifications', '/docs/notifications/installation');
-    Route::redirect('/actions', '/docs/actions/installation');
-    Route::redirect('/infolists', '/docs/infolists/installation');
-    Route::redirect('/widgets', '/docs/widgets/installation');
-    Route::redirect('/support', '/docs/support/overview');
-
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
@@ -165,7 +148,8 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
         Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
-        Route::redirect('/filament-minimal-theme', '/plugins/filament-themes');
+        Route::redirect('/filament-minimal-theme', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-themes', '/plugins/zepfietje-themes');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
@@ -180,4 +164,4 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
-Route::redirect('/themes', '/plugins/filament-themes');
+Route::redirect('/themes', '/plugins/zepfietje-themes');
