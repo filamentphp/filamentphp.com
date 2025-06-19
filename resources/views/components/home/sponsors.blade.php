@@ -291,6 +291,8 @@
 
                     <x-sponsors.sevalla />
 
+                    <x-sponsors.titan />
+
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
                     <x-sponsors.lunar />
@@ -298,8 +300,6 @@
                     <x-sponsors.ploi />
 
                     <x-sponsors.tapp-network />
-
-                    <x-sponsors.wave />
 
                     <x-sponsors.agiledrop />
 

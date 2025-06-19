@@ -15,6 +15,8 @@
 
             <x-sponsors.sevalla footer />
 
+            <x-sponsors.titan footer />
+
             <x-sponsors.lunar footer />
 
             <a
