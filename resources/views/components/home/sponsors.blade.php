@@ -301,8 +301,6 @@
 
                     <x-sponsors.tapp-network />
 
-                    <x-sponsors.wave />
-
                     <x-sponsors.agiledrop />
 
                     <x-sponsors.cleavr />
