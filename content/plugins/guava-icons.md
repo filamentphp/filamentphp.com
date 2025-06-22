@@ -2,7 +2,7 @@
 name: Icons
 slug: guava-icons
 author_slug: guava
-categories: [panel-builder, form-builder, widget]
+categories: [developer-tool]
 description: Install and use any blade icon pack and generate enum classes for any icon sets.
 discord_url: 
 docs_url: https://raw.githubusercontent.com/GuavaCZ/filament-icons/main/README.md
