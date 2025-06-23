@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/MartinPetricko/filament-restore-or-c
 discord_url: https://discord.com/channels/883083792112300104/1369170209327415347
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-05-06
 ---
