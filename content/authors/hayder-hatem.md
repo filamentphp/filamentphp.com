@@ -2,6 +2,8 @@
 name: Hayder Hatem
 slug: hayder-hatem
 github_url: https://github.com/HayderHatem
+twitter_url: https://twitter.com/hayderhatem
+sponsor_url: https://github.com/sponsors/HayderHatem
 ---
 
-Hayder is a passionate Laravel developer with expertise in building robust web applications and packages. He specializes in creating developer tools and plugins that enhance productivity and streamline workflows. With a focus on clean code and user experience, Hayder contributes to the Laravel and Filament communities by developing practical solutions for common development challenges. 
+Full-stack developer specializing in Laravel and Filament ecosystem development. Passionate about creating developer tools that simplify complex workflows and enhance user experience. Creator of innovative Filament packages that leverage AI technology to make data management more intuitive and accessible. 
