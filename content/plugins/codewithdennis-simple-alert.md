@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-simple-alert
 github_repository: codewithdennis/filament-simple-alert
 has_dark_theme: true
 has_translations: false
-versions: [3,4]
+versions: [3, 4]
 publish_date: 2024-07-01
 ---
