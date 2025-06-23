@@ -10,5 +10,5 @@ github_repository: avexsoft/filament-purl
 has_dark_theme: true
 has_translations: false
 versions: [3]
-publish_date: 2025-06-19
+publish_date: 2025-06-23
 ---
