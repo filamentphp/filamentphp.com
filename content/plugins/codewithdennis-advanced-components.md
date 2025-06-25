@@ -10,6 +10,6 @@ github_repository: codewithdennis/filament-advanced-components
 docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-advanced-components-documentation/main/README.md
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-01-05
 ---

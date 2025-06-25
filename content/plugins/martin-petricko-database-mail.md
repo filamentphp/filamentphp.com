@@ -9,7 +9,7 @@ docs_url: https://raw.githubusercontent.com/MartinPetricko/filament-database-mai
 discord_url: https://discord.com/channels/883083792112300104/1353157236905611476
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-03-24
 anystack_id: 9e5b06ed-0776-48cc-9562-6b1bf904a895
 ---
