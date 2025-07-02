@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/HayderHatem/filament-sub-navigation/
 github_repository: HayderHatem/filament-sub-navigation
 has_dark_theme: true
 has_translations: false
-versions: [1]
+versions: [3]
 publish_date: 2025-06-30
 ---
