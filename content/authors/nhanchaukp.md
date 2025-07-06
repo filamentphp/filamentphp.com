@@ -1,6 +1,6 @@
 ---
 name: Nhân Châu KP
-slug: nhan-chau-kp
+slug: nhanchaukp
 github_url: https://github.com/nhanchaukp
 twitter_url: https://twitter.com/nhanchaukp
 mastodon_url: https://phpc.social/@nhanchaukp
