@@ -3,7 +3,7 @@ name: Inspire CMS
 slug: solution-forest-inspirecms
 author_slug: solution-forest
 categories: [kit, developer-tool, panel-builder]
-description: nspireCMS is a flexible, un-opinionated content engine for Laravel, built on Filament.
+description: InspireCMS is a flexible, un-opinionated content engine for Laravel, built on Filament.
 discord_url: 
 docs_url: https://inspirecms.net/docs/v1
 github_repository: https://github.com/solutionforest/Inspirecms-core
