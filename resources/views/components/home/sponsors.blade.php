@@ -285,6 +285,8 @@
                 >
                     <x-sponsors.kirschbaum />
 
+                    <x-sponsors.baiz />
+
                     <x-sponsors.cms-max />
 
                     <x-sponsors.nativephp />
