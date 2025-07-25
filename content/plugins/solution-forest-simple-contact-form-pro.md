@@ -1,6 +1,6 @@
 ---
 name: Simple Contact Form Pro
-slug: solution-forest-simple-contact-form
+slug: solution-forest-simple-contact-form-pro
 anystack_id: 9f7181c0-a0bb-4d04-9b93-3f0e2b4e54e4
 check_out: https://checkout.anystack.sh/simple-contact-form-pro
 author_slug: solution-forest
