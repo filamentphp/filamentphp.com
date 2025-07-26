@@ -7,7 +7,7 @@ categories: [form-field, infolist-entry, table-column]
 description: This plugin extends existing FilamentPHP components with advanced features and enhanced functionality.
 discord_url: https://discord.com/channels/883083792112300104/1353174945244647444
 github_repository: codewithdennis/filament-advanced-components
-docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-advanced-components-documentation/main/README.md
+docs_url: https://raw.githubusercontent.com/CodeWithDennis/filament-advanced-components-docs/main/README.md
 has_dark_theme: true
 has_translations: false
 versions: [3, 4]
