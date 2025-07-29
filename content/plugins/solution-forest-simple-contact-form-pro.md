@@ -13,7 +13,9 @@ versions: [3,4]
 publish_date: 2025-07-25
 ---
 
+
 <img width="3840" height="2160" alt="Simple-Contact-Form-pro" src="https://github.com/user-attachments/assets/8961ad7f-f5ff-40c8-ac5f-445d711001f2" />
+
 
 # Simple Contact Form Pro - FilamentPHP Plugin
 
@@ -25,8 +27,12 @@ publish_date: 2025-07-25
 [![Total Downloads](https://img.shields.io/packagist/dt/solutionforest/simple-contact-form-pro.svg?style=flat-square)](https://packagist.org/packages/solutionforest/simple-contact-form-pro)
 
 ---
-## Lisence Check Out
-   https://checkout.anystack.sh/simple-contact-form-pro
+
+## Getting a License
+
+Simple Contact Form Pro is a premium plugin. You need to purchase a license to use it in your projects.
+
+**Purchase License**: [https://checkout.anystack.sh/simple-contact-form-pro](https://checkout.anystack.sh/simple-contact-form-pro)
 
 ## Basic Version
     https://github.com/solutionforest/simple-contact-form
@@ -50,14 +56,49 @@ publish_date: 2025-07-25
 | v3               | 0.0.3          |
 | v4               | 2.0.1          |
 ## Installation
-v3 installation:
+
+### Step 1: Add Private Repository
+
+Add the private composer repository to your `composer.json`:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://simple-contact-form-pro.composer.sh"
+    }
+  ]
+}
+```
+
+### Step 2: Install via Composer
+
+Install the plugin using composer:
+
 ```bash
 composer require solutionforest/simple-contact-form-pro
 ```
-v4 installation:
+
+When prompted for authentication:
+- **Username**: Your license email address
+- **Password**: Your license key
+
+> **Note**: If your license requires a fingerprint, append it to your license key with a colon (e.g., `license-key:your-domain.com`)
+
+for eaxmple:
+
 ```bash
-composer require solutionforest/simple-contact-form-pro:^2.0.1
+Loading composer repositories with package information
+Authentication required (simple-contact-form-pro.composer.sh):
+Username: philo@anystack.sh
+Password: 8c21df8f-6273-4932-b4ba-8bcc723ef500:anystack.sh
 ```
+
+
+
+### Step 3: Publish and Setup
+
 Publish config and migrations:
 
 ```bash
@@ -66,6 +107,8 @@ php artisan vendor:publish --tag="simple-contact-form-migrations"
 php artisan vendor:publish --tag="simple-contact-form-pro-migrations"
 php artisan migrate
 ```
+
+### Step 4: Register Plugin
 
 Register the plugin in your Filament Panel provider:
 
