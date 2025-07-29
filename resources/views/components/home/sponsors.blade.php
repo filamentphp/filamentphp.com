@@ -301,6 +301,8 @@
 
                     <x-sponsors.ploi />
 
+                    <x-sponsors.redberry />
+
                     <x-sponsors.tapp-network />
 
                     <x-sponsors.agiledrop />
