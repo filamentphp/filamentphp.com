@@ -83,8 +83,10 @@ composer require solutionforest/simple-contact-form-pro
 When prompted for authentication:
 - **Username**: Your license email address
 - **Password**: Your license key
-> **Note**: If your license is not assigned to a licensee you can enter unlock as the username instead of the email.
-> **Note**: If your license requires a fingerprint, append it to your license key with a colon (e.g., `license-key:your-domain.com`)
+> **Note**:
+> If your license is not assigned to a licensee you can enter unlock as the username instead of the email.
+
+> If your license requires a fingerprint, append it to your license key with a colon (e.g., `license-key:your-domain.com`)
 
 for eaxmple:
 
