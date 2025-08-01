@@ -3,6 +3,8 @@ name: Leandro Ferreira
 slug: leandrocfe
 github_url: https://github.com/leandrocfe
 twitter_url: https://twitter.com/leandrocfe
+sponsor_url: https://github.com/sponsors/leandrocfe
 ---
 
-Leandro is a PHP/Laravel developer who has been coding for close to 7+ years. You can learn more about Leandro on his [website](https://leandroferreira.dev.br).
+Core team member at [Filament](https://filamentphp.com). Founded the [Filament Brazilian Community](https://filament.com.br). 
+Learn more at [leandroferreira.dev.br](https://leandroferreira.dev.br).
