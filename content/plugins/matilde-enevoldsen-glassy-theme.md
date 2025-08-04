@@ -6,7 +6,7 @@ author_slug: matilde-enevoldsen
 categories: [theme]
 description: A glassmorphic theme for filament v4.
 discord_url:
-docs_url: https://raw.githubusercontent.com/Matildevoldsen/glassy-filament/refs/heads/main/README.md?token=GHSAT0AAAAAAC2GKBGAEN3VCF74QSRMBVC62DKSCWA
+docs_url: https://github.com/Matildevoldsen/glassy-filament-docs
 github_repository: matildevoldsen/glassy-filament
 has_dark_theme: true
 has_translations: false
