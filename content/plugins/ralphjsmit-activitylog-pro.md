@@ -8,8 +8,8 @@ price: €59.00
 description: Easily add beautiful timelines to your Filament apps – inside panels or stand-alone. Integrates with Spatie Activitylog.  
 discord_url: https://discord.com/channels/883083792112300104/1194008969686032415
 docs_urls:
-    V4: https://ralphjsmit.com/content/products/filament-activitylog-pro/v4.md
-    V3: https://ralphjsmit.com/content/products/filament-activitylog-pro/v3.md
+    v4: https://ralphjsmit.com/content/products/filament-activitylog-pro/v4.md
+    v3: https://ralphjsmit.com/content/products/filament-activitylog-pro/v3.md
 github_repository: ralphjsmit/laravel-filament-activitylog
 has_dark_theme: true
 has_translations: true
