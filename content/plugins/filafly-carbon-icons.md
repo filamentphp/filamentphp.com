@@ -4,7 +4,7 @@ slug: filafly-carbon-icons
 author_slug: filafly
 categories: [panel-builder, theme]
 description: Quickly swap out all icons used by the Filament framework with Carbon icons.
-discord_url: https://discord.com/channels/883083792112300104/1353175810537689099
+discord_url: https://discord.com/channels/883083792112300104/1402009963664244759
 docs_url: https://raw.githubusercontent.com/filafly/filament-carbon-icons/refs/heads/main/README.md
 github_repository: filafly/filament-carbon-icons
 has_dark_theme: true
