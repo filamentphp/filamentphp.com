@@ -4,13 +4,13 @@ slug: solution-forest-inspirecms
 author_slug: solution-forest
 categories: [kit, developer-tool, panel-builder]
 description: InspireCMS is a flexible, un-opinionated content engine for Laravel, built on Filament.
-discord_url: 
+discord_url: https://discord.com/channels/883083792112300104/1401983070764138577
 docs_url: https://inspirecms.net/docs/v1
-github_repository: https://github.com/solutionforest/Inspirecms-core
+github_repository: solutionforest/Inspirecms-core
 has_dark_theme: true
 has_translations: true
 versions: [3]
-publish_date: 2025-07-08
+publish_date: 2025-08-04
 ---
 
 InspireCMS is the foundation library that powers the InspireCMS platform. This package provides essential functionality, including content management, admin interfaces, and extensibility features. Designed with flexibility and developer experience in mind, it allows you to quickly build customized content management systems for your Laravel applications.
