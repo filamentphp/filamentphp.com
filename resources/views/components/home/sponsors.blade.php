@@ -285,6 +285,8 @@
                 >
                     <x-sponsors.kirschbaum />
 
+                    <x-sponsors.baiz />
+
                     <x-sponsors.cms-max />
 
                     <x-sponsors.nativephp />
@@ -298,6 +300,8 @@
                     <x-sponsors.lunar />
 
                     <x-sponsors.ploi />
+
+                    <x-sponsors.redberry />
 
                     <x-sponsors.tapp-network />
 
