@@ -150,6 +150,7 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
         Route::redirect('/filament-minimal-theme', '/plugins/zepfietje-themes');
         Route::redirect('/filament-themes', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-spatie-translatable', 'https://github.com/lara-zeus/translatable');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
