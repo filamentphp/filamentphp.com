@@ -16,8 +16,7 @@ $iterator = Finder::create()
 $versions = GitVersionCollection::create($dir)
 	->add('1.x', 'Filament 1.x')
 	->add('2.x', 'Filament 2.x')
-	->add('3.x', 'Filament 3.x')
-    ->add('4.x', 'Filament 4.x');
+	->add('3.x', 'Filament 3.x');
 
 return new Doctum($iterator, [
 	'title' => 'Filament API',
