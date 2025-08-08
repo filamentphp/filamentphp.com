@@ -20,21 +20,27 @@ To upgrade your app to Filament v4 beta, please read the [upgrade guide](https:/
 
 > Looking for the current stable version? Visit the [3.x documentation](https://filamentphp.com/docs/3.x).
 
-## Latest updates
+## Highlights
 
-> **Updated: June 16, 2025**
+There are many new features and improvements in Filament v4 Beta, but here are some of the highlights:
 
-- [Reorderable columns](#reordering-table-columns) feature in [v4.0.0-beta5](https://github.com/filamentphp/filament/releases/tag/v4.0.0-beta5)
-
----
+- [**Improved performance**](#improved-performance): Rendering and interaction performance has significantly improved, especially for large tables, where server rendering time typically reduces by 2-3x.
+- [**Tailwind CSS v4**](#tailwind-css-v4): The framework now uses Tailwind CSS v4, which brings a reworked configuration system, improved customization, and faster builds.
+- [**Built-in multi-factor authentication (MFA)**](#multi-factor-authentication): Filament v4 includes built-in support for multi-factor authentication, enhancing security beyond standard email/password login.
+- [**Nested resources**](#nested-resources): Resources can now be deeply nested within each other, allowing their breadcrumb and URL structure to reflect their hierarchy.
+- **New form fields**: Filament v4 introduces new form fields like the [TipTap rich editor](#new-rich-editor), [slider](#slider), [code editor](#code-editor), and [table repeater](#table-repeater). The rich editor specifically has seen many new features, including support for [custom blocks](#custom-blocks), [merge tags](#merge-tags), and dynamically generated temporary private image URLs.
+- **Tools to reduce network requests**: New methods like [`hiddenJs()`](#hiddenjs-and-visiblejs) and [`afterStateUpdatedJs()`](#afterstateupdatedjs) allow you to minimize network requests by using JavaScript to control field visibility and state updates. [Partial rendering](#partial-rendering) allows you to re-render only specific components on a page to reduce the server rendering time of requests.
+- [**Tables with custom data**](#tables-with-custom-data): Tables can now be backed by custom data sources, allowing you to render external or computed data without relying on Eloquent models.
+- [**Improved bulk action system**](#bulk-actions): Authorize individual records in bulk actions, use notifications to inform users of bulk action results with success and failure counts grouped by failure reason, and benefit from improved performance through chunked processing of selected records.
+- [**Restructured documentation**](https://filamentphp.com/docs/4.x): The Filament documentation has been restructured to provide a clearer overview of the features and how they work together. The new documentation includes more examples, cross-references, and explanations of how features work internally.
 
 ## General
 
-### Performance
+### Improved performance
 
 Rendering and interaction performance in Filament has significantly improved, especially for large tables. Internally, many Blade templates have been optimized to reduce the number of views that are being rendered. By utilizing existing PHP objects to render HTML instead of including new files, Filament v4 reduces the number of files that need to be loaded, improving performance. The size of Blade views has also been reduced by extracting groups of Tailwind CSS classes into dedicated classes, which are then used in the Blade templates. This reduces the amount of HTML that needs to be rendered, resulting in faster page loads and a smaller response size.
 
-### Filament v4 now uses Tailwind CSS v4
+### Tailwind CSS v4
 
 [Tailwind CSS v4](https://tailwindcss.com) is a major update focused on performance, flexibility, and modern web standards. It features a reworked configuration system, improved customization, and faster builds, making it easier to build your own custom design system at scale.
 For the latest features and release notes, visit the [Tailwind CSS blog](https://tailwindcss.com/blog).
@@ -64,7 +70,7 @@ Filament supports two built-in MFA methods:
 
 Need more MFA options? Additional custom MFA providers can be registered to extend Filament's authentication capabilities.
 
-### Heroicons
+### Icon enums
 
 Filament includes the [Heroicons](https://heroicons.com/) icon set, so you can use icons without installing anything extra.
 The new [Heroicon enum class](https://filamentphp.com/docs/4.x/styling/icons#using-heroicons-in-filament) provides IDE autocompletion to help you quickly find the icon you need--no more magic strings!
@@ -75,7 +81,7 @@ Each icon is available in solid and outlined variants (`Heroicon::Star` vs. `Her
 
 The new `FilamentTimezone` facade lets you set a default timezone for Filament globally via the `FilamentTimezone::set()` method, simplifying the default timezone across components. This lets you control multiple components at once, including the `DateTimePicker`, `TextColumn`, and `TextEntry`.
 
-### "ISO" formats
+### "ISO" date-time formats
 
 Dates and times now support formatting using standard "ISO" formats in the `TextColumn` and `TextEntry` components.
 
@@ -87,11 +93,11 @@ Dates and times now support formatting using standard "ISO" formats in the `Text
 For example, in a `CourseResource`, you might use a relation manager or page to manage the lessons that belong to a course. This lets you create and edit lessons directly from a table using modals.
 But if lessons are more complex, modals might not be enough. In that case, you can give lessons their own resource with full-page create and edit views — this is called a [nested resource](https://filamentphp.com/docs/4.x/resources/nesting).
 
-### Resource class organization
+### Better resource class organization
 
 [Resource classes](https://filamentphp.com/docs/4.x/resources/overview#creating-a-resource) are now generated within their own dedicated namespaces, making your codebase more organized.
 
-### Code quality tips
+### Code quality tips in the documentation
 
 We have also added some more detailed recommendations on how to keep your Filament code [clean and maintainable](https://filamentphp.com/docs/4.x/resources/code-quality-tips) in v4. Here are a few of our favorites:
 
@@ -99,27 +105,27 @@ We have also added some more detailed recommendations on how to keep your Filame
 - Create [dedicated component classes](https://filamentphp.com/docs/4.x/resources/code-quality-tips#using-component-classes) when individual form inputs, table columns, filters, or actions become complex. This keeps each piece of logic focused and reusable.
 - Organize components by type and purpose, such as putting form inputs under `Schemas/Components` and table actions under `Actions`.
 
-### Preserving data when creating another
+### Preserving data when creating another resource record
 
 By default, the [Create and create another](https://filamentphp.com/docs/4.x/resources/creating-records#creating-another-record) action clears the form after submission. If you want to retain certain values, you can now use the [`preserveFormDataWhenCreatingAnother()`](https://filamentphp.com/docs/4.x/resources/creating-records#preserving-data-when-creating-another) method on the Create page class and return only the data you want to keep.
 
 When using the Create action, you can use the [`preserveFormDataWhenCreatingAnother()`](https://filamentphp.com/docs/4.x/actions/create#preserving-data-when-creating-another) method.
 
-### Customizing page content
+### More easily customize page content
 
 Prior to Filament v4, we didn't have a particularly ergonomic way to customize page layouts in the Filament panel. Now, each page in Filament has its own [schema](https://filamentphp.com/docs/4.x/schemas/overview), which defines its structure and content.
 
 You can override the default page schema using the `content()` method to fully control the layout.  
 This lets you add, remove, or reorder [schema components](https://filamentphp.com/docs/4.x/schemas/overview) such as tables, tabs, and custom elements.
 
-### Resource create page redirect
+### Globally customizing resource redirects
 
 You can now configure the default redirect behavior after creating a resource.  
 By using the [panel configuration](https://filamentphp.com/docs/4.x/panel-configuration), you can choose whether users are redirected to the index page, the view page, or the edit page after creating a record.
 
 This applies globally to all resources within the panel.
 
-### Disabling search term splitting
+### Disabling global search term splitting
 
 The new `$shouldSplitGlobalSearchTerms` property allows you to disable splitting the global search term into individual words, improving search performance on large datasets.
 
@@ -134,7 +140,7 @@ Previously, only the icon could be customized, but now, the entire tab component
 
 ## Navigation
 
-### Sidebar / Topbar
+### Sidebar / Topbar Livewire reactivity
 
 The `Sidebar` and `Topbar` are now Livewire components, allowing them to be updated dynamically.
 If you need to refresh them — for example, after a setting or permission change — you can dispatch a [`refresh-sidebar` or `refresh-topbar`](https://filamentphp.com/docs/4.x/navigation/overview#reloading-the-sidebar-and-topbar) browser event to trigger a reload.
@@ -168,7 +174,7 @@ In addition to traditional breakpoints based on the size of the viewport, you ca
 
 ## Forms
 
-### Rich editor
+### New rich editor
 
 [Rich editor](https://filamentphp.com/docs/4.x/forms/rich-editor) is now using [Tiptap](https://tiptap.dev/), a modern, headless, and highly extensible open source editor framework.
 
@@ -209,7 +215,7 @@ It supports common languages including `HTML`, `CSS`, `JavaScript`, `PHP`, and `
 
 ![Code editor](https://filamentphp.com/docs/4.x/images/light/forms/fields/code-editor/language.jpg)
 
-### Table repeaters
+### Table repeater
 
 [Table repeaters](https://filamentphp.com/docs/4.x/forms/repeater#table-repeaters) display [repeater](https://filamentphp.com/docs/4.x/forms/repeater) items in a table layout using defined `columns`.
 You can configure these columns with the `table()` method and `TableColumn` objects, which map to fields in the repeater's schema.
@@ -226,7 +232,7 @@ Each column can be customized:
 
 ### Selecting options from a table in a modal
 
-The [ModalTableSelect](https://filamentphp.com/docs/4.x/forms/select#selecting-options-from-a-table-in-a-modal) component lets users select records from a modal that displays a full [Filament table](https://filamentphp.com/docs/4.x/tables/overview) — ideal for relationships with many records that need advanced [search](https://filamentphp.com/docs/4.x/tables/columns/overview#searching) and [filtering](https://filamentphp.com/docs/4.x/tables/filters/overview).
+The [`ModalTableSelect`](https://filamentphp.com/docs/4.x/forms/select#selecting-options-from-a-table-in-a-modal) component lets users select records from a modal that displays a full [Filament table](https://filamentphp.com/docs/4.x/tables/overview) — ideal for relationships with many records that need advanced [search](https://filamentphp.com/docs/4.x/tables/columns/overview#searching) and [filtering](https://filamentphp.com/docs/4.x/tables/filters/overview).
 
 ### Using JavaScript to minimise network requests
 
@@ -325,7 +331,7 @@ Table headers are now shown even when no records are present, enhancing the user
 
 See the [bulk actions section](#bulk-actions) of this article.
 
-### Reordering Table Columns
+### Reorderable table columns
 
 ![Reordering Table Columns](https://filamentphp.com/docs/4.x/images/light/tables/columns/column-manager-reorderable.jpg)
 

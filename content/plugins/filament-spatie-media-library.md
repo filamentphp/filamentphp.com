@@ -11,6 +11,6 @@ github_repository: filamentphp/spatie-laravel-media-library-plugin
 has_dark_theme: true
 has_translations: true
 thumbnail: filament-spatie-media-library.webp
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2023-07-17
 ---
