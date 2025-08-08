@@ -7,7 +7,7 @@
     <x-home.demo />
     <x-home.packages />
     <x-home.tall />
-    <x-home.v3-features />
+    <x-home.v4-features />
     <x-home.sponsors />
     <x-home.tweets />
     <x-sunset />

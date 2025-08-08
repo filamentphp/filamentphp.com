@@ -1,24 +1,20 @@
 ---
-title: Filament v4 Beta - Feature Overview
-slug: leandrocfe-filament-v4-beta-feature-overview
+title: Filament v4 Has Been Released - Feature Overview
+slug: leandrocfe-filament-v4-has-been-released
 author_slug: leandrocfe
-publish_date: 2025-06-09
+publish_date: 2025-08-12
 categories: [general]
 type_slug: article
-versions: [3,4]
+versions: [4]
 ---
 
-![Filament v4 Beta - Feature Overview](/images/content/articles/leandrocfe-filament-v4-beta-feature-overview/v4-beta-feature-overview.webp)
+![Filament v4 Has Been Released - Feature Overview](/images/content/articles/leandrocfe-filament-v4-has-been-released/v4-has-been-released.webp)
 
 ## Introduction
 
-The **Filament v4 Beta** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. In this article, we highlight what's new and how these changes can improve your workflow!
+**Filament v4** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. In this article, we highlight what's new and how these changes can improve your workflow!
 
-To upgrade your app to Filament v4 beta, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
-
-> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Breaking changes may be introduced to releases during the beta period. Please report any issues you encounter on [GitHub](https://github.com/filamentphp/filament/issues/new).
-
-> Looking for the current stable version? Visit the [3.x documentation](https://filamentphp.com/docs/3.x).
+To upgrade your app to Filament v4, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
 
 ## Highlights
 
@@ -490,10 +486,9 @@ This gives you full control over the user experience when something goes wrong.
 
 ## Conclusion
 
-Filament v4 Beta brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain. Since it's still in `beta`, now is the perfect time to explore the new features and share feedback.
-If you need a `stable` version, refer to the [3.x documentation](https://filamentphp.com/docs/3.x).
+Filament v4 brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain.
 
-To upgrade your app to Filament v4 beta, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
+To upgrade your app to Filament v4, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
 
 Special thanks to [Dan Harrin](https://github.com/danharrin) for his incredible work on Filament v4!
 

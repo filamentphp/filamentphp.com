@@ -44,7 +44,7 @@
                         '>-0.6',
                     )
                     .fromTo(
-                        $refs.header_version3,
+                        $refs.header_version4,
                         {
                             autoAlpha: 0,
                             y: 30,
@@ -158,23 +158,6 @@
                         },
                     },
                 )
-                gsap.fromTo(
-                    $refs.feature_6,
-                    {
-                        autoAlpha: 0,
-                        x: 20,
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        duration: 0.7,
-                        ease: 'circ.out',
-                        scrollTrigger: {
-                            trigger: $refs.feature_6,
-                            start: 'top bottom-=150px',
-                        },
-                    },
-                )
                 gsap.to($refs.geometric_shape_1, {
                     yPercent: -100,
                     rotate: 100,
@@ -229,17 +212,6 @@
                         end: 'bottom+=300px center',
                     },
                 })
-                gsap.to($refs.geometric_shape_6, {
-                    yPercent: -100,
-                    xPercent: -50,
-                    rotate: 45,
-                    scrollTrigger: {
-                        trigger: $refs.feature_6,
-                        scrub: 1.5,
-                        start: 'top bottom-=200px',
-                        end: 'bottom+=500px center',
-                    },
-                })
             })
         "
     >
@@ -261,10 +233,10 @@
                     New
                 </span>
                 <span
-                    x-ref="header_version3"
+                    x-ref="header_version4"
                     class="inline-block font-black"
                 >
-                    Version 3
+                    Version 4
                 </span>
                 <span
                     x-ref="header_features"
@@ -274,6 +246,7 @@
                 </span>
             </div>
         </div>
+
         <div
             x-ref="features"
             class="space-y-32 pt-20"
@@ -285,10 +258,65 @@
             >
                 <div class="absolute -left-10 top-40 hidden lg:block">
                     <img
-                        x-ref="geometric_shape_1"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-1.webp') }}"
+                        x-ref="geometric_shape_5"
+                        src="{{ Vite::asset('resources/images/home/geometric-shape-5.webp') }}"
                         alt="Shape"
                         class="block w-14"
+                    />
+                </div>
+
+                {{-- Screenshot --}}
+                <div
+                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
+                >
+                    <div
+                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
+                    >
+                        <img
+                            src="{{ Vite::asset('resources/images/features/panels.webp') }}"
+                            alt="Multiple panels"
+                            class="w-full"
+                        />
+                    </div>
+                </div>
+
+                {{-- Feature Notes --}}
+                <div>
+                    <div class="relative inline-block">
+                        <img
+                            src="{{ Vite::asset('resources/images/home/infinity.webp') }}"
+                            alt="Infinity"
+                            class="w-16"
+                        />
+                        <div
+                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
+                        ></div>
+                    </div>
+                    {{-- Title --}}
+                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
+                        Nested resources
+                    </div>
+
+                    {{-- Description --}}
+                    <div class="max-w-xs pt-3 font-medium text-dolphin">
+                        Deeply nested Filament resources now reflect their
+                        hierarchy in URLs and breadcrumbs, letting you manage
+                        child items (e.g., Lessons within Courses) contextually.
+                    </div>
+                </div>
+            </div>
+
+            {{-- Feature 2 --}}
+            <div
+                x-ref="feature_2"
+                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
+            >
+                <div class="absolute -right-16 top-40 hidden lg:block">
+                    <img
+                        x-ref="geometric_shape_3"
+                        src="{{ Vite::asset('resources/images/home/geometric-shape-3.webp') }}"
+                        alt="Shape"
+                        class="block w-16"
                     />
                 </div>
 
@@ -311,9 +339,9 @@
                 <div>
                     <div class="relative inline-block">
                         <img
-                            src="{{ Vite::asset('resources/images/home/handpoint.webp') }}"
-                            alt="Hand pointing"
-                            class="w-12"
+                            src="{{ Vite::asset('resources/images/home/cloud.webp') }}"
+                            alt="Cloud"
+                            class="w-20"
                         />
                         <div
                             class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
@@ -321,24 +349,24 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Action modals, everywhere.
+                        Improved performance
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Open modals and slide-overs from any button on the page.
-                        Even nest modals within other modals with full state
-                        preservation.
+                        Expect 2–3× faster rendering for tables, partial
+                        component re‑rendering, and new methods to cut down on
+                        server calls.
                     </div>
                 </div>
             </div>
 
-            {{-- Feature 2 --}}
+            {{-- Feature 3 --}}
             <div
-                x-ref="feature_2"
+                x-ref="feature_3"
                 class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
             >
-                <div class="absolute -right-16 top-40 hidden lg:block">
+                <div class="absolute -left-5 top-40 hidden lg:block">
                     <img
                         x-ref="geometric_shape_2"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-2.webp') }}"
@@ -376,70 +404,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Powerful table reporting.
+                        Tables with custom data
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Summarize table builder rows with a suite of aggregate
-                        functions to calculate statistics and provide an
-                        analytical overview of your data. Group rows together by
-                        common attributes and summarize that data too.
-                    </div>
-                </div>
-            </div>
-
-            {{-- Feature 3 --}}
-            <div
-                x-ref="feature_3"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
-            >
-                <div class="absolute -left-5 top-40 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_3"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-3.webp') }}"
-                        alt="Shape"
-                        class="block w-16"
-                    />
-                </div>
-
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/tenancy.webp') }}"
-                            alt="Tenant switcher"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/cloud.webp') }}"
-                            alt="Cloud"
-                            class="w-20"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Multi-tenancy built for SaaS.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Use the panel builder to build multi-tenant
-                        applications, with subscription billing, at record
-                        speed. Switch between tenants without leaving the panel.
+                        Tables can now be populated from custom or external data
+                        sources—such as arrays or APIs—without relying on
+                        Eloquent models.
                     </div>
                 </div>
             </div>
@@ -487,14 +459,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Beautiful read-only "View" pages.
+                        New Rich Editor
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Embed infolists in your apps for flexible responsive
-                        layouts to render read-only data. Completely
-                        customizable with your own components.
+                        The new TipTap‑based rich editor adds support for custom
+                        blocks, merge tags, and temporary private image URLs for
+                        more powerful content editing.
                     </div>
                 </div>
             </div>
@@ -505,62 +477,6 @@
                 class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
             >
                 <div class="absolute bottom-0 left-0 hidden lg:block">
-                    <img
-                        x-ref="geometric_shape_5"
-                        src="{{ Vite::asset('resources/images/home/geometric-shape-5.webp') }}"
-                        alt="Shape"
-                        class="block w-14"
-                    />
-                </div>
-
-                {{-- Screenshot --}}
-                <div
-                    class="relative h-80 w-full max-w-[23rem] shrink-0 overflow-hidden rounded-3xl bg-gradient-to-tl from-orange-400 to-orange-200 shadow-xl shadow-black/5"
-                >
-                    <div
-                        class="absolute left-5 top-5 w-[30rem] overflow-hidden rounded-lg shadow-xl"
-                    >
-                        <img
-                            src="{{ Vite::asset('resources/images/features/panels.webp') }}"
-                            alt="Multiple panels"
-                            class="w-full"
-                        />
-                    </div>
-                </div>
-
-                {{-- Feature Notes --}}
-                <div>
-                    <div class="relative inline-block">
-                        <img
-                            src="{{ Vite::asset('resources/images/home/infinity.webp') }}"
-                            alt="Infinity"
-                            class="w-16"
-                        />
-                        <div
-                            class="absolute -bottom-4 left-4 -z-10 h-7 w-7 rounded-full bg-black/50 blur-md"
-                        ></div>
-                    </div>
-                    {{-- Title --}}
-                    <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Unlimited panels in one app.
-                    </div>
-
-                    {{-- Description --}}
-                    <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Build multiple completely separate Filament-powered
-                        panels with their own resources, dashboards, custom
-                        pages and configuration. Ship an entire panel in a
-                        Composer package with ease.
-                    </div>
-                </div>
-            </div>
-
-            {{-- Feature 6 --}}
-            <div
-                x-ref="feature_6"
-                class="relative flex flex-wrap items-center justify-around gap-10 lg:justify-center lg:gap-x-32"
-            >
-                <div class="absolute -bottom-20 -right-10 hidden lg:block">
                     <img
                         x-ref="geometric_shape_6"
                         src="{{ Vite::asset('resources/images/home/geometric-shape-6.webp') }}"
@@ -598,15 +514,14 @@
                     </div>
                     {{-- Title --}}
                     <div class="max-w-[15rem] pt-5 text-2xl font-bold">
-                        Improved theme customization.
+                        Tailwind CSS v4
                     </div>
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Customize the color palette and typography of your panel
-                        without having to compile any Tailwind. Easily hook in
-                        to our suite of CSS classes to characterize a panel with
-                        your own branding - it's all yours.
+                        Filament now adopts Tailwind CSS v4, which simplifies
+                        the styling system and allows for easier style
+                        customization and theme creation.
                     </div>
                 </div>
             </div>

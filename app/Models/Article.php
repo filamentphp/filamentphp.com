@@ -74,7 +74,7 @@ class Article extends Model implements Starrable
             return null;
         }
 
-        return in_array(3, $this->versions);
+        return in_array(4, $this->versions);
     }
 
     public function getAuthor(): Author

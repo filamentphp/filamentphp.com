@@ -1,7 +1,7 @@
 ---
 import navigation from '../navigation.json'
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/installation/", "3.x", "panels", "installation"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "4.x", "introduction", "overview"];
 let currentVersion = segments[1].replaceAll("/", "");
 let currentSection = segments[2].replaceAll("/", "");
 let currentPage = (segments[3] ?? null)?.replaceAll("/", "");
@@ -46,7 +46,7 @@ const versions = navigation.map((version) => {
         aria-label="Open version options"
     >
       <span class="hidden sm:block">Version&nbsp;</span>
-      <span id="current-version" class="font-bold">{currentVersion} {(currentVersion === '4.x') ? 'beta' : ''}</span>
+      <span id="current-version" class="font-bold">{currentVersion}</span>
     </button>
 
     <div
@@ -59,7 +59,7 @@ const versions = navigation.map((version) => {
         {versions.map((version) => (
           <a
             href={version.href}
-            class="flex justify-start items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200"
+            class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200"
             class:list={[
                 {
                     'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': version.version === currentVersion,
@@ -70,7 +70,7 @@ const versions = navigation.map((version) => {
             ]}
           >
             <span>Version&nbsp;</span>
-            <span>{version.version} {(version.version === '4.x') ? 'beta' : ''}</span>
+            <span>{version.version}</span>
           </a>
         ))}
     </div>
