@@ -134,6 +134,8 @@ Route::prefix('/content')->group(function () {
             Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
         });
     });
+
+    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-filament-v4-has-been-released');
 });
 
 Route::prefix('/plugins')->group(function () {
