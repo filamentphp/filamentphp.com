@@ -299,7 +299,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Deeply nested Filament resources now reflect their hierarchy in URLs and breadcrumbs, letting you manage child items (e.g., Lessons within Courses) contextually.
+                        Deeply nested Filament resources now reflect their
+                        hierarchy in URLs and breadcrumbs, letting you manage
+                        child items (e.g., Lessons within Courses) contextually.
                     </div>
                 </div>
             </div>
@@ -352,7 +354,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Expect 2–3× faster rendering for tables, partial component re‑rendering, and new methods to cut down on server calls.
+                        Expect 2–3× faster rendering for tables, partial
+                        component re‑rendering, and new methods to cut down on
+                        server calls.
                     </div>
                 </div>
             </div>
@@ -405,7 +409,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Tables can now be populated from custom or external data sources—such as arrays or APIs—without relying on Eloquent models.
+                        Tables can now be populated from custom or external data
+                        sources—such as arrays or APIs—without relying on
+                        Eloquent models.
                     </div>
                 </div>
             </div>
@@ -458,7 +464,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        The new TipTap‑based rich editor adds support for custom blocks, merge tags, and temporary private image URLs for more powerful content editing.
+                        The new TipTap‑based rich editor adds support for custom
+                        blocks, merge tags, and temporary private image URLs for
+                        more powerful content editing.
                     </div>
                 </div>
             </div>
@@ -511,7 +519,9 @@
 
                     {{-- Description --}}
                     <div class="max-w-xs pt-3 font-medium text-dolphin">
-                        Filament now adopts Tailwind CSS v4, which simplifies the styling system and allows for easier style customization and theme creation.
+                        Filament now adopts Tailwind CSS v4, which simplifies
+                        the styling system and allows for easier style
+                        customization and theme creation.
                     </div>
                 </div>
             </div>
