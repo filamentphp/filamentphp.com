@@ -10,6 +10,6 @@ github_repository: filamentphp/spatie-laravel-google-fonts-plugin
 has_dark_theme: true
 has_translations: true
 thumbnail: filament-spatie-google-fonts.webp
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2023-07-17
 ---
