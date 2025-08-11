@@ -10,7 +10,7 @@ url: https://julienboyer.re/plugins/filament-terms-guard/readme
 github_repository: yebor974/filament-terms-guard
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-06-10
 anystack_id: 9c38669d-0728-4cc7-a7b0-dcad59156981
 ---
