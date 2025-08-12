@@ -28,6 +28,10 @@ There are many new features and improvements in Filament v4 Beta, but here are s
 - [**Improved bulk action system**](#bulk-actions): Authorize individual records in bulk actions, use notifications to inform users of bulk action results with success and failure counts grouped by failure reason, and benefit from improved performance through chunked processing of selected records.
 - [**Restructured documentation**](https://filamentphp.com/docs/4.x): The Filament documentation has been restructured to provide a clearer overview of the features and how they work together. The new documentation includes more examples, cross-references, and explanations of how features work internally.
 
+[Dennis Koch](https://github.com/pxlrbt) gave a great presentation demoing and explaining many of these new features recently. You can watch it here:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8qyV696TALA?si=sOAf8O5vrW8aQ3ny" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## General
 
 ### Improved performance
