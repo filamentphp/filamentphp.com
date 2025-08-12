@@ -135,7 +135,7 @@ Route::prefix('/content')->group(function () {
         });
     });
 
-    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-filament-v4-has-been-released');
+    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-whats-new-in-filament-v4');
 });
 
 Route::prefix('/plugins')->group(function () {

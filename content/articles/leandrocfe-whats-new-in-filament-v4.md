@@ -1,14 +1,12 @@
 ---
-title: Filament v4 Has Been Released - Feature Overview
-slug: leandrocfe-filament-v4-has-been-released
+title: What's new in Filament v4? - Feature Overview
+slug: leandrocfe-whats-new-in-filament-v4
 author_slug: leandrocfe
 publish_date: 2025-08-12
 categories: [general]
 type_slug: article
 versions: [4]
 ---
-
-![Filament v4 Has Been Released - Feature Overview](/images/content/articles/leandrocfe-filament-v4-has-been-released/v4-has-been-released.webp)
 
 ## Introduction
 

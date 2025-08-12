@@ -7,8 +7,6 @@ categories: [general]
 type_slug: news
 ---
 
-![Filament v4 is Stable!](/images/content/articles/alexandersix-filament-v4-is-stable/v4-stable.webp)
-
 It's official! As of today, August 12, 2025, Filament v4 is officially stable!
 And in large part, that is thanks to our incredible community and all the help
 with testing, bug fixing, and overall recommendations. We don't take for granted
@@ -20,7 +18,7 @@ added in some incredible updates, new features, and overall performance enhancem
 to help you build even more incredible applications with Filament. There are
 WAY too many to list out here, but for a full rundown of the major updates present
 in v4, you can check out this incredible article written by the Filament Core Team's
-very own Leandro: [https://filamentphp.com/content/leandrocfe-filament-v4-beta-feature-overview](https://filamentphp.com/content/leandrocfe-filament-v4-beta-feature-overview)
+very own Leandro: ["What's new in Filament v4?"](https://filamentphp.com/content/leandrocfe-whats-new-in-filament-v4)
 
 ## What to expect from our favorite updates
 
