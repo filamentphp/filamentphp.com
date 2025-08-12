@@ -1,24 +1,20 @@
 ---
-title: Filament v4 Beta - Feature Overview
-slug: leandrocfe-filament-v4-beta-feature-overview
+title: What's new in Filament v4? - Feature Overview
+slug: leandrocfe-whats-new-in-filament-v4
 author_slug: leandrocfe
-publish_date: 2025-06-09
+publish_date: 2025-08-12
 categories: [general]
 type_slug: article
-versions: [3,4]
+versions: [4]
 ---
 
-![Filament v4 Beta - Feature Overview](/images/content/articles/leandrocfe-filament-v4-beta-feature-overview/v4-beta-feature-overview.webp)
+![What's new in Filament v4](/images/content/articles/leandrocfe-whats-new-in-filament-v4/v4-whats-new.webp)
 
 ## Introduction
 
-The **Filament v4 Beta** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. In this article, we highlight what's new and how these changes can improve your workflow!
+**Filament v4** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. In this article, we highlight what's new and how these changes can improve your workflow!
 
-To upgrade your app to Filament v4 beta, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
-
-> You are currently viewing the features for Filament `4.x`, which is currently in `beta` and is not `stable`. Breaking changes may be introduced to releases during the beta period. Please report any issues you encounter on [GitHub](https://github.com/filamentphp/filament/issues/new).
-
-> Looking for the current stable version? Visit the [3.x documentation](https://filamentphp.com/docs/3.x).
+To upgrade your app to Filament v4, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
 
 ## Highlights
 
@@ -33,6 +29,10 @@ There are many new features and improvements in Filament v4 Beta, but here are s
 - [**Tables with custom data**](#tables-with-custom-data): Tables can now be backed by custom data sources, allowing you to render external or computed data without relying on Eloquent models.
 - [**Improved bulk action system**](#bulk-actions): Authorize individual records in bulk actions, use notifications to inform users of bulk action results with success and failure counts grouped by failure reason, and benefit from improved performance through chunked processing of selected records.
 - [**Restructured documentation**](https://filamentphp.com/docs/4.x): The Filament documentation has been restructured to provide a clearer overview of the features and how they work together. The new documentation includes more examples, cross-references, and explanations of how features work internally.
+
+[Dennis Koch](https://github.com/pxlrbt) gave a great presentation demoing and explaining many of these new features recently. You can watch it here:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8qyV696TALA?si=sOAf8O5vrW8aQ3ny" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## General
 
@@ -490,10 +490,9 @@ This gives you full control over the user experience when something goes wrong.
 
 ## Conclusion
 
-Filament v4 Beta brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain. Since it's still in `beta`, now is the perfect time to explore the new features and share feedback.
-If you need a `stable` version, refer to the [3.x documentation](https://filamentphp.com/docs/3.x).
+Filament v4 brings a wide range of improvements designed to make your development experience faster, more consistent, and easier to maintain.
 
-To upgrade your app to Filament v4 beta, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
+To upgrade your app to Filament v4, please read the [upgrade guide](https://filamentphp.com/docs/4.x/upgrade-guide). To install Filament v4 into a new app, please visit the [installation guide](https://filamentphp.com/docs/4.x/introduction/installation).
 
 Special thanks to [Dan Harrin](https://github.com/danharrin) for his incredible work on Filament v4!
 

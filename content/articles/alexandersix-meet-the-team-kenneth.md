@@ -4,7 +4,7 @@ slug: alexandersix-meet-the-team-kenneth-sese
 author_slug: alexandersix
 publish_date: 2025-01-30
 categories: [general]
-type_slug: news
+type_slug: article
 ---
 
 ![Meet the Team: Kenneth Sese](/images/content/articles/alexandersix-meet-the-team-kenneth/meet-the-team-kenneth.webp)

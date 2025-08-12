@@ -12,7 +12,7 @@
             })
 
             // Reset the page number on category, type or version change
-            $watch('[selectedCategories.size, selectedType, selectedVersion]', () => {
+            $watch('[selectedCategories.size, selectedType]', () => {
                 currentPage = 1
             })
 
@@ -55,7 +55,6 @@
         search: $queryString('').usePush().as('search'),
         selectedCategories: new Set(),
         selectedType: $queryString('all').usePush().as('type'),
-        selectedVersion: $queryString('3').usePush().as('version'),
 
         articles: @js($articles),
         categories: @js($categories),
@@ -86,13 +85,6 @@
                     ),
                 )
             }
-
-            // Show articles that are in the selected version, or no version at all
-            filterResult = filterResult.filter(
-                (article) =>
-                    article.versions?.includes(+this.selectedVersion) ||
-                    ! article.versions?.length,
-            )
 
             // If the selectedType is 'all', show all records, else show only the records that match the selected type
             filterResult = filterResult.filter(
@@ -199,50 +191,7 @@
 
         <div
             class="flex w-full flex-1 flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"
-        >
-            {{-- Version Switch --}}
-            <div
-                class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
-            >
-                <div
-                    x-on:click="selectedVersion = '1'"
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
-                        'text-salmon': selectedVersion === '1',
-                    }"
-                >
-                    v1.x
-                </div>
-                <div
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    x-on:click="selectedVersion = '2'"
-                    :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
-                        'text-salmon': selectedVersion === '2',
-                    }"
-                >
-                    v2.x
-                </div>
-                <div
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    x-on:click="selectedVersion = '3'"
-                    :class="{
-                        'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
-                        'text-salmon': selectedVersion === '3',
-                    }"
-                >
-                    v3.x
-                </div>
-                <div
-                    class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
-                    :class="{
-                        'translate-x-[4.1rem]': selectedVersion === '2',
-                        'translate-x-[8.2rem]': selectedVersion === '3',
-                    }"
-                ></div>
-            </div>
-        </div>
+        ></div>
 
         <div
             class="flex w-full flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end"

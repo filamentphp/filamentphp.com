@@ -4,7 +4,7 @@ slug: alexandersix-meet-the-team-hassan
 author_slug: alexandersix
 publish_date: 2025-03-29
 categories: [general]
-type_slug: news
+type_slug: article
 ---
 
 ![Meet the Team: Hassan Zahirnia](/images/content/articles/alexandersix-meet-the-team-hassan/meet-the-team-hassan.webp)

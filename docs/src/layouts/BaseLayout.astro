@@ -29,7 +29,7 @@ let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/installation/", "3.x", "panels", "installation"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "4.x", "introduction", "overview"];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
@@ -46,7 +46,7 @@ let nextPage = allLinks[linkIndex + 1]
 let section = packageNavigation.links?.find((item) => item.slug === currentSection) ?? null;
 
 pageTitle = pageTitle ?? buildTitle(title, packageNavigation);
-const canonicalURL = ((currentVersion !== '4.x') && (currentVersion !== '3.x')) ? new URL('docs/3.x', Astro.site) : new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = (currentVersion !== '4.x') ? new URL('docs/4.x', Astro.site) : new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -171,19 +171,11 @@ const canonicalURL = ((currentVersion !== '4.x') && (currentVersion !== '3.x')) 
         </div>
     </div>
     <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10">
-        {(currentVersion === '4.x') && (
-            <Aside variant="warning">
-                <p><span class="font-medium">You are currently viewing the documentation for Filament 4.x</span>, which is currently in beta and is not stable. Breaking changes may be introduced to releases during the beta period. Please report any issues you encounter on <a href="https://github.com/filamentphp/filament/issues/new" target="_blank" class="font-medium underline">GitHub</a>.</p>
-
-                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/3.x" class="font-medium underline">3.x documentation</a>.</p>
-            </Aside>
-        )}
-
-        {(currentVersion !== '4.x') && (currentVersion !== '3.x') && (
+        {(currentVersion !== '4.x') && (
             <Aside variant="warning">
                 <p><span class="font-medium">You are currently viewing the documentation for Filament {currentVersion}</span>, which is a previous version of Filament.</p>
 
-                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/3.x" class="font-medium underline">3.x documentation</a>.</p>
+                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/4.x" class="font-medium underline">4.x documentation</a>.</p>
             </Aside>
         )}
 
