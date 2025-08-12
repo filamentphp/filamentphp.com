@@ -7,6 +7,8 @@ categories: [general]
 type_slug: news
 ---
 
+![Filament v4 is Stable!](/images/content/articles/alexandersix-filament-v4-is-stable/v4-stable.webp)
+
 It's official! As of today, August 12, 2025, Filament v4 is officially stable!
 And in large part, that is thanks to our incredible community and all the help
 with testing, bug fixing, and overall recommendations. We don't take for granted

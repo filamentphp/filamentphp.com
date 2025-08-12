@@ -8,6 +8,8 @@ type_slug: article
 versions: [4]
 ---
 
+![What's new in Filament v4](/images/content/articles/leandrocfe-whats-new-in-filament-v4/v4-whats-new.webp)
+
 ## Introduction
 
 **Filament v4** is here with a range of powerful, helpful updates. It's faster, easier to use, and gives you more control when building applications. In this article, we highlight what's new and how these changes can improve your workflow!
