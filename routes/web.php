@@ -129,13 +129,13 @@ Route::prefix('/community')->group(function () {
 Route::prefix('/content')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
 
+    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-whats-new-in-filament-v4');
+
     Route::name('articles.')->group(function () {
         Route::prefix('/{article:slug}')->group(function () {
             Route::get('/', Controllers\Articles\ViewArticleController::class)->name('view');
         });
     });
-
-    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-whats-new-in-filament-v4');
 });
 
 Route::prefix('/plugins')->group(function () {
