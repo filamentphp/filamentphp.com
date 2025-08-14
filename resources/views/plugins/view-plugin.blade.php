@@ -318,7 +318,7 @@
                                     <div>Version:</div>
                                     <select
                                         x-data="{
-                                            selected: @js(request()->query('v')),
+                                            selected: @js(request()->query('v') ?? array_key_last($plugin->docs_urls)),
                                             init() {
                                                 this.$watch('selected', () => {
                                                     const url = new URL(window.location)

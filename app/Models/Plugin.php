@@ -85,7 +85,7 @@ class Plugin extends Model implements Starrable
         }
 
         if (filled($this->docs_urls)) {
-            return $this->docs_urls[$version ?? key($this->docs_urls)] ?? null;
+            return $this->docs_urls[$version ?? array_key_last($this->docs_urls)] ?? null;
         }
 
         return null;
