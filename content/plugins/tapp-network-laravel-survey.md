@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-survey/main/REA
 github_repository: TappNetwork/filament-survey
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2023-08-12
 ---
