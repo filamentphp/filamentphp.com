@@ -10,6 +10,6 @@ docs_url: https://filament-kanban.heloufir.dev/docs.md
 github_repository: heloufir/filament-kanban
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2023-11-02
 ---
