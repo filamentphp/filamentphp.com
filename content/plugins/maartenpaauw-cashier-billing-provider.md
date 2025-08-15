@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/maartenpaauw/filament-cashier-billin
 github_repository: maartenpaauw/filament-cashier-billing-provider
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-03-20
 ---
