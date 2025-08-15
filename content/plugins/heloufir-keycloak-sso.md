@@ -10,6 +10,6 @@ docs_url: https://gist.githubusercontent.com/heloufir/2a0fc88f52d0d43dec45ac2407
 github_repository: heloufir/filament-keycloak
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2023-10-28
 ---
