@@ -9,6 +9,6 @@ discord_url: https://discord.com/channels/883083792112300104/1220045157018239156
 github_repository: hugomayo7/filament-error-mailer
 has_dark_theme: false
 has_translations: false
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2024-03-20
 ---
