@@ -89,14 +89,14 @@
                 class="flex rounded-full bg-[#58597E] p-1.5 text-white shadow shadow-black/5 transition duration-300 hover:bg-[#6D72DD]"
             >
                 <img
-                    src="https://avatars.githubusercontent.com/u/41773797?v=4"
-                    alt="Dan Harrin"
+                    src="{{ Vite::asset('resources/images/consulting/kirschbaum/kirschbaum.webp') }}"
+                    alt="Kirschbaum logo"
                     class="h-10 w-10 rounded-full ring-1 ring-white"
                     loading="lazy"
                 />
                 <div class="px-5 py-2">
                     <span class="inline-block">Contact</span>
-                    <strong>Dan</strong>
+                    <strong>Kirschbaum</strong>
                     <span class="hidden min-[530px]:inline-block">
                         About Your Project
                     </span>
@@ -107,32 +107,32 @@
                 <div class="flex items-center gap-3">
                     <div class="group/overlapping-experts flex">
                         <img
-                            src="{{ Vite::asset('resources/images/consulting/kirschbaum/alex.webp') }}"
-                            alt="Alex Six"
+                            src="{{ Vite::asset('resources/images/consulting/kirschbaum/grant.webp') }}"
+                            alt="Grant"
                             class="h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white"
                             loading="lazy"
                         />
                         <img
                             src="{{ Vite::asset('resources/images/consulting/kirschbaum/wilker.webp') }}"
-                            alt="Wilker Mesquita"
+                            alt="Wilker"
                             class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="{{ Vite::asset('resources/images/consulting/kirschbaum/derek.webp') }}"
-                            alt="Derek Goetz"
+                            alt="Derek"
                             class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
-                            src="{{ Vite::asset('resources/images/consulting/kirschbaum/kevin.webp') }}"
-                            alt="Kevin Ullyott"
+                            src="{{ Vite::asset('resources/images/consulting/kirschbaum/erin.webp') }}"
+                            alt="Erin"
                             class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
                         <img
                             src="{{ Vite::asset('resources/images/consulting/kirschbaum/babacar.webp') }}"
-                            alt="Babacar Cisse DIA"
+                            alt="Babacar"
                             class="-ml-4 h-10 w-10 rounded-full bg-[#58597E] ring-1 ring-white transition-all duration-300 group-hover/overlapping-experts:-ml-2"
                             loading="lazy"
                         />
