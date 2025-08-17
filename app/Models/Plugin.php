@@ -85,7 +85,10 @@ class Plugin extends Model implements Starrable
         }
 
         if (filled($this->docs_urls)) {
-            return $this->docs_urls[$version ?? key($this->docs_urls)] ?? null;
+            $docsUrls = $this->docs_urls;
+            krsort($docsUrls);
+
+            return $docsUrls[$version ?? array_key_first($docsUrls)] ?? null;
         }
 
         return null;
@@ -174,7 +177,7 @@ class Plugin extends Model implements Starrable
 
     public function isCompatibleWithLatestVersion(): bool
     {
-        return in_array(3, $this->versions);
+        return in_array(4, $this->versions);
     }
 
     public function getAuthor(): Author

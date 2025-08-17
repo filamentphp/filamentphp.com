@@ -295,11 +295,11 @@
                         x-ref="description"
                         class="text-xl font-medium leading-normal opacity-90 lg:text-2xl"
                     >
-                        A collection of beautiful full-stack
+                        An open source UI framework,
                         <br />
-                        components. The perfect starting
+                        built with Livewire to help you
                         <br />
-                        point for your next app.
+                        ship admin panels & apps fast
                     </div>
 
                     {{-- Star --}}
