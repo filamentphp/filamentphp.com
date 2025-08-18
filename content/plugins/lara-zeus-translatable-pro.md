@@ -4,7 +4,7 @@ slug: lara-zeus-translatable-pro
 author_slug: lara-zeus
 categories: [panel-builder, kit, developer-tool]
 checkout_url: https://larazeus.com/translatable-pro?ref=filament-plugins#pricing
-description: Build Advanced, Optimized, High Performance Translatable Apps.
+description: Build Advanced, Optimized, High Performance Translatable For Multi Languages Apps.
 discord_url: https://discord.com/channels/883083792112300104/1282750611586154516
 docs_urls:
   v4: http://larazeus.com/storage/docs/translatable-pro/v2/filament.md
