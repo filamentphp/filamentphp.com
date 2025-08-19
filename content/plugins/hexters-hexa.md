@@ -6,9 +6,9 @@ categories: [panel-builder, panel-authentication, developer-tool]
 description:  Effortless role and permission management plugin for Filament
 discord_url: https://discord.com/channels/883083792112300104/1255949994486399006
 docs_urls: 
-    v1: https://github.com/hexters/hexa-lite/blob/main/docs/README.V1.md
-    v2: https://github.com/hexters/hexa-lite/blob/main/docs/README.V2.md
-    v3: https://github.com/hexters/hexa-lite/blob/main/docs/README.V3.md
+    v1: https://raw.githubusercontent.com/hexters/hexa-lite/refs/heads/main/docs/README.V1.md
+    v2: https://raw.githubusercontent.com/hexters/hexa-lite/refs/heads/main/docs/README.V2.md
+    v3: https://raw.githubusercontent.com/hexters/hexa-lite/refs/heads/main/docs/README.V3.md
 github_repository: hexters/hexa-lite
 has_dark_theme: true
 has_translations: false
