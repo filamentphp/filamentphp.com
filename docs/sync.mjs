@@ -98,10 +98,9 @@ versions.forEach((version) => {
 
                                 let result = data.replace(
                                     '---',
-                                    `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: https://github.com/filamentphp/filament/edit/${file.replace(
-                                        'filament/',
-                                        '',
-                                    )}"`,
+                                    `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: https://github.com/filamentphp/filament/edit/${file
+                                        .replace('filament/', '')
+                                        .replace(/\\/g, '/')}"`,
                                 )
 
                                 fs.writeFile(
@@ -238,10 +237,9 @@ versions.forEach((version) => {
 
                                         let result = data.replace(
                                             '---',
-                                            `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file.replace(
-                                                'filament/',
-                                                '',
-                                            )}"`,
+                                            `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file
+                                                .replace('filament/', '')
+                                                .replace(/\\/g, '/')}"`,
                                         )
 
                                         fs.writeFile(
@@ -379,10 +377,9 @@ versions.forEach((version) => {
 
                         let result = data.replace(
                             '---',
-                            `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file.replace(
-                                'filament/',
-                                '',
-                            )}"`,
+                            `---\nlayout: "@layouts/BaseLayout.astro"\ngithubUrl: "https://github.com/filamentphp/filament/edit/${file
+                                .replace('filament/', '')
+                                .replace(/\\/g, '/')}"`,
                         )
 
                         fs.writeFile(

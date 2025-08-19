@@ -83,65 +83,6 @@
                     </div>
                 </div>
 
-                @if ($article->isCompatibleWithLatestVersion() !== null)
-                    {{-- Features and Health Checks --}}
-                    <div
-                        class="grid grid-cols-[repeat(auto-fill,minmax(315px,1fr))] gap-x-16 gap-y-10 pt-7"
-                    >
-                        {{-- Latest Version Compatibility --}}
-                        <div class="flex items-center gap-3">
-                            @if ($article->isCompatibleWithLatestVersion())
-                                <div
-                                    class="grid h-9 w-9 place-items-center rounded-full bg-lime-200/50 text-lime-600"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        height="22"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
-                                        />
-                                    </svg>
-                                </div>
-                            @else
-                                <div
-                                    class="grid h-9 w-9 place-items-center rounded-full bg-rose-200/50 text-rose-600"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        height="22"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M12 6v8m.05 4v.1h-.1V18h.1Z"
-                                        />
-                                    </svg>
-                                </div>
-                            @endif
-
-                            <div>
-                                <div class="font-medium">
-                                    {{ $article->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
-                                </div>
-
-                                <div class="text-xs text-dolphin/80">
-                                    Supported versions:
-                                    {{ implode(' - ', array_map(fn (int $version): string => $version . '.x', $article->versions)) }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endif
-
                 {{-- Categories --}}
                 <div class="flex flex-wrap items-center gap-3.5 pt-6">
                     @foreach ($article->getCategories() as $category)
@@ -160,7 +101,7 @@
                     <div
                         class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                     >
-                        {!! \App\Support\Markdown::parse($article->content) !!}
+                        {!! \App\Support\Markdown::parse($article->content, hasTableOfContents: false, shouldSanitize: false) !!}
                     </div>
                 </div>
             </div>
