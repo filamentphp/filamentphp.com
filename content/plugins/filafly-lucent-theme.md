@@ -9,7 +9,7 @@ docs_url: https://filafly.com/docs/lucent-overview
 github_repository: filafly/lucent
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-06-19
 url: https://filafly.com/themes/lucent
 anystack_id: 9e304159-d21b-4ca2-81a1-2fbe3f5bc292
