@@ -7,8 +7,8 @@ description: A Filament plugin for creating elegant documentation pages within y
 discord_url: 
 docs_url: https://raw.githubusercontent.com/eighty9nine/filament-docs/refs/heads/3.x/README.md
 github_repository: eighty9nine/filament-docs
-has_dark_theme: yes
-has_translations: yes
+has_dark_theme: true
+has_translations: true
 versions: [3]
-publish_date:
+publish_date: 2025-08-19
 ---
