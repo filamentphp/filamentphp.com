@@ -10,5 +10,5 @@ github_repository: panicdevs/modulite
 has_dark_theme: false
 has_translations: false
 versions: [4]
-publish_date: 2025-08-15
+publish_date: 2025-08-19
 ---
