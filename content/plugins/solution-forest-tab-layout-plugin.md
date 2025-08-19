@@ -13,5 +13,5 @@ github_repository: solutionforest/filament-tab-plugin
 has_dark_theme: true
 has_translations: false
 versions: [2, 3, 4]
-publish_date: 2025-08-04
+publish_date: 2025-08-19
 ---

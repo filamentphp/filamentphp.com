@@ -5,7 +5,7 @@ author_slug: solution-forest
 categories: [kit, developer-tool, panel-builder]
 description: InspireCMS is a flexible, un-opinionated content engine for Laravel, built on Filament.
 discord_url: https://discord.com/channels/883083792112300104/1401982951960350872
-docs_url: https://inspirecms.net/docs/v1
+url: https://inspirecms.net/docs/v1
 github_repository: solutionforest/Inspirecms-core
 has_dark_theme: true
 has_translations: true

@@ -6,10 +6,7 @@ author_slug: solution-forest
 categories: [kit, developer-tool]
 description: The Filament CMS Website Plugin is specifically built for website owners who use Filament CMS to manage their website content.
 discord_url: https://discord.com/channels/883083792112300104/1107360799636340880
-docs_urls:
-    v4: https://filament-cms-website-demo.solutionforest.net/docs/filament-cms-website-plugin/3.x
-    v3: https://filament-cms-website-demo.solutionforest.net/docs/filament-cms-website-plugin/2.x
-    v2: https://filament-cms-website-demo.solutionforest.net/docs/filament-cms-website-plugin/2.x
+url: https://filament-cms-website-demo.solutionforest.net/docs/filament-cms-website-plugin
 github_repository: solutionforest/filament-cms-website-plugin
 has_dark_theme: false
 has_translations: true
