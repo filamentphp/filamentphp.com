@@ -9,7 +9,7 @@ github_repository: empty
 has_dark_theme: true
 has_translations: true
 price: €59.00
-versions: [3]
+versions: [3, 4]
 publish_date: 2023-09-05
 ---
 
