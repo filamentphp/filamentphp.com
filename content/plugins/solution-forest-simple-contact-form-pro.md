@@ -13,9 +13,7 @@ versions: [3,4]
 publish_date: 2025-07-25
 ---
 
-
-<img width="3840" height="2160" alt="Simple-Contact-Form-pro" src="https://github.com/user-attachments/assets/8961ad7f-f5ff-40c8-ac5f-445d711001f2" />
-
+![Simple-Contact-Form-Pro](https://github.com/user-attachments/assets/302127a9-fada-404c-ade9-d7658a3bfa8c)
 
 # Simple Contact Form Pro - FilamentPHP Plugin
 
@@ -27,15 +25,6 @@ publish_date: 2025-07-25
 [![Total Downloads](https://img.shields.io/packagist/dt/solutionforest/simple-contact-form-pro.svg?style=flat-square)](https://packagist.org/packages/solutionforest/simple-contact-form-pro)
 
 ---
-
-## Getting a License
-
-Simple Contact Form Pro is a premium plugin. You need to purchase a license to use it in your projects.
-
-**Purchase License**: [https://checkout.anystack.sh/simple-contact-form-pro](https://checkout.anystack.sh/simple-contact-form-pro)
-
-## Basic Version
-    https://github.com/solutionforest/simple-contact-form
 
 ## 🚀 Pro Features
 
@@ -50,56 +39,25 @@ Simple Contact Form Pro is a premium plugin. You need to purchase a license to u
 - Basic form management
 - Email notifications
 - Responsive design
+
 ### Supported Filament versions
+
 | Filament Version | Plugin Version |
-|------------------|----------------|
-| v3               | 0.0.3          |
-| v4               | 2.0.1          |
+| ---------------- | -------------- |
+| v3               | 0.0.4          |
+| v4               | 2.0.2          |
+
 ## Installation
-
-### Step 1: Add Private Repository
-
-Add the private composer repository to your `composer.json`:
-
-```json
-{
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://simple-contact-form-pro.composer.sh"
-    }
-  ]
-}
-```
-
-### Step 2: Install via Composer
-
-Install the plugin using composer:
 
 ```bash
 composer require solutionforest/simple-contact-form-pro
 ```
 
-When prompted for authentication:
-- **Username**: Your license email address
-- **Password**: Your license key
-> **Note**:
-> If your license is not assigned to a licensee you can enter unlock as the username instead of the email.
-
-> If your license requires a fingerprint, append it to your license key with a colon (e.g., `license-key:your-domain.com`)
-
-for eaxmple:
+For Filament v4, use the v2.0.1 version:
 
 ```bash
-Loading composer repositories with package information
-Authentication required (simple-contact-form-pro.composer.sh):
-Username: philo@anystack.sh
-Password: 8c21df8f-6273-4932-b4ba-8bcc723ef500:anystack.sh
+composer require solution-forest/simple-contact-form:^2.0.2
 ```
-
-
-
-### Step 3: Publish and Setup
 
 Publish config and migrations:
 
@@ -110,12 +68,10 @@ php artisan vendor:publish --tag="simple-contact-form-pro-migrations"
 php artisan migrate
 ```
 
-### Step 4: Register Plugin
-
 Register the plugin in your Filament Panel provider:
 
 ```php
-use SolutionForest\SimpleContactFormPro\SimpleContactFormProPlugin;
+use Solutionforest\SimpleContactFormPro\SimpleContactFormProPlugin;
 
 public function panel(Panel $panel): Panel
 {
@@ -127,10 +83,33 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-## Demo
+Simple Contact Form provides a Filament form that can be used outside the Filament panel, but it requires Filament styles. There are several ways to set this up depending on your environment:
 
+1. **Filament v3 with Tailwind v3:**  
+   Follow the official Filament installation instructions: [https://filamentphp.com/docs/3.x/forms/installation](https://filamentphp.com/docs/3.x/forms/installation).
 
-https://github.com/user-attachments/assets/801bcbb3-40f4-4b33-8fa8-bd0f03eff27f
+2. **Filament v3 with Tailwind v4:**  
+   Publish the built-in CSS assets with the following command:
+
+    ```bash
+    php artisan vendor:publish --tag="simple-contact-form-assets"
+    ```
+
+3. **Filament v4 (expects Tailwind v4):**  
+   Add the following to your `app.css` or your stylesheet:
+
+    ```css
+    @import '../../vendor/filament/filament/resources/css/theme.css';
+
+    @source '../../app/Filament/**/*';
+    @source '../../resources/views/filament/**/*';
+    ```
+
+    Then build your assets:
+
+    ```bash
+    npm run build
+    ```
 
 
 ## Usage
@@ -150,6 +129,22 @@ Use the Blade component:
 
 ## Configuration
 
+You can customize the plugin's resources using the following options:
+
+```php
+SimpleContactFormProPlugin::make()
+        ->modelLabel('Custom Contact Form') // Singular label for the model
+        ->pluralModelLabel('Custom Contact Forms') // Plural label for the model
+        ->navigationLabel('My Contact Forms') // Label in the navigation menu
+        ->navigationIcon('heroicon-o-envelope') // Icon for navigation
+        ->navigationGroup('Communication') // Group in the navigation
+        ->navigationSort(100) // Sort order in navigation
+        ->navigationParentItem(null) // Parent navigation item (if any)
+        ->slug('contact') // Custom route slug
+        ->shouldSkipAuth(false) // Require authentication
+        ->shouldRegisterNavigation(true) // Show in navigation
+        ->hasTitleCaseModelLabel(true); // Use title case for labels
+```
 All features (hooks, file upload, mail record, etc.) can be enabled/disabled and customized in `config/simple-contact-form-pro.php`.
 
 ### Enable/Disable Mail Send
@@ -189,9 +184,9 @@ You can extend the built-in `ContactFormListener` for more structured handling:
 
 namespace App\Listeners;
 
-use SolutionForest\SimpleContactFormPro\Listeners\ContactFormListener;
-use SolutionForest\SimpleContactFormPro\Events\BeforeCreateContactForm;
-use SolutionForest\SimpleContactFormPro\Events\AfterCreateContactForm;
+use Solutionforest\SimpleContactFormPro\Listeners\ContactFormListener;
+use Solutionforest\SimpleContactFormPro\Events\BeforeCreateContactForm;
+use Solutionforest\SimpleContactFormPro\Events\AfterCreateContactForm;
 
 class YourCutsomeListenr extends ContactFormListener
 {   
@@ -212,11 +207,11 @@ And then you will found out following in the config file:
 
 ```php
  'events' => [
-        SolutionForest\SimpleContactFormPro\Events\BeforeCreateContactForm::class => [
-            SolutionForest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreating',
+        Solutionforest\SimpleContactFormPro\Events\BeforeCreateContactForm::class => [
+            Solutionforest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreating',
         ],
-        SolutionForest\SimpleContactFormPro\Events\AfterCreateContactForm::class => [
-            SolutionForest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreated',
+        Solutionforest\SimpleContactFormPro\Events\AfterCreateContactForm::class => [
+            Solutionforest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreated',
         ],
     ],
 ```
@@ -226,15 +221,23 @@ In Laravel 11 or above, listeners will be registered automatically once you crea
 ```php
  'events' => [
     // comment out this part for using your custom listener
-    // SolutionForest\SimpleContactFormPro\Events\BeforeCreateContactForm::class => [
-    //     SolutionForest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreating',
+    // Solutionforest\SimpleContactFormPro\Events\BeforeCreateContactForm::class => [
+    //     Solutionforest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreating',
     // ],
-    // SolutionForest\SimpleContactFormPro\Events\AfterCreateContactForm::class => [
-    //     SolutionForest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreated',
+    // Solutionforest\SimpleContactFormPro\Events\AfterCreateContactForm::class => [
+    //     Solutionforest\SimpleContactFormPro\Listeners\ContactFormListener::class . '@handleContactFormCreated',
     // ], 
     ],
 ```
 
+### Customizing Translations
+
+If you need to modify the translations, publish the language files:
+
+```bash
+php artisan vendor:publish --tag="simple-contact-form-lang"
+php artisan vendor:publish --tag="simple-contact-form-pro-lang"
+```
 
 
 
