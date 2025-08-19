@@ -314,11 +314,16 @@
                                 Documentation
                             </div>
                             @if (filled($plugin->docs_urls))
+                                @php
+                                    $docsUrls = $plugin->docs_urls;
+                                    krsort($docsUrls);
+                                @endphp
+
                                 <div class="flex flex-wrap items-center gap-3">
                                     <div>Version:</div>
                                     <select
                                         x-data="{
-                                            selected: @js(request()->query('v') ?? array_key_last($plugin->docs_urls)),
+                                            selected: @js(request()->query('v') ?? array_key_first($docsUrls)),
                                             init() {
                                                 this.$watch('selected', () => {
                                                     const url = new URL(window.location)
@@ -331,7 +336,7 @@
                                         x-model="selected"
                                         class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
                                     >
-                                        @foreach ($plugin->docs_urls as $key => $value)
+                                        @foreach ($docsUrls as $key => $value)
                                             <option value="{{ $key }}">
                                                 {{ $key }}
                                             </option>
