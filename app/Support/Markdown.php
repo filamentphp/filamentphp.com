@@ -6,6 +6,8 @@ use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\HtmlString;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\Embed\Bridge\OscaroteroEmbedAdapter;
+use League\CommonMark\Extension\Embed\EmbedExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
 use League\CommonMark\Extension\Table\TableExtension;
 use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
@@ -17,10 +19,15 @@ class Markdown implements Htmlable, Stringable
 {
     protected Environment $environment;
 
-    public function __construct(protected string $content)
+    public function __construct(protected string $content, bool $hasTableOfContents = true, protected bool $shouldSanitize = true)
     {
         $this->environment = new Environment([
             'allow_unsafe_links' => false,
+            'embed' => [
+                'adapter' => new OscaroteroEmbedAdapter,
+                'allowed_domains' => ['youtube.com', 'youtube-nocookie.com'],
+                'fallback' => 'link',
+            ],
             'heading_permalink' => [
                 'html_class' => 'heading-anchor',
                 'id_prefix' => '',
@@ -28,7 +35,7 @@ class Markdown implements Htmlable, Stringable
                 'symbol' => '#',
                 'title' => 'Permalink',
             ],
-            'table_of_contents' => [
+            ...$hasTableOfContents ? ['table_of_contents' => [
                 'html_class' => 'table-of-contents',
                 'position' => 'top',
                 'style' => 'bullet',
@@ -36,19 +43,23 @@ class Markdown implements Htmlable, Stringable
                 'max_heading_level' => 6,
                 'normalize' => 'relative',
                 'placeholder' => null,
-            ],
+            ]] : [],
         ]);
 
         $this->environment->addExtension(new CommonMarkCoreExtension);
+        $this->environment->addExtension(new EmbedExtension);
         $this->environment->addExtension(new TableExtension);
         $this->environment->addExtension(new HeadingPermalinkExtension);
         $this->environment->addExtension(new TorchlightExtension);
-        $this->environment->addExtension(new TableOfContentsExtension);
+
+        if ($hasTableOfContents) {
+            $this->environment->addExtension(new TableOfContentsExtension);
+        }
     }
 
-    public static function parse(string $text): static
+    public static function parse(string $text, bool $hasTableOfContents = true, bool $shouldSanitize = true): static
     {
-        $static = app(static::class, ['content' => $text]);
+        $static = app(static::class, ['content' => $text, 'hasTableOfContents' => $hasTableOfContents, 'shouldSanitize' => $shouldSanitize]);
 
         $static->convert();
         $static->removeH1Tags();
@@ -140,6 +151,10 @@ class Markdown implements Htmlable, Stringable
 
     public function __toString(): string
     {
+        if (! $this->shouldSanitize) {
+            return $this->content;
+        }
+
         return str($this->content)->sanitizeHtml();
     }
 
