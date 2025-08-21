@@ -5,10 +5,12 @@ author_slug: jacobtims
 categories: [form-builder, form-field]
 description: A Filament plugin for adding inline date-time pickers to your forms.
 discord_url:
-docs_url: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/heads/main/README.md
+docs_urls:
+    v4: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/heads/main/README.md
+    v3: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/tags/v1.0.1/README.md
 github_repository: Jacobtims/inline-date-time-picker
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-08-21
 ---
