@@ -4,7 +4,7 @@ slug: dmandrade-copyactions
 author_slug: dmandrade
 categories: [action]
 description: An easy-to-use copy actions for Pages, Tables and Form Fields.
-discord_url: https://discord.com/channels/883083792112300104/1029765629483438210
+discord_url:
 docs_url: https://raw.githubusercontent.com/webbingbrasil/filament-copyactions/4.x/README.md
 github_repository: webbingbrasil/filament-copyactions
 has_dark_theme: true
