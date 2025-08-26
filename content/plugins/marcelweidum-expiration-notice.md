@@ -2,7 +2,7 @@
 name: Expiration Notice
 slug: marcelweidum-expiration-notice
 author_slug: marcelweidum
-categories: [panel-builder, theme]
+categories: [panel-builder]
 description: Customize the livewire expiration notice.
 discord_url: https://discord.com/channels/883083792112300104/1385352172027510795
 docs_url: https://raw.githubusercontent.com/MarcelWeidum/filament-expiration-notice/refs/heads/main/README.md
