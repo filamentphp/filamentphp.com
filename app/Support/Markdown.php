@@ -114,9 +114,9 @@ class Markdown implements Htmlable, Stringable
     public function absoluteImageUrls(string $baseUrl): static
     {
         $this->content = preg_replace(
-            pattern: '/src=["\'](?!https?:\/\/)([^"\']+)["\'][^>]/i',
-            replacement: 'src="' . $baseUrl . '$1" ',
-            subject: $this->content
+            '/\b(src|srcset)\s*=\s*(["\'])(?!https?:\/\/|data:|\/\/)([^"\']+)\2/i',
+            '$1=$2' . $baseUrl . '$3$2',
+            $this->content
         );
 
         return $this;
