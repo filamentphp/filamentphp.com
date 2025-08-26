@@ -10,7 +10,7 @@ github_repository: solutionforest/simple-contact-form-pro
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-08-19
+publish_date: 2025-08-25
 ---
 
 ![Simple-Contact-Form-Pro](https://github.com/user-attachments/assets/302127a9-fada-404c-ade9-d7658a3bfa8c)
