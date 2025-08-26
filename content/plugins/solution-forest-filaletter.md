@@ -14,7 +14,7 @@ versions: [3, 4]
 publish_date: 2025-01-05
 ---
 
-Official site and Documents: [https://filaletter.com/](https://filaletter.com/)
+Official site and Documents: [https://filaletter.com](https://filaletter.com/)
 
 # Filaletter - Streamline Email Marketing within FilamentPHP
 
