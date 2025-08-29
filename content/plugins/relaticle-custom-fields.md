@@ -8,7 +8,7 @@ discord_url: https://discord.gg/BWAFvK6b
 github_repository: relaticle/custom-fields
 docs_url: https://raw.githubusercontent.com/relaticle/custom-fields-community/main/docs/v1.md
 has_dark_theme: true
-has_translations: false
-versions: [3]
+has_translations: true
+versions: [3, 4]
 publish_date: 2024-12-22
 ---
