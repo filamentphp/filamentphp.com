@@ -11,7 +11,7 @@ url: https://filament.pxlrbt.de/spotlight-pro/
 github_repository: pxlrbt/filament-spotlight-pro
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-07-12
 ---
 

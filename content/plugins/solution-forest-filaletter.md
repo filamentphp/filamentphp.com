@@ -10,11 +10,11 @@ url: https://filaletter.solutionforest.net/documentation/1-getting-started/1-int
 github_repository: solutionforest/filaletter
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-01-05
 ---
 
-Official site and Documents: [https://filaletter.solutionforest.net/](https://filaletter.solutionforest.net/)
+Official site and Documents: [https://filaletter.com](https://filaletter.com/)
 
 # Filaletter - Streamline Email Marketing within FilamentPHP
 
