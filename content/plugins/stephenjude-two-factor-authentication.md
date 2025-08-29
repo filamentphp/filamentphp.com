@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/stephenjude/filament-two-factor-auth
 github_repository: stephenjude/filament-two-factor-authentication
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-09-07
 ---
