@@ -4,7 +4,7 @@ slug: relaticle-custom-fields
 author_slug: relaticle
 categories: [developer-tool, form-builder, form-field, table-column]
 description: Create Tailored Data Input Experiences. Your Solution for Dynamic, User-Defined Custom Form Fields
-discord_url: https://discord.gg/BWAFvK6b
+discord_url: https://discord.gg/Bg3f9XCzCM
 github_repository: relaticle/custom-fields
 price: $69.00
 checkout_url: https://relaticle.lemonsqueezy.com/checkout/buy/803d5933-4b12-4869-9d93-f96797339603?aff=jgeKp
