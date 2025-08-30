@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/saasykit/filament-oops/main/README.m
 discord_url: https://discord.com/channels/883083792112300104/1320504981928808569
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [4]
 publish_date: 2024-12-22
 ---
