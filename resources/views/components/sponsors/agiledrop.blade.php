@@ -1,3 +1,7 @@
+@props([
+    'footer' => false,
+])
+
 <a
     class="grid place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none"
     href="https://www.agiledrop.com/laravel?utm_source=filament"
@@ -5,7 +9,11 @@
     title="Agiledrop"
 >
     <svg
-        class="mt-2 h-9 w-auto fill-current"
+        @class([
+            'mt-2 w-auto fill-current',
+            'h-8' => $footer,
+            'h-12' => ! $footer,
+        ])
         viewBox="0 0 480 141"
     >
         <path
