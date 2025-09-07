@@ -13,5 +13,5 @@ github_repository: bezhanSalleh/filament-google-analytics
 has_dark_theme: true
 has_translations: true
 versions: [2, 3, 4]
-publish_date: 2023-07-31
+publish_date: 2025-09-07
 ---

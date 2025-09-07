@@ -10,5 +10,5 @@ github_repository: bezhanSalleh/filament-plugin-essentials
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-07-12
+publish_date: 2025-09-07
 ---

@@ -12,5 +12,5 @@ github_repository: bezhanSalleh/filament-panel-switch
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2023-08-07
+publish_date: 2025-09-07
 ---
