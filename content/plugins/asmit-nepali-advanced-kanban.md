@@ -8,7 +8,7 @@ author_slug: asmit-nepali
 categories: [panel-builder, kit]
 description: A premium Filament plugin providing production-ready, highly customizable Kanban boards with drag & drop functionality, workflow transitions, advanced filtering, and real-time search capabilities.
 discord_url: 
-docs_url: https://github.com/Filament-Plugins/advanced-kanban-docs/blob/main/docs.md
+docs_url: https://raw.githubusercontent.com/Filament-Plugins/advanced-kanban-docs/main/docs.md
 has_dark_theme: true
 has_translations: false
 versions: [4]
