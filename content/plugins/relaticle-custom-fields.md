@@ -2,7 +2,7 @@
 name: Custom Fields
 slug: relaticle-custom-fields
 author_slug: relaticle
-categories: [developer-tool, form-builder, form-field, table-column]
+categories: [developer-tool, form-builder, form-layout, form-field, table-column, infolist-entry]
 description: Create Tailored Data Input Experiences. Your Solution for Dynamic, User-Defined Custom Form Fields
 discord_url: https://discord.gg/Bg3f9XCzCM
 github_repository: relaticle/custom-fields
