@@ -3,7 +3,7 @@ name: Custom Fields
 slug: relaticle-custom-fields
 author_slug: relaticle
 categories: [developer-tool, form-builder, form-layout, form-field, table-column, infolist-entry]
-description: Create Tailored Data Input Experiences. Your Solution for Dynamic, User-Defined Custom Form Fields
+description: Eliminate custom field migrations forever. Let your users create and manage form fields directly in Filament admin panels with 20+ built-in field types, validation, and zero database changes.
 discord_url: https://discord.gg/Bg3f9XCzCM
 github_repository: relaticle/custom-fields
 price: $69.00
