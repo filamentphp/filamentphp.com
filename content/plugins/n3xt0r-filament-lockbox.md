@@ -8,6 +8,6 @@ github_repository: n3xt0r/filament-lockbox
 docs_url: https://raw.githubusercontent.com/n3xt0r/filament-lockbox/main/README.md
 has_dark_theme: true
 has_translations: true
-versions: [1.0.0-alpha]
+versions: [4]
 publish_date: 2025-09-13
 ---
