@@ -9,5 +9,5 @@ docs_url: https://raw.githubusercontent.com/n3xt0r/filament-lockbox/main/README.
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-09-13
+publish_date: 2025-09-15
 ---
