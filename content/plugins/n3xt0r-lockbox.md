@@ -1,6 +1,6 @@
 ---
-name: Filament Lockbox
-slug: filament-lockbox
+name: Lockbox
+slug: lockbox
 author_slug: n3xt0r
 categories: [form-builder, form-field, action, spatie, widget]
 description: A security addon for Filament v4 that protects sensitive fields with user-bound encryption keys (Split-Key, TOTP, crypto password or Passkeys).
