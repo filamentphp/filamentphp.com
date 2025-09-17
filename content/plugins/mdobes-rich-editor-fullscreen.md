@@ -10,5 +10,5 @@ github_repository: mdobes/filament-rich-editor-fullscreen
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-17-09
+publish_date: 2025-09-17
 ---
