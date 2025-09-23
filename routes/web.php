@@ -7,6 +7,7 @@ use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use App\Support\Version;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +55,9 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/api/{version?}', function (string $version = '4.x'): RedirectResponse {
+Route::get('/api/{version?}', function (string $version = Version::LATEST): RedirectResponse {
     return redirect('/api/' . $version . '/index.html');
-})->where('version', '[1-4]+\.x')->name('api-docs');
+})->where('version', '[1-'.Str::before(Version::LATEST, '.x').']+\.x')->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
     Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
@@ -74,7 +75,7 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => Version::LATEST."/{$slug}"]);
         }
 
         $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
