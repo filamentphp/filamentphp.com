@@ -4,13 +4,13 @@ namespace App\Enums;
 
 enum Version: string
 {
-    case FOUR_X = '4.x';
-    case THREE_X = '3.x';
-    case TWO_X = '2.x';
-    case ONE_X = '1.x';
+    case Four = '4.x';
+    case Three = '3.x';
+    case Two = '2.x';
+    case One = '1.x';
 
-    public static function latest(): self
+    public static function getLatest(): self
     {
-        return self::FOUR_X;
+        return self::Four;
     }
 }
