@@ -100,18 +100,6 @@ RichEditor::make('content')
     ])
 ```
 
-You can allow users to pick custom colors that aren't in the predefined list by using the `customTextColors()` method:
-
-```php
-use Filament\Forms\Components\RichEditor;
-
-RichEditor::make('content')
-    ->textColors([
-        // ...
-    ])
-    ->customTextColors()
-```
-
 [Documentation →](https://filamentphp.com.test/docs/4.x/forms/rich-editor#customizing-text-colors)
 
 ### Compact Table Repeater Style
