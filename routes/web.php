@@ -55,7 +55,7 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/api/{version?}', function (Version $version = null): RedirectResponse {
+Route::get('/api/{version?}', function (?Version $version = null): RedirectResponse {
     $version = $version ?? Version::getLatest();
 
     return redirect('/api/' . $version->value . '/index.html');
