@@ -2,7 +2,7 @@
 name: Phosphor Icons
 slug: filafly-phosphor-icons
 author_slug: filafly
-categories: [panel-builder, theme]
+categories: [panel-builder, icon-set]
 description: Quickly swap out all icons used by the Filament framework with Phosphor icons.
 discord_url: https://discord.com/channels/883083792112300104/1353175810537689098
 docs_url: https://raw.githubusercontent.com/filafly/filament-phosphor-icons/refs/heads/main/README.md

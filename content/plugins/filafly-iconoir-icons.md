@@ -2,7 +2,7 @@
 name: Iconoir Icons
 slug: filafly-iconoir-icons
 author_slug: filafly
-categories: [panel-builder, theme]
+categories: [panel-builder, icon-set]
 description: Transform your Filament interface with the elegant and modern Iconoir icon set, a perfect replacement for the default icons.
 discord_url: https://discord.com/channels/883083792112300104/1401988821465174090
 docs_urls:
