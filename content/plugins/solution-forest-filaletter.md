@@ -1,7 +1,7 @@
 ---
+anystack_id: 9d70615e-c3ce-4587-91b3-e42f67a6e457
 name: SolutionForest Filaletter
 slug: solution-forest-filaletter
-anystack_id: 9d70615e-c3ce-4587-91b3-e42f67a6e457
 author_slug: solution-forest
 categories: [kit, developer-tool]
 description: This is an email marketing plugin built specifically for Filament Admin Panel. It aims to bring the distribution of content by email into the admin panel, where we believe it should be, along with the same ethos of flexibility and user-friendliness that FilamentPHP provides. This package is based on the open-source project SendPortal Core.

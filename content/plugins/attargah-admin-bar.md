@@ -12,4 +12,3 @@ has_translations: true
 versions: [3, 4]
 publish_date: 2025-06-25
 ---
-

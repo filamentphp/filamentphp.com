@@ -1,5 +1,5 @@
 ---
-name: Google Translations 
+name: Google Translations
 slug: 3x1io-tomato-translations-google
 author_slug: 3x1io
 categories: [developer-tool]
