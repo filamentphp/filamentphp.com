@@ -2,8 +2,6 @@
 name: Amjad Iqbal
 slug: amjadiqbal
 github_url: https://github.com/amjadiqbal
-upwork_url: https://www.upwork.com/freelancers/amjadkhatri
-discord_url: https://discord.com/channels/1352854772859932702/1352854773421838429
 sponsor_url: https://github.com/sponsors/amjadiqbal
 ---
 
