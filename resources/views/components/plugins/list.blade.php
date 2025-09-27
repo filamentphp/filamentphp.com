@@ -74,8 +74,11 @@
         get currentPage() {
             return +this._currentPage
         },
-        set currentPage(value) {
+       set currentPage(value) {
             this._currentPage = value
+            this.$nextTick(() => {
+                this.$refs.section.scrollIntoView({ behavior: 'smooth' })
+            })
         },
 
         perPage: 24,
