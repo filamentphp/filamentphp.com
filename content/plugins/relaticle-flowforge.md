@@ -2,8 +2,8 @@
 name: Flowforge
 slug: relaticle-flowforge
 author_slug: relaticle
-categories: [developer-tool, panel-builder, infolist-entry]
-description: Powerful Kanban Board that works seamlessly with your existing Eloquent models
+categories: [developer-tool, panel-builder, infolist-entry, action]
+description: Transform any Eloquent model into production-ready drag-and-drop Kanban boards. Features intelligent pagination, rich card schemas, and seamless Filament integration with Actions, Tables, and Forms.
 github_repository: relaticle/flowforge
 discord_url: https://discord.gg/BWAFvK6b
 docs_url: https://raw.githubusercontent.com/Relaticle/flowforge/refs/heads/main/README.md
