@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/icetalker/filament-picker/main/READM
 github_repository: icetalker/filament-picker
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-06-17
 ---
