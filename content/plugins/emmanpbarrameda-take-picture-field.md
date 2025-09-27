@@ -10,5 +10,5 @@ github_repository: emmanpbarrameda/filament-take-picture-field
 has_dark_theme: true
 has_translations: false
 versions: [3, 4]
-publish_date: 2025-08-31
+publish_date: 2025-09-26
 ---
