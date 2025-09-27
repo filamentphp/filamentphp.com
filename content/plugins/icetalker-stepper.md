@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/icetalker/filament-stepper/main/READ
 github_repository: icetalker/filament-stepper
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2022-09-06
 ---
