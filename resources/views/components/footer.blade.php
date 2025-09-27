@@ -9,6 +9,8 @@
         >
             <x-sponsors.kirschbaum footer />
 
+            <x-sponsors.agiledrop footer />
+
             <x-sponsors.baiz footer />
 
             <x-sponsors.cms-max footer />
