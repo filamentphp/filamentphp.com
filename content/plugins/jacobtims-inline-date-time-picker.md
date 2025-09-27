@@ -12,5 +12,5 @@ github_repository: Jacobtims/inline-date-time-picker
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-08-25
+publish_date: 2025-09-26
 ---

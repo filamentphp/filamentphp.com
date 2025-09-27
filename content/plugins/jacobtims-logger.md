@@ -13,5 +13,5 @@ github_repository: Jacobtims/filament-logger
 has_dark_theme: true
 has_translations: true
 versions: [2, 3, 4]
-publish_date: 2025-08-25
+publish_date: 2025-09-26
 ---
