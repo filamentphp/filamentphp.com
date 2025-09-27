@@ -12,7 +12,7 @@ github_repository: afsakar/filament-translatable-pro
 has_dark_theme: true
 has_translations: true
 is_presale: false
-price: $39.99
-versions: [3]
+price: $50.00
+versions: [3, 4]
 publish_date: 2025-05-06
 ---
