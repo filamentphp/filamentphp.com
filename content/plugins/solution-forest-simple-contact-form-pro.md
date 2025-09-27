@@ -6,6 +6,7 @@ checkout_url: https://checkout.anystack.sh/simple-contact-form-pro?via=arf178
 author_slug: solution-forest
 categories: [form-builder, form-field]
 description: A lightweight, customizable contact form plugin for FilamentPHP that provides an easy-to-use alternative to Contact Form 7. Build and manage contact forms with a simple, intuitive interface directly from your Filament admin panel.
+discord_url:
 github_repository: solutionforest/simple-contact-form-pro
 has_dark_theme: true
 has_translations: true
