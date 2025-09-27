@@ -3,7 +3,7 @@ name: Panel Switch
 slug: bezhansalleh-panel-switch
 author_slug: bezhansalleh
 categories: [panel-builder]
-description: Switch between filament panels with ease.
+description: Switch between Filament panels with ease.
 discord_url: https://discord.com/channels/883083792112300104/1138244989495824495
 docs_urls: 
     v4: https://raw.githubusercontent.com/bezhanSalleh/filament-panel-switch/2.x/README.md
