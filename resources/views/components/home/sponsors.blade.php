@@ -285,6 +285,8 @@
                 >
                     <x-sponsors.kirschbaum />
 
+                    <x-sponsors.agiledrop />
+
                     <x-sponsors.baiz />
 
                     <x-sponsors.cms-max />
@@ -304,8 +306,6 @@
                     <x-sponsors.redberry />
 
                     <x-sponsors.tapp-network />
-
-                    <x-sponsors.agiledrop />
 
                     <x-sponsors.cleavr />
 
