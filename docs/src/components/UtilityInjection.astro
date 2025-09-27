@@ -1,5 +1,5 @@
 ---
-let { extras, set, version } = Astro.props;
+let { extras, except, set, version } = Astro.props;
 
 extras = (extras ?? '').split('||').filter((extra) => extra !== '').map((extra) => {
     const [name, type, parameter, description] = extra.split(';;')
@@ -431,6 +431,9 @@ let utilities = [
 
 // Remove duplicate utilities with the same parameter and preserve the last utility, allowing for overrides.
 utilities = Array.from(new Map(utilities.map((utility) => [utility.parameter, utility])).values())
+
+// Remove utilities that are in the except list.
+utilities = utilities.filter((utility) => !(except ?? '').split('||').includes(utility.parameter))
 
 const link = {
     actions: `/docs/${version}/actions/overview#action-utility-injection`,
