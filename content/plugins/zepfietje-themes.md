@@ -3,13 +3,13 @@ name: Themes
 slug: zepfietje-themes
 author_slug: zepfietje
 categories: [form-builder, panel-builder, table-builder, theme]
-url: https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
+price: €59.00
 description: Style your Filament applications without hiring a designer or learning CSS
 discord_url:
+url: https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_campaign=plugin&utm_content=button
 github_repository: empty
 has_dark_theme: true
 has_translations: true
-price: €59.00
 versions: [3, 4]
 publish_date: 2023-09-05
 ---

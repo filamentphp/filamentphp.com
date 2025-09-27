@@ -6,8 +6,8 @@ categories: [panel-builder]
 description: A simple bookmark management system for Laravel Filament applications. This package provides an intuitive way for users to save, organize, and access bookmarks directly within your Admin panel.
 discord_url: https://discord.com/channels/883083792112300104/1386705955877683361
 docs_urls:
-    v3: https://raw.githubusercontent.com/jayson-temporas/page-bookmarks/main/README.MD
-    v4: https://raw.githubusercontent.com/jayson-temporas/page-bookmarks/4.x/README.MD
+  v3: https://raw.githubusercontent.com/jayson-temporas/page-bookmarks/main/README.MD
+  v4: https://raw.githubusercontent.com/jayson-temporas/page-bookmarks/4.x/README.MD
 github_repository: jayson-temporas/page-bookmarks
 has_dark_theme: true
 has_translations: false

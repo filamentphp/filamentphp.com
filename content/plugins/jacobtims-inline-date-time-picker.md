@@ -6,8 +6,8 @@ categories: [form-builder, form-field]
 description: A plugin for adding inline date-time pickers to your forms.
 discord_url:
 docs_urls:
-    v4: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/heads/main/README.md
-    v3: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/tags/v1.0.1/README.md
+  v4: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/heads/main/README.md
+  v3: https://raw.githubusercontent.com/Jacobtims/inline-date-time-picker/refs/tags/v1.0.1/README.md
 github_repository: Jacobtims/inline-date-time-picker
 has_dark_theme: true
 has_translations: true

@@ -12,5 +12,5 @@ github_repository: A909M/Filament-StateFusion
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date:  2025-09-26
+publish_date: 2025-09-26
 ---

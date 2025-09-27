@@ -1,8 +1,8 @@
 ---
+anystack_id: 9b09790d-1c24-4d1f-8fd9-1aeee5537960
 name: OS Light Theme
 slug: mvenghaus-os-light-theme
 author_slug: mvenghaus
-anystack_id: 9b09790d-1c24-4d1f-8fd9-1aeee5537960
 categories: [form-builder, panel-builder, table-builder, theme]
 description: This theme makes your system look more like a web app.
 discord_url: https://discord.com/channels/883083792112300104/1196444431277101166

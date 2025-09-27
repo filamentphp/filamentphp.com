@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/Althinect/filament-spatie-roles-perm
 github_repository: althinect/filament-spatie-roles-permissions
 has_dark_theme: true
 has_translations: true
-publish_date: 2021-12-28
 versions: [2, 3]
+publish_date: 2021-12-28
 ---
