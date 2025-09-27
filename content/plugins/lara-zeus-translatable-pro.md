@@ -12,7 +12,6 @@ docs_urls:
 github_repository: lara-zeus/translatable-pro
 has_dark_theme: true
 has_translations: true
-is_lemon_squeezy_embedded: true
 is_presale: false
 price: $59.00
 versions: [3, 4]
