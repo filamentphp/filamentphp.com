@@ -10,5 +10,5 @@ github_repository: webbingbrasil/filament-copyactions
 has_dark_theme: true
 has_translations: false
 versions: [2, 3, 4]
-publish_date: 2022-08-30
+publish_date: 2025-09-26
 ---
