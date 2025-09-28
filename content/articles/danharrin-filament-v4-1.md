@@ -30,7 +30,7 @@ We've introduced a **panel layout option without a topbar**. This is perfect for
 
 We can't wait to see what you build with it!
 
-![No Topbar Layout Screenshot](#)
+![No Topbar Layout Screenshot](/images/content/articles/danharrin-filament-v4-1/no-topbar-layout.gif)
 
 To enable this layout, pass `false` to the `topbar()` method in your panel configuration:
 
@@ -53,7 +53,7 @@ You can now insert **responsive grids** into rich editor content, up to 12 colum
 
 This includes asymmetrical splits (like a 2-column grid where one column takes 1/3 of the space). Perfect for more advanced layouts inside content.
 
-![Rich Editor Grids Screenshot](#)
+![Rich Editor Grids Screenshot](/images/content/articles/danharrin-filament-v4-1/rich-editor-grid-tool.gif)
 
 To enable this feature, add the `grid` tool to your rich Eeitor `toolbarButtons()`:
 
@@ -73,7 +73,7 @@ The rich editor now supports **text color selection**. You can pick from the def
 
 When picking from a palette, light/dark mode accessibility is handled automatically for the user.
 
-![Rich Editor Text Color Screenshot](#)
+![Rich Editor Text Color Screenshot](/images/content/articles/danharrin-filament-v4-1/rich-editor-text-color-tool.gif)
 
 To enable this feature, add the `textColor` tool to your rich editor `toolbarButtons()`:
 
@@ -106,7 +106,7 @@ RichEditor::make('content')
 
 The **table repeater** introduced in v4 makes it possible to render each form field in its own table cell, with each repeater item being a row. In v4.1, some fields (like `Select` and `TextInput`) can now have a **compact design**, making them look seamless within cells.
 
-![Compact Table Repeater Screenshot](#)
+![Compact Table Repeater Screenshot](/images/content/articles/danharrin-filament-v4-1/compact-table-repeater.gif)
 
 To enable this, just set the `compact()` method on the repeater:
 
@@ -129,7 +129,7 @@ Repeater::make('members')
 
 Like the table repeater, but for **infolist entries**. Each entry is rendered in a cell, allowing you to output static tables inside schemas with **text, icons, images, and more**.
 
-![Repeatable Entry Table Layout Screenshot](#)
+![Repeatable Entry Table Layout Screenshot](/images/content/articles/danharrin-filament-v4-1/table-repeatable-entry.webp)
 
 To enable this, use the `table()` method on your `RepeatableEntry` component:
 
@@ -159,7 +159,7 @@ RepeatableEntry::make('comments')
 
 A brand-new schema component for inserting **empty states anywhere** in your app. Each empty state can include a heading, description, icon, and footer actions. Use this to guide users to take action when there's nothing to show.
 
-![Empty State Schema Screenshot](#)
+![Empty State Schema Screenshot](/images/content/articles/danharrin-filament-v4-1/empty-state.webp)
 
 To insert this component into your schema, use the `EmptyState` class:
 
@@ -187,11 +187,11 @@ The plugin ecosystem keeps growing. There are now **190 v4 plugins** available o
 
 Huge thanks to every community plugin author for building new plugins and upgrading existing ones. Your work makes Filament more powerful for everyone.
 
-Here are a few of our recenty added favourites:
+Here are a few of our recently-added favourites:
 
-- [Plugin Name #1](#)
-- [Plugin Name #2](#)
-- [Plugin Name #3](#)
+- [**Passkeys** by Marcel Weidum](https://filamentphp.com/plugins/marcelweidum-passkeys)
+- [**Cypher Theme** by Filafly](https://filamentphp.com/plugins/filafly-cypher-theme)
+- [**Header Select** by Solution Forest](https://filamentphp.com/plugins/solution-forest-header-select)
 
 ## Why sponsorships matter 💸
 
