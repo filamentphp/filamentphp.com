@@ -2,7 +2,6 @@
 name: Victor Hugo Scatolon de Souza
 slug: victor-scatolon
 github_url: https://github.com/victorscatolon
-linkedin_url: https://www.linkedin.com/in/desenvolvedorlaravel/
 sponsor_url: https://github.com/sponsors/victorscatolon
 ---
 

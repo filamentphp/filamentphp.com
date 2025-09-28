@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/tomatophp/filament-translations/mast
 github_repository: tomatophp/filament-translations
 has_dark_theme: true
 has_translations: true
-versions: [2,3]
+versions: [2, 3]
 publish_date: 2022-02-18
 ---

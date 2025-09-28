@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/tomatophp/filament-artisan/master/RE
 github_repository: tomatophp/filament-artisan
 has_dark_theme: false
 has_translations: true
-versions: [2,3]
+versions: [2, 3]
 publish_date: 2022-02-12
 ---
