@@ -11,8 +11,8 @@ We're very excited to announce the release of **Filament v4.1**!
 
 Since v4.0 was released, the core team and community have been hard at work:
 
-- **153 bug fixes merged**
-- **37 brand new features**
+- **156 bug fixes merged**
+- **39 brand new features**
 
 That's a lot of code reviewed, tested, and merged, and it wouldn't have been possible without the amazing efforts of the entire community. 💛
 
@@ -181,13 +181,13 @@ EmptyState::make('No users yet')
 
 ## The Filament v4 Plugin Ecosystem
 
-The plugin ecosystem keeps growing. There are now **190 v4 plugins** available on the website!
+The plugin ecosystem keeps growing. There are now **223 v4 plugins** available on the website!
 
 👉 [Browse all plugins](https://filamentphp.com/plugins)
 
 Huge thanks to every community plugin author for building new plugins and upgrading existing ones. Your work makes Filament more powerful for everyone.
 
-Here are a few of our recently-added favourites:
+Here are a few of our recently added favourites:
 
 - [**Passkeys** by Marcel Weidum](https://filamentphp.com/plugins/marcelweidum-passkeys)
 - [**Cypher Theme** by Filafly](https://filamentphp.com/plugins/filafly-cypher-theme)
@@ -195,7 +195,7 @@ Here are a few of our recently-added favourites:
 
 ## Why sponsorships matter 💸
 
-Reviewing 153 bug fixes, 37 new features, and supporting users with questions takes a **huge amount of time** from the Filament core team. Please consider **sponsoring the project on GitHub**:
+Reviewing 156 bug fixes, 39 new features, and supporting users with questions takes a **huge amount of time** from the Filament core team. Please consider **sponsoring the project on GitHub**:
 
 👉 [Become a sponsor of Filament](https://github.com/sponsors/danharrin)
 
