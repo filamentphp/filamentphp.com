@@ -7,6 +7,8 @@ categories: [general]
 type_slug: news
 ---
 
+![Filament v4.1 Release Banner Image](/images/content/articles/danharrin-filament-v4-1/banner.webp)
+
 We're very excited to announce the release of **Filament v4.1**!
 
 Since v4.0 was released, the core team and community have been hard at work:
@@ -100,7 +102,7 @@ RichEditor::make('content')
     ])
 ```
 
-[Documentation →](https://filamentphp.com.test/docs/4.x/forms/rich-editor#customizing-text-colors)
+[Documentation →](https://filamentphp.com/docs/4.x/forms/rich-editor#customizing-text-colors)
 
 ### Compact Table Repeater Style
 
@@ -123,7 +125,7 @@ Repeater::make('members')
     ])
 ```
 
-[Documentation →](https://filamentphp.com.test/docs/4.x/forms/repeater#compact-table-repeaters)
+[Documentation →](https://filamentphp.com/docs/4.x/forms/repeater#compact-table-repeaters)
 
 ### New Table Layout For Repeatable Entry
 
@@ -181,7 +183,7 @@ EmptyState::make('No users yet')
 
 ## The Filament v4 Plugin Ecosystem
 
-The plugin ecosystem keeps growing. There are now **223 v4 plugins** available on the website!
+The plugin ecosystem keeps growing. There are now **224 v4 plugins** available on the website!
 
 👉 [Browse all plugins](https://filamentphp.com/plugins)
 
@@ -190,7 +192,7 @@ Huge thanks to every community plugin author for building new plugins and upgrad
 Here are a few of our recently added favourites:
 
 - [**Passkeys** by Marcel Weidum](https://filamentphp.com/plugins/marcelweidum-passkeys)
-- [**Cypher Theme** by Filafly](https://filamentphp.com/plugins/filafly-cypher-theme)
+- [**Prizm Theme** by Filafly](https://filamentphp.com/plugins/filafly-prizm-theme)
 - [**Header Select** by Solution Forest](https://filamentphp.com/plugins/solution-forest-header-select)
 
 ## Why sponsorships matter 💸
@@ -202,6 +204,16 @@ Reviewing 156 bug fixes, 39 new features, and supporting users with questions ta
 Sponsorship directly supports the team who develops Filament and provides support. Sponsorship money is shared among core team members. Monthly and one-time options are available, as well as advertising opportunities on our website for companies sponsoring **$100/month** or more.
 
 Your support makes Filament possible. Thank you for helping us build the tools that power your applications. 💛
+
+## Join us at Wire ⚡️ Live Conference in Buffalo, New York on October 28-29, 2025
+
+I'm excited to be speaking at and attending the [**Wire ⚡️ Live** Conference](https://wire-live.com?referrer=filament) in **Buffalo, New York** on **October 28-29**, 2025.
+
+This is the first official conference dedicated to Livewire, Flux, Alpine, and Filament. It's a great opportunity to learn from the TALL stack community, meet other developers, and get inspired.
+
+I'll be presenting a talk about "Filament's Use of Livewire and Alpine", demonstrating how Filament uses those tools internally to build full-stack interfaces without leaving PHP.
+
+Make sure to [visit the official website](https://wire-live.com?referrer=filament) to learn more and grab your tickets. Hope to see you there!
 
 ## Try Filament v4.1 today!
 
