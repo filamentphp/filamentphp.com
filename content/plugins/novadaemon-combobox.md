@@ -5,9 +5,9 @@ author_slug: novadaemon
 categories: [form-builder, form-field]
 description: Side by side combobox multiselect field.
 discord_url: https://discord.com/channels/883083792112300104/1270164268867784794
-docs_urls: 
-    v3: https://raw.githubusercontent.com/novadaemon/filament-combobox/1.x/README.md
-    v4: https://raw.githubusercontent.com/novadaemon/filament-combobox/2.x/README.md
+docs_urls:
+  v3: https://raw.githubusercontent.com/novadaemon/filament-combobox/1.x/README.md
+  v4: https://raw.githubusercontent.com/novadaemon/filament-combobox/2.x/README.md
 github_repository: novadaemon/filament-combobox
 has_dark_theme: true
 has_translations: true

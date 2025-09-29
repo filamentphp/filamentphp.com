@@ -1,5 +1,5 @@
 ---
-name: Mikael Ahabalyants 
+name: Mikael Ahabalyants
 slug: njxqlus
 github_url: https://github.com/njxqlus
 ---
