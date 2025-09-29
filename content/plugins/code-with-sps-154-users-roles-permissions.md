@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/CWSPS154/users-roles-permissions/mai
 github_repository: CWSPS154/users-roles-permissions
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-03-23
 ---

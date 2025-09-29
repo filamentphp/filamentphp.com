@@ -2,7 +2,7 @@
 name: Hugeicons Icons
 slug: filafly-hugeicons-icons
 author_slug: filafly
-categories: [panel-builder, theme]
+categories: [panel-builder, icon-set]
 description: Quickly swap out all icons used by the Filament framework with Hugeicons.
 discord_url: https://discord.com/channels/883083792112300104/1421301367800205372
 docs_url: https://raw.githubusercontent.com/filafly/filament-hugeicons-icons/refs/heads/main/README.md
