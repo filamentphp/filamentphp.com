@@ -314,11 +314,16 @@
                                 Documentation
                             </div>
                             @if (filled($plugin->docs_urls))
+                                @php
+                                    $docsUrls = $plugin->docs_urls;
+                                    krsort($docsUrls);
+                                @endphp
+
                                 <div class="flex flex-wrap items-center gap-3">
                                     <div>Version:</div>
                                     <select
                                         x-data="{
-                                            selected: @js(request()->query('v')),
+                                            selected: @js(request()->query('v') ?? array_key_first($docsUrls)),
                                             init() {
                                                 this.$watch('selected', () => {
                                                     const url = new URL(window.location)
@@ -331,7 +336,7 @@
                                         x-model="selected"
                                         class="block w-32 rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-salmon focus:ring-salmon"
                                     >
-                                        @foreach ($plugin->docs_urls as $key => $value)
+                                        @foreach ($docsUrls as $key => $value)
                                             <option value="{{ $key }}">
                                                 {{ $key }}
                                             </option>
@@ -343,7 +348,15 @@
                         <div
                             class="prose selection:bg-stone-500/30 prose-a:break-words prose-blockquote:not-italic prose-code:break-words prose-code:rounded prose-code:bg-merino prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden [&_p]:before:hidden [&_p]:after:hidden"
                         >
-                            {!! preg_replace('/\<h1(.*)\>(.*)\<\/h1\>/', '', str(\App\Support\Markdown::parse($docs))->sanitizeHtml()) !!}
+                            {!!
+                                \App\Support\Markdown::parse($docs)
+                                    ->convertVideoToHtml()
+                                    ->absoluteImageUrls(
+                                        baseUrl: str($plugin->getDocUrl(request()->query('v')))
+                                            ->lower()
+                                            ->before('readme.md'),
+                                    )
+                            !!}
                         </div>
                     </div>
                 @endif
@@ -537,7 +550,7 @@
                     </div>
                 </div>
 
-                @if (count($otherPlugins = $plugin->author->plugins()->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
+                @if (count($otherPlugins = $plugin->author->plugins()->draft(false)->where('slug', '!=', $plugin->slug)->inRandomOrder()->limit(3)->get()))
                     {{-- More From This Author --}}
                     <div>
                         <div class="text-lg font-extrabold">

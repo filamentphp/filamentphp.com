@@ -8,6 +8,7 @@ use App\Models\ArticleCategory;
 use App\Models\ArticleType;
 use App\Models\Author;
 use App\Models\Star;
+use Illuminate\Database\Query\Builder;
 
 class ListArticlesController extends Controller
 {
@@ -31,6 +32,7 @@ class ListArticlesController extends Controller
                     $stars = Star::query()
                         ->toBase()
                         ->where('starrable_type', 'article')
+                        ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                         ->groupBy('starrable_id')
                         ->selectRaw('count(id) as count, starrable_id')
                         ->get()

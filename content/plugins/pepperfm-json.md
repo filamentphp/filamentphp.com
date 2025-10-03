@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/pepperfm/filament-json/main/README.m
 github_repository: pepperfm/filament-json
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-07-22
 ---

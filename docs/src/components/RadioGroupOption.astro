@@ -1,0 +1,33 @@
+---
+const { value } = Astro.props;
+---
+
+<div
+    x-data={`{ option: '${value}' }`}
+    x-on:click="select(option)"
+    x-on:keydown.enter.stop.prevent="select(option)"
+    x-on:keydown.space.stop.prevent="select(option)"
+    x-bind:aria-checked="isSelected(option)"
+    x-bind:tabindex="hasRovingTabindex(option, $el) ? 0 : -1"
+    x-bind:aria-labelledby="$id('radio-option-label')"
+    x-bind:aria-describedby="$id('radio-option-description')"
+    x-id="['radio-option-label', 'radio-option-description']"
+    role="radio"
+    class="flex gap-5 cursor-pointer rounded-lg border border-merino dark:border-dolphin px-6 py-4"
+>
+    <span
+        :class="{ 'bg-butter': isSelected(option) }"
+        class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-cream dark:border-midnight ring-1 ring-merino dark:ring-dolphin"
+        aria-hidden="true"
+    ></span>
+
+    <span class="grid gap-3">
+        <span x-bind:id="$id('radio-option-label')">
+            <slot />
+        </span>
+
+        <span x-bind:id="$id('radio-option-description')" class="text-sm text-gray-500 dark:text-gray-400">
+            <slot name="description" />
+        </span>
+    </span>
+</div>

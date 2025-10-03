@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Contracts\Starrable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -26,6 +27,7 @@ class Plugin extends Model implements Starrable
         'has_translations' => 'boolean',
         'is_lemon_squeezy_embedded' => 'boolean',
         'is_presale' => 'boolean',
+        'is_draft' => 'boolean',
         'versions' => 'array',
         'publish_date' => 'date',
         'docs_urls' => 'array',
@@ -45,6 +47,7 @@ class Plugin extends Model implements Starrable
         $table->boolean('has_dark_theme')->default(false);
         $table->boolean('has_translations')->default(false);
         $table->string('image')->nullable();
+        $table->boolean('is_draft')->nullable()->default(false);
         $table->boolean('is_lemon_squeezy_embedded')->nullable()->default(false);
         $table->boolean('is_presale')->nullable()->default(false);
         $table->string('name');
@@ -66,23 +69,38 @@ class Plugin extends Model implements Starrable
         return $this->morphMany(Star::class, 'starrable');
     }
 
+    public function scopeDraft(Builder $query, bool $condition = true): Builder
+    {
+        if (! $condition) {
+            return $query->whereNull('is_draft')->orWhere('is_draft', false);
+        }
+
+        return $query->where('is_draft', true);
+    }
+
+    public function getDocUrl(string $version = null): ?string
+    {
+        if (filled($this->docs_url)) {
+            return $this->docs_url;
+        }
+
+        if (filled($this->docs_urls)) {
+            $docsUrls = $this->docs_urls;
+            krsort($docsUrls);
+
+            return $docsUrls[$version ?? array_key_first($docsUrls)] ?? null;
+        }
+
+        return null;
+    }
+
     public function getDocs(string $version = null): ?string
     {
         if (filled($this->content)) {
             return $this->content;
         }
 
-        $docs_url = $this->docs_url;
-
-        if (filled($this->docs_urls)) {
-            if ($version !== null) {
-                $docs_url = $this->docs_urls[$version];
-            } else {
-                $docs_url = $this->docs_urls[key($this->docs_urls)];
-            }
-        }
-
-        if (blank($docs_url)) {
+        if (blank($url = $this->getDocUrl($version))) {
             return null;
         }
 
@@ -90,7 +108,7 @@ class Plugin extends Model implements Starrable
             return cache()->remember(
                 "plugin:{$this->slug}:docs:{$version}",
                 now()->addHour(),
-                fn (): string => file_get_contents($docs_url),
+                fn (): string => file_get_contents($url),
             );
         } catch (\Throwable) {
             return null;
@@ -100,6 +118,11 @@ class Plugin extends Model implements Starrable
     public function isFree(): bool
     {
         return blank($this->price) && blank($this->anystack_id);
+    }
+
+    public function isDraft(): bool
+    {
+        return (bool) $this->is_draft;
     }
 
     public function getCheckoutUrl(): ?string
@@ -129,7 +152,7 @@ class Plugin extends Model implements Starrable
         return cache()->remember(
             $this->getStarsCountCacheKey(),
             now()->addDay(),
-            fn (): int => $this->stars()->count(),
+            fn (): int => $this->stars()->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))->count(),
         );
     }
 
@@ -154,7 +177,7 @@ class Plugin extends Model implements Starrable
 
     public function isCompatibleWithLatestVersion(): bool
     {
-        return in_array(3, $this->versions);
+        return in_array(4, $this->versions);
     }
 
     public function getAuthor(): Author
