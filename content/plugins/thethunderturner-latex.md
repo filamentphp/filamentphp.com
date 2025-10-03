@@ -11,6 +11,6 @@ docs_urls:
 github_repository: thethunderturner/filament-latex
 has_dark_theme: true
 has_translations: true
-versions: [3,4]
+versions: [3, 4]
 publish_date: 2025-01-05
 ---
