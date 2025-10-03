@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/attargah/anti-scam/main/README.md
 github_repository: attargah/anti-scam
 has_dark_theme: false
 has_translations: true
-versions: [3,4]
+versions: [3, 4]
 publish_date: 2025-09-26
 ---
