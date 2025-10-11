@@ -3,7 +3,7 @@ title: How to include Vite built files in your Filament project
 slug: modrictin-include-vite-built-js-and-css-files-in-your-project
 author_slug: modrictin
 publish_date: 2023-08-17
-categories: [general,tailwind-css,panel-builder]
+categories: [general, tailwind-css, panel-builder]
 type_slug: trick
 ---
 
