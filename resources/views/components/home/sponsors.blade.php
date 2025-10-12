@@ -299,7 +299,7 @@
 
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
-                    <x-sponsors.lunar />
+                    {{-- <x-sponsors.lunar /> --}}
 
                     <x-sponsors.ploi />
 
