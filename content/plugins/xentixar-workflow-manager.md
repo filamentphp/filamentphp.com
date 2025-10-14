@@ -11,5 +11,4 @@ has_dark_theme: true
 has_translations: false
 versions: [4]
 publish_date: 2025-10-14
-image: xentixar-workflow-manager.jpg
 ---
