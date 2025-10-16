@@ -4,4 +4,4 @@ slug: caresome
 github_url: https://github.com/caresome
 ---
 
-Caresome creates beautiful, developer-friendly tools and plugins for Laravel and Filament, helping developers build stunning applications faster with less effort.
+I create beautiful, developer-friendly tools and plugins for Laravel and Filament, helping developers build applications faster with less effort.
