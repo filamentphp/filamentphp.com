@@ -1,6 +1,6 @@
 ---
-name: Filament Table Presets
-slug: yarmat-filament-table-presets
+name: Table Presets
+slug: yarmat-table-presets
 author_slug: yarmat
 categories: [table-builder, table-column]
 description: A Filament plugin to save and load table presets.
