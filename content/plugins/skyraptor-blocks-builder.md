@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/bumbummen99/filament-blocks-builder/
 github_repository: bumbummen99/filament-blocks-builder
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [4]
 publish_date: 2024-12-22
 ---
