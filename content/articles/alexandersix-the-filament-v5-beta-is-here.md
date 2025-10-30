@@ -39,7 +39,7 @@ version without _anything_ else, did you?
 
 While we've been hard at work ensuring that Filament v5 was updated
 to make use of all of the fun new Livewire v4 features, we have
-had a few other project bubbling around in the background as well.
+had a few other projects bubbling around in the background as well.
 We aren't _quite_ ready to announce what we've been working on yet,
 but watch this space, because we all think it's really cool.
 
