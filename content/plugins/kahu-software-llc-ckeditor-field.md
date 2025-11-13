@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/Kahu-Software-LLC/filament-ckeditor-
 github_repository: Kahu-Software-LLC/filament-ckeditor-field
 has_dark_theme: true
 has_translations: false
-versions: [3]
-publish_date: 2025-11-20
+versions: [3,4]
+publish_date: 2025-11-13
 ---
