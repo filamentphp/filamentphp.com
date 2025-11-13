@@ -1,6 +1,6 @@
 ---
 name: CKEditor Field
-slug: ckeditor-field
+slug: kahu-software-llc-ckeditor-field
 author_slug: kahu-software-llc
 categories: [form-builder, form-field]
 description: A rich text editor field using the non-premium features of CKEditor.
