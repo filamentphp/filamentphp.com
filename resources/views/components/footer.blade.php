@@ -21,7 +21,7 @@
 
             <x-sponsors.titan footer />
 
-            <x-sponsors.lunar footer />
+            {{-- <x-sponsors.lunar footer /> --}}
 
             <a
                 href="https://github.com/filamentphp/filament?sponsor=1"
