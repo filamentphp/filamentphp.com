@@ -10,5 +10,5 @@ github_repository: TappNetwork/filament-progress-bar-column
 has_dark_theme: true
 has_translations: false
 versions: [3, 4]
-publish_date: 2025-10-22
+publish_date: 2025-11-15
 ---
