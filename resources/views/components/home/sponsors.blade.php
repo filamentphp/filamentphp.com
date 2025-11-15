@@ -307,6 +307,8 @@
 
                     <x-sponsors.tapp-network />
 
+                    <x-sponsors.word-on-fire />
+
                     <x-sponsors.cleavr />
 
                     <x-sponsors.codecourse />
