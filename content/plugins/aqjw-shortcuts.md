@@ -10,5 +10,5 @@ github_repository: aqjw/shortcuts
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-10-25
+publish_date: 2025-11-15
 ---
