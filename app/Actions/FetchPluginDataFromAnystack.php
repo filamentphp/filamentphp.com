@@ -53,6 +53,10 @@ class FetchPluginDataFromAnystack
 
                     $prices = collect($advertisedProducts['prices'] ?? []);
 
+                    if ($prices->isEmpty()) {
+                        return;
+                    }
+
                     $priceAmount = $prices->min('amount');
                     $priceCurrency = $prices->keyBy('amount')[$priceAmount]['currency'];
 

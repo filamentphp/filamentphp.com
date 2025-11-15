@@ -112,21 +112,6 @@
             </li>
 
             <x-consulting.testimonials.item
-                company="Big Sweater Design"
-                :image="Vite::asset('resources/images/consulting/testimonials/vincent.webp')"
-                name="Vincent Maglione"
-                website="https://bigsweater.co"
-            >
-                Zep grasped my complex issue quickly, and within 15 minutes,
-                provided a solution that did exactly what I needed — with less
-                code than my initial attempt! Since we had time left on our
-                call, Zep generously shared his expertise on Filament's inner
-                workings, which has ultimately made me faster and more
-                proficient with the framework. Having access to a core Filament
-                developer has been invaluable.
-            </x-consulting.testimonials.item>
-
-            <x-consulting.testimonials.item
                 company="trevorgreenleaf.com"
                 :image="Vite::asset('resources/images/consulting/testimonials/trevor.webp')"
                 name="Trevor Greenleaf"
@@ -137,37 +122,6 @@
                 through some complex features and offer valuable insights that
                 helped us improve our product. I highly recommend Zep for your
                 consulting needs.
-            </x-consulting.testimonials.item>
-
-            <x-consulting.testimonials.item
-                company="DCS Digital"
-                :image="Vite::asset('resources/images/consulting/testimonials/scott.webp')"
-                name="Scott Bowler"
-                website="https://www.dcsdigital.co.uk"
-            >
-                After discovering Filament, I needed quick insights to evaluate
-                its potential for our project. An hour with Zep clarified
-                complexities and saved me hours of research. This enabled swift,
-                informed decision-making and set our project on the right path
-                with Filament as the backbone. I'd highly recommend taking the
-                time to speak to the Filament team, and it's great to know
-                they're around if we ever need answers to tough questions.
-            </x-consulting.testimonials.item>
-
-            <x-consulting.testimonials.item
-                company="ZimplerApps"
-                :image="Vite::asset('resources/images/consulting/testimonials/daniel.webp')"
-                name="Daniel Plomp"
-                website="https://www.zimplerapps.com"
-            >
-                I recently had the opportunity to have a really productive
-                session with Zep, tackling some complex challenges that were
-                slowing me down. It's clear that spending an hour with Zep is a
-                smart choice—it saves so much time compared to trying to figure
-                everything out on your own. Zep is not only incredibly
-                knowledgeable, but also easy to talk to and approachable. The
-                time and resources invested are truly worthwhile. I definitely
-                recommend Zep's services.
             </x-consulting.testimonials.item>
         </ul>
     </div>

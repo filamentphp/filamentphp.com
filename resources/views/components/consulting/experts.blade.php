@@ -42,24 +42,23 @@
         class="grid grid-cols-1 gap-14 md:grid-cols-2"
     >
         <x-consulting.consultant
-            avatar="https://avatars.githubusercontent.com/u/41773797?v=4"
-            name="Dan Harrin"
-            title="Creator of Filament"
+            avatar="{{ Vite::asset('resources/images/consulting/kirschbaum/kirschbaum.webp') }}"
+            name="Kirschbaum"
+            title="Official development agency"
         >
-            <strong>Dan</strong>
-            leads the Filament project from
+            <strong>Kirschbaum</strong>
+            is the
             {{-- format-ignore-start --}}
-            <strong>Cardiff, United Kingdom</strong>.
+            <strong>official development agency</strong>
             {{-- format-ignore-end --}}
-            He works for
-            <a href="#kirschbaum">Kirschbaum</a>
-            as a Lead Developer, which is a Laravel-partnered agency full of
-            Filament and Laravel experts. Dan and the rest of the Kirschbaum
-            team are
+            trusted by Filament. They are a team full of Filament and Laravel
+            experts,
             {{-- format-ignore-start --}}
             <a href="#kirschbaum">ready to take on your projects</a>,
             {{-- format-ignore-end --}}
-            whatever the size!
+            whatever the size. With Kirschbaum, you're not just hiring
+            developers. You're gaining a long-term partner committed to your
+            success.
         </x-consulting.consultant>
 
         <x-consulting.consultant
@@ -70,7 +69,7 @@
             <strong>Zep</strong>
             is the lead UI designer of Filament and founder of
             {{-- format-ignore-start --}}
-            <a href="https://whizzy.dev?ref=filamentphp.com">Whizzy</a>.
+            <a href="https://whizzy.dev/?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=bio">Whizzy</a>.
             {{-- format-ignore-end --}}
             In addition to his design skills, he brings a wealth of development
             experience to the Filament team. He's based in
@@ -79,7 +78,7 @@
             {{-- format-ignore-end --}}
             and is
             {{-- format-ignore-start --}}
-            <a href="mailto:hey@zepfietje.com?subject=Filament consultation">available to answer your support questions</a>
+            <a href="https://whizzy.dev/sessions?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=bio">available to answer your support questions</a>
             {{-- format-ignore-end --}}
             about Filament, on a one-off or recurring basis.
         </x-consulting.consultant>
@@ -95,17 +94,18 @@
         >
             <div class="space-y-2 text-center lg:text-left">
                 <div class="text-2xl font-bold text-[#544945]">
-                    Have a quick support question?
+                    Need a private help session?
                 </div>
                 <div class="font-medium text-[#AA8B7C]">
-                    Zep's here to jump on a call and get you back on track.
+                    Zep's here to jump on a call and help you with your Filament
+                    project.
                 </div>
             </div>
 
             {{-- Call Link --}}
             <div class="flex">
                 <a
-                    href="mailto:hey@zepfietje.com?subject=Filament consultation"
+                    href="https://whizzy.dev/sessions?utm_source=filament&utm_medium=referral&utm_campaign=consultation&utm_content=button"
                     class="group/call relative z-0 grid h-12 w-60 rounded-full bg-dolphin/20 px-1.5 transition duration-300 hover:bg-dolphin/30"
                     x-on:mouseenter="book_is_hovered = true"
                     x-on:mouseleave="book_is_hovered = false"
@@ -158,7 +158,7 @@
                     <div
                         class="self-center justify-self-center font-medium transition duration-300 [grid-area:1/-1] group-hover/call:-translate-x-2"
                     >
-                        Book a call
+                        Book a session
                     </div>
                 </a>
             </div>

@@ -64,7 +64,7 @@ class Article extends Model implements Starrable
         return cache()->remember(
             $this->getStarsCountCacheKey(),
             now()->addDay(),
-            fn (): int => $this->stars()->count(),
+            fn (): int => $this->stars()->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))->count(),
         );
     }
 
@@ -74,7 +74,7 @@ class Article extends Model implements Starrable
             return null;
         }
 
-        return in_array(3, $this->versions);
+        return in_array(4, $this->versions);
     }
 
     public function getAuthor(): Author

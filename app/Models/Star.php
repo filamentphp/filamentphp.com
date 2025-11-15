@@ -11,7 +11,9 @@ class Star extends Model
 {
     use HasFactory;
 
-    protected $connection = 'mysql';
+    protected $casts = [
+        'is_vpn_ip' => 'boolean',
+    ];
 
     public function starrable(): MorphTo
     {
@@ -21,5 +23,10 @@ class Star extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getConnectionName()
+    {
+        return config('database.default');
     }
 }

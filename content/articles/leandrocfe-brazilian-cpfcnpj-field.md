@@ -1,6 +1,6 @@
 ---
 title: Brazilian CPF CNPJ fields
-slug: brazilian-cpfcnpj-field
+slug: leandrocfe-brazilian-cpfcnpj-field
 author_slug: leandrocfe
 publish_date: 2023-03-01
 categories: [form-builder, alpinejs]

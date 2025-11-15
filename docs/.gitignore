@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # raw documentation
 /src/pages/*.x
+/src/navigation.json
+
+# compiled documentation
+/dist
+/preserved-dist

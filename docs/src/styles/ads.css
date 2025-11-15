@@ -1,0 +1,19 @@
+#carbonads {
+    @apply max-w-56 bg-transparent print:hidden;
+
+    span {
+        @apply block;
+    }
+
+    img {
+        @apply mb-3 block;
+    }
+
+    .carbon-text {
+        @apply block text-xs text-gray-700 dark:text-gray-300;
+    }
+
+    .carbon-poweredby {
+        @apply text-xs text-gray-500;
+    }
+}

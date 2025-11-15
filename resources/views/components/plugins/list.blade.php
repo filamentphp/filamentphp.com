@@ -58,7 +58,7 @@
         search: $queryString('').usePush().as('search'),
         showCategories: false,
         selectedCategories: new Set(),
-        selectedVersion: $queryString('3').usePush().as('version'),
+        selectedVersion: $queryString('4').usePush().as('version'),
         selectedPrice: $queryString('All').usePush().as('price'),
         selectedSort: $queryString('Newest').usePush().as('sort'),
         features: $queryString({
@@ -76,6 +76,9 @@
         },
         set currentPage(value) {
             this._currentPage = value
+            this.$nextTick(() => {
+                this.$refs.section.scrollIntoView({ behavior: 'smooth' })
+            })
         },
 
         perPage: 24,
@@ -179,16 +182,6 @@
                 class="relative z-10 inline-flex select-none items-center gap-2.5 rounded-full bg-white p-[.55rem] font-medium shadow-lg shadow-black/[0.01]"
             >
                 <div
-                    x-on:click="selectedVersion = '1'"
-                    class="relative z-20 w-14 text-center transition duration-300"
-                    :class="{
-                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '1',
-                            'text-salmon': selectedVersion === '1',
-                        }"
-                >
-                    v1.x
-                </div>
-                <div
                     class="relative z-20 w-14 text-center transition duration-300"
                     x-on:click="selectedVersion = '2'"
                     :class="{
@@ -209,10 +202,20 @@
                     v3.x
                 </div>
                 <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '4'"
+                    :class="{
+                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '4',
+                            'text-salmon': selectedVersion === '4',
+                        }"
+                >
+                    v4.x
+                </div>
+                <div
                     class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
                     :class="{
-                            'translate-x-[4.1rem]': selectedVersion === '2',
-                            'translate-x-[8.2rem]': selectedVersion === '3',
+                            'translate-x-[4.1rem]': selectedVersion === '3',
+                            'translate-x-[8.2rem]': selectedVersion === '4',
                         }"
                 ></div>
             </div>
@@ -402,7 +405,7 @@
                 class="text-sm transition duration-300"
                 :class="{
                     'text-salmon': features.translations,
-                    'opacity-70 text-dolphin group-hover/dark-mode-toggle:opacity-100': ! features.translations,
+                    'opacity-70 text-dolphin group-hover/multi-language-toggle:opacity-100': ! features.translations,
                 }"
             >
                 Multi language

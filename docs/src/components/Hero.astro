@@ -34,19 +34,19 @@ const { getStartedLink } = Astro.props
             <div class="grid relative w-80 h-56">
                 <!-- Bulb Light -->
                 <img
-                    src={bulbLight}
+                    src={bulbLight.src}
                     alt=""
                     class="[grid-area:1/-1] self-start relative -left-5 justify-self-center w-64 dark:hidden z-10"
                 />
                 <!-- Bulb Dark -->
                 <img
-                    src={bulbDark}
+                    src={bulbDark.src}
                     alt=""
                     class="[grid-area:1/-1] self-start mix-blend-lighten relative -left-1 -top-10 justify-self-center w-40 -z-10 hidden dark:block"
                 />
                 <!-- Book -->
                 <img
-                    src={book}
+                    src={book.src}
                     alt=""
                     class="[grid-area:1/-1] self-end justify-self-center w-64"
                 />
@@ -290,492 +290,514 @@ const { getStartedLink } = Astro.props
         </div>
     </div>
     <div
-        class="pt-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center"
+        class="pt-10 w-full max-w-7xl mx-auto"
     >
-        <a
-            href="/docs/panels"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="37"
-                    height="37"
-                    viewBox="0 0 21 21"
-                >
-                    <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m17.498 15.498l-.01-10a2 2 0 0 0-2-1.998h-10a2 2 0 0 0-1.995 1.85l-.006.152l.01 10a2 2 0 0 0 2 1.998h10a2 2 0 0 0 1.995-1.85zM7.5 7.5v9.817m10-9.817h-14"
-                    />
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Panel Builder
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Build a Laravel admin panel, customer-facing
-                    app, SaaS, or anything you can imagine!
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/forms"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="37"
-                    height="37"
-                    viewBox="0 0 48 48"
-                >
-                    <path
-                        fill="currentColor"
-                        d="M21 21.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-2.5 0a2 2 0 1 0-4 0a2 2 0 0 0 4 0Zm-2 15.5a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9Zm0-2.5a2 2 0 1 1 0-4a2 2 0 0 1 0 4ZM13.25 12a1.25 1.25 0 1 0 0 2.5h21.5a1.25 1.25 0 1 0 0-2.5h-21.5ZM23 21.75c0-.69.56-1.25 1.25-1.25h10.5a1.25 1.25 0 1 1 0 2.5h-10.5c-.69 0-1.25-.56-1.25-1.25ZM24.25 31a1.25 1.25 0 1 0 0 2.5h10.5a1.25 1.25 0 1 0 0-2.5h-10.5Zm-12-25A6.25 6.25 0 0 0 6 12.25v23.5A6.25 6.25 0 0 0 12.25 42h23.5A6.25 6.25 0 0 0 42 35.75v-23.5A6.25 6.25 0 0 0 35.75 6h-23.5ZM8.5 12.25a3.75 3.75 0 0 1 3.75-3.75h23.5a3.75 3.75 0 0 1 3.75 3.75v23.5a3.75 3.75 0 0 1-3.75 3.75h-23.5a3.75 3.75 0 0 1-3.75-3.75v-23.5Z"
-                    ></path>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Form Builder
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Easily build stunning Livewire-powered forms
-                    with over 25 components out of the box.
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/tables"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="37"
-                    height="37"
-                    viewBox="0 0 28 28"
-                >
-                    <path fill="currentColor" d="M3 6.75A3.75 3.75 0 0 1 6.75 3h14.5A3.75 3.75 0 0 1 25 6.75v14.5A3.75 3.75 0 0 1 21.25 25H6.75A3.75 3.75 0 0 1 3 21.25V6.75ZM4.5 18.5v2.75a2.25 2.25 0 0 0 2.25 2.25H9.5v-5h-5Zm5-1.5v-6h-5v6h5Zm1.5 1.5v5h6v-5h-6Zm6-1.5v-6h-6v6h6Zm1.5 1.5v5h2.75a2.25 2.25 0 0 0 2.25-2.25V18.5h-5Zm5-1.5v-6h-5v6h5Zm0-10.25a2.25 2.25 0 0 0-2.25-2.25H18.5v5h5V6.75ZM17 4.5h-6v5h6v-5Zm-7.5 0H6.75A2.25 2.25 0 0 0 4.5 6.75V9.5h5v-5Z"/>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Table Builder
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Craft beautiful, optimized, and interactive
-                    Livewire-powered datatables for any situation.
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/notifications"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="31"
-                    height="31"
-                    viewBox="0 0 24 24"
-                >
-                    <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                    >
-                        <path
-                            d="M18.75 9.71v-.705C18.75 5.136 15.726 2 12 2S5.25 5.136 5.25 9.005v.705a4.4 4.4 0 0 1-.692 2.375L3.45 13.81c-1.011 1.575-.239 3.716 1.52 4.214a25.775 25.775 0 0 0 14.06 0c1.759-.498 2.531-2.639 1.52-4.213l-1.108-1.725a4.4 4.4 0 0 1-.693-2.375Z"
-                        ></path>
-                        <path
-                            stroke-linecap="round"
-                            d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3"
-                        ></path>
-                    </g>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Notifications
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Notify your users of important events by
-                    delivering real-time messages using Livewire.
-                </div>
-            </div>
-        </a>
+        <h3 class="text-xl md:text-2xl font-bold dark:text-white">
+            Quick Links
+        </h3>
 
-        <a
-            href="/docs/actions"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+        <div class="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <a
+                href="/docs/resources"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
                 >
-                    <g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M15.414 10.941c.781.462.781 1.656 0 2.118l-4.72 2.787C9.934 16.294 9 15.71 9 14.786V9.214c0-.924.934-1.507 1.694-1.059l4.72 2.787Z"/></g>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Actions
-                    </div>
-                    <div
-                        class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
-                    >
-                        New
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Open interactive modals and slide-overs - a
-                    great way to keep the user in the flow of the
-                    application.
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/infolists"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                >
-                    <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="37"
+                        height="37"
+                        viewBox="0 0 21 21"
                     >
                         <path
-                            d="M16 4.002c2.175.012 3.353.109 4.121.877C21 5.758 21 7.172 21 10v6c0 2.829 0 4.243-.879 5.122C19.243 22 17.828 22 15 22H9c-2.828 0-4.243 0-5.121-.878C3 20.242 3 18.829 3 16v-6c0-2.828 0-4.242.879-5.121c.768-.768 1.946-.865 4.121-.877"
-                        ></path>
-                        <path
+                            fill="none"
+                            stroke="currentColor"
                             stroke-linecap="round"
-                            d="M10.5 14H17M7 14h.5M7 10.5h.5m-.5 7h.5m3-7H17m-6.5 7H17"
-                        ></path>
+                            stroke-linejoin="round"
+                            d="m17.498 15.498l-.01-10a2 2 0 0 0-2-1.998h-10a2 2 0 0 0-1.995 1.85l-.006.152l.01 10a2 2 0 0 0 2 1.998h10a2 2 0 0 0 1.995-1.85zM7.5 7.5v9.817m10-9.817h-14"
+                        />
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Resources
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        Build a CRUD interface for your Eloquent model.
+                    </div>
+                </div>
+            </a>
+            <a
+                href="/docs/tables/columns"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="37"
+                        height="37"
+                        viewBox="0 0 28 28"
+                    >
+                        <path fill="currentColor" d="M3 6.75A3.75 3.75 0 0 1 6.75 3h14.5A3.75 3.75 0 0 1 25 6.75v14.5A3.75 3.75 0 0 1 21.25 25H6.75A3.75 3.75 0 0 1 3 21.25V6.75ZM4.5 18.5v2.75a2.25 2.25 0 0 0 2.25 2.25H9.5v-5h-5Zm5-1.5v-6h-5v6h5Zm1.5 1.5v5h6v-5h-6Zm6-1.5v-6h-6v6h6Zm1.5 1.5v5h2.75a2.25 2.25 0 0 0 2.25-2.25V18.5h-5Zm5-1.5v-6h-5v6h5Zm0-10.25a2.25 2.25 0 0 0-2.25-2.25H18.5v5h5V6.75ZM17 4.5h-6v5h6v-5Zm-7.5 0H6.75A2.25 2.25 0 0 0 4.5 6.75V9.5h5v-5Z"/>
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Table columns
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        View a list of all available table columns which provide different cell content.
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="/docs/actions"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M15.414 10.941c.781.462.781 1.656 0 2.118l-4.72 2.787C9.934 16.294 9 15.71 9 14.786V9.214c0-.924.934-1.507 1.694-1.059l4.72 2.787Z"/></g>
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Action buttons
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        Learn how to customize the appearance of a button, and open modals and slide-overs.
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="/docs/forms"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="37"
+                        height="37"
+                        viewBox="0 0 48 48"
+                    >
                         <path
-                            d="M8 3.5A1.5 1.5 0 0 1 9.5 2h5A1.5 1.5 0 0 1 16 3.5v1A1.5 1.5 0 0 1 14.5 6h-5A1.5 1.5 0 0 1 8 4.5v-1Z"
+                            fill="currentColor"
+                            d="M21 21.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-2.5 0a2 2 0 1 0-4 0a2 2 0 0 0 4 0Zm-2 15.5a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9Zm0-2.5a2 2 0 1 1 0-4a2 2 0 0 1 0 4ZM13.25 12a1.25 1.25 0 1 0 0 2.5h21.5a1.25 1.25 0 1 0 0-2.5h-21.5ZM23 21.75c0-.69.56-1.25 1.25-1.25h10.5a1.25 1.25 0 1 1 0 2.5h-10.5c-.69 0-1.25-.56-1.25-1.25ZM24.25 31a1.25 1.25 0 1 0 0 2.5h10.5a1.25 1.25 0 1 0 0-2.5h-10.5Zm-12-25A6.25 6.25 0 0 0 6 12.25v23.5A6.25 6.25 0 0 0 12.25 42h23.5A6.25 6.25 0 0 0 42 35.75v-23.5A6.25 6.25 0 0 0 35.75 6h-23.5ZM8.5 12.25a3.75 3.75 0 0 1 3.75-3.75h23.5a3.75 3.75 0 0 1 3.75 3.75v23.5a3.75 3.75 0 0 1-3.75 3.75h-23.5a3.75 3.75 0 0 1-3.75-3.75v-23.5Z"
                         ></path>
-                    </g>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Infolist Builder
-                    </div>
-                    <div
-                        class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
-                    >
-                        New
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
                         >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                            ></path>
-                        </svg>
+                            Form fields
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        View a list of all available fields to build interactive user forms with.
                     </div>
                 </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Display read-only information to users about a
-                    particular record, with a fully flexible layout.
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/widgets"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+            </a>
+
+            <a
+                href="/docs/infolists"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
                 >
-                    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18"/><path d="M3 11c0-.943 0-1.414.293-1.707C3.586 9 4.057 9 5 9c.943 0 1.414 0 1.707.293C7 9.586 7 10.057 7 11v6c0 .943 0 1.414-.293 1.707C6.414 19 5.943 19 5 19c-.943 0-1.414 0-1.707-.293C3 18.414 3 17.943 3 17v-6Zm7-4c0-.943 0-1.414.293-1.707C10.586 5 11.057 5 12 5c.943 0 1.414 0 1.707.293C14 5.586 14 6.057 14 7v10c0 .943 0 1.414-.293 1.707C13.414 19 12.943 19 12 19c-.943 0-1.414 0-1.707-.293C10 18.414 10 17.943 10 17V7Zm7-3c0-.943 0-1.414.293-1.707C17.586 2 18.057 2 19 2c.943 0 1.414 0 1.707.293C21 2.586 21 3.057 21 4v13c0 .943 0 1.414-.293 1.707C20.414 19 19.943 19 19 19c-.943 0-1.414 0-1.707-.293C17 18.414 17 17.943 17 17V4Z"/></g>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="34"
+                        height="34"
+                        viewBox="0 0 24 24"
                     >
-                        Widgets
-                    </div>
-                    <div
-                        class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
-                    >
-                        New
-                    </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
+                        <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
                         >
                             <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                d="M16 4.002c2.175.012 3.353.109 4.121.877C21 5.758 21 7.172 21 10v6c0 2.829 0 4.243-.879 5.122C19.243 22 17.828 22 15 22H9c-2.828 0-4.243 0-5.121-.878C3 20.242 3 18.829 3 16v-6c0-2.828 0-4.242.879-5.121c.768-.768 1.946-.865 4.121-.877"
                             ></path>
-                        </svg>
+                            <path
+                                stroke-linecap="round"
+                                d="M10.5 14H17M7 14h.5M7 10.5h.5m-.5 7h.5m3-7H17m-6.5 7H17"
+                            ></path>
+                            <path
+                                d="M8 3.5A1.5 1.5 0 0 1 9.5 2h5A1.5 1.5 0 0 1 16 3.5v1A1.5 1.5 0 0 1 14.5 6h-5A1.5 1.5 0 0 1 8 4.5v-1Z"
+                            ></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Infolist entries
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        View a list of all available infolist entries to display read-only information with.
                     </div>
                 </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    Build a dashboard for your application, complete
-                    with real-time charts and stats.
-                </div>
-            </div>
-        </a>
-        <a
-            href="/docs/support"
-            class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
-        >
-            <div
-                class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+            </a>
+
+            <a
+                href="/docs/schemas/layouts"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
                 >
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.94v.117c0 2.525 0 3.788-.597 4.802c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5"/>
-                </svg>
-            </div>
-            <div class="space-y-0.5">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="text-base font-bold text-evening dark:text-white/80"
-                    >
-                        Core Concepts
+                    <svg width="37" height="37" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Schema layouts
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
                     </div>
-                    <div
-                        class="rounded-full bg-peach-orange px-3 py-0.5 text-xs text-evening"
-                    >
-                        New
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        View a list of all available layout components to organize your forms and infolists with.
                     </div>
-                    <div
-                        class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                </div>
+            </a>
+
+            <a
+                href="/docs/notifications"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="31"
+                        height="31"
+                        viewBox="0 0 24 24"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
+                        <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
                         >
                             <path
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                d="M18.75 9.71v-.705C18.75 5.136 15.726 2 12 2S5.25 5.136 5.25 9.005v.705a4.4 4.4 0 0 1-.692 2.375L3.45 13.81c-1.011 1.575-.239 3.716 1.52 4.214a25.775 25.775 0 0 0 14.06 0c1.759-.498 2.531-2.639 1.52-4.213l-1.108-1.725a4.4 4.4 0 0 1-.693-2.375Z"
                             ></path>
-                        </svg>
+                            <path
+                                stroke-linecap="round"
+                                d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3"
+                            ></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Notifications
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        Notify your users of important events by delivering real-time messages using Livewire.
                     </div>
                 </div>
-                <div class="max-w-xs text-sm font-medium text-dolphin">
-                    This section of the documentation contains information that applies to all packages in the Filament ecosystem.
+            </a>
+
+            <a
+                href="/docs/widgets"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18"/><path d="M3 11c0-.943 0-1.414.293-1.707C3.586 9 4.057 9 5 9c.943 0 1.414 0 1.707.293C7 9.586 7 10.057 7 11v6c0 .943 0 1.414-.293 1.707C6.414 19 5.943 19 5 19c-.943 0-1.414 0-1.707-.293C3 18.414 3 17.943 3 17v-6Zm7-4c0-.943 0-1.414.293-1.707C10.586 5 11.057 5 12 5c.943 0 1.414 0 1.707.293C14 5.586 14 6.057 14 7v10c0 .943 0 1.414-.293 1.707C13.414 19 12.943 19 12 19c-.943 0-1.414 0-1.707-.293C10 18.414 10 17.943 10 17V7Zm7-3c0-.943 0-1.414.293-1.707C17.586 2 18.057 2 19 2c.943 0 1.414 0 1.707.293C21 2.586 21 3.057 21 4v13c0 .943 0 1.414-.293 1.707C20.414 19 19.943 19 19 19c-.943 0-1.414 0-1.707-.293C17 18.414 17 17.943 17 17V4Z"/></g>
+                    </svg>
                 </div>
-            </div>
-        </a>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Widgets
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        View a list of all available widgets to build dashboards with.
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="/docs/panel-configuration"
+                class="group/package-link flex items-center gap-5 transition duration-300 will-change-transform hover:translate-x-0.5 motion-reduce:transition-none"
+            >
+                <div
+                    class="grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-xl bg-merino text-hurricane dark:bg-dolphin/20 dark:text-peach-orange"
+                >
+                    <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+                    </svg>
+                </div>
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="text-base font-bold text-evening dark:text-white/80"
+                        >
+                            Panel configuration
+                        </div>
+                        <div
+                            class="-translate-x-1 scale-x-90 text-butter opacity-0 transition duration-300 group-hover/package-link:translate-x-0 group-hover/package-link:scale-x-100 group-hover/package-link:opacity-100 motion-reduce:transition-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="max-w-xs text-sm font-medium text-dolphin">
+                        Learn how the configuration file can customize your panel.
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div class="pt-24 max-w-7xl mx-auto">
-        <h3 class="text-2xl md:text-3xl text-center font-medium dark:text-white">
+        <h3 class="text-xl md:text-2xl font-bold dark:text-white">
             Our Sponsors
         </h3>
 
-        <p class="pt-3 text-center max-w-xl mx-auto text-base lg:text-lg text-evening/60 dark:text-white/80">
-            Filament is open source at heart. Our sponsors fund new features, bug fixes, and our community support.
-        </p>
-
         <div class="pt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <a href="https://www.agiledrop.com/laravel?utm_source=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/41773797/2e253117-8308-4f5f-9081-aaed455a508f" alt="Agiledrop" class="block rounded-xl">
+            </a>
+
+            <a href="https://sevalla.com/application-hosting/filament-php?ref=filamentphp.com" target="_blank" class="block my-auto">
+                <img src="/images/sponsors/banners/sevalla.png" alt="Sevalla" class="block rounded-xl">
+            </a>
+
             <a href="https://ploi.io" target="_blank" class="block my-auto">
                 <img src="https://user-images.githubusercontent.com/41773797/166302471-b5f7596e-87af-4716-b73d-63241efd8756.png" alt="Ploi" class="block rounded-xl">
             </a>
 
-            <a href="https://laradir.com?ref=filamentphp.com" target="_blank" class="block my-auto">
-                <img src="https://user-images.githubusercontent.com/41773797/198047886-3cbed5d7-f855-4529-9ab6-eebdb708b974.png" alt="Laradir" class="block rounded-xl">
+            <a href="https://redberry.international/filament-development" target="_blank" class="block bg-white rounded-xl my-auto">
+                <img src="/images/sponsors/banners/redberry.png" alt="Redberry" class="block">
             </a>
 
             <a href="https://tappnetwork.com" target="_blank" class="block bg-white rounded-xl my-auto">
                 <img src="https://github.com/filamentphp/filament/assets/44533235/cd8be68b-59f3-4b93-8b25-f82c6f2d7864" alt="Tapp Network" class="block">
             </a>
 
-            <a href="https://www.agiledrop.com/laravel?utm_source=filament" target="_blank" class="block my-auto">
-                <img src="https://github.com/filamentphp/filament/assets/41773797/2e253117-8308-4f5f-9081-aaed455a508f" alt="Agiledrop" class="block rounded-xl">
-            </a>
-
             <a href="https://cleavr.io/?utm_source=filament" target="_blank" class="block my-auto">
                 <img src="https://github.com/filamentphp/filament/assets/41773797/79b9b78f-b52b-4b32-9302-4f083dc81d73" alt="Cleavr" class="block rounded-xl">
             </a>
 
-            <!--<a href="https://codecourse.com" target="_blank" class="block my-auto">-->
-            <!--    <img src="https://user-images.githubusercontent.com/41773797/178451980-762bc3f0-3dc5-4fcb-ba1d-00f264a8936c.png" alt="Codecourse" class="block rounded-xl">-->
-            <!--</a>-->
+            <a href="https://codecourse.com" target="_blank" class="block my-auto">
+                <img src="https://user-images.githubusercontent.com/41773797/178451980-762bc3f0-3dc5-4fcb-ba1d-00f264a8936c.png" alt="Codecourse" class="block rounded-xl">
+            </a>
 
             <a href="https://creagia.com" target="_blank" class="block my-auto">
                 <img src="https://github.com/filamentphp/filament/assets/41773797/0de83b88-eb50-4cd6-9628-543a3ccaf7c7" alt="Creagia" class="block rounded-xl">
@@ -877,12 +899,105 @@ const { getStartedLink } = Astro.props
                 <img src="https://github.com/filamentphp/filament/assets/41773797/6dd424ea-00dc-4d46-b64b-54188569f8ab" alt="Ecomsoft" class="block rounded-xl">
             </a>
 
-            <a href="https://uselocale.com" target="_blank" class="block my-auto">
-                <img src="https://user-images.githubusercontent.com/41773797/222703942-927b565f-e389-47b3-b583-0e605b17d9bd.png" alt="Locale" class="block rounded-xl">
+            <a href="https://helpspace.com?ref=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/5f0a9be0-0a89-4466-9216-ff5b00d4c40d" alt="Helpspace" class="block rounded-xl">
+            </a>
+
+            <a href="https://www.landersystems.com/?utm_source=filamentphp" target="_blank" title="Lander Systems" class="block my-auto">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 502 209"
+                    class="w-full rounded-xl"
+                >
+                    <rect width="501.923" height="208.8" fill="#09090B"/>
+                    <circle cx="85.3269" cy="25.0961" r="3.01154" fill="#D9D9D9"/>
+                    <circle cx="41.1577" cy="163.627" r="3.01154" fill="#D9D9D9"/>
+                    <circle cx="81.3116" cy="143.55" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="67.2577" cy="137.527" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="312.196" cy="71.2731" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="187.719" cy="49.1884" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="241.927" cy="13.05" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="239.919" cy="145.558" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="139.535" cy="165.635" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="490.881" cy="191.735" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="41.1577" cy="183.704" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="370.419" cy="137.527" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="390.496" cy="135.519" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="388.488" cy="153.588" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="450.727" cy="137.527" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="452.735" cy="15.0577" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="442.696" cy="25.0961" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="121.465" cy="17.0654" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="75.2885" cy="47.1807" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="111.427" cy="39.15" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="15.0577" cy="25.0961" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="338.296" cy="185.711" r="1.00385" fill="#D9D9D9"/>
+                    <circle cx="213.819" cy="187.719" r="3.01154" fill="#D9D9D9"/>
+                    <circle cx="277.062" cy="28.1077" r="2.00769" fill="#D9D9D9"/>
+                    <circle cx="427.638" cy="188.723" r="2.00769" fill="#D9D9D9"/>
+                    <circle cx="18.0692" cy="90.3462" r="2.00769" fill="#D9D9D9"/>
+                    <circle cx="385.477" cy="42.1615" r="2.00769" fill="#D9D9D9"/>
+                    <circle cx="470.804" cy="59.2269" r="3.01154" fill="#D9D9D9"/>
+                    <g clip-path="url(#clip0_4185_419)">
+                        <path d="M411.16 118.68L412.574 111.437H421.97C423.148 111.437 424.185 111.374 424.782 111.139C425.505 110.856 425.505 110.542 425.505 110.416C425.505 110.196 425.442 109.85 424.845 109.473C424.263 109.112 422.268 108.279 422.268 108.279L421.75 108.091C420.179 107.509 418.843 106.881 417.775 106.19C416.675 105.483 415.795 104.634 415.182 103.676C414.554 102.686 414.24 101.539 414.24 100.267C414.24 98.7897 414.633 97.3443 415.434 95.9931C416.219 94.6262 417.523 93.4793 419.283 92.5837C421.027 91.7039 423.274 91.2483 425.96 91.2483H435.984L434.57 98.4598H427.201C427.201 98.4598 425.882 98.3969 424.405 98.8211C423.525 99.1353 423.525 99.5281 423.525 99.7009C423.525 99.8581 423.525 100.157 424.201 100.534C424.829 100.879 426.007 101.366 427.704 101.979L428.081 102.12C429.511 102.67 430.721 103.315 431.711 104.006C432.716 104.729 433.502 105.561 434.052 106.504C434.601 107.462 434.884 108.515 434.884 109.646C434.884 110.966 434.523 112.317 433.8 113.668C433.078 115.035 431.789 116.229 429.982 117.203C428.191 118.177 425.788 118.664 422.849 118.664H411.145L411.16 118.68Z" fill="white"/>
+                        <path d="M292.729 118.68L294.143 111.437H303.538C304.717 111.437 305.754 111.374 306.351 111.139C307.073 110.856 307.073 110.542 307.073 110.416C307.073 110.196 307.01 109.85 306.413 109.473C305.832 109.112 303.837 108.279 303.837 108.279L303.318 108.091C301.747 107.509 300.412 106.881 299.343 106.19C298.244 105.483 297.364 104.634 296.751 103.676C296.123 102.686 295.808 101.539 295.808 100.267C295.808 98.7897 296.201 97.3443 297.002 95.9931C297.788 94.6262 299.092 93.4793 300.852 92.5837C302.596 91.7039 304.842 91.2483 307.529 91.2483H317.553L316.139 98.4598H308.77C308.77 98.4598 307.45 98.3969 305.974 98.8211C305.094 99.1353 305.094 99.5281 305.094 99.7009C305.094 99.8581 305.094 100.157 305.769 100.534C306.398 100.879 307.576 101.366 309.273 101.979L309.65 102.12C311.08 102.67 312.289 103.315 313.279 104.006C314.285 104.729 315.07 105.561 315.62 106.504C316.17 107.462 316.453 108.515 316.453 109.646C316.453 110.966 316.092 112.317 315.369 113.668C314.646 115.035 313.358 116.229 311.551 117.203C309.76 118.177 307.356 118.664 304.418 118.664H292.713L292.729 118.68Z" fill="white"/>
+                        <path d="M82.1982 83.4869H72.8343L65.9999 118.68H89.2526L90.8551 110.447L76.9664 110.432L82.1982 83.4869Z" fill="white"/>
+                        <path d="M97.2024 91.2483L95.8041 98.4598H106.692C108.043 98.4598 109.017 98.7111 109.583 99.1982C110.007 99.5753 110.18 100.141 110.101 100.911C108.31 100.801 106.503 100.879 104.744 101.115C102.811 101.382 100.989 101.853 99.3549 102.498C97.3909 103.283 95.7884 104.399 94.6258 105.828C93.4317 107.274 92.819 108.986 92.819 110.919C92.819 113.15 93.5731 115.004 95.0814 116.418C96.574 117.816 98.4436 118.68 100.706 118.68C102.371 118.68 103.958 118.146 105.388 117.392C106.284 116.92 107.038 116.323 107.682 115.601L107.085 118.68H115.459L116.999 110.667L118.507 102.985C118.962 100.596 118.884 98.5069 118.24 96.7629C117.596 94.9876 116.433 93.605 114.768 92.6623C113.149 91.7353 111.075 91.264 108.624 91.264M109.033 106.74C108.797 107.996 108.389 109.002 107.808 109.756C107.226 110.51 106.582 111.044 105.906 111.343C104.524 111.956 103.346 111.987 102.623 111.296C102.261 110.95 102.089 110.495 102.089 109.898C102.089 109.301 102.261 108.829 102.623 108.421C103.016 107.965 103.581 107.588 104.272 107.274C105.011 106.944 105.875 106.708 106.818 106.535C107.525 106.41 108.232 106.347 108.954 106.347H109.08L109.017 106.708L109.033 106.74Z" fill="white"/>
+                        <path d="M140.173 91.2483C138.271 91.2483 136.48 91.6725 134.862 92.4895C133.967 92.9451 133.165 93.5264 132.443 94.2177L133.024 91.2483H123.801L118.475 118.68H127.682L130.149 106.284C130.416 104.854 130.856 103.534 131.421 102.356C131.971 101.194 132.694 100.251 133.574 99.5124C134.422 98.8054 135.365 98.4755 136.496 98.4755C137.706 98.4755 138.491 98.884 138.884 99.7324C139.34 100.691 139.403 102.058 139.073 103.802L136.166 118.696H145.467L148.437 103.425C149.159 99.7952 148.814 96.8572 147.431 94.6576C146.017 92.4109 143.582 91.264 140.173 91.264V91.2483Z" fill="white"/>
+                        <path d="M170.731 94.8934C170.37 94.2964 169.914 93.7308 169.364 93.1966C168.029 91.8926 166.143 91.2327 163.771 91.2327C161.226 91.2327 158.932 92.034 156.952 93.6208C155.004 95.1762 153.465 97.1873 152.38 99.5911C151.296 101.979 150.746 104.446 150.746 106.897C150.746 109.144 151.124 111.17 151.878 112.93C152.648 114.721 153.747 116.135 155.161 117.141C156.591 118.146 158.272 118.665 160.142 118.665C161.807 118.665 163.378 118.272 164.824 117.486C165.609 117.062 166.081 116.591 166.615 115.994C166.583 116.151 166.096 118.665 166.096 118.665H175.366L182.31 83H173.056L170.747 94.8934H170.731ZM169.113 103.048C169.113 104.194 168.877 105.451 168.39 106.755C167.919 108.044 167.228 109.159 166.316 110.07C165.452 110.935 164.462 111.359 163.284 111.359C162.577 111.359 161.996 111.202 161.524 110.872C161.037 110.542 160.676 110.07 160.425 109.442C160.158 108.782 160.016 107.965 160.016 107.007C160.016 105.844 160.252 104.587 160.707 103.236C161.163 101.916 161.854 100.769 162.734 99.8425C163.583 98.9626 164.557 98.5384 165.688 98.5384C166.348 98.5384 166.945 98.6955 167.448 99.0098C167.95 99.324 168.343 99.811 168.642 100.471C168.956 101.162 169.113 102.026 169.113 103.032V103.048Z" fill="white"/>
+                        <path d="M203.835 118.68L205.249 111.437L194.879 111.469C193.685 111.5 192.633 111.343 191.69 111.029C190.794 110.73 190.15 110.259 189.695 109.599C189.333 109.081 189.192 108.452 189.239 107.698H206.396L206.521 107.29C206.851 106.284 207.071 105.341 207.197 104.493C207.323 103.629 207.385 102.765 207.385 101.932C207.385 99.8581 206.946 98.0042 206.066 96.4016C205.186 94.7834 203.835 93.495 202.075 92.5995C200.331 91.7197 198.194 91.264 195.728 91.264C192.523 91.264 189.71 92.0496 187.385 93.5736C185.075 95.0976 183.3 97.0772 182.122 99.4339C180.943 101.791 180.331 104.226 180.331 106.692C180.331 108.876 180.786 110.903 181.698 112.71C182.609 114.532 184.054 116.009 185.971 117.078C187.872 118.146 190.276 118.68 193.088 118.68H203.819H203.835ZM191.36 99.8738C191.894 99.2768 192.538 98.8054 193.261 98.4912C194.659 97.8628 196.419 97.8156 197.66 98.4912C198.242 98.8054 198.681 99.2454 198.98 99.8267C199.2 100.251 199.31 100.707 199.294 101.209H190.449C190.7 100.722 190.999 100.282 191.36 99.8895V99.8738Z" fill="white"/>
+                        <path d="M362.676 118.68L364.09 111.437L353.72 111.469C352.526 111.5 351.473 111.343 350.531 111.029C349.635 110.73 348.991 110.259 348.535 109.599C348.174 109.081 348.033 108.452 348.08 107.698H365.236L365.362 107.29C365.692 106.284 365.912 105.341 366.038 104.493C366.163 103.629 366.226 102.765 366.226 101.932C366.226 99.8582 365.786 98.0043 364.907 96.4017C364.027 94.7835 362.676 93.4952 360.916 92.5996C359.172 91.7198 357.035 91.2642 354.569 91.2642C351.363 91.2642 348.551 92.0497 346.226 93.5737C343.916 95.0977 342.141 97.0773 340.963 99.434C339.784 101.791 339.172 104.226 339.172 106.693C339.172 108.876 339.627 110.903 340.538 112.71C341.45 114.533 342.895 116.009 344.812 117.078C346.713 118.146 349.117 118.68 351.929 118.68H362.66H362.676ZM350.201 99.8739C350.735 99.2769 351.379 98.8056 352.102 98.4913C353.5 97.8629 355.26 97.8158 356.501 98.4913C357.082 98.8056 357.522 99.2455 357.821 99.8268C358.041 100.251 358.151 100.707 358.135 101.209H349.29C349.541 100.722 349.839 100.282 350.201 99.8896V99.8739Z" fill="white"/>
+                        <path d="M226.616 91.2484C224.809 91.2484 223.16 92.1439 221.73 93.448C221.007 94.1078 220.599 94.8463 220.096 95.6947C220.112 95.5533 220.96 91.2327 220.96 91.2327H212.727L207.401 118.665H216.655L218.933 106.975C219.247 105.341 219.892 103.943 220.332 103.126C220.96 101.759 221.95 100.675 222.814 100.031C223.929 99.1826 224.511 98.7898 228.281 98.7898H228.926L230.387 91.2484" fill="white"/>
+                        <path d="M249.272 110.432C250.858 110.432 252.084 110.416 252.948 110.102C253.765 109.819 254.331 109.473 254.598 109.112C254.865 108.751 255.006 108.405 255.006 108.091C255.006 107.619 254.802 107.195 254.393 106.787C253.922 106.315 253.372 105.923 252.744 105.593C252.1 105.263 251.424 104.964 250.764 104.729L250.591 104.634C250.418 104.603 250.308 104.556 250.198 104.524C250.057 104.477 249.9 104.399 249.759 104.336C247.59 103.503 245.799 102.655 244.495 101.838C243.144 100.989 242.123 99.9995 241.447 98.884C240.772 97.7528 240.41 96.3859 240.41 94.8148C240.41 92.3952 241.149 90.2899 242.594 88.5617C244.024 86.8806 245.878 85.5922 248.109 84.7438C250.56 83.8169 253.136 83.4398 255.682 83.4869H267.01L265.407 91.7196H255.163C255.163 91.7196 253.184 91.6882 252.445 91.8453C251.581 92.0496 250.89 92.3481 250.403 92.7409C249.979 93.0865 249.774 93.495 249.774 93.9978C249.774 94.5477 250.01 94.9562 250.544 95.2861C251.204 95.7103 252.524 96.3073 254.456 97.0772C254.55 97.0929 254.692 97.1557 254.833 97.2186C254.896 97.25 254.959 97.2814 255.038 97.2971C255.289 97.3757 255.493 97.4542 255.682 97.5485C255.855 97.6271 256.012 97.6899 256.153 97.7528C257.928 98.5226 259.421 99.371 260.615 100.251C261.841 101.162 262.783 102.199 263.443 103.33C264.103 104.477 264.433 105.765 264.433 107.164C264.433 108.861 263.93 110.62 262.94 112.38C261.95 114.155 260.332 115.664 258.164 116.873C255.996 118.083 253.215 118.696 249.884 118.696C247.575 118.696 235.87 118.696 235.87 118.696L237.472 110.447H249.209L249.272 110.432Z" fill="white"/>
+                        <path d="M287.199 91.2483L278.903 107.101C278.903 106.991 278.903 106.897 278.888 106.787C278.84 106.111 278.746 105.263 278.573 104.179L276.562 91.2483H267.465L272.949 117.565L267.638 126.551H276.594L297.553 91.2483H287.215H287.199Z" fill="white"/>
+                        <path d="M332.746 111.422C331.41 111.422 331.143 110.777 331.049 110.589C330.845 110.165 330.672 109.285 331.033 107.447L332.761 98.4441H339.659L341.057 91.2326H334.16L335.48 84.4611L325.88 86.0322L324.859 91.2326H320.664L319.25 98.4441H323.46L321.559 108.499C321.167 110.62 321.182 112.443 321.591 113.904C322.031 115.428 322.895 116.591 324.183 117.36C325.424 118.099 327.058 118.664 329.006 118.664H335.998L337.412 111.422C337.412 111.422 333.516 111.422 332.73 111.422H332.746Z" fill="white"/>
+                        <path d="M408.223 92.7881C406.966 91.7668 405.269 91.2327 403.164 91.2327C401.184 91.2327 399.361 91.6883 397.712 92.5995C396.361 93.3537 395.182 94.3906 394.177 95.7104C393.721 94.4535 392.998 93.4322 392.04 92.6781C390.815 91.7197 389.196 91.2327 387.217 91.2327C385.394 91.2327 383.713 91.6412 382.205 92.4581C381.404 92.8981 380.649 93.448 379.958 94.1078L380.508 91.2327H371.537L366.226 118.665H375.48L377.9 106.253C378.167 104.76 378.56 103.409 379.063 102.231C379.55 101.084 380.178 100.141 380.932 99.4339C381.639 98.7584 382.472 98.4441 383.446 98.4441C384.797 98.4441 385.143 99.0412 385.284 99.5596C385.551 100.502 385.504 101.932 385.174 103.77L382.299 118.665H391.474L393.973 105.703C394.428 103.519 395.104 101.728 396.015 100.345C396.848 99.0726 397.932 98.4441 399.346 98.4441C400.351 98.4441 400.917 98.8055 401.168 99.6382C401.467 100.612 401.451 102.011 401.137 103.786L398.246 118.68H407.531L410.501 103.393C410.925 101.005 410.972 98.8998 410.642 97.1244C410.297 95.2862 409.495 93.825 408.238 92.7881H408.223Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4185_419">
+                            <rect width="370" height="43.5516" fill="white" transform="translate(66 83)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <a href="https://larazeus.com/?ref=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/bd18b25f-7309-4970-ba9e-a11e2ddccdf6" alt="Lara Zeus" class="block rounded-xl">
             </a>
 
             <a href="https://luckymedia.dev/?utm_campaign=sponsor&amp;utm_source=filament&amp;utm_medium=web" target="_blank" class="block my-auto">
-                <img src="https://github.com/filamentphp/filament/assets/41773797/68e31a53-0d4e-463e-91bc-3b9258807908" alt="Lucky Media" class="block rounded-xl">
+                <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 368">
+                    <g clip-path="url(#clip0_69_508)">
+                        <rect width="800" height="367.213" fill="white"/>
+                        <path d="M238.714 235C229.561 226.033 217.398 221.099 204.457 221.099C191.516 221.099 179.353 226.033 170.2 235L150 226.796V176.225H173.681V204.62C183.182 200.217 193.645 197.9 204.467 197.9C223.735 197.9 241.847 205.252 255.463 218.591L238.714 235Z" fill="#2652E3"/>
+                        <path d="M166.75 134C175.903 142.967 188.066 147.901 201.007 147.901C213.948 147.901 226.111 142.967 235.264 134L255.474 142.204V192.775H231.793V164.38C222.292 168.783 211.828 171.1 201.007 171.1C181.738 171.1 163.627 163.748 150.01 150.409L166.75 134Z" fill="#2652E3"/>
+                        <path d="M797.109 366.713C671.106 321.95 537.845 297.943 400 297.943C261.161 297.943 132.169 321.364 7.54046 365.069L797.109 366.713ZM797.109 366.713H2.90565L7.5388 365.07L797.109 366.713ZM7.5388 2.14321L2.90563 0.5H797.109C671.106 45.2627 537.845 69.2705 400 69.2705C261.161 69.2705 132.168 45.8486 7.53969 2.14352C7.53939 2.14342 7.53909 2.14331 7.5388 2.14321Z" fill="#2652E3" stroke="#2652E3"/>
+                        <path d="M308.879 159.469H301.619V202.182H308.879V159.469Z" fill="#171717"/>
+                        <path d="M340.481 188.389C340.481 189.585 340.256 190.67 339.808 191.654C339.359 192.639 338.747 193.482 337.962 194.196C337.177 194.909 336.269 195.461 335.239 195.843C334.199 196.225 333.077 196.416 331.874 196.416C330.192 196.416 328.774 196.074 327.622 195.381C326.47 194.688 325.613 193.673 325.042 192.347C324.471 191.021 324.196 189.374 324.196 187.415V171.774H316.986V189.153C316.986 191.996 317.486 194.447 318.485 196.486C319.484 198.525 320.881 200.082 322.676 201.157C324.471 202.232 326.582 202.774 329.009 202.774C331.201 202.774 333.159 202.423 334.903 201.71C336.636 200.996 338.115 200.062 339.328 198.907C339.818 198.445 340.226 197.963 340.593 197.471L340.685 202.202H347.721V171.784H340.511V188.41L340.481 188.389Z" fill="#171717"/>
+                        <path d="M365.729 178.655C367.269 177.832 369.044 177.41 371.032 177.41C372.286 177.41 373.541 177.611 374.815 178.013C376.08 178.414 377.273 178.967 378.384 179.66C379.496 180.353 380.444 181.127 381.229 181.97L385.217 176.887C383.697 175.079 381.637 173.663 379.037 172.648C376.437 171.634 373.602 171.121 370.512 171.121C367.269 171.121 364.383 171.814 361.865 173.201C359.346 174.587 357.337 176.476 355.858 178.856C354.37 181.247 353.635 183.939 353.635 186.933C353.635 189.926 354.38 192.629 355.858 195.009C357.347 197.4 359.356 199.279 361.895 200.665C364.434 202.051 367.341 202.744 370.624 202.744C373.592 202.744 376.335 202.232 378.853 201.217C381.372 200.203 383.473 198.937 385.155 197.44L381.229 192.418C380.414 193.191 379.475 193.874 378.415 194.467C377.365 195.06 376.222 195.542 375.019 195.913C373.806 196.275 372.48 196.466 371.032 196.466C369.115 196.466 367.392 196.044 365.852 195.2C364.312 194.356 363.088 193.221 362.191 191.795C361.294 190.368 360.845 188.751 360.845 186.943C360.845 185.135 361.273 183.507 362.13 182.061C362.986 180.614 364.19 179.479 365.729 178.655Z" fill="#171717"/>
+                        <path d="M422.886 171.764H413.096L397.392 185.456V159.469H390.356V202.182H397.392V193.04L402.368 188.892L414.034 202.182H422.998L407.416 184.673L422.886 171.764Z" fill="#171717"/>
+                        <path d="M444.677 190.288C444.096 191.714 443.535 193.051 443.005 194.296C442.821 194.728 442.658 195.13 442.485 195.532C442.301 195.009 442.097 194.477 441.863 193.924C441.353 192.729 440.772 191.524 440.109 190.288L431.38 171.754H422.998L438.732 202.915L432.491 215.452H439.997L446.146 202.292L460.973 171.754H452.59L444.677 190.288Z" fill="#171717"/>
+                        <path d="M512.592 172.799C510.848 171.764 508.594 171.242 505.821 171.242C504.454 171.242 503.108 171.443 501.782 171.845C500.457 172.246 499.223 172.789 498.091 173.462C496.959 174.135 495.96 174.878 495.103 175.682C494.502 176.245 493.992 176.817 493.563 177.4C493.186 176.405 492.707 175.511 492.115 174.758C491.136 173.522 489.903 172.628 488.424 172.076C486.935 171.513 485.283 171.242 483.448 171.242C481.887 171.242 480.419 171.463 479.053 171.905C477.686 172.347 476.432 172.93 475.3 173.633C474.168 174.346 473.199 175.15 472.404 176.054C472.332 176.134 472.282 176.204 472.22 176.285L472.149 171.754H465.062V202.172H472.332V184.853C472.332 183.929 472.536 183.045 472.944 182.201C473.352 181.358 473.944 180.574 474.698 179.861C475.463 179.148 476.35 178.585 477.36 178.153C478.379 177.731 479.491 177.52 480.705 177.52C482.265 177.52 483.56 177.812 484.569 178.384C485.589 178.957 486.344 179.781 486.854 180.835C487.363 181.89 487.618 183.176 487.618 184.673V202.162H494.879V185.366C494.879 184.291 495.103 183.276 495.552 182.332C496.001 181.388 496.633 180.554 497.459 179.821C498.275 179.087 499.243 178.525 500.355 178.113C501.466 177.701 502.649 177.51 503.903 177.51C505.392 177.51 506.606 177.792 507.564 178.344C508.523 178.907 509.226 179.72 509.675 180.795C510.124 181.87 510.348 183.186 510.348 184.723V202.152H517.609V184.03C517.609 181.418 517.211 179.148 516.405 177.219C515.6 175.29 514.335 173.814 512.592 172.779V172.799Z" fill="#171717"/>
+                        <path d="M552.168 175.31C550.699 173.984 548.986 172.94 547.008 172.196C545.029 171.443 542.919 171.071 540.645 171.071C538.146 171.071 535.821 171.453 533.67 172.226C531.518 173 529.652 174.095 528.071 175.521C526.491 176.948 525.247 178.635 524.349 180.604C523.452 182.563 523.003 184.783 523.003 187.244C523.003 190.248 523.778 192.91 525.318 195.24C526.858 197.571 529.02 199.409 531.793 200.755C534.567 202.101 537.748 202.774 541.348 202.774C543.102 202.774 544.846 202.584 546.559 202.202C548.282 201.82 549.904 201.278 551.423 200.585C552.943 199.891 554.278 199.108 555.41 198.214L552.015 193.312C550.73 194.276 549.322 195.029 547.793 195.592C546.273 196.155 544.448 196.426 542.347 196.426C539.89 196.426 537.728 196.024 535.872 195.21C534.016 194.407 532.568 193.282 531.538 191.835C530.886 190.931 530.468 189.916 530.223 188.801H556.644L556.705 186.089C556.746 183.899 556.359 181.88 555.563 180.062C554.758 178.234 553.626 176.656 552.168 175.33V175.31ZM535.026 178.314C536.627 177.641 538.503 177.299 540.655 177.299C542.174 177.299 543.592 177.571 544.907 178.103C546.212 178.645 547.303 179.359 548.16 180.263C549.017 181.167 549.526 182.212 549.679 183.407V183.809H530.315C530.539 182.905 530.865 182.091 531.314 181.388C532.191 180.002 533.435 178.977 535.036 178.304L535.026 178.314Z" fill="#171717"/>
+                        <path d="M587.746 175.491C587.155 174.868 586.451 174.296 585.605 173.753C584.371 172.97 582.963 172.327 581.383 171.845C579.802 171.362 578.11 171.121 576.315 171.121C573.225 171.121 570.472 171.804 568.055 173.171C565.628 174.537 563.742 176.415 562.375 178.796C561.009 181.187 560.325 183.899 560.325 186.933C560.325 189.967 560.998 192.729 562.345 195.1C563.691 197.47 565.557 199.329 567.943 200.695C570.329 202.061 573.062 202.744 576.142 202.744C577.824 202.744 579.445 202.503 581.006 202.021C582.566 201.539 583.942 200.916 585.136 200.143C586.247 199.419 587.155 198.646 587.879 197.812L587.981 202.162H594.956V159.469H587.746V175.491ZM586.696 191.935C585.839 193.382 584.636 194.527 583.096 195.371C581.556 196.215 579.782 196.637 577.793 196.637C575.805 196.637 574.031 196.215 572.491 195.371C570.951 194.527 569.748 193.382 568.891 191.935C568.035 190.489 567.606 188.831 567.606 186.943C567.606 185.054 568.035 183.437 568.891 181.98C569.748 180.514 570.951 179.379 572.491 178.575C574.031 177.771 575.805 177.36 577.793 177.36C579.782 177.36 581.556 177.761 583.096 178.575C584.636 179.379 585.839 180.524 586.696 181.98C587.552 183.447 587.981 185.095 587.981 186.943C587.981 188.791 587.552 190.489 586.696 191.935Z" fill="#171717"/>
+                        <path d="M606.734 156.807C605.326 156.807 604.215 157.188 603.389 157.962C602.573 158.735 602.155 159.73 602.155 160.965C602.155 162.271 602.553 163.286 603.358 163.999C604.154 164.712 605.286 165.064 606.723 165.064C608.161 165.064 609.252 164.682 610.088 163.909C610.925 163.135 611.353 162.161 611.353 160.965C611.353 159.619 610.945 158.595 610.119 157.882C609.303 157.168 608.161 156.817 606.723 156.817L606.734 156.807Z" fill="#171717"/>
+                        <path d="M610.425 171.764H603.215V202.182H610.425V171.764Z" fill="#171717"/>
+                        <path d="M643.801 171.764V175.953C643.158 175.17 642.373 174.436 641.425 173.763C640.273 172.94 638.927 172.287 637.377 171.835C635.837 171.372 634.144 171.141 632.308 171.141C629.219 171.141 626.476 171.814 624.079 173.161C621.673 174.507 619.786 176.375 618.43 178.756C617.063 181.147 616.38 183.859 616.38 186.893C616.38 189.926 617.053 192.709 618.399 195.09C619.745 197.481 621.581 199.349 623.906 200.715C626.231 202.081 628.892 202.764 631.901 202.764C633.624 202.764 635.245 202.513 636.765 202.011C638.284 201.509 639.661 200.866 640.895 200.072C642.047 199.329 642.995 198.505 643.74 197.591V202.182H651V171.764H643.791H643.801ZM642.751 191.875C641.894 193.322 640.691 194.447 639.151 195.25C637.611 196.054 635.837 196.466 633.848 196.466C631.86 196.466 630.045 196.064 628.515 195.25C626.996 194.447 625.813 193.322 624.966 191.875C624.13 190.429 623.702 188.771 623.702 186.883C623.702 184.994 624.12 183.457 624.966 182.031C625.803 180.604 626.985 179.479 628.515 178.655C630.034 177.832 631.819 177.41 633.848 177.41C635.878 177.41 637.611 177.822 639.151 178.655C640.691 179.479 641.894 180.604 642.751 182.031C643.607 183.457 644.035 185.074 644.035 186.883C644.035 188.691 643.607 190.429 642.751 191.875Z" fill="#171717"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_69_508">
+                            <rect width="800" height="367.213" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <a href="https://saasykit.com/?utm_source=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/filamentphp/filament/assets/41773797/75a51120-45f5-45da-930c-1f3575ddc742" alt="SaaSykit" class="block rounded-xl">
+            </a>
+
+            <a href="https://scoreagency.nl/?utm_source=filament" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/9d046760-631d-4fae-85f7-e92ca3f380de" alt="Score Agency" class="block rounded-xl">
             </a>
 
             <a href="https://serverauth.com/?utm_source=filament&utm_medium=web&utm_campaign=sponsor" target="_blank" class="block my-auto">
@@ -915,36 +1030,28 @@ const { getStartedLink } = Astro.props
             <!--    <img src="https://github.com/filamentphp/filament/assets/41773797/04247ff0-f405-4de8-ac6f-16e7f7c0920b" alt="Spectate" class="block rounded-xl">-->
             <!--</a>-->
 
-            <a href="https://zeek.com" target="_blank" class="block bg-white rounded-xl p-4 my-auto">
-                <img src="https://github.com/filamentphp/filament/assets/41773797/b6be243e-3e26-4789-bae6-a33a89686414" alt="Zeek" class="block">
+            <a href="https://sorane.io/?utm_source=filamentphp" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/df95c185-9b71-44ef-a3dd-44917d57f46e" alt="Sorane" class="block rounded-xl">
             </a>
 
-            <a href="https://breezypixels.com?ref=filamentphp.com" target="_blank" class="block my-auto">
-                <img src="https://github.com/filamentphp/filament/assets/44533235/121d3e5c-2053-4b75-8149-0fdb560f13b7" alt="Breezy Pixels" class="block rounded-xl">
+            <a href="https://vidovo.com?ref=filamentphp.com" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/4640e30d-6b44-42d3-831f-fca5f500f3d0" alt="Vidovo" class="block rounded-xl">
+            </a>
+
+            <a href="https://breezypixels.com/free?ref=filamentphp.com" target="_blank" class="block my-auto">
+                <img src="https://github.com/user-attachments/assets/68b89e9e-1385-45c1-a47c-013075d342b5" alt="Breezy Pixels" class="block rounded-xl">
             </a>
 
             <a href="https://chief.app?ref=filamentphp.com" target="_blank" class="block my-auto">
                 <img src="https://github.com/filamentphp/filament/assets/44533235/9be76220-5238-448e-9e01-c0efaae23828" alt="Chief Tools" class="block rounded-xl">
             </a>
 
-            <a href="https://ego-trace.com" target="_blank" class="block bg-white rounded-xl p-4 my-auto">
-                <img src="https://user-images.githubusercontent.com/41773797/171833049-69fa5cbb-988e-4472-bcaf-4754dbade77d.png" alt="EgoTrace" class="block">
-            </a>
-
-            <a href="https://eloquentize.com?ref=filamentphp.com" target="_blank" class="block my-auto">
-                <img src="https://github.com/filamentphp/filament/assets/44533235/2600f812-3cee-4ec6-ac6f-14d0b14a7f07" alt="Eloquentize" class="block rounded-xl">
-            </a>
+            <!--<a href="https://ego-trace.com" target="_blank" class="block bg-white rounded-xl p-4 my-auto">-->
+            <!--    <img src="https://user-images.githubusercontent.com/41773797/171833049-69fa5cbb-988e-4472-bcaf-4754dbade77d.png" alt="EgoTrace" class="block">-->
+            <!--</a>-->
 
             <a href="https://flareapp.io" target="_blank" class="block my-auto">
                 <img src="https://user-images.githubusercontent.com/41773797/166236825-250ad64d-92b1-4291-bd97-306d51bb0ce7.png" alt="Flare" class="block rounded-xl">
-            </a>
-
-            <a href="https://ohdear.app" target="_blank" class="block my-auto">
-                <img src="https://user-images.githubusercontent.com/41773797/198252053-a2ae3314-5076-4383-9d1c-9507362f847f.jpg" alt="Oh Dear" class="block rounded-xl">
-            </a>
-
-            <a href="https://github.com/filamentphp/filament?sponsor=1" target="_blank" class="block my-auto font-medium text-sm text-center rounded-xl bg-pink-100 px-4 py-8 transition hover:bg-pink-200">
-                Your logo here? <span class="hover:scale-105">💖</span>
             </a>
         </div>
     </div>

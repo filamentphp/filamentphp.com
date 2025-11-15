@@ -52,6 +52,6 @@ docsearch({
     indexName: 'filamentadmin',
     placeholder: 'Search docs',
     searchParameters: {
-        facetFilters: ['version:3.x'],
+        facetFilters: ['version:4.x'],
     },
 })

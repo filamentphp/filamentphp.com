@@ -22,7 +22,7 @@ class ViewPluginController extends Controller
                 ->image($plugin->getImageUrl() ?? $plugin->getThumbnailUrl());
 
             $featuredPlugins = [
-                'filament-minimal-theme',
+                'zepfietje-themes',
                 'kenneth-sese-advanced-tables',
                 'ralphjsmit-media-library-manager',
             ];

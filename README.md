@@ -8,7 +8,7 @@ The source code for the [Filament](https://filamentphp.com) website.
 
 ## Contributing
 
-Submitting plugins and articles can be done by submitting a pull request to this repository. We have opted for this approach to allow for a more open and transparent process, as well as a smoother review process based on GitHub, where you and Filament maintainers can communicate directly.
+Submitting plugins can be done by submitting a pull request to this repository. We have opted for this approach to allow for a more open and transparent process, as well as a smoother review process based on GitHub, where you and Filament maintainers can communicate directly.
 
 ### Setting up an author profile
 
@@ -36,7 +36,7 @@ Your bio should be written in Markdown here. In the future, we may introduce an 
 - The `github_url` should be a link to your GitHub profile.
 - The `twitter_url` should be a link to your Twitter profile. It is optional.
 - The `mastodon_url` should be a link to your Mastodon profile. It is optional.
-- The `sponsors_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
+- The `sponsor_url` should be a link to your sponsors page like GitHub sponsors. It is optional.
 
 ### Submitting a plugin
 
