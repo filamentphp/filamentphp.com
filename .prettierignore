@@ -2,6 +2,7 @@
 **/dist
 **/package-lock.json
 **/vendor
+build
 composer.lock
 docs/dist
 docs/filament
