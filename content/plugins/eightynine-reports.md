@@ -11,6 +11,6 @@ docs_urls:
 github_repository: eighty9nine/filament-reports
 has_dark_theme: false
 has_translations: false
-versions: [3,4]
+versions: [3, 4]
 publish_date: 2024-02-04
 ---
