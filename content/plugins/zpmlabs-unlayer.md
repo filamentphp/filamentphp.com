@@ -10,5 +10,5 @@ github_repository: zpmlabs/filament-unlayer
 has_dark_theme: false
 has_translations: false
 versions: [4]
-publish_date: 2025-11-14
+publish_date: 2025-11-15
 ---
