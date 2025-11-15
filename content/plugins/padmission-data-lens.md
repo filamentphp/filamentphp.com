@@ -3,15 +3,31 @@ name: Data Lens
 slug: padmission-data-lens
 author_slug: padmission
 categories: [analytics, developer-tool, form-builder, form-layout, form-field, table-column, infolist-entry]
-checkout_url: https://checkout.anystack.sh/data-lens
-price: $99.00
+checkout_url: https://checkout.anystack.sh/data-lens?via=arf178
 description: Advanced Data Visualization for Laravel Filament - a premium reporting solution enabling custom column creation, sophisticated filtering, and enterprise-grade data insights within admin panels.
-url: https://filament.padmission.com/
 discord_url: https://discord.gg/Bg3f9XCzCM
-docs_url: https://filament.padmission.com/raw/data-lens-documentation-intro.md
+url: https://filament.padmission.com
 github_repository: Padmission/data-lens
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-11-06
+publish_date: 2025-11-15
 ---
+
+# Data Lens for Filament
+
+Transform raw data into actionable insights with powerful reporting and visualization tools built specifically for Laravel Filament. Create dynamic reports, build custom dashboards, and deliver automated insights without writing complex queries.
+
+## Key Features
+- **Dynamic Column Builder**: Select columns from any model or relationship with intuitive multi-level traversal
+- **Advanced Filtering**: Build complex filter conditions with nested logic and multiple operators
+- **Smart Summaries**: Generate intelligent aggregations with COUNT, SUM, AVG, and MIN/MAX functions
+- **Interactive Widgets**: Visualize data with configurable stats cards, bar charts, line graphs, and pie charts
+- **Flexible Exports**: Export reports to CSV or XLSX formats with queue support for large datasets
+- **Email Scheduling**: Automate report delivery with daily, weekly, or monthly schedules
+- **Security First**: Auto-detect sensitive columns, tenant-aware contexts, and built-in authorization
+- **Multi-tenancy Support**: Seamlessly integrate with Filament's multi-tenancy features
+
+Perfect for business intelligence dashboards, analytics platforms, or any application requiring sophisticated data reporting and visualization.
+
+**[Explore the Documentation](https://filament.padmission.com/documentation/data-lens)**
