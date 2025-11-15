@@ -10,5 +10,5 @@ github_repository: relisiuol/filament-relative-time
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-10-27
+publish_date: 2025-11-15
 ---
