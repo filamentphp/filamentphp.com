@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/dotswan/filament-map-picker/master/R
 github_repository: dotswan/filament-map-picker
 has_dark_theme: true
 has_translations: false
-versions: [3,4]
+versions: [3, 4]
 publish_date: 2024-01-09
 ---
