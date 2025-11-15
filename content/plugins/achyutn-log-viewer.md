@@ -10,7 +10,7 @@ docs_urls:
   v3: https://raw.githubusercontent.com/achyutkneupane/filament-log-viewer/refs/heads/filament-v3/README.md
 github_repository: achyutkneupane/filament-log-viewer
 has_dark_theme: true
-has_translations: false
+has_translations: true
 versions: [3, 4]
 publish_date: 2025-08-04
 ---
