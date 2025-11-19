@@ -3,7 +3,7 @@ name: Searchable Multiselect with List
 slug: joost-meijerink-searchable-multiselect-with-list
 author_slug: joost-meijerink
 categories: [form-field]
-description: A searchable multiselect with list view for selecte items.
+description: A searchable multiselect with list view for selected items.
 discord_url:
 docs_url: https://raw.githubusercontent.com/joost-meijerink/filament-plugins/refs/heads/main/searchable-multiselect-with-list/README.md
 github_repository: https://github.com/joost-meijerink/searchable-multiselect-with-list
