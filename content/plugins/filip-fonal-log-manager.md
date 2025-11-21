@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/filipfonal/filament-log-manager/main
 github_repository: filipfonal/filament-log-manager
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2022-08-27
 ---
