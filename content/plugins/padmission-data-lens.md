@@ -4,7 +4,6 @@ name: Data Lens
 slug: padmission-data-lens
 author_slug: padmission
 categories: [analytics, developer-tool, form-builder, form-layout, form-field, table-column, infolist-entry]
-checkout_url: https://checkout.anystack.sh/data-lens?via=arf178
 description: Advanced Data Visualization for Laravel Filament - a premium reporting solution enabling custom column creation, sophisticated filtering, and enterprise-grade data insights within admin panels.
 discord_url: https://discord.gg/Bg3f9XCzCM
 url: https://filament.padmission.com
@@ -12,7 +11,7 @@ github_repository: Padmission/data-lens
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-11-15
+publish_date: 2025-11-21
 ---
 
 # Data Lens for Filament
