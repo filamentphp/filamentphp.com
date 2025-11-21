@@ -11,5 +11,5 @@ github_repository: joost-meijerink/searchable-multiselect-with-list
 has_dark_theme: true
 has_translations: true
 versions: [3, 4]
-publish_date: 2025-11-15
+publish_date: 2025-11-21
 ---
