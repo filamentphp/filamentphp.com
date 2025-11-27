@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/malzariey/filament-lexical-editor/ma
 github_repository: malzariey/filament-lexical-editor
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-01-31
 ---

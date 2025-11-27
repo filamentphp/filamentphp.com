@@ -285,21 +285,31 @@
                 >
                     <x-sponsors.kirschbaum />
 
+                    <x-sponsors.agiledrop />
+
+                    <x-sponsors.baiz />
+
                     <x-sponsors.cms-max />
+
+                    <x-sponsors.mailtrap />
+
+                    <x-sponsors.nativephp />
 
                     <x-sponsors.sevalla />
 
+                    <x-sponsors.titan />
+
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
-                    <x-sponsors.lunar />
+                    {{-- <x-sponsors.lunar /> --}}
 
                     <x-sponsors.ploi />
 
+                    <x-sponsors.redberry />
+
                     <x-sponsors.tapp-network />
 
-                    <x-sponsors.wave />
-
-                    <x-sponsors.agiledrop />
+                    <x-sponsors.word-on-fire />
 
                     <x-sponsors.cleavr />
 

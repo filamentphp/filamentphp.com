@@ -4,7 +4,7 @@ slug: alexandersix-meet-the-team-kenneth-sese
 author_slug: alexandersix
 publish_date: 2025-01-30
 categories: [general]
-type_slug: news
+type_slug: article
 ---
 
 ![Meet the Team: Kenneth Sese](/images/content/articles/alexandersix-meet-the-team-kenneth/meet-the-team-kenneth.webp)
@@ -19,7 +19,7 @@ On the team, Kenneth will be offering his insight and experience to help us cont
 
 #### How long have you been programming and what influenced you to start?
 
- If you include coding small games on my TI-85 graphing calculator when I was a kid, then I’ve been dabbling in programming for over 30 years! But honestly, it wasn’t until 2005 that I truly started exploring programming, specifically web development. It started mostly as a hobby, helping friends with their businesses and then continued to grow from there.
+If you include coding small games on my TI-85 graphing calculator when I was a kid, then I’ve been dabbling in programming for over 30 years! But honestly, it wasn’t until 2005 that I truly started exploring programming, specifically web development. It started mostly as a hobby, helping friends with their businesses and then continued to grow from there.
 
 #### How long have you been using Laravel?
 

@@ -1,7 +1,7 @@
 ---
 import navigation from '../navigation.json'
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/quickstart/", "3.x", "quickstart"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "4.x", "introduction", "overview"];
 let currentVersion = segments[1].replaceAll("/", "");
 let currentSection = segments[2].replaceAll("/", "");
 let currentPage = (segments[3] ?? null)?.replaceAll("/", "");

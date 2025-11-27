@@ -49,7 +49,9 @@ class AppServiceProvider extends ServiceProvider
             'plugin' => Plugin::class,
         ]);
 
-        URL::forceScheme('https');
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
 
         RateLimiter::for('vpn_api', function (CheckIfIpIsVpn $job): Limit {
             if (

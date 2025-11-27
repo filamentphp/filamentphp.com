@@ -3,8 +3,7 @@ title: Introducing Filament v3.2
 slug: alexandersix-filament-v3-2
 author_slug: alexandersix
 publish_date: 2024-01-16
-categories:
-  - general
+categories: [general]
 type_slug: news
 ---
 

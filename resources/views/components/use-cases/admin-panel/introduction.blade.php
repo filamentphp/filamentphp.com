@@ -58,7 +58,7 @@
         {{-- Link --}}
         <div class="grid place-items-center pt-10">
             <a
-                href="{{ route('docs', ['slug' => 'panels/getting-started']) }}"
+                href="{{ route('docs', ['slug' => 'introduction/overview']) }}"
                 class="rounded-full bg-[#ffbc74] px-7 py-3 text-white transition duration-300 hover:bg-[#ffbc74]/80"
             >
                 Get Started

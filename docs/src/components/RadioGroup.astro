@@ -39,7 +39,7 @@ const { model } = Astro.props;
     x-id="['radio-group-label']"
     x-model={model}
     x-modelable="value"
-    class="not-prose grid gap-3 max-w-lg w-full"
+    class="not-prose grid gap-3 max-w-lg w-full mb-6"
 >
     <label x-bind:id="$id('radio-group-label')" role="none" class="sr-only">
         Selected option: <span x-text="value"></span>

@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/webplusmultimedia/filament-json-medi
 github_repository: webplusmultimedia/filament-json-media
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-03-20
 ---

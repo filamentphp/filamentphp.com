@@ -62,8 +62,8 @@
             avatar="https://avatars.githubusercontent.com/u/22632550?v=4"
             name="Dennis Koch"
             title="Community Manager & Developer"
-            website="https://pixelarbeit.de?ref=filamentphp.com"
-            twitter="https://twitter.com/pixelarbeit"
+            website="https://denniskoch.dev?ref=filamentphp.com"
+            mastodon="https://phpc.social/@denniskoch"
             github="https://github.com/pxlrbt"
         />
         <x-team.member
