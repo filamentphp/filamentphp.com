@@ -15,5 +15,5 @@ github_repository: ralphjsmit/laravel-filament-media-library
 has_dark_theme: true
 has_translations: true
 versions: [2, 3, 4]
-publish_date: 2023-07-17
+publish_date: 2025-11-28
 ---
