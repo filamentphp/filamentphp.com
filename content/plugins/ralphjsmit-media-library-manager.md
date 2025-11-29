@@ -2,7 +2,7 @@
 name: Media Library Pro V4
 slug: ralphjsmit-media-library-manager
 author_slug: ralphjsmit
-categories: [form-builder, form-field, spatie, panel-builder]
+categories: [form-builder, form-field, form-editor, infolist-entry, table-column, kit, spatie, panel-builder]
 checkout_url: https://filamentplugins.com/filament-media-library-pro?referer=filament
 price: €99.00
 description: A top-tier Media Management experience for Filament. Easily give your users the ability to upload, organise, and manage media files with advanced features like custom actions, filters, sorters, and permissions.
