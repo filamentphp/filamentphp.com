@@ -291,6 +291,8 @@
 
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.mailtrap />
+
                     <x-sponsors.nativephp />
 
                     <x-sponsors.sevalla />

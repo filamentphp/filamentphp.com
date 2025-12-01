@@ -15,6 +15,8 @@
 
             <x-sponsors.cms-max footer />
 
+            <x-sponsors.mailtrap footer />
+
             <x-sponsors.nativephp footer />
 
             <x-sponsors.sevalla footer />
