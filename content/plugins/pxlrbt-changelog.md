@@ -2,7 +2,7 @@
 name: Changelog
 slug: pxlrbt-changelog
 author_slug: pxlrbt
-categories: [panel-builder]
+categories: [panel-builder, widget]
 checkout_url: https://store.denniskoch.dev/buy/bf12e45f-373a-491d-938e-e7386179bb3f
 price: €39.00
 description: Render a changelog inside your panel based on your GitHub releases. Works with private repos.
@@ -11,7 +11,7 @@ url: https://denniskoch.dev/projects/filament-changelog/docs
 github_repository: pxlrbt/filament-changelog
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-06-11
 ---
 
