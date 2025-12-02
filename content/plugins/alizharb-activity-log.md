@@ -10,5 +10,5 @@ has_dark_theme: true
 has_translations: true
 versions: [1]
 publish_date: 2025-12-02
-anystack_id: a07f9424-1959-4223-ae1f-60f14a614f70
+
 ---
