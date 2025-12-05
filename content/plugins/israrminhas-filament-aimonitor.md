@@ -1,6 +1,6 @@
  ---
   name: AI Monitor
-  slug: filament-aimonitor
+  slug: aimonitor
   author_slug: israrminhas1
   categories: [dashboard, panel-builder, widget]
   description: Monitor AI API usage and costs across OpenAI, Anthropic, Gemini & Perplexity. Features include API key management, automatic cost calculation, per-user spending limits, and multi-tenancy support.
