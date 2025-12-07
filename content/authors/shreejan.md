@@ -1,6 +1,6 @@
 ---
 name: Shreejan Pandit
-slug: shreejan-pandit
+slug: shreejan
 github_url: https://github.com/shreejanpandit
 twitter_url: https://x.com/Shreeja50509641
 ---
