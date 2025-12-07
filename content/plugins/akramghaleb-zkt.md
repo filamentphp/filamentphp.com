@@ -11,5 +11,5 @@ github_repository: akramghaleb/filament-zkt
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-11-30
+publish_date: 2025-12-07
 ---
