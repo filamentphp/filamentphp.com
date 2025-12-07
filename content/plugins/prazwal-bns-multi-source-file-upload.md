@@ -10,5 +10,5 @@ github_repository: prazwal-bns/Plugin-MultiSourceFileUpload
 has_dark_theme: true
 has_translations: false
 versions: [4]
-publish_date: 2025-11-30
+publish_date: 2025-12-07
 ---
