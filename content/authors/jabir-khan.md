@@ -2,6 +2,7 @@
 name: Jabir Khan
 slug: jabir-khan
 github_url: https://github.com/jabirmayar
+twitter_url: https://x.com/daacreators
 sponsor_url: https://github.com/sponsors/jabirmayar
 ---
 
