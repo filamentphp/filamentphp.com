@@ -1,7 +1,7 @@
 ---
 anystack_id: a03d5e59-49eb-430b-b244-3fc5ddb91ae4
-name: ZKT
-slug: akramghaleb-zkt
+name: Filament-ZKT
+slug: akramghaleb-filament-zkt
 author_slug: akramghaleb
 categories: [panel-builder]
 description: Discovering, connecting to, and managing ZKTeco biometric devices within your Filament admin panel.
