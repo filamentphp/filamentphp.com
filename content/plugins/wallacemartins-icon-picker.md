@@ -4,11 +4,11 @@ slug: wallacemartins-icon-picker
 author_slug: wallacemartins
 categories: [icon-set]
 description: Filament Icons is a robust Laravel package that introduces a modern, responsive icon picker interface to your Filament applications. Seamlessly supporting all blade-icons sets, it features smart real-time search, performance-optimized infinite scrolling, and versatile integration across Forms, Tables, and Infolists, allowing for effortless icon management and customization with a superior user experience.
-discord_url: 
+discord_url:
 docs_url: https://raw.githubusercontent.com/wallacemartinss/filament-icon-picker/1.x/README.md
 github_repository: wallacemartinss/filament-icon-picker
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-12-08
+publish_date: 2025-12-09
 ---
