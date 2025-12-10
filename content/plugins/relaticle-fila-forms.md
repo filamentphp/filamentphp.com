@@ -13,5 +13,5 @@ github_repository: filaforms/filaforms-plugin
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-12-12
+publish_date: 2025-12-09
 ---
