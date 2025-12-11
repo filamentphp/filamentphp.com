@@ -1,5 +1,4 @@
 name: isach
 slug: isach
-github: isach5
-twitter: null
+github: https://github.com/isach5
 website: https://emuniq.com
