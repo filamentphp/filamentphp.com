@@ -2,14 +2,16 @@
 name: Pinpoint
 slug: fahiem-pinpoint
 author_slug: fahiem
-categories: [form-field]
-description: Google Maps location picker component with search, draggable marker, and reverse geocoding for address components (province, city, district, postal code).
+categories: [form-field, infolist-entry]
+description: Google Maps location picker component with search, draggable marker, reverse geocoding, and multi-language support (EN, AR, NL, ID).
 discord_url:
 docs_url: https://github.com/fahiem152/filament-pinpoint#readme
 github_repository: fahiem152/filament-pinpoint
 has_dark_theme: true
-has_translations: false
-image: fahiem-pinpoint.png
+has_translations: true
+images:
+    - fahiem-pinpoint.png
+    - fahiem-pinpoint-viewer.png
 versions: [4]
 publish_date: 2025-12-07
 ---
@@ -24,11 +26,20 @@ A Google Maps location picker component for **Filament 4** with search, draggabl
 - **Current location** - Get user's current device location
 - **Reverse geocoding** - Auto-fill address fields from coordinates
 - **Dark mode support** - Fully compatible with Filament's dark mode
+- **Multi-language support** - Translations for EN, AR, NL, ID
+- **Infolist Entry** - Read-only map display for view pages
 - **Fully configurable** - Customize height, zoom, default location, and more
 
-## v1.1.0 - Address Components
+## v1.1.1 - Multi-language & Infolist Entry
 
-New in version 1.1.0, you can now auto-fill detailed address components:
+New in version 1.1.1:
+
+- **Multi-language support** with translations for English, Arabic, Dutch, and Indonesian
+- **PinpointEntry** component for Infolists (read-only map display)
+- `shortAddressField()` - Auto-fill short address (premise + route + street number)
+- `countryField()` - Auto-fill country name
+
+## v1.1.0 - Address Components
 
 - `provinceField()` - Auto-fill province/state
 - `cityField()` - Auto-fill city/county
@@ -73,10 +84,26 @@ Pinpoint::make('location')
     ->latField('lat')
     ->lngField('lng')
     ->addressField('address')
+    ->shortAddressField('short_address')
     ->provinceField('province')
     ->cityField('city')
     ->districtField('district')
     ->villageField('village')
     ->postalCodeField('postal_code')
+    ->countryField('country')
+    ->columnSpanFull()
+```
+
+## Infolist Entry (Read-Only)
+
+```php
+use Fahiem\FilamentPinpoint\PinpointEntry;
+
+PinpointEntry::make('location')
+    ->label('Location')
+    ->latField('lat')
+    ->lngField('lng')
+    ->defaultZoom(15)
+    ->height(400)
     ->columnSpanFull()
 ```
