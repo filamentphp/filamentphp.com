@@ -4,12 +4,12 @@ slug: filament-page-preview
 author_slug: andrei-feraru
 categories: [forms]
 description: Custom Filament form field that renders a live Blade page preview.
-docs_url: https://raw.githubusercontent.com/ferarandrei1/filament-page-preview/main/README.md
-github_repository: ferarandrei1/filament-page-preview
+docs_url: https://raw.githubusercontent.com/feraandrei1/filament-page-preview/main/README.md
+github_repository: feraandrei1/filament-page-preview
 has_dark_theme: false
 has_translations: false
 versions:
-  v3: https://raw.githubusercontent.com/ferarandrei1/filament-page-preview/main/README.md
+  v3: https://raw.githubusercontent.com/feraandrei1/filament-page-preview/main/README.md
 publish_date: 2025-12-20
 ---
 
