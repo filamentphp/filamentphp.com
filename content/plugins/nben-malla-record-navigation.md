@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/nb3n/filament-record-nav/main/README
 github_repository: nb3n/filament-record-nav
 has_dark_theme: true
 has_translations: false
-versions: [3]
-publish_date: 2025-06-19
+versions: [4]
+publish_date: 2025-12-21
 ---
