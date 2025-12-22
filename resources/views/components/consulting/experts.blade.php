@@ -68,7 +68,6 @@
         >
             <strong>Zep</strong>
             is the lead UI designer of Filament.
-            {{-- format-ignore-end --}}
             In addition to his design skills, he brings a wealth of development
             experience to the Filament team. He's based in
             {{-- format-ignore-start --}}
