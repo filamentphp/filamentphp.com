@@ -1,4 +1,5 @@
+---
 name: isach
 slug: isach
-github: https://github.com/isach5
-website: https://emuniq.com
+github_url: https://github.com/isach5
+---
