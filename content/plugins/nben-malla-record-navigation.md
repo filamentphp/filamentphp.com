@@ -10,5 +10,5 @@ github_repository: nb3n/filament-record-nav
 has_dark_theme: true
 has_translations: false
 versions: [4]
-publish_date: 2025-12-21
+publish_date: 2025-06-19
 ---
