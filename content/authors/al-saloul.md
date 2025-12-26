@@ -2,8 +2,8 @@
 name: Mohammed Alsaloul
 slug: al-saloul
 github_url: https://github.com/al-saloul
-linkedin_url: https://www.linkedin.com/in/mohammed-alsaloul-05299922b
 twitter_url: https://x.com/eng_alsaloul
+linkedin_url: https://www.linkedin.com/in/mohammed-alsaloul-05299922b
 ---
 
 Senior Full Stack Laravel Developer with 7+ years of experience building scalable, high-impact platforms
