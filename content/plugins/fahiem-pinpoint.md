@@ -9,9 +9,6 @@ docs_url: https://raw.githubusercontent.com/fahiem152/filament-pinpoint/refs/hea
 github_repository: fahiem152/filament-pinpoint
 has_dark_theme: true
 has_translations: true
-images:
-    - fahiem-pinpoint.png
-    - fahiem-pinpoint-viewer.png
 versions: [4]
 publish_date: 2025-12-07
 ---
