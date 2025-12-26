@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/codewithkyrian/filament-date-range/m
 github_repository: codewithkyrian/filament-date-range
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-06-19
 ---
