@@ -1,6 +1,6 @@
 ---
 name: DashArrange
-slug: dash-arrange
+slug: shreejan-dash-arrange
 author_slug: shreejan
 categories: [panel-builder]
 description: The DashArrange plugin allows users to customize their dashboard widgets with drag & drop functionality
@@ -10,5 +10,5 @@ github_repository: shreejanpandit/arragne-dashboard
 has_dark_theme: true
 has_translations: false
 versions: [4]
-publish_date: 2025-12-13
+publish_date: 2025-12-26
 ---
