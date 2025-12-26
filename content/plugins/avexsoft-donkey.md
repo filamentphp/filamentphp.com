@@ -10,5 +10,5 @@ github_repository: avexsoft/filament-donkey
 has_dark_theme: true
 has_translations: false
 versions: [4]
-publish_date: 2025-12-13
+publish_date: 2025-12-26
 ---
