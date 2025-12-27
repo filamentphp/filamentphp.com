@@ -2,7 +2,8 @@
 name: Akram Ghaleb
 slug: akramghaleb
 github_url: https://github.com/akramghaleb
+linkedin_url: https://www.linkedin.com/in/akramghaleb
+twitter_url: https://twitter.com/AkramHub
 ---
 
-My name is Akram Ghaleb.
-Full-Stack Developer with over 7 years of experience specializing in building scalable, high-performance web applications. I am proficient in modern technologies such as Vue, Nuxt,React, Laravel, and PHP, with a strong passion for delivering clean, efficient, maintainable code and high-performance SPAs using React, Hooks, Context API, and integrating RESTful/GraphQL APIs. My focus is on developing user-friendly, responsive websites and web platforms that drive business success. 
+My name is Akram Ghaleb. I’m a Full-Stack Developer with 7+ years of experience building scalable, high-performance web applications. I specialize in Laravel, Filament, Vue, and React, with a strong focus on clean, maintainable code and seamless user experiences.
