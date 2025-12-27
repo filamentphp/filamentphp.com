@@ -3,7 +3,7 @@ name: Usama Muneer
 slug: usama-muneer
 github_url: https://github.com/usamamuneerchaudhary
 twitter_url: https://x.com/usamachaudhary
-mastodon_url: 
+mastodon_url:
 sponsor_url: https://github.com/sponsors/usamamuneerchaudhary
 ---
 
