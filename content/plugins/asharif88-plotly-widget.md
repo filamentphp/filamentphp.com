@@ -10,5 +10,5 @@ github_repository: asharif88/filament-plotly
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2025-12-21
+publish_date: 2025-12-26
 ---
