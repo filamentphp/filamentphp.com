@@ -1,6 +1,6 @@
 ---
 name: Rich Editor Fullscreen
-slug: rich-editor-fullscreen
+slug: mdobes-rich-editor-fullscreen
 author_slug: mdobes
 categories: [form-field]
 description: A Filament plugin that adds fullscreen functionality to the Rich Editor component.
