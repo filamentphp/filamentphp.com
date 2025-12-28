@@ -5,4 +5,4 @@ github_url: https://github.com/prazwal-bns
 twitter_url: https://x.com/PrAzWaL_Bns
 ---
 
-I'm a Backend Web Developer with a strong foundation in Laravel, RESTful APIs, and full-stack development. Over the years, I have built scalable systems, designed intuitive user experiences, and contributed to a wide range of projects—from rental management systems and blogging platforms to e-commerce and student profiles. I have hands-on experience with Breeze authentication, resource controllers, factories, data seeding, FilamentPHP, Livewire, and modern testing practices.
+I'm a passionate Backend Web Developer with a strong focus on Laravel and RESTful API development. I have experience building scalable, maintainable systems and crafting intuitive full-stack solutions. I work hands-on with Laravel, FilamentPHP, Livewire, and modern testing practices, with a constant drive to improve performance, code quality, and developer experience.
