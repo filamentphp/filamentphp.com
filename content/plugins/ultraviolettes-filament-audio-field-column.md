@@ -12,15 +12,3 @@
   versions: [4]
   publish_date: 2024-12-28
   ---
-
-  A Filament V4 plugin that provides audio player components with circular progress indicator.
-
-  ## Features
-
-  - Play/Pause button with smooth animations
-  - Circular SVG progress indicator
-  - Support for local and remote audio files
-  - Dark mode support
-  - Optional volume control and duration display
-  - Customizable size and progress color
-  - Auto-pause when another player starts
