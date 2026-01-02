@@ -1,5 +1,5 @@
 ---
-name: TeamKit
+name: TeamKit v4
 slug: jeffersongoncalves-teamkit
 author_slug: jeffersongoncalves
 categories: [kit]
