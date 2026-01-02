@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/cheesegrits/filament-phone-numbers/3
 github_repository: cheesegrits/filament-phone-numbers
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2023-08-05
 ---
