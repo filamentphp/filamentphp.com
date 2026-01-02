@@ -1,0 +1,15 @@
+---
+name: Web3 Auth
+slug: geof-web3-auth
+author_slug: geof
+categories:
+- authentication
+description: Web3 wallet authentication plugin for MetaMask and EIP-1193 compatible wallets support.
+github_repository: geof-dev/filament-web3-auth
+has_dark_theme: true
+has_translations: true
+versions:
+- 4
+publish_date: 2026-01-02
+docs_url: https://raw.githubusercontent.com/geof-dev/filament-web3-auth/main/README.md
+---
