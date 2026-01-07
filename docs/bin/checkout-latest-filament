@@ -8,26 +8,14 @@ DOCS_VERSIONS=(
 )
 
 for v in "${DOCS_VERSIONS[@]}"; do
-    major="${v%%.*}"   # 1, 2, 3, 4
-
     if [ -d "filament/$v" ]; then
         echo "Updating $v..."
-        (cd filament/$v && git fetch --tags origin)
+        (cd filament/$v && git fetch origin)
     else
         echo "Cloning $v..."
-        git clone --no-checkout git@github.com:filamentphp/filament.git "filament/$v"
-        (cd filament/$v && git fetch --tags origin)
+        git clone -b "$v" git@github.com:filamentphp/filament.git "filament/$v"
     fi
 
-    latest_tag=$(git -C filament/$v tag -l "v${major}.*" --sort=-v:refname \
-        | grep -E '^[^ -]+$' \
-        | head -n1)
-
-    if [ -z "$latest_tag" ]; then
-        echo "No stable tag found for $v"
-        continue
-    fi
-
-    echo "Checking out $latest_tag for $v..."
-    (cd filament/$v && git checkout -f "$latest_tag")
+    echo "Checking out latest commit on $v..."
+    (cd filament/$v && git checkout -f "$v" && git pull origin "$v")
 done
