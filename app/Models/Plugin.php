@@ -78,7 +78,7 @@ class Plugin extends Model implements Starrable
         return $query->where('is_draft', true);
     }
 
-    public function getDocUrl(string $version = null): ?string
+    public function getDocUrl(?string $version = null): ?string
     {
         if (filled($this->docs_url)) {
             return $this->docs_url;
@@ -94,7 +94,7 @@ class Plugin extends Model implements Starrable
         return null;
     }
 
-    public function getDocs(string $version = null): ?string
+    public function getDocs(?string $version = null): ?string
     {
         if (filled($this->content)) {
             return $this->content;
