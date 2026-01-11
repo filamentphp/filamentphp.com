@@ -6,8 +6,8 @@ categories: [kit]
 description: Teamkit is a robust starter kit, designed to accelerate the development of modern web applications with a ready-to-use multi-panel structure.
 discord_url:
 docs_urls:
-  v4: https://raw.githubusercontent.com/jeffersongoncalves/teamkitv4/4.x/README.md
-  v3: https://raw.githubusercontent.com/jeffersongoncalves/teamkit/3.x/README.md
+  v4: https://raw.githubusercontent.com/jeffersongoncalves/teamkitv4/main/README.md
+  v3: https://raw.githubusercontent.com/jeffersongoncalves/teamkit/main/README.md
 github_repository: jeffersongoncalves/teamkitv4
 has_dark_theme: true
 has_translations: true
