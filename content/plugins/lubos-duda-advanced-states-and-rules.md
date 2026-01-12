@@ -9,7 +9,7 @@ docs_url: https://github.com/dlogic-solutions/filament-advanced-states-support
 github_repository: dlogic-solutions/filament-advanced-states
 anystack_id: a0c78245-7e00-4099-a147-7895cf636a4e
 has_dark_theme: true
-has_translations: false
+has_translations: true
 versions: [3, 4]
 publish_date: 2026-01-10
 ---
