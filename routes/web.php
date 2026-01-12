@@ -55,14 +55,14 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/api/{version?}', function (Version $version = null): RedirectResponse {
+Route::get('/api/{version?}', function (?Version $version = null): RedirectResponse {
     $version = $version ?? Version::getLatest();
 
     return redirect('/api/' . $version->value . '/index.html');
 })->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
-    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+    Route::get('/{slug?}', function (?string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
         if (
