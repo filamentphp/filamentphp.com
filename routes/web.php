@@ -77,7 +77,8 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => Version::getLatest()->value . "/{$slug}"]);
+            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
+//            return redirect()->route('docs', ['slug' => Version::getLatest()->value . "/{$slug}"]);
         }
 
         $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
