@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/fnx-software/filament-astrotomic/mai
 github_repository: fnx-software/filament-astrotomic
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [4]
 publish_date: 2025-01-16
 ---
