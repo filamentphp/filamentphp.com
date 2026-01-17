@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/AsmitNepali/resized-column/refs/head
 github_repository: asmitnepali/resized-column
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3,4,5]
 publish_date: 2025-05-18
 ---
