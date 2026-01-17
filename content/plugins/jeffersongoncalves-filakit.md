@@ -9,7 +9,7 @@ docs_urls:
   v5: https://raw.githubusercontent.com/jeffersongoncalves/filakitv5/main/README.md
   v4: https://raw.githubusercontent.com/jeffersongoncalves/filakitv4/main/README.md
   v3: https://raw.githubusercontent.com/jeffersongoncalves/filakit/main/README.md
-github_repository: jeffersongoncalves/filakitv4
+github_repository: jeffersongoncalves/filakitv5
 has_dark_theme: true
 has_translations: true
 versions: [3, 4, 5]
