@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Version;
 use App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Plugin;
@@ -54,12 +55,14 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
-Route::get('/api/{version?}', function (string $version = '4.x'): RedirectResponse {
-    return redirect('/api/' . $version . '/index.html');
-})->where('version', '[1-4]+\.x')->name('api-docs');
+Route::get('/api/{version?}', function (?Version $version = null): RedirectResponse {
+    $version = $version ?? Version::getLatest();
+
+    return redirect('/api/' . $version->value . '/index.html');
+})->name('api-docs');
 
 Route::prefix('/docs')->group(function () {
-    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+    Route::get('/{slug?}', function (?string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
         if (
@@ -74,7 +77,7 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "4.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => Version::getLatest()->value . "/{$slug}"]);
         }
 
         $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
@@ -168,3 +171,24 @@ Route::get('/tricks/{slug}', function (string $slug) {
 
 Route::redirect('/login', '/admin/login')->name('login');
 Route::redirect('/themes', '/plugins/zepfietje-themes');
+
+Route::get('/blueprint/examples/{example}/{file}.md', function (string $example, string $file) {
+    // Validate inputs are simple alphanumeric strings (no path traversal)
+    if (! preg_match('/^[a-z][a-z0-9-]*$/', $example) || ! preg_match('/^[a-z][a-z0-9-]*$/', $file)) {
+        abort(404);
+    }
+
+    $path = resource_path("markdown/blueprint/examples/{$example}/{$file}.md");
+
+    // Ensure resolved path is within expected directory
+    $realPath = realpath($path);
+    $expectedBase = realpath(resource_path('markdown/blueprint/examples'));
+
+    if ($realPath === false || ! str_starts_with($realPath, $expectedBase)) {
+        abort(404);
+    }
+
+    $content = e(file_get_contents($realPath));
+
+    return response("<pre>{$content}</pre>", 200, ['Content-Type' => 'text/html']);
+})->where(['example' => '[a-z0-9-]+', 'file' => '[a-z0-9-]+'])->name('blueprint.example');

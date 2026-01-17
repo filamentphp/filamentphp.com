@@ -3,7 +3,7 @@ name: Mail Log
 slug: tapp-network-mail-log
 author_slug: tapp-network
 categories: [developer-tool, panel-builder]
-description:  View outgoing mail in a resource.
+description: View outgoing mail in a resource.
 discord_url: https://discord.com/channels/883083792112300104/1232698115790737479
 docs_url: https://raw.githubusercontent.com/TappNetwork/filament-maillog/main/README.md
 github_repository: TappNetwork/filament-maillog
