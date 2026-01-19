@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/YacoubAl-hardari/filament-tour/maste
 github_repository: YacoubAl-hardari/filament-tour
 has_dark_theme: true
 has_translations: true
-versions: [3,4]
+versions: [3,4,5]
 publish_date: 2026-01-3
 ---
