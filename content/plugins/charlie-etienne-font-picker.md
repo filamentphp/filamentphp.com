@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/CharlieEtienne/filament-font-picker/
 github_repository: CharlieEtienne/filament-font-picker
 has_dark_theme: true
 has_translations: true
-versions: [4,5]
+versions: [4, 5]
 publish_date: 2025-08-19
 ---
