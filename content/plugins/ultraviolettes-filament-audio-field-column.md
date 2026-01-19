@@ -9,6 +9,6 @@
   has_dark_theme: true
   has_translations: false
   image: ultraviolettes-filament-audio-field-column.webp
-  versions: [4]
+  versions: [4, 5]
   publish_date: 2024-12-28
   ---
