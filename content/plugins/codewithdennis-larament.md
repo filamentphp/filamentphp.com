@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/CodeWithDennis/larament/4.x/README.m
 github_repository: codewithdennis/larament
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2024-09-07
 ---
