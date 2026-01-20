@@ -3,8 +3,9 @@
     'name',
     'title',
     'github',
-    'twitter',
     'website',
+    'twitter' => null,
+    'mastodon' => null,
 ])
 
 <div
@@ -33,39 +34,62 @@
         </div>
         {{-- Links --}}
         <div class="flex flex-wrap items-center gap-3.5 text-hurricane">
-            <a
-                target="_blank"
-                href="{{ $twitter }}"
-                class="group/twitter-link relative grid h-9 w-9 place-items-center rounded-xl bg-merino hover:text-black motion-reduce:transition-none"
-            >
-                <svg
-                    width="40"
-                    height="40"
-                    class="relative -top-0.5 w-[1.45rem] transition duration-300 group-hover/twitter-link:scale-0 group-hover/twitter-link:opacity-0"
-                    fill="none"
-                    viewBox="0 0 40 40"
-                    xmlns="http://www.w3.org/2000/svg"
+            @if ($twitter)
+                <a
+                    target="_blank"
+                    href="{{ $twitter }}"
+                    class="group/twitter-link relative grid h-9 w-9 place-items-center rounded-xl bg-merino hover:text-black motion-reduce:transition-none"
                 >
-                    <path
-                        d="M37.02 9.427c-1.272.562-2.62.932-4.002 1.096a6.991 6.991 0 0 0 3.064-3.856 13.935 13.935 0 0 1-4.425 1.691 6.97 6.97 0 0 0-11.877 6.357A19.79 19.79 0 0 1 5.412 7.432a6.947 6.947 0 0 0-.944 3.505 6.973 6.973 0 0 0 3.1 5.801 6.947 6.947 0 0 1-3.156-.871v.084a6.975 6.975 0 0 0 5.591 6.837 7.008 7.008 0 0 1-3.15.12 6.975 6.975 0 0 0 6.514 4.842 13.99 13.99 0 0 1-10.32 2.887A19.719 19.719 0 0 0 13.73 33.77c12.823 0 19.833-10.622 19.833-19.834 0-.3-.006-.603-.02-.901a14.17 14.17 0 0 0 3.477-3.608Z"
-                        fill="currentColor"
-                    />
-                </svg>
+                    <svg
+                        width="40"
+                        height="40"
+                        class="relative -top-0.5 w-[1.45rem] transition duration-300 group-hover/twitter-link:scale-0 group-hover/twitter-link:opacity-0"
+                        fill="none"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M37.02 9.427c-1.272.562-2.62.932-4.002 1.096a6.991 6.991 0 0 0 3.064-3.856 13.935 13.935 0 0 1-4.425 1.691 6.97 6.97 0 0 0-11.877 6.357A19.79 19.79 0 0 1 5.412 7.432a6.947 6.947 0 0 0-.944 3.505 6.973 6.973 0 0 0 3.1 5.801 6.947 6.947 0 0 1-3.156-.871v.084a6.975 6.975 0 0 0 5.591 6.837 7.008 7.008 0 0 1-3.15.12 6.975 6.975 0 0 0 6.514 4.842 13.99 13.99 0 0 1-10.32 2.887A19.719 19.719 0 0 0 13.73 33.77c12.823 0 19.833-10.622 19.833-19.834 0-.3-.006-.603-.02-.901a14.17 14.17 0 0 0 3.477-3.608Z"
+                            fill="currentColor"
+                        />
+                    </svg>
 
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
-                    fill="none"
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 scale-0 opacity-0 transition duration-300 group-hover/twitter-link:scale-100 group-hover/twitter-link:opacity-100"
+                        fill="none"
+                    >
+                        <path
+                            d="M12.6182 0.80542H15.0592L9.72628 6.90056L16 15.1947H11.0877L7.24026 10.1643L2.83789 15.1947H0.395405L6.09945 8.67524L0.0810547 0.80542H5.11803L8.5958 5.40334L12.6182 0.80542ZM11.7614 13.7336H13.114L4.38307 2.18974H2.9316L11.7614 13.7336Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                </a>
+            @endif
+
+            @if ($mastodon)
+                <a
+                    target="_blank"
+                    href="{{ $mastodon }}"
+                    class="grid h-9 w-9 place-items-center rounded-xl bg-merino transition duration-300 hover:text-black motion-reduce:transition-none"
                 >
-                    <path
-                        d="M12.6182 0.80542H15.0592L9.72628 6.90056L16 15.1947H11.0877L7.24026 10.1643L2.83789 15.1947H0.395405L6.09945 8.67524L0.0810547 0.80542H5.11803L8.5958 5.40334L12.6182 0.80542ZM11.7614 13.7336H13.114L4.38307 2.18974H2.9316L11.7614 13.7336Z"
+                    <svg
+                        class="relative w-5"
+                        xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
-                    />
-                </svg>
-            </a>
+                        viewBox="0 0 231 248"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M115.833 0c31.639.259 62.092 3.684 79.827 11.83.091.04 35.173 15.805 35.173 69.421.001.126.433 39.653-4.905 67.109-3.394 17.457-30.392 36.562-61.4 40.265-16.169 1.929-32.089 3.703-49.065 2.925-27.763-1.272-49.67-6.627-49.67-6.627 0 2.702.167 5.276.5 7.682 3.61 27.399 27.168 29.041 49.484 29.806 22.524.771 42.58-5.554 42.58-5.554l.925 20.363c-.046.024-15.795 8.463-43.819 10.016-15.476.851-34.692-.389-57.073-6.313C9.848 228.075 1.5 176.332.223 123.831c-.39-15.588-.15-30.287-.15-42.58 0-53.685 35.175-69.422 35.175-69.422C52.984 3.684 83.418.26 115.056 0h.777Zm35.762 41.947c-13.18 0-23.161 5.066-29.758 15.197l-6.416 10.754-6.414-10.753c-6.599-10.132-16.58-15.198-29.758-15.198-11.39 0-20.567 4.004-27.573 11.815-6.795 7.81-10.178 18.368-10.178 31.653v65.005h25.754V87.326c0-13.3 5.596-20.05 16.789-20.05 12.376 0 18.58 8.008 18.58 23.842v34.534h25.602V91.118c0-15.834 6.202-23.842 18.578-23.843 11.193 0 16.79 6.751 16.79 20.051v63.094h25.753V85.415c0-13.285-3.383-23.843-10.176-31.653-7.008-7.81-16.184-11.815-27.573-11.815Z"
+                        />
+                    </svg>
+                </a>
+            @endif
+
             <a
                 target="_blank"
                 href="{{ $website }}"

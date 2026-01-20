@@ -1,0 +1,10 @@
+<details
+    {...Astro.props}
+    class="rounded-lg bg-[#ffede0] dark:bg-[#100f1b] border-2 border-[#ffd6b6] dark:border-[#282732] px-4 py-2 mb-6"
+>
+    <summary class="font-medium">
+        <slot name="summary" />
+    </summary>
+
+    <slot />
+</details>

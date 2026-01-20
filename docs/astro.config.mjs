@@ -1,31 +1,26 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
 import react from '@astrojs/react'
 import mdx from '@astrojs/mdx'
+import icon from 'astro-icon'
 import { h } from 'hastscript'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
 // https://astro.build/config
 export default defineConfig({
     base: '/docs',
     site: 'https://filamentphp.com',
-    integrations: [
-        tailwind({
-            config: {
-                path: './tailwind.config.cjs',
-                applyBaseStyles: false,
-            },
-        }),
-        react(),
-        mdx(),
-    ],
+    integrations: [react(), mdx(), icon()],
     markdown: {
-        syntaxHighlight: false,
         shikiConfig: {
-            theme: 'material-palenight',
+            themes: {
+                light: 'catppuccin-latte',
+                dark: 'catppuccin-mocha',
+            },
         },
         rehypePlugins: [
-            // Automatically add links to headings (@see https://github.com/rehypejs/rehype-autolink-headings)
+            rehypeSlug,
+            // Automatically add links to headings (@ref https://github.com/rehypejs/rehype-autolink-headings)
             [
                 rehypeAutolinkHeadings,
                 {

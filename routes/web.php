@@ -1,6 +1,8 @@
 <?php
 
+use App\Enums\Version;
 use App\Http\Controllers;
+use App\Models\Article;
 use App\Models\Plugin;
 use App\Models\Star;
 use Illuminate\Http\RedirectResponse;
@@ -53,25 +55,14 @@ Route::view('/team', 'team')->name('team');
 
 Route::redirect('/discord', 'https://discord.gg/filament')->name('discord');
 
+Route::get('/api/{version?}', function (?Version $version = null): RedirectResponse {
+    $version = $version ?? Version::getLatest();
+
+    return redirect('/api/' . $version->value . '/index.html');
+})->name('api-docs');
+
 Route::prefix('/docs')->group(function () {
-    Route::redirect('/getting-started', '/docs/panels/getting-started');
-    Route::redirect('/resources', '/docs/panels/resources/getting-started');
-    Route::redirect('/pages', '/docs/panels/pages');
-    Route::redirect('/dashboard', '/docs/panels/dashboard');
-    Route::redirect('/navigation', '/docs/panels/navigation');
-    Route::redirect('/plugin-development', '/docs/panels/plugins');
-
-    Route::redirect('/admin', '/docs/panels/installation');
-    Route::redirect('/panels', '/docs/panels/installation');
-    Route::redirect('/forms', '/docs/forms/installation');
-    Route::redirect('/tables', '/docs/tables/installation');
-    Route::redirect('/notifications', '/docs/notifications/installation');
-    Route::redirect('/actions', '/docs/actions/installation');
-    Route::redirect('/infolists', '/docs/infolists/installation');
-    Route::redirect('/widgets', '/docs/widgets/installation');
-    Route::redirect('/support', '/docs/support/overview');
-
-    Route::get('/{slug?}', function (string $slug = null): string | RedirectResponse {
+    Route::get('/{slug?}', function (?string $slug = null): string | RedirectResponse {
         $requestUri = request()->getRequestUri();
 
         if (
@@ -86,22 +77,22 @@ Route::prefix('/docs')->group(function () {
         $slug = trim($slug, '/');
 
         if (filled($slug) && (! str_contains($slug, '.x'))) {
-            return redirect()->route('docs', ['slug' => "3.x/{$slug}"]);
+            return redirect()->route('docs', ['slug' => Version::getLatest()->value . "/{$slug}"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/index.html");
 
         if (file_exists($filePath)) {
             return file_get_contents($filePath);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/overview/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/overview/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/overview"]);
         }
 
-        $filePath = base_path("docs/dist/{$slug}/getting-started/index.html");
+        $filePath = base_path("docs/preserved-dist/{$slug}/getting-started/index.html");
 
         if (file_exists($filePath)) {
             return redirect()->route('docs', ['slug' => "{$slug}/getting-started"]);
@@ -120,12 +111,28 @@ Route::prefix('/docs')->group(function () {
             abort(404);
         }
 
-        return redirect($versionNavigation['href']);
+        return redirect($versionNavigation['href'] ?? abort(404));
     })->where('slug', '.*')->name('docs');
 });
 
 Route::prefix('/community')->group(function () {
+    Route::get('/', function () {
+        return redirect(status: 301)->route('articles');
+    });
+
+    Route::name('articles.')->group(function () {
+        Route::prefix('/{article:slug}')->group(function () {
+            Route::get('/', function (Article $article) {
+                return redirect(status: 301)->route('articles.view', ['article' => $article->slug]);
+            });
+        });
+    });
+});
+
+Route::prefix('/content')->group(function () {
     Route::get('/', Controllers\Articles\ListArticlesController::class)->name('articles');
+
+    Route::redirect('leandrocfe-filament-v4-beta-feature-overview', '/content/leandrocfe-whats-new-in-filament-v4');
 
     Route::name('articles.')->group(function () {
         Route::prefix('/{article:slug}')->group(function () {
@@ -146,6 +153,9 @@ Route::prefix('/plugins')->group(function () {
         Route::redirect('/seo', '/plugins/ralphjsmit-seo');
         Route::redirect('/kenneth-sese-filter-sets', '/plugins/kenneth-sese-advanced-tables');
         Route::redirect('/filament-google-fonts', '/plugins/filament-spatie-google-fonts');
+        Route::redirect('/filament-minimal-theme', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-themes', '/plugins/zepfietje-themes');
+        Route::redirect('/filament-spatie-translatable', 'https://github.com/lara-zeus/translatable');
 
         Route::prefix('/{plugin:slug}')->group(function () {
             Route::get('/', Controllers\Plugins\ViewPluginController::class)->name('view');
@@ -160,4 +170,25 @@ Route::get('/tricks/{slug}', function (string $slug) {
 });
 
 Route::redirect('/login', '/admin/login')->name('login');
-Route::redirect('/themes', '/plugins/filament-minimal-theme');
+Route::redirect('/themes', '/plugins/zepfietje-themes');
+
+Route::get('/blueprint/examples/{example}/{file}.md', function (string $example, string $file) {
+    // Validate inputs are simple alphanumeric strings (no path traversal)
+    if (! preg_match('/^[a-z][a-z0-9-]*$/', $example) || ! preg_match('/^[a-z][a-z0-9-]*$/', $file)) {
+        abort(404);
+    }
+
+    $path = resource_path("markdown/blueprint/examples/{$example}/{$file}.md");
+
+    // Ensure resolved path is within expected directory
+    $realPath = realpath($path);
+    $expectedBase = realpath(resource_path('markdown/blueprint/examples'));
+
+    if ($realPath === false || ! str_starts_with($realPath, $expectedBase)) {
+        abort(404);
+    }
+
+    $content = e(file_get_contents($realPath));
+
+    return response("<pre>{$content}</pre>", 200, ['Content-Type' => 'text/html']);
+})->where(['example' => '[a-z0-9-]+', 'file' => '[a-z0-9-]+'])->name('blueprint.example');

@@ -280,20 +280,40 @@
             class="mt-16"
         >
             <div class="mx-auto grid w-full max-w-2xl">
-                <div class="col-span-full flex flex-wrap justify-around gap-12">
-                    <x-sponsors.lunar />
-
-                    <x-sponsors.ploi />
-
+                <div
+                    class="col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12"
+                >
                     <x-sponsors.kirschbaum />
-
-                    <x-sponsors.whizzy />
-
-                    <x-sponsors.tapp-network />
 
                     <x-sponsors.agiledrop />
 
+                    <x-sponsors.baiz />
+
+                    <x-sponsors.cms-max />
+
+                    <x-sponsors.mailtrap />
+
+                    <x-sponsors.nativephp />
+
+                    <x-sponsors.sevalla />
+
+                    <x-sponsors.titan />
+
+                    {{-- <x-sponsors.vormkracht10 /> --}}
+
+                    {{-- <x-sponsors.lunar /> --}}
+
+                    <x-sponsors.ploi />
+
+                    <x-sponsors.redberry />
+
+                    <x-sponsors.tapp-network />
+
+                    <x-sponsors.word-on-fire />
+
                     <x-sponsors.cleavr />
+
+                    <x-sponsors.codecourse />
 
                     <x-sponsors.creagia />
 
@@ -305,15 +325,11 @@
 
                     <x-sponsors.lander-systems />
 
-                    <x-sponsors.locale />
-
                     <x-sponsors.lucky-media />
 
                     <x-sponsors.server-auth />
 
                     <x-sponsors.solution-forest />
-
-                    <x-sponsors.zeek />
                 </div>
             </div>
         </section>

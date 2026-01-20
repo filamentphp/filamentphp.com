@@ -1,5 +1,6 @@
 ---
 import { collectHeadings, getAllLinks } from "src/lib/helpers";
+import Aside from "@components/Aside.astro";
 import Navigation from "@components/Navigation.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
@@ -9,44 +10,48 @@ import rawNavigation from '../navigation.json';
 import "../styles/tailwind.css";
 
 function buildTitle(title, packageNavigation) {
-  if (packageNavigation) {
-    return `${title} - ${packageNavigation.title} - Filament`;
-  }
+    if (packageNavigation && (! packageNavigation.title)) {
+        return `${title} - Filament`;
+    }
 
-  return `${title} - Filament`;
+    if (packageNavigation && (title !== packageNavigation.title)) {
+        return `${title} - ${packageNavigation.title} - Filament`;
+    }
+
+    return `${title} - Filament`;
 }
 
-let { title = "Filament", description = "", pageTitle = null, githubUrl = null } = Astro.props.frontmatter || Astro.props;
+let { title = "Filament", description = "", pageTitle = null, githubUrl = null, contents = true } = Astro.props.frontmatter || Astro.props;
 
 let { headings = [] } = Astro.props;
 
-let isHomePage = Astro.url.pathname === "/docs/";
+let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/3.x/panels/", "3.x", "panels", ""];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/5.x/introduction/overview/", "5.x", "introduction", "overview"];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
 let currentSection = segments[3].replaceAll("/", "");
 
 let navigation = rawNavigation.find((item) => item.version === currentVersion);
-let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage);
+let packageNavigation = navigation.links?.find((item) => item.slug === currentPackage) ?? [];
 
-let allLinks = getAllLinks(packageNavigation.links)
+let allLinks = getAllLinks(packageNavigation.links ?? [])
 let linkIndex = allLinks.findIndex((link) => link.href === Astro.url.pathname.replace(/\/+$/, ''))
 let previousPage = allLinks[linkIndex - 1]
 let nextPage = allLinks[linkIndex + 1]
 
-let section = packageNavigation.links.find((item) => item.slug === currentSection);
+let section = packageNavigation.links?.find((item) => item.slug === currentSection) ?? null;
 
 pageTitle = pageTitle ?? buildTitle(title, packageNavigation);
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = (currentVersion !== '5.x') ? new URL('docs/5.x', Astro.site) : new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="hidden">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,22 +63,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- hack for flash of theme -->
     <script>
-      let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-      let theme = window.localStorage.theme ?? "system";
+        let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+        let theme = window.localStorage.theme ?? "system";
 
-      if (theme === "dark" || (theme === "system" && isDarkMode.matches)) {
-        document.documentElement.classList.add("dark");
-      } else if (theme === "light" || (theme === "system" && !isDarkMode.matches)) {
-        document.documentElement.classList.remove("dark");
-      }
-      document.documentElement.classList.remove("hidden");
+        if (theme === "dark" || (theme === "system" && isDarkMode.matches)) {
+            document.documentElement.classList.add("dark");
+        } else if (theme === "light" || (theme === "system" && !isDarkMode.matches)) {
+            document.documentElement.classList.remove("dark");
+        }
+        document.documentElement.classList.remove("hidden");
     </script>
 
     <!-- Styles -->
     <style>
-      [x-cloak] {
-        display: none !important;
-      }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
 
     <!-- Styles -->
@@ -121,16 +126,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     />
   </head>
   <body x-data="codeBlockClipboard" class="bg-cream dark:bg-[#171527]">
-    <Header navigation={navigation} />
+    <div class="bg-burnt-butter hidden lg:block">
+      <div
+        x-data="{
+          banner: null,
+        }"
+        x-init="banner = Math.floor(Math.random() * 2)"
+        class="max-w-9xl flex items-center justify-center mx-auto px-4 py-1.5 sm:px-6 lg:px-8 text-sm text-center text-white min-h-9"
+      >
+        <span x-show="banner === 0">
+          Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the official Filament-partnered development agency.
+        </span>
+        <span x-show="banner === 1">
+            🔥 We just released <a href="/content/danharrin-filament-v5-blueprint" target="_blank" class="underline">Filament v5 & Filament Blueprint</a>: a Laravel Boost extension that teaches AI agents how to write detailed Filament implementation plans.
+        </span>
+        <!--<span x-show="banner === 1">-->
+        <!--  Love Filament? We'd really appreciate your <a href="https://github.com/sponsors/danharrin" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.-->
+        <!--</span>-->
+      </div>
+    </div>
+</div>
+<Header navigation={navigation} />
 
-    {isHomePage && <Hero getStartedLink={navigation.href} />}
+{isHomePage && <Hero getStartedLink={navigation.href} />}
 
-    {isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8 xl:px-12">
-      <div class="hidden lg:relative lg:block lg:flex-none">
+{isHomePage ? null : <div class="relative mx-auto flex max-w-screen-2xl justify-center sm:px-2 lg:px-8">
+    <div class="hidden lg:relative lg:block lg:flex-none">
         <div class="absolute inset-y-0 right-0 w-[50vw] bg-cream dark:hidden"></div>
         <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block"></div>
         <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-gray-800 dark:block"></div>
-        <div class="sticky top-10 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-10 pb-16 pl-0.5 navigation-custom-scrollbar" x-data={`{
+        <div class="sticky top-16 -ml-0.5 h-screen overflow-y-auto overflow-x-hidden pt-6 pb-24 pl-0.5 navigation-custom-scrollbar" x-data={`{
           position: 0,
           init() {
             this.position = localStorage.getItem('sidebarScrollPosition') || 0;
@@ -145,128 +170,138 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             });
           }
         }`}>
-          <Navigation navigation={navigation} />
+            <Navigation navigation={navigation} />
         </div>
-      </div>
-      <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+    </div>
+    <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10">
+        {(currentVersion !== '5.x') && (
+            <Aside variant="warning">
+                <p><span class="font-medium">You are currently viewing the documentation for Filament {currentVersion}</span>, which is a previous version of Filament.</p>
+
+                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/5.x" class="font-medium underline">5.x documentation</a>.</p>
+            </Aside>
+        )}
+
         <article>
-          {(title || section) && (
-            <header class="mb-9 space-y-1">
-              {! isHomePage && (
-                <p class="font-display font-bold text-butter">
+            {(title || section) && (
+                <header class="mb-9 space-y-1">
+                    {(! isHomePage && (title !== packageNavigation.title)) && (
+                        <p class="font-display font-bold text-butter">
                     <span id="current-package">
                         {packageNavigation.title}
                     </span>
 
-                    {section && section.links.length !== 0 && (
-                        <>
-                            - <span id="current-section">
+                            {section && section.links.length !== 0 && (
+                                <>
+                                    - <span id="current-section">
                                 {section.title}
                             </span>
-                        </>
+                                </>
+                            )}
+                        </p>
                     )}
-                </p>
-              )}
-              {title && (
-                <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white">
-                  {title}
-                </h1>
-              )}
-            </header>
-          )}
-          <Prose>
-            <slot />
-            {githubUrl && (
-              <a href={githubUrl} class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a>
+                    {title && (
+                        <h1 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white">
+                            {title}
+                        </h1>
+                    )}
+                </header>
             )}
-            <p>
-              Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
-          </p>
-          </Prose>
+            <Prose>
+                <slot />
+                {githubUrl && (
+                    <a href={githubUrl} class="text-sm" target="_blank" rel="noopener">Edit on GitHub</a>
+                )}
+                <p>
+                    Still need help? Join our <a href="/discord" target="_blank" class="transition hover:text-primary-600">Discord community</a> or open a <a href="https://github.com/filamentphp/filament/discussions/new/choose" target="_blank" class="transition hover:text-primary-600">GitHub discussion</a>
+                </p>
+            </Prose>
         </article>
         <dl class="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
-          {previousPage && (
-              <div>
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white">
-                  Previous
-                </dt>
-                <dd class="mt-1">
-                  <a
-                    href={previousPage.href}
-                    class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
-                  >
-                    <span aria-hidden="true">&larr;</span> {previousPage.title}
-                  </a>
-                </dd>
-              </div>
+            {previousPage && (
+                <div>
+                    <dt class="font-display text-sm font-bold text-stone-900 dark:text-white">
+                        Previous
+                    </dt>
+                    <dd class="mt-1">
+                        <a
+                            href={previousPage.href}
+                            class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
+                        >
+                            <span aria-hidden="true">&larr;</span> {previousPage.title}
+                        </a>
+                    </dd>
+                </div>
             )}
             {nextPage && (
-              <div class="ml-auto text-right">
-                <dt class="font-display text-sm font-bold text-stone-900 dark:text-white">
-                  Next
-                </dt>
-                <dd class="mt-1">
-                  <a
-                    href={nextPage.href}
-                    class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
-                  >
-                    {nextPage.title} <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </dd>
-              </div>
+                <div class="ml-auto text-right">
+                    <dt class="font-display text-sm font-bold text-stone-900 dark:text-white">
+                        Next
+                    </dt>
+                    <dd class="mt-1">
+                        <a
+                            href={nextPage.href}
+                            class="text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
+                        >
+                            {nextPage.title} <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </dd>
+                </div>
             )}
         </dl>
-      </div>
-      <div class="hidden xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:pt-10 xl:pb-16 xl:pr-6 navigation-custom-scrollbar">
+    </div>
+    <div class="hidden xl:sticky xl:top-16 xl:-mr-6 xl:block xl:h-screen xl:flex-none xl:overflow-y-auto xl:overflow-x-visible xl:pb-16 xl:px-6 navigation-custom-scrollbar">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7D627Y&placement=filamentphpcom" id="_carbonads_js"></script>
 
-        <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
-          {
-            tableOfContents.length > 0 && (
-              <>
-                <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white">
-                  On this page
-                </h2>
-                <ol role="list" class="mt-4 space-y-3 text-sm"
-                  x-data={`tableOfContents(${JSON.stringify(tableOfContents)})`}
-                  x-on:scroll.window="updateCurrentSection"
-                >
-                  {tableOfContents.map((section) => (
-                    <li>
-                      <h3>
-                        <a
-                          href={`#${section.slug}`}
-                          class="inline-block transition duration-300 ease-out"
-                          x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'`}
+        {contents && <nav aria-labelledby="on-this-page-title" class="my-6 w-56">
+            {
+                tableOfContents.length > 0 && (
+                    <>
+                        <h2 id="on-this-page-title" class="font-display text-sm font-bold text-stone-900 dark:text-white">
+                            On this page
+                        </h2>
+                        <ol role="list" class="mt-2 space-y-2 text-sm"
+                            x-data={`tableOfContents(${JSON.stringify(tableOfContents)})`}
+                            x-on:scroll.window="updateCurrentSection"
                         >
-                          {section.title}
-                        </a>
-                      </h3>
-                      {section.children.length > 0 && (
-                        <ol role="list" class="mt-2 space-y-3 pl-5 text-gray-500 dark:text-gray-300">
-                          {section.children.map((subSection) => (
-                            <li>
-                              <a
-                                href={`#${subSection.slug}`}
-                                class="inline-block transition duration-300 ease-out"
-                                x-bind:class={`current == '${subSection.slug}' ? "text-butter translate-x-1" : "hover:text-gray-600 dark:hover:text-white hover:translate-x-1"`}
-                              >
-                                {subSection.title}
-                              </a>
-                            </li>
-                          ))}
+                            {tableOfContents.map((section) => (
+                                <li>
+                                    <h3>
+                                        <a
+                                            href={`#${section.slug}`}
+                                            x-on:click={`$nextTick(() => current = '${section.slug}')`}
+                                            class="inline-block transition duration-300 ease-out"
+                                            x-bind:class={`current == '${section.slug}' ? 'text-butter font-bold translate-x-1' : 'text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-300 hover:translate-x-1'`}
+                                        >
+                                            {section.title}
+                                        </a>
+                                    </h3>
+                                    {section.children.length > 0 && (
+                                        <ol role="list" class="mt-2 space-y-2 pl-4 text-gray-500 dark:text-gray-300">
+                                            {section.children.map((subSection) => (
+                                                <li>
+                                                    <a
+                                                        href={`#${subSection.slug}`}
+                                                        x-on:click={`$nextTick(() => current = '${subSection.slug}')`}
+                                                        class="inline-block transition duration-300 ease-out"
+                                                        x-bind:class={`current == '${subSection.slug}' ? "text-butter translate-x-1" : "hover:text-gray-600 dark:hover:text-white hover:translate-x-1"`}
+                                                    >
+                                                        {subSection.title}
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ol>
+                                    )}
+                                </li>
+                            ))}
                         </ol>
-                      )}
-                    </li>
-                  ))}
-                </ol>
-              </>
-            )
-          }
-        </nav>
-      </div>
-    </div>}
+                    </>
+                )
+            }
+        </nav>}
+    </div>
+</div>}
 
-    <Footer />
-  </body>
+<Footer />
+</body>
 </html>

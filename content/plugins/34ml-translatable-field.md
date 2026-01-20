@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/34ML/Filament-Translatable-Field/mai
 github_repository: 34ML/Filament-Translatable-Field
 has_dark_theme: false
 has_translations: true
-versions: [2,3]
+versions: [2, 3]
 publish_date: 2023-12-07
 ---

@@ -1,129 +1,151 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components';
 
 let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || [
-  '/3.x/panels/',
-  '3.x',
-  'panels',
+  '/5.x/introduction/overview/',
+  '5.x',
+  'introduction',
+  'overview',
 ]
 
-let currentPackage = segments[2].replaceAll('/', '')
-
 const { navigation } = Astro.props
-
-let packageNavigation = navigation.links?.find(
-  (item) => item.slug === currentPackage,
-)
 
 const pathName = Astro.url.pathname.replace(/\/+$/, '')
 ---
 
-<nav class="text-base lg:text-sm w-60 pr-5">
-  <ul
-    role="list"
-    class="mb-9 space-y-2.5"
-  >
-    {
-      navigation?.links.map((section) => (
-        <li>
-          <a
-            href={section.href}
-            class:list={[
-              'group/navigation-section-link block transition duration-300 rounded-lg px-4 py-3 font-display bg-merino/70 dark:bg-dolphin/20',
-              {
-                'text-black dark:text-butter bg-peach-orange/80 font-bold':
-                  pathName.includes(`/${section.slug}/`),
-              },
-              {
-                'font-semibold text-hurricane dark:text-merino hover:text-[#403b3b] hover:bg-merino dark:hover:bg-dolphin/30 dark:hover:text-white':
-                  !pathName.includes(`/${section.slug}/`),
-              },
-            ]}
-          >
-            <h2
-              class:list={[
-                'flex items-center gap-4 transition-transform duration-300',
-                {
-                  'group-hover/navigation-section-link:translate-x-1':
-                    !pathName.includes(`/${section.slug}/`),
-                },
-              ]}
-            >
-              <Icon
-                name={section.icon}
-                class:list={[
-                  'h-5 w-5 transition duration-300',
-                  {
-                    'dark:group-hover/navigation-section-link:text-purple-400':
-                      !pathName.includes(`/${section.slug}/`),
-                  },
-                ]}
-              />
-              <span>{section.title}</span>
-            </h2>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-  <ul
-    role="list"
-    class="space-y-4"
-  >
-    {
-      packageNavigation?.links.map((section) => (
-        <li>
-          <a
-            href={section.href}
-            class:list={[
-              'block font-display font-bold transition duration-300 ease-out text-base',
-              { 'text-butter before:bg-butter': section.href === pathName },
-              {
-                'text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1':
-                  section.href !== pathName,
-              },
-            ]}
-          >
-            <h2>{section.title}</h2>
-          </a>
+<nav x-data="{
+    isInViewport: function (element) {
+        const rect = element.getBoundingClientRect();
 
-          <ul
-            role="list"
-            class="mt-2 ml-1.5 space-y-2 border-l-2 border-gray-100 dark:border-dolphin/20 lg:mt-4 lg:space-y-4 lg:border-dawn-pink"
-          >
-            {section.links.map((link) => (
-              <li class="relative">
-                <a
-                  href={link.href}
-                  class:list={[
-                    'group/navigation-mini-link block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-sm before:rotate-45 before:transition before:duration-200',
-                    {
-                      'font-semibold text-butter before:bg-butter':
-                        link.href === pathName,
-                    },
-                    {
-                      'text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white':
-                        link.href !== pathName,
-                    },
-                  ]}
-                >
-                  <div
-                    class:list={[
-                      'transition duration-300 ease-out',
-                      {
-                        'group-hover/navigation-mini-link:translate-x-1':
-                          link.href !== pathName,
-                      },
-                    ]}
-                  >
-                    {link.title}
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </li>
-      ))
+        const html = document.documentElement;
+
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || html.clientHeight) &&
+            rect.right <= (window.innerWidth || html.clientWidth)
+        );
     }
-  </ul>
+}" class="text-base lg:text-sm w-60 pr-5">
+    <ul
+        x-data="{ openSection: null }"
+        role="list"
+        class="space-y-3"
+    >
+        {
+            navigation?.links.map((section) => (
+                <li x-init={((section.links.length ? pathName.includes(`/${section.slug}/`) : false) || (section.href === pathName)) ? `openSection = '${section.slug}'` : null}>
+                    <a
+                        href={section.links.length ? '#!' : section.href}
+                        x-on:click={section.links.length ? `openSection = (openSection === '${section.slug}') ? null : '${section.slug}'; $nextTick(() => isInViewport($el) || $el.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center'}))` : null}
+                        class:list={[
+                            'block font-display cursor-pointer font-semibold transition duration-300 ease-out',
+                            { 'text-butter before:bg-butter': ((section.links.length ? pathName.includes(`/${section.slug}/`) : false) || (section.href === pathName)) },
+                            {
+                                'text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block dark:text-gray-300 dark:before:bg-gray-700 dark:hover:text-white hover:translate-x-1':
+                                    ! ((section.links.length ? pathName.includes(`/${section.slug}/`) : false) || (section.href === pathName)),
+                            },
+                        ]}
+                    >
+                        <h2>
+                            {section.title}
+
+                            {(section.links.length > 0) && <Icon
+                                name="chevron-right"
+                                class="h-4 w-4 -mt-0.5 inline-block"
+                            />}
+                        </h2>
+                    </a>
+
+                    {(section.links.length > 0) && (<ul
+                        role="list"
+                        x-data="{ openLink: null }"
+                        x-show={`openSection === '${section.slug}'`}
+                        x-collapse
+                        x-cloak
+                        class="mt-2 ml-1.5 space-y-1 border-l-2 border-gray-100 dark:border-dolphin/20 lg:space-y-2 lg:border-dawn-pink"
+                    >
+                        {section.links.map((link) => (
+                            <li
+                                x-init={((link.links.length ? pathName.includes(`/${link.slug}/`) : false) || (link.href === pathName)) ? `openLink = '${link.slug}'` : null}
+                                class="relative"
+                            >
+                                <a
+                                    href={link.links.length ? '#!' : link.href}
+                                    x-on:click={link.links.length ? `openLink = (openLink === '${link.slug}') ? null : '${link.slug}'; $nextTick(() => isInViewport($el) || $el.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center'}))` : null}
+                                    class:list={[
+                                        'group/navigation-mini-link block cursor-pointer w-full pl-3.5 before:pointer-events-none before:absolute before:-left-[5px] before:top-[6px] before:h-2 before:w-2 before:rounded-sm before:rotate-45 before:transition before:duration-200',
+                                        {
+                                            'font-medium text-butter before:bg-butter':
+                                                ((link.links.length ? pathName.includes(`/${link.slug}/`) : false) || (link.href === pathName)),
+                                        },
+                                        {
+                                            'text-gray-500 before:opacity-0 before:scale-0 before:bg-purple-300 hover:text-gray-600 hover:before:opacity-100 hover:before:scale-100 dark:text-gray-300 dark:before:bg-purple-400 dark:hover:text-white':
+                                                ! ((link.links.length ? pathName.includes(`/${link.slug}/`) : false) || (link.href === pathName)),
+                                        },
+                                    ]}
+                                >
+                                    <div
+                                        class:list={[
+                                            'transition duration-300 ease-out',
+                                            {
+                                                'group-hover/navigation-mini-link:translate-x-1':
+                                                    ((link.links.length ? pathName.includes(`/${link.slug}/`) : false) || (link.href === pathName)),
+                                            },
+                                        ]}
+                                    >
+                                        {link.title}
+
+                                        {(link.links.length > 0) && <Icon
+                                            name="chevron-right"
+                                            class="h-4 w-4 -mt-0.5 inline-block"
+                                        />}
+                                    </div>
+                                </a>
+
+                                {(link.links.length > 0) && (<ul
+                                    role="list"
+                                    x-show={`openLink === '${link.slug}'`}
+                                    x-collapse
+                                    x-cloak
+                                    class="mt-2 ml-3 space-y-1 lg:space-y-2"
+                                >
+                                    {link.links?.map((subLink) => (
+                                        <li class="relative">
+                                            <a
+                                                href={subLink.href}
+                                                class:list={[
+                                                    'group/navigation-mini-link block w-full pl-3.5',
+                                                    {
+                                                        'font-semibold text-butter':
+                                                            subLink.href === pathName,
+                                                    },
+                                                    {
+                                                        'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white':
+                                                            subLink.href !== pathName,
+                                                    },
+                                                ]}
+                                            >
+                                                <div
+                                                    class:list={[
+                                                        'transition duration-300 ease-out',
+                                                        {
+                                                            'group-hover/navigation-mini-link:translate-x-1':
+                                                                subLink.href !== pathName,
+                                                        },
+                                                    ]}
+                                                >
+                                                    {subLink.title}
+                                                </div>
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>)}
+                            </li>
+                        ))}
+                    </ul>)}
+                </li>
+            ))
+        }
+    </ul>
 </nav>

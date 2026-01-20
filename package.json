@@ -4,7 +4,8 @@
         "dev": "vite",
         "build": "vite build",
         "prettier": "npx prettier --write .",
-        "generate-docs": "cd docs && npm run generate && cd ../"
+        "build:docs": "cd docs && npm run generate && cd ../",
+        "dev:5.x-docs": "cd docs && npm run dev:generate-5.x && cd ../"
     },
     "devDependencies": {
         "@docsearch/js": "^3.5.2",

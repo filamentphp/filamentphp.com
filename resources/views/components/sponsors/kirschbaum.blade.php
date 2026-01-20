@@ -12,7 +12,7 @@
         viewBox="0 0 126.98 18.53"
         @class([
             'fill-current',
-            'h-5' => $footer,
+            'h-4' => $footer,
             'h-6' => ! $footer,
         ])
     >

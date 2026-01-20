@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/icetalker/filament-table-repeater/ma
 github_repository: icetalker/filament-table-repeater
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2022-07-04
 ---

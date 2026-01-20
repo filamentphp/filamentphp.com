@@ -1,0 +1,27 @@
+---
+const { model, value } = Astro.props;
+---
+
+<div x-data="{}" x-id="['checkbox', 'checkbox-description']" class="relative flex gap-3 items-start">
+    <div class="flex h-6 items-center">
+        <input
+            x-bind:id="$id('checkbox')"
+            x-bind:aria-describedby="$id('checkbox-description')"
+            x-model={model}
+            value={value}
+            x-ref="checkbox"
+            type="checkbox"
+            class="h-4 w-4 rounded border-merino dark:border-dolphin text-butter focus:ring-butter"
+        >
+    </div>
+
+    <div class="text-sm leading-6">
+        <label x-bind:for="$id('checkbox')" class="font-medium">
+            <slot />
+        </label>
+
+        <span x-on:click="$refs.checkbox.click()" x-bind:id="$id('checkbox-description')" class="text-gray-500 dark:text-gray-400">
+            <slot name="description" />
+        </span>
+    </div>
+</div>

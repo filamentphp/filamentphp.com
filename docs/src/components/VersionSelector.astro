@@ -1,15 +1,40 @@
 ---
 import navigation from '../navigation.json'
 
-const versions = navigation.map((item) => {
-  return {
-    version: item.version,
-    href: item.href,
-  }
-}).reverse();
-
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\//) || ["/3.x/panels/", "3.x", "panels"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/5.x/introduction/overview/", "5.x", "introduction", "overview"];
 let currentVersion = segments[1].replaceAll("/", "");
+let currentSection = segments[2].replaceAll("/", "");
+let currentPage = (segments[3] ?? null)?.replaceAll("/", "");
+let currentSubPage = (segments[4] ?? null)?.replaceAll("/", "");
+
+const versions = navigation.map((version) => {
+    let href = version.href;
+
+    const versionNavigation = navigation.find((versionNavigation) => versionNavigation.version === version.version)
+
+    const sectionNavigation = versionNavigation?.links?.find((sectionNavigation) => sectionNavigation.slug === currentSection)
+
+    if (sectionNavigation?.href) {
+        href = sectionNavigation.href
+    }
+
+    const pageNavigation = sectionNavigation?.links?.find((pageNavigation) => pageNavigation.slug === currentPage)
+
+    if (pageNavigation?.href) {
+        href = pageNavigation.href
+    }
+
+    const subPageNavigation = pageNavigation?.links?.find((subPageNavigation) => subPageNavigation.slug === currentSubPage)
+
+    if (subPageNavigation?.href) {
+        href = subPageNavigation.href
+    }
+
+    return {
+        version: version.version,
+        href: href,
+    }
+}).reverse();
 ---
 
 <div x-data>
@@ -17,7 +42,7 @@ let currentVersion = segments[1].replaceAll("/", "");
     <button
         x-on:click="$refs.panel.toggle"
         type="button"
-        class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm text-gray-600 ring-1 ring-merino dark:bg-dolphin/10 dark:text-gray-300 dark:ring-inset dark:ring-white/5"
+        class="flex h-9 items-center justify-center whitespace-nowrap rounded-full px-3 text-sm ring-1 ring-merino dark:bg-dolphin/10 dark:ring-inset dark:ring-white/5 dark:text-white"
         aria-label="Open version options"
     >
       <span class="hidden sm:block">Version&nbsp;</span>
@@ -35,10 +60,14 @@ let currentVersion = segments[1].replaceAll("/", "");
           <a
             href={version.href}
             class="flex justify-center items-center rounded-[0.5rem] py-1 px-3 w-full hover:bg-gray-100 hover:dark:bg-gray-900/40 transition duration-200"
-            x-bind:class={`{
-              'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': '${version.version}' === '${currentVersion}',
-              'text-gray-700 dark:text-gray-300 hover:dark:text-white': '${version.version}' !== '${currentVersion}',
-            }`}
+            class:list={[
+                {
+                    'text-primary-500 hover:text-primary-500 hover:dark:text-primary-500': version.version === currentVersion,
+                },
+                {
+                    'text-gray-700 dark:text-gray-300 hover:dark:text-white': version.version !== currentVersion,
+                },
+            ]}
           >
             <span>Version&nbsp;</span>
             <span>{version.version}</span>

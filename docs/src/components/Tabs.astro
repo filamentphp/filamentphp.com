@@ -1,0 +1,58 @@
+---
+const { headers } = Astro.props;
+---
+
+<!-- Tabs -->
+<div
+    x-data="{
+        selectedId: null,
+        init() {
+            // Set the first available tab on the page on page load.
+            this.$nextTick(() => this.select(this.$id('tab', 1)))
+        },
+        select(id) {
+            this.selectedId = id
+        },
+        isSelected(id) {
+            return this.selectedId === id
+        },
+        whichChild(el, parent) {
+            return Array.from(parent.children).indexOf(el) + 1
+        }
+    }"
+    x-id="['tab']"
+    class="not-prose mb-6"
+>
+    <ul
+        x-ref="tablist"
+        x-on:keydown.right.prevent.stop="$focus.wrap().next()"
+        x-on:keydown.home.prevent.stop="$focus.first()"
+        x-on:keydown.page-up.prevent.stop="$focus.first()"
+        x-on:keydown.left.prevent.stop="$focus.wrap().prev()"
+        x-on:keydown.end.prevent.stop="$focus.last()"
+        x-on:keydown.page-down.prevent.stop="$focus.last()"
+        role="tablist"
+        class="-mb-px flex items-stretch"
+    >
+        {headers.map((header) => (
+            <li>
+                <button
+                    x-bind:id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                    x-on:click="select($el.id)"
+                    x-on:mousedown.prevent
+                    x-on:focus="select($el.id)"
+                    type="button"
+                    x-bind:tabindex="isSelected($el.id) ? 0 : -1"
+                    x-bind:aria-selected="isSelected($el.id)"
+                    x-bind:class="isSelected($el.id) ? 'bg-merino dark:bg-dolphin dark:text-white' : ''"
+                    class="inline-flex rounded-t-lg px-6 py-3"
+                    role="tab"
+                >{header}</button>
+            </li>
+        ))}
+    </ul>
+
+    <div role="tabpanels" class="rounded-b-lg border border-merino dark:border-dolphin">
+        <slot />
+    </div>
+</div>

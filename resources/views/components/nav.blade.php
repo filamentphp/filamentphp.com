@@ -128,7 +128,7 @@
                 'font-bold' => request()->routeIs('articles*'),
             ])
         >
-            <div class="gsap-fadein">Community</div>
+            <div class="gsap-fadein">Content</div>
 
             @if (request()->routeIs('articles*'))
                 <div

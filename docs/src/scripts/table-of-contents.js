@@ -27,7 +27,7 @@ export default (Alpine) => {
                 })
         },
         updateCurrentSection() {
-            let top = window.scrollY + 5
+            let top = window.scrollY + 15
             let current = this.headings[0].id
             for (let heading of this.headings) {
                 if (top >= heading.top) {

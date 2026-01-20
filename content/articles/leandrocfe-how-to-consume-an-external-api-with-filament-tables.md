@@ -1,6 +1,6 @@
 ---
 title: How to consume an external API with Filament Tables
-slug: how-to-consume-an-external-api-with-filament-tables
+slug: leandrocfe-how-to-consume-an-external-api-with-filament-tables
 author_slug: leandrocfe
 publish_date: 2022-10-28
 categories: [panel-builder, table-builder, integration]

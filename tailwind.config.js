@@ -16,6 +16,7 @@ module.exports = {
                 warning: colors.amber,
                 cream: '#FFF9F5',
                 butter: '#FDAE4B',
+                'burnt-butter': '#f2911b',
                 midnight: '#0F033A',
                 evening: '#251A4D',
                 merino: '#F2E7DD',
@@ -38,6 +39,7 @@ module.exports = {
             },
             maxWidth: {
                 '8xl': '88rem',
+                '9xl': '92rem',
             },
             typography: (theme) => ({
                 DEFAULT: {

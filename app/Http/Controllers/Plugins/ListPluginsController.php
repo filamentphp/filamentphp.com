@@ -8,6 +8,7 @@ use App\Models\Author;
 use App\Models\Plugin;
 use App\Models\PluginCategory;
 use App\Models\Star;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListPluginsController extends Controller
 {
@@ -34,12 +35,13 @@ class ListPluginsController extends Controller
             'pluginsCount' => Plugin::count(),
             'plugins' => $getPluginsListData(),
             'featuredPlugins' => $getPluginsListData([
-                'filament-minimal-theme',
+                'zepfietje-themes',
                 'kenneth-sese-advanced-tables',
                 'ralphjsmit-media-library-manager',
             ]),
             'starsCount' => Star::query()
                 ->where('starrable_type', 'plugin')
+                ->where(fn (Builder $query) => $query->whereNull('is_vpn_ip')->orWhere('is_vpn_ip', false))
                 ->count(),
         ]);
     }

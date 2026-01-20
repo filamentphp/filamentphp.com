@@ -1,6 +1,6 @@
 ---
 title: Easy way to create a Filament Theme in minutes!
-slug: easy-way-to-create-a-filament-theme-in-minutes
+slug: leandrocfe-easy-way-to-create-a-filament-theme-in-minutes
 author_slug: leandrocfe
 publish_date: 2022-10-21
 categories: [panel-builder, tailwind-css]

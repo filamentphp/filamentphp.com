@@ -1,10 +1,146 @@
-@import 'tailwindcss/base';
-@import './ads.css';
-@import './fonts.css';
-@import './docsearch.css';
-@import '../../../resources/css/torchlight.css';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+@import './fonts.css' layer(base);
+@import './ads.css' layer(components);
+@import './docsearch.css' layer(components);
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-cream: #fff9f5;
+    --color-butter: #fdae4b;
+    --color-burnt-butter: #f2911b;
+    --color-midnight: #0f033a;
+    --color-evening: #251a4d;
+    --color-merino: #f2e7dd;
+    --color-hurricane: #807575;
+    --color-dolphin: #6c6489;
+    --color-peach-orange: #ffc497;
+    --color-seashell-peach: #fff0e8;
+    --color-dawn-pink: #f1e5e4;
+    --color-salmon: #f89377;
+    --color-fair-pink: #ffeae4;
+
+    --font-sans: 'Be Vietnam Pro', 'sans-serif';
+    --font-display: 'Be Vietnam Pro', 'sans-serif';
+    --font-mono: 'Jetbrains Mono', 'sans-serif';
+
+    --spacing-8xl: 88rem;
+    --spacing-9xl: 92rem;
+}
+
+@theme inline {
+    --color-primary-50: var(--color-amber-50);
+    --color-primary-100: var(--color-amber-100);
+    --color-primary-200: var(--color-amber-200);
+    --color-primary-300: var(--color-amber-300);
+    --color-primary-400: var(--color-amber-400);
+    --color-primary-500: var(--color-amber-500);
+    --color-primary-600: var(--color-amber-600);
+    --color-primary-700: var(--color-amber-700);
+    --color-primary-800: var(--color-amber-800);
+    --color-primary-900: var(--color-amber-900);
+    --color-primary-950: var(--color-amber-950);
+
+    --color-gray-50: var(--color-zinc-50);
+    --color-gray-100: var(--color-zinc-100);
+    --color-gray-200: var(--color-zinc-200);
+    --color-gray-300: var(--color-zinc-300);
+    --color-gray-400: var(--color-zinc-400);
+    --color-gray-500: var(--color-zinc-500);
+    --color-gray-600: var(--color-zinc-600);
+    --color-gray-700: var(--color-zinc-700);
+    --color-gray-800: var(--color-zinc-800);
+    --color-gray-900: var(--color-zinc-900);
+    --color-gray-950: var(--color-zinc-950);
+}
+
+@utility prose {
+    & h2 {
+        @apply lg:relative;
+    }
+
+    & h3 {
+        @apply lg:relative;
+    }
+
+    & h4 {
+        @apply lg:relative;
+    }
+
+    & h5 {
+        @apply lg:relative;
+    }
+
+    & h6 {
+        @apply lg:relative;
+    }
+
+    & .heading-anchor {
+        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+        @apply lg:absolute lg:-left-7 lg:top-0;
+    }
+
+    /* All `.prose` elements except `code` */
+    & *:not(code)::selection {
+        @apply bg-primary-500/20;
+    }
+
+    /* All `.prose` elements except `code` */
+    .dark & *:not(code)::selection {
+        @apply bg-gray-500/50;
+    }
+
+    /* All `code` elements and their children */
+    .dark & code::selection {
+        @apply bg-gray-500/50;
+    }
+
+    .dark & code *::selection {
+        @apply bg-gray-500/50;
+    }
+}
+
+@utility heading-anchor {
+    .prose & {
+        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
+        @apply lg:absolute lg:-left-7 lg:top-0;
+    }
+}
+
+@utility dark {
+    /* Dark Theme */
+
+    /* All elements except `.prose` and `code` */
+    & *::selection {
+        @apply bg-gray-500/50;
+    }
+
+    /* All `.prose` elements except `code` */
+    & .prose *:not(code)::selection {
+        @apply bg-gray-500/50;
+    }
+
+    /* All `code` elements and their children */
+    & .prose code::selection {
+        @apply bg-gray-500/50;
+    }
+    & .prose code *::selection {
+        @apply bg-gray-500/50;
+    }
+
+    & p code,
+    & ul code {
+        @apply bg-white/20;
+    }
+
+    & p code::selection,
+    & ul code::selection {
+        @apply !bg-gray-500/50;
+    }
+}
 
 @layer base {
     html {
@@ -25,35 +161,11 @@
         margin-block: 0.75em !important;
     }
 
-    .prose h2,
-    .prose h3,
-    .prose h4,
-    .prose h5,
-    .prose h6 {
-        @apply lg:relative;
-    }
-
-    .prose .heading-anchor {
-        @apply mr-2 inline-block align-baseline text-butter shadow-none dark:shadow-none;
-        @apply lg:absolute lg:-left-7 lg:top-0;
-    }
-
     /* Light Theme */
 
     /* All elements except `.prose` and `code` */
     *:not(.prose):not(code)::selection {
         @apply bg-stone-500/10;
-    }
-
-    /* All `.prose` elements except `code` */
-    .prose *:not(code)::selection {
-        @apply bg-primary-500/20;
-    }
-
-    /* All `code` elements and their children */
-    .prose code::selection,
-    .prose code *::selection {
-        @apply bg-cream/20;
     }
 
     p code,
@@ -65,34 +177,10 @@
     ul code::selection {
         @apply !bg-primary-500/20;
     }
+}
 
-    /* Dark Theme */
-
-    /* All elements except `.prose` and `code` */
-    .dark *::selection {
-        @apply bg-slate-500/50;
-    }
-
-    /* All `.prose` elements except `code` */
-    .dark .prose *:not(code)::selection {
-        @apply bg-slate-500/50;
-    }
-
-    /* All `code` elements and their children */
-    .dark .prose code::selection,
-    .dark .prose code *::selection {
-        @apply bg-slate-500/50;
-    }
-
-    .dark p code,
-    .dark ul code {
-        @apply bg-dolphin/40;
-    }
-
-    .dark p code::selection,
-    .dark ul code::selection {
-        @apply !bg-slate-500/50;
-    }
+.navigation-custom-scrollbar {
+    scrollbar-gutter: stable;
 }
 
 .navigation-custom-scrollbar::-webkit-scrollbar {
@@ -128,4 +216,17 @@
 
 .dark .navigation-custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
     background: #373355;
+}
+
+.astro-code,
+.astro-code span {
+    font-style: normal !important;
+}
+
+.dark {
+    .astro-code,
+    .astro-code span {
+        color: var(--shiki-dark) !important;
+        font-style: normal !important;
+    }
 }

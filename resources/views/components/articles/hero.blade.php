@@ -83,7 +83,7 @@
                     class="text-5xl font-black"
                     x-ref="plugins"
                 >
-                    Community
+                    Content
                 </div>
 
                 {{-- Star --}}
