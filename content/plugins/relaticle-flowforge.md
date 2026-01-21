@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/Relaticle/flowforge/refs/heads/main/
 github_repository: relaticle/flowforge
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-05-06
 ---
