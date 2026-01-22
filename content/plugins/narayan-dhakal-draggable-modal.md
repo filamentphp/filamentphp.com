@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/sanzgrapher/filament-draggable-modal
 github_repository: sanzgrapher/filament-draggable-modal
 has_dark_theme: true
 has_translations: false
-versions: [5]
+versions: [4,5]
 publish_date: 2026-01-21
 ---
