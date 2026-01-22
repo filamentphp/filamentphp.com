@@ -1,5 +1,5 @@
 ---
-name: Filament n8n AI agent chat widget
+name: Filament n8n chat
 slug: filament-n8n-AI-agent-chat-widget
 author_slug: alkoumi
 categories: [widget]
