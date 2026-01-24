@@ -9,5 +9,5 @@ github_repository: https://github.com/businesstilto/commentable
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2026-01-25
+publish_date: 2026-01-24
 ---
