@@ -1,6 +1,6 @@
 ---
 name: Filament Google Charts
-slug: filament-google-charts
+slug: alkoumi-filament-google-charts
 author_slug: alkoumi
 categories: [widget]
 description: Seamless integration of Google Charts widgets into your Filament.
