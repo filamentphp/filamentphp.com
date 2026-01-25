@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/ZPMLabs/filament-api-docs/main/READM
 github_repository: zpmlabs/filament-api-docs
 has_dark_theme: true
 has_translations: false
-versions: [4,5]
+versions: [4, 5]
 publish_date: 2025-08-04
 ---
