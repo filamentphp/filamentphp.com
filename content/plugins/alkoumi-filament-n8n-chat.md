@@ -1,6 +1,6 @@
 ---
 name: Filament n8n chat
-slug: filament-n8n-AI-agent-chat-widget
+slug: alkoumi-filament-n8n-chat
 author_slug: alkoumi
 categories: [widget]
 description: Seamless integration of n8n chat widget into your FilamentPHP applications with full multilingual support and theme customization.
