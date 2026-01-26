@@ -1,6 +1,6 @@
 ---
 name: Maya Khan
-slug: maya-khan-719
+slug: mayakhan719
 github_url: https://github.com/Mayakhan719
 ---
 
