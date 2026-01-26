@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/croustibat/filament-jobs-monitor/mai
 github_repository: croustibat/filament-jobs-monitor
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4, 5]
 publish_date: 2023-05-30
 ---
