@@ -2,9 +2,9 @@
 name: Ľuboš Duda
 slug: lubos-duda
 github_url: https://github.com/lubos-dlogic
-twitter_url: 
-mastodon_url: 
-sponsor_url: 
+twitter_url:
+mastodon_url:
+sponsor_url:
 linkedin_url: https://www.linkedin.com/in/ľuboš-duda-a0177635/
 ---
 
