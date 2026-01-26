@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/Asharif88/filament-plotly/refs/heads
 github_repository: asharif88/filament-plotly
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-12-26
 ---
