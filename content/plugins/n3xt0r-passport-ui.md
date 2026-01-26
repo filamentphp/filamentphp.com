@@ -1,6 +1,6 @@
 ---
-name: Passport-ui
-slug: n3xt0r-Passport-ui
+name: Passport UI
+slug: n3xt0r-passport-ui
 author_slug: n3xt0r
 categories: [kit]
 description: Admin UI for managing Laravel Passport OAuth clients, tokens, and scopes.
@@ -10,5 +10,5 @@ github_repository: n3xt0r/filament-passport-ui
 has_dark_theme: true
 has_translations: true
 versions: [4]
-publish_date: 2026-01-02
+publish_date: 2026-01-25
 ---
