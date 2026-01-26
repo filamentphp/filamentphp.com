@@ -6,7 +6,7 @@ author_slug: akramghaleb
 categories: [panel-builder]
 description: Discovering, connecting to, and managing ZKTeco biometric devices within your Filament admin panel.
 discord_url:
-docs_url:
+docs_urls:
   v4: https://raw.githubusercontent.com/akramghaleb/filament-plugins/refs/heads/main/filament-zkt/README-v1.md
   v5: https://raw.githubusercontent.com/akramghaleb/filament-plugins/refs/heads/main/filament-zkt/README.md
 github_repository: akramghaleb/filament-zkt
