@@ -89,6 +89,10 @@
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
             "php-http/discovery": true
+        },
+        "platform": {
+            "ext-pcntl": "7.1",
+            "ext-posix": "7.1"
         }
     },
     "minimum-stability": "dev",
