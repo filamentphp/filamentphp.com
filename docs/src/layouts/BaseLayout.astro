@@ -29,7 +29,7 @@ let isHomePage = Astro.url.pathname === "/docs";
 
 let tableOfContents = headings.length > 0 ? collectHeadings(headings) : [];
 
-let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/4.x/introduction/overview/", "4.x", "introduction", "overview"];
+let segments = Astro.url.pathname.match(/\/([0-9]*\.x)\/([a-z\-\_]*)\/([a-z\-\_]*)/) || ["/5.x/introduction/overview/", "5.x", "introduction", "overview"];
 
 let currentVersion = segments[1].replaceAll("/", "");
 let currentPackage = segments[2].replaceAll("/", "");
@@ -46,7 +46,7 @@ let nextPage = allLinks[linkIndex + 1]
 let section = packageNavigation.links?.find((item) => item.slug === currentSection) ?? null;
 
 pageTitle = pageTitle ?? buildTitle(title, packageNavigation);
-const canonicalURL = (currentVersion !== '4.x') ? new URL('docs/4.x', Astro.site) : new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = (currentVersion !== '5.x') ? new URL('docs/5.x', Astro.site) : new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -138,7 +138,7 @@ const canonicalURL = (currentVersion !== '4.x') ? new URL('docs/4.x', Astro.site
           Looking for dedicated help with your Filament project? Work with <a href="https://kirschbaumdevelopment.com?ref=filamentphp.com" target="_blank" class="underline">Kirschbaum</a>, the official Filament-partnered development agency.
         </span>
         <span x-show="banner === 1">
-            🔥 <a href="/content/danharrin-filament-v4-5" target="_blank" class="underline">Filament v4.5 is here</a>, packed with powerful new features! <a href="https://github.com/sponsors/danharrin" target="_blank" class="underline">Sponsor us</a> to fund the project's development.
+            🔥 We just released <a href="/content/danharrin-filament-v5-blueprint" target="_blank" class="underline">Filament v5 & Filament Blueprint</a>: a Laravel Boost extension that teaches AI agents how to write detailed Filament implementation plans.
         </span>
         <!--<span x-show="banner === 1">-->
         <!--  Love Filament? We'd really appreciate your <a href="https://github.com/sponsors/danharrin" target="_blank" class="underline">sponsorship</a> to fund the maintenance and support of the project.-->
@@ -174,11 +174,11 @@ const canonicalURL = (currentVersion !== '4.x') ? new URL('docs/4.x', Astro.site
         </div>
     </div>
     <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:pl-16 xl:pr-10">
-        {(currentVersion !== '4.x') && (
+        {(currentVersion !== '5.x') && (
             <Aside variant="warning">
                 <p><span class="font-medium">You are currently viewing the documentation for Filament {currentVersion}</span>, which is a previous version of Filament.</p>
 
-                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/4.x" class="font-medium underline">4.x documentation</a>.</p>
+                <p class="pt-3">Looking for the current stable version? Visit the <a href="/docs/5.x" class="font-medium underline">5.x documentation</a>.</p>
             </Aside>
         )}
 
