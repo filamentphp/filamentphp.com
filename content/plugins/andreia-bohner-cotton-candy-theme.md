@@ -10,6 +10,6 @@ docs_url: https://raw.githubusercontent.com/andreia/filament-cotton-candy-docs/r
 github_repository: filament-handbook/filament-cotton-candy-theme
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-12-26
 ---
