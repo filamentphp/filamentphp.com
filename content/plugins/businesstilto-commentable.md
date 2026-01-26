@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/businesstilto/commentable/refs/heads
 github_repository: businesstilto/commentable
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2026-01-25
 ---
