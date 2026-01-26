@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/aymanalhattami/filament-date-scopes-
 github_repository: aymanalhattami/filament-date-scopes-filter
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3,4]
 publish_date: 2023-11-17
 ---

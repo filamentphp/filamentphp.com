@@ -171,3 +171,24 @@ Route::get('/tricks/{slug}', function (string $slug) {
 
 Route::redirect('/login', '/admin/login')->name('login');
 Route::redirect('/themes', '/plugins/zepfietje-themes');
+
+Route::get('/blueprint/examples/{example}/{file}.md', function (string $example, string $file) {
+    // Validate inputs are simple alphanumeric strings (no path traversal)
+    if (! preg_match('/^[a-z][a-z0-9-]*$/', $example) || ! preg_match('/^[a-z][a-z0-9-]*$/', $file)) {
+        abort(404);
+    }
+
+    $path = resource_path("markdown/blueprint/examples/{$example}/{$file}.md");
+
+    // Ensure resolved path is within expected directory
+    $realPath = realpath($path);
+    $expectedBase = realpath(resource_path('markdown/blueprint/examples'));
+
+    if ($realPath === false || ! str_starts_with($realPath, $expectedBase)) {
+        abort(404);
+    }
+
+    $content = e(file_get_contents($realPath));
+
+    return response("<pre>{$content}</pre>", 200, ['Content-Type' => 'text/html']);
+})->where(['example' => '[a-z0-9-]+', 'file' => '[a-z0-9-]+'])->name('blueprint.example');
