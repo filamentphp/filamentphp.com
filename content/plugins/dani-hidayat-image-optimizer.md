@@ -10,5 +10,5 @@ github_repository: danihidayatx/image-optimizer
 has_dark_theme: true
 has_translations: false
 versions: [3, 4, 5]
-publish_date: 2026-01-19
+publish_date: 2026-01-25
 ---
