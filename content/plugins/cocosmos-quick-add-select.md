@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/cocosmos/filament-quick-add-select/m
 github_repository: cocosmos/filament-quick-add-select
 has_dark_theme: true
 has_translations: true
-versions: [4,5]
-publish_date: 2026-01-23
+versions: [4, 5]
+publish_date: 2026-01-25
 ---
