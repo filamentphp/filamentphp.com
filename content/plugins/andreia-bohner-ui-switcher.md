@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/andreia/filament-ui-switcher/refs/he
 github_repository: andreia/filament-ui-switcher
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-11-15
 ---

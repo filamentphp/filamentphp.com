@@ -7,10 +7,12 @@ checkout_url: https://ralphjsmit.com/filament-plugins/filament-auto-translator/c
 price: €59.00
 description: A revolutionary new way to start translating your Filament application. Fully automate the tedious task of coming up with and referencing translation keys.
 discord_url: https://discord.com/channels/883083792112300104/1353420639947718726
-docs_url: https://ralphjsmit.com/content/products/filament-auto-translator.md
+docs_urls:
+  v2: https://ralphjsmit.com/content/products/filament-auto-translator/v2.md
+  v1: https://ralphjsmit.com/content/products/filament-auto-translator/v1.md
 github_repository: ralphjsmit/laravel-filament-auto-translator
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-01-05
 ---

@@ -5,6 +5,7 @@ DOCS_VERSIONS=(
     2.x
     3.x
     4.x
+    5.x
 )
 
 for v in "${DOCS_VERSIONS[@]}"; do
@@ -19,12 +20,19 @@ for v in "${DOCS_VERSIONS[@]}"; do
         (cd filament/$v && git fetch --tags origin)
     fi
 
+    # Try to find the latest stable tag first (no hyphens)
     latest_tag=$(git -C filament/$v tag -l "v${major}.*" --sort=-v:refname \
         | grep -E '^[^ -]+$' \
         | head -n1)
 
+    # If no stable tag found, fall back to latest beta/pre-release tag
     if [ -z "$latest_tag" ]; then
-        echo "No stable tag found for $v"
+        latest_tag=$(git -C filament/$v tag -l "v${major}.*" --sort=-v:refname \
+            | head -n1)
+    fi
+
+    if [ -z "$latest_tag" ]; then
+        echo "No tag found for $v"
         continue
     fi
 

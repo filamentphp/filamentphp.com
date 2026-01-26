@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/Devonab/filament-easy-footer/main/RE
 github_repository: devonab/filament-easy-footer
 has_dark_theme: true
 has_translations: false
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-01-05
 ---
