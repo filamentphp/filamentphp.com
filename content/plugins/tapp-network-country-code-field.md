@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-country-code-fi
 github_repository: TappNetwork/filament-country-code-field
 has_dark_theme: true
 has_translations: false
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-06-27
 ---

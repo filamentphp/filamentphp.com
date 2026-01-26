@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/aymanalhattami/filament-slim-scrollb
 github_repository: aymanalhattami/filament-slim-scrollbar
 has_dark_theme: true
 has_translations: true
-versions: [2, 3]
+versions: [2, 3, 4]
 publish_date: 2023-07-18
 ---
