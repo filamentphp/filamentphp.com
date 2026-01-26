@@ -8,6 +8,6 @@ docs_url: https://raw.githubusercontent.com/openplain/filament-tree-view/refs/he
 github_repository: openplain/filament-tree-view
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-01-15
 ---
