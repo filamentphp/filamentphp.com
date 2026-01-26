@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TangoDev-it/filament-emoji-picker/ma
 github_repository: TangoDev-it/filament-emoji-picker
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2024-05-14
 ---
