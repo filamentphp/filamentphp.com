@@ -1,6 +1,6 @@
 ---
 name: Andrei Feraru
-slug: andrei-feraru
+slug: feraandrei1
 github_url: https://github.com/feraandrei1
 ---
 
