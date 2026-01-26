@@ -23,8 +23,7 @@ class CheckIfIpIsVpn implements ShouldQueue
      */
     public function __construct(
         public string $ip,
-    ) {
-    }
+    ) {}
 
     /**
      * Execute the job.

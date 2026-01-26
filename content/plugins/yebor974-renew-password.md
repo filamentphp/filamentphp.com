@@ -10,6 +10,6 @@ url: https://julienboyer.re/plugins/filament-renew-password/readme
 github_repository: yebor974/filament-renew-password
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-01-04
 ---
