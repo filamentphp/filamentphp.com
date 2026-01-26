@@ -11,7 +11,7 @@ url: https://denniskoch.dev/projects/filament-changelog/docs
 github_repository: pxlrbt/filament-changelog
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-06-11
 ---
 

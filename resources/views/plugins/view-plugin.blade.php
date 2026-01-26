@@ -1,3 +1,7 @@
+@php
+    use App\Enums\Version;
+@endphp
+
 <x-layouts.app>
     <section
         x-cloak
@@ -290,7 +294,7 @@
 
                         <div>
                             <div class="font-medium">
-                                {{ $plugin->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with the latest version' }}
+                                {{ $plugin->isCompatibleWithLatestVersion() ? 'Compatible with the latest version' : 'Not compatible with ' . Version::getLatest()->getLabel() }}
                             </div>
 
                             <div class="text-xs text-dolphin/80">
