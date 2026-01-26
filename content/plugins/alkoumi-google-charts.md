@@ -1,11 +1,11 @@
 ---
-name: Filament Google Charts
-slug: alkoumi-filament-google-charts
+name: Google Charts
+slug: alkoumi-google-charts
 author_slug: alkoumi
 categories: [widget]
 description: Seamless integration of Google Charts widgets into your Filament.
-discord_url: https://discord.com/channels/883083792112300104/1353158837032456303
-docs_url: https://github.com/alkoumi/filament-google-charts/blob/83c38373998841ff5c488fd454ef088c1bfb9a35/README.md
+discord_url:
+docs_url: https://raw.githubusercontent.com/alkoumi/filament-google-charts/refs/heads/main/README.md
 github_repository: alkoumi/filament-google-charts
 has_dark_theme: true
 has_translations: false
