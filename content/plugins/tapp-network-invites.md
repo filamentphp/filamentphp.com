@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/Filament-Invite/main/REA
 github_repository: TappNetwork/Filament-Invite
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2024-04-24
 ---

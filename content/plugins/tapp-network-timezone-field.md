@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-timezone-field/
 github_repository: TappNetwork/filament-timezone-field
 has_dark_theme: true
 has_translations: false
-versions: [2, 3, 4]
+versions: [2, 3, 4, 5]
 publish_date: 2022-05-06
 ---

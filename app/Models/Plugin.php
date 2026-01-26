@@ -177,7 +177,7 @@ class Plugin extends Model implements Starrable
 
     public function isCompatibleWithLatestVersion(): bool
     {
-        return in_array(4, $this->versions);
+        return in_array(5, $this->versions);
     }
 
     public function getAuthor(): Author
