@@ -9,7 +9,7 @@ use Illuminate\Database\Query\Builder;
 
 class GetPluginsListData
 {
-    public function __invoke(array $plugins = null): array
+    public function __invoke(?array $plugins = null): array
     {
         return cache()->remember(
             $plugins ? ('plugins_' . implode(',', $plugins)) : 'plugins',
