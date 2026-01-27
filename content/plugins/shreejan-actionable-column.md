@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/shreejanpandit/actionable-column/ref
 github_repository: shreejanpandit/actionable-column
 has_dark_theme: true
 has_translations: false
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-12-07
 ---
