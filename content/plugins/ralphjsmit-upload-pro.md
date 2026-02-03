@@ -8,8 +8,8 @@ price: €59.00
 description: A beautiful, advanced & high-performance upload experience for Filament.
 discord_url: https://discord.com/channels/883083792112300104/1385315436270325902
 docs_urls:
-  v4: https://ralphjsmit.com/content/products/filament-upload-pro/v4.md
-  v3: https://ralphjsmit.com/content/products/filament-upload-pro/v3.md
+  v1: https://ralphjsmit.com/content/products/filament-upload-pro/v1.md
+  v0: https://ralphjsmit.com/content/products/filament-upload-pro/v0.md
 github_repository: ralphjsmit/laravel-filament-upload
 has_dark_theme: true
 has_translations: true
