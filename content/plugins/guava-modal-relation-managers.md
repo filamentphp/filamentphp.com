@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/GuavaCZ/filament-modal-relation-mana
 github_repository: GuavaCZ/filament-modal-relation-managers
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-12-22
 ---
