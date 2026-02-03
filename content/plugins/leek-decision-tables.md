@@ -9,6 +9,6 @@ docs_url: https://gist.githubusercontent.com/leek/a55409ebc0a881c25ff52969abe07e
 github_repository: leek/filament-decision-tables
 has_dark_theme: true
 has_translations: false
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-11-21
 ---
