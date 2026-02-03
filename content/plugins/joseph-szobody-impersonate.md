@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/stechstudio/filament-impersonate/mas
 github_repository: stechstudio/filament-impersonate
 has_dark_theme: true
 has_translations: true
-versions: [2, 3, 4]
+versions: [3, 4, 5]
 publish_date: 2021-03-29
 ---
