@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/athphane/filament-editorjs/main/READ
 github_repository: athphane/filament-editorjs
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [4, 5]
 publish_date: 2024-12-22
 ---
