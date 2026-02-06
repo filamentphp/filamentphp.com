@@ -1,4 +1,5 @@
 ---
+anystack_id: 9c38669d-0728-4cc7-a7b0-dcad59156981
 name: Terms Guard
 slug: yebor974-terms-guard
 author_slug: yebor974
@@ -10,7 +11,6 @@ url: https://julienboyer.re/plugins/filament-terms-guard/readme
 github_repository: yebor974/filament-terms-guard
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-06-10
-anystack_id: 9c38669d-0728-4cc7-a7b0-dcad59156981
 ---

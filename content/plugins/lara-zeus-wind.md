@@ -9,7 +9,6 @@ docs_urls:
   v4: https://raw.githubusercontent.com/lara-zeus/wind/4.x/docs/filament.md
   v3: https://raw.githubusercontent.com/lara-zeus/wind/3.x/docs/filament.md
   v2: https://raw.githubusercontent.com/lara-zeus/wind/2.x/docs/filament.md
-docs_url: 
 url: https://larazeus.com/wind
 github_repository: lara-zeus/wind
 has_dark_theme: true

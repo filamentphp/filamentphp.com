@@ -291,6 +291,8 @@
 
                     <x-sponsors.cms-max />
 
+                    <x-sponsors.mailtrap />
+
                     <x-sponsors.nativephp />
 
                     <x-sponsors.sevalla />
@@ -299,13 +301,15 @@
 
                     {{-- <x-sponsors.vormkracht10 /> --}}
 
-                    <x-sponsors.lunar />
+                    {{-- <x-sponsors.lunar /> --}}
 
                     <x-sponsors.ploi />
 
                     <x-sponsors.redberry />
 
                     <x-sponsors.tapp-network />
+
+                    <x-sponsors.word-on-fire />
 
                     <x-sponsors.cleavr />
 
