@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/tonegabes/filament-phosphor-icons/re
 github_repository: tonegabes/filament-phosphor-icons
 has_dark_theme: true
 has_translations: false
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-08-25
 ---
