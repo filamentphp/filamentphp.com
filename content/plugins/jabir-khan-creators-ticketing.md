@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/jabirmayar/creators-ticketing/main/R
 github_repository: jabirmayar/creators-ticketing
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-11-15
 ---
