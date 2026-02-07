@@ -18,7 +18,7 @@ To upgrade your app to Filament v4, please read the [upgrade guide](https://fila
 
 ## Highlights
 
-There are many new features and improvements in Filament v4 Beta, but here are some of the highlights:
+There are many new features and improvements in Filament v4, but here are some of the highlights:
 
 - [**Improved performance**](#improved-performance): Rendering and interaction performance has significantly improved, especially for large tables, where server rendering time typically reduces by 2-3x.
 - [**Tailwind CSS v4**](#tailwind-css-v4): The framework now uses Tailwind CSS v4, which brings a reworked configuration system, improved customization, and faster builds.

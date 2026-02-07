@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/LukasFreyCZ/filament-icon-picker/mai
 github_repository: LukasFreyCZ/filament-icon-picker
 has_dark_theme: true
 has_translations: false
-versions: [2, 3]
+versions: [2, 3, 4, 5]
 publish_date: 2023-08-01
 ---

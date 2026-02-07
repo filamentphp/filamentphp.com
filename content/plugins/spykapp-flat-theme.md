@@ -4,7 +4,7 @@ slug: spykapp-flat-theme
 author_slug: spykapp
 categories: [theme]
 description: A simple theme for FilamentPHP based on flat design.
-discord_url: 
+discord_url:
 docs_url: https://raw.githubusercontent.com/SpykApp/filament-flat-theme/refs/heads/main/README.md
 github_repository: SpykApp/filament-flat-theme
 has_dark_theme: true

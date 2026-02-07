@@ -3,9 +3,9 @@ name: Barcode Scanner
 slug: designthebox-barcode-scanner
 author_slug: designthebox
 categories: [form-field]
-description: A Barcode input for scanning barcodes and QR codes 
-docs_url: https://raw.githubusercontent.com/Design-The-Box/barcode-field/master/README.md
+description: A Barcode input for scanning barcodes and QR codes
 discord_url: https://discord.com/channels/883083792112300104/1320502979723530303
+docs_url: https://raw.githubusercontent.com/Design-The-Box/barcode-field/master/README.md
 github_repository: Design-The-Box/barcode-field
 has_dark_theme: true
 has_translations: false

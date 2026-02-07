@@ -76,6 +76,9 @@
         },
         set currentPage(value) {
             this._currentPage = value
+            this.$nextTick(() => {
+                this.$refs.section.scrollIntoView({ behavior: 'smooth' })
+            })
         },
 
         perPage: 24,
@@ -180,16 +183,6 @@
             >
                 <div
                     class="relative z-20 w-14 text-center transition duration-300"
-                    x-on:click="selectedVersion = '2'"
-                    :class="{
-                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '2',
-                            'text-salmon': selectedVersion === '2',
-                        }"
-                >
-                    v2.x
-                </div>
-                <div
-                    class="relative z-20 w-14 text-center transition duration-300"
                     x-on:click="selectedVersion = '3'"
                     :class="{
                             'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '3',
@@ -209,10 +202,20 @@
                     v4.x
                 </div>
                 <div
+                    class="relative z-20 w-14 text-center transition duration-300"
+                    x-on:click="selectedVersion = '5'"
+                    :class="{
+                            'cursor-pointer opacity-50 hover:opacity-100': selectedVersion !== '5',
+                            'text-salmon': selectedVersion === '5',
+                        }"
+                >
+                    v5.x
+                </div>
+                <div
                     class="absolute left-[.31rem] top-[.31rem] -z-10 h-8 w-16 rounded-full bg-fair-pink transition duration-300 ease-out will-change-transform"
                     :class="{
-                            'translate-x-[4.1rem]': selectedVersion === '3',
-                            'translate-x-[8.2rem]': selectedVersion === '4',
+                            'translate-x-[4.1rem]': selectedVersion === '4',
+                            'translate-x-[8.2rem]': selectedVersion === '5',
                         }"
                 ></div>
             </div>

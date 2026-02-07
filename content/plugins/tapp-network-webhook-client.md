@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/
 github_repository: TappNetwork/filament-webhook-client
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2024-06-11
 ---

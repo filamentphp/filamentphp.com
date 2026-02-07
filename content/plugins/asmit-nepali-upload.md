@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/AsmitNepali/filament-upload/refs/hea
 github_repository: asmitnepali/filament-upload
 has_dark_theme: true
 has_translations: false
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2025-05-18
 ---

@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/asosick/filament-layout-manager/main
 github_repository: asosick/filament-layout-manager
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2025-02-16
 ---

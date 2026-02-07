@@ -2,7 +2,7 @@
 name: Phosphor Icon Pack
 slug: tallyschmeits-phosphor-icon-pack
 author_slug: tallyschmeits
-categories: [form-builder, form-field, panel-builder]
+categories: [panel-builder, icon-set]
 description: A Phosphor Icon Enum package to use the Phosphor icons everywhere in your Filament project.
 discord_url: https://discord.com/channels/883083792112300104/1385344259460300872
 docs_url: https://raw.githubusercontent.com/schmeits/filament-4-phosphor-icons/main/README.md
