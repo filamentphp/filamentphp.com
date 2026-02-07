@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/TappNetwork/filament-value-range-fil
 github_repository: TappNetwork/filament-value-range-filter
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-06-27
 ---
