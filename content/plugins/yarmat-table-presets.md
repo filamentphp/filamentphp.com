@@ -10,6 +10,6 @@ docs_urls:
 github_repository: yarmat/filament-table-presets
 has_dark_theme: true
 has_translations: true
-versions: [4,5]
+versions: [4, 5]
 publish_date: 2025-11-15
 ---
