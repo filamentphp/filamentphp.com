@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/ffhs/filament-package_ffhs_custom_fo
 github_repository: ffhs/filament-package_ffhs_custom_forms
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4]
 publish_date: 2025-08-04
 ---
