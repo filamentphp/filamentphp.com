@@ -6,6 +6,7 @@ categories: [panel-builder]
 description: Switch between Filament panels with ease.
 discord_url: https://discord.com/channels/883083792112300104/1138244989495824495
 docs_urls:
+  v5: https://raw.githubusercontent.com/bezhanSalleh/filament-panel-switch/3.x/README.md
   v4: https://raw.githubusercontent.com/bezhanSalleh/filament-panel-switch/2.x/README.md
   v3: https://raw.githubusercontent.com/bezhanSalleh/filament-panel-switch/1.x/README.md
 github_repository: bezhanSalleh/filament-panel-switch
