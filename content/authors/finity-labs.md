@@ -1,7 +1,7 @@
 ---
 name: Finity Labs
-github: finity-labs
-avatar: finity-labs.jpg
+slug: finity-labs
+github_url: https://github.com/finity-labs
 ---
 
 Full-Stack Developer with 20+ years of experience.
