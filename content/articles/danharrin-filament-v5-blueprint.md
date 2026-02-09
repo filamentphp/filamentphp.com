@@ -72,9 +72,7 @@ Instead of spending hours correcting AI hallucinations, you get a specification 
 
 ### Getting started with Blueprint
 
-To celebrate the launch of Blueprint, you can grab a license for **20% off** for a limited time using the code `BPLAUNCH20` at [checkout](https://packages.filamentphp.com/p/blueprint/buy).
-
-Once installed, you can enable planning mode in your AI agent and ask it to create a Filament Blueprint for your feature. You can learn more about Blueprint in our [documentation](https://filamentphp.com/docs/introduction/ai).
+Once you've [purchased Blueprint](https://packages.filamentphp.com/portal/blueprint/checkout) and installed it, you can enable planning mode in your AI agent and ask it to create a Filament Blueprint for your feature. You can learn more about Blueprint in our [documentation](https://filamentphp.com/docs/introduction/ai).
 
 ## More to come in 2026
 

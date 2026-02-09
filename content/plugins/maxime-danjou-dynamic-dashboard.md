@@ -10,5 +10,5 @@ github_repository: MDDev31/filament-dynamic-dashboard
 has_dark_theme: true
 has_translations: true
 versions: [4, 5]
-publish_date: 2026-01-26
+publish_date: 2026-02-08
 ---
