@@ -13,6 +13,6 @@ docs_urls:
 github_repository: ralphjsmit/laravel-filament-auto-translator
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-01-05
 ---
