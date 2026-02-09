@@ -67,9 +67,9 @@
             title="Lead UI Designer & Developer"
         >
             <strong>Zep</strong>
-            is the lead UI designer of Filament.
-            In addition to his design skills, he brings a wealth of development
-            experience to the Filament team. He's based in
+            is the lead UI designer of Filament. In addition to his design
+            skills, he brings a wealth of development experience to the Filament
+            team. He's based in
             {{-- format-ignore-start --}}
             <strong>Eindhoven, Netherlands</strong>,
             {{-- format-ignore-end --}}
