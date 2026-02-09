@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/caresome/filament-poll/main/README.m
 github_repository: caresome/filament-poll
 has_dark_theme: true
 has_translations: false
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-11-21
 ---

@@ -8,11 +8,11 @@ price: €59.00
 description: Beautiful onboarding experiences for Filament Admin.
 discord_url: https://discord.com/channels/883083792112300104/993463038357274635
 docs_urls:
-  v4: https://ralphjsmit.com/content/products/filament-onboarding-manager-pro/v4.md
   v3: https://ralphjsmit.com/content/products/filament-onboarding-manager-pro/v3.md
+  v2: https://ralphjsmit.com/content/products/filament-onboarding-manager-pro/v2.md
 github_repository: ralphjsmit/laravel-filament-onboard
 has_dark_theme: true
 has_translations: true
-versions: [2, 3, 4]
+versions: [2, 3, 4, 5]
 publish_date: 2023-07-17
 ---

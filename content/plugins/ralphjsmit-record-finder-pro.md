@@ -8,11 +8,11 @@ price: €59.00
 description: Replace your `Select`'s with beautiful Record Finders to make searching easier. Works everywhere out-of-the-box & integrates with resources.
 discord_url: https://discord.com/channels/883083792112300104/1261035720429277317
 docs_urls:
-  v4: https://ralphjsmit.com/content/products/filament-record-finder-pro/v4.md
-  v3: https://ralphjsmit.com/content/products/filament-record-finder-pro/v3.md
+  v2: https://ralphjsmit.com/content/products/filament-record-finder-pro/v2.md
+  v1: https://ralphjsmit.com/content/products/filament-record-finder-pro/v1.md
 github_repository: ralphjsmit/laravel-filament-record-finder
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-07-11
 ---
