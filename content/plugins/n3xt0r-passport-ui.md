@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/N3XT0R/filament-passport-ui/refs/hea
 github_repository: n3xt0r/filament-passport-ui
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2026-01-25
 ---
