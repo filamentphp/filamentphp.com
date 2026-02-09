@@ -10,5 +10,5 @@ github_repository: mominalzaraa/filament-team-guard
 has_dark_theme: true
 has_translations: true
 versions: [5]
-publish_date: 2026-01-30
+publish_date: 2026-02-08
 ---
