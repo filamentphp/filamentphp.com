@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/marcogermani87/filament-captcha/main
 github_repository: marcogermani87/filament-captcha
 has_dark_theme: true
 has_translations: true
-versions: [3]
+versions: [3, 4, 5]
 publish_date: 2024-12-22
 ---
