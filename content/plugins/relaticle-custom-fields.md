@@ -8,7 +8,7 @@ price: $79.00
 description: Eliminate custom field migrations forever. Let your users create and manage form fields directly in Filament admin panels with 20+ built-in field types, validation, and zero database changes.
 discord_url: https://discord.gg/Bg3f9XCzCM
 docs_url: https://raw.githubusercontent.com/Relaticle/custom-fields/refs/heads/main/README.md
-url: https://custom-fields.relaticle.com/v2/introduction
+url: https://relaticle.github.io/custom-fields/
 github_repository: relaticle/custom-fields
 has_dark_theme: true
 has_translations: true
