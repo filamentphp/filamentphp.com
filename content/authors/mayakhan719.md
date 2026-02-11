@@ -1,0 +1,7 @@
+---
+name: Maya Khan
+slug: mayakhan719
+github_url: https://github.com/Mayakhan719
+---
+
+Maya khan is a full-stack PHP developer specializing in Laravel and Filament, building reusable plugins and scalable SaaS solutions.
