@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/bezhanSalleh/filament-plugin-essenti
 github_repository: bezhanSalleh/filament-plugin-essentials
 has_dark_theme: true
 has_translations: true
-versions: [4]
+versions: [4, 5]
 publish_date: 2025-09-26
 ---
