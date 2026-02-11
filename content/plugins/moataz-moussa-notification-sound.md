@@ -8,7 +8,7 @@ discord_url:
 docs_url: https://raw.githubusercontent.com/moataz-01/filament-notification-sound/main/README.md
 github_repository: moataz-01/filament-notification-sound
 has_dark_theme: true
-has_translations: false
-versions: [3, 4]
+has_translations: true
+versions: [4, 5]
 publish_date: 2025-12-07
 ---
