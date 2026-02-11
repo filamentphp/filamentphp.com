@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/ariaieboy/filament-currency/main/REA
 github_repository: ariaieboy/filament-currency
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2023-08-25
 ---
