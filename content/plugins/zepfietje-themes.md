@@ -10,7 +10,7 @@ url: https://filamentthemes.com?utm_source=filament&utm_medium=referral&utm_camp
 github_repository: empty
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2023-09-05
 ---
 
