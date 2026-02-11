@@ -10,5 +10,5 @@ github_repository: salmanalmajali/jokes-widget
 has_dark_theme: true
 has_translations: true
 versions: [3, 4, 5]
-publish_date: 2026-02-08
+publish_date: 2026-02-10
 ---
