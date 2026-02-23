@@ -10,6 +10,6 @@ docs_url: https://raw.githubusercontent.com/MartinPetricko/filament-database-mai
 github_repository: MartinPetricko/filament-database-mail
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-03-24
 ---

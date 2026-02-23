@@ -13,6 +13,6 @@ url: https://filament.saade.dev/demo/fullcalendar/calendar
 github_repository: saade/filament-fullcalendar
 has_dark_theme: true
 has_translations: true
-versions: [2, 3, 4]
+versions: [2, 3, 4, 5]
 publish_date: 2022-01-26
 ---

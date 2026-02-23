@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/GeoSot/filament-env-editor/main/READ
 github_repository: GeoSot/filament-env-editor
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2024-04-24
 ---

@@ -13,6 +13,6 @@ url: https://filament.saade.dev/demo/laravel-log/logs
 github_repository: saade/filament-laravel-log
 has_dark_theme: true
 has_translations: true
-versions: [2, 3, 4]
+versions: [2, 3, 4, 5]
 publish_date: 2022-03-19
 ---

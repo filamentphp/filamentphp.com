@@ -9,6 +9,6 @@ docs_url: https://raw.githubusercontent.com/eightcedars/filament-inactivity-guar
 github_repository: eightcedars/filament-inactivity-guard
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2025-02-16
 ---

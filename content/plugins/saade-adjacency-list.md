@@ -12,6 +12,6 @@ url: https://filament.saade.dev/demo/adjacency-list/tree
 github_repository: saade/filament-adjacency-list
 has_dark_theme: true
 has_translations: true
-versions: [3, 4]
+versions: [3, 4, 5]
 publish_date: 2023-08-17
 ---
