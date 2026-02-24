@@ -1,8 +1,8 @@
-# Filament Plugin Directory — Archived
+# Filament Website & Plugin Directory — Archived
 
 Hey there! 👋
 
-Thanks for stopping by. This repository has served us well over the years as the home of the Filament plugin directory, but we've moved on to something better.
+Thanks for stopping by. This repository has served us well over the years as the home of the Filament website and plugin directory, but we've moved on to something better.
 
 **We now have a proper admin UI on the new Filament website** that handles plugin submissions and updates. No more pull requests, no more Markdown files, no more waiting for reviews on GitHub. It's a much smoother experience for everyone.
 
